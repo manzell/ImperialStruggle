@@ -7,6 +7,7 @@ using Sirenix.OdinInspector;
 public abstract class EventCard : SerializedMonoBehaviour, ICard
 {
     [HideInInspector] public UnityAction callback;
+    public static UnityEvent<EventCard> playCardEvent = new UnityEvent<EventCard>();
 
     public string bonusKeywords;
     public Game.ActionType reqdActionType;
@@ -20,7 +21,8 @@ public abstract class EventCard : SerializedMonoBehaviour, ICard
     {
         this.callback = callback;
         Debug.Log($"{this} played by {(Phase.currentPhase as ActionRound).actingFaction}");
-        Play(Phase.currentPhase as ActionRound); 
+        Play(Phase.currentPhase as ActionRound);
+        playCardEvent.Invoke(this);
     }
 
     public abstract void Play(ActionRound actionRound);

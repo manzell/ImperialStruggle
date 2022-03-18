@@ -6,6 +6,7 @@ using UnityEngine.Events;
 // An ACTION sits on Advantage Tiles, Spaces, Ministers, and on the Player and allows them to Do A Thing
 public class Action : MonoBehaviour, IExhaustable
 {
+    public string actionName; 
     public Game.Faction actingFaction; 
     public Game.ActionType requiredActionType = Game.ActionType.None;
     public int actionCost = 0;
@@ -23,4 +24,6 @@ public class Action : MonoBehaviour, IExhaustable
         get => _exhausted;
         set => _exhausted = value;
     }
+
+    public virtual bool Can(Game.Faction faction) => true; 
 }

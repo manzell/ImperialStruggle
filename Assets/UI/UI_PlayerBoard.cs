@@ -62,6 +62,19 @@ public class UI_PlayerBoard : MonoBehaviour
             AddCard(card); 
     }
 
+    public void HilightCards(InvestmentTile tile)
+    {
+        if(tile.eventCardTrigger == true)
+        {
+            handArea.GetComponentsInChildren<EventCard>()
+                .Where(card => card.reqdActionType == Game.ActionType.None || card.reqdActionType == tile.majorAction.First().Key).ToList()
+                .ForEach(card => card.GetComponent<UI_Card>().SetHighlight(Color.green)); 
+        }
+    }
+
+    public void RemoveCardHighlights() =>
+        handArea.GetComponentsInChildren<EventCard>().ToList().ForEach(card => card.GetComponent<UI_Card>().RemoveHighlight());
+
     public void AddCard(EventCard card)
     {
         GameObject c = Instantiate(cardPrefab, handArea.transform);

@@ -6,14 +6,16 @@ using UnityEngine.Events;
 public class ReduceTreatyPointsPhase : MonoBehaviour, IPhaseAction
 {
     public int treatyPointsCap = 4;
+    RecordsTrack recordsTrack; 
 
     public void Do(Phase phase, UnityAction callback)
     {
-        foreach(KeyValuePair<Game.Faction, int> pair in RecordsTrack.treatyPoints)
+        recordsTrack = FindObjectOfType<RecordsTrack>();
+        foreach(KeyValuePair<Game.Faction, int> pair in recordsTrack.treatyPoints)
         {
-            if (RecordsTrack.treatyPoints[pair.Key] >= treatyPointsCap)
+            if (recordsTrack.treatyPoints[pair.Key] >= treatyPointsCap)
             {
-                AdjustTreatyPoints atp = new AdjustTreatyPoints(pair.Key, treatyPointsCap - RecordsTrack.treatyPoints[pair.Key]);
+                AdjustTreatyPoints atp = new AdjustTreatyPoints(pair.Key, treatyPointsCap - recordsTrack.treatyPoints[pair.Key]);
                 (phase as ActionRound).gameActions.Add(atp);
             }
         }

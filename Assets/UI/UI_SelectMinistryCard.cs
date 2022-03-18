@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using Sirenix.OdinInspector;
 using System.Linq; 
 
-public class UI_CardSelector : MonoBehaviour
+public class UI_SelectMinistryCard : MonoBehaviour
 {
     [SerializeField] Image actingFlag;
     [SerializeField] GameObject cardPrefab, cardsGO, cardSelectorWindow;
@@ -52,7 +52,7 @@ public class UI_CardSelector : MonoBehaviour
         cardSelectorWindow.SetActive(true);
 
         // For now, assume England goes first
-        DisplayMinistryCards(phase, Game.Faction.England);
+        DisplayMinistryCards(phase, FindObjectOfType<UI_PlayerBoard>().faction);
     }
 
     public void DisplayMinistryCards(SelectMinistersPhase phase, Game.Faction faction)

@@ -1,18 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events; 
 using UnityEngine.EventSystems;
 
-public class UI_DragBoard : MonoBehaviour, IDragHandler, IBeginDragHandler
+public class UI_GameBoard : MonoBehaviour, IDragHandler, IBeginDragHandler, IPointerClickHandler
 {
+    public static UnityEvent<PointerEventData> clickEvent = new UnityEvent<PointerEventData>();
     [SerializeField] GameObject container;
     [SerializeField] float speed = 0.1f; 
     Vector3 previousPosition;
 
-    public void OnBeginDrag(PointerEventData eventData)
-    {
-        previousPosition = Input.mousePosition;
-    }
+    public void OnPointerClick(PointerEventData eventData) => clickEvent.Invoke(eventData);
+
+    public void OnBeginDrag(PointerEventData eventData) => previousPosition = Input.mousePosition;
 
     public void OnDrag(PointerEventData eventData)
     {

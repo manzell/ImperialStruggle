@@ -9,10 +9,8 @@ public class AdjustActionPoints : GameAction
 
     Dictionary<Game.ActionType, int> prevMajorActionPoints, prevMinorActionPoints, majorActionPoints, minorActionPoints; 
 
-
     public AdjustActionPoints(Game.Faction faction, Dictionary<Game.ActionType, int> majorActionPoints, Dictionary<Game.ActionType, int> minorActionPoints)
     {
-        Debug.Log("Adjust Action Point Created"); 
         this.majorActionPoints = majorActionPoints;
         this.minorActionPoints = minorActionPoints;
         Do(faction); 
@@ -20,6 +18,7 @@ public class AdjustActionPoints : GameAction
 
     public override void Do(Game.Faction faction)
     {
+        this.actingFaction = faction;
         Player player = Player.players[faction];
 
         prevMajorActionPoints = player.majorActionPoints;
@@ -45,7 +44,6 @@ public class AdjustActionPoints : GameAction
             player.minorActionPoints[pair.Key] = Mathf.Max(pair.Value, 0);
         }
 
-        Debug.Log("Doing AdjustActionPoints() event); ");
         adjustActionPointsEvent.Invoke(this); 
     }
 

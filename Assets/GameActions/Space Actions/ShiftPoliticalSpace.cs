@@ -12,20 +12,26 @@ public class ShiftPoliticalSpace : Action
 
     private void Awake()
     {
+        space = GetComponent<Space>();
         SelectInvestmentTilePhase.selectInvestmentTileEvent.AddListener((faction, tile) => Can(faction));
-        ChargeActionPoints.chargeActionPointsEvent.AddListener(charge => Can(charge.actingFaction)); 
-
-        space = GetComponent<Space>();        
+        ChargeActionPoints.chargeActionPointsEvent.AddListener(charge => Can(charge.actingFaction));
+        TakeDebt.takeDebtEvent.AddListener(td => Can(td.actingFaction));
     }
 
-    // TODO - Need to be able to create ShiftSpaceCommands 
-    public bool Can(Game.Faction faction)
-    {
+    void SetCost(Game.Faction faction)
+    { 
         requireMajorAction = space.conflictMarker == false && space.flag != Game.Faction.Neutral;
         actionCost = space.conflictMarker ? 1 : space.flagCost;
 
-        if (space.flag == Game.Faction.Neutral) shiftActionType = ActionType.Flag;
-        else shiftActionType = ActionType.Deflag;
+        shiftActionType = space.flag == Game.Faction.Neutral ? ActionType.Flag : ActionType.Deflag;
+        actionName = space.flag == Game.Faction.Neutral ? "Flag" : "Deflag";
+    }
+
+    // TODO - Need to be able to create ShiftSpaceCommands 
+    public override bool Can(Game.Faction faction)
+    {
+        available = true; 
+        SetCost(faction); 
 
         Try.Invoke(this); // Try Happens BEFORE calculating if we can afford it. 
 
@@ -34,9 +40,9 @@ public class ShiftPoliticalSpace : Action
             Player player = Player.players[faction];
             // Check that we have the ActionPoints - the player must manually activate their own Debt or Treaty Points first!
             int availableActionPoints =
-                (player.majorActionPoints.ContainsKey(requiredActionType) ? player.majorActionPoints[requiredActionType] : 0) +
-                (player.majorActionPoints.ContainsKey(Game.ActionType.Debt) ? player.majorActionPoints[Game.ActionType.Debt] : 0) +
-                (player.majorActionPoints.ContainsKey(Game.ActionType.Treaty) ? player.majorActionPoints[Game.ActionType.Treaty] : 0);
+                (player.majorActionPoints.TryGetValue(requiredActionType, out int points) ? points : 0) +
+                (player.majorActionPoints.TryGetValue(Game.ActionType.Debt, out int debt) ? debt : 0) +
+                (player.majorActionPoints.TryGetValue(Game.ActionType.Treaty, out int treaty) ? treaty : 0);
 
             if (requireMajorAction == false)
                 availableActionPoints += player.minorActionPoints.ContainsKey(requiredActionType) ? player.minorActionPoints[requiredActionType] : 0;

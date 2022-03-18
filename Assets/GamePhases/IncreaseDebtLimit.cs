@@ -5,16 +5,18 @@ using UnityEngine;
 public class IncreaseDebtLimit : GameAction
 {
     public Dictionary<Game.Faction, int> debtLimitIncrease;
+    RecordsTrack recordsTrack;
 
     public void Do()
     {
+        recordsTrack = GameObject.FindObjectOfType<RecordsTrack>();
         foreach (Game.Faction faction in debtLimitIncrease.Keys)
-            RecordsTrack.debtLimit[faction] += debtLimitIncrease[faction];
+            recordsTrack.debtLimit[faction] += debtLimitIncrease[faction];
     }
 
     public override void Undo()
     {
         foreach (Game.Faction faction in debtLimitIncrease.Keys)
-            RecordsTrack.debtLimit[faction] -= debtLimitIncrease[faction];
+            recordsTrack.debtLimit[faction] -= debtLimitIncrease[faction];
     }
 }

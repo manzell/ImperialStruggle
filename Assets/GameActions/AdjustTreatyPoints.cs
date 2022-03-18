@@ -1,25 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events; 
 
 public class AdjustTreatyPoints : GameAction
 {
+    public static UnityEvent<Game.Faction, int> adjustTPevent = new UnityEvent<Game.Faction, int>();
     public int adjustAmount;
     int previousTP;
+    public RecordsTrack recordsTrack;
 
     public AdjustTreatyPoints(Game.Faction faction, int adjustAmount)
     {
+        recordsTrack = GameObject.FindObjectOfType<RecordsTrack>();
         actingFaction = faction;
         this.adjustAmount = adjustAmount;
-        previousTP = RecordsTrack.treatyPoints[faction];
-        Do(actingFaction); 
+        previousTP = recordsTrack.treatyPoints[faction];
+        Do(); 
     }
 
-    public override void Do(Game.Faction faction)
+    public void Do()
     {
-        Debug.Log($"{faction} treaty points {(adjustAmount > 0 ? "increased" : "decreased")} by {Mathf.Abs(adjustAmount)}");
-        RecordsTrack.treatyPoints[faction] += adjustAmount;
+        Debug.Log($"{actingFaction} treaty points {(adjustAmount > 0 ? "increased" : "decreased")} by {Mathf.Abs(adjustAmount)}");
+        recordsTrack.treatyPoints[actingFaction] += adjustAmount;
+        adjustTPevent.Invoke(actingFaction, adjustAmount); 
     }
 
-    public override void Undo() => RecordsTrack.treatyPoints[actingFaction] = previousTP; 
+    public override void Undo()
+    {
+        recordsTrack.treatyPoints[actingFaction] = previousTP;
+    }
 }

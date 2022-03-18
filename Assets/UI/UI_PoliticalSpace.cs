@@ -5,26 +5,26 @@ using UnityEngine.UI;
 using TMPro;
 using Sirenix.OdinInspector; 
 
-public class UI_PoliticalSpace : MonoBehaviour
+public class UI_PoliticalSpace : UI_Space
 {
     [SerializeField] TextMeshProUGUI spaceName, flagCost;
-    [SerializeField] Image trim, highlight, background; 
+    [SerializeField] Image trim, highlight, background;
 
-    [Button]
+    private void Awake()
+    {
+        Style(); 
+    }
+
     public void Style()
     {
         if (TryGetComponent(out PoliticalSpace space))
-            Style(space); 
-    }
+        {
+            spaceName.text = space.name;
+            flagCost.text = space.flagCost.ToString();
 
-    [Button]
-    public void Style(PoliticalSpace space)
-    {
-        spaceName.text = space.name;
-        flagCost.text = space.flagCost.ToString();
-
-        trim.gameObject.SetActive(space.prestige);
-        highlight.gameObject.SetActive(space.conflictMarker); 
-        background.color = FindObjectOfType<Game>().graphicSettings.factionColors[space.flag];
+            trim.gameObject.SetActive(space.prestige);
+            highlight.gameObject.SetActive(space.conflictMarker);
+            background.color = FindObjectOfType<Game>().graphicSettings.factionColors[space.flag];
+        }
     }
 }

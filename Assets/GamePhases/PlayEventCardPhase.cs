@@ -15,8 +15,6 @@ public class PlayEventCardPhase : MonoBehaviour, IPhaseAction
         InvestmentTile tile = actionRound.investmentTile;
         this.callback = callback;
 
-        Debug.Log(this);
-
         //foreach (EventCard card in Player.players[actionRound.actingFaction].hand)
         //    if (card.reqdActionType == Game.ActionType.None || Player.players[actionRound.actingFaction].majorActionPoints.ContainsKey(card.reqdActionType))
         //        eventableCards.Add(card);
@@ -27,13 +25,11 @@ public class PlayEventCardPhase : MonoBehaviour, IPhaseAction
 
         if(tile.eventCardTrigger == false)
         {
-            Debug.Log($"{tile} does not allow an Event Card to be played. Skipping {this}");
-            callback.Invoke();
+            Debug.Log($"{tile} does not allow an Event Card to be played.");
         }    
         else if(eventableCards.Count == 0)
         {
-            Debug.Log($"No Eventable Cards available with {tile}. Skipping {this}");
-            callback.Invoke(); 
+            Debug.Log($"No Eventable Cards available with {tile}.");
         }
     }
 

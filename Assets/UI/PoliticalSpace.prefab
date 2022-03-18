@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 2
+  m_text: '-'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ireland Alliance
+  m_text: '-'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -301,7 +301,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 17.6
+  m_fontSize: 35.8
   m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -401,7 +401,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.2901961, g: 0.4862745, b: 0.8784314, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -427,9 +427,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3421046882785140572}
-  - component: {fileID: 6910198765178914321}
   - component: {fileID: 1981230490}
   - component: {fileID: 1981230489}
+  - component: {fileID: 6910198765178914321}
   m_Layer: 5
   m_Name: PoliticalSpace
   m_TagString: Untagged
@@ -461,23 +461,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6910198765178914321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5506689824616246886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4b901042c3620044bb057150a62ac74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spaceName: {fileID: 8664578715550899488}
-  flagCost: {fileID: 1924774964578108063}
-  trim: {fileID: 2155038754459833294}
-  highlight: {fileID: 9088802975869654265}
-  background: {fileID: 1781161836494888888}
 --- !u!114 &1981230490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -510,6 +493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c73e0e9a8237b904f8b2a8b3a1fd28be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actionName: Shift
   actingFaction: 0
   requiredActionType: 2
   actionCost: 0
@@ -525,6 +509,23 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   shiftActionType: 0
+--- !u!114 &6910198765178914321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5506689824616246886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4b901042c3620044bb057150a62ac74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spaceName: {fileID: 8664578715550899488}
+  flagCost: {fileID: 1924774964578108063}
+  trim: {fileID: 2155038754459833294}
+  highlight: {fileID: 9088802975869654265}
+  background: {fileID: 1781161836494888888}
 --- !u!1 &7736453265218901345
 GameObject:
   m_ObjectHideFlags: 0

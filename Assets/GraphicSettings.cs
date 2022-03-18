@@ -10,5 +10,6 @@ public class GraphicSettings : SerializedScriptableObject
     public Dictionary<Game.Faction, Sprite> flags;
     public Dictionary<Game.Keyword, Sprite> keywordIcons;
     public Dictionary<Game.ActionType, Sprite> actionIcons;
-    public Dictionary<Game.Faction, Color> factionColors; 
+    public Dictionary<Game.Faction, Color> factionColors;
+    public GameObject PopupMenu, PopupAction; 
 }
