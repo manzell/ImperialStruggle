@@ -7,41 +7,29 @@ public class AdjustActionPoints : GameAction
 {
     public static UnityEvent<AdjustActionPoints> adjustActionPointsEvent = new UnityEvent<AdjustActionPoints>();
 
-    Dictionary<Game.ActionType, int> prevMajorActionPoints, prevMinorActionPoints, majorActionPoints, minorActionPoints; 
+    Dictionary<(Game.ActionType, Game.ActionTier), int> actionPointAdjustment = new Dictionary<(Game.ActionType, Game.ActionTier), int>(),
+        previousActionPoints = new Dictionary<(Game.ActionType, Game.ActionTier), int>(); 
 
-    public AdjustActionPoints(Game.Faction faction, Dictionary<Game.ActionType, int> majorActionPoints, Dictionary<Game.ActionType, int> minorActionPoints)
+    public AdjustActionPoints(Game.Faction faction, Dictionary<(Game.ActionType, Game.ActionTier), int> actionPoints)
     {
-        this.majorActionPoints = majorActionPoints;
-        this.minorActionPoints = minorActionPoints;
-        Do(faction); 
+        actionPointAdjustment = actionPoints; 
+        Do(faction);
     }
 
     public override void Do(Game.Faction faction)
     {
-        this.actingFaction = faction;
         Player player = Player.players[faction];
+        previousActionPoints = player.actionPoints;
+        actingFaction = faction;
 
-        prevMajorActionPoints = player.majorActionPoints;
-        prevMinorActionPoints = player.minorActionPoints;
-
-        foreach (KeyValuePair<Game.ActionType, int> pair in majorActionPoints)
+        foreach (KeyValuePair<(Game.ActionType type, Game.ActionTier tier), int> kvp in actionPointAdjustment)
         {
-            if (player.majorActionPoints.ContainsKey(pair.Key))
-                player.majorActionPoints[pair.Key] += pair.Value;
+            Debug.Log($"{faction} {(kvp.Value > 0 ? "+" : "")}{kvp.Value} {kvp.Key.tier} {kvp.Key.type} Points");
+
+            if (player.actionPoints.TryGetValue(kvp.Key, out int v))
+                player.actionPoints[kvp.Key] += v;
             else
-                player.majorActionPoints.Add(pair.Key, pair.Value);
-
-            player.majorActionPoints[pair.Key] = Mathf.Max(pair.Value, 0);
-        }
-
-        foreach (KeyValuePair<Game.ActionType, int> pair in minorActionPoints)
-        {
-            if (player.minorActionPoints.ContainsKey(pair.Key))
-                player.minorActionPoints[pair.Key] += pair.Value;
-            else
-                player.minorActionPoints.Add(pair.Key, pair.Value);
-
-            player.minorActionPoints[pair.Key] = Mathf.Max(pair.Value, 0);
+                player.actionPoints.Add(kvp.Key, kvp.Value); 
         }
 
         adjustActionPointsEvent.Invoke(this); 
@@ -49,7 +37,6 @@ public class AdjustActionPoints : GameAction
 
     public override void Undo()
     {
-        Player.players[actingFaction].majorActionPoints = prevMajorActionPoints;
-        Player.players[actingFaction].minorActionPoints = prevMinorActionPoints;
+        Player.players[actingFaction].actionPoints = previousActionPoints;
     }
 }

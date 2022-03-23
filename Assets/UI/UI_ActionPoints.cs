@@ -10,8 +10,7 @@ public class UI_ActionPoints : MonoBehaviour
 {
     [SerializeField] GameObject actionPointPrefab, minorAPs, majorAPs;
     [SerializeField] Button takeDebtButton, activateTPbutton, reduceDebtButton; 
-    Dictionary<Game.ActionType, UI_ActionPoint> majorAPtiles = new Dictionary<Game.ActionType, UI_ActionPoint>(),
-        minorAPtiles = new Dictionary<Game.ActionType, UI_ActionPoint>();
+    Dictionary<(Game.ActionType, Game.ActionTier), UI_ActionPoint> APtiles = new Dictionary<(Game.ActionType, Game.ActionTier), UI_ActionPoint>();
     RecordsTrack recordsTrack;
 
     private void Awake()
@@ -21,11 +20,11 @@ public class UI_ActionPoints : MonoBehaviour
         AdjustActionPoints.adjustActionPointsEvent.AddListener(aap => SetActionTiles(aap.actingFaction));
         TakeDebt.takeDebtEvent.AddListener(td => SetActionTiles(td.actingFaction));
         ActivateTreatyPoint.activateTreatyPointsEvent.AddListener(atp => SetActionTiles(atp.actingFaction));
-        SelectInvestmentTile.selectInvestmentTileEvent.AddListener(phase => reduceDebtButton.interactable = true);
-        EventCard.playCardEvent.AddListener(pce => reduceDebtButton.interactable = false);
-        ChargeActionPoints.chargeActionPointsEvent.AddListener(cap => reduceDebtButton.interactable = false); 
+        SelectInvestmentTile.selectInvestmentTileEvent.AddListener(phase => reduceDebtButton.interactable = true); // TODO Update move this out to a different system
+        PlayCard.playCardEvent.AddListener(pce => reduceDebtButton.interactable = false);
+        AdjustActionPoints.adjustActionPointsEvent.AddListener(cap => reduceDebtButton.interactable = false); 
 
-        SetButtons(FindObjectOfType<UI_PlayerBoard>().faction); 
+        SetButtons(UI_PlayerBoard.faction); 
     }
 
     void SetActionTiles(Game.Faction faction)
@@ -33,11 +32,11 @@ public class UI_ActionPoints : MonoBehaviour
         // Go through our list of Major Action Points - we either update the value or remove it if it's below zero
         Player player = Player.players[faction];
 
-        SetButtons(faction); 
+        SetButtons(faction);
 
         foreach (Game.ActionType actionType in Enum.GetValues(typeof(Game.ActionType)))
         {
-            if (player.majorActionPoints.ContainsKey(actionType) && player.majorActionPoints[actionType] > 0)
+            if (player.actionPoints.ContainsKey(actionType) && player.majorActionPoints[actionType] > 0)
             {
                 if (!majorAPtiles.ContainsKey(actionType))
                 {

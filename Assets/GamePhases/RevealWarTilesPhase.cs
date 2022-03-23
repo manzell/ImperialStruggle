@@ -36,9 +36,9 @@ public class RevealWarTilesPhase : MonoBehaviour, IPhaseAction
             else if (warTile.unflag)
             {
                 // This is a Shift Space Action             
-                Unflag unflag = new GameObject().AddComponent<Unflag>();
-                unflag.transform.parent = Player.players[warTile.faction].transform.parent; 
-                warTileBonusActions[warTile.faction].unflag++;
+                //Unflag unflag = new GameObject().AddComponent<Unflag>();
+                //unflag.transform.parent = Player.players[warTile.faction].transform.parent; 
+                //warTileBonusActions[warTile.faction].unflag++;
             }
         }); 
 

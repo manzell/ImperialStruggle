@@ -6,8 +6,6 @@ using System.Linq;
 
 public class DealCardsPhase : MonoBehaviour, IPhaseAction
 {
-    public static UnityEvent<Game.Faction, EventCard> dealCardEvent = new UnityEvent<Game.Faction, EventCard>();
-
     public int cardsToDeal = 3;
 
     public void Do(Phase phase, UnityAction callback)
@@ -24,25 +22,8 @@ public class DealCardsPhase : MonoBehaviour, IPhaseAction
         Game.eventDeck = Game.eventDeck.OrderBy(card => Random.value).ToList();
 
         for (int i = 0; i < cardsToDeal; i++)
-        {
             foreach(Player player in players)
-            {
-                EventCard card = Game.eventDeck.First();
-                player.hand.Add(card); 
-                Game.eventDeck.Remove(card);
-
-                dealCardEvent.Invoke(player.faction, card); 
-                Debug.Log($"{card} dealt to {player}"); 
-            }
-        }
-
-        foreach(Player player in players)
-        {
-            if(player.hand.Count > cardsToDeal)
-            {
-                Debug.Log($"{player} has {player.hand.Count} {(player.hand.Count == 1 ? "card" : "cards")} and must discard down");
-            }
-        }
+                phase.gameActions.Add(new DrawCard(player)); 
 
         callback.Invoke(); 
     }

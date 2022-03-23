@@ -42,7 +42,7 @@ public class UI_InvestmentTiles : MonoBehaviour
 
     void AddTiles(List<InvestmentTile> tiles)
     {
-        tiles = tiles.OrderBy(tile => (tile.majorAction.First().Key, tile.minorAction.First().Key, 5 - tile.majorAction.First().Value)).ToList();
+        tiles = tiles.OrderBy(tile => tile).ToList();
 
         foreach(InvestmentTile tile in tiles)
         {

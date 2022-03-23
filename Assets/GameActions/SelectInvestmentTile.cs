@@ -16,18 +16,16 @@ public class SelectInvestmentTile : GameAction
 
     public override void Do(Game.Faction faction)
     {
+        PeaceTurn peaceTurn = Phase.currentPhase.GetComponentInParent<PeaceTurn>();
+
         actingFaction = faction;
         investmentTile.available = false;
         investmentTile.exhausted = true;
-
-        ActionRound actionRound = (ActionRound)Phase.currentPhase;
-        PeaceTurn peaceTurn = Phase.currentPhase.GetComponentInParent<PeaceTurn>();
         
         peaceTurn.availableInvestmentTiles.Remove(investmentTile);
         peaceTurn.usedInvestmentTiles.Add(investmentTile);
 
         selectInvestmentTileEvent.Invoke(investmentTile);
-        actionRound.SetInvestmentTile(faction, investmentTile);
     }
 
     public override void Undo()

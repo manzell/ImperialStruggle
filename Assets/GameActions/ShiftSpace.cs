@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class ShiftSpace : GameAction
 {
+    public static UnityEvent<ShiftSpace> shiftSpaceEvent = new UnityEvent<ShiftSpace>();
     public Space space;
     Game.Faction prevFlag;
 
@@ -25,6 +26,8 @@ public class ShiftSpace : GameAction
             space.flag = faction;
         else if (space.flag != faction)
             space.flag = Game.Faction.Neutral;
+
+        shiftSpaceEvent.Invoke(this); 
     }
 
     public override void Undo() => space.flag = prevFlag;

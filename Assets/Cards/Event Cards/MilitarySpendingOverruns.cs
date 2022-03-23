@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MilitarySpendingOverruns : EventCard
 {
-    public override void Play(ActionRound actionRound)
+    public override void PlayCard(ActionRound actionRound)
     {
 
     }

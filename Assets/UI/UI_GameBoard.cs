@@ -21,8 +21,17 @@ public class UI_GameBoard : MonoBehaviour, IDragHandler, IBeginDragHandler, IPoi
         Vector2 boardSize = GetComponent<RectTransform>().sizeDelta;
         Vector3 drag = (Input.mousePosition - previousPosition) * speed;
 
-        transform.position += drag;
+        Vector3 newPosition = transform.position + drag;
 
-        previousPosition = Input.mousePosition; 
+        bool maxXrespected = (newPosition.x + boardSize.x / 2) > (container.transform.position.x + frameSize.x / 2);
+        bool maxYrespected = (newPosition.y + boardSize.y / 2) > (container.transform.position.y + frameSize.y / 2);
+        bool minXrespected = (newPosition.x - boardSize.x / 2) < (container.transform.position.x - frameSize.x / 2);
+        bool minYrespected = (newPosition.y - boardSize.y / 2) < (container.transform.position.y - frameSize.y / 2);
+
+        if (maxXrespected && maxYrespected && minXrespected && minYrespected)
+        {
+            transform.position += drag;
+            previousPosition = Input.mousePosition;
+        }
     }
 }

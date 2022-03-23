@@ -52,7 +52,7 @@ public class UI_SelectMinistryCard : MonoBehaviour
         cardSelectorWindow.SetActive(true);
 
         // For now, assume England goes first
-        DisplayMinistryCards(phase, FindObjectOfType<UI_PlayerBoard>().faction);
+        DisplayMinistryCards(phase, UI_PlayerBoard.faction);
     }
 
     public void DisplayMinistryCards(SelectMinistersPhase phase, Game.Faction faction)
@@ -102,6 +102,7 @@ public class UI_SelectMinistryCard : MonoBehaviour
         {
             GameObject c = Instantiate(cardPrefab, cardsGO.transform);            
             UI_Card uicard = c.GetComponent<UI_Card>();
+            uicard.gameObject.AddComponent<UI_ClickSelectCard>(); 
 
             c.name = icard.gameObject.name;
 

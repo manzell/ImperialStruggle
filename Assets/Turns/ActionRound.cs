@@ -10,12 +10,15 @@ public class ActionRound : Phase
 
     private void Awake()
     {
-        SelectInvestmentTilePhase.selectInvestmentTileEvent.AddListener(SetInvestmentTile); 
+        SelectInvestmentTile.selectInvestmentTileEvent.AddListener(SetInvestmentTile); 
     }
 
-    public void SetInvestmentTile(Game.Faction faction, InvestmentTile tile)
+    public void SetInvestmentTile(InvestmentTile tile)
     {
-        investmentTile = tile;
-        gameActions.Add(new AdjustActionPoints(faction, tile.majorAction, tile.minorAction)); // Why does this live in the ActionRound? Put somewhere else
+        if(investmentTile == null && Phase.currentPhase == this)
+        {
+            investmentTile = tile;
+            gameActions.Add(new AdjustActionPoints(actingFaction, tile.actionPoints)); // Why does this live in the ActionRound? Put somewhere else
+        }
     }
 }

@@ -9,7 +9,7 @@ public class CarnaticWar : EventCard
     [SerializeField] Game.Keyword bonusKeyword; 
     [SerializeField] List<Space> indianAlliances, fortsAndMarkets;
 
-    public override void Play(ActionRound actionRound)
+    public override void PlayCard(ActionRound actionRound)
     {
         if (commandText.ContainsKey(actionRound.actingFaction))
             Debug.Log(commandText[actionRound.actingFaction]);

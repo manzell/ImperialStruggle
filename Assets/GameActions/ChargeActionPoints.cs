@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events; 
 
+/*
 public class ChargeActionPoints : GameAction
 { 
     public Dictionary<Game.ActionType, int> charge = new Dictionary<Game.ActionType, int>();
@@ -78,3 +79,4 @@ public class ChargeActionPoints : GameAction
         player.minorActionPoints = prevMinorActionPts; 
     }
 }
+*/

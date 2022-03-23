@@ -14,12 +14,16 @@ public class UI_PlayerBoard : MonoBehaviour
 
     public static UnityEvent<Game.Faction> setFactionEvent = new UnityEvent<Game.Faction>();
 
-    public Game.Faction faction = Game.Faction.England; 
+    public static Game.Faction faction = Game.Faction.France; 
 
     private void Awake()
     {
-        SelectMinistersPhase.selectMinistersEvent.AddListener((phase, faction, ministers) => { if (this.faction == faction) SetMinisters(ministers); });
-        DealCardsPhase.dealCardEvent.AddListener((faction, card) => { if (faction == this.faction) AddCard(card); });
+        SelectMinistersPhase.selectMinistersEvent.AddListener((phase, faction, ministers) => { if (UI_PlayerBoard.faction == faction) SetMinisters(ministers); });
+        DrawCard.drawCardEvent.AddListener(dce => { if (dce.faction == faction) AddCard(dce.card); });
+        SelectInvestmentTile.selectInvestmentTileEvent.AddListener(HilightCards);
+        PlayCard.playCardEvent.AddListener(playCard => RemoveCard(playCard.card));
+        PlayCard.playCardEvent.AddListener(playCard => RemoveCardHighlights());
+        // Remove Highlight on Play Card Event as well as any other Action? 
     }
 
     public void Start()
@@ -36,7 +40,7 @@ public class UI_PlayerBoard : MonoBehaviour
     public void SetFaction(Game.Faction faction)
     {
         GraphicSettings graphicSettings = FindObjectOfType<Game>().graphicSettings;
-        this.faction = faction; 
+        UI_PlayerBoard.faction = faction; 
 
         setFactionEvent.Invoke(faction);
 
@@ -66,14 +70,26 @@ public class UI_PlayerBoard : MonoBehaviour
     {
         if(tile.eventCardTrigger == true)
         {
-            handArea.GetComponentsInChildren<EventCard>()
-                .Where(card => card.reqdActionType == Game.ActionType.None || card.reqdActionType == tile.majorAction.First().Key).ToList()
-                .ForEach(card => card.GetComponent<UI_Card>().SetHighlight(Color.green)); 
+            // Issue this only highlights the cards if we're looking at the correct player's Player Board. If I'm tabbed over it won't highlight. 
+            // To fix I'll need to have two player boards, 1 for each player, and transition them, rather than the current approach. 
+            handArea.GetComponentsInChildren<UI_Card>()
+                .Where(uicard => (uicard.card as EventCard).reqdActionType == Game.ActionType.None || 
+                    (uicard.card as EventCard).reqdActionType == tile.majorActionType)
+                .ToList()
+                .ForEach(card => {
+                    card.GetComponent<UI_Card>().SetHighlight(Color.green);
+                    if(!card.GetComponent<UI_ClickPlayCard>())
+                        card.gameObject.AddComponent<UI_ClickPlayCard>(); 
+                }); 
         }
     }
 
     public void RemoveCardHighlights() =>
-        handArea.GetComponentsInChildren<EventCard>().ToList().ForEach(card => card.GetComponent<UI_Card>().RemoveHighlight());
+        handArea.GetComponentsInChildren<UI_Card>().ToList().ForEach(card =>
+        {
+            card.RemoveHighlight();
+            Destroy(card.GetComponent<UI_ClickPlayCard>());
+        });
 
     public void AddCard(EventCard card)
     {
@@ -84,10 +100,7 @@ public class UI_PlayerBoard : MonoBehaviour
     public void RemoveCard(EventCard card)
     {
         foreach(Transform child in handArea.transform)
-        {
-            if(child.TryGetComponent(out UI_Card c))
-                if((EventCard)c.card == card)
-                    Destroy(card.gameObject);
-        }
+            if ((EventCard)child.GetComponent<UI_Card>()?.card == card)
+                Destroy(child.gameObject); 
     }
 }

@@ -28,10 +28,20 @@ public class UI_InvestmentTile : MonoBehaviour
     {
         GraphicSettings graphicSettings = FindObjectOfType<Game>().graphicSettings;
 
-        majorActionPoints.text = tile.majorAction.First().Value.ToString();
-        minorActionPoints.text = tile.minorAction.First().Value.ToString();
-        majorIcon.sprite = graphicSettings.actionIcons[tile.majorAction.First().Key];
-        minorIcon.sprite = graphicSettings.actionIcons[tile.minorAction.First().Key];
+        foreach(KeyValuePair<(Game.ActionType type, Game.ActionTier tier), int> kvp in tile.actionPoints)
+        {
+            if(kvp.Key.tier == Game.ActionTier.Major)
+            {
+                majorActionPoints.text = kvp.Value.ToString();
+                majorIcon.sprite = graphicSettings.actionIcons[kvp.Key.type];
+            }
+            else if (kvp.Key.tier == Game.ActionTier.Minor)
+            {
+                minorActionPoints.text = kvp.Value.ToString();
+                minorIcon.sprite = graphicSettings.actionIcons[kvp.Key.type];
+            }
+        }
+
         eventIcon.enabled = tile.eventCardTrigger;
         milUpgradeIcon.enabled = tile.milUpgradeTrigger;
 

@@ -8,10 +8,11 @@ public class UI_Space : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     Coroutine Popup, ClosePopup;
     static GameObject _popupMenu;
+    public Space space; 
 
     void Awake()
     {
-        UI_GameBoard.clickEvent.AddListener(ped => { Debug.Log("CLick Listened To"); Close();  }); 
+        UI_GameBoard.clickEvent.AddListener(ped => { Debug.Log("CLick Listened To"); Close(); });
     }
 
     public void OnPointerEnter(PointerEventData eventData) => Popup = StartCoroutine(openPopup(0.5f));
@@ -37,7 +38,7 @@ public class UI_Space : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     void Open()
     {
-        Action[] actions = GetComponents<Action>().Where(action => action.Can(FindObjectOfType<UI_PlayerBoard>().faction)).ToArray();
+        Action[] actions = GetComponents<Action>().Where(action => action.Can(UI_PlayerBoard.faction)).ToArray();
         if (actions.Length > 0)
         {
             GameObject popupAction = FindObjectOfType<Game>().graphicSettings.PopupAction;

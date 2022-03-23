@@ -4,20 +4,20 @@ using UnityEngine;
 using UnityEngine.Events;
 using Sirenix.OdinInspector;
 
-public class ShiftPoliticalSpace : Action
+public class ShiftMarket : Action
 {
     public enum ActionType { None, Flag, Deflag }
     public ActionType shiftActionType, requiredShiftType;
     public Game.Faction requiredFaction;
     public int fixedActionCost = -1;
-    public int finalActionCost; 
-    Space space;
+    public int finalActionCost;
+    Market space;
 
     private void Awake()
     {
-        space = GetComponent<Space>();
+        space = GetComponent<Market>();
         SelectInvestmentTile.selectInvestmentTileEvent.AddListener(tile => Can((Phase.currentPhase as ActionRound).actingFaction));
-        AdjustActionPoints.adjustActionPointsEvent.AddListener(adjust => Can(adjust.actingFaction));
+        AdjustActionPoints.adjustActionPointsEvent.AddListener(charge => Can(charge.actingFaction));
         TakeDebt.takeDebtEvent.AddListener(td => Can(td.actingFaction));
     }
 
@@ -47,17 +47,18 @@ public class ShiftPoliticalSpace : Action
         }
     }
 
+    // TODO - Need to be able to create ShiftSpaceCommands 
     public override bool Can(Game.Faction faction)
     {
         Game.Faction opposingFaction = faction == Game.Faction.England ? Game.Faction.France : Game.Faction.England;
 
-        available = true; 
-        SetCost(); 
+        available = true;
+        SetCost();
         SetActionName(faction);
 
         Try.Invoke(this); // Try Happens BEFORE calculating if we can afford it. 
 
-        if (actionCost > 0 && (requiredShiftType == ActionType.None || requiredShiftType == shiftActionType))
+        if (finalActionCost > 0 && (requiredShiftType == ActionType.None || requiredShiftType == shiftActionType))
         {
             Player player = Player.players[faction];
             // Check that we have the ActionPoints - the player must manually activate their own Debt or Treaty Points first!
@@ -69,11 +70,12 @@ public class ShiftPoliticalSpace : Action
             if (requireMajorAction == false)
                 availableActionPoints += player.minorActionPoints.ContainsKey(requiredActionType) ? player.minorActionPoints[requiredActionType] : 0;
 
-            if (requiredFaction != Game.Faction.Neutral && requiredFaction != faction) available = false; 
-            if (availableActionPoints < actionCost) available = false;
-            if (space.flag == faction) available = false; // Cannot Diplomatic Action on a Space we already control
+            if (availableActionPoints < finalActionCost) available = false;
             if (requireMajorAction == true && player.majorActionPoints.ContainsKey(requiredActionType) == false) available = false; // Require matching Major Action Type
         }
+
+        if (requiredFaction != Game.Faction.Neutral && requiredFaction != faction) available = false;
+        if (space.flag == faction) available = false; // Cannot Shift A Market we already control
 
         return available;
     }
@@ -81,13 +83,15 @@ public class ShiftPoliticalSpace : Action
     [Button]
     public override void Do(Game.Faction faction)
     {
+        SetCost();
+
         ActionRound actionRound = Phase.currentPhase as ActionRound;
-        Dictionary<(Game.ActionType, Game.ActionTier), int> charge = new Dictionary<(Game.ActionType, Game.ActionTier), int> {
+        Dictionary<(Game.ActionType, Game.ActionTier), int> charge = new Dictionary<(Game.ActionType, Game.ActionTier), int> { 
             { (requiredActionType, requireMajorAction ? Game.ActionTier.Major: Game.ActionTier.Minor), -finalActionCost } };
 
-        actionRound.gameActions.Add(new ShiftSpace(space, faction));
         actionRound.gameActions.Add(new AdjustActionPoints(faction, charge));
+        actionRound.gameActions.Add(new ShiftSpace(space, faction));
 
-        DoEvent.Invoke(this); 
+        DoEvent.Invoke(this);
     }
 }
