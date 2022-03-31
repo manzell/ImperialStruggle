@@ -8,17 +8,13 @@ public class ActionRound : Phase
     public Game.Faction actingFaction;
     public InvestmentTile investmentTile;
 
-    private void Awake()
-    {
-        SelectInvestmentTile.selectInvestmentTileEvent.AddListener(SetInvestmentTile); 
-    }
-
+    private void Awake() => SelectInvestmentTile.selectInvestmentTileEvent.AddListener(SetInvestmentTile);
     public void SetInvestmentTile(InvestmentTile tile)
     {
-        if(investmentTile == null && Phase.currentPhase == this)
+        if(currentPhase == this && investmentTile == null)
         {
             investmentTile = tile;
-            gameActions.Add(new AdjustActionPoints(actingFaction, tile.actionPoints)); // Why does this live in the ActionRound? Put somewhere else
+            SelectInvestmentTile.selectInvestmentTileEvent.RemoveListener(SetInvestmentTile);
         }
     }
 }

@@ -4,11 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events; 
 using System;
-using TMPro; 
+using TMPro;
+using Sirenix.OdinInspector; 
 
-public class UI_ActionPoints : MonoBehaviour
+public class UI_ActionPoints : SerializedMonoBehaviour
 {
-    [SerializeField] GameObject actionPointPrefab, minorAPs, majorAPs;
+    [SerializeField] GameObject actionPointPrefab;
+    [SerializeField] Dictionary<Game.ActionTier, GameObject> actionTiers = new Dictionary<Game.ActionTier, GameObject>(); 
     [SerializeField] Button takeDebtButton, activateTPbutton, reduceDebtButton; 
     Dictionary<(Game.ActionType, Game.ActionTier), UI_ActionPoint> APtiles = new Dictionary<(Game.ActionType, Game.ActionTier), UI_ActionPoint>();
     RecordsTrack recordsTrack;
@@ -34,38 +36,33 @@ public class UI_ActionPoints : MonoBehaviour
 
         SetButtons(faction);
 
-        foreach (Game.ActionType actionType in Enum.GetValues(typeof(Game.ActionType)))
+        foreach (Game.ActionType type in Enum.GetValues(typeof(Game.ActionType)))
         {
-            if (player.actionPoints.ContainsKey(actionType) && player.majorActionPoints[actionType] > 0)
+            foreach (Game.ActionTier tier in Enum.GetValues(typeof(Game.ActionTier)))
             {
-                if (!majorAPtiles.ContainsKey(actionType))
+                if(player.actionPoints.TryGetValue((type, tier), out int ap))
                 {
-                    GameObject action = Instantiate(actionPointPrefab, majorAPs.transform);
-                    majorAPtiles.Add(actionType, action.GetComponent<UI_ActionPoint>());
+                    if(ap > 0)
+                    {
+                        if (!APtiles.ContainsKey((type, tier)))
+                        {
+                            GameObject action = Instantiate(actionPointPrefab, actionTiers[tier].transform);
+                            APtiles.Add((type, tier), action.GetComponent<UI_ActionPoint>());
+                        }
+
+                        APtiles[(type, tier)].SetDisplay(type, ap);
+                    }
+                    else if(APtiles.ContainsKey((type, tier)))
+                        Destruct(type, tier);
                 }
+                else if(APtiles.ContainsKey((type, tier)))
+                    Destruct(type, tier); 
 
-                majorAPtiles[actionType].SetDisplay(actionType, player.majorActionPoints[actionType]);
-            }
-            else if(majorAPtiles.ContainsKey(actionType))
-            {
-                Destroy(majorAPtiles[actionType].gameObject);
-                majorAPtiles.Remove(actionType);
-            }
-
-            if (player.minorActionPoints.ContainsKey(actionType) && player.minorActionPoints[actionType] > 0)
-            {
-                if (!minorAPtiles.ContainsKey(actionType))
+                void Destruct(Game.ActionType type, Game.ActionTier tier)
                 {
-                    GameObject action = Instantiate(actionPointPrefab, minorAPs.transform);
-                    minorAPtiles.Add(actionType, action.GetComponent<UI_ActionPoint>());
+                    Destroy(APtiles[(type, tier)].gameObject);
+                    APtiles.Remove((type, tier));
                 }
-
-                minorAPtiles[actionType].SetDisplay(actionType, player.minorActionPoints[actionType]);
-            }
-            else if (minorAPtiles.ContainsKey(actionType))
-            {
-                Destroy(minorAPtiles[actionType].gameObject);
-                minorAPtiles.Remove(actionType);
             }
         }
     }

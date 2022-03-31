@@ -1301,9 +1301,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e6e395cb9f1e944188feef551430d34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 748889668}
+    - {fileID: 1817650397}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: actionTiers
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[Game+ActionTier, Assembly-CSharp],[UnityEngine.GameObject,
+        UnityEngine.CoreModule]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Game+ActionTier,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 0
+    - Name: $v
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   actionPointPrefab: {fileID: 9133249338088538451, guid: 25f577571b4367b469132b4f8f14ca2a, type: 3}
-  minorAPs: {fileID: 748889668}
-  majorAPs: {fileID: 1817650397}
   takeDebtButton: {fileID: 597830333}
   activateTPbutton: {fileID: 1527700735}
   reduceDebtButton: {fileID: 1244895193}
@@ -12062,56 +12121,14 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: majorActionPoints
-      Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[Game+ActionType, Assembly-CSharp],[System.Int32,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Game+ActionType,
-        Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: minorActionPoints
-      Entry: 7
-      Data: 2|System.Collections.Generic.Dictionary`2[[Game+ActionType, Assembly-CSharp],[System.Int32,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 9
-      Data: 1
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionPoints
       Entry: 7
-      Data: 3|System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
         Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib],[System.Int32,
         mscorlib]], mscorlib
     - Name: comparer
       Entry: 7
-      Data: 4|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
         Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
     - Name: 
       Entry: 8
@@ -19416,56 +19433,14 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: majorActionPoints
-      Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[Game+ActionType, Assembly-CSharp],[System.Int32,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Game+ActionType,
-        Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: minorActionPoints
-      Entry: 7
-      Data: 2|System.Collections.Generic.Dictionary`2[[Game+ActionType, Assembly-CSharp],[System.Int32,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 9
-      Data: 1
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionPoints
       Entry: 7
-      Data: 3|System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
         Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib],[System.Int32,
         mscorlib]], mscorlib
     - Name: comparer
       Entry: 7
-      Data: 4|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
         Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
     - Name: 
       Entry: 8

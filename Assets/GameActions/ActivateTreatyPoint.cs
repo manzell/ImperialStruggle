@@ -23,12 +23,12 @@ public class ActivateTreatyPoint : GameAction
         if (recordsTrack.treatyPoints[atp.actingFaction] >= atp.amount)
         {
             recordsTrack.treatyPoints[atp.actingFaction] -= atp.amount;
-            Dictionary<Game.ActionType, int> actionPoints = Player.players[atp.actingFaction].majorActionPoints;
+            Dictionary<(Game.ActionType, Game.ActionTier), int> actionPoints = Player.players[atp.actingFaction].actionPoints;
 
-            if (actionPoints.ContainsKey(Game.ActionType.Treaty))
-                actionPoints[Game.ActionType.Treaty] += atp.amount;
+            if (actionPoints.ContainsKey((Game.ActionType.Treaty, Game.ActionTier.Major)))
+                actionPoints[(Game.ActionType.Treaty, Game.ActionTier.Major)] += atp.amount;
             else
-                actionPoints.Add(Game.ActionType.Treaty, atp.amount);
+                actionPoints.Add((Game.ActionType.Treaty, Game.ActionTier.Major), atp.amount);
 
             Debug.Log($"{atp.actingFaction} activates {atp.amount} Treaty {(atp.amount == 1 ? "Point" : "Points")}"); 
             activateTreatyPointsEvent.Invoke(atp);

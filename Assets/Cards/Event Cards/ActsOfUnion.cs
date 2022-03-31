@@ -80,7 +80,7 @@ public class ActsOfUnion : EventCard
             ShiftPoliticalSpace shift = space.gameObject.AddComponent<ShiftPoliticalSpace>();
             shift.requiredShiftType = ShiftPoliticalSpace.ActionType.Deflag;
             shift.requiredFaction = Game.Faction.France;
-            shift.fixedActionCost = 0;
+            shift.fixedActionCost.Clear(); 
             shift.requiredActionType = Game.ActionType.None; 
 
             Phase.phaseEndEvent.AddListener(phase => {

@@ -10,6 +10,7 @@ public class Action : SerializedMonoBehaviour, IExhaustable
     public string actionName; 
     public Game.Faction actingFaction; 
     public Game.ActionType requiredActionType = Game.ActionType.None;
+    public Game.ActionTier requiredActionTier = Game.ActionTier.Minor; 
     public int actionCost = 0;
 
     public Dictionary<(Game.ActionType, Game.ActionTier), int> _actionCost = new Dictionary<(Game.ActionType, Game.ActionTier), int>(),
@@ -23,7 +24,6 @@ public class Action : SerializedMonoBehaviour, IExhaustable
         CanEvent = new UnityEvent<Action>(), 
         DoEvent = new UnityEvent<Action>(); 
 
-    bool _exhausted = false;
     bool IExhaustable.exhausted { get; set; }
 
     public virtual bool Can(Game.Faction faction) => true;

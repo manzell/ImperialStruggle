@@ -10,7 +10,7 @@ public class ShiftMarket : Action
     public ActionType shiftActionType, requiredShiftType;
     public Game.Faction requiredFaction;
     public int fixedActionCost = -1;
-    public int finalActionCost;
+    public int finalCost; 
     Market space;
 
     private void Awake()
@@ -24,7 +24,7 @@ public class ShiftMarket : Action
     void SetCost()
     {
         requireMajorAction = space.conflictMarker == false && space.flag != Game.Faction.Neutral;
-        finalActionCost = fixedActionCost >= 0 ? fixedActionCost : Mathf.Clamp(actionCost + (space.conflictMarker ? 1 : space.flagCost), 0, 99);
+        finalCost = fixedActionCost >= 0 ? fixedActionCost : Mathf.Clamp(actionCost + (space.conflictMarker ? 1 : space.flagCost), 0, 99);
     }
 
     void SetActionName(Game.Faction faction)
@@ -58,20 +58,20 @@ public class ShiftMarket : Action
 
         Try.Invoke(this); // Try Happens BEFORE calculating if we can afford it. 
 
-        if (finalActionCost > 0 && (requiredShiftType == ActionType.None || requiredShiftType == shiftActionType))
+        if (finalCost > 0 && (requiredShiftType == ActionType.None || requiredShiftType == shiftActionType))
         {
             Player player = Player.players[faction];
             // Check that we have the ActionPoints - the player must manually activate their own Debt or Treaty Points first!
             int availableActionPoints =
-                (player.majorActionPoints.TryGetValue(requiredActionType, out int points) ? points : 0) +
-                (player.majorActionPoints.TryGetValue(Game.ActionType.Debt, out int debt) ? debt : 0) +
-                (player.majorActionPoints.TryGetValue(Game.ActionType.Treaty, out int treaty) ? treaty : 0);
+                (player.actionPoints.TryGetValue((requiredActionType, Game.ActionTier.Major), out int points) ? points : 0) +
+                (player.actionPoints.TryGetValue((Game.ActionType.Debt, Game.ActionTier.Major), out int debt) ? debt : 0) +
+                (player.actionPoints.TryGetValue((Game.ActionType.Treaty, Game.ActionTier.Major), out int treaty) ? treaty : 0);
 
             if (requireMajorAction == false)
-                availableActionPoints += player.minorActionPoints.ContainsKey(requiredActionType) ? player.minorActionPoints[requiredActionType] : 0;
+                availableActionPoints += player.actionPoints.ContainsKey((requiredActionType, Game.ActionTier.Minor)) ? player.actionPoints[(requiredActionType, Game.ActionTier.Minor)] : 0;
 
-            if (availableActionPoints < finalActionCost) available = false;
-            if (requireMajorAction == true && player.majorActionPoints.ContainsKey(requiredActionType) == false) available = false; // Require matching Major Action Type
+            if (availableActionPoints < finalCost) available = false;
+            if (requireMajorAction == true && player.actionPoints.ContainsKey((requiredActionType, Game.ActionTier.Major)) == false) available = false; // Require matching Major Action Type
         }
 
         if (requiredFaction != Game.Faction.Neutral && requiredFaction != faction) available = false;
@@ -87,7 +87,7 @@ public class ShiftMarket : Action
 
         ActionRound actionRound = Phase.currentPhase as ActionRound;
         Dictionary<(Game.ActionType, Game.ActionTier), int> charge = new Dictionary<(Game.ActionType, Game.ActionTier), int> { 
-            { (requiredActionType, requireMajorAction ? Game.ActionTier.Major: Game.ActionTier.Minor), -finalActionCost } };
+            { (requiredActionType, requireMajorAction ? Game.ActionTier.Major: Game.ActionTier.Minor), -finalCost } };
 
         actionRound.gameActions.Add(new AdjustActionPoints(faction, charge));
         actionRound.gameActions.Add(new ShiftSpace(space, faction));

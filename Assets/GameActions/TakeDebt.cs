@@ -23,12 +23,12 @@ public class TakeDebt : GameAction
         if(recordsTrack.availableDebt[td.actingFaction] > td.amount)
         {
             recordsTrack.currentDebt[td.actingFaction] += td.amount;
-            Dictionary<Game.ActionType, int> actionPoints = Player.players[td.actingFaction].majorActionPoints;
+            Dictionary<(Game.ActionType, Game.ActionTier), int> actionPoints = Player.players[td.actingFaction].actionPoints;
 
-            if (actionPoints.ContainsKey(Game.ActionType.Debt))
-                actionPoints[Game.ActionType.Debt] += td.amount;
+            if (actionPoints.ContainsKey((Game.ActionType.Debt, Game.ActionTier.Major)))
+                actionPoints[(Game.ActionType.Debt, Game.ActionTier.Major)] += td.amount;
             else
-                actionPoints.Add(Game.ActionType.Debt, td.amount);
+                actionPoints.Add((Game.ActionType.Debt, Game.ActionTier.Major), td.amount);
 
             Debug.Log($"{td.actingFaction} takes {amount} debt (limit: {recordsTrack.debtLimit[td.actingFaction]}"); 
             takeDebtEvent.Invoke(td); 

@@ -8,8 +8,12 @@ public class SelectInvestmentTilePhase : MonoBehaviour, IPhaseAction
 {
     public UnityAction callback;
 
-    public void Do(Phase phase, UnityAction callback) =>
+    public void Do(Phase phase, UnityAction callback)
+    {
+        Game.Faction faction = GetComponent<ActionRound>().actingFaction;
         this.callback = callback;
+        Debug.Log($"{faction} to selects an Investment Tile");
+    }
 
     public void Select(InvestmentTile tile)
     {

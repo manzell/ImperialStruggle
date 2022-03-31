@@ -8,8 +8,12 @@ public class UI_SelectInvestmentTile : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         InvestmentTile tile = GetComponent<UI_InvestmentTile>().tile;
+        ActionRound actionRound = Phase.currentPhase as ActionRound; 
 
-        if (tile.available && Phase.currentPhase.TryGetComponent(out SelectInvestmentTilePhase tilePhase) && Phase.currentPhase is ActionRound && (Phase.currentPhase as ActionRound).investmentTile == null)
-            tilePhase.Select(tile);
+        if (tile.available && actionRound.investmentTile == null)
+        {
+            actionRound.GetComponent<SelectInvestmentTilePhase>().Select(tile); // Select Investment Tile Phase might go away in the future. 
+            actionRound.gameActions.Add(new AdjustActionPoints(actionRound.actingFaction, tile.actionPoints));
+        }
     }
 }

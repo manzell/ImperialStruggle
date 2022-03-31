@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using Sirenix.OdinInspector;
+using System.Linq; 
 
 public class ShiftPoliticalSpace : Action
 {
+    public static UnityEvent<ShiftPoliticalSpace> calculateCostEvent = new UnityEvent<ShiftPoliticalSpace>();
     public enum ActionType { None, Flag, Deflag }
     public ActionType shiftActionType, requiredShiftType;
     public Game.Faction requiredFaction;
-    public int fixedActionCost = -1;
-    public int finalActionCost; 
+    public Dictionary<(Game.ActionType, Game.ActionTier), int> fixedActionCost = 
+        new Dictionary<(Game.ActionType, Game.ActionTier), int>() { { (Game.ActionType.Diplomacy, Game.ActionTier.Minor), -1 } };
+
     Space space;
 
     private void Awake()
@@ -24,7 +27,15 @@ public class ShiftPoliticalSpace : Action
     void SetCost()
     {
         requireMajorAction = space.conflictMarker == false && space.flag != Game.Faction.Neutral;
-        finalActionCost = fixedActionCost >= 0 ? fixedActionCost : Mathf.Clamp(actionCost + (space.conflictMarker ? 1 : space.flagCost), 0, 99);
+
+        if(fixedActionCost[(Game.ActionType.Diplomacy, Game.ActionTier.Minor)] >= 0)
+            finalActionCost = fixedActionCost; 
+        else
+            finalActionCost = new Dictionary<(Game.ActionType, Game.ActionTier), int>() { 
+                { (requiredActionType, requireMajorAction ? Game.ActionTier.Major : Game.ActionTier.Minor), -(space.conflictMarker ? 1 : space.flagCost) } 
+            };
+
+        calculateCostEvent.Invoke(this); 
     }
 
     void SetActionName(Game.Faction faction)
@@ -49,8 +60,6 @@ public class ShiftPoliticalSpace : Action
 
     public override bool Can(Game.Faction faction)
     {
-        Game.Faction opposingFaction = faction == Game.Faction.England ? Game.Faction.France : Game.Faction.England;
-
         available = true; 
         SetCost(); 
         SetActionName(faction);
@@ -62,17 +71,17 @@ public class ShiftPoliticalSpace : Action
             Player player = Player.players[faction];
             // Check that we have the ActionPoints - the player must manually activate their own Debt or Treaty Points first!
             int availableActionPoints =
-                (player.majorActionPoints.TryGetValue(requiredActionType, out int points) ? points : 0) +
-                (player.majorActionPoints.TryGetValue(Game.ActionType.Debt, out int debt) ? debt : 0) +
-                (player.majorActionPoints.TryGetValue(Game.ActionType.Treaty, out int treaty) ? treaty : 0);
+                (player.actionPoints.TryGetValue((requiredActionType, Game.ActionTier.Major), out int points) ? points : 0) +
+                (player.actionPoints.TryGetValue((Game.ActionType.Debt, Game.ActionTier.Major), out int debt) ? debt : 0) +
+                (player.actionPoints.TryGetValue((Game.ActionType.Treaty, Game.ActionTier.Major), out int treaty) ? treaty : 0);
 
             if (requireMajorAction == false)
-                availableActionPoints += player.minorActionPoints.ContainsKey(requiredActionType) ? player.minorActionPoints[requiredActionType] : 0;
+                availableActionPoints += player.actionPoints.ContainsKey((requiredActionType, Game.ActionTier.Minor)) ? player.actionPoints[(requiredActionType, Game.ActionTier.Minor)] : 0;
 
             if (requiredFaction != Game.Faction.Neutral && requiredFaction != faction) available = false; 
             if (availableActionPoints < actionCost) available = false;
             if (space.flag == faction) available = false; // Cannot Diplomatic Action on a Space we already control
-            if (requireMajorAction == true && player.majorActionPoints.ContainsKey(requiredActionType) == false) available = false; // Require matching Major Action Type
+            if (requireMajorAction == true && player.actionPoints.ContainsKey((requiredActionType, Game.ActionTier.Major)) == false) available = false; // Require matching Major Action Type
         }
 
         return available;
@@ -82,11 +91,9 @@ public class ShiftPoliticalSpace : Action
     public override void Do(Game.Faction faction)
     {
         ActionRound actionRound = Phase.currentPhase as ActionRound;
-        Dictionary<(Game.ActionType, Game.ActionTier), int> charge = new Dictionary<(Game.ActionType, Game.ActionTier), int> {
-            { (requiredActionType, requireMajorAction ? Game.ActionTier.Major: Game.ActionTier.Minor), -finalActionCost } };
 
         actionRound.gameActions.Add(new ShiftSpace(space, faction));
-        actionRound.gameActions.Add(new AdjustActionPoints(faction, charge));
+        actionRound.gameActions.Add(new AdjustActionPoints(faction, finalActionCost));
 
         DoEvent.Invoke(this); 
     }

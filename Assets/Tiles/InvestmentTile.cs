@@ -7,7 +7,12 @@ public class InvestmentTile : SerializedMonoBehaviour, IExhaustable, System.ICom
 {
     public Dictionary<(Game.ActionType, Game.ActionTier), int> actionPoints; 
     public bool eventCardTrigger, milUpgradeTrigger;
-    public bool available = true; 
+    public bool available = true;
+
+    public void Select(Game.Faction faction)
+    {
+        Phase.currentPhase.gameActions.Add(new AdjustActionPoints(faction, actionPoints));
+    }
 
     public Game.ActionType majorActionType
     {
