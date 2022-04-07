@@ -4,18 +4,13 @@ using UnityEngine;
 using UnityEngine.Events;
 using Sirenix.OdinInspector; 
 
-public abstract class EventCard : SerializedMonoBehaviour, ICard
+public class EventCard : SerializedMonoBehaviour, ICard
 {
     [HideInInspector] public Game.Faction playFaction; 
     [HideInInspector] public UnityAction callback;
 
-    public string bonusKeywords;
     public Game.ActionType reqdActionType;
     public List<Game.Era> eras;
-
-    public Dictionary<Game.Faction, string> 
-        commandText = new Dictionary<Game.Faction, string>(),
-        bonusText = new Dictionary<Game.Faction, string>(); 
 
     public void Play(UnityAction callback)
     {
@@ -24,5 +19,14 @@ public abstract class EventCard : SerializedMonoBehaviour, ICard
         PlayCard(Phase.currentPhase as ActionRound);
     }
 
-    public abstract void PlayCard(ActionRound actionRound);
+    public virtual void PlayCard(ActionRound actionRound)
+    {
+        foreach(CardEvent cardEvent in GetComponents<CardEvent>())
+        {
+            if (cardEvent.eventable && cardEvent.faction == Game.Faction.Neutral || cardEvent.faction == actionRound.actingFaction)
+                cardEvent.Event();
+        }
+
+        callback.Invoke();
+    }
 }

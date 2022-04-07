@@ -14,6 +14,20 @@ public class Player : SerializedMonoBehaviour
 
     public static Dictionary<Game.Faction, Player> players = new Dictionary<Game.Faction, Player>();
 
+    public List<Game.Keyword> keywords
+    {
+        get
+        {
+            List<Game.Keyword> _keywords = new List<Game.Keyword>();
+            foreach (MinistryCard card in ministers)
+                foreach(Game.Keyword _keyword in card.keywords)                    
+                    if(!_keywords.Contains(_keyword))
+                        _keywords.Add(_keyword);
+
+            return _keywords;
+        }
+    }
+
     private void Awake()
     {
         players.Add(faction, this); 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq; 
 
-public class DeckPhase : GameAction
+public class DeckPhase : Command
 {
     public List<EventCard> newCards;
 

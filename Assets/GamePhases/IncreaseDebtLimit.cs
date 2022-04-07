@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IncreaseDebtLimit : GameAction
+public class IncreaseDebtLimit : Command
 {
     public Dictionary<Game.Faction, int> debtLimitIncrease;
     RecordsTrack recordsTrack;

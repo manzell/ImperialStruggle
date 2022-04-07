@@ -17,7 +17,7 @@ public class Phase : SerializedMonoBehaviour
         onPhaseActions = new List<IPhaseAction>(),
         afterPhaseActions = new List<IPhaseAction>();
 
-    [HideInInspector] public List<GameAction> gameActions; 
+    [HideInInspector] public List<Command> gameActions; 
     [HideInInspector] public UnityAction callback;
 
     public static Phase currentPhase;

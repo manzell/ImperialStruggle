@@ -191,6 +191,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 11382389}
+  - component: {fileID: 11382396}
+  - component: {fileID: 11382391}
+  - component: {fileID: 11382395}
+  - component: {fileID: 11382394}
+  - component: {fileID: 11382393}
+  - component: {fileID: 11382392}
   - component: {fileID: 11382390}
   m_Layer: 0
   m_Name: Vatican Politics
@@ -222,7 +228,333 @@ MonoBehaviour:
   m_GameObject: {fileID: 11382388}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2849d8744e89fa458c9f76474a08757, type: 3}
+  m_Script: {fileID: 11500000, guid: 1d107086a60ff89488f976e9b2e7661b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 1
+  conditionals:
+  - {fileID: 11382392}
+  conditionalType: 0
+  text: If there are no BR flags in either Spain or Austria, score 2 VP.
+  vpAward: 2
+--- !u!114 &11382391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11382388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195f814a927f0b947b65b17877ed2db0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  conditionalText: 
+  keyword: 0
+--- !u!114 &11382392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11382388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a52a68610c50634080dd67459ffd2db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  conditionalText: If there are no BR flags in either Spain or Austria
+  targetFlags: 0
+  targetFaction: 2
+  spaces:
+  - {fileID: 22243847}
+  - {fileID: 1643761213}
+  - {fileID: 1488591668}
+  - {fileID: 466847263}
+  - {fileID: 330441613}
+  - {fileID: 79155958}
+  - {fileID: 310804994}
+  - {fileID: 160776527}
+--- !u!114 &11382393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11382388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db5a9a149786f1b45a4e6087302850d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 1
+  conditionals: []
+  conditionalType: 0
+  text: 'Catholic unity: Shift any Spain or Austria space.'
+  eligibleSpaces:
+  - {fileID: 330441613}
+  - {fileID: 79155958}
+  - {fileID: 310804994}
+  - {fileID: 160776527}
+  - {fileID: 22243847}
+  - {fileID: 1643761213}
+  - {fileID: 1488591668}
+  - {fileID: 466847263}
+  numSpaces: 1
+--- !u!114 &11382394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11382388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efd910e3347f19b42a52723a6eaab22d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: apAwards
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib],[System.Int32,
+        mscorlib]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib],[System.Int32,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 2|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: System.ValueTuple`2[[Game+ActionType, Assembly-CSharp],[Game+ActionTier,
+        Assembly-CSharp]], mscorlib
+    - Name: Item1
+      Entry: 3
+      Data: 2
+    - Name: Item2
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  faction: 2
+  conditionals:
+  - {fileID: 11382391}
+  conditionalType: 0
+  text: 1 DP (Europe).
+  eligibleSpaces:
+  - {fileID: 696434705}
+  - {fileID: 1790010843}
+  - {fileID: 4246513}
+  - {fileID: 2137237806}
+  - {fileID: 910068268}
+  - {fileID: 1248518458}
+  - {fileID: 1960191217}
+  - {fileID: 386755150}
+  - {fileID: 1297792907}
+  - {fileID: 1620783293}
+  - {fileID: 1071053668}
+  - {fileID: 754722380}
+  - {fileID: 302841238}
+  - {fileID: 1561559066}
+  - {fileID: 1576645759}
+  - {fileID: 617911191}
+  - {fileID: 22243847}
+  - {fileID: 1488591668}
+  - {fileID: 1643761213}
+  - {fileID: 466847263}
+  - {fileID: 1309132290}
+  - {fileID: 111168688}
+  - {fileID: 330441613}
+  - {fileID: 310804994}
+  - {fileID: 79155958}
+  - {fileID: 160776527}
+  - {fileID: 990891345}
+  - {fileID: 1123178086}
+  - {fileID: 2145701303}
+  - {fileID: 1029633504}
+  numAwards: 1
+--- !u!114 &11382395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11382388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efd910e3347f19b42a52723a6eaab22d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: apAwards
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib],[System.Int32,
+        mscorlib]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib],[System.Int32,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 2|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: System.ValueTuple`2[[Game+ActionType, Assembly-CSharp],[Game+ActionTier,
+        Assembly-CSharp]], mscorlib
+    - Name: Item1
+      Entry: 3
+      Data: 2
+    - Name: Item2
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  faction: 2
+  conditionals: []
+  conditionalType: 0
+  text: 'Protestant states wary: 2 DP (must be spent in the German States, Prussia,
+    or the Dutch Republic).'
+  eligibleSpaces:
+  - {fileID: 1561559066}
+  - {fileID: 1576645759}
+  - {fileID: 1248518458}
+  - {fileID: 386755150}
+  - {fileID: 1960191217}
+  - {fileID: 1297792907}
+  - {fileID: 1620783293}
+  - {fileID: 1071053668}
+  numAwards: 1
+--- !u!114 &11382396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11382388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c36fb46afc0083f47bcec27949c6338e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   serializationData:
@@ -237,60 +569,7 @@ MonoBehaviour:
     - Name: callback
       Entry: 6
       Data: 
-    - Name: commandText
-      Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[Game+Faction, Assembly-CSharp],[System.String,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Game+Faction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: bonusText
-      Entry: 7
-      Data: 2|System.Collections.Generic.Dictionary`2[[Game+Faction, Assembly-CSharp],[System.String,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 3|System.Collections.Generic.EnumEqualityComparer`1[[Game+Faction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
   playFaction: 0
-  bonusKeywords: 
   reqdActionType: 0
   eras: 00000000
 --- !u!1 &21409533
@@ -376,6 +655,17 @@ Transform:
   m_Father: {fileID: 180223999}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &22243847 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1981230490, guid: 27947e618d200b148a9479a01a023327, type: 3}
+  m_PrefabInstance: {fileID: 1749278122}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87f77d99e3431974882e519477773fcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &26290225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1048,9 +1338,53 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: fixedActionCost
+      Entry: 7
+      Data: 3|System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib],[System.Int32,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 4|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: System.ValueTuple`2[[Game+ActionType, Assembly-CSharp],[Game+ActionTier,
+        Assembly-CSharp]], mscorlib
+    - Name: Item1
+      Entry: 3
+      Data: 2
+    - Name: Item2
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 3
+      Data: -1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   actionName: 
   actingFaction: 0
   requiredActionType: 1
+  requiredActionTier: 0
   actionCost: 0
   requireMajorAction: 0
   available: 0
@@ -1066,8 +1400,17 @@ MonoBehaviour:
   shiftActionType: 0
   requiredShiftType: 0
   requiredFaction: 0
-  fixedActionCost: -1
-  finalActionCost: 0
+--- !u!114 &79155958 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1981230490, guid: 27947e618d200b148a9479a01a023327, type: 3}
+  m_PrefabInstance: {fileID: 164737922}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87f77d99e3431974882e519477773fcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &111168688 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1981230490, guid: 27947e618d200b148a9479a01a023327, type: 3}
@@ -1833,9 +2176,53 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: fixedActionCost
+      Entry: 7
+      Data: 3|System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib],[System.Int32,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 4|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: System.ValueTuple`2[[Game+ActionType, Assembly-CSharp],[Game+ActionTier,
+        Assembly-CSharp]], mscorlib
+    - Name: Item1
+      Entry: 3
+      Data: 2
+    - Name: Item2
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 3
+      Data: -1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   actionName: 
   actingFaction: 0
   requiredActionType: 1
+  requiredActionTier: 0
   actionCost: 0
   requireMajorAction: 0
   available: 0
@@ -1851,8 +2238,6 @@ MonoBehaviour:
   shiftActionType: 0
   requiredShiftType: 0
   requiredFaction: 0
-  fixedActionCost: -1
-  finalActionCost: 0
 --- !u!1 &158470868
 GameObject:
   m_ObjectHideFlags: 0
@@ -1904,6 +2289,17 @@ MonoBehaviour:
   prestige: 0
   alliance: 0
   conflictMarker: 0
+--- !u!114 &160776527 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1981230490, guid: 27947e618d200b148a9479a01a023327, type: 3}
+  m_PrefabInstance: {fileID: 2138797151}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87f77d99e3431974882e519477773fcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &162572562
 GameObject:
   m_ObjectHideFlags: 0
@@ -3900,6 +4296,17 @@ MonoBehaviour:
   marketType: 2
   isolatedMarket: 0
   protectedMarket: 0
+--- !u!114 &310804994 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1981230490, guid: 27947e618d200b148a9479a01a023327, type: 3}
+  m_PrefabInstance: {fileID: 1861993151}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87f77d99e3431974882e519477773fcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &314101204
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4316,6 +4723,17 @@ Transform:
   m_Father: {fileID: 1447762581}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &330441613 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1981230490, guid: 27947e618d200b148a9479a01a023327, type: 3}
+  m_PrefabInstance: {fileID: 1503532690}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87f77d99e3431974882e519477773fcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &333850997
 GameObject:
   m_ObjectHideFlags: 0
@@ -4553,6 +4971,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 352370348}
+  - component: {fileID: 352370354}
+  - component: {fileID: 352370350}
+  - component: {fileID: 352370353}
+  - component: {fileID: 352370352}
+  - component: {fileID: 352370351}
   - component: {fileID: 352370349}
   m_Layer: 0
   m_Name: War of Jenkin's Ear
@@ -4584,7 +5007,198 @@ MonoBehaviour:
   m_GameObject: {fileID: 352370347}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a631ed20b183c5a4db2f933dece1c77b, type: 3}
+  m_Script: {fileID: 11500000, guid: efd910e3347f19b42a52723a6eaab22d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: apAwards
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib],[System.Int32,
+        mscorlib]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib],[System.Int32,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 2|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: System.ValueTuple`2[[Game+ActionType, Assembly-CSharp],[Game+ActionTier,
+        Assembly-CSharp]], mscorlib
+    - Name: Item1
+      Entry: 3
+      Data: 2
+    - Name: Item2
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  faction: 1
+  conditionals:
+  - {fileID: 352370350}
+  conditionalType: 0
+  text: 1 DP
+  eligibleSpaces: []
+  numAwards: 1
+--- !u!114 &352370350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352370347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195f814a927f0b947b65b17877ed2db0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  conditionalText: 
+  keyword: 2
+--- !u!114 &352370351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352370347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9449f2eabdd5e43884c53f70001e1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 1
+  conditionals: []
+  conditionalType: 0
+  text: 'Cartagena disaster: Place a Conflict marker in a BR-flagged Market in the
+    Carribbean.'
+  eligibleSpaces: []
+  count: 1
+--- !u!114 &352370352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352370347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9f7807811a36284fa89beccfa47caf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 2
+  conditionals:
+  - {fileID: 352370350}
+  conditionalType: 0
+  text: Add 1 FR debt.
+  amount: 1
+  targetFaction: 1
+--- !u!114 &352370353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352370347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9f7807811a36284fa89beccfa47caf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 2
+  conditionals: []
+  conditionalType: 0
+  text: 'Anson returns with Spanish gold: Reduce your Debt by 2.'
+  amount: -2
+  targetFaction: 2
+--- !u!114 &352370354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352370347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c36fb46afc0083f47bcec27949c6338e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   serializationData:
@@ -4599,60 +5213,7 @@ MonoBehaviour:
     - Name: callback
       Entry: 6
       Data: 
-    - Name: commandText
-      Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[Game+Faction, Assembly-CSharp],[System.String,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Game+Faction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: bonusText
-      Entry: 7
-      Data: 2|System.Collections.Generic.Dictionary`2[[Game+Faction, Assembly-CSharp],[System.String,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 3|System.Collections.Generic.EnumEqualityComparer`1[[Game+Faction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
   playFaction: 0
-  bonusKeywords: 
   reqdActionType: 3
   eras: 00000000
 --- !u!1 &356895497
@@ -4889,6 +5450,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 370278905}
+  - component: {fileID: 370278909}
+  - component: {fileID: 370278908}
+  - component: {fileID: 370278907}
   - component: {fileID: 370278906}
   m_Layer: 0
   m_Name: Miliary Spending Overruns
@@ -4920,7 +5484,81 @@ MonoBehaviour:
   m_GameObject: {fileID: 370278904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c91c9eaa3b7c66459880d589230e95b, type: 3}
+  m_Script: {fileID: 11500000, guid: 33eeae75351f05746b78e37318305339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 0
+  conditionals:
+  - {fileID: 370278907}
+  conditionalType: 0
+  text: 
+--- !u!114 &370278907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370278904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9031d3ee0e44af34384299021df3f572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  conditionalText: You have more Available Debt than your opponent.
+  margin: 1
+--- !u!114 &370278908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370278904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33eeae75351f05746b78e37318305339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 0
+  conditionals: []
+  conditionalType: 0
+  text: 
+--- !u!114 &370278909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370278904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c36fb46afc0083f47bcec27949c6338e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   serializationData:
@@ -4935,60 +5573,7 @@ MonoBehaviour:
     - Name: callback
       Entry: 6
       Data: 
-    - Name: commandText
-      Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[Game+Faction, Assembly-CSharp],[System.String,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Game+Faction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: bonusText
-      Entry: 7
-      Data: 2|System.Collections.Generic.Dictionary`2[[Game+Faction, Assembly-CSharp],[System.String,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 3|System.Collections.Generic.EnumEqualityComparer`1[[Game+Faction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
   playFaction: 0
-  bonusKeywords: 
   reqdActionType: 3
   eras: 00000000
 --- !u!1 &371830637
@@ -6136,9 +6721,53 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: fixedActionCost
+      Entry: 7
+      Data: 3|System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib],[System.Int32,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 4|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: System.ValueTuple`2[[Game+ActionType, Assembly-CSharp],[Game+ActionTier,
+        Assembly-CSharp]], mscorlib
+    - Name: Item1
+      Entry: 3
+      Data: 2
+    - Name: Item2
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 3
+      Data: -1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   actionName: 
   actingFaction: 0
   requiredActionType: 1
+  requiredActionTier: 0
   actionCost: 0
   requireMajorAction: 0
   available: 0
@@ -6154,8 +6783,6 @@ MonoBehaviour:
   shiftActionType: 0
   requiredShiftType: 0
   requiredFaction: 0
-  fixedActionCost: -1
-  finalActionCost: 0
 --- !u!1 &410359498
 GameObject:
   m_ObjectHideFlags: 0
@@ -6936,6 +7563,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3421046882785140572, guid: 27947e618d200b148a9479a01a023327, type: 3}
   m_PrefabInstance: {fileID: 446366832}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &466847263 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1981230490, guid: 27947e618d200b148a9479a01a023327, type: 3}
+  m_PrefabInstance: {fileID: 446366832}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87f77d99e3431974882e519477773fcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &469045118
 GameObject:
   m_ObjectHideFlags: 0
@@ -7640,9 +8278,53 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: fixedActionCost
+      Entry: 7
+      Data: 3|System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib],[System.Int32,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 4|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: System.ValueTuple`2[[Game+ActionType, Assembly-CSharp],[Game+ActionTier,
+        Assembly-CSharp]], mscorlib
+    - Name: Item1
+      Entry: 3
+      Data: 2
+    - Name: Item2
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 3
+      Data: -1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   actionName: 
   actingFaction: 0
   requiredActionType: 1
+  requiredActionTier: 0
   actionCost: 0
   requireMajorAction: 0
   available: 0
@@ -7658,8 +8340,6 @@ MonoBehaviour:
   shiftActionType: 0
   requiredShiftType: 0
   requiredFaction: 0
-  fixedActionCost: -1
-  finalActionCost: 0
 --- !u!1 &510376288
 GameObject:
   m_ObjectHideFlags: 0
@@ -8509,6 +9189,11 @@ GameObject:
   m_Component:
   - component: {fileID: 613518099}
   - component: {fileID: 613518100}
+  - component: {fileID: 613518101}
+  - component: {fileID: 613518105}
+  - component: {fileID: 613518104}
+  - component: {fileID: 613518103}
+  - component: {fileID: 613518102}
   m_Layer: 0
   m_Name: Austro-Spanish Rivalry
   m_TagString: Untagged
@@ -8539,7 +9224,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 613518098}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a9406f1141d83744ad97c289ee7a11e, type: 3}
+  m_Script: {fileID: 11500000, guid: c36fb46afc0083f47bcec27949c6338e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   serializationData:
@@ -8554,47 +9239,95 @@ MonoBehaviour:
     - Name: callback
       Entry: 6
       Data: 
-    - Name: commandText
+  playFaction: 0
+  reqdActionType: 0
+  eras: 00000000
+--- !u!114 &613518101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613518098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195f814a927f0b947b65b17877ed2db0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  conditionalText: 
+  keyword: 0
+--- !u!114 &613518102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613518098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efd910e3347f19b42a52723a6eaab22d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: apAwards
       Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[Game+Faction, Assembly-CSharp],[System.String,
+      Data: 0|System.Collections.Generic.List`1[[System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib],[System.Int32,
+        mscorlib]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 1|System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib],[System.Int32,
         mscorlib]], mscorlib
     - Name: comparer
       Entry: 7
-      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Game+Faction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
+      Data: 2|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 7
       Data: 
     - Name: $k
+      Entry: 7
+      Data: System.ValueTuple`2[[Game+ActionType, Assembly-CSharp],[Game+ActionTier,
+        Assembly-CSharp]], mscorlib
+    - Name: Item1
       Entry: 3
       Data: 2
-    - Name: $v
-      Entry: 1
-      Data: 'Farnese clashes with France: Place 1 Conflict marker in Spain. '
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
+    - Name: Item2
       Entry: 3
       Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: $v
-      Entry: 1
-      Data: 'Charles VI invests in the Netherlands: Unflag a space in the Dutch Republic. '
+      Entry: 3
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -8604,38 +9337,36 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: bonusText
+    - Name: 
       Entry: 7
-      Data: 2|System.Collections.Generic.Dictionary`2[[Game+Faction, Assembly-CSharp],[System.String,
+      Data: 3|System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib],[System.Int32,
         mscorlib]], mscorlib
     - Name: comparer
       Entry: 9
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 7
       Data: 
     - Name: $k
+      Entry: 7
+      Data: System.ValueTuple`2[[Game+ActionType, Assembly-CSharp],[Game+ActionTier,
+        Assembly-CSharp]], mscorlib
+    - Name: Item1
       Entry: 3
       Data: 1
-    - Name: $v
-      Entry: 1
-      Data: '2 DP or 2 EP in India. '
+    - Name: Item2
+      Entry: 3
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
+    - Name: $v
       Entry: 3
       Data: 2
-    - Name: $v
-      Entry: 1
-      Data: 'Remove a FR Bonus War Tile from the next War (returning it to their
-        pool). '
     - Name: 
       Entry: 8
       Data: 
@@ -8645,10 +9376,107 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  playFaction: 0
-  bonusKeywords: Governance
-  reqdActionType: 0
-  eras: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  faction: 1
+  conditionals:
+  - {fileID: 613518101}
+  conditionalType: 0
+  text: 2 DP or 2 EP in India.
+  eligibleSpaces: []
+  numAwards: 1
+--- !u!114 &613518103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613518098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23144bcef9b799a4ab08341c38605290, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 1
+  conditionals: []
+  conditionalType: 0
+  text: 'Charles VI invests in the Netherlands: Unflag a space in the Dutch Republic.'
+  eligibleSpaces:
+  - {fileID: 1620783293}
+  - {fileID: 1071053668}
+  numSpaces: 1
+--- !u!114 &613518104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613518098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c87fa0c1e1026844aff6f597e3fa35a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 2
+  conditionals:
+  - {fileID: 613518101}
+  conditionalType: 0
+  text: Remove a FR Bonus War Tile from the next War (returning it to their pool).
+  amount: -1
+  bonusTile: 0
+--- !u!114 &613518105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613518098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9449f2eabdd5e43884c53f70001e1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 2
+  conditionals: []
+  conditionalType: 0
+  text: 'Farnese clashes with France: Place 1 Conflict marker in Spain.'
+  eligibleSpaces:
+  - {fileID: 330441613}
+  - {fileID: 79155958}
+  - {fileID: 310804994}
+  - {fileID: 160776527}
+  count: 1
 --- !u!114 &617911191 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1981230490, guid: 27947e618d200b148a9479a01a023327, type: 3}
@@ -9410,13 +10238,11 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: gameActions
-      Entry: 6
-      Data: 
     - Name: callback
       Entry: 6
       Data: 
   era: 0
+  gameActions: []
   prevPhase: {fileID: 0}
 --- !u!114 &670742068
 MonoBehaviour:
@@ -9431,21 +10257,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cards:
-  - {fileID: 814394965}
-  - {fileID: 1662872099}
-  - {fileID: 613518100}
-  - {fileID: 1232245832}
-  - {fileID: 1631247922}
-  - {fileID: 971645158}
-  - {fileID: 1961482530}
-  - {fileID: 1816056390}
-  - {fileID: 370278906}
-  - {fileID: 938318480}
-  - {fileID: 1145020010}
-  - {fileID: 2089741155}
-  - {fileID: 1718760936}
-  - {fileID: 11382390}
-  - {fileID: 352370349}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &670945507 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 670945507, guid: 11836b981756b214a850c5cefa4d7f00, type: 3}
@@ -10712,6 +11538,11 @@ GameObject:
   m_Component:
   - component: {fileID: 814394964}
   - component: {fileID: 814394965}
+  - component: {fileID: 814394966}
+  - component: {fileID: 814394970}
+  - component: {fileID: 814394969}
+  - component: {fileID: 814394968}
+  - component: {fileID: 814394967}
   m_Layer: 0
   m_Name: Acts of Union
   m_TagString: Untagged
@@ -10742,7 +11573,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 814394963}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ec9ae0bb74439349a764a13898293b7, type: 3}
+  m_Script: {fileID: 11500000, guid: c36fb46afc0083f47bcec27949c6338e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   serializationData:
@@ -10757,115 +11588,63 @@ MonoBehaviour:
     - Name: callback
       Entry: 6
       Data: 
-    - Name: commandText
-      Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[Game+Faction, Assembly-CSharp],[System.String,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Game+Faction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2
-    - Name: $v
-      Entry: 1
-      Data: 'Unified Parliament reduces Scottish intrigue in Europe: 1 DP (unflagging
-        in Europe only). '
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 1
-    - Name: $v
-      Entry: 1
-      Data: 'Hapsburgs isolated: 2 DP. '
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: bonusText
-      Entry: 7
-      Data: 2|System.Collections.Generic.Dictionary`2[[Game+Faction, Assembly-CSharp],[System.String,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 3|System.Collections.Generic.EnumEqualityComparer`1[[Game+Faction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2
-    - Name: $v
-      Entry: 1
-      Data: 'Score 2 VP. '
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 1
-    - Name: $v
-      Entry: 1
-      Data: 'Unflag a Political space in Europe (not Spain or Austria). '
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
   playFaction: 0
-  bonusKeywords: More Prestige spaces in Scotland and Ireland
   reqdActionType: 0
   eras: 00000000
-  prestigeSpaces:
-  - {fileID: 1790010843}
+--- !u!114 &814394966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814394963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e08ef203b778c084a942aed4d568e706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  conditionalText: 
+  conditionalMode: 0
+  spaces:
   - {fileID: 2137237806}
-  unflaggableSpaces:
+  - {fileID: 1790010843}
+--- !u!114 &814394967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814394963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23144bcef9b799a4ab08341c38605290, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 1
+  conditionals:
+  - {fileID: 814394966}
+  conditionalType: 0
+  text: Unflag a Political space in Europe (not Spain or Austria).
+  eligibleSpaces:
+  - {fileID: 617911191}
   - {fileID: 696434705}
   - {fileID: 1790010843}
   - {fileID: 4246513}
@@ -10881,10 +11660,205 @@ MonoBehaviour:
   - {fileID: 302841238}
   - {fileID: 1561559066}
   - {fileID: 1576645759}
-  - {fileID: 617911191}
   - {fileID: 1309132290}
   - {fileID: 111168688}
-  europeMap: {fileID: 1549688053}
+  numSpaces: 1
+--- !u!114 &814394968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814394963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efd910e3347f19b42a52723a6eaab22d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: apAwards
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib],[System.Int32,
+        mscorlib]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib],[System.Int32,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 2|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: System.ValueTuple`2[[Game+ActionType, Assembly-CSharp],[Game+ActionTier,
+        Assembly-CSharp]], mscorlib
+    - Name: Item1
+      Entry: 3
+      Data: 2
+    - Name: Item2
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  faction: 1
+  conditionals: []
+  conditionalType: 0
+  text: 'Hapsburgs isolated: 2 DP.'
+  eligibleSpaces: []
+  numAwards: 1
+--- !u!114 &814394969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814394963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d107086a60ff89488f976e9b2e7661b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 2
+  conditionals:
+  - {fileID: 814394966}
+  conditionalType: 0
+  text: Score 2 VP.
+  vpAward: 2
+--- !u!114 &814394970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814394963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efd910e3347f19b42a52723a6eaab22d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: apAwards
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib],[System.Int32,
+        mscorlib]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib],[System.Int32,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 2|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: System.ValueTuple`2[[Game+ActionType, Assembly-CSharp],[Game+ActionTier,
+        Assembly-CSharp]], mscorlib
+    - Name: Item1
+      Entry: 3
+      Data: 2
+    - Name: Item2
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  faction: 2
+  conditionals: []
+  conditionalType: 0
+  text: 'Unified Parliament reduces Scottish intrigue in Europe: 1 DP (unflagging
+    in Europe only).'
+  eligibleSpaces: []
+  numAwards: 1
 --- !u!114 &824804036 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 824804036, guid: 723ebc3e46e5aab478c3bdc75c9c2788, type: 3}
@@ -12518,7 +13492,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 938318479}
+  - component: {fileID: 938318482}
+  - component: {fileID: 938318481}
   - component: {fileID: 938318480}
+  - component: {fileID: 938318485}
+  - component: {fileID: 938318484}
+  - component: {fileID: 938318483}
   m_Layer: 0
   m_Name: Native American Alliances
   m_TagString: Untagged
@@ -12549,7 +13528,59 @@ MonoBehaviour:
   m_GameObject: {fileID: 938318478}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 120062aa8dfbc6c4d92c372a8c70aec1, type: 3}
+  m_Script: {fileID: 11500000, guid: db5a9a149786f1b45a4e6087302850d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 2
+  conditionals: []
+  conditionalType: 0
+  text: 'Four Mohawk Kings: Shift a Local Alliance in North America.'
+  eligibleSpaces:
+  - {fileID: 1068163350}
+  - {fileID: 1787422098}
+  numSpaces: 1
+--- !u!114 &938318481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938318478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195f814a927f0b947b65b17877ed2db0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  conditionalText: 
+  keyword: 0
+--- !u!114 &938318482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938318478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c36fb46afc0083f47bcec27949c6338e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   serializationData:
@@ -12564,62 +13595,151 @@ MonoBehaviour:
     - Name: callback
       Entry: 6
       Data: 
-    - Name: commandText
-      Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[Game+Faction, Assembly-CSharp],[System.String,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Game+Faction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: bonusText
-      Entry: 7
-      Data: 2|System.Collections.Generic.Dictionary`2[[Game+Faction, Assembly-CSharp],[System.String,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 3|System.Collections.Generic.EnumEqualityComparer`1[[Game+Faction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
   playFaction: 0
-  bonusKeywords: 
   reqdActionType: 2
-  eras: 
+  eras: 00000000
+--- !u!114 &938318483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938318478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23144bcef9b799a4ab08341c38605290, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 1
+  conditionals:
+  - {fileID: 938318481}
+  conditionalType: 0
+  text: 'Unflag a Local Alliance in North America. '
+  eligibleSpaces:
+  - {fileID: 1068163350}
+  - {fileID: 1787422098}
+  numSpaces: 1
+--- !u!114 &938318484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938318478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efd910e3347f19b42a52723a6eaab22d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: apAwards
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib],[System.Int32,
+        mscorlib]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib],[System.Int32,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 2|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: System.ValueTuple`2[[Game+ActionType, Assembly-CSharp],[Game+ActionTier,
+        Assembly-CSharp]], mscorlib
+    - Name: Item1
+      Entry: 3
+      Data: 1
+    - Name: Item2
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  faction: 1
+  conditionals: []
+  conditionalType: 0
+  text: 'Alliance with natives: 2 EP (North America only).'
+  eligibleSpaces: []
+  numAwards: 1
+--- !u!114 &938318485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938318478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b18a23f61ff0da44b92ed516b780a575, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 2
+  conditionals:
+  - {fileID: 938318481}
+  conditionalType: 0
+  text: Immediately activate an Advantage you control in North America (ignoring
+    Exhaustion).
+  eligibleAdvantages: []
 --- !u!1 &939626306
 GameObject:
   m_ObjectHideFlags: 0
@@ -13025,6 +14145,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 971645157}
+  - component: {fileID: 971645160}
+  - component: {fileID: 971645159}
   - component: {fileID: 971645158}
   m_Layer: 0
   m_Name: Famine in Ireland
@@ -13056,7 +14178,67 @@ MonoBehaviour:
   m_GameObject: {fileID: 971645156}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 850fcada3f9d966479e83bf57fdc638d, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c87fa0c1e1026844aff6f597e3fa35a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 1
+  conditionals: []
+  conditionalType: 0
+  text: 'Grain shipments from America: Draw one Bonus War Tile for each space you
+    control in Ireland, and add them to the Jacobite Rebellion theater in the next
+    War.'
+  amount: 1
+  bonusTile: 0
+--- !u!114 &971645159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971645156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23144bcef9b799a4ab08341c38605290, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 2
+  conditionals: []
+  conditionalType: 0
+  text: 'Famine weakens Jacobites: Unflag a FR space in Ireland or Scotland.'
+  eligibleSpaces:
+  - {fileID: 696434705}
+  - {fileID: 1790010843}
+  - {fileID: 4246513}
+  - {fileID: 2137237806}
+  numSpaces: 1
+--- !u!114 &971645160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971645156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c36fb46afc0083f47bcec27949c6338e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   serializationData:
@@ -13071,76 +14253,7 @@ MonoBehaviour:
     - Name: callback
       Entry: 6
       Data: 
-    - Name: commandText
-      Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[Game+Faction, Assembly-CSharp],[System.String,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Game+Faction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2
-    - Name: $v
-      Entry: 1
-      Data: 'Famine weakens Jacobites: Unflag a FR space in Ireland or Scotland. '
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 1
-    - Name: $v
-      Entry: 1
-      Data: 'Grain shipments from America: Draw one Bonus War Tile for each space
-        you control in Ireland, and add them to the Jacobite Rebellion theater in
-        the next War. '
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: bonusText
-      Entry: 7
-      Data: 2|System.Collections.Generic.Dictionary`2[[Game+Faction, Assembly-CSharp],[System.String,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 9
-      Data: 1
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
   playFaction: 0
-  bonusKeywords: 
   reqdActionType: 1
   eras: 00000000
 --- !u!1 &972260887
@@ -13439,6 +14552,17 @@ MonoBehaviour:
   marginRequired: 0
   treatyPoints: 1
   used: 0
+--- !u!114 &990891345 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 175574519, guid: 607d884b0c06d6941b6dca3f2e77d8a9, type: 3}
+  m_PrefabInstance: {fileID: 734099951}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41836710d9b73a440ad19dc9b319a1d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1009426544
 GameObject:
   m_ObjectHideFlags: 0
@@ -13589,6 +14713,17 @@ MonoBehaviour:
   conflictMarker: 0
   conquestLines:
   - {fileID: 777665761}
+--- !u!114 &1029633504 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1821480168, guid: 9d3f930852b40fd48b97dbc7a3ca5424, type: 3}
+  m_PrefabInstance: {fileID: 1821480165}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c14db1438b8a57d458eb5a626920515c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1031435122
 GameObject:
   m_ObjectHideFlags: 0
@@ -14132,9 +15267,53 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: fixedActionCost
+      Entry: 7
+      Data: 3|System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib],[System.Int32,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 4|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: System.ValueTuple`2[[Game+ActionType, Assembly-CSharp],[Game+ActionTier,
+        Assembly-CSharp]], mscorlib
+    - Name: Item1
+      Entry: 3
+      Data: 2
+    - Name: Item2
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 3
+      Data: -1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   actionName: 
   actingFaction: 0
   requiredActionType: 2
+  requiredActionTier: 0
   actionCost: 0
   requireMajorAction: 0
   available: 0
@@ -14150,8 +15329,6 @@ MonoBehaviour:
   shiftActionType: 0
   requiredShiftType: 0
   requiredFaction: 0
-  fixedActionCost: -1
-  finalActionCost: 0
 --- !u!114 &1071053668 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1981230490, guid: 27947e618d200b148a9479a01a023327, type: 3}
@@ -14983,6 +16160,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1121567841}
   m_CullTransparentMesh: 1
+--- !u!114 &1123178086 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 175574519, guid: 607d884b0c06d6941b6dca3f2e77d8a9, type: 3}
+  m_PrefabInstance: {fileID: 175574516}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41836710d9b73a440ad19dc9b319a1d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1123362280
 GameObject:
   m_ObjectHideFlags: 0
@@ -15721,6 +16909,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1145020009}
+  - component: {fileID: 1145020012}
+  - component: {fileID: 1145020011}
   - component: {fileID: 1145020010}
   m_Layer: 0
   m_Name: South Seas Speculation
@@ -15752,7 +16942,60 @@ MonoBehaviour:
   m_GameObject: {fileID: 1145020008}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78c62cfc10a65014ca4b1b30ec043524, type: 3}
+  m_Script: {fileID: 11500000, guid: 23144bcef9b799a4ab08341c38605290, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 0
+  conditionals: []
+  conditionalType: 0
+  text: Unflag a Local Alliance in North America.
+  eligibleSpaces:
+  - {fileID: 1068163350}
+  - {fileID: 1787422098}
+  - {fileID: 1367052779}
+  numSpaces: 1
+--- !u!114 &1145020011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145020008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195f814a927f0b947b65b17877ed2db0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  conditionalText: Finance
+  keyword: 4
+--- !u!114 &1145020012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145020008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c36fb46afc0083f47bcec27949c6338e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   serializationData:
@@ -15767,62 +17010,9 @@ MonoBehaviour:
     - Name: callback
       Entry: 6
       Data: 
-    - Name: commandText
-      Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[Game+Faction, Assembly-CSharp],[System.String,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Game+Faction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: bonusText
-      Entry: 7
-      Data: 2|System.Collections.Generic.Dictionary`2[[Game+Faction, Assembly-CSharp],[System.String,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 3|System.Collections.Generic.EnumEqualityComparer`1[[Game+Faction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
   playFaction: 0
-  bonusKeywords: 
   reqdActionType: 0
-  eras: 00000000
+  eras: 
 --- !u!1 &1165427637
 GameObject:
   m_ObjectHideFlags: 0
@@ -16893,6 +18083,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1232245831}
+  - component: {fileID: 1232245837}
+  - component: {fileID: 1232245833}
+  - component: {fileID: 1232245836}
+  - component: {fileID: 1232245835}
+  - component: {fileID: 1232245834}
   - component: {fileID: 1232245832}
   m_Layer: 0
   m_Name: Calico Acts
@@ -16924,7 +18119,194 @@ MonoBehaviour:
   m_GameObject: {fileID: 1232245830}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d4ca612a8681394fb88fac5d734bce5, type: 3}
+  m_Script: {fileID: 11500000, guid: 31fe15ae5d781c84fbd1048e91e53564, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 1
+  conditionals:
+  - {fileID: 1232245833}
+  conditionalType: 0
+  text: 
+--- !u!114 &1232245833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232245830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195f814a927f0b947b65b17877ed2db0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  conditionalText: 
+  keyword: 0
+--- !u!114 &1232245834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232245830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23144bcef9b799a4ab08341c38605290, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 1
+  conditionals: []
+  conditionalType: 0
+  text: 
+  eligibleSpaces: []
+  numSpaces: 1
+--- !u!114 &1232245835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232245830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08da77ce2dce2f44a5c555545d8f3e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 2
+  conditionals:
+  - {fileID: 1232245833}
+  conditionalType: 0
+  text: You may score Cotton (as if in Global Demand).
+  globalDemandMarket: 4
+--- !u!114 &1232245836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232245830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efd910e3347f19b42a52723a6eaab22d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: apAwards
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib],[System.Int32,
+        mscorlib]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib],[System.Int32,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 2|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: System.ValueTuple`2[[Game+ActionType, Assembly-CSharp],[Game+ActionTier,
+        Assembly-CSharp]], mscorlib
+    - Name: Item1
+      Entry: 3
+      Data: 1
+    - Name: Item2
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  faction: 2
+  conditionals: []
+  conditionalType: 0
+  text: 'Calico Act stimulates industry: 2 EP; must be used to unflag Market(s).'
+  eligibleSpaces: []
+  numAwards: 1
+--- !u!114 &1232245837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232245830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c36fb46afc0083f47bcec27949c6338e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   serializationData:
@@ -16939,98 +18321,7 @@ MonoBehaviour:
     - Name: callback
       Entry: 6
       Data: 
-    - Name: commandText
-      Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[Game+Faction, Assembly-CSharp],[System.String,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Game+Faction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2
-    - Name: $v
-      Entry: 1
-      Data: 'Calico Act stimulates industry: 2 EP; must be used to unflag Market(s). '
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 1
-    - Name: $v
-      Entry: 1
-      Data: 'Calico Act enriches smugglers: Unflag a Cotton Market. '
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: bonusText
-      Entry: 7
-      Data: 2|System.Collections.Generic.Dictionary`2[[Game+Faction, Assembly-CSharp],[System.String,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 9
-      Data: 1
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 1
-    - Name: $v
-      Entry: 1
-      Data: 'Move a BR Squadron from the map to the Navy Box. '
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2
-    - Name: $v
-      Entry: 1
-      Data: 'You may score Cotton (as if in Global Demand). '
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
   playFaction: 0
-  bonusKeywords: Mercantilism
   reqdActionType: 1
   eras: 00000000
 --- !u!1 &1244895191
@@ -17286,9 +18577,53 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: fixedActionCost
+      Entry: 7
+      Data: 3|System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib],[System.Int32,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 4|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: System.ValueTuple`2[[Game+ActionType, Assembly-CSharp],[Game+ActionTier,
+        Assembly-CSharp]], mscorlib
+    - Name: Item1
+      Entry: 3
+      Data: 2
+    - Name: Item2
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 3
+      Data: -1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   actionName: 
   actingFaction: 0
   requiredActionType: 1
+  requiredActionTier: 0
   actionCost: 0
   requireMajorAction: 0
   available: 0
@@ -17304,8 +18639,6 @@ MonoBehaviour:
   shiftActionType: 0
   requiredShiftType: 0
   requiredFaction: 0
-  fixedActionCost: -1
-  finalActionCost: 0
 --- !u!1 &1264272337
 GameObject:
   m_ObjectHideFlags: 0
@@ -17770,9 +19103,53 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: fixedActionCost
+      Entry: 7
+      Data: 3|System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib],[System.Int32,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 4|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: System.ValueTuple`2[[Game+ActionType, Assembly-CSharp],[Game+ActionTier,
+        Assembly-CSharp]], mscorlib
+    - Name: Item1
+      Entry: 3
+      Data: 2
+    - Name: Item2
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 3
+      Data: -1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   actionName: 
   actingFaction: 0
   requiredActionType: 2
+  requiredActionTier: 0
   actionCost: 0
   requireMajorAction: 0
   available: 0
@@ -17788,8 +19165,6 @@ MonoBehaviour:
   shiftActionType: 0
   requiredShiftType: 0
   requiredFaction: 0
-  fixedActionCost: -1
-  finalActionCost: 0
 --- !u!1 &1335239405
 GameObject:
   m_ObjectHideFlags: 0
@@ -19456,7 +20831,7 @@ MonoBehaviour:
       Data: 
   faction: 1
   hand:
-  - {fileID: 814394965}
+  - {fileID: 0}
   ministers: []
   basicWarTiles:
   - {fileID: 143542559}
@@ -20204,6 +21579,17 @@ MonoBehaviour:
   eventCardTrigger: 0
   milUpgradeTrigger: 0
   available: 0
+--- !u!114 &1488591668 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1981230490, guid: 27947e618d200b148a9479a01a023327, type: 3}
+  m_PrefabInstance: {fileID: 783610629}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87f77d99e3431974882e519477773fcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1492092055
 GameObject:
   m_ObjectHideFlags: 0
@@ -20859,9 +22245,53 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: fixedActionCost
+      Entry: 7
+      Data: 3|System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib],[System.Int32,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 4|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: System.ValueTuple`2[[Game+ActionType, Assembly-CSharp],[Game+ActionTier,
+        Assembly-CSharp]], mscorlib
+    - Name: Item1
+      Entry: 3
+      Data: 2
+    - Name: Item2
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 3
+      Data: -1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   actionName: 
   actingFaction: 0
   requiredActionType: 1
+  requiredActionTier: 0
   actionCost: 0
   requireMajorAction: 0
   available: 0
@@ -20877,8 +22307,6 @@ MonoBehaviour:
   shiftActionType: 0
   requiredShiftType: 0
   requiredFaction: 0
-  fixedActionCost: -1
-  finalActionCost: 0
 --- !u!1 &1527700733
 GameObject:
   m_ObjectHideFlags: 0
@@ -21169,9 +22597,53 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: fixedActionCost
+      Entry: 7
+      Data: 3|System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib],[System.Int32,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 4|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: System.ValueTuple`2[[Game+ActionType, Assembly-CSharp],[Game+ActionTier,
+        Assembly-CSharp]], mscorlib
+    - Name: Item1
+      Entry: 3
+      Data: 2
+    - Name: Item2
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 3
+      Data: -1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   actionName: 
   actingFaction: 0
   requiredActionType: 2
+  requiredActionTier: 0
   actionCost: 0
   requireMajorAction: 0
   available: 0
@@ -21187,8 +22659,6 @@ MonoBehaviour:
   shiftActionType: 0
   requiredShiftType: 0
   requiredFaction: 0
-  fixedActionCost: -1
-  finalActionCost: 0
 --- !u!1 &1540503255
 GameObject:
   m_ObjectHideFlags: 0
@@ -22807,6 +24277,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1631247921}
+  - component: {fileID: 1631247925}
+  - component: {fileID: 1631247923}
+  - component: {fileID: 1631247924}
   - component: {fileID: 1631247922}
   m_Layer: 0
   m_Name: Carnatic War
@@ -22838,7 +24311,84 @@ MonoBehaviour:
   m_GameObject: {fileID: 1631247920}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 185abded9bde2c04080ffcddd862edb8, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f6e29f851173fe4b93fb0e2b70a9a7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 0
+  conditionals:
+  - {fileID: 1631247923}
+  conditionalType: 0
+  text: Damage an enemy Fort or shift a Cotton market in India.
+  eligibleSpaces: []
+--- !u!114 &1631247923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631247920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195f814a927f0b947b65b17877ed2db0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  conditionalText: Mercantilism
+  keyword: 2
+--- !u!114 &1631247924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631247920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9449f2eabdd5e43884c53f70001e1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 0
+  conditionals: []
+  conditionalType: 0
+  text: Place 1 Conflict marker in India for each Local Alliance you control there.
+  eligibleSpaces: []
+  count: 1
+--- !u!114 &1631247925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631247920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c36fb46afc0083f47bcec27949c6338e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   serializationData:
@@ -22853,91 +24403,9 @@ MonoBehaviour:
     - Name: callback
       Entry: 6
       Data: 
-    - Name: commandText
-      Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[Game+Faction, Assembly-CSharp],[System.String,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Game+Faction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 0
-    - Name: $v
-      Entry: 1
-      Data: 'Place 1 Conflict marker in India for each Local Alliance you control
-        there. '
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: bonusText
-      Entry: 7
-      Data: 2|System.Collections.Generic.Dictionary`2[[Game+Faction, Assembly-CSharp],[System.String,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 9
-      Data: 1
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 0
-    - Name: $v
-      Entry: 1
-      Data: 'Damage an enemy Fort or shift a Cotton market in India. '
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
   playFaction: 0
-  bonusKeywords: Mercantilism
   reqdActionType: 0
-  eras: 
-  bonusKeyword: 2
-  indianAlliances:
-  - {fileID: 1508000421}
-  - {fileID: 2028381321}
-  - {fileID: 1170519298}
-  fortsAndMarkets:
-  - {fileID: 852218729}
-  - {fileID: 777665761}
-  - {fileID: 435235523}
-  - {fileID: 1103669190}
-  - {fileID: 54888593}
-  - {fileID: 445943747}
-  - {fileID: 1859485946}
-  - {fileID: 140397409}
+  eras: 00000000
 --- !u!1 &1633177374
 GameObject:
   m_ObjectHideFlags: 0
@@ -23239,6 +24707,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3421046882785140572, guid: 27947e618d200b148a9479a01a023327, type: 3}
   m_PrefabInstance: {fileID: 1641822819}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1643761213 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1981230490, guid: 27947e618d200b148a9479a01a023327, type: 3}
+  m_PrefabInstance: {fileID: 1922739416}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87f77d99e3431974882e519477773fcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1649269942
 GameObject:
   m_ObjectHideFlags: 0
@@ -23565,6 +25044,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1662872098}
   - component: {fileID: 1662872099}
+  - component: {fileID: 1662872100}
+  - component: {fileID: 1662872104}
+  - component: {fileID: 1662872103}
+  - component: {fileID: 1662872102}
+  - component: {fileID: 1662872101}
+  - component: {fileID: 1662872105}
   m_Layer: 0
   m_Name: Alberoni's Ambition
   m_TagString: Untagged
@@ -23595,7 +25080,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1662872097}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a87f9d92900efe6468d179d74a4bf5b9, type: 3}
+  m_Script: {fileID: 11500000, guid: c36fb46afc0083f47bcec27949c6338e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   serializationData:
@@ -23610,102 +25095,289 @@ MonoBehaviour:
     - Name: callback
       Entry: 6
       Data: 
-    - Name: commandText
-      Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[Game+Faction, Assembly-CSharp],[System.String,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Game+Faction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2
-    - Name: $v
-      Entry: 1
-      Data: '"Not One Englishman": 2 EP. Must be spent to flag Market(s) next to
-        a BR-flagged Market. '
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 1
-    - Name: $v
-      Entry: 1
-      Data: 'Fleury''s masterpiece: Shift an Alliance space in Austria, the Dutch
-        Republic, or Spain. '
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: bonusText
-      Entry: 7
-      Data: 2|System.Collections.Generic.Dictionary`2[[Game+Faction, Assembly-CSharp],[System.String,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 9
-      Data: 1
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2
-    - Name: $v
-      Entry: 1
-      Data: '1 EP, similarly restricted. '
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 1
-    - Name: $v
-      Entry: 1
-      Data: 'If both Savoy and Sardinia are FR-flagged, score 3 VP. '
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
   playFaction: 0
-  bonusKeywords: Governance
   reqdActionType: 0
   eras: 00000000
+--- !u!114 &1662872100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662872097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195f814a927f0b947b65b17877ed2db0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  conditionalText: 
+  keyword: 0
+--- !u!114 &1662872101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662872097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d107086a60ff89488f976e9b2e7661b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 1
+  conditionals:
+  - {fileID: 1662872100}
+  - {fileID: 1662872105}
+  conditionalType: 0
+  text: If both Savoy and Sardinia are FR-flagged, score 3 VP.
+  vpAward: 3
+--- !u!114 &1662872102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662872097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db5a9a149786f1b45a4e6087302850d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 1
+  conditionals: []
+  conditionalType: 0
+  text: 'Fleury''s masterpiece: Shift an Alliance space in Austria, the Dutch Republic,
+    or Spain.'
+  eligibleSpaces:
+  - {fileID: 1620783293}
+  - {fileID: 22243847}
+  - {fileID: 1643761213}
+  - {fileID: 330441613}
+  - {fileID: 79155958}
+  numSpaces: 1
+--- !u!114 &1662872103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662872097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efd910e3347f19b42a52723a6eaab22d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: apAwards
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib],[System.Int32,
+        mscorlib]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib],[System.Int32,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 2|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: System.ValueTuple`2[[Game+ActionType, Assembly-CSharp],[Game+ActionTier,
+        Assembly-CSharp]], mscorlib
+    - Name: Item1
+      Entry: 3
+      Data: 1
+    - Name: Item2
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  faction: 2
+  conditionals:
+  - {fileID: 1662872100}
+  conditionalType: 0
+  text: 1 EP, similarly restricted.
+  eligibleSpaces: []
+  numAwards: 1
+--- !u!114 &1662872104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662872097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efd910e3347f19b42a52723a6eaab22d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: apAwards
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib],[System.Int32,
+        mscorlib]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib],[System.Int32,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 2|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: System.ValueTuple`2[[Game+ActionType, Assembly-CSharp],[Game+ActionTier,
+        Assembly-CSharp]], mscorlib
+    - Name: Item1
+      Entry: 3
+      Data: 1
+    - Name: Item2
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  faction: 2
+  conditionals: []
+  conditionalType: 0
+  text: '"Not One Englishman": 2 EP. Must be spent to flag Market(s) next to a BR-flagged
+    Market.'
+  eligibleSpaces: []
+  numAwards: 1
+--- !u!114 &1662872105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662872097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e08ef203b778c084a942aed4d568e706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  conditionalText: 
+  conditionalMode: 0
+  spaces:
+  - {fileID: 1309132290}
+  - {fileID: 111168688}
 --- !u!1 &1672736422
 GameObject:
   m_ObjectHideFlags: 0
@@ -24421,7 +26093,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1718760935}
+  - component: {fileID: 1718760939}
+  - component: {fileID: 1718760937}
+  - component: {fileID: 1718760938}
   - component: {fileID: 1718760936}
+  - component: {fileID: 1718760940}
   m_Layer: 0
   m_Name: Tropical Diseases
   m_TagString: Untagged
@@ -24452,7 +26128,84 @@ MonoBehaviour:
   m_GameObject: {fileID: 1718760934}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69f99230b03cab946a2accba376d1680, type: 3}
+  m_Script: {fileID: 11500000, guid: 23144bcef9b799a4ab08341c38605290, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 0
+  conditionals: []
+  conditionalType: 0
+  text: Remove 1 friendly flag from a Caribbean Market
+  eligibleSpaces: []
+  numSpaces: 1
+--- !u!114 &1718760937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718760934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195f814a927f0b947b65b17877ed2db0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  conditionalText: 
+  keyword: 0
+--- !u!114 &1718760938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718760934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23144bcef9b799a4ab08341c38605290, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 0
+  conditionals: []
+  conditionalType: 0
+  text: Remove 1 enemy flag from a Caribbean Market
+  eligibleSpaces: []
+  numSpaces: 1
+--- !u!114 &1718760939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718760934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c36fb46afc0083f47bcec27949c6338e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   serializationData:
@@ -24467,62 +26220,37 @@ MonoBehaviour:
     - Name: callback
       Entry: 6
       Data: 
-    - Name: commandText
-      Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[Game+Faction, Assembly-CSharp],[System.String,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Game+Faction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: bonusText
-      Entry: 7
-      Data: 2|System.Collections.Generic.Dictionary`2[[Game+Faction, Assembly-CSharp],[System.String,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 3|System.Collections.Generic.EnumEqualityComparer`1[[Game+Faction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
   playFaction: 0
-  bonusKeywords: 
   reqdActionType: 0
   eras: 00000000
+--- !u!114 &1718760940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718760934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23144bcef9b799a4ab08341c38605290, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 0
+  conditionals:
+  - {fileID: 1718760937}
+  conditionalType: 0
+  text: Remove an additional enemy flag from a Caribbean Market
+  eligibleSpaces: []
+  numSpaces: 1
 --- !u!1001 &1733223073
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24556,7 +26284,7 @@ PrefabInstance:
       objectReference: {fileID: 3314514578283267157, guid: 11836b981756b214a850c5cefa4d7f00, type: 3}
     - target: {fileID: 3314514578283267157, guid: 11836b981756b214a850c5cefa4d7f00, type: 3}
       propertyPath: serializationData.SerializationNodes.Array.size
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3314514578283267157, guid: 11836b981756b214a850c5cefa4d7f00, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.size
@@ -24609,7 +26337,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3314514578283267157, guid: 11836b981756b214a850c5cefa4d7f00, type: 3}
       propertyPath: serializationData.SerializationNodes.Array.data[13].Name
-      value: gameActions
+      value: callback
       objectReference: {fileID: 0}
     - target: {fileID: 3314514578283267157, guid: 11836b981756b214a850c5cefa4d7f00, type: 3}
       propertyPath: serializationData.SerializationNodes.Array.data[6].Entry
@@ -24701,7 +26429,7 @@ PrefabInstance:
       objectReference: {fileID: 840575007}
     - target: {fileID: 7534191138467056792, guid: 11836b981756b214a850c5cefa4d7f00, type: 3}
       propertyPath: serializationData.SerializationNodes.Array.size
-      value: 19
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7534191138467056792, guid: 11836b981756b214a850c5cefa4d7f00, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.size
@@ -24779,12 +26507,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7534191138467056792, guid: 11836b981756b214a850c5cefa4d7f00, type: 3}
       propertyPath: serializationData.SerializationNodes.Array.data[14].Data
-      value: 3|System.Collections.Generic.List`1[[GameAction, Assembly-CSharp]],
-        mscorlib
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7534191138467056792, guid: 11836b981756b214a850c5cefa4d7f00, type: 3}
       propertyPath: serializationData.SerializationNodes.Array.data[14].Name
-      value: gameActions
+      value: callback
       objectReference: {fileID: 0}
     - target: {fileID: 7534191138467056792, guid: 11836b981756b214a850c5cefa4d7f00, type: 3}
       propertyPath: serializationData.SerializationNodes.Array.data[15].Data
@@ -24828,7 +26555,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7534191138467056792, guid: 11836b981756b214a850c5cefa4d7f00, type: 3}
       propertyPath: serializationData.SerializationNodes.Array.data[14].Entry
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7534191138467056792, guid: 11836b981756b214a850c5cefa4d7f00, type: 3}
       propertyPath: serializationData.SerializationNodes.Array.data[15].Entry
@@ -24904,7 +26631,7 @@ PrefabInstance:
       objectReference: {fileID: 8979241849030110564, guid: 11836b981756b214a850c5cefa4d7f00, type: 3}
     - target: {fileID: 8979241849030110564, guid: 11836b981756b214a850c5cefa4d7f00, type: 3}
       propertyPath: serializationData.SerializationNodes.Array.size
-      value: 19
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8979241849030110564, guid: 11836b981756b214a850c5cefa4d7f00, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.size
@@ -24982,12 +26709,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8979241849030110564, guid: 11836b981756b214a850c5cefa4d7f00, type: 3}
       propertyPath: serializationData.SerializationNodes.Array.data[14].Data
-      value: 3|System.Collections.Generic.List`1[[GameAction, Assembly-CSharp]],
-        mscorlib
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8979241849030110564, guid: 11836b981756b214a850c5cefa4d7f00, type: 3}
       propertyPath: serializationData.SerializationNodes.Array.data[14].Name
-      value: gameActions
+      value: callback
       objectReference: {fileID: 0}
     - target: {fileID: 8979241849030110564, guid: 11836b981756b214a850c5cefa4d7f00, type: 3}
       propertyPath: serializationData.SerializationNodes.Array.data[15].Data
@@ -25031,7 +26757,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8979241849030110564, guid: 11836b981756b214a850c5cefa4d7f00, type: 3}
       propertyPath: serializationData.SerializationNodes.Array.data[14].Entry
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8979241849030110564, guid: 11836b981756b214a850c5cefa4d7f00, type: 3}
       propertyPath: serializationData.SerializationNodes.Array.data[15].Entry
@@ -25059,7 +26785,7 @@ PrefabInstance:
       objectReference: {fileID: 9180024858109594747, guid: 11836b981756b214a850c5cefa4d7f00, type: 3}
     - target: {fileID: 9180024858109594747, guid: 11836b981756b214a850c5cefa4d7f00, type: 3}
       propertyPath: serializationData.SerializationNodes.Array.size
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 9180024858109594747, guid: 11836b981756b214a850c5cefa4d7f00, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.size
@@ -26338,7 +28064,7 @@ PrefabInstance:
       objectReference: {fileID: 7095921344855551204, guid: 723ebc3e46e5aab478c3bdc75c9c2788, type: 3}
     - target: {fileID: 7095921344855551204, guid: 723ebc3e46e5aab478c3bdc75c9c2788, type: 3}
       propertyPath: serializationData.SerializationNodes.Array.size
-      value: 29
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 7095921344855551204, guid: 723ebc3e46e5aab478c3bdc75c9c2788, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.size
@@ -26488,12 +28214,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7095921344855551204, guid: 723ebc3e46e5aab478c3bdc75c9c2788, type: 3}
       propertyPath: serializationData.SerializationNodes.Array.data[24].Data
-      value: 3|System.Collections.Generic.List`1[[GameAction, Assembly-CSharp]],
-        mscorlib
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7095921344855551204, guid: 723ebc3e46e5aab478c3bdc75c9c2788, type: 3}
       propertyPath: serializationData.SerializationNodes.Array.data[24].Name
-      value: gameActions
+      value: callback
       objectReference: {fileID: 0}
     - target: {fileID: 7095921344855551204, guid: 723ebc3e46e5aab478c3bdc75c9c2788, type: 3}
       propertyPath: serializationData.SerializationNodes.Array.data[25].Data
@@ -26537,7 +28262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7095921344855551204, guid: 723ebc3e46e5aab478c3bdc75c9c2788, type: 3}
       propertyPath: serializationData.SerializationNodes.Array.data[24].Entry
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7095921344855551204, guid: 723ebc3e46e5aab478c3bdc75c9c2788, type: 3}
       propertyPath: serializationData.SerializationNodes.Array.data[25].Entry
@@ -26948,6 +28673,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1816056389}
+  - component: {fileID: 1816056395}
+  - component: {fileID: 1816056394}
+  - component: {fileID: 1816056393}
+  - component: {fileID: 1816056392}
+  - component: {fileID: 1816056391}
   - component: {fileID: 1816056390}
   m_Layer: 0
   m_Name: Interest Payments
@@ -26979,7 +28709,133 @@ MonoBehaviour:
   m_GameObject: {fileID: 1816056388}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cf6bfb45cdd3bc4d9706172d1bbb11f, type: 3}
+  m_Script: {fileID: 11500000, guid: f9f7807811a36284fa89beccfa47caf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 0
+  conditionals:
+  - {fileID: 1816056391}
+  conditionalType: 1
+  text: 
+  amount: -2
+  targetFaction: 0
+--- !u!114 &1816056391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816056388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9031d3ee0e44af34384299021df3f572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  conditionalText: You have more Available Debt than your opponent.
+  margin: 1
+--- !u!114 &1816056392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816056388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 077a4a87aec538a4da33bf356d18133a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 0
+  conditionals: []
+  conditionalType: 0
+  text: Reduce your opponent's Debt Limit by one.
+  amount: -1
+--- !u!114 &1816056393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816056388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d107086a60ff89488f976e9b2e7661b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 0
+  conditionals: []
+  conditionalType: 0
+  text: 
+  vpAward: 1
+--- !u!114 &1816056394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816056388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54bb10b201d1c094eba6ed0b96e55981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  conditionalText: If your opponent is at Debt Limit score 1 VP.
+  margin: 0
+--- !u!114 &1816056395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816056388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c36fb46afc0083f47bcec27949c6338e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   serializationData:
@@ -26994,87 +28850,8 @@ MonoBehaviour:
     - Name: callback
       Entry: 6
       Data: 
-    - Name: commandText
-      Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[Game+Faction, Assembly-CSharp],[System.String,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Game+Faction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 0
-    - Name: $v
-      Entry: 1
-      Data: 'Reduce your opponent''s Debt Limit by one. If your opponent was at Debt
-        Limit, reduce their Debt by one as well, then score 1 VP. '
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: bonusText
-      Entry: 7
-      Data: 2|System.Collections.Generic.Dictionary`2[[Game+Faction, Assembly-CSharp],[System.String,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 3|System.Collections.Generic.EnumEqualityComparer`1[[Game+Faction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 0
-    - Name: $v
-      Entry: 1
-      Data: Reduce your own Debt by 2. If you are unable to reduce Debt, you may
-        take 1 EP for each Debt reduction not taken.
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
   playFaction: 0
-  bonusKeywords: 'You have more Available Debt than your opponent. '
-  reqdActionType: 1
+  reqdActionType: 2
   eras: 00000000
 --- !u!1 &1817650397
 GameObject:
@@ -28612,6 +30389,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1961482529}
+  - component: {fileID: 1961482538}
+  - component: {fileID: 1961482537}
+  - component: {fileID: 1961482536}
+  - component: {fileID: 1961482535}
+  - component: {fileID: 1961482534}
+  - component: {fileID: 1961482533}
+  - component: {fileID: 1961482532}
+  - component: {fileID: 1961482531}
   - component: {fileID: 1961482530}
   m_Layer: 0
   m_Name: Great Northern War
@@ -28643,7 +30428,277 @@ MonoBehaviour:
   m_GameObject: {fileID: 1961482528}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4502373692c154a4cae70cf71545a886, type: 3}
+  m_Script: {fileID: 11500000, guid: efd910e3347f19b42a52723a6eaab22d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: apAwards
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib],[System.Int32,
+        mscorlib]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib],[System.Int32,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 2|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
+        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: System.ValueTuple`2[[Game+ActionType, Assembly-CSharp],[Game+ActionTier,
+        Assembly-CSharp]], mscorlib
+    - Name: Item1
+      Entry: 3
+      Data: 2
+    - Name: Item2
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  faction: 0
+  conditionals:
+  - {fileID: 1961482531}
+  conditionalType: 0
+  text: 
+  eligibleSpaces: []
+  numAwards: 1
+--- !u!114 &1961482531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961482528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195f814a927f0b947b65b17877ed2db0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  conditionalText: Style
+  keyword: 0
+--- !u!114 &1961482532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961482528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db5a9a149786f1b45a4e6087302850d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 1
+  conditionals: []
+  conditionalType: 0
+  text: 
+  eligibleSpaces:
+  - {fileID: 302841238}
+  numSpaces: 1
+--- !u!114 &1961482533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961482528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d107086a60ff89488f976e9b2e7661b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 1
+  conditionals:
+  - {fileID: 1961482534}
+  conditionalType: 0
+  text: 
+  vpAward: 2
+--- !u!114 &1961482534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961482528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e08ef203b778c084a942aed4d568e706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  conditionalText: 
+  conditionalMode: 0
+  spaces:
+  - {fileID: 302841238}
+--- !u!114 &1961482535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961482528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d107086a60ff89488f976e9b2e7661b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 2
+  conditionals:
+  - {fileID: 1961482536}
+  conditionalType: 0
+  text: If both are now BR-flagged, score 2 VP.
+  vpAward: 2
+--- !u!114 &1961482536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961482528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e08ef203b778c084a942aed4d568e706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  conditionalText: 
+  conditionalMode: 0
+  spaces:
+  - {fileID: 1561559066}
+  - {fileID: 1576645759}
+--- !u!114 &1961482537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961482528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db5a9a149786f1b45a4e6087302850d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 2
+  conditionals: []
+  conditionalType: 0
+  text: 'Hanover prestige enhanced: Shift a Political space in the German States.'
+  eligibleSpaces:
+  - {fileID: 1561559066}
+  - {fileID: 1576645759}
+  numSpaces: 1
+--- !u!114 &1961482538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961482528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c36fb46afc0083f47bcec27949c6338e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   serializationData:
@@ -28658,98 +30713,7 @@ MonoBehaviour:
     - Name: callback
       Entry: 6
       Data: 
-    - Name: commandText
-      Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[Game+Faction, Assembly-CSharp],[System.String,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Game+Faction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2
-    - Name: $v
-      Entry: 1
-      Data: 'Hanover prestige enhanced: Shift a Political space in the German States.
-        If both are now BR-flagged, score 2 VP. '
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 1
-    - Name: $v
-      Entry: 1
-      Data: 'France brokers treaty: Shift Russia. If it''s already FR-flagged, score
-        2 VP instead. '
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: bonusText
-      Entry: 7
-      Data: 2|System.Collections.Generic.Dictionary`2[[Game+Faction, Assembly-CSharp],[System.String,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 3|System.Collections.Generic.EnumEqualityComparer`1[[Game+Faction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 0
-    - Name: $v
-      Entry: 1
-      Data: '1 DP. '
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
   playFaction: 0
-  bonusKeywords: 'Style '
   reqdActionType: 3
   eras: 00000000
 --- !u!1 &1962072451
@@ -30690,6 +32654,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2089741154}
+  - component: {fileID: 2089741158}
+  - component: {fileID: 2089741156}
+  - component: {fileID: 2089741157}
   - component: {fileID: 2089741155}
   m_Layer: 0
   m_Name: Tax Reform
@@ -30721,7 +32688,85 @@ MonoBehaviour:
   m_GameObject: {fileID: 2089741153}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57347d5f9f46fbb49972a46535582a37, type: 3}
+  m_Script: {fileID: 11500000, guid: f9f7807811a36284fa89beccfa47caf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 0
+  conditionals:
+  - {fileID: 2089741156}
+  conditionalType: 0
+  text: 
+  amount: 1
+  targetFaction: 0
+--- !u!114 &2089741156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089741153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195f814a927f0b947b65b17877ed2db0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  conditionalText: Finance
+  keyword: 4
+--- !u!114 &2089741157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089741153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9f7807811a36284fa89beccfa47caf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 0
+  conditionals: []
+  conditionalType: 0
+  text: 
+  amount: 2
+  targetFaction: 0
+--- !u!114 &2089741158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089741153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c36fb46afc0083f47bcec27949c6338e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   serializationData:
@@ -30736,60 +32781,7 @@ MonoBehaviour:
     - Name: callback
       Entry: 6
       Data: 
-    - Name: commandText
-      Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[Game+Faction, Assembly-CSharp],[System.String,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Game+Faction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: bonusText
-      Entry: 7
-      Data: 2|System.Collections.Generic.Dictionary`2[[Game+Faction, Assembly-CSharp],[System.String,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 3|System.Collections.Generic.EnumEqualityComparer`1[[Game+Faction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
   playFaction: 0
-  bonusKeywords: 
   reqdActionType: 1
   eras: 00000000
 --- !u!1 &2094681466
@@ -31495,6 +33487,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3421046882785140572, guid: 27947e618d200b148a9479a01a023327, type: 3}
   m_PrefabInstance: {fileID: 2138797151}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2145701303 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1821480168, guid: 9d3f930852b40fd48b97dbc7a3ca5424, type: 3}
+  m_PrefabInstance: {fileID: 1682187132}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c14db1438b8a57d458eb5a626920515c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2146194581
 GameObject:
   m_ObjectHideFlags: 0
