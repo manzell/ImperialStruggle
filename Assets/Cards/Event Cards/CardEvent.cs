@@ -8,7 +8,7 @@ public abstract class CardEvent : SerializedMonoBehaviour
 {
     public enum ConditionalType { Any, All }
     public Game.Faction faction;
-    public List<Conditional> conditionals;
+    public List<Conditional<Game.Faction>> conditionals;
     public ConditionalType conditionalType;
 
     public string text; 

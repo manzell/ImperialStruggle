@@ -13,7 +13,7 @@ public class AdjustDebtLimit : Command
     public AdjustDebtLimit(Game.Faction faction, int amount)
     {
         recordsTrack = GameObject.FindObjectOfType<RecordsTrack>();
-        actingFaction = faction;
+        targetFaction = faction;
         adjustAmt = amount;
         previousDebtLimit = recordsTrack.currentDebt[faction];
         Do(faction);
@@ -21,11 +21,11 @@ public class AdjustDebtLimit : Command
 
     public override void Do(Game.Faction faction)
     {
-        previousDebtLimit = recordsTrack.debtLimit[actingFaction];
-        recordsTrack.debtLimit[actingFaction] += adjustAmt;
-        Debug.Log($"{actingFaction} debt limit {(adjustAmt > 0 ? "increased" : "decreased")} by {Mathf.Abs(adjustAmt)}");
+        previousDebtLimit = recordsTrack.debtLimit[targetFaction];
+        recordsTrack.debtLimit[targetFaction] += adjustAmt;
+        Debug.Log($"{targetFaction} debt limit {(adjustAmt > 0 ? "increased" : "decreased")} by {Mathf.Abs(adjustAmt)}");
 
-        if (recordsTrack.availableDebt[actingFaction] < 0)
-            recordsTrack.currentDebt[actingFaction] = recordsTrack.debtLimit[actingFaction]; 
+        if (recordsTrack.availableDebt[targetFaction] < 0)
+            recordsTrack.currentDebt[targetFaction] = recordsTrack.debtLimit[targetFaction]; 
     }
 }

@@ -34,7 +34,7 @@ public class UI_PlayerBoard : MonoBehaviour
     public void Update()
     {
         if(Input.GetKeyDown(KeyCode.Tab))
-            SetFaction(faction == Game.Faction.England ? Game.Faction.France : Game.Faction.England); 
+            SetFaction(faction == Game.Faction.Britain ? Game.Faction.France : Game.Faction.Britain); 
     }
 
     public void SetFaction(Game.Faction faction)
@@ -68,7 +68,7 @@ public class UI_PlayerBoard : MonoBehaviour
 
     public void HilightCards(InvestmentTile tile)
     {
-        if(tile.eventCardTrigger == true)
+        if(tile.GetComponent<EventCardTriggerCommand>())
         {
             // Issue this only highlights the cards if we're looking at the correct player's Player Board. If I'm tabbed over it won't highlight. 
             // To fix I'll need to have two player boards, 1 for each player, and transition them, rather than the current approach. 

@@ -10,18 +10,18 @@ public class AdjustTheaterScore : Command
 
     public AdjustTheaterScore(Game.Faction faction, Theater theater, int adjustAmount)
     {
-        actingFaction = faction;
+        targetFaction = faction;
         this.adjustAmount = adjustAmount;
         this.theater = theater;
         previousTS = theater.theaterScore[faction]; 
-        Do(actingFaction);
+        Do(targetFaction);
     }
 
     public override void Do(Game.Faction faction)
     {
         Debug.Log($"{faction} {(adjustAmount > 0 ? "gains" : "loses")} {adjustAmount} War Score in {theater}");
-        theater.theaterScore[actingFaction] += adjustAmount;
+        theater.theaterScore[targetFaction] += adjustAmount;
     }
 
-    public override void Undo() => theater.theaterScore[actingFaction] = previousTS;
+    public override void Undo() => theater.theaterScore[targetFaction] = previousTS;
 }

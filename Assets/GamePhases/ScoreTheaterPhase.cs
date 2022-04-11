@@ -10,12 +10,12 @@ public class ScoreTheaterPhase : MonoBehaviour
 
     void GiveWarSpoils(Theater theater)
     {
-        int winningMargin = Mathf.Abs(theater.theaterScore[Game.Faction.England] - theater.theaterScore[Game.Faction.France]);
-        Game.Faction winningFaction = theater.theaterScore[Game.Faction.France] > theater.theaterScore[Game.Faction.England] ? Game.Faction.France :
-            theater.theaterScore[Game.Faction.England] > theater.theaterScore[Game.Faction.France] ? Game.Faction.England :
+        int winningMargin = Mathf.Abs(theater.theaterScore[Game.Faction.Britain] - theater.theaterScore[Game.Faction.France]);
+        Game.Faction winningFaction = theater.theaterScore[Game.Faction.France] > theater.theaterScore[Game.Faction.Britain] ? Game.Faction.France :
+            theater.theaterScore[Game.Faction.Britain] > theater.theaterScore[Game.Faction.France] ? Game.Faction.Britain :
             Game.Faction.Neutral;
-        Game.Faction losingFaction = winningFaction == Game.Faction.France ? Game.Faction.England :
-            winningFaction == Game.Faction.England ? Game.Faction.France :
+        Game.Faction losingFaction = winningFaction == Game.Faction.France ? Game.Faction.Britain :
+            winningFaction == Game.Faction.Britain ? Game.Faction.France :
             Game.Faction.Neutral;
 
         foreach (TheaterAwards award in theater.theaterAwards)
@@ -23,13 +23,23 @@ public class ScoreTheaterPhase : MonoBehaviour
             if (winningMargin >= award.minMargin && (winningMargin <= award.maxMargin || award.maxMargin == 0))
             {
                 if (award.vpAward > 0)
-                    theater.gameActions.Add(new AdjustVictoryPoints(winningFaction, award.vpAward));
+                {
+                    AdjustVPCommand adjustVictoryPoints = theater.gameObject.AddComponent<AdjustVPCommand>();
+                    adjustVictoryPoints.adjustAmount.value = award.vpAward;
+                    adjustVictoryPoints.targetFaction = winningFaction;
+                    adjustVictoryPoints.Do(winningFaction); 
+                }
 
                 if (award.cpAward > 0)
                     theater.gameActions.Add(new AdjustConquestPoints(winningFaction, award.cpAward));
 
                 if (award.loserTreatyPoints > 0)
-                    theater.gameActions.Add(new AdjustTreatyPoints(losingFaction, award.loserTreatyPoints));
+                {
+                    AdjustTPCommand adjustTPCommand = gameObject.AddComponent<AdjustTPCommand>();
+                    adjustTPCommand.targetFaction = losingFaction;
+                    adjustTPCommand.adjustAmount.value = award.loserTreatyPoints;
+                    adjustTPCommand.Do(winningFaction);
+                }
 
                 break;
             }

@@ -28,22 +28,22 @@ public class UI_InvestmentTile : MonoBehaviour
     {
         GraphicSettings graphicSettings = FindObjectOfType<Game>().graphicSettings;
 
-        foreach(KeyValuePair<(Game.ActionType type, Game.ActionTier tier), int> kvp in tile.actionPoints)
+        foreach(ActionPoint actionPoint in tile.GetComponent<AdjustAPCommand>().actionPoints)
         {
-            if(kvp.Key.tier == Game.ActionTier.Major)
+            if(actionPoint.actionTier == Game.ActionTier.Major)
             {
-                majorActionPoints.text = kvp.Value.ToString();
-                majorIcon.sprite = graphicSettings.actionIcons[kvp.Key.type];
+                majorActionPoints.text = actionPoint.Value(new List<ICriteria>()).ToString(); 
+                majorIcon.sprite = graphicSettings.actionIcons[actionPoint.actionType];
             }
-            else if (kvp.Key.tier == Game.ActionTier.Minor)
+            else if (actionPoint.actionTier == Game.ActionTier.Minor)
             {
-                minorActionPoints.text = kvp.Value.ToString();
-                minorIcon.sprite = graphicSettings.actionIcons[kvp.Key.type];
+                minorActionPoints.text = actionPoint.Value(new List<ICriteria>()).ToString();
+                minorIcon.sprite = graphicSettings.actionIcons[actionPoint.actionType];
             }
         }
 
-        eventIcon.enabled = tile.eventCardTrigger;
-        milUpgradeIcon.enabled = tile.milUpgradeTrigger;
+        eventIcon.enabled = tile.GetComponent<EventCardTriggerCommand>();
+        milUpgradeIcon.enabled = tile.GetComponent<MilitaryUpgradeCommand>(); 
 
         // OK how to tell if the investment tile is selected? TODO - This is very ineffecient.
         if(Phase.currentPhase is ActionRound)

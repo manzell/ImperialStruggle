@@ -13,10 +13,13 @@ public class ReduceTreatyPointsPhase : MonoBehaviour, IPhaseAction
         recordsTrack = FindObjectOfType<RecordsTrack>();
         foreach(KeyValuePair<Game.Faction, int> pair in recordsTrack.treatyPoints)
         {
-            if (recordsTrack.treatyPoints[pair.Key] >= treatyPointsCap)
+            if (recordsTrack.treatyPoints[pair.Key] > treatyPointsCap)
             {
-                AdjustTreatyPoints atp = new AdjustTreatyPoints(pair.Key, treatyPointsCap - recordsTrack.treatyPoints[pair.Key]);
-                (phase as ActionRound).gameActions.Add(atp);
+                AdjustTPCommand adjustTPCommand = phase.gameObject.AddComponent<AdjustTPCommand>();
+                adjustTPCommand.targetFaction = pair.Key;
+                adjustTPCommand.adjustAmount.value = treatyPointsCap - recordsTrack.treatyPoints[pair.Key];
+
+                adjustTPCommand.Do(adjustTPCommand.targetFaction); 
             }
         }
 

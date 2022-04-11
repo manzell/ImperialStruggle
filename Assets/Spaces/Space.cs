@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Space : MonoBehaviour
+public class Space : MonoBehaviour, ICriteria
 {
     public Map map; 
     public Game.Faction flag; 

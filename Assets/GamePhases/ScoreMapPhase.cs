@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events; 
+using UnityEngine.Events;
+using System.Linq; 
 
 public class ScoreMapPhase : MonoBehaviour, IPhaseAction
 {
@@ -11,29 +12,22 @@ public class ScoreMapPhase : MonoBehaviour, IPhaseAction
     {
         foreach(Map map in FindObjectsOfType<Map>())
         {
+            Game.Faction winningFaction = Game.Faction.Neutral;
             Dictionary<Game.Faction, int> mapScore = new Dictionary<Game.Faction, int>() { 
-                { Game.Faction.England, 0}, 
-                { Game.Faction.France, 0 } 
-            };
+                { Game.Faction.Britain, map.spaces.Where(space => space.flag == Game.Faction.Britain).Count()}, 
+                { Game.Faction.France, map.spaces.Where(space => space.flag == Game.Faction.France).Count()}
+            };          
 
-            foreach(Space space in map.spaces)
+            if (mapScore[Game.Faction.Britain] > mapScore[Game.Faction.France])
+                winningFaction = Game.Faction.Britain;
+            else if (mapScore[Game.Faction.France] > mapScore[Game.Faction.Britain])
+                winningFaction = Game.Faction.France; 
+
+            if(winningFaction != Game.Faction.Neutral && map.awardTile.GetComponents<Conditional<Map>>().All(condition => condition.Test(map)))
             {
-                if(mapScore.ContainsKey(space.flag))
-                    mapScore[space.flag]++;
+                foreach (Command command in map.awardTile.GetComponents<Command>())
+                    command.Do(winningFaction);
             }
-
-            Game.Faction winningFaction = Game.Faction.Neutral; 
-
-            if (mapScore[Game.Faction.England] - map.awardTile.marginRequired >= mapScore[Game.Faction.France])
-                winningFaction = Game.Faction.England;
-            else if(mapScore[Game.Faction.France] - map.awardTile.marginRequired >= mapScore[Game.Faction.England])
-                winningFaction = Game.Faction.France;
-
-            if(map.awardTile.victoryPoints + map.bonusVP > 0)
-                phase.gameActions.Add(new AdjustVictoryPoints(winningFaction, map.awardTile.victoryPoints + map.bonusVP));
-
-            if (map.awardTile.treatyPoints> 0)
-                phase.gameActions.Add(new AdjustTreatyPoints(winningFaction, map.awardTile.treatyPoints));
 
             mapScoreEvent.Invoke(map, mapScore); 
         }

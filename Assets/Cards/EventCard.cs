@@ -2,29 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using Sirenix.OdinInspector; 
+using Sirenix.OdinInspector;
+using System.Linq; 
 
 public class EventCard : SerializedMonoBehaviour, ICard
 {
-    [HideInInspector] public Game.Faction playFaction; 
     [HideInInspector] public UnityAction callback;
 
     public Game.ActionType reqdActionType;
-    public List<Game.Era> eras;
+    public Game.Era era;
 
     public void Play(UnityAction callback)
     {
+        ActionRound actionRound = Phase.currentPhase as ActionRound;
+        HashSet<GameObject> gameObjects = new HashSet<GameObject>();
         this.callback = callback;
-        Debug.Log($"{this} played by {(Phase.currentPhase as ActionRound).actingFaction}");
-        PlayCard(Phase.currentPhase as ActionRound);
-    }
 
-    public virtual void PlayCard(ActionRound actionRound)
-    {
-        foreach(CardEvent cardEvent in GetComponents<CardEvent>())
+        Debug.Log($"{this} played by {actionRound.actingFaction}");
+
+        foreach(Command command in GetComponentsInChildren<Command>().Where(command => command.transform.parent == transform))
+            gameObjects.Add(command.gameObject);
+
+        foreach(GameObject commandSet in gameObjects)
         {
-            if (cardEvent.eventable && cardEvent.faction == Game.Faction.Neutral || cardEvent.faction == actionRound.actingFaction)
-                cardEvent.Event();
+            bool doExecuteCommand = true;
+
+            foreach (Conditional<Game.Faction> conditional in commandSet.GetComponents<Conditional<Game.Faction>>())
+                doExecuteCommand &= conditional.Test(actionRound.actingFaction);
+
+            if (doExecuteCommand)
+            {
+                foreach(Command command in commandSet.GetComponents<Command>())
+                {
+                    command.Do(actionRound.actingFaction); 
+                }
+            }
         }
 
         callback.Invoke();

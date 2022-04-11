@@ -8,7 +8,7 @@ public class Player : SerializedMonoBehaviour
     public Game.Faction faction; 
     public List<EventCard> hand;
     public List<MinistryCard> ministers; // bool = revealed?
-    public Dictionary<(Game.ActionType, Game.ActionTier), int> actionPoints = new Dictionary<(Game.ActionType, Game.ActionTier), int>(); 
+    public List<ActionPoint> actionPoints = new List<ActionPoint>(); 
     public List<WarTile> basicWarTiles, bonusWarTiles;
     public int CP = 0; 
 

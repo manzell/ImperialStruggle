@@ -20,8 +20,8 @@ public class ShiftPoliticalSpace : Action
     {
         space = GetComponent<Space>();
         SelectInvestmentTile.selectInvestmentTileEvent.AddListener(tile => Can((Phase.currentPhase as ActionRound).actingFaction));
-        AdjustActionPoints.adjustActionPointsEvent.AddListener(adjust => Can(adjust.actingFaction));
-        TakeDebt.takeDebtEvent.AddListener(td => Can(td.actingFaction));
+        AdjustAPCommand.adjustActionPointsEvent.AddListener(adjust => Can(adjust.targetFaction));
+        TakeDebt.takeDebtEvent.AddListener(td => Can(td.targetFaction));
     }
 
     void SetCost()
@@ -40,7 +40,7 @@ public class ShiftPoliticalSpace : Action
 
     void SetActionName(Game.Faction faction)
     {
-        Game.Faction opposingFaction = faction == Game.Faction.England ? Game.Faction.France : Game.Faction.England;
+        Game.Faction opposingFaction = faction == Game.Faction.Britain ? Game.Faction.France : Game.Faction.Britain;
 
         if (space.flag == opposingFaction || space.flag == Game.Faction.Spain || space.flag == Game.Faction.USA)
         {
@@ -61,7 +61,7 @@ public class ShiftPoliticalSpace : Action
     public override bool Can(Game.Faction faction)
     {
         available = true; 
-        SetCost(); 
+        /*SetCost(); 
         SetActionName(faction);
 
         Try.Invoke(this); // Try Happens BEFORE calculating if we can afford it. 
@@ -71,19 +71,19 @@ public class ShiftPoliticalSpace : Action
             Player player = Player.players[faction];
             // Check that we have the ActionPoints - the player must manually activate their own Debt or Treaty Points first!
             int availableActionPoints =
-                (player.actionPoints.TryGetValue((requiredActionType, Game.ActionTier.Major), out int points) ? points : 0) +
-                (player.actionPoints.TryGetValue((Game.ActionType.Debt, Game.ActionTier.Major), out int debt) ? debt : 0) +
-                (player.actionPoints.TryGetValue((Game.ActionType.Treaty, Game.ActionTier.Major), out int treaty) ? treaty : 0);
+                (player.actionPoints.TryGetValue((requiredActionType, Game.ActionTier.Major), out Calculation<int> points) ? points.value : 0) +
+                (player.actionPoints.TryGetValue((Game.ActionType.Debt, Game.ActionTier.Major), out Calculation<int> debt) ? debt.value : 0) +
+                (player.actionPoints.TryGetValue((Game.ActionType.Treaty, Game.ActionTier.Major), out Calculation<int> treaty) ? treaty.value : 0);
 
             if (requireMajorAction == false)
-                availableActionPoints += player.actionPoints.ContainsKey((requiredActionType, Game.ActionTier.Minor)) ? player.actionPoints[(requiredActionType, Game.ActionTier.Minor)] : 0;
+                availableActionPoints += player.actionPoints.ContainsKey((requiredActionType, Game.ActionTier.Minor)) ? player.actionPoints[(requiredActionType, Game.ActionTier.Minor)].value : 0;
 
             if (requiredFaction != Game.Faction.Neutral && requiredFaction != faction) available = false; 
             if (availableActionPoints < actionCost) available = false;
             if (space.flag == faction) available = false; // Cannot Diplomatic Action on a Space we already control
             if (requireMajorAction == true && player.actionPoints.ContainsKey((requiredActionType, Game.ActionTier.Major)) == false) available = false; // Require matching Major Action Type
         }
-
+        */
         return available;
     }
 
@@ -93,7 +93,7 @@ public class ShiftPoliticalSpace : Action
         ActionRound actionRound = Phase.currentPhase as ActionRound;
 
         actionRound.gameActions.Add(new ShiftSpace(space, faction));
-        actionRound.gameActions.Add(new AdjustActionPoints(faction, finalActionCost));
+        actionRound.gameActions.Add(Phase.currentPhase.gameObject.AddComponent<AdjustAPCommand>());
 
         DoEvent.Invoke(this); 
     }

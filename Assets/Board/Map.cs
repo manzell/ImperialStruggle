@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Map : MonoBehaviour
+public class Map : MonoBehaviour, ICriteria
 {
     public AwardTile awardTile;
     public int bonusVP; 
@@ -13,7 +13,7 @@ public class Map : MonoBehaviour
         get
         {
             Dictionary<Game.Faction, int>  retVal = new Dictionary<Game.Faction, int> {
-                { Game.Faction.England, 0 },
+                { Game.Faction.Britain, 0 },
                 { Game.Faction.France, 0 }
             }; 
 

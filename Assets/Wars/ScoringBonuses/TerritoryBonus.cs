@@ -10,7 +10,7 @@ public class TerritoryBonus : ScoringBonus
         get 
         {
             Dictionary<Game.Faction, int> spaceScore = new Dictionary<Game.Faction, int>();
-            spaceScore.Add(Game.Faction.England, 0);
+            spaceScore.Add(Game.Faction.Britain, 0);
             spaceScore.Add(Game.Faction.France, 0); 
 
             foreach(Space space in spaces)
@@ -19,9 +19,9 @@ public class TerritoryBonus : ScoringBonus
                     spaceScore[space.flag]++;
             }
 
-            if(spaceScore[Game.Faction.England] > spaceScore[Game.Faction.France])
-                return Game.Faction.England;
-            else if(spaceScore[Game.Faction.France] > spaceScore[Game.Faction.England])
+            if(spaceScore[Game.Faction.Britain] > spaceScore[Game.Faction.France])
+                return Game.Faction.Britain;
+            else if(spaceScore[Game.Faction.France] > spaceScore[Game.Faction.Britain])
                 return Game.Faction.France;
             else
                 return Game.Faction.Neutral; 

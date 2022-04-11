@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KeywordBonus : Conditional
+public class KeywordCondition : Conditional<Game.Faction>
 {
     public Game.Keyword keyword;
 

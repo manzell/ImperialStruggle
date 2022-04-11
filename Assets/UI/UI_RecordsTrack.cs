@@ -14,9 +14,9 @@ public class UI_RecordsTrack : MonoBehaviour
     private void Awake()
     {
         recordsTrack = FindObjectOfType<RecordsTrack>();
-        AdjustVictoryPoints.adjustVPEvent.AddListener(avp => SetVPPoints());
-        AdjustTreatyPoints.adjustTPevent.AddListener((x, y) => SetTreatyPoints());
-        AdjustDebt.adjustDebtEvent.AddListener((x, y) => SetDebt());
+        AdjustVPCommand.adjustVPEvent.AddListener(avp => SetVPPoints());
+        AdjustTPCommand.adjustTPEvent.AddListener((x, y) => SetTreatyPoints());
+        AdjustDebtCommand.adjustDebtEvent.AddListener((x, y) => SetDebt());
 
         SetVPPoints();
         SetTreatyPoints();
@@ -30,7 +30,7 @@ public class UI_RecordsTrack : MonoBehaviour
         vpScore.text = recordsTrack.VictoryPoints.ToString();
 
         if (recordsTrack.VictoryPoints > 15)
-            vpBackground.color = graphicSettings.factionColors[Game.Faction.England];
+            vpBackground.color = graphicSettings.factionColors[Game.Faction.Britain];
         else if (recordsTrack.VictoryPoints < 15)
             vpBackground.color = graphicSettings.factionColors[Game.Faction.France];
         else
@@ -39,13 +39,13 @@ public class UI_RecordsTrack : MonoBehaviour
 
     void SetTreatyPoints()
     {
-        ukTP.text = recordsTrack.treatyPoints[Game.Faction.England].ToString();
+        ukTP.text = recordsTrack.treatyPoints[Game.Faction.Britain].ToString();
         franceTP.text = recordsTrack.treatyPoints[Game.Faction.France].ToString();
     }
 
     void SetDebt()
     {
-        ukDebt.text = $"{recordsTrack.currentDebt[Game.Faction.England]}-{recordsTrack.debtLimit[Game.Faction.England]}";
+        ukDebt.text = $"{recordsTrack.currentDebt[Game.Faction.Britain]}-{recordsTrack.debtLimit[Game.Faction.Britain]}";
         franceDebt.text = $"{recordsTrack.currentDebt[Game.Faction.France]}-{recordsTrack.debtLimit[Game.Faction.France]}";
     }
 }

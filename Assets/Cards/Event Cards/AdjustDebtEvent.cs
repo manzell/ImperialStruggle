@@ -9,6 +9,6 @@ public class AdjustDebtEvent : CardEvent
 
     public override void Event()
     {
-        Phase.currentPhase.gameActions.Add(new AdjustDebt(targetFaction, amount)); 
+
     }
 }

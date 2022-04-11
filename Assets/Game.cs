@@ -5,11 +5,11 @@ using System.Linq;
 
 public class Game : MonoBehaviour
 {
-    public enum Faction { Neutral, France, England, Spain, USA }
+    public enum Faction { Neutral, France, Britain, Spain, USA }
     public enum Era { Succession, Empire, Revolution }
     public enum Keyword { Style, Governance, Mercantilism, Scholarship, Finance }
     public enum ActionType { None, Finance, Diplomacy, Military, Debt, Treaty, Free, VictoryPoint }
-    public enum ActionTier { Minor, Major }
+    public enum ActionTier { Major, Minor }
     public enum Resource { Fur, Fish, Tobacco, Sugar, Cotton, Spices }
 
     public static List<EventCard> eventDeck = new List<EventCard>(), eventDiscards = new List<EventCard>();
@@ -30,26 +30,24 @@ public class Game : MonoBehaviour
 
         foreach(KeyValuePair<(ActionType type, ActionTier tier), int> kvp in cost)
         {
-            if(kvp.Key.tier == Game.ActionTier.Minor)
-            {
-                // Minor Action Point. We need to have a total of Major and Minor Action Points in the current Type, less the cost of this action AND less than any major action tier cost
-                resources.TryGetValue((kvp.Key.type, ActionTier.Minor), out int minorActionPoints);
-                resources.TryGetValue((kvp.Key.type, ActionTier.Major), out int majorActionPoints);
-                cost.TryGetValue((kvp.Key.type, ActionTier.Major), out int majorActionCost);
-                cost.TryGetValue((kvp.Key.type, ActionTier.Minor), out int minorActionCost);
-
-                retVal &= majorActionPoints >= majorActionCost &&
-                    majorActionPoints + minorActionPoints - majorActionCost >= minorActionCost; 
-            }
-            else if(kvp.Key.tier == ActionTier.Major)
-            {
-                resources.TryGetValue((kvp.Key.type, ActionTier.Major), out int majorActionPoints);
-                cost.TryGetValue((kvp.Key.type, ActionTier.Major), out int majorActionCost);
+            resources.TryGetValue((kvp.Key.type, ActionTier.Minor), out int minorActionPoints);
+            resources.TryGetValue((kvp.Key.type, ActionTier.Major), out int majorActionPoints);
+            cost.TryGetValue((kvp.Key.type, ActionTier.Major), out int majorActionCost);
+            cost.TryGetValue((kvp.Key.type, ActionTier.Minor), out int minorActionCost);
                 
-                retVal &= majorActionPoints >= majorActionCost;
-            }
+            retVal &= majorActionPoints >= majorActionCost;
+
+            if(kvp.Key.tier == Game.ActionTier.Minor)
+                retVal &= majorActionPoints + minorActionPoints - majorActionCost >= minorActionCost;
         }
 
         return retVal; 
+    }
+
+    static List<string> gamelog; 
+    public static void Log(string str)
+    {
+        print(str);
+        gamelog.Add(str); 
     }
 }

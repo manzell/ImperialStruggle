@@ -18,7 +18,7 @@ public class SelectInvestmentTile : Command
     {
         PeaceTurn peaceTurn = Phase.currentPhase.GetComponentInParent<PeaceTurn>();
 
-        actingFaction = faction;
+        targetFaction = faction;
         investmentTile.available = false;
         investmentTile.exhausted = true;
         

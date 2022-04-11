@@ -10,7 +10,7 @@ public class ScorePrestigePhase : MonoBehaviour, IPhaseAction
 
     public void Do(Phase phase, UnityAction callback)
     {
-        Dictionary<Game.Faction, int> prestigeScore = new Dictionary<Game.Faction, int>() { { Game.Faction.England, 0 }, { Game.Faction.France, 0 } };
+        Dictionary<Game.Faction, int> prestigeScore = new Dictionary<Game.Faction, int>() { { Game.Faction.Britain, 0 }, { Game.Faction.France, 0 } };
 
         List<Space> prestigeSpaces = FindObjectsOfType<Space>().Where(space => space.prestige).ToList();
 
@@ -19,9 +19,14 @@ public class ScorePrestigePhase : MonoBehaviour, IPhaseAction
                 prestigeScore[space.flag]++;
         });
 
-        if(prestigeScore[Game.Faction.England] > prestigeScore[Game.Faction.France])
-            Phase.currentPhase.gameActions.Add(new AdjustVictoryPoints(Game.Faction.England, prestigeVPAward)); 
-        else if(prestigeScore[Game.Faction.France] > prestigeScore[Game.Faction.England])
-            Phase.currentPhase.gameActions.Add(new AdjustVictoryPoints(Game.Faction.France, prestigeVPAward));
+        AdjustVPCommand adjustVictoryPoints = phase.gameObject.AddComponent<AdjustVPCommand>();
+        adjustVictoryPoints.adjustAmount.value = prestigeVPAward;
+
+        if (prestigeScore[Game.Faction.Britain] > prestigeScore[Game.Faction.France])
+            adjustVictoryPoints.targetFaction = Game.Faction.Britain; 
+        else if(prestigeScore[Game.Faction.France] > prestigeScore[Game.Faction.Britain])
+            adjustVictoryPoints.targetFaction = Game.Faction.France;
+
+        phase.gameActions.Add(adjustVictoryPoints);
     }
 }

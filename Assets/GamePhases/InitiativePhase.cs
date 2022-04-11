@@ -15,7 +15,7 @@ public class InitiativePhase : MonoBehaviour, IPhaseAction
         if (VictoryPointTrack.VP > 15)
             Game.initiative = Game.Faction.France;
         if (VictoryPointTrack.VP < 15)
-            Game.initiative = Game.Faction.England;
+            Game.initiative = Game.Faction.Britain;
 
         initiative = Game.initiative; 
         InitiativePhaseStart.Invoke(this); 
@@ -26,7 +26,7 @@ public class InitiativePhase : MonoBehaviour, IPhaseAction
     public void Select(Response response)
     {
         ActionRound[] actionRounds = GetComponentsInChildren<ActionRound>();
-        Game.Faction opposingFaction = Game.initiative == Game.Faction.France ? Game.Faction.England : Game.Faction.France;
+        Game.Faction opposingFaction = Game.initiative == Game.Faction.France ? Game.Faction.Britain : Game.Faction.France;
 
         for(int i = 0; i < actionRounds.Length; i++)
         {

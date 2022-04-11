@@ -19,12 +19,12 @@ public class UI_ActionPoints : SerializedMonoBehaviour
     {
         recordsTrack = FindObjectOfType<RecordsTrack>();
         UI_PlayerBoard.setFactionEvent.AddListener(faction => SetActionTiles(faction));
-        AdjustActionPoints.adjustActionPointsEvent.AddListener(aap => SetActionTiles(aap.actingFaction));
-        TakeDebt.takeDebtEvent.AddListener(td => SetActionTiles(td.actingFaction));
-        ActivateTreatyPoint.activateTreatyPointsEvent.AddListener(atp => SetActionTiles(atp.actingFaction));
+        AdjustAPCommand.adjustActionPointsEvent.AddListener(aap => SetActionTiles(aap.targetFaction));
+        TakeDebt.takeDebtEvent.AddListener(td => SetActionTiles(td.targetFaction));
+        ActivateTreatyPoint.activateTreatyPointsEvent.AddListener(atp => SetActionTiles(atp.targetFaction));
         SelectInvestmentTile.selectInvestmentTileEvent.AddListener(phase => reduceDebtButton.interactable = true); // TODO Update move this out to a different system
         PlayCard.playCardEvent.AddListener(pce => reduceDebtButton.interactable = false);
-        AdjustActionPoints.adjustActionPointsEvent.AddListener(cap => reduceDebtButton.interactable = false); 
+        AdjustAPCommand.adjustActionPointsEvent.AddListener(cap => reduceDebtButton.interactable = false); 
 
         SetButtons(UI_PlayerBoard.faction); 
     }
@@ -35,14 +35,14 @@ public class UI_ActionPoints : SerializedMonoBehaviour
         Player player = Player.players[faction];
 
         SetButtons(faction);
-
+        /*
         foreach (Game.ActionType type in Enum.GetValues(typeof(Game.ActionType)))
         {
             foreach (Game.ActionTier tier in Enum.GetValues(typeof(Game.ActionTier)))
             {
-                if(player.actionPoints.TryGetValue((type, tier), out int ap))
+                if(player.actionPoints.TryGetValue((type, tier), out Calculation <int> ap))
                 {
-                    if(ap > 0)
+                    if(ap.value > 0)
                     {
                         if (!APtiles.ContainsKey((type, tier)))
                         {
@@ -50,7 +50,7 @@ public class UI_ActionPoints : SerializedMonoBehaviour
                             APtiles.Add((type, tier), action.GetComponent<UI_ActionPoint>());
                         }
 
-                        APtiles[(type, tier)].SetDisplay(type, ap);
+                        APtiles[(type, tier)].SetDisplay(type, ap.value);
                     }
                     else if(APtiles.ContainsKey((type, tier)))
                         Destruct(type, tier);
@@ -65,6 +65,7 @@ public class UI_ActionPoints : SerializedMonoBehaviour
                 }
             }
         }
+        */
     }
 
     void SetButtons(Game.Faction faction)
@@ -97,23 +98,15 @@ public class UI_ActionPoints : SerializedMonoBehaviour
         }
     }
 
-    public void TakeDebtResponse()
-    {
-        Game.Faction faction = (Phase.currentPhase as ActionRound).actingFaction; 
-        Phase.currentPhase.gameActions.Add(new TakeDebt(faction, 1)); 
-    }
-
-    public void ActiveTPresponse()
-    {
-        Game.Faction faction = (Phase.currentPhase as ActionRound).actingFaction;
-        Phase.currentPhase.gameActions.Add(new ActivateTreatyPoint(faction, 1));
-    }
 
     public void ReduceDebtResponse()
     {
         ActionRound actionRound = Phase.currentPhase as ActionRound;
         Game.Faction faction = actionRound.actingFaction;
 
-        actionRound.gameActions.Add(new AdjustDebt(faction, -2)); 
+        AdjustDebtCommand adjustDebt = actionRound.gameObject.AddComponent<AdjustDebtCommand>();
+        adjustDebt.targetFaction = faction;
+        adjustDebt.adjustAmt = -2;
+        actionRound.gameActions.Add(adjustDebt);
     }
 }

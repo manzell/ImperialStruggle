@@ -83,10 +83,10 @@ public class UI_SelectMinistryCard : MonoBehaviour
         foreach (Transform child in cardsGO.transform)
             Destroy(child.gameObject);
 
-        if (faction == Game.Faction.England)
+        if (faction == Game.Faction.Britain)
             DisplayMinistryCards(phase, Game.Faction.France);
         else if (faction == Game.Faction.France)
-            DisplayMinistryCards(phase, Game.Faction.England);
+            DisplayMinistryCards(phase, Game.Faction.Britain);
     }
 
     [Button]

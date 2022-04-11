@@ -18,10 +18,10 @@ public class Theater : Phase
         get
         {
             return new Dictionary<Game.Faction, int>() { 
-                { Game.Faction.England, scoringBonuses.Where(bonus => 
-                    bonus.scoringFaction == Game.Faction.England).Count() + warTiles.Where(tile => tile.faction == Game.Faction.England).Sum(tile => tile.value) }, 
+                { Game.Faction.Britain, scoringBonuses.Where(bonus => 
+                    bonus.scoringFaction == Game.Faction.Britain).Count() + warTiles.Where(tile => tile.faction == Game.Faction.Britain).Sum(tile => tile.value) }, 
                 { Game.Faction.France, scoringBonuses.Where(bonus => 
-                    bonus.scoringFaction == Game.Faction.France).Count() + warTiles.Where(tile => tile.faction == Game.Faction.England).Sum(tile => tile.value) }
+                    bonus.scoringFaction == Game.Faction.France).Count() + warTiles.Where(tile => tile.faction == Game.Faction.Britain).Sum(tile => tile.value) }
             };
         }
     }

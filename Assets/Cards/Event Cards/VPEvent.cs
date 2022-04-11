@@ -8,6 +8,8 @@ public class VPEvent : CardEvent
 
     public override void Event()
     {
-        Phase.currentPhase.gameActions.Add(new AdjustVictoryPoints(faction, vpAward));
+        AdjustVPCommand adjustVictoryPoints = Phase.currentPhase.gameObject.AddComponent<AdjustVPCommand>();
+        adjustVictoryPoints.adjustAmount.value = vpAward;
+        Phase.currentPhase.gameActions.Add(adjustVictoryPoints);
     }
 }

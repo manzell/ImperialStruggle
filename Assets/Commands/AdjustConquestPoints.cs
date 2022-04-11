@@ -10,10 +10,10 @@ public class AdjustConquestPoints : Command
 
     public AdjustConquestPoints(Game.Faction faction, int adjustAmount)
     {
-        actingFaction = faction;
+        targetFaction = faction;
         this.adjustAmount = adjustAmount;
         previousCP = Player.players[faction].CP; 
-        Do(actingFaction);
+        Do(targetFaction);
     }
 
     public override void Do(Game.Faction faction)

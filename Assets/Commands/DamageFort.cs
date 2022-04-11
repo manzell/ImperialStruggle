@@ -8,7 +8,7 @@ public class DamageFort : Command
 
     public DamageFort(Game.Faction faction, MilSpace fort)
     {
-        actingFaction = faction;
+        targetFaction = faction;
         this.fort = fort;
         Do(faction);
     }

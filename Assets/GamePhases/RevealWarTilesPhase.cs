@@ -24,7 +24,11 @@ public class RevealWarTilesPhase : MonoBehaviour, IPhaseAction
             
             if (warTile.debt)
             {
-                theater.gameActions.Add(new AdjustDebt(warTile.opposingFaction, 1));
+                AdjustDebtCommand adjustDebt = theater.gameObject.AddComponent<AdjustDebtCommand>();
+                adjustDebt.targetFaction = warTile.opposingFaction;
+                adjustDebt.adjustAmt = 1; 
+                theater.gameActions.Add(adjustDebt);
+
                 warTileBonusActions[warTile.opposingFaction].debt++;
             }
             else if (warTile.milDamage)

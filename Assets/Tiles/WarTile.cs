@@ -8,7 +8,7 @@ public class WarTile : MonoBehaviour, IPhaseAction
     public int value;
     public bool debt, milDamage, unflag; 
     public Game.Faction faction;
-    public Game.Faction opposingFaction => faction == Game.Faction.England ? Game.Faction.France : Game.Faction.England;
+    public Game.Faction opposingFaction => faction == Game.Faction.Britain ? Game.Faction.France : Game.Faction.Britain;
 
     public void Do(Phase phase, UnityAction callback)
     {

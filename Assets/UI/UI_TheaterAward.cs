@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro; 
+using TMPro;
+using System.Linq; 
 
 public class UI_TheaterAward : MonoBehaviour
 {
@@ -15,6 +16,14 @@ public class UI_TheaterAward : MonoBehaviour
 
     void SetAwardText(AwardTile tile)
     {
-        mainText.text = tile.victoryPoints.ToString(); 
+        AdjustVPCommand vpCommand = tile.GetComponent<AdjustVPCommand>();
+        AdjustTPCommand tpCommand = tile.GetComponent<AdjustTPCommand>();
+
+        if (vpCommand) // TODO put this in the graphics manifold
+            mainText.text = $"<color = \"black\">{vpCommand.adjustAmount}</color>";
+        if (vpCommand && tpCommand)
+            mainText.text += " ";
+        if (tpCommand)
+            mainText.text += $"<color = \"green\">{tpCommand.adjustAmount}</color>";
     }
 }

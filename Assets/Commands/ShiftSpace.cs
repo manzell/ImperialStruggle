@@ -12,7 +12,7 @@ public class ShiftSpace : Command
     public ShiftSpace(Space space, Game.Faction faction)
     {
         this.space = space;
-        actingFaction = faction;
+        targetFaction = faction;
         Do(faction); 
     }
 
