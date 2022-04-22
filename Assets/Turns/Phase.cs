@@ -3,35 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using Sirenix.OdinInspector;
-using System.Linq; 
+using System.Linq;
 
 public class Phase : SerializedMonoBehaviour
 {
-    public Game.Era era; 
+    public static Phase currentPhase;
     public static UnityEvent<Phase>
         phaseStartEvent = new UnityEvent<Phase>(),
+        phaseMidEvent = new UnityEvent<Phase>(),
         phaseEndEvent = new UnityEvent<Phase>();
 
-    public List<IPhaseAction>
-        beforePhaseActions = new List<IPhaseAction>(),
-        onPhaseActions = new List<IPhaseAction>(),
-        afterPhaseActions = new List<IPhaseAction>();
+    public Game.Era era;
 
-    [HideInInspector] public List<Command> gameActions; 
-    [HideInInspector] public UnityAction callback;
+    [SerializeField] List<GameAction> phaseStartActions = new List<GameAction>(),
+        phaseEndActions = new List<GameAction>(); 
 
-    public static Phase currentPhase;
-    
-    public Phase prevPhase; 
+    public Phase prevPhase;
     public Phase nextSibling
     {
         get
         {
-            List<Phase> siblings = transform.parent.GetComponents<Phase>()
+            Phase[] siblings = transform.parent.GetComponents<Phase>()
                 .Where(phase => phase.gameObject.activeInHierarchy == true && phase.transform.GetSiblingIndex() > transform.GetSiblingIndex())
-                .ToList();
+                .ToArray();
 
-            return siblings.Count > 0 ? siblings[0] : null;
+            return siblings.Length > 0 ? siblings[0] : null;
         }
     }
     public Phase nextChild
@@ -39,7 +35,7 @@ public class Phase : SerializedMonoBehaviour
         get
         {
             List<Phase> children = GetComponentsInChildren<Phase>().Where(phase => phase != this && phase.gameObject.activeInHierarchy == true).ToList();
-            return children.Count > 0 ? children[0] : null; 
+            return children.Count > 0 ? children[0] : null;
         }
     }
     public Phase parentPhase
@@ -50,76 +46,60 @@ public class Phase : SerializedMonoBehaviour
             return parents.Count > 0 ? parents[0] : null;
         }
     }
+    public Phase nextPhase => nextChild ? nextChild : nextSibling;
 
-    [Button]
-    public void StartThread() => StartPhase(() => Debug.Log("Thread Over"));
+
+    [Button] public void StartThread() => StartPhase(() => Debug.Log("Thread Over"));
     public virtual void StartPhase(UnityAction callback)
     {
-        this.callback = callback;
         currentPhase = this;
 
         phaseStartEvent.Invoke(this);
-
-        ProcessPhaseActions(beforePhaseActions, () =>
-            ProcessPhaseActions(onPhaseActions, () => 
-                OnPhase(callback)));
+        SendPhaseActions(phaseStartActions, () => OnPhase(callback));
     }
 
-    public virtual void OnPhase(UnityAction callback) => NextPhase(callback);
+    void OnPhase(UnityAction callback)
+    {
+        phaseMidEvent.Invoke(this);
+        SendPhaseActions(phaseEndActions, () => AfterPhase(callback));
+    }
 
-    public void NextPhase(UnityAction callback)
+    void AfterPhase(UnityAction callback)
     {
         if (nextChild)
-        {
-            nextChild.prevPhase = this; 
-            nextChild.StartPhase(() => EndPhase(callback));
-        }
-        else
-        {
-            EndPhase(callback);
-        }
+            nextChild.StartPhase(callback);
+        else 
+            EndPhase(callback); 
     }
 
-    public virtual void EndPhase(UnityAction callback)
+    void EndPhase(UnityAction callback)
     {
         phaseEndEvent.Invoke(this);
 
-        ProcessPhaseActions(afterPhaseActions, () => Finalize(callback));
-    }
-
-    void Finalize(UnityAction callback)
-    {
         if (nextSibling)
-        {
-            nextSibling.prevPhase = this;
             nextSibling.StartPhase(callback);
-        }
-        else if (parentPhase)
-        {
-            parentPhase.EndPhase(callback);
-        }
         else
-        {
-            callback.Invoke(); // this is Thread Over if it happens. 
-        }
+            callback.Invoke(); 
     }
 
-    void ProcessPhaseActions(List<IPhaseAction> onPhaseActions, UnityAction callback)
+    void SendPhaseActions(List<GameAction> gameActions, UnityAction callback)
     {
-        if (onPhaseActions.Count > 0)
-        {
-            IPhaseAction onPhaseAction = onPhaseActions[0];
-            onPhaseActions.Remove(onPhaseAction);
-            onPhaseAction.Do(this, () => ProcessPhaseActions(onPhaseActions, callback));
-        }
+        if (gameActions.Count > 0)
+            SendPhaseAction(gameActions[0], callback);
         else
+            callback.Invoke(); 
+
+        void SendPhaseAction(GameAction gameAction, UnityAction callback) => 
+            gameAction.Try(() => ReceivePhaseAction(gameAction, callback)); 
+
+        void ReceivePhaseAction(GameAction gameAction, UnityAction callback)
         {
-            callback.Invoke();
+            int i = gameActions.IndexOf(gameAction) + 1;
+
+            if (gameActions.Count < i)
+                SendPhaseAction(gameActions[i], callback); 
+            else
+                callback.Invoke(); 
         }
     }
-}
-
-public interface IPhaseAction
-{
-    public void Do(Phase phase, UnityAction callback);
 }

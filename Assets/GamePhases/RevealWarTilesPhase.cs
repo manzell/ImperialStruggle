@@ -4,53 +4,53 @@ using UnityEngine;
 using UnityEngine.Events;
 using System.Linq; 
 
-public class RevealWarTilesPhase : MonoBehaviour, IPhaseAction
+public class RevealWarTilesPhase : MonoBehaviour
 {
     public Dictionary<Game.Faction, warBonus> warTileBonusActions = new Dictionary<Game.Faction, warBonus>();
 
     public void Do(Phase phase, UnityAction callback)
     {
-        Theater theater = (Theater)phase;
+        //Theater theater = (Theater)phase;
 
-        // We need to pass the callback to our WarTiles so that we can wait out their 
+        //// We need to pass the callback to our WarTiles so that we can wait out their 
 
-        theater.warTiles.ForEach(warTile => {
-            Debug.Log($"{warTile.faction} reveals {warTile} in {theater}"); 
-            theater.theaterScore[warTile.faction] += warTile.value;
-        });
+        //theater.warTiles.ForEach(warTile => {
+        //    Debug.Log($"{warTile.faction} reveals {warTile} in {theater}"); 
+        //    theater.theaterScore[warTile.faction] += warTile.value;
+        //});
 
-        theater.warTiles.ForEach(warTile => {
-            theater.warTiles.Remove(warTile); 
+        //theater.warTiles.ForEach(warTile => {
+        //    theater.warTiles.Remove(warTile); 
             
-            if (warTile.debt)
-            {
-                AdjustDebtCommand adjustDebt = theater.gameObject.AddComponent<AdjustDebtCommand>();
-                adjustDebt.targetFaction = warTile.opposingFaction;
-                adjustDebt.adjustAmt = 1; 
-                theater.gameActions.Add(adjustDebt);
+        //    if (warTile.debt)
+        //    {
+        //        AdjustDebtCommand adjustDebt = new AdjustDebtCommand();
+        //        adjustDebt.targetFaction = warTile.opposingFaction;
+        //        adjustDebt.adjustAmt = 1; 
+        //        //theater.gameActions.Add(adjustDebt);
 
-                warTileBonusActions[warTile.opposingFaction].debt++;
-            }
-            else if (warTile.milDamage)
-            {
-                DamageMilSpace damageMilSpace = new GameObject().AddComponent<DamageMilSpace>();
-                damageMilSpace.transform.parent = Player.players[warTile.faction].transform.parent;
-                warTileBonusActions[warTile.faction].milDamage++;
-            }
-            else if (warTile.unflag)
-            {
-                // This is a Shift Space Action             
-                //Unflag unflag = new GameObject().AddComponent<Unflag>();
-                //unflag.transform.parent = Player.players[warTile.faction].transform.parent; 
-                //warTileBonusActions[warTile.faction].unflag++;
-            }
-        }); 
+        //        warTileBonusActions[warTile.opposingFaction].debt++;
+        //    }
+        //    else if (warTile.milDamage)
+        //    {
+        //        DamageMilSpace damageMilSpace = new GameObject().AddComponent<DamageMilSpace>();
+        //        damageMilSpace.transform.parent = Player.players[warTile.faction].transform.parent;
+        //        warTileBonusActions[warTile.faction].milDamage++;
+        //    }
+        //    else if (warTile.unflag)
+        //    {
+        //        // This is a Shift Space Action             
+        //        //Unflag unflag = new GameObject().AddComponent<Unflag>();
+        //        //unflag.transform.parent = Player.players[warTile.faction].transform.parent; 
+        //        //warTileBonusActions[warTile.faction].unflag++;
+        //    }
+        //}); 
 
-        foreach (Game.Faction faction in theater.theaterScore.Keys)
-        {
-            Debug.Log($"{faction} has {theater.theaterScore[faction]} strength in {theater}, will incur {warTileBonusActions[faction].debt}, " +
-                $"unflag {warTileBonusActions[faction].unflag} Markets, and damage {warTileBonusActions[faction].milDamage} Forts or Fleets"); 
-        }
+        //foreach (Game.Faction faction in theater.theaterScore.Keys)
+        //{
+        //    Debug.Log($"{faction} has {theater.theaterScore[faction]} strength in {theater}, will incur {warTileBonusActions[faction].debt}, " +
+        //        $"unflag {warTileBonusActions[faction].unflag} Markets, and damage {warTileBonusActions[faction].milDamage} Forts or Fleets"); 
+        //}
     }
 
     public class warBonus

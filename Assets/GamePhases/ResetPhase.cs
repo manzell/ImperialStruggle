@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using System.Linq; 
 
-public class ResetPhase : MonoBehaviour, IPhaseAction
+public class ResetPhase : MonoBehaviour
 {
     Dictionary<IExhaustable, bool> prevState = new Dictionary<IExhaustable, bool>(), 
         nextState = new Dictionary<IExhaustable, bool>();

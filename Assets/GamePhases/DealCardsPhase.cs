@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using System.Linq; 
 
-public class DealCardsPhase : MonoBehaviour, IPhaseAction
+public class DealCardsPhase : MonoBehaviour
 {
     public int cardsToDeal = 3;
 
@@ -21,9 +21,9 @@ public class DealCardsPhase : MonoBehaviour, IPhaseAction
 
         Game.eventDeck = Game.eventDeck.OrderBy(card => Random.value).ToList();
 
-        for (int i = 0; i < cardsToDeal; i++)
-            foreach(Player player in players)
-                phase.gameActions.Add(new DrawCard(player)); 
+        //for (int i = 0; i < cardsToDeal; i++)
+        //    foreach(Player player in players)
+        //        phase.gameActions.Add(new DrawCard(player)); 
 
         callback.Invoke(); 
     }

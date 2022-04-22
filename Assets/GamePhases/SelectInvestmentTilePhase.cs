@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(ActionRound))]
-public class SelectInvestmentTilePhase : MonoBehaviour, IPhaseAction
+public class SelectInvestmentTilePhase : MonoBehaviour
 {
     public UnityAction callback;
 
@@ -20,6 +20,6 @@ public class SelectInvestmentTilePhase : MonoBehaviour, IPhaseAction
         Game.Faction faction = GetComponent<ActionRound>().actingFaction;
         Debug.Log($"{faction} selects the {tile} Investment Tile");
 
-        Phase.currentPhase.gameActions.Add(new SelectInvestmentTile(faction, tile));
+        //Phase.currentPhase.gameActions.Add(new SelectInvestmentTile(faction, tile));
     }
 }

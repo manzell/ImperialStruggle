@@ -4,22 +4,14 @@ using UnityEngine;
 
 public class AdjustTheaterScore : Command
 {
-    public int adjustAmount;
+    [SerializeField] Theater theater;
+    [SerializeField] Game.Faction targetFaction;
+    [SerializeField] int adjustAmount;
     int previousTS;
-    Theater theater; 
 
-    public AdjustTheaterScore(Game.Faction faction, Theater theater, int adjustAmount)
+    public override void Do(Action action)
     {
-        targetFaction = faction;
-        this.adjustAmount = adjustAmount;
-        this.theater = theater;
-        previousTS = theater.theaterScore[faction]; 
-        Do(targetFaction);
-    }
-
-    public override void Do(Game.Faction faction)
-    {
-        Debug.Log($"{faction} {(adjustAmount > 0 ? "gains" : "loses")} {adjustAmount} War Score in {theater}");
+        Debug.Log($"{targetFaction} {(adjustAmount > 0 ? "gains" : "loses")} {adjustAmount} War Score in {theater}");
         theater.theaterScore[targetFaction] += adjustAmount;
     }
 

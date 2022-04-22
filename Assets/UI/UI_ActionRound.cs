@@ -17,6 +17,6 @@ public class UI_ActionRound : MonoBehaviour
     {
         endARButton.gameObject.SetActive(true);
         endARButton.onClick.RemoveAllListeners();
-        endARButton.onClick.AddListener(() => ar.callback.Invoke()); 
+        //endARButton.onClick.AddListener(() => ar.callback.Invoke()); 
     }
 }

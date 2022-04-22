@@ -7,5 +7,5 @@ public class TheaterAwards : MonoBehaviour
     public int minMargin, maxMargin;
     public int vpAward, cpAward, loserTreatyPoints; 
 
-    public List<Action> actionAwards = new List<Action>();
+    public List<ActionOld> actionAwards = new List<ActionOld>();
 }

@@ -7,14 +7,14 @@ public class TakeDebt : Command
 {
     public static UnityEvent<TakeDebt> takeDebtEvent = new UnityEvent<TakeDebt>();
     int amount;
-    RecordsTrack recordsTrack; 
+    RecordsTrack recordsTrack;
 
-    public void Do(TakeDebt td)
+    public override void Do(Action action)
     {
     }
 
     public void Undo(TakeDebt td) 
     {
-        recordsTrack.currentDebt[td.targetFaction] = Mathf.Clamp(recordsTrack.currentDebt[td.targetFaction] -= td.amount, 0, 99);
+        //recordsTrack.currentDebt[actingFaction] = Mathf.Clamp(recordsTrack.currentDebt[actingFaction] -= td.amount, 0, 99);
     }    
 }

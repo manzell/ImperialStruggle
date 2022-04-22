@@ -9,6 +9,6 @@ public class AdjustDebtLimitEvent : CardEvent
     {
         Game.Faction opposingFaction = faction == Game.Faction.Britain ? Game.Faction.France : Game.Faction.Britain;
 
-        Phase.currentPhase.gameActions.Add(new AdjustDebtLimit(faction, amount)); 
+        //Phase.currentPhase.gameActions.Add(new AdjustDebtLimit(faction, amount)); 
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using System.Linq; 
 
-public class ScorePrestigePhase : MonoBehaviour, IPhaseAction
+public class ScorePrestigePhase : MonoBehaviour
 {
     public int prestigeVPAward = 2;
 
@@ -19,7 +19,7 @@ public class ScorePrestigePhase : MonoBehaviour, IPhaseAction
                 prestigeScore[space.flag]++;
         });
 
-        AdjustVPCommand adjustVictoryPoints = phase.gameObject.AddComponent<AdjustVPCommand>();
+        AdjustVPCommand adjustVictoryPoints = new AdjustVPCommand();
         adjustVictoryPoints.adjustAmount.value = prestigeVPAward;
 
         if (prestigeScore[Game.Faction.Britain] > prestigeScore[Game.Faction.France])
@@ -27,6 +27,6 @@ public class ScorePrestigePhase : MonoBehaviour, IPhaseAction
         else if(prestigeScore[Game.Faction.France] > prestigeScore[Game.Faction.Britain])
             adjustVictoryPoints.targetFaction = Game.Faction.France;
 
-        phase.gameActions.Add(adjustVictoryPoints);
+       // phase.gameActions.Add(adjustVictoryPoints);
     }
 }

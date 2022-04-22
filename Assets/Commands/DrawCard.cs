@@ -7,19 +7,13 @@ using System.Linq;
 public class DrawCard : Command
 {
     public static UnityEvent<DrawCard> drawCardEvent = new UnityEvent<DrawCard>();
-    public EventCard card;
-    public Game.Faction faction; 
+    
+    public Game.Faction targetFaction;
 
-    public DrawCard(Player player)
+    public override void Do(Action action)
     {
-        card = Game.eventDeck.First();
-        faction = player.faction; 
-        Do(player.faction); 
-    }
-
-    public override void Do(Game.Faction faction)
-    {
-        Player player = Player.players[faction]; 
+        Player player = Player.players[targetFaction];
+        EventCard card = Game.eventDeck.OrderBy(eventCard => Random.value).First(); 
 
         player.hand.Add(card);
         Game.eventDeck.Remove(card);

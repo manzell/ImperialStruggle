@@ -9,7 +9,7 @@ public class DeckPhase : Command
 
     List<EventCard> previousDeck;
 
-    public override void Do(Game.Faction f)
+    public override void Do(Action action)
     {
         previousDeck = new List<EventCard>(Game.eventDeck); 
         Game.eventDeck.AddRange(newCards);

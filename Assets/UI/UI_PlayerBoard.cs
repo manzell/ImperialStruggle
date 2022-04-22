@@ -19,7 +19,7 @@ public class UI_PlayerBoard : MonoBehaviour
     private void Awake()
     {
         SelectMinistersPhase.selectMinistersEvent.AddListener((phase, faction, ministers) => { if (UI_PlayerBoard.faction == faction) SetMinisters(ministers); });
-        DrawCard.drawCardEvent.AddListener(dce => { if (dce.faction == faction) AddCard(dce.card); });
+        //DrawCard.drawCardEvent.AddListener(dce => { if (dce.faction == faction) AddCard(dce.card); });
         SelectInvestmentTile.selectInvestmentTileEvent.AddListener(HilightCards);
         PlayCard.playCardEvent.AddListener(playCard => RemoveCard(playCard.card));
         PlayCard.playCardEvent.AddListener(playCard => RemoveCardHighlights());
@@ -68,20 +68,20 @@ public class UI_PlayerBoard : MonoBehaviour
 
     public void HilightCards(InvestmentTile tile)
     {
-        if(tile.GetComponent<EventCardTriggerCommand>())
-        {
-            // Issue this only highlights the cards if we're looking at the correct player's Player Board. If I'm tabbed over it won't highlight. 
-            // To fix I'll need to have two player boards, 1 for each player, and transition them, rather than the current approach. 
-            handArea.GetComponentsInChildren<UI_Card>()
-                .Where(uicard => (uicard.card as EventCard).reqdActionType == Game.ActionType.None || 
-                    (uicard.card as EventCard).reqdActionType == tile.majorActionType)
-                .ToList()
-                .ForEach(card => {
-                    card.GetComponent<UI_Card>().SetHighlight(Color.green);
-                    if(!card.GetComponent<UI_ClickPlayCard>())
-                        card.gameObject.AddComponent<UI_ClickPlayCard>(); 
-                }); 
-        }
+        //if(tile.GetComponent<EventCardTriggerCommand>())
+        //{
+        //    // Issue this only highlights the cards if we're looking at the correct player's Player Board. If I'm tabbed over it won't highlight. 
+        //    // To fix I'll need to have two player boards, 1 for each player, and transition them, rather than the current approach. 
+        //    handArea.GetComponentsInChildren<UI_Card>()
+        //        .Where(uicard => (uicard.card as EventCard).reqdActionType == Game.ActionType.None || 
+        //            (uicard.card as EventCard).reqdActionType == tile.majorActionType)
+        //        .ToList()
+        //        .ForEach(card => {
+        //            card.GetComponent<UI_Card>().SetHighlight(Color.green);
+        //            if(!card.GetComponent<UI_ClickPlayCard>())
+        //                card.gameObject.AddComponent<UI_ClickPlayCard>(); 
+        //        }); 
+        //}
     }
 
     public void RemoveCardHighlights() =>

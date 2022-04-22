@@ -1,16 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events; 
+using UnityEngine.Events;
+using Sirenix.OdinInspector; 
 
 public class AdjustAPCommand : Command
 {
     public static UnityEvent<AdjustAPCommand> adjustActionPointsEvent = new UnityEvent<AdjustAPCommand>();
-        
+    public Game.Faction targetFaction; 
+      
     public List<ActionPoint> actionPoints = new List<ActionPoint>(),
         previousActionPoints = new List<ActionPoint>();
 
-    public override void Do(Game.Faction faction)
+    public override void Do(Action ac)
     {        
         Player player = Player.players[targetFaction];
         previousActionPoints = player.actionPoints;
@@ -19,7 +21,6 @@ public class AdjustAPCommand : Command
             Game.Log($"{targetFaction} {(actionPoint.actionPoints > 0 ? "+" : "")}{actionPoint.actionPoints} {actionPoint.actionTier} {actionPoint.actionType} Points");
 
         player.actionPoints.AddRange(actionPoints);
-        base.Do(faction);
 
         adjustActionPointsEvent.Invoke(this); 
     }

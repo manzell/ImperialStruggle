@@ -20,29 +20,7 @@ public class ScoreTheaterPhase : MonoBehaviour
 
         foreach (TheaterAwards award in theater.theaterAwards)
         {
-            if (winningMargin >= award.minMargin && (winningMargin <= award.maxMargin || award.maxMargin == 0))
-            {
-                if (award.vpAward > 0)
-                {
-                    AdjustVPCommand adjustVictoryPoints = theater.gameObject.AddComponent<AdjustVPCommand>();
-                    adjustVictoryPoints.adjustAmount.value = award.vpAward;
-                    adjustVictoryPoints.targetFaction = winningFaction;
-                    adjustVictoryPoints.Do(winningFaction); 
-                }
 
-                if (award.cpAward > 0)
-                    theater.gameActions.Add(new AdjustConquestPoints(winningFaction, award.cpAward));
-
-                if (award.loserTreatyPoints > 0)
-                {
-                    AdjustTPCommand adjustTPCommand = gameObject.AddComponent<AdjustTPCommand>();
-                    adjustTPCommand.targetFaction = losingFaction;
-                    adjustTPCommand.adjustAmount.value = award.loserTreatyPoints;
-                    adjustTPCommand.Do(winningFaction);
-                }
-
-                break;
-            }
         }
 
         originalCallback.Invoke();

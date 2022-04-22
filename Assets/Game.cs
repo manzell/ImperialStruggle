@@ -17,6 +17,9 @@ public class Game : MonoBehaviour
 
     public static Faction initiative = Faction.France;
 
+    public static GlobalDemandTrack GlobalDemand => FindObjectOfType<Game>().globalDemandTrack; 
+
+    public GlobalDemandTrack globalDemandTrack; 
     public GraphicSettings graphicSettings; 
 
     private void Awake()
@@ -44,7 +47,7 @@ public class Game : MonoBehaviour
         return retVal; 
     }
 
-    static List<string> gamelog; 
+    static List<string> gamelog = new List<string>(); 
     public static void Log(string str)
     {
         print(str);

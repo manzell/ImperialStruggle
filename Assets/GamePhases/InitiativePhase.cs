@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class InitiativePhase : MonoBehaviour, IPhaseAction
+public class InitiativePhase : MonoBehaviour
 {
     public static UnityEvent<InitiativePhase> InitiativePhaseStart = new UnityEvent<InitiativePhase>(), InitiativePhaseEnd = new UnityEvent<InitiativePhase>(); 
     public Game.Faction initiative; 

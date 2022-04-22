@@ -15,13 +15,13 @@ public class UI_Space : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         UI_GameBoard.clickEvent.AddListener(ped => { Debug.Log("CLick Listened To"); Close(); });
     }
 
-    public void OnPointerEnter(PointerEventData eventData) => Popup = StartCoroutine(openPopup(0.5f));
+    public void OnPointerEnter(PointerEventData eventData) { /*Popup = StartCoroutine(openPopup(0.5f))*/ return; }
     public void OnPointerExit(PointerEventData eventData)
     {
-        StopCoroutine(Popup);
+        //StopCoroutine(Popup);
 
-        if(_popupMenu != null && ClosePopup == null)
-            ClosePopup = StartCoroutine(closePopup(3f));
+        //if(_popupMenu != null && ClosePopup == null)
+        //    ClosePopup = StartCoroutine(closePopup(3f));
     }
 
     IEnumerator closePopup(float f)
@@ -38,7 +38,7 @@ public class UI_Space : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     void Open()
     {
-        Action[] actions = GetComponents<Action>().Where(action => action.Can(UI_PlayerBoard.faction)).ToArray();
+        ActionOld[] actions = GetComponents<ActionOld>().Where(action => action.Can(UI_PlayerBoard.faction)).ToArray();
         if (actions.Length > 0)
         {
             GameObject popupAction = FindObjectOfType<Game>().graphicSettings.PopupAction;

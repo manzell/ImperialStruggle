@@ -4,7 +4,7 @@ using UnityEngine;
 using System.Linq;
 using UnityEngine.Events;
 
-public class AwardPhase : MonoBehaviour, IPhaseAction
+public class AwardPhase : MonoBehaviour
 {
     public static UnityEvent<Map, AwardTile> SetMapAwardEvent = new UnityEvent<Map, AwardTile>();
 

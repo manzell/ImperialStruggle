@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class Squadron : MonoBehaviour
 {
-    public Game.Faction flag; 
+    public Game.Faction flag;
+    public Space space; 
 }

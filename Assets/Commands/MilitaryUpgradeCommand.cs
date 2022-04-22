@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class MilitaryUpgradeCommand : Command
 {
-
+    public override void Do(Action action)
+    {
+        throw new System.NotImplementedException();
+    }
 }

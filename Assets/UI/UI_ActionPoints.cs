@@ -20,8 +20,8 @@ public class UI_ActionPoints : SerializedMonoBehaviour
         recordsTrack = FindObjectOfType<RecordsTrack>();
         UI_PlayerBoard.setFactionEvent.AddListener(faction => SetActionTiles(faction));
         AdjustAPCommand.adjustActionPointsEvent.AddListener(aap => SetActionTiles(aap.targetFaction));
-        TakeDebt.takeDebtEvent.AddListener(td => SetActionTiles(td.targetFaction));
-        ActivateTreatyPoint.activateTreatyPointsEvent.AddListener(atp => SetActionTiles(atp.targetFaction));
+        //TakeDebt.takeDebtEvent.AddListener(td => SetActionTiles(td.targetFaction));
+        //ActivateTreatyPoint.activateTreatyPointsEvent.AddListener(atp => SetActionTiles(atp.targetFaction));
         SelectInvestmentTile.selectInvestmentTileEvent.AddListener(phase => reduceDebtButton.interactable = true); // TODO Update move this out to a different system
         PlayCard.playCardEvent.AddListener(pce => reduceDebtButton.interactable = false);
         AdjustAPCommand.adjustActionPointsEvent.AddListener(cap => reduceDebtButton.interactable = false); 
@@ -104,9 +104,9 @@ public class UI_ActionPoints : SerializedMonoBehaviour
         ActionRound actionRound = Phase.currentPhase as ActionRound;
         Game.Faction faction = actionRound.actingFaction;
 
-        AdjustDebtCommand adjustDebt = actionRound.gameObject.AddComponent<AdjustDebtCommand>();
+        AdjustDebtCommand adjustDebt = new AdjustDebtCommand();
         adjustDebt.targetFaction = faction;
         adjustDebt.adjustAmt = -2;
-        actionRound.gameActions.Add(adjustDebt);
+        
     }
 }

@@ -8,9 +8,10 @@ public class AdjustDebtCommand : Command
     public static UnityEvent<Game.Faction, int> adjustDebtEvent = new UnityEvent<Game.Faction, int>(); 
     public int adjustAmt; 
     int previousDebt;
-    public RecordsTrack recordsTrack; 
+    public RecordsTrack recordsTrack;
+    public Game.Faction targetFaction;
 
-    public override void Do(Game.Faction faction)
+    public override void Do(Action action)
     {
         previousDebt = recordsTrack.currentDebt[targetFaction];
         recordsTrack.currentDebt[targetFaction] += adjustAmt;

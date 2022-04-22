@@ -19,11 +19,11 @@ public class UI_TheaterAward : MonoBehaviour
         AdjustVPCommand vpCommand = tile.GetComponent<AdjustVPCommand>();
         AdjustTPCommand tpCommand = tile.GetComponent<AdjustTPCommand>();
 
-        if (vpCommand) // TODO put this in the graphics manifold
+        if (vpCommand != null) // TODO put this in the graphics manifold
             mainText.text = $"<color = \"black\">{vpCommand.adjustAmount}</color>";
-        if (vpCommand && tpCommand)
+        if (vpCommand != null && tpCommand != null)
             mainText.text += " ";
-        if (tpCommand)
+        if (tpCommand != null)
             mainText.text += $"<color = \"green\">{tpCommand.adjustAmount}</color>";
     }
 }

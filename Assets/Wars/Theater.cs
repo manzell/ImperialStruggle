@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq; 
 
-public class Theater : Phase
+public class Theater : MonoBehaviour
 {
     public Map map;
     public List<WarTile> warTiles, scoredWarTiles;
@@ -13,16 +13,10 @@ public class Theater : Phase
 
     public Game.Faction winningFaction;
 
-    public Dictionary<Game.Faction, int> theaterScore
-    {
-        get
-        {
-            return new Dictionary<Game.Faction, int>() { 
-                { Game.Faction.Britain, scoringBonuses.Where(bonus => 
-                    bonus.scoringFaction == Game.Faction.Britain).Count() + warTiles.Where(tile => tile.faction == Game.Faction.Britain).Sum(tile => tile.value) }, 
-                { Game.Faction.France, scoringBonuses.Where(bonus => 
-                    bonus.scoringFaction == Game.Faction.France).Count() + warTiles.Where(tile => tile.faction == Game.Faction.Britain).Sum(tile => tile.value) }
-            };
-        }
-    }
+    public Dictionary<Game.Faction, int> theaterScore => new Dictionary<Game.Faction, int>() {
+        { Game.Faction.Britain, scoringBonuses.Where(bonus =>
+            bonus.scoringFaction == Game.Faction.Britain).Count() + warTiles.Where(tile => tile.faction == Game.Faction.Britain).Sum(tile => tile.value) },
+        { Game.Faction.France, scoringBonuses.Where(bonus =>
+            bonus.scoringFaction == Game.Faction.France).Count() + warTiles.Where(tile => tile.faction == Game.Faction.Britain).Sum(tile => tile.value) }
+    };
 }

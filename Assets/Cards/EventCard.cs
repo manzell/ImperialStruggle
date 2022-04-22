@@ -11,33 +11,17 @@ public class EventCard : SerializedMonoBehaviour, ICard
 
     public Game.ActionType reqdActionType;
     public Game.Era era;
+    public List<Command> commands = new List<Command>();
 
     public void Play(UnityAction callback)
     {
-        ActionRound actionRound = Phase.currentPhase as ActionRound;
-        HashSet<GameObject> gameObjects = new HashSet<GameObject>();
+        Game.Faction faction = (Phase.currentPhase as ActionRound).actingFaction;
         this.callback = callback;
 
-        Debug.Log($"{this} played by {actionRound.actingFaction}");
+        Debug.Log($"{this} played by {faction}");
 
-        foreach(Command command in GetComponentsInChildren<Command>().Where(command => command.transform.parent == transform))
-            gameObjects.Add(command.gameObject);
-
-        foreach(GameObject commandSet in gameObjects)
-        {
-            bool doExecuteCommand = true;
-
-            foreach (Conditional<Game.Faction> conditional in commandSet.GetComponents<Conditional<Game.Faction>>())
-                doExecuteCommand &= conditional.Test(actionRound.actingFaction);
-
-            if (doExecuteCommand)
-            {
-                foreach(Command command in commandSet.GetComponents<Command>())
-                {
-                    command.Do(actionRound.actingFaction); 
-                }
-            }
-        }
+        //foreach(Command command in commands)
+        //    command.Do(); 
 
         callback.Invoke();
     }

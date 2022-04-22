@@ -6,18 +6,11 @@ using UnityEngine.Events;
 public class Choice : Command
 {
     public static UnityEvent<Choice> choiceEvent = new UnityEvent<Choice>();
-    [SerializeField] int numChoices = 1; 
+    [SerializeField] List<Command> choices = new List<Command>();
+    [SerializeField] int numChoices = 1;
 
-    public override void Do(Game.Faction faction)
+    public override void Do(Action action)
     {
-        HashSet<GameObject> options = new HashSet<GameObject>();
-
-        foreach (Command command in GetComponentsInChildren<Command>())
-            options.Add(command.gameObject); 
-
-        // Open up a Selector Window
-
-        base.Do(faction);
-        choiceEvent.Invoke(this); 
+        throw new System.NotImplementedException();
     }
 }

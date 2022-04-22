@@ -5,19 +5,11 @@ using UnityEngine;
 public class AddWarTile : Command
 {
     WarTile tile;
-    Theater theater; 
+    Theater theater;
+    public Game.Faction targetFaction;
 
-    public AddWarTile(WarTile warTile, Theater theater)
+    public override void Do(Action action)
     {
-        tile = warTile;
-        this.theater = theater;
-        Do(tile.faction); 
-    }
-
-    public override void Do(Game.Faction faction)
-    {
-        Debug.Log($"{faction}: {tile} added to {theater}");
         theater.warTiles.Add(tile);
-        theater.onPhaseActions.Add(tile); 
     }
 }

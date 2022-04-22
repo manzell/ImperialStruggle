@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ReduceTreatyPointsPhase : MonoBehaviour, IPhaseAction
+public class ReduceTreatyPointsPhase : MonoBehaviour
 {
     public int treatyPointsCap = 4;
     RecordsTrack recordsTrack; 
@@ -15,11 +15,10 @@ public class ReduceTreatyPointsPhase : MonoBehaviour, IPhaseAction
         {
             if (recordsTrack.treatyPoints[pair.Key] > treatyPointsCap)
             {
-                AdjustTPCommand adjustTPCommand = phase.gameObject.AddComponent<AdjustTPCommand>();
-                adjustTPCommand.targetFaction = pair.Key;
-                adjustTPCommand.adjustAmount.value = treatyPointsCap - recordsTrack.treatyPoints[pair.Key];
-
-                adjustTPCommand.Do(adjustTPCommand.targetFaction); 
+                //AdjustTPCommand adjustTPCommand = phase.gameObject.AddComponent<AdjustTPCommand>();
+                //adjustTPCommand.targetFaction = pair.Key;
+                //adjustTPCommand.adjustAmount.value = treatyPointsCap - recordsTrack.treatyPoints[pair.Key];
+                //adjustTPCommand.Do(); 
             }
         }
 

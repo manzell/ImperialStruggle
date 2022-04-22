@@ -5,17 +5,11 @@ using UnityEngine;
 public class DamageFort : Command
 {
     MilSpace fort;
+    Game.Faction actingFaction; 
 
-    public DamageFort(Game.Faction faction, MilSpace fort)
+    public override void Do(Action action)
     {
-        targetFaction = faction;
-        this.fort = fort;
-        Do(faction);
-    }
-
-    public override void Do(Game.Faction faction)
-    {
-        Debug.Log($"{faction} adds a Damage Market to {fort}-{fort.flag}");
+        Debug.Log($"{actingFaction} adds a Damage Marker to {fort}-{fort.flag}");
         fort.damaged = true;
     }
     public override void Undo() => fort.damaged = false;

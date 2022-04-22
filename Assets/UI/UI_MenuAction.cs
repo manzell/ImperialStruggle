@@ -10,9 +10,9 @@ public class UI_MenuAction : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 {
     [SerializeField] Image costIcon, background, highlight;
     [SerializeField] TextMeshProUGUI cost, actionName;
-    Action action; 
+    ActionOld action; 
 
-    public void SetAction(Action action)
+    public void SetAction(ActionOld action)
     {
         this.action = action;
         actionName.text = action.actionName;

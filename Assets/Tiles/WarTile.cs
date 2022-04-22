@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events; 
 
-public class WarTile : MonoBehaviour, IPhaseAction
+public class WarTile : MonoBehaviour
 {
     public int value;
     public bool debt, milDamage, unflag; 

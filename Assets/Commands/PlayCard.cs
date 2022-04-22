@@ -8,18 +8,10 @@ public class PlayCard : Command
 {
     public static UnityEvent<PlayCard> playCardEvent = new UnityEvent<PlayCard>(); 
     public EventCard card;
-    Game.Faction faction; 
 
-    public PlayCard(Game.Faction faction, EventCard card)
+    public override void Do(Action action)
     {
-        this.faction = faction;
-        this.card = card;
-        Do(faction); 
-    }
-
-    public override void Do(Game.Faction faction)
-    {
-        card.Play(() => Finish(faction));
+        //card.Play(() => Finish(action));
     }
 
     void Finish(Game.Faction faction)
@@ -30,6 +22,6 @@ public class PlayCard : Command
 
     public override void Undo()
     {
-        Player.players[faction].hand.Add(card);
+        //Player.players[actingFaction].hand.Add(card);
     }
 }

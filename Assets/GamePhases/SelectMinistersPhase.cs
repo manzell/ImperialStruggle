@@ -5,7 +5,7 @@ using UnityEngine.Events;
 using System.Linq;
 using Sirenix.OdinInspector; 
 
-public class SelectMinistersPhase : SerializedMonoBehaviour, IPhaseAction
+public class SelectMinistersPhase : SerializedMonoBehaviour
 {
     public static UnityEvent<SelectMinistersPhase> selectMinisterPhaseEvent = new UnityEvent<SelectMinistersPhase>();
     public static UnityEvent<SelectMinistersPhase, Game.Faction, List<MinistryCard>> selectMinistersEvent = new UnityEvent<SelectMinistersPhase, Game.Faction,List<MinistryCard>>();

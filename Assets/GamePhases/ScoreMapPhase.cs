@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using System.Linq; 
 
-public class ScoreMapPhase : MonoBehaviour, IPhaseAction
+public class ScoreMapPhase : MonoBehaviour
 {
     public static UnityEvent<Map, Dictionary<Game.Faction, int>> mapScoreEvent = new UnityEvent<Map,Dictionary<Game.Faction, int>>();
 
@@ -23,11 +23,11 @@ public class ScoreMapPhase : MonoBehaviour, IPhaseAction
             else if (mapScore[Game.Faction.France] > mapScore[Game.Faction.Britain])
                 winningFaction = Game.Faction.France; 
 
-            if(winningFaction != Game.Faction.Neutral && map.awardTile.GetComponents<Conditional<Map>>().All(condition => condition.Test(map)))
-            {
-                foreach (Command command in map.awardTile.GetComponents<Command>())
-                    command.Do(winningFaction);
-            }
+            //if(winningFaction != Game.Faction.Neutral && map.awardTile.GetComponents<Conditional>().All(condition => condition.Test(map)))
+            //{
+            //    foreach (Command command in map.awardTile.GetComponents<Command>())
+            //        command.Do();
+            //}
 
             mapScoreEvent.Invoke(map, mapScore); 
         }

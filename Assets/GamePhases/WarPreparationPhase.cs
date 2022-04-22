@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using System.Linq; 
 
-public class WarPreparationPhase : MonoBehaviour, IPhaseAction
+public class WarPreparationPhase : MonoBehaviour
 {
     public Phase warPhase; 
 
@@ -21,7 +21,7 @@ public class WarPreparationPhase : MonoBehaviour, IPhaseAction
                 while(theater.warTiles.Contains(tile))
                     tile = player.basicWarTiles[Random.Range(0, player.basicWarTiles.Count)];
 
-                phase.gameActions.Add(new AddWarTile(tile, theater)); 
+                //phase.gameActions.Add(new AddWarTile(tile, theater)); 
             }
         }
 

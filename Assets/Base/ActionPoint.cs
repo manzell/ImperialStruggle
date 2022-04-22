@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector; 
 
-public class ActionPoint : SerializedMonoBehaviour
+[System.Serializable]
+public class ActionPoint
 {
     public Game.ActionType actionType;
     public Game.ActionTier actionTier;
     public Calculation<int> calculation;
-    public List<IConditional> conditionals;
+
+    [SerializeField] public List<Conditional> conditionals;
 
     public int actionPoints => calculation.value; 
 
@@ -17,21 +19,8 @@ public class ActionPoint : SerializedMonoBehaviour
         bool pass = true; 
 
         foreach(Object criterion in criteria)
-        {
-            foreach(IConditional condition in conditionals)
-            {
-                if (condition is Conditional<Space> spaceCondition)
-                    pass &= spaceCondition.Test((Space)criterion);
-                if (condition is Conditional<Market> marketCondition)
-                    pass &= marketCondition.Test((Market)criterion);
-                if (condition is Conditional<MilSpace> milCondition)
-                    pass &= milCondition.Test((MilSpace)criterion);
-                if (condition is Conditional<PoliticalSpace> politicalCondition)
-                    pass &= politicalCondition.Test((PoliticalSpace)criterion);
-                if (condition is Conditional<Map> mapCondition)
-                    pass &= mapCondition.Test((Map)criterion);
-            }
-        }
+            foreach(Conditional condition in conditionals)
+                    pass &= condition.Test(criterion);
 
         if (pass)
             return calculation.value;
