@@ -15,14 +15,14 @@ public class EventCard : SerializedMonoBehaviour, ICard
 
     public void Play(UnityAction callback)
     {
-        Game.Faction faction = (Phase.currentPhase as ActionRound).actingFaction;
-        this.callback = callback;
+        //Game.Faction faction = (Phase.currentPhase as ActionRound).actingFaction;
+        //this.callback = callback;
 
-        Debug.Log($"{this} played by {faction}");
+        //Debug.Log($"{this} played by {faction}");
 
-        //foreach(Command command in commands)
-        //    command.Do(); 
+        ////foreach(Command command in commands)
+        ////    command.Do(); 
 
-        callback.Invoke();
+        //callback.Invoke();
     }
 }

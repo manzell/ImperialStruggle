@@ -6,6 +6,6 @@ using UnityEngine.EventSystems;
 public class UI_ClickSelectCard : MonoBehaviour, IPointerClickHandler
 {
     public void OnPointerClick(PointerEventData eventData) {
-        GetComponentInParent<UI_SelectMinistryCard>().Select(GetComponent<UI_Card>().card);
+        //GetComponentInParent<UI_SelectMinistryCard>().Select(GetComponent<UI_Card>().card);
     }
 }

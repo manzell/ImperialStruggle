@@ -15,8 +15,8 @@ public class Phase : SerializedMonoBehaviour
 
     public Game.Era era;
 
-    [SerializeField] List<GameAction> phaseStartActions = new List<GameAction>(),
-        phaseEndActions = new List<GameAction>(); 
+    [SerializeField] List<Action> phaseStartActions = new List<Action>(),
+        phaseEndActions = new List<Action>(); 
 
     public Phase prevPhase;
     public Phase nextSibling
@@ -52,6 +52,7 @@ public class Phase : SerializedMonoBehaviour
     [Button] public void StartThread() => StartPhase(() => Debug.Log("Thread Over"));
     public virtual void StartPhase(UnityAction callback)
     {
+        Debug.Log($"StartPhase {this}");
         currentPhase = this;
 
         phaseStartEvent.Invoke(this);
@@ -82,22 +83,22 @@ public class Phase : SerializedMonoBehaviour
             callback.Invoke(); 
     }
 
-    void SendPhaseActions(List<GameAction> gameActions, UnityAction callback)
+    void SendPhaseActions(List<Action> gameActions, UnityAction callback)
     {
         if (gameActions.Count > 0)
-            SendPhaseAction(gameActions[0], callback);
+            TryAction(gameActions[0], callback);
         else
             callback.Invoke(); 
 
-        void SendPhaseAction(GameAction gameAction, UnityAction callback) => 
-            gameAction.Try(() => ReceivePhaseAction(gameAction, callback)); 
+        void TryAction(Action gameAction, UnityAction callback) =>
+            gameAction.Try(() => CatchAction(gameAction, callback));
 
-        void ReceivePhaseAction(GameAction gameAction, UnityAction callback)
+        void CatchAction(Action gameAction, UnityAction callback)
         {
             int i = gameActions.IndexOf(gameAction) + 1;
 
-            if (gameActions.Count < i)
-                SendPhaseAction(gameActions[i], callback); 
+            if (gameActions.Count > i)
+                TryAction(gameActions[i], callback); 
             else
                 callback.Invoke(); 
         }

@@ -18,9 +18,7 @@ public class UI_PlayerBoard : MonoBehaviour
 
     private void Awake()
     {
-        SelectMinistersPhase.selectMinistersEvent.AddListener((phase, faction, ministers) => { if (UI_PlayerBoard.faction == faction) SetMinisters(ministers); });
-        //DrawCard.drawCardEvent.AddListener(dce => { if (dce.faction == faction) AddCard(dce.card); });
-        SelectInvestmentTile.selectInvestmentTileEvent.AddListener(HilightCards);
+        //SelectMinistersPhase.selectMinistersEvent.AddListener((phase, faction, ministers) => { if (UI_PlayerBoard.faction == faction) SetMinisters(ministers); });
         PlayCard.playCardEvent.AddListener(playCard => RemoveCard(playCard.card));
         PlayCard.playCardEvent.AddListener(playCard => RemoveCardHighlights());
         // Remove Highlight on Play Card Event as well as any other Action? 
@@ -53,7 +51,7 @@ public class UI_PlayerBoard : MonoBehaviour
         UI_Card uiCard = ministerCards[ministers.IndexOf(minister)].GetComponent<UI_Card>();
         uiCard.SetCard(minister);
 
-        if (minister.revealed == false)
+        if (minister.ministryCardStatus < MinistryCard.MinistryCardStatus.Revealed)
             uiCard.SetHighlight(Color.black); 
     });
 

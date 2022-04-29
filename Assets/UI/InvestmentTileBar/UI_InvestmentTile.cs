@@ -12,11 +12,6 @@ public class UI_InvestmentTile : MonoBehaviour
     [SerializeField] Image majorIcon, minorIcon, eventIcon, milUpgradeIcon;
     public InvestmentTile tile;
 
-    private void Awake()
-    {
-        SelectInvestmentTile.selectInvestmentTileEvent.AddListener(t => {if (t == tile) Style(t); }); 
-    }
-
     [Button]
     public void SetTile(InvestmentTile tile)
     {
@@ -43,7 +38,7 @@ public class UI_InvestmentTile : MonoBehaviour
         }
 
         //eventIcon.enabled = tile.GetComponent<EventCardTriggerCommand>();
-        milUpgradeIcon.enabled = tile.TryGetComponent<MilitaryUpgradeCommand>(out MilitaryUpgradeCommand m); 
+        //milUpgradeIcon.enabled = tile.TryGetComponent<MilitaryUpgradeCommand>(out MilitaryUpgradeCommand m); 
 
         // OK how to tell if the investment tile is selected? TODO - This is very ineffecient.
         if(Phase.currentPhase is ActionRound)

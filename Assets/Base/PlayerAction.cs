@@ -6,16 +6,12 @@ using System.Linq;
 
 public class PlayerAction : Action
 {
-    public Game.Faction actingFaction;
-    public Player player; 
+    public Player player;
 
     protected override void Do(UnityAction callback)
     {
-        actingFaction = player.faction;
-
         if (conditionals.All(condition => condition.Test(player)))
-            foreach(Command command in commands)
-                command.Do(this);
+            commands.ForEach(command => command.Do(this)); 
 
         callback.Invoke(); 
     }

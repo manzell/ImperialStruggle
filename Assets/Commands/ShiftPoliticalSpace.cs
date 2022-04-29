@@ -18,9 +18,9 @@ public class ShiftPoliticalSpace : ActionOld
 
     private void Awake()
     {
-        space = GetComponent<Space>();
-        SelectInvestmentTile.selectInvestmentTileEvent.AddListener(tile => Can((Phase.currentPhase as ActionRound).actingFaction));
-        AdjustAPCommand.adjustActionPointsEvent.AddListener(adjust => Can(adjust.targetFaction));
+        //space = GetComponent<Space>();
+        //SelectInvestmentTile.selectInvestmentTileEvent.AddListener(tile => Can((Phase.currentPhase as ActionRound).actingFaction));
+        //AdjustAPCommand.adjustActionPointsEvent.AddListener(adjust => Can(adjust.targetFaction));
     }
 
     void SetCost()

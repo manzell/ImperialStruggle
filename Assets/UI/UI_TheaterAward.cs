@@ -11,7 +11,7 @@ public class UI_TheaterAward : MonoBehaviour
 
     private void Awake()
     {
-        AwardPhase.SetMapAwardEvent.AddListener((map, tile) => { if (this.map == map) SetAwardText(tile); }); 
+        //AwardPhase.SetMapAwardEvent.AddListener((map, tile) => { if (this.map == map) SetAwardText(tile); }); 
     }
 
     void SetAwardText(AwardTile tile)

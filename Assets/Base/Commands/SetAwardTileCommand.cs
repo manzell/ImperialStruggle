@@ -17,6 +17,7 @@ public class SetAwardTileCommand : Command
                 .First(); 
 
             peaceTurn.awardTiles.Add(map, tile);
+            Game.Log($"{tile} set as {map} Award Tile");
         }
     }
 }

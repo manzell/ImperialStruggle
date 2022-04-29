@@ -13,25 +13,11 @@ public class UI_InvestmentTiles : MonoBehaviour
 
     private void Awake()
     {
-        SelectInvestmentTile.selectInvestmentTileEvent.AddListener(tile => SortTiles());
-        Phase.phaseEndEvent.AddListener(phase => { if (phase is PeaceTurn) RemoveTiles(); });
-        DealInvestmentTiles.dealInvestmentTilesEvent.AddListener(AddTiles); 
     }
 
     void SortTiles()
     {
-        investmentTiles = investmentTiles.OrderBy(tile => {
-            int actionRoundSelected = 0; 
 
-            if(Phase.currentPhase is ActionRound)
-                foreach(ActionRound ar in Phase.currentPhase.transform.parent.GetComponentsInChildren<ActionRound>())
-                    if (ar.investmentTile == tile) actionRoundSelected = ar.transform.GetSiblingIndex(); 
-
-            return (tile.available, actionRoundSelected); 
-        }).ToList(); 
-
-        for(int i = investmentTiles.Count - 1; i >= 0; i--)
-            investmentTiles[i].gameObject.transform.SetSiblingIndex(i); 
     }
 
     void RemoveTiles()

@@ -16,7 +16,7 @@ public class RemoveWarTileCommand : Command
 
         foreach(Theater theater in warPhase.GetComponentsInChildren<Theater>())
         {
-            tiles.AddRange(theater.warTiles.Where(tile => tile.faction == targetFaction)); 
+            tiles.AddRange(theater.warTiles[targetFaction]); 
         }
 
         // TODO Not handling War Tiles really yet

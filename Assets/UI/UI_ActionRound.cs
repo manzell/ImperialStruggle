@@ -9,7 +9,6 @@ public class UI_ActionRound : MonoBehaviour
 
     private void Awake()
     {
-        SelectInvestmentTile.selectInvestmentTileEvent.AddListener(tile => OnActionRoundStart(Phase.currentPhase as ActionRound));
         Phase.phaseEndEvent.AddListener(phase => endARButton.gameObject.SetActive(false));
     }
 

@@ -22,7 +22,6 @@ public class UI_ActionPoints : SerializedMonoBehaviour
         AdjustAPCommand.adjustActionPointsEvent.AddListener(aap => SetActionTiles(aap.targetFaction));
         //TakeDebt.takeDebtEvent.AddListener(td => SetActionTiles(td.targetFaction));
         //ActivateTreatyPoint.activateTreatyPointsEvent.AddListener(atp => SetActionTiles(atp.targetFaction));
-        SelectInvestmentTile.selectInvestmentTileEvent.AddListener(phase => reduceDebtButton.interactable = true); // TODO Update move this out to a different system
         PlayCard.playCardEvent.AddListener(pce => reduceDebtButton.interactable = false);
         AdjustAPCommand.adjustActionPointsEvent.AddListener(cap => reduceDebtButton.interactable = false); 
 
@@ -70,43 +69,43 @@ public class UI_ActionPoints : SerializedMonoBehaviour
 
     void SetButtons(Game.Faction faction)
     {
-        Color color = FindObjectOfType<Game>().graphicSettings.factionColors[faction];
+        //Color color = FindObjectOfType<Game>().graphicSettings.factionColors[faction];
 
-        if(Phase.currentPhase is ActionRound && (Phase.currentPhase as ActionRound).actingFaction == faction)
-        {
-            takeDebtButton.interactable = recordsTrack.availableDebt[faction] > 0;
-            takeDebtButton.GetComponentInChildren<TextMeshProUGUI>().color = color;
+        //if(Phase.currentPhase is ActionRound && (Phase.currentPhase as ActionRound).actingFaction == faction)
+        //{
+        //    takeDebtButton.interactable = recordsTrack.availableDebt[faction] > 0;
+        //    takeDebtButton.GetComponentInChildren<TextMeshProUGUI>().color = color;
 
-            activateTPbutton.interactable = recordsTrack.treatyPoints[faction] > 0;
-            activateTPbutton.GetComponentInChildren<TextMeshProUGUI>().color = color;
+        //    activateTPbutton.interactable = recordsTrack.treatyPoints[faction] > 0;
+        //    activateTPbutton.GetComponentInChildren<TextMeshProUGUI>().color = color;
 
-            reduceDebtButton.interactable &= recordsTrack.currentDebt[faction] > 0; 
+        //    reduceDebtButton.interactable &= recordsTrack.currentDebt[faction] > 0; 
 
-            if(reduceDebtButton.interactable) 
-                reduceDebtButton.GetComponentInChildren<TextMeshProUGUI>().color = color;
-        }
-        else
-        {
-            takeDebtButton.interactable = false; 
-            takeDebtButton.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
+        //    if(reduceDebtButton.interactable) 
+        //        reduceDebtButton.GetComponentInChildren<TextMeshProUGUI>().color = color;
+        //}
+        //else
+        //{
+        //    takeDebtButton.interactable = false; 
+        //    takeDebtButton.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
 
-            activateTPbutton.interactable = false;
-            activateTPbutton.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
+        //    activateTPbutton.interactable = false;
+        //    activateTPbutton.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
 
-            reduceDebtButton.interactable = false;
-            reduceDebtButton.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
-        }
+        //    reduceDebtButton.interactable = false;
+        //    reduceDebtButton.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
+        //}
     }
 
 
     public void ReduceDebtResponse()
     {
-        ActionRound actionRound = Phase.currentPhase as ActionRound;
-        Game.Faction faction = actionRound.actingFaction;
+        //ActionRound actionRound = Phase.currentPhase as ActionRound;
+        //Game.Faction faction = actionRound.actingFaction;
 
-        AdjustDebtCommand adjustDebt = new AdjustDebtCommand();
-        adjustDebt.targetFaction = faction;
-        adjustDebt.adjustAmt = -2;
+        //AdjustDebtCommand adjustDebt = new AdjustDebtCommand();
+        //adjustDebt.targetFaction = faction;
+        //adjustDebt.adjustAmt = -2;
         
     }
 }

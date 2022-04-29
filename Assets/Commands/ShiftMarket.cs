@@ -15,9 +15,9 @@ public class ShiftMarket : ActionOld
 
     private void Awake()
     {
-        space = GetComponent<Market>(); // Below: All Trash
-        SelectInvestmentTile.selectInvestmentTileEvent.AddListener(tile => Can((Phase.currentPhase as ActionRound).actingFaction));
-        AdjustAPCommand.adjustActionPointsEvent.AddListener(charge => Can(charge.targetFaction));
+        //space = GetComponent<Market>(); // Below: All Trash
+        //SelectInvestmentTile.selectInvestmentTileEvent.AddListener(tile => Can((Phase.currentPhase as ActionRound).actingFaction));
+        //AdjustAPCommand.adjustActionPointsEvent.AddListener(charge => Can(charge.targetFaction));
         //TakeDebt.takeDebtEvent.AddListener(td => Can(td.targetFaction));
     }
 

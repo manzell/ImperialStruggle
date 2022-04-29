@@ -1,17 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events; 
 using Sirenix.OdinInspector;
 using System.Linq; 
 
-public class InvestmentTile : SerializedMonoBehaviour, IExhaustable, System.IComparable<InvestmentTile>
+public class InvestmentTile : SerializedMonoBehaviour, System.IComparable<InvestmentTile>
 {
-    public bool available = true;
+    public enum InvestmentTileStatus { Reserve, Available, Active, Exhausted }
 
-    public void Select(Game.Faction faction)
-    {
-        //Phase.currentPhase.gameActions.Add(Phase.currentPhase.gameObject.AddComponent<AdjustAPCommand>());
-    }
+    [HideInInspector] public static UnityEvent<InvestmentTile> selectInvestmentTileEvent = new UnityEvent<InvestmentTile>();
+    public InvestmentTileStatus status; 
+    public ActionPoints actionPoints; 
 
     public Game.ActionType majorActionType
     {
@@ -68,11 +68,5 @@ public class InvestmentTile : SerializedMonoBehaviour, IExhaustable, System.ICom
         //    }
         //}
         return 1; 
-    }
-
-    bool _exhausted = false; 
-    public bool exhausted { 
-        get => _exhausted; 
-        set => _exhausted = value; 
     }
 }
