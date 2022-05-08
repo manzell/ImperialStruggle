@@ -5,11 +5,11 @@ using UnityEngine;
 public class MoreAvailableDebtCondition : Conditional
 {
     [SerializeField] int margin = 1;
-    public override bool Test(Object _player)
+    public override bool Test(BaseAction context)
     {
-        if (_player is Player) 
+        if (context is PlayerAction playerAction) 
         {
-            Player player = (Player)_player; 
+            Player player = playerAction.player; 
             Dictionary<Game.Faction, int> availableDebt = GameObject.FindObjectOfType<RecordsTrack>().availableDebt;
             Game.Faction opposingFaction = player.faction == Game.Faction.Britain ? Game.Faction.France : Game.Faction.Britain;
 

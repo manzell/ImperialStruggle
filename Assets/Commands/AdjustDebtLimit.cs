@@ -11,7 +11,7 @@ public class AdjustDebtLimit : Command
     public int adjustAmt;
     int previousDebtLimit;
 
-    public override void Do(Action action)
+    public override void Do(BaseAction action)
     {
         previousDebtLimit = recordsTrack.debtLimit[targetFaction];
         recordsTrack.debtLimit[targetFaction] += adjustAmt;

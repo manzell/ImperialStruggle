@@ -16,14 +16,14 @@ public class UI_TheaterAward : MonoBehaviour
 
     void SetAwardText(AwardTile tile)
     {
-        AdjustVPCommand vpCommand = tile.GetComponent<AdjustVPCommand>();
-        AdjustTPCommand tpCommand = tile.GetComponent<AdjustTPCommand>();
+        //AdjustVPCommand vpCommand = tile.GetComponent<AdjustVPCommand>();
+        //AdjustTPCommand tpCommand = tile.GetComponent<AdjustTPCommand>();
 
-        if (vpCommand != null) // TODO put this in the graphics manifold
-            mainText.text = $"<color = \"black\">{vpCommand.adjustAmount}</color>";
-        if (vpCommand != null && tpCommand != null)
-            mainText.text += " ";
-        if (tpCommand != null)
-            mainText.text += $"<color = \"green\">{tpCommand.adjustAmount}</color>";
+        //if (vpCommand != null) // TODO put this in the graphics manifold
+        //    mainText.text = $"<color = \"black\">{vpCommand.adjustAmount}</color>";
+        //if (vpCommand != null && tpCommand != null)
+        //    mainText.text += " ";
+        //if (tpCommand != null)
+        //    mainText.text += $"<color = \"green\">{tpCommand.adjustAmount}</color>";
     }
 }

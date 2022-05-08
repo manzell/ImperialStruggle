@@ -9,7 +9,7 @@ public class PlayCard : Command
     public static UnityEvent<PlayCard> playCardEvent = new UnityEvent<PlayCard>(); 
     public EventCard card;
 
-    public override void Do(Action action)
+    public override void Do(BaseAction action)
     {
         //card.Play(() => Finish(action));
     }

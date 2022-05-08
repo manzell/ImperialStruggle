@@ -2,22 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using Sirenix.OdinInspector; 
+using Sirenix.OdinInspector;
+using System.Linq; 
 
 public class SetInitiativeAction : PlayerAction
 {
     UnityAction callback;
     SelectionController selectionController;
-    [SerializeField] Game.Faction selectedFaction; 
+    public Game.Faction selectedFaction; 
 
     protected override void Do(UnityAction callback)
     {
-        selectionController = FindObjectOfType<SelectionController>();
         this.callback = callback;
+        selectionController = FindObjectOfType<SelectionController>();
 
-        selectionController.Summon(new List<Game.Faction>() { Game.Faction.Britain, Game.Faction.France }, 2);
+        selectionController.Summon(this, Player.players.Keys.ToList(), 2);
         selectionController.SetTitle(actionText);
     }
+
+    // How does the Selection Controller work? 
+    // We summon it with the list of things (we need to implement a better Visitor Pattern for this)
+    // We also pass in a Callback for OK, as well as Cancel. 
+
+    // We pass the callback in and it calls 
+
 
     [Button]
     void Finish()
@@ -29,9 +37,11 @@ public class SetInitiativeAction : PlayerAction
 
         Debug.Log($"{actingFaction} elects to {(actingFaction == selectedFaction ? "Play" : "Pass")} the first Action Round");
 
-        for (int i = 0; i < actionRounds.Length; i++)
+        for (int i = 0; i < actionRounds.Length; i++) 
+        { 
             actionRounds[i].actingFaction = i % 2 == 0 ? selectedFaction : opposingFaction;
+        }
 
-        callback.Invoke();
+        base.Do(callback);
     }
 }

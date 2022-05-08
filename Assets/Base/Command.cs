@@ -10,6 +10,6 @@ using Sirenix.OdinInspector;
 [System.Serializable]
 public abstract class Command
 {
-    public abstract void Do(Action action);
+    public abstract void Do(BaseAction action);
     public virtual void Undo() { }
 }

@@ -5,7 +5,7 @@ using UnityEngine.Events;
 using Sirenix.OdinInspector;
 using System.Linq; 
 
-public class InvestmentTile : SerializedMonoBehaviour, System.IComparable<InvestmentTile>
+public class InvestmentTile : SerializedMonoBehaviour, System.IComparable<InvestmentTile>, ISelectable
 {
     public enum InvestmentTileStatus { Reserve, Available, Active, Exhausted }
 
@@ -13,60 +13,28 @@ public class InvestmentTile : SerializedMonoBehaviour, System.IComparable<Invest
     public InvestmentTileStatus status; 
     public ActionPoints actionPoints; 
 
-    public Game.ActionType majorActionType
-    {
-        get
-        {
-            Game.ActionType retval = Game.ActionType.None;
-
-            //foreach (AdjustAPCommand command in FindObjectsOfType<AdjustAPCommand>())
-            //    foreach(ActionPoint actionPoint in command.actionPoints)
-            //        if (actionPoint.actionTier == Game.ActionTier.Major)
-            //            retval = actionPoint.actionType; 
-
-            return retval; 
-        }
-    }
-
-    public Game.ActionType minorActionType
-    {
-        get
-        {
-            Game.ActionType retval = Game.ActionType.None;
-
-            //foreach (AdjustAPCommand command in FindObjectsOfType<AdjustAPCommand>())
-            //    foreach (ActionPoint actionPoint in command.actionPoints)
-            //        if (actionPoint.actionTier == Game.ActionTier.Minor)
-            //            retval = actionPoint.actionType;
-
-            return retval; 
-        }
-    }
-
-    //int majorActionPoints => FindObjectsOfType<AdjustAPCommand>()
-    //            .Where(apCommand => apCommand.actionPoints.First().actionTier == Game.ActionTier.Major)
-    //            .Sum(apCommand => apCommand.actionPoints.First().Value(new List<ICriteria>()));
-
-    //int minorActionPoints => FindObjectsOfType<AdjustAPCommand>()
-    //            .Where(apCommand => apCommand.actionPoints.First().actionTier == Game.ActionTier.Minor)
-    //            .Sum(apCommand => apCommand.actionPoints.First().Value(new List<ICriteria>()));
+    public Game.ActionType majorActionType => actionPoints.Where(ap => ap.actionTier == Game.ActionTier.Major).First().actionType; 
+    public Game.ActionType minorActionType => actionPoints.Where(ap => ap.actionTier == Game.ActionTier.Minor).First().actionType;
+    public int majorActionPoints => actionPoints.Where(ap => ap.actionTier == Game.ActionTier.Major).Sum(ap => ap.actionPoints);
+    public int minorActionPoints => actionPoints.Where(ap => ap.actionTier == Game.ActionTier.Minor).Sum(ap => ap.actionPoints);
+    //Note that we don't do any checking of context here - we only test that when trying to use for a player action. 
 
     public int CompareTo(InvestmentTile tile)
     {
-        //if (majorActionType > tile.majorActionType) return -1;
-        //else if(majorActionType == tile.majorActionType)
-        //{
-        //    if (majorActionPoints > tile.majorActionPoints) return -1; 
-        //    else if(majorActionPoints == tile.majorActionPoints)
-        //    {
-        //        if (minorActionType > tile.minorActionType) return -1;
-        //        else if(minorActionType == tile.minorActionType)
-        //        {
-        //            if(minorActionPoints > tile.minorActionPoints) return -1;
-        //            else if(minorActionPoints == tile.minorActionPoints) return 0;
-        //        }
-        //    }
-        //}
+        if (this.majorActionType > tile.majorActionType) return -1;
+        else if(this.majorActionType == tile.majorActionType)
+        {
+            if (this.majorActionPoints > tile.majorActionPoints) return -1; 
+            else if(this.majorActionPoints == tile.majorActionPoints)
+            {
+                if (this.minorActionType > tile.minorActionType) return -1;
+                else if(this.minorActionType == tile.minorActionType)
+                {
+                    if(this.minorActionPoints > tile.minorActionPoints) return -1;
+                    else if(this.minorActionPoints == tile.minorActionPoints) return 0;
+                }
+            }
+        }
         return 1; 
     }
 }

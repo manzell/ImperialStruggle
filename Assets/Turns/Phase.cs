@@ -15,8 +15,8 @@ public class Phase : SerializedMonoBehaviour
 
     public Game.Era era;
 
-    [SerializeField] List<Action> phaseStartActions = new List<Action>(),
-        phaseEndActions = new List<Action>(); 
+    [SerializeField] List<BaseAction> phaseStartActions = new List<BaseAction>(),
+        phaseEndActions = new List<BaseAction>(); 
 
     public Phase prevPhase;
     public Phase nextSibling
@@ -83,17 +83,17 @@ public class Phase : SerializedMonoBehaviour
             callback.Invoke(); 
     }
 
-    void SendPhaseActions(List<Action> gameActions, UnityAction callback)
+    void SendPhaseActions(List<BaseAction> gameActions, UnityAction callback)
     {
         if (gameActions.Count > 0)
             TryAction(gameActions[0], callback);
         else
             callback.Invoke(); 
 
-        void TryAction(Action gameAction, UnityAction callback) =>
+        void TryAction(BaseAction gameAction, UnityAction callback) =>
             gameAction.Try(() => CatchAction(gameAction, callback));
 
-        void CatchAction(Action gameAction, UnityAction callback)
+        void CatchAction(BaseAction gameAction, UnityAction callback)
         {
             int i = gameActions.IndexOf(gameAction) + 1;
 

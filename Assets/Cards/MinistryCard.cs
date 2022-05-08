@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MinistryCard : MonoBehaviour, ICard
+public class MinistryCard : MonoBehaviour, ICard, ISelectable
 {
     public enum MinistryCardStatus { Reserved, Selected, Revealed, Exhausted }
     public Game.Faction faction;

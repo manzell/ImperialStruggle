@@ -12,7 +12,7 @@ public class AdjustAPCommand : Command
     public List<ActionPoint> actionPoints = new List<ActionPoint>(),
         previousActionPoints = new List<ActionPoint>();
 
-    public override void Do(Action ac)
+    public override void Do(BaseAction ac)
     {        
         Player player = Player.players[targetFaction];
         previousActionPoints = player.actionPoints;

@@ -4,7 +4,7 @@ using UnityEngine;
 using System.Linq;
 using UnityEngine.Events; 
 
-public class GameAction : Action
+public class GameAction : BaseAction
 {
     public override bool Can() => conditionals.All(condition => condition.Test(this));
     protected override void Do(UnityAction callback)

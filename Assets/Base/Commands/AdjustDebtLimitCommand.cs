@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AdjustDebtLimitCommand : Command
 {
-    public override void Do(Action action)
+    public override void Do(BaseAction action)
     {
         // There is no side-effect of reducing debt limit below current debt. We just live with it! 
         if (action is AdjustDebtLimitAction debtAction)

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector; 
 
-public class Player : SerializedMonoBehaviour
+public class Player : SerializedMonoBehaviour, ISelectable
 {
     public Game.Faction faction; 
     public List<EventCard> hand;

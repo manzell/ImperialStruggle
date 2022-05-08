@@ -9,7 +9,7 @@ public class AdjustTheaterScore : Command
     [SerializeField] int adjustAmount;
     int previousTS;
 
-    public override void Do(Action action)
+    public override void Do(BaseAction action)
     {
         Debug.Log($"{targetFaction} {(adjustAmount > 0 ? "gains" : "loses")} {adjustAmount} War Score in {theater}");
         theater.theaterScore[targetFaction] += adjustAmount;

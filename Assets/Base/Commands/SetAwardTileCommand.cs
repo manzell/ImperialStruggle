@@ -7,7 +7,7 @@ public class SetAwardTileCommand : Command
 {
     [SerializeField] Map map;     
 
-    public override void Do(Action action)
+    public override void Do(BaseAction action)
     {
         if(action.TryGetComponent(out PeaceTurn peaceTurn))
         {

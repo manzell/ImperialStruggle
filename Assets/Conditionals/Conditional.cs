@@ -8,7 +8,7 @@ public abstract class Conditional : SerializedMonoBehaviour, IConditional
 {
     protected enum ConditionType { Exactly, MoreThan, FewerThan, NotLessThan, NotMoreThan, Not }
     public string conditionalText;
-    public abstract bool Test(Object context);
+    public abstract bool Test(BaseAction context);
 }
 
 public interface IConditional { }

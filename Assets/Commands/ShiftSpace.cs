@@ -10,7 +10,7 @@ public class ShiftSpace : Command
     public Space space;
     Game.Faction prevFlag;
 
-    public override void Do(Action action)
+    public override void Do(BaseAction action)
     {
         //prevFlag = space.flag;
 

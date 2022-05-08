@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SelectMinistryCardCommand : Command
 {
-    public override void Do(Action action)
+    public override void Do(BaseAction action)
     {
         if(action is SelectMinistryCardAction ministryAction)
         {

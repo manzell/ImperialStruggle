@@ -7,9 +7,11 @@ public class ScoreDemandCommand : Command
 {
     [SerializeField] Game.Resource resourceToScore;
 
-    public override void Do(Action action)
+    public override void Do(BaseAction action)
     {
-        // TODO: Present the Player with a Yes/No Choice Box
+        // TODO: Present the Player with a Yes/No Choice Box - no, that's a function of the Player Action
+
+
 
         GlobalDemandTrack track = Game.GlobalDemand;
         Dictionary<Game.ActionType, int> actions = Game.GlobalDemand[Phase.currentPhase.era][resourceToScore];

@@ -13,14 +13,14 @@ public class UI_RecordsTrack : MonoBehaviour
 
     private void Awake()
     {
-        recordsTrack = FindObjectOfType<RecordsTrack>();
-        AdjustVPCommand.adjustVPEvent.AddListener(avp => SetVPPoints());
-        AdjustTPCommand.adjustTPEvent.AddListener((x, y) => SetTreatyPoints());
-        AdjustDebtCommand.adjustDebtEvent.AddListener((x, y) => SetDebt());
+        //recordsTrack = FindObjectOfType<RecordsTrack>();
+        //AdjustVPCommand.adjustVPEvent.AddListener(avp => SetVPPoints());
+        //AdjustTPCommand.adjustTPEvent.AddListener((x, y) => SetTreatyPoints());
+        //AdjustDebtCommand.adjustDebtEvent.AddListener((x, y) => SetDebt());
 
-        SetVPPoints();
-        SetTreatyPoints();
-        SetDebt();
+        //SetVPPoints();
+        //SetTreatyPoints();
+        //SetDebt();
 
     }
 

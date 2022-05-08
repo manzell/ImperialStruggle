@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class AwardTile : MonoBehaviour
 {
-    public bool used; 
+    public bool used;
+    public int victoryPoints, treatyPoints, requiredMargin = 1; 
 }

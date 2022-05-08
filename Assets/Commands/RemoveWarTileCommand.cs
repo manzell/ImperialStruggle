@@ -9,7 +9,7 @@ public class RemoveWarTileCommand : Command
     [SerializeField] int numTiles;
     [SerializeField] Game.Faction targetFaction;
 
-    public override void Do(Action action)
+    public override void Do(BaseAction action)
     {
         Phase warPhase = targetWar.value; 
         List<WarTile> tiles = new List<WarTile>();

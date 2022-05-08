@@ -7,7 +7,7 @@ public class DeckPhaseCommand : Command
 {
     [SerializeField] List<EventCard> cards;
 
-    public override void Do(Action action)
+    public override void Do(BaseAction action)
     {
         Game.eventDeck.AddRange(cards);
         Game.eventDeck.OrderBy(card => Random.value);

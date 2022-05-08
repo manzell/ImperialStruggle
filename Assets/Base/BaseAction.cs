@@ -5,13 +5,13 @@ using UnityEngine.Events;
 using Sirenix.OdinInspector;
 using System.Linq; 
 
-public abstract class Action : SerializedMonoBehaviour
+public abstract class BaseAction : SerializedMonoBehaviour
 {
     public string actionText;
     public List<Conditional> conditionals = new List<Conditional>();
     public List<Command> commands = new List<Command>();
 
-    [HideInInspector] public UnityEvent<Action> onActionEvent = new UnityEvent<Action>();
+    [HideInInspector] public UnityEvent<BaseAction> onActionEvent = new UnityEvent<BaseAction>();
 
     public void Try(UnityAction callback) 
     {

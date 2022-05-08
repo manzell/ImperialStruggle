@@ -8,8 +8,9 @@ public class SetGlobalDemandCommand : Command
 {
     public static UnityEvent<PeaceTurn> setGlobalDemandEvent = new UnityEvent<PeaceTurn>();
 
-    public override void Do(Action action)
+    public override void Do(BaseAction action)
     {
+
         if(action.TryGetComponent(out PeaceTurn peaceTurn))
         {
             while (peaceTurn.globalDemandResources.Count < 3)

@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class SetInitiativeCommand : Command
 {
-    public override void Do(Action action)
+    public override void Do(BaseAction action)
     {
         if(action is SetInitiativeAction initiativeAction)
         {
-            PeaceTurn peaceTurn = initiativeAction.GetComponent<PeaceTurn>();
-            peaceTurn.initiative = initiativeAction.player.faction; 
+            Phase.currentPhase.GetComponent<PeaceTurn>().initiative = initiativeAction.selectedFaction; 
         }        
     }
 }

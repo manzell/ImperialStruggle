@@ -9,7 +9,7 @@ public class AdjustCPCommand : Command
     Player previousPlayer;
     public Game.Faction targetFaction;
 
-    public override void Do(Action a)
+    public override void Do(BaseAction a)
     {
         Debug.Log($"{targetFaction} Conquest Points {(adjustAmount.value > 0 ? "increased" : "decreased")} by {Mathf.Abs(adjustAmount.value)}");
         previousPlayer = Player.players[targetFaction];

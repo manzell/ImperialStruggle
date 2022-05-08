@@ -22,16 +22,8 @@ public class DealCardsAction : GameAction
                 faction = _faction;
                 Player player = Player.players[_faction];
 
-                switch (dealType)
-                {
-                    case DealType.UpTo:
-                        if (player.hand.Count < numCards)
-                            base.Do(() => { });
-                        break;
-                    case DealType.Fixed:
-                        base.Do(() => { });
-                        break;
-                }
+                if(dealType != DealType.UpTo || player.hand.Count < numCards)
+                    base.Do(() => { });
             }
         }
 

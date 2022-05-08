@@ -9,7 +9,7 @@ public class TakeDebt : Command
     int amount;
     RecordsTrack recordsTrack;
 
-    public override void Do(Action action)
+    public override void Do(BaseAction action)
     {
     }
 

@@ -20,7 +20,7 @@ public class SelectMinistryCardAction : PlayerAction
         // Give it a number to select
         //selectionWindowController.Summon(availableMinistryCards, 2, FindObjectOfType<UI_SelectionWindow>().transform);
 
-        selectionController.Summon(player.ministers, 2);
+        selectionController.Summon(this, player.ministers, 2);
         selectionController.SetTitle(actionText);
 
         // Send our callback to the OK Method of the selectionController
@@ -31,8 +31,10 @@ public class SelectMinistryCardAction : PlayerAction
     }
 
     [Button]
-    void Finish()
+    protected override void Finish(List<object> returns)
     {
+        selectedCards = returns.ToList<MinistryCard>(); 
+
         selectionController.Dismiss(); 
         base.Do(() => { });
         callback.Invoke();

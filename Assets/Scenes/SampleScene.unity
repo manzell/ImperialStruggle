@@ -856,13 +856,6 @@ MonoBehaviour:
     - Name: actionPoints
       Entry: 7
       Data: 0|ActionPoints, Assembly-CSharp
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
-        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 12
       Data: 0
@@ -2134,13 +2127,6 @@ MonoBehaviour:
     - Name: actionPoints
       Entry: 7
       Data: 0|ActionPoints, Assembly-CSharp
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
-        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 12
       Data: 0
@@ -3689,13 +3675,6 @@ MonoBehaviour:
     - Name: actionPoints
       Entry: 7
       Data: 0|ActionPoints, Assembly-CSharp
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
-        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 12
       Data: 0
@@ -5382,13 +5361,6 @@ MonoBehaviour:
     - Name: actionPoints
       Entry: 7
       Data: 0|ActionPoints, Assembly-CSharp
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
-        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 12
       Data: 0
@@ -5940,6 +5912,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   used: 0
+  victoryPoints: 0
+  treatyPoints: 0
+  requiredMargin: 1
 --- !u!114 &386524973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7106,13 +7081,6 @@ MonoBehaviour:
     - Name: actionPoints
       Entry: 7
       Data: 0|ActionPoints, Assembly-CSharp
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
-        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 12
       Data: 0
@@ -8495,13 +8463,6 @@ MonoBehaviour:
     - Name: actionPoints
       Entry: 7
       Data: 0|ActionPoints, Assembly-CSharp
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
-        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 12
       Data: 0
@@ -8826,7 +8787,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   awardTile: {fileID: 0}
-  bonusVP: 0
   spaces:
   - {fileID: 278668605}
   - {fileID: 1871763489}
@@ -9583,7 +9543,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   awardTile: {fileID: 0}
-  bonusVP: 0
   spaces:
   - {fileID: 1068163350}
   - {fileID: 78850656}
@@ -10025,6 +9984,119 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3421046882785140572, guid: 27947e618d200b148a9479a01a023327, type: 3}
   m_PrefabInstance: {fileID: 651723544}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &652769297
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 652769298}
+  - component: {fileID: 652769299}
+  m_Layer: 0
+  m_Name: Score Global Demand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &652769298
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652769297}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3025975438137525869}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &652769299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652769297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d14929e2f4a9764281e3db74eae88fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: commands
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 1|AdjustVictoryPointsCommand, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|AdjustTreatyPointsCommand, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|AdjustDebtCommand, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: globalDemandWinners
+      Entry: 7
+      Data: 4|System.Collections.Generic.Dictionary`2[[Game+Resource, Assembly-CSharp],[Game+Faction,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 5|System.Collections.Generic.EnumEqualityComparer`1[[Game+Resource, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  actionText: Scoring Global Demand
+  conditionals: []
+  onActionEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &663512646
 GameObject:
   m_ObjectHideFlags: 0
@@ -10071,7 +10143,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   awardTile: {fileID: 0}
-  bonusVP: 0
   spaces:
   - {fileID: 1492092057}
   - {fileID: 1014977798}
@@ -11968,13 +12039,6 @@ MonoBehaviour:
     - Name: actionPoints
       Entry: 7
       Data: 0|ActionPoints, Assembly-CSharp
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
-        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 12
       Data: 0
@@ -12924,6 +12988,85 @@ MonoBehaviour:
   conflictMarker: 0
   conquestLines:
   - {fileID: 58595675}
+--- !u!1 &889683190
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 889683191}
+  - component: {fileID: 889683192}
+  m_Layer: 0
+  m_Name: Deal Cards
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &889683191
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889683190}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3025975438137525869}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &889683192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889683190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 304439481171a2c4b8f28eebff66677c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: commands
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|DealCardCommand, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  actionText: Deal Starting Hand to Players
+  conditionals: []
+  onActionEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  dealType: 0
+  numCards: 3
+  factions: 0100000002000000
+  faction: 2
 --- !u!1 &889764119
 GameObject:
   m_ObjectHideFlags: 0
@@ -14738,13 +14881,6 @@ MonoBehaviour:
     - Name: actionPoints
       Entry: 7
       Data: 0|ActionPoints, Assembly-CSharp
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
-        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 12
       Data: 0
@@ -14931,6 +15067,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   used: 0
+  victoryPoints: 0
+  treatyPoints: 0
+  requiredMargin: 1
 --- !u!114 &990118276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15263,6 +15402,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1031435122}
   m_CullTransparentMesh: 1
+--- !u!1 &1032321692
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1032321693}
+  - component: {fileID: 1032321694}
+  m_Layer: 0
+  m_Name: Check Victory Conditions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1032321693
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032321692}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3025975438137525869}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1032321694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032321692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c0881f7976515a4badece2ba803963d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: commands
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  actionText: 
+  conditionals: []
+  onActionEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1037788303
 GameObject:
   m_ObjectHideFlags: 0
@@ -15486,6 +15694,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   used: 0
+  victoryPoints: 0
+  treatyPoints: 0
+  requiredMargin: 1
 --- !u!114 &1056227991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15611,6 +15822,82 @@ MonoBehaviour:
   milDamage: 0
   unflag: 0
   faction: 2
+--- !u!1 &1067383216
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1067383217}
+  - component: {fileID: 1067383218}
+  m_Layer: 0
+  m_Name: Reset Treaty Points
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1067383217
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067383216}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3025975438137525869}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1067383218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067383216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6ded3983267ba744aa53163cab0829e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: commands
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|AdjustTreatyPointsCommand, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  actionText: Reset Treaty Points
+  conditionals: []
+  onActionEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  treatyPointsCap: 4
 --- !u!1 &1068163348
 GameObject:
   m_ObjectHideFlags: 0
@@ -15893,6 +16180,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   used: 0
+  victoryPoints: 0
+  treatyPoints: 0
+  requiredMargin: 1
 --- !u!114 &1073500726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16185,6 +16475,84 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1079875014}
   m_CullTransparentMesh: 1
+--- !u!1 &1084142702
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1084142703}
+  - component: {fileID: 1084142704}
+  m_Layer: 0
+  m_Name: Adjust Debt Limit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1084142703
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084142702}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3025975438137525869}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1084142704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084142702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f9486f9d63d4a14d97f28022d6cfc0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: commands
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|AdjustDebtLimitCommand, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  actionText: Adjust Debt Limit
+  conditionals: []
+  onActionEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  amount: 5
+  faction: 0
+  factions: 0100000002000000
 --- !u!1 &1085298943 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6595363072325115555, guid: 84f4214bfc4ffd54399b7457988b4058, type: 3}
@@ -16407,13 +16775,6 @@ MonoBehaviour:
     - Name: actionPoints
       Entry: 7
       Data: 0|ActionPoints, Assembly-CSharp
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
-        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 12
       Data: 0
@@ -17075,6 +17436,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   used: 0
+  victoryPoints: 0
+  treatyPoints: 0
+  requiredMargin: 1
 --- !u!114 &1135912894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17918,13 +18282,6 @@ MonoBehaviour:
     - Name: actionPoints
       Entry: 7
       Data: 0|ActionPoints, Assembly-CSharp
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
-        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 12
       Data: 0
@@ -19563,13 +19920,6 @@ MonoBehaviour:
     - Name: actionPoints
       Entry: 7
       Data: 0|ActionPoints, Assembly-CSharp
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
-        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 12
       Data: 0
@@ -20094,6 +20444,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   used: 0
+  victoryPoints: 0
+  treatyPoints: 0
+  requiredMargin: 1
 --- !u!114 &1341703669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20173,13 +20526,6 @@ MonoBehaviour:
     - Name: actionPoints
       Entry: 7
       Data: 0|ActionPoints, Assembly-CSharp
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
-        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 12
       Data: 0
@@ -20402,13 +20748,6 @@ MonoBehaviour:
     - Name: actionPoints
       Entry: 7
       Data: 0|ActionPoints, Assembly-CSharp
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
-        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 12
       Data: 0
@@ -20769,13 +21108,6 @@ MonoBehaviour:
     - Name: actionPoints
       Entry: 7
       Data: 0|ActionPoints, Assembly-CSharp
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
-        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 12
       Data: 0
@@ -22097,13 +22429,6 @@ MonoBehaviour:
     - Name: actionPoints
       Entry: 7
       Data: 0|ActionPoints, Assembly-CSharp
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
-        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 12
       Data: 0
@@ -23676,7 +24001,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   awardTile: {fileID: 0}
-  bonusVP: 0
   spaces:
   - {fileID: 696434705}
   - {fileID: 1790010843}
@@ -23838,6 +24162,81 @@ MonoBehaviour:
   conditionalMode: 1
   spaces:
   - {fileID: 302841238}
+--- !u!1 &1554566887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1554566888}
+  - component: {fileID: 1554566889}
+  m_Layer: 0
+  m_Name: Set Global Demand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1554566888
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554566887}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3025975438137525869}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1554566889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554566887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18f36b2f28b0e57408d228e34b011949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: commands
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|SetGlobalDemandCommand, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  actionText: Set Global Demand Resources
+  conditionals: []
+  onActionEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1555570985
 GameObject:
   m_ObjectHideFlags: 0
@@ -24155,13 +24554,6 @@ MonoBehaviour:
     - Name: actionPoints
       Entry: 7
       Data: 0|ActionPoints, Assembly-CSharp
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
-        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 12
       Data: 0
@@ -25137,13 +25529,6 @@ MonoBehaviour:
     - Name: actionPoints
       Entry: 7
       Data: 0|ActionPoints, Assembly-CSharp
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
-        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 12
       Data: 0
@@ -25544,13 +25929,6 @@ MonoBehaviour:
     - Name: actionPoints
       Entry: 7
       Data: 0|ActionPoints, Assembly-CSharp
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
-        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 12
       Data: 0
@@ -26943,13 +27321,6 @@ MonoBehaviour:
     - Name: actionPoints
       Entry: 7
       Data: 0|ActionPoints, Assembly-CSharp
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
-        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 12
       Data: 0
@@ -27631,6 +28002,84 @@ MonoBehaviour:
   conflictMarker: 0
   conquestLines:
   - {fileID: 1402252675}
+--- !u!1 &1809304544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1809304545}
+  - component: {fileID: 1809304546}
+  m_Layer: 0
+  m_Name: Prepare Next War
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1809304545
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809304544}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3025975438137525869}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1809304546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809304544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0743b4aea7f73244b99f5772f535788a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: commands
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|AddBasicWarTileCommand, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  actionText: Prepping Next War
+  conditionals: []
+  onActionEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  war: {fileID: 7007228987556792857}
+  faction: 0
+  theater: {fileID: 0}
 --- !u!1 &1816056388
 GameObject:
   m_ObjectHideFlags: 0
@@ -29043,6 +29492,130 @@ MonoBehaviour:
   - {fileID: 1508000421}
   - {fileID: 1170519298}
   targetFaction: 0
+--- !u!1 &1898584671
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1898584672}
+  - component: {fileID: 1898584674}
+  - component: {fileID: 1898584673}
+  m_Layer: 0
+  m_Name: Select Ministry Cards
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1898584672
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898584671}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3025975438137525869}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1898584673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898584671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa03b337c384a640aa9a1df222a7dce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: commands
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|SelectMinistryCardCommand, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  actionText: Select France Ministry Cards
+  conditionals: []
+  onActionEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  player: {fileID: 1435854123}
+  selectedCards: []
+--- !u!114 &1898584674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898584671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa03b337c384a640aa9a1df222a7dce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: commands
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|SelectMinistryCardCommand, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  actionText: Select Britain Ministry Cards
+  conditionals: []
+  onActionEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  player: {fileID: 901540906}
+  selectedCards: []
 --- !u!1001 &1922739416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29206,6 +29779,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   used: 0
+  victoryPoints: 0
+  treatyPoints: 0
+  requiredMargin: 1
 --- !u!114 &1927466749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29735,13 +30311,6 @@ MonoBehaviour:
     - Name: actionPoints
       Entry: 7
       Data: 0|ActionPoints, Assembly-CSharp
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
-        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 12
       Data: 0
@@ -30595,13 +31164,6 @@ MonoBehaviour:
     - Name: actionPoints
       Entry: 7
       Data: 0|ActionPoints, Assembly-CSharp
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
-        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 12
       Data: 0
@@ -31221,6 +31783,83 @@ MonoBehaviour:
   marketType: 3
   isolatedMarket: 0
   protectedMarket: 0
+--- !u!1 &2050161885
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2050161886}
+  - component: {fileID: 2050161887}
+  m_Layer: 0
+  m_Name: Deal Investment Tiles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2050161886
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050161885}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3025975438137525869}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2050161887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050161885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11236309c390f484aa1e4a4540f4fca7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: commands
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|DealInvestmentTileCommand, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  actionText: Dealing Investment Tiles
+  conditionals: []
+  onActionEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  tile: {fileID: 0}
+  numToDeal: 9
 --- !u!1 &2062126969
 GameObject:
   m_ObjectHideFlags: 0
@@ -31276,13 +31915,6 @@ MonoBehaviour:
     - Name: actionPoints
       Entry: 7
       Data: 0|ActionPoints, Assembly-CSharp
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
-        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 12
       Data: 0
@@ -31604,13 +32236,6 @@ MonoBehaviour:
     - Name: actionPoints
       Entry: 7
       Data: 0|ActionPoints, Assembly-CSharp
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
-        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 12
       Data: 0
@@ -31743,6 +32368,83 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3421046882785140572, guid: 27947e618d200b148a9479a01a023327, type: 3}
   m_PrefabInstance: {fileID: 2080181300}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2086690137
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2086690138}
+  - component: {fileID: 2086690139}
+  m_Layer: 0
+  m_Name: Set Initiative
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2086690138
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086690137}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3025975438137525869}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2086690139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086690137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4289ac6b5d0fadf4ca7f14a9fe889d4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: commands
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|SetInitiativeCommand, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  actionText: Set Initiative
+  conditionals: []
+  onActionEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  player: {fileID: 0}
+  selectedFaction: 0
 --- !u!1 &2089741153
 GameObject:
   m_ObjectHideFlags: 0
@@ -31925,13 +32627,6 @@ MonoBehaviour:
     - Name: actionPoints
       Entry: 7
       Data: 0|ActionPoints, Assembly-CSharp
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Game+ActionType,
-        Assembly-CSharp],[Game+ActionTier, Assembly-CSharp]], mscorlib]], mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 12
       Data: 0
@@ -32419,6 +33114,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   used: 0
+  victoryPoints: 0
+  treatyPoints: 0
+  requiredMargin: 1
 --- !u!114 &2133084291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32506,6 +33204,115 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87f77d99e3431974882e519477773fcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2137819047
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2137819048}
+  - component: {fileID: 2137819049}
+  m_Layer: 0
+  m_Name: Set Award Tiles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2137819048
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137819047}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3025975438137525869}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2137819049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137819047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18f36b2f28b0e57408d228e34b011949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 1549688053}
+    - {fileID: 619551697}
+    - {fileID: 543138719}
+    - {fileID: 663512648}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: commands
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 4
+    - Name: 
+      Entry: 7
+      Data: 1|SetAwardTileCommand, Assembly-CSharp
+    - Name: map
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|SetAwardTileCommand, Assembly-CSharp
+    - Name: map
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|SetAwardTileCommand, Assembly-CSharp
+    - Name: map
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|SetAwardTileCommand, Assembly-CSharp
+    - Name: map
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  actionText: Set Award Tile Action
+  conditionals: []
+  onActionEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &2138797151
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32703,7 +33510,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3025975438137525869}
-  m_RootOrder: 3
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &533331868747709149
 MonoBehaviour:
@@ -32747,13 +33554,14 @@ GameObject:
   - component: {fileID: 6526057950747273194}
   - component: {fileID: 849480319891410261}
   - component: {fileID: 849480319891410260}
+  - component: {fileID: 849480319891410262}
   m_Layer: 0
   m_Name: Action Round 4B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &849480319891410260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32790,9 +33598,56 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   era: 0
-  phaseStartActions: []
+  phaseStartActions:
+  - {fileID: 849480319891410262}
   phaseEndActions: []
   prevPhase: {fileID: 0}
+--- !u!114 &849480319891410262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849480319891410259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caded30bd1bb1bb47b4e907fea2a2dc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: commands
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|AdjustActionPointsCommand, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  actionText: Select Investment Tile
+  conditionals: []
+  onActionEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  player: {fileID: 0}
+  investmentTile: {fileID: 0}
 --- !u!114 &1024817794381874751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32823,7 +33678,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7095921346316974907}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1934746873293251831
 MonoBehaviour:
@@ -32855,7 +33710,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7095921346316974907}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2270896879549454623
 Transform:
@@ -32869,7 +33724,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7095921346316974907}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2469227688882204122
 Transform:
@@ -32902,36 +33757,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &2791165578248407241
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2926043030048537053}
-  m_Layer: 0
-  m_Name: Set Initiative*
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2926043030048537053
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2791165578248407241}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3424645809316329298}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2977508115915299177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32958,12 +33783,22 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 6463318677426580315}
+  - {fileID: 1084142703}
+  - {fileID: 2137819048}
+  - {fileID: 1554566888}
+  - {fileID: 889683191}
+  - {fileID: 1809304545}
+  - {fileID: 2050161886}
+  - {fileID: 1898584672}
+  - {fileID: 2086690138}
   - {fileID: 8376051644894854605}
+  - {fileID: 1067383217}
   - {fileID: 5094673747324820999}
   - {fileID: 444816361014124379}
+  - {fileID: 652769298}
+  - {fileID: 1032321693}
   m_Father: {fileID: 7095921346316974907}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3109177531697829100
 GameObject:
@@ -33085,22 +33920,6 @@ MonoBehaviour:
   theaterAwards: []
   availableTerritories: []
   winningFaction: 0
---- !u!4 &3424645809316329298
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9152448663418139756}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 3512778067033279383}
-  - {fileID: 2926043030048537053}
-  m_Father: {fileID: 7095921346316974907}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3502277181503903448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33198,20 +34017,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9473b33c779674c49a8f821a824b71cb, type: 3}
---- !u!4 &3512778067033279383
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8354808129478214366}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3424645809316329298}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3652411898272536084
 GameObject:
   m_ObjectHideFlags: 0
@@ -33223,6 +34028,7 @@ GameObject:
   - component: {fileID: 2270896879549454623}
   - component: {fileID: 3652411898272536086}
   - component: {fileID: 3652411898272536085}
+  - component: {fileID: 3652411898272536087}
   m_Layer: 0
   m_Name: Action Round 1B
   m_TagString: Untagged
@@ -33266,9 +34072,56 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   era: 0
-  phaseStartActions: []
+  phaseStartActions:
+  - {fileID: 3652411898272536087}
   phaseEndActions: []
   prevPhase: {fileID: 0}
+--- !u!114 &3652411898272536087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3652411898272536084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caded30bd1bb1bb47b4e907fea2a2dc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: commands
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|AdjustActionPointsCommand, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  actionText: Select Investment Tile
+  conditionals: []
+  onActionEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  player: {fileID: 0}
+  investmentTile: {fileID: 0}
 --- !u!114 &3685301939713447994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33295,13 +34148,14 @@ GameObject:
   - component: {fileID: 8379082826945065725}
   - component: {fileID: 3734849112744899748}
   - component: {fileID: 3734849112744899747}
+  - component: {fileID: 3734849112744899749}
   m_Layer: 0
   m_Name: Action Round 2A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &3734849112744899747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33338,9 +34192,56 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   era: 0
-  phaseStartActions: []
+  phaseStartActions:
+  - {fileID: 3734849112744899749}
   phaseEndActions: []
   prevPhase: {fileID: 0}
+--- !u!114 &3734849112744899749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3734849112744899746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caded30bd1bb1bb47b4e907fea2a2dc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: commands
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|AdjustActionPointsCommand, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  actionText: Select Investment Tile
+  conditionals: []
+  onActionEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  player: {fileID: 0}
+  investmentTile: {fileID: 0}
 --- !u!1 &3761144001751185223
 GameObject:
   m_ObjectHideFlags: 0
@@ -33352,7 +34253,7 @@ GameObject:
   - component: {fileID: 3025975438137525869}
   - component: {fileID: 4386787947144592262}
   m_Layer: 0
-  m_Name: Phase End
+  m_Name: Phase Actions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33392,6 +34293,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 444816361014124379}
+  - component: {fileID: 4506955177494840804}
   m_Layer: 0
   m_Name: Score Prestige
   m_TagString: Untagged
@@ -33399,6 +34301,52 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4506955177494840804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4506955177494840803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7beb79d0134a4864486ac3d58a11047a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: commands
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|AdjustVictoryPointsCommand, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  actionText: Score Prestige Spaces
+  conditionals: []
+  onActionEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  prestigeVPvalue: 2
+  usaSpaces: []
 --- !u!4 &4692303239775299250
 Transform:
   m_ObjectHideFlags: 0
@@ -33439,7 +34387,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3025975438137525869}
-  m_RootOrder: 2
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5275003354640275534
 GameObject:
@@ -33452,6 +34400,7 @@ GameObject:
   - component: {fileID: 6587623830583151135}
   - component: {fileID: 5275003354640275536}
   - component: {fileID: 5275003354640275535}
+  - component: {fileID: 5275003354640275537}
   m_Layer: 0
   m_Name: Action Round 1A
   m_TagString: Untagged
@@ -33495,9 +34444,56 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   era: 0
-  phaseStartActions: []
+  phaseStartActions:
+  - {fileID: 5275003354640275537}
   phaseEndActions: []
   prevPhase: {fileID: 0}
+--- !u!114 &5275003354640275537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5275003354640275534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caded30bd1bb1bb47b4e907fea2a2dc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: commands
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|AdjustActionPointsCommand, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  actionText: Select Investment Tile
+  conditionals: []
+  onActionEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  player: {fileID: 0}
+  investmentTile: {fileID: 0}
 --- !u!1 &5536433233194205213
 GameObject:
   m_ObjectHideFlags: 0
@@ -33509,13 +34505,14 @@ GameObject:
   - component: {fileID: 6582457813713862957}
   - component: {fileID: 5536433233194205215}
   - component: {fileID: 5536433233194205214}
+  - component: {fileID: 5536433233194205216}
   m_Layer: 0
   m_Name: Action Round 4A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &5536433233194205214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33552,9 +34549,56 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   era: 0
-  phaseStartActions: []
+  phaseStartActions:
+  - {fileID: 5536433233194205216}
   phaseEndActions: []
   prevPhase: {fileID: 0}
+--- !u!114 &5536433233194205216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5536433233194205213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caded30bd1bb1bb47b4e907fea2a2dc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: commands
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|AdjustActionPointsCommand, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  actionText: Select Investment Tile
+  conditionals: []
+  onActionEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  player: {fileID: 0}
+  investmentTile: {fileID: 0}
 --- !u!1 &6022973640711854769
 GameObject:
   m_ObjectHideFlags: 0
@@ -33566,13 +34610,14 @@ GameObject:
   - component: {fileID: 1882512423849374749}
   - component: {fileID: 6022973640711854771}
   - component: {fileID: 6022973640711854770}
+  - component: {fileID: 6022973640711854772}
   m_Layer: 0
   m_Name: Action Round 3A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &6022973640711854770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33609,9 +34654,56 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   era: 0
-  phaseStartActions: []
+  phaseStartActions:
+  - {fileID: 6022973640711854772}
   phaseEndActions: []
   prevPhase: {fileID: 0}
+--- !u!114 &6022973640711854772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6022973640711854769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caded30bd1bb1bb47b4e907fea2a2dc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: commands
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|AdjustActionPointsCommand, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  actionText: Select Investment Tile
+  conditionals: []
+  onActionEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  player: {fileID: 0}
+  investmentTile: {fileID: 0}
 --- !u!114 &6178396055524674560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33627,20 +34719,6 @@ MonoBehaviour:
   bonusName: 
   spaces:
   - {fileID: 0}
---- !u!4 &6463318677426580315
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9199410566883119658}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3025975438137525869}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &6526057950747273194
 Transform:
   m_ObjectHideFlags: 0
@@ -33653,7 +34731,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7095921346316974907}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &6582457813713862957
 Transform:
@@ -33667,7 +34745,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7095921346316974907}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &6587623830583151135
 Transform:
@@ -33681,7 +34759,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7095921346316974907}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6616554609049661625
 GameObject:
@@ -33692,6 +34770,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5094673747324820999}
+  - component: {fileID: 6616554609049661626}
   m_Layer: 0
   m_Name: Score Maps
   m_TagString: Untagged
@@ -33699,6 +34778,76 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6616554609049661626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6616554609049661625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be438663737dcf242ac46051594e3420, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: commands
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 1|AdjustVictoryPointsCommand, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|AdjustTreatyPointsCommand, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: mapWinners
+      Entry: 7
+      Data: 3|System.Collections.Generic.Dictionary`2[[Map, Assembly-CSharp],[Game+Faction,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 4|System.Collections.Generic.ObjectEqualityComparer`1[[Map, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  actionText: Score Map Phase
+  conditionals: []
+  onActionEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &6639605835865642153
 Transform:
   m_ObjectHideFlags: 0
@@ -33725,7 +34874,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7095921346316974907}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6791246845414753831
 MonoBehaviour:
@@ -33783,7 +34932,24 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes:
     - Name: theaterWinners
-      Entry: 6
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[Theater, Assembly-CSharp],[Game+Faction,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.ObjectEqualityComparer`1[[Theater, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
   theaters:
   - {fileID: 7534191138924097081}
@@ -33864,15 +35030,6 @@ GameObject:
   - component: {fileID: 7095921346316974907}
   - component: {fileID: 7095921346316974909}
   - component: {fileID: 7095921346316974904}
-  - component: {fileID: 7095921346316974913}
-  - component: {fileID: 7095921346316974908}
-  - component: {fileID: 7095921346316974910}
-  - component: {fileID: 7095921346316974911}
-  - component: {fileID: 7095921346316974912}
-  - component: {fileID: 7095921346316974914}
-  - component: {fileID: 7095921346316974915}
-  - component: {fileID: 7095921346316974916}
-  - component: {fileID: 7095921346316974917}
   m_Layer: 0
   m_Name: Peace Turn
   m_TagString: Untagged
@@ -33891,7 +35048,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3424645809316329298}
   - {fileID: 6587623830583151135}
   - {fileID: 2270896879549454623}
   - {fileID: 8379082826945065725}
@@ -33904,84 +35060,6 @@ Transform:
   m_Father: {fileID: 670742066}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7095921346316974908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7095921346316974906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18f36b2f28b0e57408d228e34b011949, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 1549688053}
-    - {fileID: 619551697}
-    - {fileID: 543138719}
-    - {fileID: 663512648}
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: commands
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 4
-    - Name: 
-      Entry: 7
-      Data: 1|SetAwardTileCommand, Assembly-CSharp
-    - Name: map
-      Entry: 10
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 2|SetAwardTileCommand, Assembly-CSharp
-    - Name: map
-      Entry: 10
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 3|SetAwardTileCommand, Assembly-CSharp
-    - Name: map
-      Entry: 10
-      Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 4|SetAwardTileCommand, Assembly-CSharp
-    - Name: map
-      Entry: 10
-      Data: 3
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionText: Set Award Tile Action
-  conditionals: []
-  onActionEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &7095921346316974909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34005,385 +35083,22 @@ MonoBehaviour:
     SerializationNodes: []
   era: 0
   phaseStartActions:
-  - {fileID: 7095921346316974913}
-  - {fileID: 7095921346316974910}
-  - {fileID: 7095921346316974908}
-  - {fileID: 7095921346316974911}
-  - {fileID: 7095921346316974912}
-  - {fileID: 7095921346316974914}
-  - {fileID: 7095921346316974915}
-  - {fileID: 7095921346316974916}
-  phaseEndActions: []
+  - {fileID: 1084142704}
+  - {fileID: 2137819049}
+  - {fileID: 1554566889}
+  - {fileID: 889683192}
+  - {fileID: 1809304546}
+  - {fileID: 2050161887}
+  - {fileID: 1898584674}
+  - {fileID: 1898584673}
+  - {fileID: 2086690139}
+  phaseEndActions:
+  - {fileID: 1067383218}
+  - {fileID: 6616554609049661626}
+  - {fileID: 4506955177494840804}
+  - {fileID: 652769299}
+  - {fileID: 1032321694}
   prevPhase: {fileID: 0}
---- !u!114 &7095921346316974910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7095921346316974906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18f36b2f28b0e57408d228e34b011949, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: commands
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 1|SetGlobalDemandCommand, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionText: Set Global Demand Resources
-  conditionals: []
-  onActionEvent:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &7095921346316974911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7095921346316974906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 304439481171a2c4b8f28eebff66677c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: commands
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 1|DealCardCommand, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionText: Deal Starting Hand to Players
-  conditionals: []
-  onActionEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dealType: 0
-  numCards: 3
-  factions: 0100000002000000
-  faction: 0
---- !u!114 &7095921346316974912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7095921346316974906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0743b4aea7f73244b99f5772f535788a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: commands
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 1|AddBasicWarTileCommand, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionText: Prepping Next War
-  conditionals: []
-  onActionEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  war: {fileID: 7007228987556792857}
-  faction: 0
-  theater: {fileID: 0}
---- !u!114 &7095921346316974913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7095921346316974906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f9486f9d63d4a14d97f28022d6cfc0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: commands
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 1|AdjustDebtLimitCommand, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionText: Adjusting Debt Limit
-  conditionals: []
-  onActionEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  amount: 5
-  faction: 0
-  factions: 0100000002000000
---- !u!114 &7095921346316974914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7095921346316974906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11236309c390f484aa1e4a4540f4fca7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: commands
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 1|DealInvestmentTileCommand, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionText: Dealing Investment Tiles
-  conditionals: []
-  onActionEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  tile: {fileID: 0}
-  numToDeal: 9
---- !u!114 &7095921346316974915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7095921346316974906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fa03b337c384a640aa9a1df222a7dce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: commands
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 1|SelectMinistryCardCommand, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionText: Select Britain Ministry Cards
-  conditionals: []
-  onActionEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  player: {fileID: 901540906}
-  selectedCards: []
---- !u!114 &7095921346316974916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7095921346316974906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fa03b337c384a640aa9a1df222a7dce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: commands
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 1|SelectMinistryCardCommand, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionText: Select France Ministry Cards
-  conditionals: []
-  onActionEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  player: {fileID: 1435854123}
-  selectedCards: []
---- !u!114 &7095921346316974917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7095921346316974906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97fd2bf455e099949a164ce7366c09a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: commands
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 1|SetInitiativeCommand, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionText: Set Initiative
-  conditionals: []
-  onActionEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  player: {fileID: 1435854123}
 --- !u!114 &7534191138924097081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34504,13 +35219,14 @@ GameObject:
   - component: {fileID: 6751338587201543076}
   - component: {fileID: 7717654462068964398}
   - component: {fileID: 7717654462068964397}
+  - component: {fileID: 7717654462068964399}
   m_Layer: 0
   m_Name: Action Round 2B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &7717654462068964397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34547,9 +35263,56 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   era: 0
-  phaseStartActions: []
+  phaseStartActions:
+  - {fileID: 7717654462068964399}
   phaseEndActions: []
   prevPhase: {fileID: 0}
+--- !u!114 &7717654462068964399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7717654462068964396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caded30bd1bb1bb47b4e907fea2a2dc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: commands
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|AdjustActionPointsCommand, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  actionText: Select Investment Tile
+  conditionals: []
+  onActionEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  player: {fileID: 0}
+  investmentTile: {fileID: 0}
 --- !u!1 &7759721353531928763
 GameObject:
   m_ObjectHideFlags: 0
@@ -34613,23 +35376,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8376051644894854605}
   m_Layer: 0
-  m_Name: Resolve Powers
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &8354808129478214366
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3512778067033279383}
-  m_Layer: 0
-  m_Name: Select Ministers*
+  m_Name: '*Resolve Powers'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34647,7 +35394,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3025975438137525869}
-  m_RootOrder: 1
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &8379082826945065725
 Transform:
@@ -34661,7 +35408,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7095921346316974907}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8769529187218029528
 GameObject:
@@ -34674,13 +35421,14 @@ GameObject:
   - component: {fileID: 2215815033341252661}
   - component: {fileID: 8769529187218029530}
   - component: {fileID: 8769529187218029529}
+  - component: {fileID: 8769529187218029531}
   m_Layer: 0
   m_Name: Action Round 3B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &8769529187218029529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34717,9 +35465,56 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   era: 0
-  phaseStartActions: []
+  phaseStartActions:
+  - {fileID: 8769529187218029531}
   phaseEndActions: []
   prevPhase: {fileID: 0}
+--- !u!114 &8769529187218029531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8769529187218029528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caded30bd1bb1bb47b4e907fea2a2dc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: commands
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|AdjustActionPointsCommand, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  actionText: Select Investment Tile
+  conditionals: []
+  onActionEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  player: {fileID: 0}
+  investmentTile: {fileID: 0}
 --- !u!1 &8802226117834030450
 GameObject:
   m_ObjectHideFlags: 0
@@ -34831,22 +35626,6 @@ MonoBehaviour:
   theaterAwards: []
   availableTerritories: []
   winningFaction: 0
---- !u!1 &9152448663418139756
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3424645809316329298}
-  m_Layer: 0
-  m_Name: Phase Start
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!114 &9180024856613105370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34941,19 +35720,3 @@ MonoBehaviour:
   theaterAwards: []
   availableTerritories: []
   winningFaction: 0
---- !u!1 &9199410566883119658
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6463318677426580315}
-  m_Layer: 0
-  m_Name: Reduce Treaty Points
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
