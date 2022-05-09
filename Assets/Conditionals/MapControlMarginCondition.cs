@@ -7,14 +7,11 @@ public class MapControlMarginCondition : Conditional
 {
     [SerializeField] int requiredMargin = 2; 
 
-    public override bool Test(Object _map)
+    public override bool Test(BaseAction action)
     {
-        if (_map is Map)
-        {
-            Map map = (Map)_map;
-            return Mathf.Abs(GameObject.FindObjectsOfType<Space>().Where(space => space.map == map && space.flag == Game.Faction.Britain).Count() -
-                GameObject.FindObjectsOfType<Space>().Where(space => space.map == map && space.flag == Game.Faction.France).Count()) >= requiredMargin;
-        }
-        return true; 
+        if(action is ITargetMap mapAction)
+            return Mathf.Abs(mapAction.map.mapScore[Game.Faction.Britain] - mapAction.map.mapScore[Game.Faction.France]) >= requiredMargin;
+        else
+            return true; 
     }
 }

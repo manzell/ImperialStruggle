@@ -3,27 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq; 
 
+// Returns true if the Target Faction controls Any of the given Spaces, All of the given spaces, or More than the opposition
 public class ControlCondition : Conditional
 {
-    public enum ConditionalMode { Any, All, More }
+    public enum ConditionalMode { Any, All, More, Most }
     [SerializeField] ConditionalMode conditionalMode; 
     [SerializeField] List<Space> spaces = new List<Space>();
+    [SerializeField] Game.Faction faction; 
 
-    public override bool Test(Object _player)
+    public override bool Test(BaseAction action)
     {
-        if (_player is Player)
-        {
-            Game.Faction faction = (_player as Player).faction;
-            Game.Faction opposingFaction = faction == Game.Faction.Britain ? Game.Faction.France : Game.Faction.Britain;
+        Game.Faction opposingFaction = faction == Game.Faction.Britain ? Game.Faction.France : Game.Faction.Britain;
 
-            if (conditionalMode == ConditionalMode.More)
-                return spaces.Where(space => space.flag == faction && space.conflictMarker == false).Count() >
-                    spaces.Where(space => space.flag == opposingFaction && space.conflictMarker == false).Count();
-            else if (conditionalMode == ConditionalMode.All)
-                return spaces.All(space => space.flag == faction && space.conflictMarker == false);
-            else
-                return spaces.Any(space => space.flag == faction && space.conflictMarker == false);
+        switch(conditionalMode)
+        {
+            case ConditionalMode.Any:
+                return spaces.Any(space => space.control == faction);
+            case ConditionalMode.All:
+                return spaces.All(space => space.control == faction);
+            case ConditionalMode.Most:
+                return spaces.Count(space => space.control == faction) >= (spaces.Count / 2); 
+            case ConditionalMode.More:
+                return spaces.Count(space => space.control == faction) > spaces.Count(space => space.control == opposingFaction);
+            default:
+                return true; 
         }
-        return true; 
     }
 }

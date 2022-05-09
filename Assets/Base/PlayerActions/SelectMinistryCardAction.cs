@@ -9,33 +9,20 @@ public class SelectMinistryCardAction : PlayerAction
 {
     public List<MinistryCard> selectedCards;    
     UnityAction callback;
-    SelectionController selectionController;
+    SelectionController.Selection<MinistryCard> selection;
 
     protected override void Do(UnityAction callback)
     {
         this.callback = callback;
-        selectionController = FindObjectOfType<SelectionController>();
-        // We need to open up a choice dialog
-        // Provide it all eligible Ministry Cards for the current end 
-        // Give it a number to select
-        //selectionWindowController.Summon(availableMinistryCards, 2, FindObjectOfType<UI_SelectionWindow>().transform);
-
-        selectionController.Summon(this, player.ministers, 2);
-        selectionController.SetTitle(actionText);
-
-        // Send our callback to the OK Method of the selectionController
-        // Make sure that the selection Controller knows where to get it's data. 
-
-
-        //Finish(callback); 
+        selection = FindObjectOfType<SelectionController>().Select(player.ministers, 2);
+        selection.callback = Finish; 
     }
 
     [Button]
-    protected override void Finish(List<object> returns)
+    void Finish(List<MinistryCard> cards)
     {
-        selectedCards = returns.ToList<MinistryCard>(); 
-
-        selectionController.Dismiss(); 
+        selectedCards = cards; 
+ 
         base.Do(() => { });
         callback.Invoke();
     }

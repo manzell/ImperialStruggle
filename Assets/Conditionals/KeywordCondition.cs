@@ -6,10 +6,12 @@ public class KeywordCondition : Conditional
 {
     public Game.Keyword keyword;
 
-    public override bool Test(Object player)
+    // Checks to see if the ActivePlayer has the keyword on them
+    public override bool Test(BaseAction action)
     {
-        if (player is Player)
-            return (player as Player).keywords.Contains(keyword);
-        return true;         
+        if (action is PlayerAction playerAction)
+            return playerAction.player.keywords.Contains(keyword);
+        else
+            return true; 
     }
 }
