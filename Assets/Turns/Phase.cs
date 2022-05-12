@@ -7,6 +7,7 @@ using System.Linq;
 
 public class Phase : SerializedMonoBehaviour
 {
+    public static Phase rootPhase; 
     public static Phase currentPhase;
     public static UnityEvent<Phase>
         phaseStartEvent = new UnityEvent<Phase>(),
@@ -19,17 +20,10 @@ public class Phase : SerializedMonoBehaviour
         phaseEndActions = new List<BaseAction>(); 
 
     public Phase prevPhase;
-    public Phase nextSibling
-    {
-        get
-        {
-            Phase[] siblings = transform.parent.GetComponents<Phase>()
-                .Where(phase => phase.gameObject.activeInHierarchy == true && phase.transform.GetSiblingIndex() > transform.GetSiblingIndex())
-                .ToArray();
+    public Phase nextSibling=> transform.parent.GetComponentsInChildren<Phase>()
+        .Where(phase => phase != transform.parent.GetComponent<Phase>() && phase != this)
+        .Where(phase => phase.transform.GetSiblingIndex() > transform.GetSiblingIndex() && phase.gameObject.activeInHierarchy).First(); 
 
-            return siblings.Length > 0 ? siblings[0] : null;
-        }
-    }
     public Phase nextChild
     {
         get
@@ -52,38 +46,55 @@ public class Phase : SerializedMonoBehaviour
     [Button] public void StartThread() => StartPhase(() => Debug.Log("Thread Over"));
     public virtual void StartPhase(UnityAction callback)
     {
-        Debug.Log($"StartPhase {this}");
+        Debug.Log($"StartPhase::{this}");
+
         currentPhase = this;
+        if (rootPhase == null) rootPhase = this; 
 
         phaseStartEvent.Invoke(this);
-        SendPhaseActions(phaseStartActions, () => OnPhase(callback));
+        RunActionSequence(phaseStartActions, () => OnPhase(callback));
     }
 
     void OnPhase(UnityAction callback)
     {
+        Debug.Log($"OnPhase::{this}");
+
         phaseMidEvent.Invoke(this);
-        SendPhaseActions(phaseEndActions, () => AfterPhase(callback));
+        AdvanceToChildPhase(callback);
     }
 
-    void AfterPhase(UnityAction callback)
+    // End Phase is called after OnPhase - it checks to see if we have any Child Phases to process
+    // In which case it calls those with AfterPhase as the callback. Otherwise, it calls After Phase
+    void AdvanceToChildPhase(UnityAction callback)
     {
-        if (nextChild)
-            nextChild.StartPhase(callback);
-        else 
-            EndPhase(callback); 
-    }
+        Debug.Log($"EndPhase::{this}");
 
-    void EndPhase(UnityAction callback)
-    {
         phaseEndEvent.Invoke(this);
 
+        if (nextChild)
+            nextChild.StartPhase(callback);
+        else
+            AfterPhase(callback); // this should point to AfterPhase(original callback)
+    }
+
+    // After phase is called either from the terminal phase of the Child Callback or the previous sibling
+    void AfterPhase(UnityAction callback)
+    {
+        Debug.Log($"AfterPhase::{this}");
+        Debug.Log(nextSibling);
+
+        RunActionSequence(phaseEndActions, () => AdvanceToNextPhase(callback));
+    }
+
+    void AdvanceToNextPhase(UnityAction callback)
+    {
         if (nextSibling)
             nextSibling.StartPhase(callback);
         else
-            callback.Invoke(); 
+            callback.Invoke(); // This should point to the Parent EndPhase
     }
 
-    void SendPhaseActions(List<BaseAction> gameActions, UnityAction callback)
+    public static void RunActionSequence(List<BaseAction> gameActions, UnityAction callback)
     {
         if (gameActions.Count > 0)
             TryAction(gameActions[0], callback);

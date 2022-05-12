@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ScoreMapAction : GameAction, IScoreTP, IScoreVP
+public class ScoreMapAction : GameAction, IAdjustTP, IAdjustVP
 {
     public Dictionary<Map, Game.Faction> mapWinners = new Dictionary<Map, Game.Faction>();
 

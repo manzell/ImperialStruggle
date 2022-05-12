@@ -28,6 +28,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3421046882785140572}
   m_RootOrder: 4
@@ -162,6 +163,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3421046882785140572}
   m_RootOrder: 2
@@ -237,6 +239,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3421046882785140572}
   m_RootOrder: 3
@@ -371,6 +374,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3421046882785140572}
   m_RootOrder: 0
@@ -428,7 +432,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3421046882785140572}
   - component: {fileID: 1981230490}
-  - component: {fileID: 1981230489}
   - component: {fileID: 6910198765178914321}
   m_Layer: 5
   m_Name: PoliticalSpace
@@ -447,6 +450,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6593561014516531166}
   - {fileID: 1133104151871602390}
@@ -454,7 +458,7 @@ RectTransform:
   - {fileID: 4554713764801061629}
   - {fileID: 3781529028692903824}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -477,38 +481,10 @@ MonoBehaviour:
   flag: 0
   availableEra: 0
   adjacentSpaces: []
-  flagCost: 2
-  prestige: 0
+  flagCost: 3
+  prestige: 1
   alliance: 1
   conflictMarker: 0
---- !u!114 &1981230489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5506689824616246886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c73e0e9a8237b904f8b2a8b3a1fd28be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actionName: Shift
-  actingFaction: 0
-  requiredActionType: 2
-  actionCost: 0
-  requireMajorAction: 0
-  available: 0
-  Try:
-    m_PersistentCalls:
-      m_Calls: []
-  CanEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  DoEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  shiftActionType: 0
 --- !u!114 &6910198765178914321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -521,6 +497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4b901042c3620044bb057150a62ac74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  space: {fileID: 0}
   spaceName: {fileID: 8664578715550899488}
   flagCost: {fileID: 1924774964578108063}
   trim: {fileID: 2155038754459833294}
@@ -543,7 +520,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1133104151871602390
 RectTransform:
   m_ObjectHideFlags: 0
@@ -554,6 +531,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3421046882785140572}
   m_RootOrder: 1

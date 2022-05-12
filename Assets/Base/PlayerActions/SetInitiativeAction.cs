@@ -8,40 +8,37 @@ using System.Linq;
 public class SetInitiativeAction : PlayerAction
 {
     UnityAction callback;
-    SelectionController selectionController;
+    SelectionController.Selection<Player> selection;
     public Game.Faction selectedFaction; 
 
     protected override void Do(UnityAction callback)
     {
         this.callback = callback;
-        selectionController = FindObjectOfType<SelectionController>();
 
-        selectionController.Summon(this, Player.players.Keys.ToList(), 2);
-        selectionController.SetTitle(actionText);
+        player = Player.players[FindObjectOfType<RecordsTrack>().VictoryPoints >= 15 ? Game.Faction.France : Game.Faction.Britain]; 
+        selection = FindObjectOfType<SelectionController>().Select(Player.players.Values.ToList(), 1);
+        selection.SetTitle($"{player.faction} selects Initiative"); 
+        selection.callback = Finish;
     }
 
-    // How does the Selection Controller work? 
-    // We summon it with the list of things (we need to implement a better Visitor Pattern for this)
-    // We also pass in a Callback for OK, as well as Cancel. 
-
-    // We pass the callback in and it calls 
-
-
     [Button]
-    void Finish()
+    void Finish(List<Player> players)
     {
         // Let's assume for the time being that this only occurs within a Peace Turn phase. 
-        Game.Faction actingFaction = VictoryPointTrack.VP >= 15 ? Game.Faction.France : Game.Faction.Britain;
         ActionRound[] actionRounds = Phase.currentPhase.GetComponentsInChildren<ActionRound>();
-        Game.Faction opposingFaction = selectedFaction == Game.Faction.France ? Game.Faction.Britain : Game.Faction.France;
+        Game.Faction opposingFaction = player.faction == Game.Faction.France ? Game.Faction.Britain : Game.Faction.France;
+        selectedFaction = players.First().faction;
 
-        Debug.Log($"{actingFaction} elects to {(actingFaction == selectedFaction ? "Play" : "Pass")} the first Action Round");
+        Debug.Log($"{player.faction} elects to {(player.faction == selectedFaction ? "Play" : "Pass")} the first Action Round; " +
+            $"{opposingFaction} will go {(opposingFaction == selectedFaction ? "First" : "Second")}");        
 
         for (int i = 0; i < actionRounds.Length; i++) 
-        { 
-            actionRounds[i].actingFaction = i % 2 == 0 ? selectedFaction : opposingFaction;
+        {
+            base.Do(() => { }); 
+            actionRounds[i].actingFaction = i % 2 == 0 ? selectedFaction : opposingFaction; // TODO - make this a gamestate altering command and bring an empty base.do
+            // Optional: Change the acting player on all Actions in the phase? 
         }
 
-        base.Do(callback);
+        callback.Invoke(); 
     }
 }

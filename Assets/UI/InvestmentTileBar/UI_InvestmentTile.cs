@@ -16,49 +16,49 @@ public class UI_InvestmentTile : MonoBehaviour
     public void SetTile(InvestmentTile tile)
     {
         this.tile = tile;
-        Style(tile); 
+        //Style(tile); 
     }
 
-    public void Style(InvestmentTile tile)
-    {
-        GraphicSettings graphicSettings = FindObjectOfType<Game>().graphicSettings;
+    //public void Style(InvestmentTile tile)
+    //{
+    //    GraphicSettings graphicSettings = FindObjectOfType<Game>().graphicSettings;
 
-        foreach(ActionPoint actionPoint in tile.GetComponent<AdjustAPCommand>().actionPoints)
-        {
-            if(actionPoint.actionTier == Game.ActionTier.Major)
-            {
-                majorActionPoints.text = actionPoint.Value(new List<ICriteria>()).ToString(); 
-                majorIcon.sprite = graphicSettings.actionIcons[actionPoint.actionType];
-            }
-            else if (actionPoint.actionTier == Game.ActionTier.Minor)
-            {
-                minorActionPoints.text = actionPoint.Value(new List<ICriteria>()).ToString();
-                minorIcon.sprite = graphicSettings.actionIcons[actionPoint.actionType];
-            }
-        }
+    //    foreach(ActionPoint actionPoint in tile.GetComponent<AdjustAPCommand>().actionPoints)
+    //    {
+    //        if(actionPoint.actionTier == Game.ActionTier.Major)
+    //        {
+    //            majorActionPoints.text = actionPoint.Value(new List<ICriteria>()).ToString(); 
+    //            majorIcon.sprite = graphicSettings.actionIcons[actionPoint.actionType];
+    //        }
+    //        else if (actionPoint.actionTier == Game.ActionTier.Minor)
+    //        {
+    //            minorActionPoints.text = actionPoint.Value(new List<ICriteria>()).ToString();
+    //            minorIcon.sprite = graphicSettings.actionIcons[actionPoint.actionType];
+    //        }
+    //    }
 
-        //eventIcon.enabled = tile.GetComponent<EventCardTriggerCommand>();
-        //milUpgradeIcon.enabled = tile.TryGetComponent<MilitaryUpgradeCommand>(out MilitaryUpgradeCommand m); 
+    //    //eventIcon.enabled = tile.GetComponent<EventCardTriggerCommand>();
+    //    //milUpgradeIcon.enabled = tile.TryGetComponent<MilitaryUpgradeCommand>(out MilitaryUpgradeCommand m); 
 
-        // OK how to tell if the investment tile is selected? TODO - This is very ineffecient.
-        if(Phase.currentPhase is ActionRound)
-        {
-            foreach(ActionRound actionRound in Phase.currentPhase.transform.parent.GetComponentsInChildren<ActionRound>())
-            {
-                if(actionRound.investmentTile == tile)
-                {
-                    if(actionRound.actingFaction == Game.Faction.Neutral)
-                    {
-                        GetComponent<Image>().color = graphicSettings.factionColors[actionRound.actingFaction];
-                        GetComponent<Outline>().effectColor = new Color(226, 217, 144);
-                    }
-                    else
-                    {
-                        GetComponent<Image>().color = graphicSettings.factionColors[actionRound.actingFaction];
-                        GetComponent<Outline>().effectColor = Color.white;
-                    }
-                }
-            }
-        }
-    }
+    //    // OK how to tell if the investment tile is selected? TODO - This is very ineffecient.
+    //    if(Phase.currentPhase is ActionRound)
+    //    {
+    //        foreach(ActionRound actionRound in Phase.currentPhase.transform.parent.GetComponentsInChildren<ActionRound>())
+    //        {
+    //            if(actionRound.investmentTile == tile)
+    //            {
+    //                if(actionRound.actingFaction == Game.Faction.Neutral)
+    //                {
+    //                    GetComponent<Image>().color = graphicSettings.factionColors[actionRound.actingFaction];
+    //                    GetComponent<Outline>().effectColor = new Color(226, 217, 144);
+    //                }
+    //                else
+    //                {
+    //                    GetComponent<Image>().color = graphicSettings.factionColors[actionRound.actingFaction];
+    //                    GetComponent<Outline>().effectColor = Color.white;
+    //                }
+    //            }
+    //        }
+    //    }
+    //}
 }

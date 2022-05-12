@@ -8,7 +8,7 @@ public class Player : SerializedMonoBehaviour, ISelectable
     public Game.Faction faction; 
     public List<EventCard> hand;
     public List<MinistryCard> ministers; // bool = revealed?
-    public List<ActionPoint> actionPoints = new List<ActionPoint>(); 
+    public ActionPoints actionPoints = new ActionPoints(); 
     public List<WarTile> basicWarTiles, bonusWarTiles;
     public int CP = 0; 
 

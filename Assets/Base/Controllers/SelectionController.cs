@@ -13,7 +13,8 @@ public class SelectionController : MonoBehaviour
 
     public class Selection<T>
     {
-        Dictionary<T, bool> selectableItems = new Dictionary<T, bool>(); // Objected, Selected
+        public enum ItemSelectStatus { Unselected, Selected, Rejected }
+        Dictionary<T, ItemSelectStatus> selectableItems = new Dictionary<T, ItemSelectStatus>(); // Object object, bool Selected
         public UnityAction<List<T>> callback;
         int maxSelectable; 
 
@@ -23,24 +24,29 @@ public class SelectionController : MonoBehaviour
         {
             selectableItems.Clear();
             uiSelectionWindow = Instantiate(prefab, transform).GetComponent<UI_SelectionWindow>();
+            uiSelectionWindow.okButton.onClick.AddListener(() => callback.Invoke(selectedItems));
+            uiSelectionWindow.okButton.onClick.AddListener(Close); 
             this.maxSelectable = maxSelectable;
 
             items.ForEach(item => { // is this even necessary? Should uiSelectionWindow have a pseudo-constructor? 
-                selectableItems.Add(item, false);
-                uiSelectionWindow.AddTile(item);
+                selectableItems.Add(item, ItemSelectStatus.Unselected);
+                uiSelectionWindow.AddTile(item, this);
             });
+        }
 
+        void Close()
+        {
+            Destroy(uiSelectionWindow.gameObject); 
         }
 
         public void Select(T item)
         {
-            if (selectableItems.ContainsKey(item) && selectableItems.Where(item => item.Value == true).Count() < maxSelectable) 
-                selectableItems[item] = !selectableItems[item];
+            if (selectableItems.ContainsKey(item) && selectableItems.Where(item => item.Value == ItemSelectStatus.Selected).Count() < maxSelectable)
+                selectableItems[item] = ItemSelectStatus.Selected; 
         }
 
         public void SetTitle(string title) => uiSelectionWindow.SetTitle(title);
 
-        public List<T> selectedItems => selectableItems.Where(item => item.Value == true).Select(item => item.Key).ToList();
-
+        public List<T> selectedItems => selectableItems.Where(item => item.Value == ItemSelectStatus.Selected).Select(item => item.Key).ToList();
     }
 }

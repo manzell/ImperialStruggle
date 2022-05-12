@@ -9,7 +9,7 @@ public class Game : MonoBehaviour
     public enum Era { Succession, Empire, Revolution }
     public enum Keyword { Style, Governance, Mercantilism, Scholarship, Finance }
     public enum ActionType { None, Finance, Diplomacy, Military, Debt, Treaty, Free, VictoryPoint }
-    public enum ActionTier { Major, Minor }
+    public enum ActionTier { Minor, Major }
     public enum Resource { Fur, Fish, Tobacco, Sugar, Cotton, Spices }
 
     public static List<EventCard> eventDeck = new List<EventCard>(), eventDiscards = new List<EventCard>();
@@ -27,26 +27,6 @@ public class Game : MonoBehaviour
         players = FindObjectsOfType<Player>().ToList();
         firstPhase?.StartThread(); 
     }
-
-    //public static bool CanAfford(Dictionary<(ActionType, ActionTier), int> cost, Dictionary<(ActionType, ActionTier), int> resources)
-    //{
-    //    bool retVal = true; 
-
-    //    foreach(KeyValuePair<(ActionType type, ActionTier tier), int> kvp in cost)
-    //    {
-    //        resources.TryGetValue((kvp.Key.type, ActionTier.Minor), out int minorActionPoints);
-    //        resources.TryGetValue((kvp.Key.type, ActionTier.Major), out int majorActionPoints);
-    //        cost.TryGetValue((kvp.Key.type, ActionTier.Major), out int majorActionCost);
-    //        cost.TryGetValue((kvp.Key.type, ActionTier.Minor), out int minorActionCost);
-                
-    //        retVal &= majorActionPoints >= majorActionCost;
-
-    //        if(kvp.Key.tier == Game.ActionTier.Minor)
-    //            retVal &= majorActionPoints + minorActionPoints - majorActionCost >= minorActionCost;
-    //    }
-
-    //    return retVal; 
-    //}
 
     static List<string> gamelog = new List<string>(); 
     public static void Log(string str)

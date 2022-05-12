@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using System.Linq; 
 
-public class ScorePrestigeAction : GameAction, IScoreVP
+public class ScorePrestigeAction : GameAction, IAdjustVP
 {
     [SerializeField] int prestigeVPvalue = 2;
     [SerializeField] List<Space> usaSpaces; 

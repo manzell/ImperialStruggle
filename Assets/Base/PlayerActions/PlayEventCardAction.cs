@@ -1,0 +1,40 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Events;
+using System.Linq; 
+
+public class PlayEventCardAction : PlayerAction
+{
+    UnityAction callback; 
+    protected override void Do(UnityAction callback)
+    {
+        SelectionController selectionController = FindObjectOfType<SelectionController>();
+        List<EventCard> eventCards = player.hand.Where(card =>
+            card.reqdActionType == Game.ActionType.None || card.reqdActionType == Phase.currentPhase.GetComponent<ActionRound>()?.investmentTile.majorActionType).ToList();
+
+        this.callback = callback;
+
+        if (eventCards.Count > 0)
+        {
+            SelectionController.Selection<EventCard> selector = selectionController.Select(eventCards, 1);
+
+            selector.SetTitle($"Select a {player.faction} Event Card to Play");
+            selector.callback = Finish;
+        }
+        else
+        {
+            callback.Invoke(); 
+        }
+    }
+
+    public void Finish(List<EventCard> selectedEventCards)
+    {
+        if(selectedEventCards.Count > 0)
+        {
+            EventCard eventCard = selectedEventCards.First();
+            Debug.Log($"{player.faction} plays {eventCard.name}");
+        }
+        callback.Invoke(); 
+    }
+}

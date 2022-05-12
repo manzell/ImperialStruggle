@@ -11,7 +11,8 @@ public class InvestmentTile : SerializedMonoBehaviour, System.IComparable<Invest
 
     [HideInInspector] public static UnityEvent<InvestmentTile> selectInvestmentTileEvent = new UnityEvent<InvestmentTile>();
     public InvestmentTileStatus status; 
-    public ActionPoints actionPoints; 
+    public ActionPoints actionPoints;
+    List<PlayerAction> selectionActions = new List<PlayerAction>();
 
     public Game.ActionType majorActionType => actionPoints.Where(ap => ap.actionTier == Game.ActionTier.Major).First().actionType; 
     public Game.ActionType minorActionType => actionPoints.Where(ap => ap.actionTier == Game.ActionTier.Minor).First().actionType;

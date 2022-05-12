@@ -17,10 +17,25 @@ public class PlayerAction : BaseAction
             commands.ForEach(command => command.Do(this));
     }
 
-    protected virtual void Finish(List<object> returns)
-    {
-        callback.Invoke(); 
-    }
-
     public override bool Can() => conditionals.All(c => c.Test(this));
+
+    public bool CanAfford(ActionPoints actionPointCost)
+    {
+        ActionPoint test; 
+
+        Dictionary<ActionPoint.ActionPointKey, int> availableActionPoints = new Dictionary<ActionPoint.ActionPointKey,int>();
+
+        foreach(ActionPoint ap in player.actionPoints)
+        {
+            ActionPoint.ActionPointKey apKey = new ActionPoint.ActionPointKey(ap.actionType, ap.actionTier);
+
+            if (availableActionPoints.ContainsKey(apKey))
+                availableActionPoints[apKey] += ap.Value(this); 
+            else
+                availableActionPoints.Add(apKey, ap.Value(this));
+        }
+
+        // Note this presently fails to include Major Action Points in affording minor actions
+        return actionPointCost.All(cost => availableActionPoints[new ActionPoint.ActionPointKey(cost.actionType, cost.actionTier)] >= cost.Value(this));
+    }
 }

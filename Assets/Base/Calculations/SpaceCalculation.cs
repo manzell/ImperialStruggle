@@ -20,7 +20,7 @@ public class SpaceCalculation : Calculation<List<Space>>
             case SpaceType.Political:
                 return spaces.Where(space => space is PoliticalSpace).ToList();
             case SpaceType.Military:
-                return spaces.Where(space => space is MilSpace).ToList();
+                return spaces.Where(space => space is WarTile).ToList();
             default:
                 return spaces.ToList(); 
         }

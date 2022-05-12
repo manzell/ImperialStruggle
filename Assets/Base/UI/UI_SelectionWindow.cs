@@ -2,41 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events; 
 using TMPro; 
 
 public class UI_SelectionWindow : MonoBehaviour
 {
     [SerializeField] GameObject tileArea, buttonArea;
-    [SerializeField] Button okButton, resetButton;
-    [SerializeField] TextMeshProUGUI windowTitle;
+    public Button okButton, resetButton;
+    public TextMeshProUGUI windowTitle;
     [SerializeField] GameObject defaultTilePrefab, ministryCardPrefab, eventCardPrefab;
+    
 
-
-    public enum ItemSelectStatus { Unselected, Selected, Rejected }
-    public Dictionary<object, ItemSelectStatus> itemSelectStatus = new Dictionary<object, ItemSelectStatus>();
-
-    public List<object> selectedTiles; 
-
-    public void AddTile(object item)
+    public void AddTile<T>(T item, SelectionController.Selection<T> selector)
     {
         GameObject tile = Instantiate(GetTilePrefab(item), tileArea.transform);
-
+        tile.GetComponent<I_UITitle>().SetTitle(GetTileName(item)); 
         tile.name = GetTileName(item);
-
-        itemSelectStatus.Add(tile, ItemSelectStatus.Unselected);
         
         ClickToggleSelect toggle = tile.AddComponent<ClickToggleSelect>();
-        toggle.SetSelectionWindow(this); 
-        //the ClickToggleSelect Component, every time a click is 
+        toggle.pointerClickEvent.AddListener(() => selector.Select(item)); 
     }
 
     public void SetTitle(string title) => windowTitle.text = title;
 
-    GameObject GetTilePrefab<T>(T item)
+    GameObject GetTilePrefab<T>(T tile)
     {
-        if (item is MinistryCard)
+        if (tile is MinistryCard)
             return ministryCardPrefab;
-        else if (item is EventCard)
+        else if (tile is EventCard)
             return eventCardPrefab;
         else
             return defaultTilePrefab;

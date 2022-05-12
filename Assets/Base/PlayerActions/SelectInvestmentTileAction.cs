@@ -5,41 +5,47 @@ using UnityEngine.Events;
 using System.Linq;
 using Sirenix.OdinInspector; 
 
-public class SelectInvestmentTileAction : PlayerAction, IAdjustActionPoints
+public class SelectInvestmentTileAction : PlayerAction, IAdjustAP
 {
     public InvestmentTile investmentTile;
-    UnityAction callback;
-    SelectionController selectionController;
+    SelectionController.Selection<InvestmentTile> selection;
 
     public ActionPoints actionPoints => investmentTile.actionPoints;
 
-    Player IAdjustActionPoints.player => player;
+    Player IAdjustAP.player => player;
 
     protected override void Do(UnityAction callback)
     {
-        this.callback = callback;
-        selectionController = FindObjectOfType<SelectionController>();
-        player = Player.players[GetComponent<ActionRound>().actingFaction];
+        player = Player.players[GetComponent<ActionRound>().actingFaction]; // Maybe this should be set during the Set Initiative Phase?
+        Dictionary<InvestmentTile, Game.Faction> investmentTiles = Phase.currentPhase.GetComponentInParent<PeaceTurn>().investmentTiles; 
 
-        selectionController.Summon(this, Phase.currentPhase.GetComponent<PeaceTurn>().investmentTiles.Where(kvp => kvp.Value == Game.Faction.Neutral).ToList(), 2);
-        selectionController.SetTitle(actionText);
+        selection = FindObjectOfType<SelectionController>().Select(investmentTiles.Where(kvp => kvp.Value == Game.Faction.Neutral).Select(kvp => kvp.Key).ToList(), 1);
+        selection.SetTitle($"Select Investment Tile for {player.faction}");
+        selection.callback = returns => InvestmentTileActions(returns, callback);
     }
 
     [Button]
-    protected override void Finish(List<object> returns)
+    void InvestmentTileActions(List<InvestmentTile> returns, UnityAction callback)
     {
-        InvestmentTile tile = returns.First() as InvestmentTile; 
-        Phase.currentPhase.GetComponent<PeaceTurn>().investmentTiles[tile] = player.faction;
-        // TODO Get the Selection from the Selection Controller (eventually)
+        if(returns.Count == 1)
+        {
+            investmentTile = returns.First();
 
-        player.actionPoints.AddRange(tile.actionPoints);
+            foreach (PlayerAction action in investmentTile.GetComponents<PlayerAction>())
+                action.player = player;
 
-        callback.Invoke();
+            Phase.RunActionSequence(investmentTile.GetComponents<PlayerAction>().ToList<BaseAction>(), () => Finish(callback));
+
+            base.Do(() => { });
+        }
+        else
+        {
+            // Send a warning that 1 Investment Tile is required
+        }
     }
-}
 
-public interface IAdjustActionPoints
-{
-    public ActionPoints actionPoints { get; }
-    public Player player { get; }
+    void Finish(UnityAction callback)
+    {
+        callback.Invoke(); // This maybe ends the ActionRound?
+    }
 }

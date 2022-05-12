@@ -8,7 +8,7 @@ public class UI_Space : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     Coroutine Popup, ClosePopup;
     static GameObject _popupMenu;
-    public Space space; 
+    [HideInInspector] public Space space; 
 
     void Awake()
     {

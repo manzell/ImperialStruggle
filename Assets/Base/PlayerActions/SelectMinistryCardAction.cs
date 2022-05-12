@@ -13,8 +13,9 @@ public class SelectMinistryCardAction : PlayerAction
 
     protected override void Do(UnityAction callback)
     {
-        this.callback = callback;
-        selection = FindObjectOfType<SelectionController>().Select(player.ministers, 2);
+        this.callback = callback; 
+        selection = FindObjectOfType<SelectionController>().Select(player.ministers.Where(minister => minister.eras.Contains(Phase.currentPhase.era)).ToList(), 2);
+        selection.SetTitle($"Select {player.faction} Ministry Cards"); 
         selection.callback = Finish; 
     }
 

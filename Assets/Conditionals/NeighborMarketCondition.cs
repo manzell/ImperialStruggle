@@ -11,8 +11,8 @@ public class NeighborMarketCondition : Conditional
 
     public override bool Test(BaseAction context) 
     {
-        if (context is ITargetSpace targetSpace)
-            return targetSpace.space.adjacentSpaces.Count(space => space is Market && neighborFactions.Contains(space.flag)) >= numRequired;
+        if (context is ITargetType<Market> targetSpace)
+            return targetSpace.target.adjacentSpaces.Count(space => space is Market && neighborFactions.Contains(space.flag)) >= numRequired;
         else
             return true; 
     }

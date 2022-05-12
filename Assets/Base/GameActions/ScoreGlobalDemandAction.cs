@@ -4,14 +4,14 @@ using UnityEngine;
 using UnityEngine.Events;
 using System.Linq; 
 
-public class ScoreGlobalDemandAction : GameAction, IScoreVP, IScoreTP, IAdjustDebt
+public class ScoreGlobalDemandAction : GameAction, IAdjustVP, IAdjustTP, IAdjustDebt
 {
     Game.Faction _faction; 
     public Game.Faction faction => _faction;
 
     int _vp = 0, _tp = 0, _debt = 0;
-    int IScoreVP.vp => _vp;
-    int IScoreTP.tp => _tp;
+    int IAdjustVP.vp => _vp;
+    int IAdjustTP.tp => _tp;
     int IAdjustDebt.debt => _debt;
 
     public Dictionary<Game.Resource, Game.Faction> globalDemandWinners = new Dictionary<Game.Resource, Game.Faction>();
@@ -54,22 +54,4 @@ public class ScoreGlobalDemandAction : GameAction, IScoreVP, IScoreTP, IAdjustDe
 
         callback.Invoke(); 
     }
-}
-
-public interface IScoreVP
-{
-    public Game.Faction faction { get; }
-    int vp { get; }
-}
-
-public interface IScoreTP
-{
-    public Game.Faction faction { get; }
-    int tp { get; }
-}
-
-public interface IAdjustDebt
-{
-    public Game.Faction faction { get; }
-    int debt { get; }
 }

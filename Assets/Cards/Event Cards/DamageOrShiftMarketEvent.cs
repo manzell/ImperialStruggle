@@ -9,7 +9,7 @@ public class DamageOrShiftMarketEvent : CardEvent
     {
         Space space = eligibleSpaces[0]; // Note: Figure out how to be listen to the Selector
 
-        if(space is MilSpace && space.flag != faction)
+        if(space is WarTile && space.flag != faction)
         {
             Debug.Log($"Damage {space}"); 
         }

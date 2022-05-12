@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ResetTreatyPointsAction : GameAction, IScoreTP
+public class ResetTreatyPointsAction : GameAction, IAdjustTP
 {
     [SerializeField] int treatyPointsCap = 4;
 
-    Game.Faction IScoreTP.faction => throw new System.NotImplementedException();
+    Game.Faction IAdjustTP.faction => throw new System.NotImplementedException();
     Game.Faction _faction;
 
     public int tp => _tp;

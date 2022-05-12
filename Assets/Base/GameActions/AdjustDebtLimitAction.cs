@@ -5,11 +5,10 @@ using UnityEngine.Events;
 
 public class AdjustDebtLimitAction : GameAction
 {
-    public int amount;
     [HideInInspector] public Game.Faction faction;
-
-    [SerializeField] List<Game.Faction> factions;  
-
+    [SerializeField] List<Game.Faction> factions;
+    public int amount;
+ 
     protected override void Do(UnityAction callback)
     {
         foreach(Game.Faction _faction in factions)

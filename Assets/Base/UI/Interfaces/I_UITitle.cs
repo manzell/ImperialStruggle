@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface ITargetSpace
+public interface I_UITitle
 {
-    public Space space { get; set; }
+    public void SetTitle(string s); 
 }

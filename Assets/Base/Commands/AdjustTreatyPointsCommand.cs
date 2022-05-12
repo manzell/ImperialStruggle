@@ -6,7 +6,7 @@ public class AdjustTreatyPointsCommand : Command
 {
     public override void Do(BaseAction action)
     {
-        if (action is IScoreTP tpAction && tpAction.tp != 0)
+        if (action is IAdjustTP tpAction && tpAction.tp != 0)
             GameObject.FindObjectOfType<RecordsTrack>().treatyPoints[tpAction.faction] += tpAction.tp; 
     }
 }

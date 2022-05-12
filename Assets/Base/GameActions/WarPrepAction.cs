@@ -7,9 +7,9 @@ using System.Linq;
 public class WarPrepAction : GameAction
 {
     public WarTurn war;
+    [HideInInspector] public WarTile tile;
     [HideInInspector] public Game.Faction faction;
     [HideInInspector] public Theater theater;
-    public WarTile tile; 
 
     Game.Faction[] factions = { Game.Faction.France, Game.Faction.Britain };
 
@@ -17,26 +17,15 @@ public class WarPrepAction : GameAction
     {
         foreach (Theater _theater in war.theaters)
         {
-            foreach (Game.Faction _faction in factions)
+            foreach (Game.Faction _faction in Player.players.Keys)
             {
                 faction = _faction;
                 theater = _theater;
+                tile = Player.players[faction].basicWarTiles.OrderBy(tile => Random.value).First();
                 base.Do(() => { });
             }
         }
 
         callback.Invoke(); 
     }
-
-    void Visit_AddBasicWarTileCommand(AddWarTileToTheaterCommand command)
-    {
-        command.theater = theater; 
-        command.tile = Player.players[faction].basicWarTiles.OrderBy(tile => Random.value).First();
-        command.faction = faction; 
-    }
-}
-
-public interface Visitor
-{
-    public void Visit_AddBasiceWarTileCommand(AddWarTileToTheaterCommand command); 
 }
