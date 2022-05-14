@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Sirenix.OdinInspector; 
+using Sirenix.OdinInspector;
+using System.Linq; 
 
 public class Player : SerializedMonoBehaviour, ISelectable
 {
@@ -10,9 +11,13 @@ public class Player : SerializedMonoBehaviour, ISelectable
     public List<MinistryCard> ministers; // bool = revealed?
     public ActionPoints actionPoints = new ActionPoints(); 
     public List<WarTile> basicWarTiles, bonusWarTiles;
-    public int CP = 0; 
 
     public static Dictionary<Game.Faction, Player> players = new Dictionary<Game.Faction, Player>();
+
+    private void Awake()
+    {
+        players.Add(faction, this);
+    }
 
     public List<Game.Keyword> keywords
     {
@@ -28,8 +33,21 @@ public class Player : SerializedMonoBehaviour, ISelectable
         }
     }
 
-    private void Awake()
+    public bool CanAffordAction(PlayerAction action)
     {
-        players.Add(faction, this); 
+        Dictionary<ActionPoint.ActionPointKey, int> availableActionPoints = new Dictionary<ActionPoint.ActionPointKey, int>();
+
+        foreach (ActionPoint ap in actionPoints)
+        {
+            ActionPoint.ActionPointKey apKey = new ActionPoint.ActionPointKey(ap.actionType, ap.actionTier);
+
+            if (availableActionPoints.ContainsKey(apKey))
+                availableActionPoints[apKey] += ap.Value(action);
+            else
+                availableActionPoints.Add(apKey, ap.Value(action));
+        }
+
+        // Note this presently fails to include Major Action Points in affording minor actions
+        return action.actionPointCost.All(cost => availableActionPoints[new ActionPoint.ActionPointKey(cost.actionType, cost.actionTier)] >= cost.Value(action));
     }
 }

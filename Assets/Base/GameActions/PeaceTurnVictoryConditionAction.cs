@@ -13,7 +13,7 @@ public class PeaceTurnVictoryConditionAction : GameAction
 
         foreach(Game.Faction faction in Player.players.Keys)
         {
-            if(demandWinners.All(kvp => kvp.Value == faction) && mapWinners.All(kvp => kvp.Value == faction))
+            if(demandWinners.Count > 0 && mapWinners.Count > 0 && demandWinners.All(kvp => kvp.Value == faction) && mapWinners.All(kvp => kvp.Value == faction))
             {
                 Debug.Log($"GAME WINNER EVENT - {faction} Wins!"); 
             }

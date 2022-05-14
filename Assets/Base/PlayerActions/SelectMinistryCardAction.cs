@@ -22,8 +22,6 @@ public class SelectMinistryCardAction : PlayerAction
     [Button]
     void Finish(List<MinistryCard> cards)
     {
-        selectedCards = cards; 
- 
         base.Do(() => { });
         callback.Invoke();
     }

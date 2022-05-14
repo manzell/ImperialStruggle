@@ -16,7 +16,7 @@ public class SelectInvestmentTileAction : PlayerAction, IAdjustAP
 
     protected override void Do(UnityAction callback)
     {
-        player = Player.players[GetComponent<ActionRound>().actingFaction]; // Maybe this should be set during the Set Initiative Phase?
+        player = Player.players[GetComponent<ActionRound>().actingFaction];
         Dictionary<InvestmentTile, Game.Faction> investmentTiles = Phase.currentPhase.GetComponentInParent<PeaceTurn>().investmentTiles; 
 
         selection = FindObjectOfType<SelectionController>().Select(investmentTiles.Where(kvp => kvp.Value == Game.Faction.Neutral).Select(kvp => kvp.Key).ToList(), 1);
@@ -34,7 +34,7 @@ public class SelectInvestmentTileAction : PlayerAction, IAdjustAP
             foreach (PlayerAction action in investmentTile.GetComponents<PlayerAction>())
                 action.player = player;
 
-            Phase.RunActionSequence(investmentTile.GetComponents<PlayerAction>().ToList<BaseAction>(), () => Finish(callback));
+            Phase.RunActionSequence(investmentTile.GetComponents<PlayerAction>().ToList<BaseAction>(), () => callback.Invoke());
 
             base.Do(() => { });
         }
@@ -42,10 +42,5 @@ public class SelectInvestmentTileAction : PlayerAction, IAdjustAP
         {
             // Send a warning that 1 Investment Tile is required
         }
-    }
-
-    void Finish(UnityAction callback)
-    {
-        callback.Invoke(); // This maybe ends the ActionRound?
     }
 }

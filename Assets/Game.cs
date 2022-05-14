@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq; 
+using System.Linq;
 
 public class Game : MonoBehaviour
 {
@@ -13,25 +13,42 @@ public class Game : MonoBehaviour
     public enum Resource { Fur, Fish, Tobacco, Sugar, Cotton, Spices }
 
     public static List<EventCard> eventDeck = new List<EventCard>(), eventDiscards = new List<EventCard>();
-    public static List<Player> players; 
+    public static List<Player> players;
     public static Faction initiative = Faction.France;
     public static GlobalDemandTrack GlobalDemand => FindObjectOfType<Game>().globalDemandTrack;
 
-    public Phase firstPhase; 
+    public Phase startPhaseOnGameLaunch;
 
-    public GlobalDemandTrack globalDemandTrack; 
-    public GraphicSettings graphicSettings; 
+    public GlobalDemandTrack globalDemandTrack;
+    public GraphicSettings graphicSettings;
 
     private void Awake()
     {
         players = FindObjectsOfType<Player>().ToList();
-        firstPhase?.StartThread(); 
+        startPhaseOnGameLaunch?.StartThread();
     }
 
-    static List<string> gamelog = new List<string>(); 
+    static List<string> gamelog = new List<string>();
     public static void Log(string str)
     {
         print(str);
-        gamelog.Add(str); 
+        gamelog.Add(str);
+    }
+
+    public static Phase NextWarPhase => NextWarTurn.GetComponent<Phase>();
+
+    public static WarTurn NextWarTurn
+    {
+        get
+        {
+            List<Phase> allPhases = Phase.rootPhase.GetComponentsInChildren<Phase>().ToList();
+            int currentPhaseIndex = allPhases.IndexOf(Phase.currentPhase);
+
+            foreach (WarTurn war in Phase.rootPhase.GetComponentsInChildren<WarTurn>())
+                if (allPhases.IndexOf(war.GetComponent<Phase>()) > currentPhaseIndex)
+                    return war;
+
+            return null;
+        }
     }
 }

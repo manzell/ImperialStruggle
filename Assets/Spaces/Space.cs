@@ -10,5 +10,6 @@ public class Space : MonoBehaviour, ICriteria, ISelectable
     public Game.Era availableEra;
     public List<Space> adjacentSpaces;
     public int flagCost;
-    public bool prestige, alliance, conflictMarker; 
+    public bool prestige, alliance, conflictMarker;
+    public List<PlayerAction> standardActions = new List<PlayerAction>(); 
 }

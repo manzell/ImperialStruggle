@@ -7,13 +7,11 @@ public class ResetTreatyPointsAction : GameAction, IAdjustTP
 {
     [SerializeField] int treatyPointsCap = 4;
 
-    Game.Faction IAdjustTP.faction => throw new System.NotImplementedException();
+    public Game.Faction faction => _faction;
     Game.Faction _faction;
 
     public int tp => _tp;
     int _tp;
-
-
 
     protected override void Do(UnityAction callback)
     {

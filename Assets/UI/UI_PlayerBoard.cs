@@ -16,14 +16,6 @@ public class UI_PlayerBoard : MonoBehaviour
 
     public static Game.Faction faction = Game.Faction.France; 
 
-    private void Awake()
-    {
-        //SelectMinistersPhase.selectMinistersEvent.AddListener((phase, faction, ministers) => { if (UI_PlayerBoard.faction == faction) SetMinisters(ministers); });
-        PlayCard.playCardEvent.AddListener(playCard => RemoveCard(playCard.card));
-        PlayCard.playCardEvent.AddListener(playCard => RemoveCardHighlights());
-        // Remove Highlight on Play Card Event as well as any other Action? 
-    }
-
     public void Start()
     {
         SetFaction(faction);
@@ -66,20 +58,7 @@ public class UI_PlayerBoard : MonoBehaviour
 
     public void HilightCards(InvestmentTile tile)
     {
-        //if(tile.GetComponent<EventCardTriggerCommand>())
-        //{
-        //    // Issue this only highlights the cards if we're looking at the correct player's Player Board. If I'm tabbed over it won't highlight. 
-        //    // To fix I'll need to have two player boards, 1 for each player, and transition them, rather than the current approach. 
-        //    handArea.GetComponentsInChildren<UI_Card>()
-        //        .Where(uicard => (uicard.card as EventCard).reqdActionType == Game.ActionType.None || 
-        //            (uicard.card as EventCard).reqdActionType == tile.majorActionType)
-        //        .ToList()
-        //        .ForEach(card => {
-        //            card.GetComponent<UI_Card>().SetHighlight(Color.green);
-        //            if(!card.GetComponent<UI_ClickPlayCard>())
-        //                card.gameObject.AddComponent<UI_ClickPlayCard>(); 
-        //        }); 
-        //}
+
     }
 
     public void RemoveCardHighlights() =>

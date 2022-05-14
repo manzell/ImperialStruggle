@@ -7,6 +7,7 @@ using System.Linq;
 
 public abstract class BaseAction : SerializedMonoBehaviour
 {
+    public string actionName;
     public string actionText;
     public List<Conditional> conditionals = new List<Conditional>();
     public List<Command> commands = new List<Command>();

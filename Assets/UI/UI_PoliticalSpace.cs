@@ -5,22 +5,19 @@ using UnityEngine.UI;
 using TMPro;
 using Sirenix.OdinInspector; 
 
-public class UI_PoliticalSpace : UI_Space
+public class UI_PoliticalSpace : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI spaceName, flagCost;
     [SerializeField] Image trim, highlight, background;
-    //PoliticalSpace space; 
 
     private void Awake()
-    {
-        space = GetComponent<PoliticalSpace>();
+    {        
         Style();
-
-        ShiftSpace.shiftSpaceEvent.AddListener(ss => { if (ss.space == space) Style(); });
     }
 
     public void Style()
     {
+        Space space = GetComponent<PoliticalSpace>();
         spaceName.text = space.name;
         flagCost.text = space.flagCost.ToString();
 
