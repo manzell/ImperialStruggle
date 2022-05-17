@@ -8,7 +8,9 @@ public class AdjustDebtCommand : Command
     {
         if (action is IAdjustDebt adjustDebtAction && adjustDebtAction.debt != 0)
         {
-            GameObject.FindObjectOfType<RecordsTrack>().currentDebt[adjustDebtAction.faction] += adjustDebtAction.debt;
+            RecordsTrack.currentDebt[adjustDebtAction.faction] += adjustDebtAction.debt;
+
+            RecordsTrack.adjustDebtEvent.Invoke(); 
             // Check to see if Debt > Debt Limit
         }
     }

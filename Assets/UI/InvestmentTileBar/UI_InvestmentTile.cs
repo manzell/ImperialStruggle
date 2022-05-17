@@ -25,12 +25,12 @@ public class UI_InvestmentTile : MonoBehaviour
 
     //    foreach(ActionPoint actionPoint in tile.GetComponent<AdjustAPCommand>().actionPoints)
     //    {
-    //        if(actionPoint.actionTier == Game.ActionTier.Major)
+    //        if(actionPoint.actionTier == ActionPoint.ActionTier.Major)
     //        {
     //            majorActionPoints.text = actionPoint.Value(new List<ICriteria>()).ToString(); 
     //            majorIcon.sprite = graphicSettings.actionIcons[actionPoint.actionType];
     //        }
-    //        else if (actionPoint.actionTier == Game.ActionTier.Minor)
+    //        else if (actionPoint.actionTier == ActionPoint.ActionTier.Minor)
     //        {
     //            minorActionPoints.text = actionPoint.Value(new List<ICriteria>()).ToString();
     //            minorIcon.sprite = graphicSettings.actionIcons[actionPoint.actionType];

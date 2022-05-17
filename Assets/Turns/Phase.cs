@@ -43,10 +43,10 @@ public class Phase : SerializedMonoBehaviour
     public Phase nextPhase => nextChild ? nextChild : nextSibling;
 
 
-    [Button] public void StartThread() => StartPhase(() => Debug.Log("Thread Over"));
+    [Button] public void StartThread() => StartPhase(() => Game.Log("Thread Over"));
     public virtual void StartPhase(UnityAction callback)
     {
-        Debug.Log($"StartPhase::{this}");
+        Debug.Log($"StartPhase:: {this}");
 
         currentPhase = this;
         if (rootPhase == null) rootPhase = this; 
@@ -57,7 +57,7 @@ public class Phase : SerializedMonoBehaviour
 
     void OnPhase(UnityAction callback)
     {
-        Debug.Log($"OnPhase::{this}");
+        //Debug.Log($"OnPhase::{this}");
 
         phaseMidEvent.Invoke(this);
         AdvanceToChildPhase(callback);
@@ -67,7 +67,7 @@ public class Phase : SerializedMonoBehaviour
     // In which case it calls those with AfterPhase as the callback. Otherwise, it calls After Phase
     void AdvanceToChildPhase(UnityAction callback)
     {
-        Debug.Log($"EndPhase::{this}");
+        //Debug.Log($"EndPhase::{this}");
 
         phaseEndEvent.Invoke(this);
 
@@ -80,9 +80,7 @@ public class Phase : SerializedMonoBehaviour
     // After phase is called either from the terminal phase of the Child Callback or the previous sibling
     void AfterPhase(UnityAction callback)
     {
-        Debug.Log($"AfterPhase::{this}");
-        Debug.Log(nextSibling);
-
+        //Debug.Log($"AfterPhase::{this}");
         RunActionSequence(phaseEndActions, () => AdvanceToNextPhase(callback));
     }
 

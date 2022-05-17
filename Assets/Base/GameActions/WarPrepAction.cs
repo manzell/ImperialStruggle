@@ -21,7 +21,7 @@ public class WarPrepAction : GameAction
             {
                 faction = _faction;
                 theater = _theater;
-                tile = Player.players[faction].basicWarTiles.OrderBy(tile => Random.value).First();
+                tile = Player.players[faction].warTiles.OrderBy(tile => Random.value).First();
                 base.Do(() => { });
             }
         }

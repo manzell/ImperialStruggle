@@ -11,16 +11,17 @@ public class UI_SelectionWindow : MonoBehaviour
     public Button okButton, resetButton;
     public TextMeshProUGUI windowTitle;
     [SerializeField] GameObject defaultTilePrefab, ministryCardPrefab, eventCardPrefab;
-    
 
-    public void AddTile<T>(T item, SelectionController.Selection<T> selector)
+    Dictionary<ISelectable, GameObject> itemLookup = new Dictionary<ISelectable, GameObject>();
+
+    public void AddTile(ISelectable item, SelectionController.Selection selector)
     {
         GameObject tile = Instantiate(GetTilePrefab(item), tileArea.transform);
-        tile.GetComponent<I_UITitle>().SetTitle(GetTileName(item)); 
-        tile.name = GetTileName(item);
-        
-        ClickToggleSelect toggle = tile.AddComponent<ClickToggleSelect>();
-        toggle.pointerClickEvent.AddListener(() => selector.Select(item)); 
+        ClickHandler toggle = tile.AddComponent<ClickHandler>();
+
+        tile.GetComponent<I_UITitle>().SetTitle(GetTileName(item));         
+        toggle.pointerClickEvent.AddListener(() => selector.SelectItem(item));
+        itemLookup.Add(item, tile); 
     }
 
     public void SetTitle(string title) => windowTitle.text = title;
@@ -35,13 +36,19 @@ public class UI_SelectionWindow : MonoBehaviour
             return defaultTilePrefab;
     }
 
-    string GetTileName<T>(T item)
+    string GetTileName(ISelectable item) => item is MonoBehaviour g ? g.name : item.ToString(); 
+
+    public void Deselect(ISelectable item)
     {
-        if (item is MinistryCard)
-            return (item as MinistryCard).name;
-        else if (item is EventCard)
-            return (item as EventCard).name; 
-        else
-            return item.ToString();
+        if(itemLookup.TryGetValue(item, out GameObject tile))
+            tile.GetComponent<UI_SelectionTile>().RemoveHighlight(); 
+    }
+
+    public void Select(ISelectable item)
+    {
+        if (itemLookup.TryGetValue(item, out GameObject tile))
+        {
+            tile.GetComponent<UI_SelectionTile>().AddHighlight();
+        }
     }
 }

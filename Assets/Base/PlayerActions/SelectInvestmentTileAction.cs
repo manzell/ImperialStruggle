@@ -8,7 +8,7 @@ using Sirenix.OdinInspector;
 public class SelectInvestmentTileAction : PlayerAction, IAdjustAP
 {
     public InvestmentTile investmentTile;
-    SelectionController.Selection<InvestmentTile> selection;
+    SelectionController.Selection selection;
 
     public ActionPoints actionPoints => investmentTile.actionPoints;
 
@@ -16,20 +16,21 @@ public class SelectInvestmentTileAction : PlayerAction, IAdjustAP
 
     protected override void Do(UnityAction callback)
     {
-        player = Player.players[GetComponent<ActionRound>().actingFaction];
-        Dictionary<InvestmentTile, Game.Faction> investmentTiles = Phase.currentPhase.GetComponentInParent<PeaceTurn>().investmentTiles; 
+        
+        List<InvestmentTile> investmentTiles = Phase.currentPhase.GetComponentInParent<PeaceTurn>().investmentTiles.Where(kvp => kvp.Value == Game.Faction.Neutral).Select(kvp => kvp.Key).ToList();
 
-        selection = FindObjectOfType<SelectionController>().Select(investmentTiles.Where(kvp => kvp.Value == Game.Faction.Neutral).Select(kvp => kvp.Key).ToList(), 1);
+        player = GetComponent<ActionRound>().actingPlayer;
+        selection = FindObjectOfType<SelectionController>().Select(investmentTiles.ToList<ISelectable>(), 1);            
         selection.SetTitle($"Select Investment Tile for {player.faction}");
         selection.callback = returns => InvestmentTileActions(returns, callback);
     }
 
     [Button]
-    void InvestmentTileActions(List<InvestmentTile> returns, UnityAction callback)
+    void InvestmentTileActions(List<ISelectable> returns, UnityAction callback)
     {
         if(returns.Count == 1)
         {
-            investmentTile = returns.First();
+            investmentTile = (InvestmentTile)returns.First();
 
             foreach (PlayerAction action in investmentTile.GetComponents<PlayerAction>())
                 action.player = player;

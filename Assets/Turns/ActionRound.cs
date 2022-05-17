@@ -5,6 +5,6 @@ using UnityEngine.Events;
 
 public class ActionRound : MonoBehaviour
 {
-    public Game.Faction actingFaction;
+    public Player actingPlayer;
     public InvestmentTile investmentTile;
 }

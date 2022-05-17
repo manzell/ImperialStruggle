@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Fort : Space
 {
-
+    public bool damaged; 
 }

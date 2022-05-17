@@ -18,7 +18,7 @@ public class ResetTreatyPointsAction : GameAction, IAdjustTP
         foreach(Game.Faction faction in Player.players.Keys)
         {
             _faction = faction;
-            _tp = Mathf.Min(0, treatyPointsCap - FindObjectOfType<RecordsTrack>().treatyPoints[_faction]);
+            _tp = Mathf.Min(0, treatyPointsCap - RecordsTrack.treatyPoints[_faction]);
             base.Do(() => { });
         }
 

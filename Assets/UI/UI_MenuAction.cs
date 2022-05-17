@@ -12,39 +12,45 @@ public class UI_MenuAction : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     [SerializeField] TextMeshProUGUI cost, actionName;
 
     PlayerAction action;
-
-    public void SetAction(PlayerAction action)
-    {
-        Debug.Log(action);
-        Debug.Log(action.actionPointCost);
-        Debug.Log(action.actionPointCost.Count); 
-
-        actionName.text = action.actionName;
-
-        if (action.actionPointCost.Count > 0)
-        {
-            List<ActionPoint> majorActionPoints = action.actionPointCost.Where(actionPoint => actionPoint.actionTier == Game.ActionTier.Major).ToList();
-
-            this.action = action; 
-            
-            if (majorActionPoints.Count > 0)
-            {
-                cost.text = majorActionPoints[0].Value(action).ToString();
-                costIcon.sprite = FindObjectOfType<Game>().graphicSettings.actionIcons[majorActionPoints[0].actionType];
-            }
-            else
-            {
-                cost.text = string.Empty;
-                costIcon.sprite = FindObjectOfType<Game>().graphicSettings.actionIcons[Game.ActionType.None];
-            }
-        }        
-    }
+    UI_PopupMenu popupMenu; 
 
     public void OnPointerEnter(PointerEventData eventData) => highlight.gameObject.SetActive(true);
     public void OnPointerExit(PointerEventData eventData) => highlight.gameObject.SetActive(false);
     public void OnPointerClick(PointerEventData eventData)
     {
-        action.Try(() => { }); // Do nothing after executing the Action. 
-        // Oh we can close the menu, too? 
+        action.Try(() => { });
+        popupMenu.Close(); 
+    }
+
+    public void SetAction(PlayerAction action)
+    {
+        this.action = action;
+        actionName.text = action.actionName;
+
+        if (action.actionPointCost.Count > 0)
+            SetActionCost(action.actionPointCost); 
+    }
+
+    public void SetMenu(UI_PopupMenu popupMenu) => this.popupMenu = popupMenu; 
+
+    public void SetActionCost(ActionPoints actionPointCost)
+    {
+        List<ActionPoint> majorActionPoints = actionPointCost.Where(actionPoint => actionPoint.actionTier == ActionPoint.ActionTier.Major).ToList();
+        List<ActionPoint> minorActionPoints = actionPointCost.Where(actionPoint => actionPoint.actionTier == ActionPoint.ActionTier.Minor).ToList();
+
+        if (majorActionPoints.Count > 0)
+        {
+            cost.text = majorActionPoints[0].Value(action).ToString();
+            cost.color = Color.black; 
+            costIcon.sprite = FindObjectOfType<Game>().graphicSettings.actionIcons[majorActionPoints[0].actionType];
+            costIcon.color = Color.white;
+        }
+        else if(minorActionPoints.Count > 0)
+        {
+            cost.text = minorActionPoints[0].Value(action).ToString();
+            cost.color = Color.gray;
+            costIcon.sprite = FindObjectOfType<Game>().graphicSettings.actionIcons[minorActionPoints[0].actionType];
+            costIcon.color = Color.gray; 
+        }
     }
 }

@@ -11,7 +11,11 @@ public class UI_GameBoard : MonoBehaviour, IDragHandler, IBeginDragHandler, IPoi
     [SerializeField] float speed = 0.1f; 
     Vector3 previousPosition;
 
-    public void OnPointerClick(PointerEventData eventData) => clickEvent.Invoke(eventData);
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        Debug.Log("Board/OnPointerClick"); 
+        clickEvent.Invoke(eventData);
+    }
 
     public void OnBeginDrag(PointerEventData eventData) => previousPosition = Input.mousePosition;
 

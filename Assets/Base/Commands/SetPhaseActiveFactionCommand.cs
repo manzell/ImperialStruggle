@@ -6,18 +6,15 @@ public class SetPhaseActiveFactionCommand : Command
 {
     public override void Do(BaseAction action)
     {
-        if(action is ITargetType<Game.Faction> factionTarget && action is ITargetType<ActionRound> arTarget)
+        if(action is ITargetType<Player> player && action is ITargetType<ActionRound> arTarget)
         {
-            Debug.Log($"Setting initiative to {factionTarget.target} for {arTarget.target.name}");
-            arTarget.target.actingFaction = factionTarget.target; 
-        }
-        if(action is PlayerAction playerAction && action is ITargetType<ActionRound> _arTarget)
-        {
-            // Set all PlayerActions within the targetPhase and 
-            foreach(PlayerAction pAction in _arTarget.target.GetComponentsInChildren<PlayerAction>())
+            //Debug.Log($"Setting initiative to {faction.target} for {arTarget.target.name}");
+            arTarget.target.actingPlayer = player.target; 
+            
+            foreach (PlayerAction pAction in arTarget.target.GetComponentsInChildren<PlayerAction>())
             {
-                Debug.Log($"Setting {pAction.actionName} player to {playerAction.player} on {_arTarget.target.name}");
-                pAction.player = playerAction.player; 
+                //Debug.Log($"Setting {pAction.actionName} player to {faction.target} on {arTarget.target.name}");
+                pAction.player = player.target;
             }
         }
     }

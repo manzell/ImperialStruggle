@@ -4,14 +4,15 @@ using UnityEngine;
 using UnityEngine.Events;
 using Unity.Collections; 
 
-public class DealCardsAction : GameAction
+public class DealCardsAction : GameAction, ITargetType<Player>
 {
     enum DealType { UpTo, Fixed }
     [SerializeField] DealType dealType;
     [SerializeField] int numCards;
     [SerializeField] List<Game.Faction> factions = new List<Game.Faction>();
 
-    [ReadOnly] public Game.Faction faction; 
+    Player player;
+    public Player target => player; 
 
     protected override void Do(UnityAction callback)
     {
@@ -19,15 +20,13 @@ public class DealCardsAction : GameAction
         {
             foreach (Game.Faction _faction in factions)
             {
-                faction = _faction;
-                Player player = Player.players[_faction];
+                player = Player.players[_faction];
 
                 if(dealType != DealType.UpTo || player.hand.Count < numCards)
                     base.Do(() => { });
             }
         }
 
-        onActionEvent.Invoke(this);
         callback.Invoke(); 
     }
 }

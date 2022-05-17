@@ -9,10 +9,10 @@ public class UI_ActionPoint : MonoBehaviour
     [SerializeField] Image apIcon;
     [SerializeField] TextMeshProUGUI ap; 
 
-    public Game.ActionType actionType;
+    public ActionPoint.ActionType actionType;
     public int actionPoints; 
 
-    public void SetDisplay(Game.ActionType at, int amt)
+    public void SetDisplay(ActionPoint.ActionType at, int amt)
     {
         GraphicSettings graphicSettings = FindObjectOfType<Game>().graphicSettings; 
         actionType = at; 

@@ -13,7 +13,7 @@ public class AvailableDebtCondition : Conditional
     {
         if(action is ITargetType<Game.Faction> factionAction)
         {
-            int availableDebt = GameObject.FindObjectOfType<RecordsTrack>().availableDebt[factionAction.target];
+            int availableDebt = RecordsTrack.availableDebt[factionAction.target];
 
             switch (limitConditionType)
             {

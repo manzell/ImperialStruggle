@@ -43,9 +43,9 @@ public class ScoreGlobalDemandAction : GameAction, IAdjustVP, IAdjustTP, IAdjust
 
                 if (_faction != Game.Faction.Neutral)
                 {
-                    _vp = demandTrack[era][resource][Game.ActionType.VictoryPoint];
-                    _tp = demandTrack[era][resource][Game.ActionType.Treaty];
-                    _debt = demandTrack[era][resource][Game.ActionType.Debt];
+                    _vp = demandTrack[era][resource][ActionPoint.ActionType.VictoryPoint];
+                    _tp = demandTrack[era][resource][ActionPoint.ActionType.Treaty];
+                    _debt = demandTrack[era][resource][ActionPoint.ActionType.Debt];
 
                     base.Do(() => { });
                 }

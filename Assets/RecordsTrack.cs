@@ -1,16 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using Sirenix.OdinInspector; 
+using UnityEngine.Events;
 
-public class RecordsTrack : SerializedMonoBehaviour
+public static class RecordsTrack
 {
-    public Dictionary<Game.Faction, int> debtLimit;
-    public Dictionary<Game.Faction, int> currentDebt;
-    public Dictionary<Game.Faction, int> treatyPoints;
-    public int VictoryPoints; 
+    public static Dictionary<Game.Faction, int> debtLimit = new Dictionary<Game.Faction, int>();
+    public static Dictionary<Game.Faction, int> currentDebt = new Dictionary<Game.Faction, int>();
+    public static Dictionary<Game.Faction, int> treatyPoints = new Dictionary<Game.Faction, int>();
+    public static int VictoryPoints;
 
-    public Dictionary<Game.Faction, int> availableDebt
+    public static UnityEvent adjustDebtLimitEvent = new UnityEvent(),
+        adjustDebtEvent = new UnityEvent(),
+        adjustVPEvent = new UnityEvent(),
+        adjustTPEvent = new UnityEvent();
+
+    public static Dictionary<Game.Faction, int> availableDebt
     {
         get
         {

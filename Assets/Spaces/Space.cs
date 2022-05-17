@@ -1,9 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events; 
 
 public class Space : MonoBehaviour, ICriteria, ISelectable
 {
+    [HideInInspector]
+    public UnityEvent
+        updateSpaceEvent = new UnityEvent();
+
     public Map map; 
     public Game.Faction flag;
     public Game.Faction control => conflictMarker ? Game.Faction.Neutral : flag; 

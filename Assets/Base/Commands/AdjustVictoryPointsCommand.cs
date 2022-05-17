@@ -7,6 +7,9 @@ public class AdjustVictoryPointsCommand : Command
     public override void Do(BaseAction action)
     {
         if(action is IAdjustVP vpAction && vpAction.vp != 0)
-            GameObject.FindObjectOfType<RecordsTrack>().VictoryPoints += (vpAction.faction == Game.Faction.Britain ? vpAction.vp : -vpAction.vp);
+        {
+            RecordsTrack.VictoryPoints += (vpAction.faction == Game.Faction.Britain ? vpAction.vp : -vpAction.vp);
+            RecordsTrack.adjustVPEvent.Invoke(); 
+        }
     }
 }

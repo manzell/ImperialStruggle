@@ -4,7 +4,7 @@ using UnityEngine;
 using System.Linq;
 using Sirenix.OdinInspector; 
 
-public class Theater : SerializedMonoBehaviour
+public class Theater : SerializedMonoBehaviour, ISelectable
 {
     public Map map;
     public Dictionary<Game.Faction, List<WarTile>> warTiles; 

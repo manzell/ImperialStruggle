@@ -12,20 +12,25 @@ public abstract class BaseAction : SerializedMonoBehaviour
     public List<Conditional> conditionals = new List<Conditional>();
     public List<Command> commands = new List<Command>();
 
-    [HideInInspector] public UnityEvent<BaseAction> onActionEvent = new UnityEvent<BaseAction>();
-
-    public void Try(UnityAction callback) 
+    public bool Try(UnityAction callback) 
     {
         if (Can())
         {
-            Game.Log(actionText);
-            Do(() => Resolve(callback));
-            onActionEvent.Invoke(this);
+            Do(callback);
+            return true; 
         }
-        else Resolve(callback); 
+        else
+        {
+            callback.Invoke();
+            return false; 
+        }
     }
 
-    public virtual bool Can() => conditionals.All(c => c.Test(this)); 
+    public virtual bool Can()
+    {
+        bool retVal = conditionals.All(c => c.Test(this));
+        return retVal;         
+    }
+
     protected abstract void Do(UnityAction callback); 
-    void Resolve(UnityAction callback) => callback.Invoke(); 
 }

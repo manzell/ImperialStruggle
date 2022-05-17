@@ -6,11 +6,11 @@ public class SelectMinistryCardCommand : Command
 {
     public override void Do(BaseAction action)
     {
-        if(action is SelectMinistryCardAction ministryAction)
+        if(action is ITargetType<List<ISelectable>> ministryAction)
         {
-            ministryAction.selectedCards.ForEach(card => { 
-                card.ministryCardStatus = MinistryCard.MinistryCardStatus.Selected;
-                Game.Log($"{ministryAction.player.faction} selects {card} Ministry Card");
+            ministryAction.target.ForEach(card => { 
+                (card as MinistryCard).ministryCardStatus = MinistryCard.MinistryCardStatus.Selected;
+                Game.Log($"{(card as MinistryCard).faction} selects {card} Ministry Card");
             }); 
         }
     }

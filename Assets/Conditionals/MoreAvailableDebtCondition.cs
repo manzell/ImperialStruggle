@@ -10,7 +10,7 @@ public class MoreAvailableDebtCondition : Conditional
         if (context is PlayerAction playerAction) 
         {
             Player player = playerAction.player; 
-            Dictionary<Game.Faction, int> availableDebt = GameObject.FindObjectOfType<RecordsTrack>().availableDebt;
+            Dictionary<Game.Faction, int> availableDebt = RecordsTrack.availableDebt;
             Game.Faction opposingFaction = player.faction == Game.Faction.Britain ? Game.Faction.France : Game.Faction.Britain;
 
             return margin == 0 ? availableDebt[player.faction] == availableDebt[opposingFaction] : 

@@ -10,10 +10,9 @@ using Sirenix.OdinInspector;
 public class UI_ActionPoints : SerializedMonoBehaviour
 {
     [SerializeField] GameObject actionPointPrefab;
-    [SerializeField] Dictionary<Game.ActionTier, GameObject> actionTiers = new Dictionary<Game.ActionTier, GameObject>(); 
+    [SerializeField] Dictionary<ActionPoint.ActionTier, GameObject> actionTiers = new Dictionary<ActionPoint.ActionTier, GameObject>(); 
     [SerializeField] Button takeDebtButton, activateTPbutton, reduceDebtButton; 
-    Dictionary<(Game.ActionType, Game.ActionTier), UI_ActionPoint> APtiles = new Dictionary<(Game.ActionType, Game.ActionTier), UI_ActionPoint>();
-    RecordsTrack recordsTrack;
+    Dictionary<(ActionPoint.ActionType, ActionPoint.ActionTier), UI_ActionPoint> APtiles = new Dictionary<(ActionPoint.ActionType, ActionPoint.ActionTier), UI_ActionPoint>();
 
     // This displays our current ActionPoints on a Bar; ordered by Category, then by Major/Minor, then by value.
     // Actions Points with a restriction will be grouped and displayed separately, there will be a popup 
