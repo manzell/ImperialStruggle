@@ -36,6 +36,8 @@ public class Player : SerializedMonoBehaviour, ISelectable
         }
     }
 
+    public List<Squadron> squadrons;
+
     [SerializeField] PlayerAction currentAction; 
     [SerializeField] Dictionary<ActionPoint.ActionPointKey, int> totalAPCost = new Dictionary<ActionPoint.ActionPointKey, int>();
     [SerializeField] Dictionary<ActionPoint.ActionPointKey, List<ActionPoint>> eligibleAPs = new Dictionary<ActionPoint.ActionPointKey, List<ActionPoint>>();

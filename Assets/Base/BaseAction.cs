@@ -12,16 +12,22 @@ public abstract class BaseAction : SerializedMonoBehaviour
     public List<Conditional> conditionals = new List<Conditional>();
     public List<Command> commands = new List<Command>();
 
+    public void Trigger()
+    {
+        Try(() => { }); 
+    }
+
     public bool Try(UnityAction callback) 
     {
         if (Can())
         {
+            Phase.currentPhase.executedActions.Add(this); 
             Do(callback);
             return true; 
         }
         else
         {
-            callback.Invoke();
+            callback?.Invoke();
             return false; 
         }
     }

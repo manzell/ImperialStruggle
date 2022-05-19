@@ -326,3 +326,4 @@ MonoBehaviour:
       Data: 
   PopupMenu: {fileID: 9122740981347439611, guid: 9fe09d6d85f9cb64496877cc82dafaee, type: 3}
   PopupAction: {fileID: 4740788469765832461, guid: f11c941a251770648b148378c1e0a5b2, type: 3}
+  prestigeHighlightColor: {r: 0.03027763, g: 0.5943396, b: 0.06104462, a: 1}

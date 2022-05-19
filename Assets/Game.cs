@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events; 
 using System.Linq;
 
 public class Game : MonoBehaviour
@@ -14,6 +15,7 @@ public class Game : MonoBehaviour
 
     public static List<EventCard> eventDeck = new List<EventCard>(), eventDiscards = new List<EventCard>();
     public static List<Player> players;
+    public static Player activePlayer; 
     public static Faction initiative = Faction.France;
     public static GlobalDemandTrack GlobalDemand => FindObjectOfType<Game>().globalDemandTrack;
 
@@ -50,5 +52,12 @@ public class Game : MonoBehaviour
 
             return null;
         }
+    }
+
+    public static UnityEvent<Player> setActivePlayerEvent = new UnityEvent<Player>(); 
+    public static void SetActivePlayer(Player p)
+    {
+        activePlayer = p;
+        setActivePlayerEvent.Invoke(p); 
     }
 }

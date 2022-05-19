@@ -15,6 +15,7 @@ public class Phase : SerializedMonoBehaviour
         phaseEndEvent = new UnityEvent<Phase>();
 
     public Game.Era era;
+    public List<BaseAction> executedActions = new List<BaseAction>(); 
 
     [SerializeField] List<BaseAction> phaseStartActions = new List<BaseAction>(),
         phaseEndActions = new List<BaseAction>(); 

@@ -8,10 +8,15 @@ public class BuildFleetCommand : Command
     {
         //This command adds a fleet to the Navy
 
-        if(action is ITargetType<Player> player)
+        if(action is PlayerAction playerAction)
         {
             Squadron squadron = new Squadron();
-            squadron.flag = player.target.faction; 
+            NavyBox.squadrons.Add(squadron);
+
+            squadron.flag = playerAction.player.faction;
+            playerAction.player.squadrons.Add(squadron); 
+
+            Debug.Log($"{playerAction.player} adds a Squadron to the Naval Box");
         }
     }
 }

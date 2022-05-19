@@ -20,22 +20,42 @@ public class ActionPoint
 
     public ActionPointKey apKey => new ActionPointKey(this); 
 
+    public ActionPoint(ActionType type, ActionTier tier)
+    {
+        actionType = type;
+        actionTier = tier;
+        actionPoints = 1;
+    }
+
+    public ActionPoint() { }
+
     [System.Serializable]
     public struct ActionPointKey
     {
         public ActionType actionType;
         public ActionTier actionTier;
+        public string condition; 
 
         public ActionPointKey(ActionType type, ActionTier tier)
         {
             actionType = type;
             actionTier = tier;
+            condition = string.Empty; 
         }
 
         public ActionPointKey(ActionPoint AP)
         {
             actionType = AP.actionType;
             actionTier = AP.actionTier;
+            condition = string.Empty;
+
+            foreach(Conditional c in AP.conditionals)
+            {
+                if (condition != string.Empty) 
+                    condition += " "; 
+                condition += $"{c.conditionalText}.";
+            }
+
         }
     }
 }

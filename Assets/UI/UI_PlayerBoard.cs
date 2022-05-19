@@ -21,11 +21,7 @@ public class UI_PlayerBoard : MonoBehaviour
         SetFaction(faction);
     }
 
-    public void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Tab))
-            SetFaction(faction == Game.Faction.Britain ? Game.Faction.France : Game.Faction.Britain); 
-    }
+
 
     public void SetFaction(Game.Faction faction)
     {

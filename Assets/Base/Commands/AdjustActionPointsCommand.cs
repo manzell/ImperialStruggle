@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class AdjustActionPointsCommand : Command
 {
-    public static UnityEvent<ActionPoint> adjustAPEvent = new UnityEvent<ActionPoint>();
+    public static UnityEvent adjustAPEvent = new UnityEvent();
 
     public override void Do(BaseAction action)
     {
@@ -14,7 +14,7 @@ public class AdjustActionPointsCommand : Command
         {
             foreach (ActionPoint ap in APAction.target)
             {
-                adjustAPEvent.Invoke(ap); // the actual AP is passed in - and can be modified
+                adjustAPEvent.Invoke(); // the actual AP is passed in - and can be modified
                 playerAction.target.actionPoints.Add(ap);
             }
         }
@@ -23,7 +23,7 @@ public class AdjustActionPointsCommand : Command
         {
             foreach (ActionPoint ap in apAction.actionPoints)
             {
-                adjustAPEvent.Invoke(ap); // the actual AP is passed in - and can be modified
+                adjustAPEvent.Invoke(); // the actual AP is passed in - and can be modified
                 apAction.player.actionPoints.Add(ap);
             }
         }
