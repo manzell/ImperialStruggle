@@ -11,6 +11,7 @@ public class UI_ActionPoint : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 {
     [SerializeField] Image apIcon;
     [SerializeField] TextMeshProUGUI apPoints;
+    [SerializeField] Image background, highlight; 
 
     IEnumerator popupTimer;
     GameObject popupGameObject;
@@ -38,7 +39,7 @@ public class UI_ActionPoint : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     public void setAPValue(ActionPoint.ActionPointKey key, int val)
     {
-        apPoints.text = val.ToString(); // LOOK INTO THIS
+        apPoints.text = val.ToString();
         apPoints.color = key.actionTier == ActionPoint.ActionTier.Major ? Color.black : Color.gray;
     }
 

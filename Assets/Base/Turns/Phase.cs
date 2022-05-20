@@ -70,7 +70,6 @@ public class Phase : SerializedMonoBehaviour
     {
         //Debug.Log($"EndPhase::{this}");
 
-        phaseEndEvent.Invoke(this);
 
         if (nextChild)
             nextChild.StartPhase(callback);
@@ -81,6 +80,7 @@ public class Phase : SerializedMonoBehaviour
     // After phase is called either from the terminal phase of the Child Callback or the previous sibling
     void AfterPhase(UnityAction callback)
     {
+        phaseEndEvent.Invoke(this);
         //Debug.Log($"AfterPhase::{this}");
         RunActionSequence(phaseEndActions, () => AdvanceToNextPhase(callback));
     }

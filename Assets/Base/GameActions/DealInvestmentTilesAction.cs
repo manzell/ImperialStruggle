@@ -4,10 +4,12 @@ using UnityEngine;
 using UnityEngine.Events;
 using System.Linq; 
 
-public class DealInvestmentTilesAction : GameAction
+public class DealInvestmentTilesAction : GameAction, ITargetType<InvestmentTile>
 {
-    public InvestmentTile tile;
+    InvestmentTile tile;
     [SerializeField] int numToDeal;
+
+    public InvestmentTile target => tile;
 
     protected override void Do(UnityAction callback)
     {

@@ -10,16 +10,16 @@ public class BuildFortAction : PlayerAction, ITargetType<Fort>
 
     void Awake()
     {
-        if (baseActionCost == null)
+        if (actionPointCost.Count > 0)
+            baseActionCost = actionPointCost[0];
+        else if (baseActionCost == null)
         {
             baseActionCost = new ActionPoint();
             baseActionCost.actionType = ActionPoint.ActionType.Military;
             baseActionCost.actionTier = ActionPoint.ActionTier.Minor;
+            actionPointCost.Add(baseActionCost);
         }
 
         baseActionCost.actionPoints = target.flagCost;
-
-        if (!actionPointCost.Contains(baseActionCost))
-            actionPointCost.Add(baseActionCost); 
     }
 }

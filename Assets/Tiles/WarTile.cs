@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class WarTile : MonoBehaviour, ISelectable
 {
+    public string subname; 
     public enum WarTileSet { Basic, Bonus }
     public int value;
     public WarTileSet warTileSet;

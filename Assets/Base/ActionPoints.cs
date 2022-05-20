@@ -49,7 +49,7 @@ public class ActionPoints : List<ActionPoint>
             Dictionary<ActionPoint.ActionPointKey, int> retVal = new Dictionary<ActionPoint.ActionPointKey, int>();
 
             foreach (ActionPoint.ActionPointKey key in suitcase.Keys)
-                retVal.Add(key, suitcase[key].Sum(AP => AP.Value(new PlayerAction()))); 
+                retVal.Add(key, suitcase[key].Sum(AP => AP.Value(null))); 
 
             return retVal; 
         }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events; 
 
-public class AdjustActionPointsCommand : Command
+public class AdjustAPCommand : Command
 {
     public static UnityEvent adjustAPEvent = new UnityEvent();
 
@@ -23,8 +23,8 @@ public class AdjustActionPointsCommand : Command
         {
             foreach (ActionPoint ap in apAction.actionPoints)
             {
-                adjustAPEvent.Invoke(); // the actual AP is passed in - and can be modified
                 apAction.player.actionPoints.Add(ap);
+                adjustAPEvent.Invoke(); // the actual AP is passed in - and can be modified
             }
         }
     }

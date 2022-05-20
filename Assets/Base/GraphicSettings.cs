@@ -12,5 +12,7 @@ public class GraphicSettings : SerializedScriptableObject
     public Dictionary<ActionPoint.ActionType, Sprite> actionIcons;
     public Dictionary<Game.Faction, Color> factionColors;
     public GameObject PopupMenu, PopupAction; 
-    public Color prestigeHighlightColor; 
+    public Color prestigeHighlightColor;
+    public Dictionary<Game.Resource, Color> resourceColors;
+    public Dictionary<Game.Resource, Sprite> resourceSprites;
 }

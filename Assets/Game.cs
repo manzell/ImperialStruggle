@@ -24,6 +24,8 @@ public class Game : MonoBehaviour
     public GlobalDemandTrack globalDemandTrack;
     public GraphicSettings graphicSettings;
 
+    public static UnityEvent startGameEvent = new UnityEvent(); 
+
     private void Awake()
     {
         players = FindObjectsOfType<Player>().ToList();

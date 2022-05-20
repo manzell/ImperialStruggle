@@ -11,22 +11,18 @@ public class UI_ActionPoints : SerializedMonoBehaviour
     
     Dictionary<ActionPoint.ActionPointKey, UI_ActionPoint> APtiles = new Dictionary<ActionPoint.ActionPointKey, UI_ActionPoint>();
 
-    ActionPoints actionPoints; 
+    ActionPoints actionPoints = new ActionPoints();
 
-    void AddTile(ActionPoint actionPoint)
+    private void Awake()
     {
-        GameObject tile = Instantiate(actionPointPrefab, actionTiers[actionPoint.actionTier].transform);
-        APtiles.Add(actionPoint.apKey, tile.GetComponent<UI_ActionPoint>());
-
-
-        APtiles[actionPoint.apKey].SetDisplay(actionPoint.apKey, actionPoints.Values[actionPoint.apKey]); 
+        AdjustAPCommand.adjustAPEvent.AddListener(UpdateTiles);
+        Game.setActivePlayerEvent.AddListener(player => actionPoints = player.actionPoints); 
     }
 
     void AddTile(ActionPoint.ActionPointKey key)
     {
         //ActionPoint actionPoint = new ActionPoint(key.actionType, key.actionTier);
         //AddTile(actionPoint);
-
 
         GameObject tile = Instantiate(actionPointPrefab, actionTiers[key.actionTier].transform);
         APtiles.Add(key, tile.GetComponent<UI_ActionPoint>());
@@ -39,15 +35,15 @@ public class UI_ActionPoints : SerializedMonoBehaviour
         APtiles.Remove(key); 
     }
 
-    public void UpdateTiles(ActionPoints actionPoints)
+    public void UpdateTiles()
     {
+        Debug.Log("Update Tiles!"); 
         // Sets our current Display to match the given set of Action Points
 
         /* First let's get a list of each KEY in our suitcase of action points,
          * then sort them how we like */
 
         List<ActionPoint.ActionPointKey> ourKeys = actionPoints.suitcase.Keys.ToList();
-        this.actionPoints = actionPoints; 
 
         foreach(ActionPoint.ActionPointKey key in APtiles.Where(kvp => !ourKeys.Contains(kvp.Key)).Select(kvp => kvp.Key))
             RemoveTile(key); 

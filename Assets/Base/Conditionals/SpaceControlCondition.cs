@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class SpaceControlCondition : Conditional
 {
-    enum SpaceConditionType { Friendly, Opposed, Nonfriendly, Nonopposed }
+    enum SpaceConditionType { Friendly, Opposed, Neutral, Nonfriendly, Nonopposed }
     [SerializeField] SpaceConditionType spaceConditionType;
 
     public override bool Test(BaseAction action)
@@ -24,6 +24,8 @@ public class SpaceControlCondition : Conditional
                 case SpaceConditionType.Nonopposed:
                     return spaceAction.target.flag == playerAction.player.faction ||
                         spaceAction.target.flag == Game.Faction.Neutral;
+                case SpaceConditionType.Neutral:
+                    return spaceAction.target.flag == Game.Faction.Neutral;
             }
         }
         return true; 

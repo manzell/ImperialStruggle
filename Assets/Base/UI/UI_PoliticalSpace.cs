@@ -9,21 +9,23 @@ public class UI_PoliticalSpace : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI spaceName, flagCost;
     [SerializeField] Image trim, highlight, background;
+    public PoliticalSpace space; 
 
     private void Awake()
-    {        
-        Style();
-        GetComponent<Space>().updateSpaceEvent.AddListener(Style); 
+    {
+        space.updateSpaceEvent.AddListener(Style);
+        Game.startGameEvent.AddListener(Style);
     }
 
     [Button]
-    public void Style()
+    void Style()
     {
-        Space space = GetComponent<PoliticalSpace>();
+        GraphicSettings graphics = FindObjectOfType<Game>().graphicSettings;
+
         spaceName.text = space.name;
         flagCost.text = space.flagCost.ToString();
-        trim.color = space.prestige ? FindObjectOfType<Game>().graphicSettings.prestigeHighlightColor : Color.white; 
+        trim.color = space.prestige ? graphics.prestigeHighlightColor : Color.white; 
         highlight.gameObject.SetActive(space.conflictMarker);
-        background.color = FindObjectOfType<Game>().graphicSettings.factionColors[space.flag];
+        background.color = graphics.factionColors[space.flag];
     }
 }
