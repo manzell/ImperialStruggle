@@ -16,7 +16,7 @@ public class DealInvestmentTileCommand : Command
             tile.status = InvestmentTile.InvestmentTileStatus.Available;
             Phase.currentPhase.GetComponent<PeaceTurn>().investmentTiles.Add(tile, Game.Faction.Neutral); 
 
-            Game.Log($"{tile} added to Investment Tile Pool");
+            Game.Log($"{tile.name} added to Investment Tile Pool");
             dealInvestmentTileEvent.Invoke(tile);
             secondEvent.Invoke(tile); 
         }

@@ -18,7 +18,7 @@ public class AddWarTileToTheaterCommand : Command
 
             Player.players[warAction.faction].warTiles.Remove(warAction.tile); 
 
-            Game.Log($"{warAction.faction} {warAction.tile} added to {warAction.theater}");
+            Game.Log($"{warAction.faction} {warAction.tile.name} added to {warAction.theater.name}");
         }
         if(action is PlayerAction playerAction && action is ITargetType<Theater> theater && action is ITargetType<WarTile> warTile)
         {

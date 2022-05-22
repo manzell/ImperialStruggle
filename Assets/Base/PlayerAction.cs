@@ -17,6 +17,11 @@ public class PlayerAction : BaseAction
 
     public override bool Can()
     {
+        Debug.Log($"Player Action: {this.name}");
+        Debug.Log(base.Can());
+        Debug.Log(player);
+        Debug.Log(player.CanAffordAction(this));
+
         bool retVal = base.Can() && player.CanAffordAction(this);
         return retVal;
     }

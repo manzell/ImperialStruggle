@@ -85,87 +85,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
+    SerializedFormat: 0
+    SerializedBytes: 01010c00000063006f006e0064006900740069006f006e0061006c0073002f00000000014b000000530079007300740065006d002e0043006f006c006c0065006300740069006f006e0073002e00470065006e0065007200690063002e004c00690073007400600031005b005b0043006f006e0064006900740069006f006e0061006c002c00200041007300730065006d0062006c0079002d004300530068006100720070005d005d002c0020006d00730063006f0072006c006900620000000000060100000000000000022f0100000001260000005300700061006300650043006f006e00740072006f006c0043006f006e0064006900740069006f006e002c00200041007300730065006d0062006c0079002d004300530068006100720070000100000027010f00000063006f006e0064006900740069006f006e0061006c00540065007800740001200000004e006f006e002d0066007200690065006e0064006c007900200073007000610063006500200043006f006e00740072006f006c00200043006800650063006b001d01120000007300700061006300650043006f006e0064006900740069006f006e005400790070006500030000000000000005070501010800000063006f006d006d0061006e00640073002f020000000147000000530079007300740065006d002e0043006f006c006c0065006300740069006f006e0073002e00470065006e0065007200690063002e004c00690073007400600031005b005b0043006f006d006d0061006e0064002c00200041007300730065006d0062006c0079002d004300530068006100720070005d005d002c0020006d00730063006f0072006c006900620002000000060200000000000000022f030000000122000000530068006900660074005300700061006300650043006f006d006d0061006e0064002c00200041007300730065006d0062006c0079002d004300530068006100720070000300000005022f04000000012c000000520065006d006f007600650043006f006e0066006c006900630074004d00610072006b006500720043006f006d006d0061006e0064002c00200041007300730065006d0062006c0079002d004300530068006100720070000400000005070501010f00000061006300740069006f006e0050006f0069006e00740043006f00730074002f05000000011d00000041006300740069006f006e0050006f0069006e00740073002c00200041007300730065006d0062006c0079002d0043005300680061007200700005000000060000000000000000070501011400000061006300740069006f006e0050006f0069006e00740042006f006e007500730043006f00730074003005000000060000000600000000000000000705
     ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 1|SpaceControlCondition, Assembly-CSharp
-    - Name: conditionalText
-      Entry: 1
-      Data: Non-friendly space Control Check
-    - Name: spaceConditionType
-      Entry: 3
-      Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 3|ShiftSpaceCommand, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 4|RemoveConflictMarkerCommand, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: actionPointCost
-      Entry: 7
-      Data: 5|ActionPoints, Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: actionPointBonusCost
-      Entry: 7
-      Data: 6|ActionPoints, Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
+    SerializationNodes: []
   actionName: Shift Space
   actionText: 
   player: {fileID: 0}
@@ -182,66 +109,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
+    SerializedFormat: 0
+    SerializedBytes: 01010c00000063006f006e0064006900740069006f006e0061006c0073002f00000000014b000000530079007300740065006d002e0043006f006c006c0065006300740069006f006e0073002e00470065006e0065007200690063002e004c00690073007400600031005b005b0043006f006e0064006900740069006f006e0061006c002c00200041007300730065006d0062006c0079002d004300530068006100720070005d005d002c0020006d00730063006f0072006c006900620000000000060100000000000000022f01000000012200000043006f006e0066006c0069006300740043006f006e0064006900740069006f006e002c00200041007300730065006d0062006c0079002d00430053006800610072007000010000002d010f00000063006f006e0064006900740069006f006e0061006c00540065007800740005070501010800000063006f006d006d0061006e00640073002f020000000147000000530079007300740065006d002e0043006f006c006c0065006300740069006f006e0073002e00470065006e0065007200690063002e004c00690073007400600031005b005b0043006f006d006d0061006e0064002c00200041007300730065006d0062006c0079002d004300530068006100720070005d005d002c0020006d00730063006f0072006c006900620002000000060100000000000000022f03000000012c000000520065006d006f007600650043006f006e0066006c006900630074004d00610072006b006500720043006f006d006d0061006e0064002c00200041007300730065006d0062006c0079002d004300530068006100720070000300000005070501010f00000061006300740069006f006e0050006f0069006e00740043006f00730074002f04000000011d00000041006300740069006f006e0050006f0069006e00740073002c00200041007300730065006d0062006c0079002d00430053006800610072007000040000000600000000000000000705
     ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 1|ConflictCondition, Assembly-CSharp
-    - Name: conditionalText
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 3|RemoveConflictMarkerCommand, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: actionPointCost
-      Entry: 7
-      Data: 4|ActionPoints, Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
+    SerializationNodes: []
   actionName: Remove Conflict Marker
   actionText: Remove Conflict Marker
   player: {fileID: 0}
@@ -331,7 +206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9622642, g: 0.91713196, b: 0.7298683, a: 1}
+  m_Color: {r: 0.92156863, g: 0.84313726, b: 0.67058825, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -564,10 +439,10 @@ RectTransform:
   m_Father: {fileID: 62731722339074911}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 2.5}
-  m_SizeDelta: {x: 50, y: 30}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -40, y: -50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &195386396767014265
 CanvasRenderer:
@@ -624,7 +499,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 13.2
+  m_fontSize: 11.6
   m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -632,7 +507,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0

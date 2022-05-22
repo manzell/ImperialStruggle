@@ -7,7 +7,7 @@ using System.Linq;
 
 public class Phase : SerializedMonoBehaviour
 {
-    public static Phase rootPhase; 
+    public static Phase rootPhase;
     public static Phase currentPhase;
     public static UnityEvent<Phase>
         phaseStartEvent = new UnityEvent<Phase>(),
@@ -15,15 +15,15 @@ public class Phase : SerializedMonoBehaviour
         phaseEndEvent = new UnityEvent<Phase>();
 
     public Game.Era era;
-    public List<BaseAction> executedActions = new List<BaseAction>(); 
+    public List<BaseAction> executedActions = new List<BaseAction>();
 
     [SerializeField] List<BaseAction> phaseStartActions = new List<BaseAction>(),
-        phaseEndActions = new List<BaseAction>(); 
+        phaseEndActions = new List<BaseAction>();
 
     public Phase prevPhase;
-    public Phase nextSibling=> transform.parent.GetComponentsInChildren<Phase>()
+    public Phase nextSibling => transform.parent.GetComponentsInChildren<Phase>()
         .Where(phase => phase != transform.parent.GetComponent<Phase>() && phase != this)
-        .Where(phase => phase.transform.GetSiblingIndex() > transform.GetSiblingIndex() && phase.gameObject.activeInHierarchy).First(); 
+        .Where(phase => phase.transform.GetSiblingIndex() > transform.GetSiblingIndex() && phase.gameObject.activeInHierarchy).First();
 
     public Phase nextChild
     {
@@ -44,7 +44,13 @@ public class Phase : SerializedMonoBehaviour
     public Phase nextPhase => nextChild ? nextChild : nextSibling;
 
 
-    [Button] public void StartThread() => StartPhase(() => Game.Log("Thread Over"));
+    [Button]
+    public void StartThread()
+    {
+        Game.startGameEvent.Invoke(); 
+        StartPhase(() => Game.Log("Thread Over"));
+    }
+
     public virtual void StartPhase(UnityAction callback)
     {
         Debug.Log($"StartPhase:: {this}");

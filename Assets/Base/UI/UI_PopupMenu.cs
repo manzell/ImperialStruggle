@@ -63,7 +63,7 @@ public class UI_PopupMenu : MonoBehaviour, IPointerClickHandler
     public void Close()
     {
         open = false; 
-        RectTransform popup = popupMenuContainer.GetComponent<RectTransform>(); 
-        popup.DOSizeDelta(new Vector2(popup.sizeDelta.x, 0), 0.5f).OnComplete(() => Destroy(popupMenuContainer)); 
+        RectTransform popup = popupMenuContainer?.GetComponent<RectTransform>(); 
+        popup?.DOSizeDelta(new Vector2(popup.sizeDelta.x, 0), 0.5f).OnComplete(() => Destroy(popupMenuContainer)); 
     }
 }

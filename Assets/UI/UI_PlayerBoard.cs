@@ -7,73 +7,29 @@ using System.Linq;
 
 public class UI_PlayerBoard : MonoBehaviour
 {
-    [SerializeField] List<GameObject> ministerCards;
-    [SerializeField] GameObject ministerCardArea, handArea, permanentAbilities, ministerAbilities, advantageTiles;
+    public Player player; 
+    [SerializeField] Dictionary<GameObject, MinistryCard> ministryCards = new Dictionary<GameObject, MinistryCard>();
+    [SerializeField] GameObject ministerCardArea, handArea;
     [SerializeField] Image flag;
-    [SerializeField] GameObject cardPrefab, actionPrefab;
+    [SerializeField] GameObject cardPrefab, ministryCardPrefab;
 
     public static UnityEvent<Game.Faction> setFactionEvent = new UnityEvent<Game.Faction>();
 
-    public static Game.Faction faction = Game.Faction.France; 
+    GraphicSettings graphicSettings;
 
-    public void Start()
+    public void Awake()
     {
-        SetFaction(faction);
+        graphicSettings = FindObjectOfType<Game>().graphicSettings;
+        SelectMinistryCardCommand.selectMinistryCardEvent.AddListener(card => { if (card.faction == player.faction) AddMinistryCard(card); });
+        DealCardCommand.dealCardEvent.AddListener(card => { if (player.hand.Contains(card)) AddEventCard(card); });
     }
 
-
-
-    public void SetFaction(Game.Faction faction)
+    void AddMinistryCard(MinistryCard card)
     {
-        GraphicSettings graphicSettings = FindObjectOfType<Game>().graphicSettings;
-        UI_PlayerBoard.faction = faction; 
-
-        setFactionEvent.Invoke(faction);
-
-        SetMinisters(Player.players[faction].ministers);
-        SetCards(Player.players[faction].hand); 
-        flag.sprite = graphicSettings.flags[faction];
+        GameObject newMinistryCard = Instantiate(ministryCardPrefab, ministerCardArea.transform);        
+        newMinistryCard.GetComponent<UI_MinisterCard>().Style(card);
+        ministryCards.Add(newMinistryCard, card); 
     }
 
-    void SetMinisters(List<MinistryCard> ministers) => ministers.Take(2).ToList().ForEach(minister => {
-        UI_Card uiCard = ministerCards[ministers.IndexOf(minister)].GetComponent<UI_Card>();
-        uiCard.SetCard(minister);
-
-        if (minister.ministryCardStatus < MinistryCard.MinistryCardStatus.Revealed)
-            uiCard.SetHighlight(Color.black); 
-    });
-
-    public void SetCards(List<EventCard> cards)
-    {
-        foreach (Transform child in handArea.transform)
-            Destroy(child.gameObject);
-
-        foreach (EventCard card in cards)
-            AddCard(card); 
-    }
-
-    public void HilightCards(InvestmentTile tile)
-    {
-
-    }
-
-    public void RemoveCardHighlights() =>
-        handArea.GetComponentsInChildren<UI_Card>().ToList().ForEach(card =>
-        {
-            card.RemoveHighlight();
-            Destroy(card.GetComponent<UI_ClickPlayCard>());
-        });
-
-    public void AddCard(EventCard card)
-    {
-        GameObject c = Instantiate(cardPrefab, handArea.transform);
-        c.GetComponent<UI_Card>().SetCard(card); 
-    }
-
-    public void RemoveCard(EventCard card)
-    {
-        foreach(Transform child in handArea.transform)
-            if ((EventCard)child.GetComponent<UI_Card>()?.card == card)
-                Destroy(child.gameObject); 
-    }
+    public void AddEventCard(EventCard card) => Instantiate(cardPrefab, handArea.transform).GetComponent<UI_Card>().SetCard(card);
 }

@@ -11,20 +11,20 @@ public class UI_NavalSpace : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI spaceName;
     [SerializeField] Image trim, highlight, background;
+    public NavalSpace navalSpace; 
 
     private void Awake()
     {
-        Style();
-        GetComponent<Space>().updateSpaceEvent.AddListener(Style);
+        GetComponent<NavalSpace>().updateSpaceEvent.AddListener(Style);
+        Game.startGameEvent.AddListener(Style); 
     }
 
     [Button]
     public void Style()
     {
-        Space space = GetComponent<NavalSpace>();
-        spaceName.text = space.name;
-        trim.DOColor(space.prestige ? FindObjectOfType<Game>().graphicSettings.prestigeHighlightColor : Color.white, 0.25f);
-        highlight.DOFade(space.conflictMarker ? 0.4f : 0f, 0.25f); 
-        background.DOColor(FindObjectOfType<Game>().graphicSettings.factionColors[space.flag], 0.25f);
+        GraphicSettings settings = FindObjectOfType<Game>().graphicSettings;
+
+        spaceName.text = navalSpace.name;
+        trim.color = navalSpace.prestige ? settings.prestigeHighlightColor : Color.white; 
     }
 }

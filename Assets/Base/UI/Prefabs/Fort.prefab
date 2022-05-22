@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2582359294430959599}
   - component: {fileID: 2889209640522031374}
   - component: {fileID: 6291307467840247739}
+  - component: {fileID: 7161924420617830646}
   m_Layer: 5
   m_Name: Fort
   m_TagString: Untagged
@@ -348,6 +349,24 @@ MonoBehaviour:
   actionName: Repair Fort
   actionText: Repairing Fort
   player: {fileID: 0}
+--- !u!114 &7161924420617830646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262467948319393270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61ab83c0a79f33640ba53f55f6868853, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fort: {fileID: 2582359294430959599}
+  background: {fileID: 4997143529586439208}
+  highlight: {fileID: 1063691577675912674}
+  trim: {fileID: 4613553560261621854}
+  fortName: {fileID: 2724777554966017712}
+  flagCost: {fileID: 5141055174644132111}
 --- !u!1 &1834404671692783451
 GameObject:
   m_ObjectHideFlags: 0
@@ -732,7 +751,7 @@ MonoBehaviour:
   m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 15
+  m_fontSizeMin: 5
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -823,13 +842,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8732800216105232466}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

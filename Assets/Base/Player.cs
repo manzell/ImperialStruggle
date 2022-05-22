@@ -19,7 +19,9 @@ public class Player : SerializedMonoBehaviour, ISelectable
         players.Add(faction, this);
         RecordsTrack.currentDebt.Add(faction, 0);
         RecordsTrack.debtLimit.Add(faction, 0);
-        RecordsTrack.treatyPoints.Add(faction, 0); 
+        RecordsTrack.treatyPoints.Add(faction, 0);
+
+        Phase.phaseEndEvent.AddListener(phase => actionPoints = new ActionPoints()); 
     }
 
     public List<Game.Keyword> keywords

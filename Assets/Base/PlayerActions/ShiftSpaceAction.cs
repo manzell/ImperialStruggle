@@ -12,8 +12,8 @@ public class ShiftSpaceAction : PlayerAction, ITargetType<Game.Faction>, ITarget
     public Game.Faction target => targetFaction;
     Space ITargetType<Space>.target => targetSpace;
 
-    Game.Faction targetFaction;
-    Space targetSpace;
+    public Game.Faction targetFaction;
+    public Space targetSpace;
 
     protected override void Do(UnityAction callback)
     {
