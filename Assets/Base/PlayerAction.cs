@@ -9,20 +9,15 @@ public class PlayerAction : BaseAction
     public Player player;
     public ActionPoints actionPointCost;
 
+    public override bool Can() => player.CanAffordAction(this) && base.Can();
+
     protected override void Do(UnityAction callback)
     {
         if (Can())
+        {
+            PayAPCommand payCommand = new PayAPCommand();
+            payCommand.Do(this); 
             commands.ForEach(command => command.Do(this));
-    }
-
-    public override bool Can()
-    {
-        Debug.Log($"Player Action: {this.name}");
-        Debug.Log(base.Can());
-        Debug.Log(player);
-        Debug.Log(player.CanAffordAction(this));
-
-        bool retVal = base.Can() && player.CanAffordAction(this);
-        return retVal;
+        }
     }
 }

@@ -16,8 +16,8 @@ public class InvestmentTile : SerializedMonoBehaviour, System.IComparable<Invest
 
     public ActionPoint.ActionType majorActionType => actionPoints.Where(ap => ap.actionTier == ActionPoint.ActionTier.Major).First().actionType; 
     public ActionPoint.ActionType minorActionType => actionPoints.Where(ap => ap.actionTier == ActionPoint.ActionTier.Minor).First().actionType;
-    public int majorActionPoints => actionPoints.Where(ap => ap.actionTier == ActionPoint.ActionTier.Major).Sum(ap => ap.actionPoints);
-    public int minorActionPoints => actionPoints.Where(ap => ap.actionTier == ActionPoint.ActionTier.Minor).Sum(ap => ap.actionPoints);
+    public int majorActionPoints => actionPoints.Where(ap => ap.actionTier == ActionPoint.ActionTier.Major).Sum(ap => ap.baseValue);
+    public int minorActionPoints => actionPoints.Where(ap => ap.actionTier == ActionPoint.ActionTier.Minor).Sum(ap => ap.baseValue);
     //Note that we don't do any checking of context here - we only test that when trying to use for a player action. 
 
     public int CompareTo(InvestmentTile tile)

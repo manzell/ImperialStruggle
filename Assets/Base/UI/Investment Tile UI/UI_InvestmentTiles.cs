@@ -11,7 +11,7 @@ public class UI_InvestmentTiles : MonoBehaviour
 
     private void Awake()
     {
-        DealInvestmentTileCommand.secondEvent.AddListener(AddTile);
+        DealInvestmentTileCommand.dealInvestmentTileEvent.AddListener(AddTile);
         Phase.phaseEndEvent.AddListener(ClearInvestmentTiles); 
     }
 

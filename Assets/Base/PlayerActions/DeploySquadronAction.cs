@@ -27,7 +27,7 @@ public class DeploySquadronAction : PlayerAction
 
     public override bool Can()
     {
-        actionPoint.actionPoints = CalculateDeploymentCost(player); 
+        actionPoint.baseValue = CalculateDeploymentCost(player); 
 
         return base.Can();
     }

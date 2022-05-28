@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem; 
 
-public class SetActivePlayer : MonoBehaviour
+public class ToggleActivePlayerBehavior : MonoBehaviour
 {
-    public KeyCode setActivePlayerKeycode = KeyCode.Tab; 
     public void Update()
     {
-        if (Input.GetKeyDown(setActivePlayerKeycode))
+        if (Keyboard.current.tabKey.wasPressedThisFrame)
             Game.SetActivePlayer(Player.players[Game.activePlayer.faction.Opposition()]);
     }
 }

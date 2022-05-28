@@ -10,6 +10,6 @@ public class AvailableTPCondition : Conditional
             return RecordsTrack.treatyPoints[p.player.faction] > 0;
         else if(context is ITargetType<Player> _p)
             return RecordsTrack.treatyPoints[_p.target.faction] > 0;
-        return true; 
+        else return false; 
     }
 }

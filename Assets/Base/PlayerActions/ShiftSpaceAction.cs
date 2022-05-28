@@ -42,24 +42,22 @@ public class ShiftSpaceAction : PlayerAction, ITargetType<Game.Faction>, ITarget
         if(player != null)
         {
             // Let's establish the cost of the Action. 
-            ActionPoint ap = new ActionPoint();
-            ap.actionTier = targetSpace.flag == Game.Faction.Neutral ? ActionPoint.ActionTier.Minor : ActionPoint.ActionTier.Major;
-            ap.actionType = requiredActionType;
+            ActionPoint ap = new ActionPoint(requiredActionType, targetSpace.flag == Game.Faction.Neutral ? ActionPoint.ActionTier.Minor : ActionPoint.ActionTier.Major);
+            ap.baseValue = targetSpace.flagCost;
 
-            ap.actionPoints = targetSpace.flagCost;
             if (targetSpace.conflictMarker)
-                ap.actionPoints = 1; 
+                ap.baseValue = 1; 
             if(targetSpace is Market market)
             {
                 if (market.isolatedMarket)
-                    ap.actionPoints = 1;
+                    ap.baseValue = 1;
                 if (market.protectedMarket)
-                    ap.actionPoints++;
+                    ap.baseValue++;
             }
             if(targetSpace is Fort fort)
             {
                 if (fort.damaged)
-                    ap.actionPoints = 1; 
+                    ap.baseValue = 1; 
             }
 
             actionPointCost.Clear(); // Each time we call Can() we reset the cost. Think of a better way to handle this?

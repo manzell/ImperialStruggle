@@ -31,7 +31,13 @@ public class UI_AdvantageTile : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (!advantageTile.exhausted && advantageTile.faction == Phase.currentPhase.GetComponent<ActionRound>()?.actingPlayer.faction)
-            GetComponent<PlayerAction>()?.Try(() => { });
+        PlayerAction playerAction = GetComponent<PlayerAction>();
+        ActionRound actionRound = Phase.currentPhase.GetComponent<ActionRound>(); 
+
+        if(playerAction != null && !advantageTile.exhausted && advantageTile.faction == actionRound.actingPlayer.faction)
+        {
+            playerAction.player = actionRound.actingPlayer;
+            playerAction.Try(() => { });
+        }
     }
 }

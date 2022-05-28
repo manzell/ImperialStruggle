@@ -14,9 +14,8 @@ public class FortAccessCondition : Conditional
             foreach (Space space in fort.target.adjacentSpaces)
                 if ((space is Market || space is Territory || space is NavalSpace) && space.flag == playerAction.player.faction)
                     return true;
-
-            return false;
         }
-        return true;
+
+        return false;
     }
 }

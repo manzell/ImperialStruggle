@@ -8,6 +8,7 @@ public class DamagedCondition : Conditional
     {
         if (context is ITargetType<Fort> fort)
             return fort.target.damaged;
-        return true; 
+        else 
+            return false; 
     }
 }

@@ -15,37 +15,36 @@ public class UI_ActionPoint : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     IEnumerator popupTimer;
     GameObject popupGameObject;
-    GraphicSettings graphicSettings;
 
-    ActionPoint.ActionPointKey key; 
+    public ActionPoint actionPoint; 
 
-    void Awake()
+    public void SetTile(ActionPoint ap)
     {
-        graphicSettings = FindObjectOfType<Game>().graphicSettings;
+        Debug.Log($"SetTile1({ap.baseValue} {ap.actionTier} {ap.actionType} | {ap.conditionals})");
+        actionPoint = ap; 
+
+
+        Debug.Log($"SetTile2({ap.baseValue} {ap.actionTier} {ap.actionType} | {ap.conditionals})");
+        SetAPIcon(ap);
+        Debug.Log($"SetTile3({ap.baseValue} {ap.actionTier} {ap.actionType} | {ap.conditionals})");
+        setAPValue(ap);
     }
 
-    public void SetDisplay(ActionPoint.ActionPointKey key, int points)
+    public void SetAPIcon(ActionPoint ap)
     {
-        this.key = key; 
-        setAPValue(key, points);
-        SetAPIcon(key);         
+        apIcon.sprite = FindObjectOfType<Game>().graphicSettings.actionIcons[ap.actionType];
+        apIcon.color = ap.actionTier == ActionPoint.ActionTier.Major ? Color.black : Color.gray;
     }
 
-    public void SetAPIcon(ActionPoint.ActionPointKey key)
+    public void setAPValue(ActionPoint ap)
     {
-        apIcon.sprite = graphicSettings.actionIcons[key.actionType];
-        apIcon.color = key.actionTier == ActionPoint.ActionTier.Major ? Color.black : Color.gray;
-    }
-
-    public void setAPValue(ActionPoint.ActionPointKey key, int val)
-    {
-        apPoints.text = val.ToString();
-        apPoints.color = key.actionTier == ActionPoint.ActionTier.Major ? Color.black : Color.gray;
+        apPoints.text = $"{ap.Value(null)}{(ap.conditionals.Count > 0 ? "*":string.Empty)}";
+        apPoints.color = ap.actionTier == ActionPoint.ActionTier.Major ? Color.black : Color.gray;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if(key.condition != string.Empty)
+        if(actionPoint.conditionText != string.Empty)
         {
             popupTimer = OpenPopup(eventData);
             StartCoroutine(popupTimer);
@@ -74,6 +73,6 @@ public class UI_ActionPoint : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         popupGameObject = Instantiate(new GameObject(), transform); // make this a prefab from Graphic Settings? 
         popupGameObject.transform.position = eventData.position; 
         TextMeshProUGUI tm = popupGameObject.AddComponent<TextMeshProUGUI>();
-        tm.text = key.condition; 
+        tm.text = actionPoint.conditionText; 
     }
 }

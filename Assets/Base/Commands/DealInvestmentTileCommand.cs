@@ -6,7 +6,6 @@ using UnityEngine.Events;
 public class DealInvestmentTileCommand : Command
 {
     public static UnityEvent<InvestmentTile> dealInvestmentTileEvent = new UnityEvent<InvestmentTile>();
-    public static UnityEvent<InvestmentTile> secondEvent = new UnityEvent<InvestmentTile>(); 
 
     public override void Do(BaseAction action)
     {
@@ -18,7 +17,6 @@ public class DealInvestmentTileCommand : Command
 
             Game.Log($"{tile.name} added to Investment Tile Pool");
             dealInvestmentTileEvent.Invoke(tile);
-            secondEvent.Invoke(tile); 
         }
     }
 }

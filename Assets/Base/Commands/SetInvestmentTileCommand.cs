@@ -15,6 +15,7 @@ public class SetInvestmentTileCommand : Command
             undoFaction = Phase.currentPhase.GetComponentInParent<PeaceTurn>().investmentTiles[selectAction.investmentTile]; 
             Phase.currentPhase.GetComponentInParent<PeaceTurn>().investmentTiles[selectAction.investmentTile] = selectAction.player.faction;
 
+            Debug.Log($"{selectAction.player} selects {selectAction.investmentTile.name} Investment Tile"); 
             setInvestmentTileEvent.Invoke(selectAction.investmentTile, selectAction.player.faction);
         }
     }

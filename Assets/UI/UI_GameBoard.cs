@@ -3,23 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events; 
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem; 
 
 public class UI_GameBoard : MonoBehaviour, IDragHandler, IBeginDragHandler, IPointerClickHandler
 {
     public static UnityEvent<PointerEventData> clickEvent = new UnityEvent<PointerEventData>();
     [SerializeField] GameObject container;
     [SerializeField] float speed = 0.1f; 
-    Vector3 previousPosition;
+    Vector2 previousPosition;
 
     public void OnPointerClick(PointerEventData eventData) => clickEvent.Invoke(eventData);
 
-    public void OnBeginDrag(PointerEventData eventData) => previousPosition = Input.mousePosition;
+    public void OnBeginDrag(PointerEventData eventData) => previousPosition = Mouse.current.position.ReadValue(); 
 
     public void OnDrag(PointerEventData eventData)
     {
         Vector2 frameSize = container.GetComponent<RectTransform>().sizeDelta;
         Vector2 boardSize = GetComponent<RectTransform>().sizeDelta;
-        Vector3 drag = (Input.mousePosition - previousPosition) * speed;
+        Vector3 drag = (Mouse.current.position.ReadValue() - previousPosition) * speed;
 
         Vector3 newPosition = transform.position + drag;
 
@@ -31,7 +32,7 @@ public class UI_GameBoard : MonoBehaviour, IDragHandler, IBeginDragHandler, IPoi
         if (maxXrespected && maxYrespected && minXrespected && minYrespected)
         {
             transform.position += drag;
-            previousPosition = Input.mousePosition;
+            previousPosition = Mouse.current.position.ReadValue();
         }
     }
 }

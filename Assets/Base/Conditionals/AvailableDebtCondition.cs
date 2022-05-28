@@ -22,9 +22,10 @@ public class AvailableDebtCondition : Conditional
                 case LimitConditionType.AtLeast:
                     return availableDebt >= margin;
                 default:
-                    return true;
+                    return true; 
             }
         }
-        return true; 
+
+        return false; 
     }
 }

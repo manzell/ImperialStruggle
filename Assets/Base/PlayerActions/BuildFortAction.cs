@@ -14,12 +14,10 @@ public class BuildFortAction : PlayerAction, ITargetType<Fort>
             baseActionCost = actionPointCost[0];
         else if (baseActionCost == null)
         {
-            baseActionCost = new ActionPoint();
-            baseActionCost.actionType = ActionPoint.ActionType.Military;
-            baseActionCost.actionTier = ActionPoint.ActionTier.Minor;
+            baseActionCost = new ActionPoint(ActionPoint.ActionType.Military, ActionPoint.ActionTier.Minor);
             actionPointCost.Add(baseActionCost);
         }
 
-        baseActionCost.actionPoints = target.flagCost;
+        baseActionCost.baseValue = target.flagCost;
     }
 }

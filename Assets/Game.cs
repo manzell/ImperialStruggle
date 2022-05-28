@@ -14,7 +14,6 @@ public class Game : MonoBehaviour
     public enum Resource { Fur, Fish, Tobacco, Sugar, Cotton, Spices } // most to ScriptableObject? 
 
     public static List<EventCard> eventDeck = new List<EventCard>(), eventDiscards = new List<EventCard>();
-    public static List<Player> players;
     public static Player activePlayer; 
     public static Faction initiative = Faction.France;
     public static GlobalDemandTrack GlobalDemand => FindObjectOfType<Game>().globalDemandTrack;
@@ -26,9 +25,9 @@ public class Game : MonoBehaviour
 
     public static UnityEvent startGameEvent = new UnityEvent(); 
 
-    private void Awake()
+    private void Start()
     {
-        players = FindObjectsOfType<Player>().ToList();
+        SetActivePlayer(Player.players[Faction.France]);
         startPhaseOnGameLaunch?.StartThread();
     }
 

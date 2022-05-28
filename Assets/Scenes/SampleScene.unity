@@ -2073,28 +2073,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 2
     - Name: actionTier
       Entry: 3
       Data: 0
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 2
     - Name: conditionals
@@ -2116,28 +2101,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 3|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 1
     - Name: actionTier
       Entry: 3
       Data: 1
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 4
     - Name: conditionals
@@ -2163,6 +2133,82 @@ MonoBehaviour:
       Entry: 8
       Data: 
   status: 0
+--- !u!1 &76917353
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 76917354}
+  - component: {fileID: 76917356}
+  - component: {fileID: 76917355}
+  m_Layer: 0
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &76917354
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76917353}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1181813859}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &76917355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76917353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.24889639, g: 0.5566038, b: 0.3266487, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 01424f33c2424844c80e642429790f4f, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 2.5
+--- !u!222 &76917356
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76917353}
+  m_CullTransparentMesh: 1
 --- !u!1 &78166136
 GameObject:
   m_ObjectHideFlags: 0
@@ -2616,8 +2662,6 @@ GameObject:
   - component: {fileID: 112856001}
   - component: {fileID: 112856000}
   - component: {fileID: 112855999}
-  - component: {fileID: 112856008}
-  - component: {fileID: 112856009}
   - component: {fileID: 112856010}
   m_Layer: 5
   m_Name: UI
@@ -2716,37 +2760,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &112856008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 112855998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d127bcf3b6c14c14f9a4181b81b91daf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  endARButton: {fileID: 1827738129}
---- !u!114 &112856009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 112855998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b268b8f49df19d44cb51553d5d9eadd0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vpBackground: {fileID: 1599517972}
-  vpScore: {fileID: 1140415555}
-  ukDebt: {fileID: 648709441}
-  franceDebt: {fileID: 1434539299}
-  ukTP: {fileID: 1547452618}
-  franceTP: {fileID: 922770286}
 --- !u!114 &112856010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3324,28 +3337,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 1
     - Name: actionTier
       Entry: 3
       Data: 0
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 2
     - Name: conditionals
@@ -3367,28 +3365,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 3|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 2
     - Name: actionTier
       Entry: 3
       Data: 1
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 4
     - Name: conditionals
@@ -3763,6 +3746,7 @@ GameObject:
   m_Component:
   - component: {fileID: 173320246}
   - component: {fileID: 173320247}
+  - component: {fileID: 173320248}
   m_Layer: 5
   m_Name: Records Track
   m_TagString: Untagged
@@ -3796,6 +3780,24 @@ RectTransform:
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &173320247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173320245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b268b8f49df19d44cb51553d5d9eadd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vpBackground: {fileID: 1599517972}
+  vpScore: {fileID: 1140415555}
+  ukDebt: {fileID: 648709441}
+  franceDebt: {fileID: 1434539299}
+  ukTP: {fileID: 1547452618}
+  franceTP: {fileID: 922770286}
+--- !u!114 &173320248
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4578,28 +4580,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 1
     - Name: actionTier
       Entry: 3
       Data: 0
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 2
     - Name: conditionals
@@ -4621,28 +4608,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 3|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 3
     - Name: actionTier
       Entry: 3
       Data: 1
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 4
     - Name: conditionals
@@ -5582,6 +5554,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2088129135}
   - {fileID: 4282031387419790286}
   - {fileID: 1827883376965467927}
   m_Father: {fileID: 1549688052}
@@ -5605,7 +5578,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.92941177, g: 0.84705883, b: 0.7294118, a: 0.92156863}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5791,7 +5764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5529412}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.3254902}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6197,28 +6170,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 2
     - Name: actionTier
       Entry: 3
       Data: 0
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 2
     - Name: conditionals
@@ -6240,28 +6198,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 3|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 1
     - Name: actionTier
       Entry: 3
       Data: 1
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 2
     - Name: conditionals
@@ -7858,28 +7801,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 1
     - Name: actionTier
       Entry: 3
       Data: 0
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 2
     - Name: conditionals
@@ -7901,28 +7829,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 3|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 3
     - Name: actionTier
       Entry: 3
       Data: 1
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 2
     - Name: conditionals
@@ -9485,28 +9398,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 1
     - Name: actionTier
       Entry: 3
       Data: 0
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 2
     - Name: conditionals
@@ -9528,28 +9426,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 3|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 3
     - Name: actionTier
       Entry: 3
       Data: 1
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 3
     - Name: conditionals
@@ -10775,6 +10658,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 901708577}
   - {fileID: 6009916249745410701}
   m_Father: {fileID: 1549688052}
   m_RootOrder: -1
@@ -10797,7 +10681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.92941177, g: 0.84705883, b: 0.7294118, a: 0.92156863}
+  m_Color: {r: 0.19992878, g: 0.39379573, b: 0.9056604, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11713,6 +11597,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1663386817}
   - {fileID: 5868189746149438995}
   - {fileID: 9029067709302134803}
   m_Father: {fileID: 1549688052}
@@ -11736,7 +11621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.92941177, g: 0.84705883, b: 0.7294118, a: 0.92156863}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11950,15 +11835,12 @@ MonoBehaviour:
       Data: 2|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 7
       Data: 3|AdjustDebtCommand, Assembly-CSharp
     - Name: 
       Entry: 8
-      Data: 
-    - Name: 
-      Entry: 6
       Data: 
     - Name: 
       Entry: 13
@@ -11987,30 +11869,15 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 6|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
     - Name: actionType
       Entry: 3
       Data: 4
     - Name: actionTier
       Entry: 3
       Data: 1
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: actionType
+    - Name: baseValue
       Entry: 3
-      Data: 4
-    - Name: actionTier
-      Entry: 3
-      Data: 1
-    - Name: actionPoints
-      Entry: 3
-      Data: 1
+      Data: 0
     - Name: conditionals
       Entry: 7
       Data: 7|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
@@ -13743,7 +13610,10 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
+    SerializationNodes:
+    - Name: callback
+      Entry: 6
+      Data: 
   era: 0
   executedActions: []
   phaseStartActions:
@@ -14185,6 +14055,82 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &709801832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 709801833}
+  - component: {fileID: 709801835}
+  - component: {fileID: 709801834}
+  m_Layer: 0
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &709801833
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709801832}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1819622671}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &709801834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709801832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.87843144, g: 0.75294125, b: 0.2901961, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 01424f33c2424844c80e642429790f4f, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 2.5
+--- !u!222 &709801835
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709801832}
+  m_CullTransparentMesh: 1
 --- !u!1 &712841459
 GameObject:
   m_ObjectHideFlags: 0
@@ -14879,30 +14825,15 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 4|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
     - Name: actionType
       Entry: 3
       Data: 3
     - Name: actionTier
       Entry: 3
       Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: actionType
-      Entry: 3
-      Data: 3
-    - Name: actionTier
+    - Name: baseValue
       Entry: 3
       Data: 0
-    - Name: actionPoints
-      Entry: 3
-      Data: 4
     - Name: conditionals
       Entry: 7
       Data: 5|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
@@ -15217,6 +15148,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2015219706}
   - {fileID: 1800553801490967994}
   - {fileID: 5303750610162894876}
   m_Father: {fileID: 1549688052}
@@ -15240,7 +15172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.92941177, g: 0.84705883, b: 0.7294118, a: 0.92156863}
+  m_Color: {r: 0.2735849, g: 0.2735849, b: 0.2735849, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -15670,28 +15602,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 3
     - Name: actionTier
       Entry: 3
       Data: 0
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 2
     - Name: conditionals
@@ -15713,28 +15630,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 3|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 2
     - Name: actionTier
       Entry: 3
       Data: 1
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 3
     - Name: conditionals
@@ -15870,7 +15772,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43547fffde21c5740a81ca216477a84c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  setActivePlayerKeycode: 9
 --- !u!1 &814394963
 GameObject:
   m_ObjectHideFlags: 0
@@ -16234,6 +16135,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1288224261}
   - {fileID: 3533187619814531599}
   - {fileID: 687700199173633441}
   - {fileID: 4350083796848710628}
@@ -16259,7 +16161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.92941177, g: 0.84705883, b: 0.7294118, a: 0.92156863}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -16821,7 +16723,10 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 5581942480602562666}
+    - {fileID: 7634542757303815063}
+    - {fileID: 1951342177682056845}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -16845,7 +16750,13 @@ MonoBehaviour:
       Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 2|AdjustAPCommand, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -16854,7 +16765,7 @@ MonoBehaviour:
       Data: 
     - Name: actionPointCost
       Entry: 7
-      Data: 2|ActionPoints, Assembly-CSharp
+      Data: 3|ActionPoints, Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 0
@@ -16866,10 +16777,80 @@ MonoBehaviour:
       Data: 
     - Name: awardAP
       Entry: 7
-      Data: 3|ActionPoints, Assembly-CSharp
+      Data: 4|ActionPoints, Assembly-CSharp
     - Name: 
       Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 5|ActionPoint, Assembly-CSharp
+    - Name: actionType
+      Entry: 3
+      Data: 2
+    - Name: actionTier
+      Entry: 3
+      Data: 1
+    - Name: baseValue
+      Entry: 3
       Data: 0
+    - Name: conditionals
+      Entry: 7
+      Data: 6|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 7|TargetSpaceCondition, Assembly-CSharp
+    - Name: conditionalText
+      Entry: 1
+      Data: Russia/Sweden/Bavaraia
+    - Name: eligibleSpaces
+      Entry: 7
+      Data: 8|System.Collections.Generic.List`1[[Space, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 9|SpaceControlCondition, Assembly-CSharp
+    - Name: conditionalText
+      Entry: 1
+      Data: Opposing Flag Check
+    - Name: spaceConditionType
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -17428,6 +17409,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889764119}
   m_CullTransparentMesh: 1
+--- !u!1 &893125453
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 893125454}
+  - component: {fileID: 893125456}
+  - component: {fileID: 893125455}
+  m_Layer: 0
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &893125454
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893125453}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1485118557}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &893125455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893125453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 01424f33c2424844c80e642429790f4f, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 2.5
+--- !u!222 &893125456
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893125453}
+  m_CullTransparentMesh: 1
 --- !u!1 &893524810
 GameObject:
   m_ObjectHideFlags: 0
@@ -17650,43 +17707,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: totalAPCost
-      Entry: 7
-      Data: 2|System.Collections.Generic.Dictionary`2[[ActionPoint+ActionPointKey,
-        Assembly-CSharp],[System.Int32, mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 3|System.Collections.Generic.ObjectEqualityComparer`1[[ActionPoint+ActionPointKey,
-        Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: eligibleAPs
-      Entry: 7
-      Data: 4|System.Collections.Generic.Dictionary`2[[ActionPoint+ActionPointKey,
-        Assembly-CSharp],[System.Collections.Generic.List`1[[ActionPoint, Assembly-CSharp]],
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 9
-      Data: 3
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
   faction: 2
   hand: []
   ministers:
@@ -17761,7 +17781,82 @@ MonoBehaviour:
   - {fileID: 855873036}
   - {fileID: 787579221}
   - {fileID: 1495271371}
-  currentAction: {fileID: 0}
+--- !u!1 &901708576
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 901708577}
+  - component: {fileID: 901708579}
+  - component: {fileID: 901708578}
+  m_Layer: 0
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &901708577
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901708576}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 551947742}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &901708578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901708576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 01424f33c2424844c80e642429790f4f, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 2.5
+--- !u!222 &901708579
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901708576}
+  m_CullTransparentMesh: 1
 --- !u!1001 &906403856
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18898,7 +18993,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &963194226
 AudioListener:
   m_ObjectHideFlags: 0
@@ -19088,28 +19183,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 2
     - Name: actionTier
       Entry: 3
       Data: 0
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 2
     - Name: conditionals
@@ -19131,28 +19211,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 3|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 3
     - Name: actionTier
       Entry: 3
       Data: 1
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 4
     - Name: conditionals
@@ -19178,6 +19243,82 @@ MonoBehaviour:
       Entry: 8
       Data: 
   status: 0
+--- !u!1 &985158773
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 985158774}
+  - component: {fileID: 985158776}
+  - component: {fileID: 985158775}
+  m_Layer: 0
+  m_Name: Image (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &985158774
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985158773}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1031661598}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &985158775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985158773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 01424f33c2424844c80e642429790f4f, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 2.5
+--- !u!222 &985158776
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985158773}
+  m_CullTransparentMesh: 1
 --- !u!1001 &985445165
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20258,6 +20399,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 985158774}
   - {fileID: 3040429571779382713}
   - {fileID: 7440975760422750842}
   m_Father: {fileID: 1549688052}
@@ -20281,7 +20423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.84787387, g: 0.92941177, b: 0.7294118, a: 0.92156863}
+  m_Color: {r: 0.27450982, g: 0.27450982, b: 0.27450982, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -21671,7 +21813,10 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
+    SerializationNodes:
+    - Name: callback
+      Entry: 6
+      Data: 
   era: 0
   executedActions: []
   phaseStartActions: []
@@ -21824,28 +21969,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 3
     - Name: actionTier
       Entry: 3
       Data: 0
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 2
     - Name: conditionals
@@ -21867,28 +21997,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 3|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 1
     - Name: actionTier
       Entry: 3
       Data: 1
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 2
     - Name: conditionals
@@ -23462,28 +23577,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 2
     - Name: actionTier
       Entry: 3
       Data: 0
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 2
     - Name: conditionals
@@ -23505,28 +23605,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 3|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 1
     - Name: actionTier
       Entry: 3
       Data: 1
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 4
     - Name: conditionals
@@ -23770,6 +23855,7 @@ GameObject:
   - component: {fileID: 1181813859}
   - component: {fileID: 1181813861}
   - component: {fileID: 1181813860}
+  - component: {fileID: 1181813862}
   m_Layer: 0
   m_Name: Ireland
   m_TagString: Untagged
@@ -23789,6 +23875,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 76917354}
   - {fileID: 3421046883152999114}
   - {fileID: 3555572449299634321}
   m_Father: {fileID: 1549688052}
@@ -23812,7 +23899,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.92941177, g: 0.84705883, b: 0.7294118, a: 0.92156863}
+  m_Color: {r: 1, g: 0.48235297, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -23837,6 +23924,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1181813858}
   m_CullTransparentMesh: 1
+--- !u!114 &1181813862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181813858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.22745098}
+  m_EffectDistance: {x: 3, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1184736934
 GameObject:
   m_ObjectHideFlags: 0
@@ -26369,6 +26471,82 @@ Transform:
   m_Father: {fileID: 1553067493}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1288224260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1288224261}
+  - component: {fileID: 1288224263}
+  - component: {fileID: 1288224262}
+  m_Layer: 0
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1288224261
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288224260}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 845042503}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1288224262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288224260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.7607844, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 01424f33c2424844c80e642429790f4f, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 2.5
+--- !u!222 &1288224263
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288224260}
+  m_CullTransparentMesh: 1
 --- !u!1 &1289655336
 GameObject:
   m_ObjectHideFlags: 0
@@ -26546,28 +26724,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 3
     - Name: actionTier
       Entry: 3
       Data: 0
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 2
     - Name: conditionals
@@ -26589,28 +26752,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 3|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 1
     - Name: actionTier
       Entry: 3
       Data: 1
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 3
     - Name: conditionals
@@ -27143,28 +27291,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 3
     - Name: actionTier
       Entry: 3
       Data: 0
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 2
     - Name: conditionals
@@ -27186,28 +27319,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 3|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 2
     - Name: actionTier
       Entry: 3
       Data: 1
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 4
     - Name: conditionals
@@ -27349,28 +27467,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 2
     - Name: actionTier
       Entry: 3
       Data: 0
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 2
     - Name: conditionals
@@ -27392,28 +27495,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 3|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 3
     - Name: actionTier
       Entry: 3
       Data: 1
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 2
     - Name: conditionals
@@ -27873,28 +27961,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 1
     - Name: actionTier
       Entry: 3
       Data: 0
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 2
     - Name: conditionals
@@ -27916,28 +27989,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 3|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 2
     - Name: actionTier
       Entry: 3
       Data: 1
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 2
     - Name: conditionals
@@ -28823,43 +28881,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: totalAPCost
-      Entry: 7
-      Data: 2|System.Collections.Generic.Dictionary`2[[ActionPoint+ActionPointKey,
-        Assembly-CSharp],[System.Int32, mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 3|System.Collections.Generic.ObjectEqualityComparer`1[[ActionPoint+ActionPointKey,
-        Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: eligibleAPs
-      Entry: 7
-      Data: 4|System.Collections.Generic.Dictionary`2[[ActionPoint+ActionPointKey,
-        Assembly-CSharp],[System.Collections.Generic.List`1[[ActionPoint, Assembly-CSharp]],
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 9
-      Data: 3
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
   faction: 1
   hand: []
   ministers:
@@ -28934,7 +28955,6 @@ MonoBehaviour:
   - {fileID: 1241407571}
   - {fileID: 1545117436}
   - {fileID: 1810638345}
-  currentAction: {fileID: 0}
 --- !u!1 &1437462156
 GameObject:
   m_ObjectHideFlags: 0
@@ -29456,28 +29476,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 2
     - Name: actionTier
       Entry: 3
       Data: 0
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 2
     - Name: conditionals
@@ -29499,28 +29504,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 3|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 3
     - Name: actionTier
       Entry: 3
       Data: 1
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 4
     - Name: conditionals
@@ -29770,6 +29760,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 893125454}
   - {fileID: 7634542757303815062}
   m_Father: {fileID: 1549688052}
   m_RootOrder: -1
@@ -29792,7 +29783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.92941177, g: 0.84705883, b: 0.7294118, a: 0.92156863}
+  m_Color: {r: 0.735849, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -30467,30 +30458,15 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 5|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 5
     - Name: actionTier
       Entry: 3
       Data: 1
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: conditionals
       Entry: 7
       Data: 6|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
@@ -31611,28 +31587,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 1
     - Name: actionTier
       Entry: 3
       Data: 0
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 2
     - Name: conditionals
@@ -31654,28 +31615,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 3|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 2
     - Name: actionTier
       Entry: 3
       Data: 1
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 3
     - Name: conditionals
@@ -32733,6 +32679,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1788149513}
   - {fileID: 5581942480602562665}
   m_Father: {fileID: 1549688052}
   m_RootOrder: -1
@@ -32755,7 +32702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.92941177, g: 0.84705883, b: 0.7294118, a: 0.92156863}
+  m_Color: {r: 1, g: 0.86663836, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -33006,28 +32953,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 3
     - Name: actionTier
       Entry: 3
       Data: 0
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 2
     - Name: conditionals
@@ -33049,28 +32981,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 3|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 1
     - Name: actionTier
       Entry: 3
       Data: 1
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 4
     - Name: conditionals
@@ -33370,28 +33287,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 3
     - Name: actionTier
       Entry: 3
       Data: 0
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 2
     - Name: conditionals
@@ -33413,28 +33315,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 3|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 2
     - Name: actionTier
       Entry: 3
       Data: 1
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 4
     - Name: conditionals
@@ -33523,6 +33410,82 @@ MonoBehaviour:
   reqdActionType: 0
   era: 0
   actions: []
+--- !u!1 &1663386816
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1663386817}
+  - component: {fileID: 1663386819}
+  - component: {fileID: 1663386818}
+  m_Layer: 0
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1663386817
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663386816}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 596503364}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1663386818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663386816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.48073402, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 01424f33c2424844c80e642429790f4f, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 2.5
+--- !u!222 &1663386819
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663386816}
+  m_CullTransparentMesh: 1
 --- !u!114 &1668252782 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4151728085982236477, guid: a2547632e00cd35479dc50bcb4b7acad, type: 3}
@@ -35218,28 +35181,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 1
     - Name: actionTier
       Entry: 3
       Data: 0
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 2
     - Name: conditionals
@@ -35261,28 +35209,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 3|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 2
     - Name: actionTier
       Entry: 3
       Data: 1
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 4
     - Name: conditionals
@@ -35526,6 +35459,82 @@ Transform:
   m_Father: {fileID: 932586160}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1788149512
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1788149513}
+  - component: {fileID: 1788149515}
+  - component: {fileID: 1788149514}
+  m_Layer: 0
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1788149513
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788149512}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1617080037}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1788149514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788149512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.20000002, g: 0.3921569, b: 0.9058824, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 01424f33c2424844c80e642429790f4f, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 2.5
+--- !u!222 &1788149515
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788149512}
+  m_CullTransparentMesh: 1
 --- !u!1 &1793164336
 GameObject:
   m_ObjectHideFlags: 0
@@ -35713,30 +35722,15 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 4|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
     - Name: actionType
       Entry: 3
       Data: 3
     - Name: actionTier
       Entry: 3
       Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: actionType
-      Entry: 3
-      Data: 3
-    - Name: actionTier
+    - Name: baseValue
       Entry: 3
       Data: 0
-    - Name: actionPoints
-      Entry: 3
-      Data: 2
     - Name: conditionals
       Entry: 7
       Data: 5|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
@@ -35823,30 +35817,15 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 4|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
     - Name: actionType
       Entry: 3
       Data: 3
     - Name: actionTier
       Entry: 3
       Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: actionType
-      Entry: 3
-      Data: 3
-    - Name: actionTier
+    - Name: baseValue
       Entry: 3
       Data: 0
-    - Name: actionPoints
-      Entry: 3
-      Data: 4
     - Name: conditionals
       Entry: 7
       Data: 5|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
@@ -36576,6 +36555,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 709801833}
   - {fileID: 6490238703850290817}
   - {fileID: 2352213049758096983}
   - {fileID: 1950299191250385409}
@@ -36601,7 +36581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.92941177, g: 0.84705883, b: 0.7294118, a: 0.92156863}
+  m_Color: {r: 0.7169812, g: 0.028932031, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -36805,6 +36785,7 @@ GameObject:
   - component: {fileID: 1827738131}
   - component: {fileID: 1827738130}
   - component: {fileID: 1827738129}
+  - component: {fileID: 1827738132}
   m_Layer: 5
   m_Name: Finish Action Round Button
   m_TagString: Untagged
@@ -36939,6 +36920,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1827738127}
   m_CullTransparentMesh: 1
+--- !u!114 &1827738132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827738127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d127bcf3b6c14c14f9a4181b81b91daf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endARButton: {fileID: 1827738129}
 --- !u!114 &1828174657 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4151728085982236477, guid: a2547632e00cd35479dc50bcb4b7acad, type: 3}
@@ -38975,7 +38969,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1960004177}
   - component: {fileID: 1960004176}
-  - component: {fileID: 1960004175}
+  - component: {fileID: 1960004178}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -38983,25 +38977,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1960004175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1960004174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
 --- !u!114 &1960004176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39032,6 +39007,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1960004178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960004174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
 --- !u!1 &1960464587
 GameObject:
   m_ObjectHideFlags: 0
@@ -39279,28 +39282,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 2
     - Name: actionTier
       Entry: 3
       Data: 0
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 2
     - Name: conditionals
@@ -39322,28 +39310,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 3|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 1
     - Name: actionTier
       Entry: 3
       Data: 1
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 3
     - Name: conditionals
@@ -39786,6 +39759,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2101645322}
   - {fileID: 1951342177682056844}
   m_Father: {fileID: 1549688052}
   m_RootOrder: -1
@@ -39808,7 +39782,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.92941177, g: 0.84705883, b: 0.7294118, a: 0.92156863}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -40105,28 +40079,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 1
     - Name: actionTier
       Entry: 3
       Data: 0
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 2
     - Name: conditionals
@@ -40148,28 +40107,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 3|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 3
     - Name: actionTier
       Entry: 3
       Data: 1
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 4
     - Name: conditionals
@@ -40195,6 +40139,82 @@ MonoBehaviour:
       Entry: 8
       Data: 
   status: 0
+--- !u!1 &2015219705
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2015219706}
+  - component: {fileID: 2015219708}
+  - component: {fileID: 2015219707}
+  m_Layer: 0
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2015219706
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015219705}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 770019979}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2015219707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015219705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 01424f33c2424844c80e642429790f4f, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 2.5
+--- !u!222 &2015219708
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015219705}
+  m_CullTransparentMesh: 1
 --- !u!1 &2021926194
 GameObject:
   m_ObjectHideFlags: 0
@@ -40926,28 +40946,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 2
     - Name: actionTier
       Entry: 3
       Data: 0
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 2
     - Name: conditionals
@@ -40969,28 +40974,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 3|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 3
     - Name: actionTier
       Entry: 3
       Data: 1
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 3
     - Name: conditionals
@@ -41387,28 +41377,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 3
     - Name: actionTier
       Entry: 3
       Data: 0
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 2
     - Name: conditionals
@@ -41430,28 +41405,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 3|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 2
     - Name: actionTier
       Entry: 3
       Data: 1
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 2
     - Name: conditionals
@@ -42095,6 +42055,82 @@ MonoBehaviour:
   actionName: Set Initiative
   actionText: Set Initiative
   player: {fileID: 1435854123}
+--- !u!1 &2088129134
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2088129135}
+  - component: {fileID: 2088129137}
+  - component: {fileID: 2088129136}
+  m_Layer: 0
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2088129135
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088129134}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 337519613}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2088129136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088129134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.20000002, g: 0.3921569, b: 0.9058824, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 01424f33c2424844c80e642429790f4f, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 2.5
+--- !u!222 &2088129137
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088129134}
+  m_CullTransparentMesh: 1
 --- !u!1 &2089741153
 GameObject:
   m_ObjectHideFlags: 0
@@ -42218,28 +42254,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 3
     - Name: actionTier
       Entry: 3
       Data: 0
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 2
     - Name: conditionals
@@ -42261,28 +42282,13 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 3|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: actionType
       Entry: 3
       Data: 1
     - Name: actionTier
       Entry: 3
       Data: 1
-    - Name: actionPoints
+    - Name: baseValue
       Entry: 3
       Data: 4
     - Name: conditionals
@@ -42308,6 +42314,82 @@ MonoBehaviour:
       Entry: 8
       Data: 
   status: 0
+--- !u!1 &2101645321
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2101645322}
+  - component: {fileID: 2101645324}
+  - component: {fileID: 2101645323}
+  m_Layer: 0
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2101645322
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101645321}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1996920143}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2101645323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101645321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.27735847, g: 0.7049733, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 01424f33c2424844c80e642429790f4f, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 2.5
+--- !u!222 &2101645324
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101645321}
+  m_CullTransparentMesh: 1
 --- !u!1 &2101785294
 GameObject:
   m_ObjectHideFlags: 0
@@ -44146,7 +44228,10 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
+    SerializationNodes:
+    - Name: callback
+      Entry: 6
+      Data: 
   era: 0
   executedActions: []
   phaseStartActions:
@@ -46467,6 +46552,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6379764257806445771, guid: 5a785fffa30489b479f2b49bca9a6312, type: 3}
+      propertyPath: m_EffectColor.a
+      value: 0.49803922
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379764257806445771, guid: 5a785fffa30489b479f2b49bca9a6312, type: 3}
+      propertyPath: m_EffectColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379764257806445771, guid: 5a785fffa30489b479f2b49bca9a6312, type: 3}
+      propertyPath: m_EffectColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379764257806445771, guid: 5a785fffa30489b479f2b49bca9a6312, type: 3}
+      propertyPath: m_EffectColor.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6935207156884034248, guid: 5a785fffa30489b479f2b49bca9a6312, type: 3}
       propertyPath: m_text
       value: 3
@@ -46572,7 +46673,10 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
+    SerializationNodes:
+    - Name: callback
+      Entry: 6
+      Data: 
   era: 0
   executedActions: []
   phaseStartActions:
@@ -46784,7 +46888,10 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
+    SerializationNodes:
+    - Name: callback
+      Entry: 6
+      Data: 
   era: 0
   executedActions: []
   phaseStartActions:
@@ -47281,7 +47388,10 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
+    SerializationNodes:
+    - Name: callback
+      Entry: 6
+      Data: 
   era: 0
   executedActions: []
   phaseStartActions: []
@@ -47570,7 +47680,10 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
+    SerializationNodes:
+    - Name: callback
+      Entry: 6
+      Data: 
   era: 0
   executedActions: []
   phaseStartActions:
@@ -47889,7 +48002,10 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
+    SerializationNodes:
+    - Name: callback
+      Entry: 6
+      Data: 
   era: 0
   executedActions: []
   phaseStartActions:
@@ -48594,7 +48710,10 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
+    SerializationNodes:
+    - Name: callback
+      Entry: 6
+      Data: 
   era: 0
   executedActions: []
   phaseStartActions:
@@ -49691,7 +49810,10 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
+    SerializationNodes:
+    - Name: callback
+      Entry: 6
+      Data: 
   era: 0
   executedActions: []
   phaseStartActions:
@@ -50443,7 +50565,10 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
+    SerializationNodes:
+    - Name: callback
+      Entry: 6
+      Data: 
   era: 0
   executedActions: []
   phaseStartActions:
@@ -50998,7 +51123,10 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
+    SerializationNodes:
+    - Name: callback
+      Entry: 6
+      Data: 
   era: 0
   executedActions: []
   phaseStartActions:
@@ -51300,6 +51428,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6193261512970342155, guid: 5a785fffa30489b479f2b49bca9a6312, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379764257806445771, guid: 5a785fffa30489b479f2b49bca9a6312, type: 3}
+      propertyPath: m_EffectColor.a
+      value: 0.5019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379764257806445771, guid: 5a785fffa30489b479f2b49bca9a6312, type: 3}
+      propertyPath: m_EffectColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379764257806445771, guid: 5a785fffa30489b479f2b49bca9a6312, type: 3}
+      propertyPath: m_EffectColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379764257806445771, guid: 5a785fffa30489b479f2b49bca9a6312, type: 3}
+      propertyPath: m_EffectColor.r
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6935207156884034248, guid: 5a785fffa30489b479f2b49bca9a6312, type: 3}

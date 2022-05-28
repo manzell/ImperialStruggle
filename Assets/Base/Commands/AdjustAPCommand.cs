@@ -9,6 +9,7 @@ public class AdjustAPCommand : Command
 
     public override void Do(BaseAction action)
     {
+        // How do we determine if this is a 
         if(action is ITargetType<ActionPoints> APAction &&
             action is ITargetType<Player> playerAction)
         {
@@ -17,15 +18,14 @@ public class AdjustAPCommand : Command
                 adjustAPEvent.Invoke(); // the actual AP is passed in - and can be modified
                 playerAction.target.actionPoints.Add(ap);
             }
+            adjustAPEvent.Invoke();
         }
-
-        if(action is IAdjustAP apAction)
+        else if(action is IAdjustAP apAction)
         {
             foreach (ActionPoint ap in apAction.actionPoints)
-            {
                 apAction.player.actionPoints.Add(ap);
-                adjustAPEvent.Invoke(); // the actual AP is passed in - and can be modified
-            }
+
+            adjustAPEvent.Invoke(); // the actual AP is passed in - and can be modified
         }
     }
 }

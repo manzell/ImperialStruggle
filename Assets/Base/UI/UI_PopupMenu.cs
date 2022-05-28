@@ -7,12 +7,13 @@ using DG.Tweening;
 
 public class UI_PopupMenu : MonoBehaviour, IPointerClickHandler
 {
-    static GameObject popupMenuContainer; // We only want 1 open at a time, this will ensure we don't always reinstantiate the thing
-
+    static GameObject popupMenuContainer; // We only want 1 open at a time, this will ensure we don't always reinstantiate the thing\
     bool open = false;
+    GraphicSettings settings; 
 
     void Awake()
     {
+        settings = FindObjectOfType<Game>().graphicSettings; 
         UI_GameBoard.clickEvent.AddListener(ped => Close()); 
     }
 
@@ -20,6 +21,7 @@ public class UI_PopupMenu : MonoBehaviour, IPointerClickHandler
     {
         if (!open)
         {
+            Debug.Log("OPening"); 
             Open();
             open = true; 
         }
@@ -40,9 +42,10 @@ public class UI_PopupMenu : MonoBehaviour, IPointerClickHandler
             if (actions.Count > 0)
             {
                 GameObject popupActionPrefab = FindObjectOfType<Game>().graphicSettings.PopupAction;
-                popupMenuContainer = popupMenuContainer == null ? Instantiate(FindObjectOfType<Game>().graphicSettings.PopupMenu, GetComponentInParent<Canvas>().transform) : popupMenuContainer;
-
                 RectTransform rect = popupActionPrefab.GetComponent<RectTransform>();
+
+                if(popupMenuContainer == null)
+                    popupMenuContainer = Instantiate(settings.PopupMenu, GetComponentInParent<Canvas>().transform);
 
                 popupMenuContainer.transform.position = transform.position;
                 popupMenuContainer.GetComponent<RectTransform>().DOSizeDelta(new Vector2(rect.sizeDelta.x, rect.sizeDelta.y * actions.Count), 0.5f);
@@ -52,9 +55,9 @@ public class UI_PopupMenu : MonoBehaviour, IPointerClickHandler
 
                 foreach (PlayerAction action in actions)
                 {
-                    UI_MenuAction popupMenu = Instantiate(popupActionPrefab, popupMenuContainer.transform).GetComponent<UI_MenuAction>();
-                    popupMenu.SetAction(action);
-                    popupMenu.SetMenu(this);
+                    UI_MenuAction popupMenuAction = Instantiate(popupActionPrefab, popupMenuContainer.transform).GetComponent<UI_MenuAction>();
+                    popupMenuAction.SetAction(action);
+                    popupMenuAction.SetMenu(this);
                 }
             }
         }
@@ -62,8 +65,12 @@ public class UI_PopupMenu : MonoBehaviour, IPointerClickHandler
 
     public void Close()
     {
-        open = false; 
-        RectTransform popup = popupMenuContainer?.GetComponent<RectTransform>(); 
-        popup?.DOSizeDelta(new Vector2(popup.sizeDelta.x, 0), 0.5f).OnComplete(() => Destroy(popupMenuContainer)); 
+        open = false;
+        
+        if(popupMenuContainer != null)
+        {
+            RectTransform popupRectTransform = popupMenuContainer?.GetComponent<RectTransform>();
+            popupRectTransform.DOSizeDelta(new Vector2(popupRectTransform.sizeDelta.x, 0), 0.5f).OnComplete(() => Destroy(popupMenuContainer));
+        }
     }
 }

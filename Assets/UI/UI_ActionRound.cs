@@ -10,12 +10,13 @@ public class UI_ActionRound : MonoBehaviour
     private void Awake()
     {
         Phase.phaseEndEvent.AddListener(phase => endARButton.gameObject.SetActive(false));
+        Phase.phaseStartEvent.AddListener(phase => { if (phase.TryGetComponent(out ActionRound ar)) OnActionRoundStart(ar); });
     }
 
     void OnActionRoundStart(ActionRound ar)
     {
         endARButton.gameObject.SetActive(true);
         endARButton.onClick.RemoveAllListeners();
-        //endARButton.onClick.AddListener(() => ar.callback.Invoke()); 
+        endARButton.onClick.AddListener(() => ar.GetComponent<Phase>().callback.Invoke()); 
     }
 }

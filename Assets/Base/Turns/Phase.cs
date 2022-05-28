@@ -14,6 +14,7 @@ public class Phase : SerializedMonoBehaviour
         phaseMidEvent = new UnityEvent<Phase>(),
         phaseEndEvent = new UnityEvent<Phase>();
 
+    public UnityAction callback;
     public Game.Era era;
     public List<BaseAction> executedActions = new List<BaseAction>();
 
@@ -54,6 +55,7 @@ public class Phase : SerializedMonoBehaviour
     public virtual void StartPhase(UnityAction callback)
     {
         Debug.Log($"StartPhase:: {this}");
+        this.callback = callback; 
 
         currentPhase = this;
         if (rootPhase == null) rootPhase = this; 
@@ -64,8 +66,6 @@ public class Phase : SerializedMonoBehaviour
 
     void OnPhase(UnityAction callback)
     {
-        //Debug.Log($"OnPhase::{this}");
-
         phaseMidEvent.Invoke(this);
         AdvanceToChildPhase(callback);
     }
@@ -74,9 +74,6 @@ public class Phase : SerializedMonoBehaviour
     // In which case it calls those with AfterPhase as the callback. Otherwise, it calls After Phase
     void AdvanceToChildPhase(UnityAction callback)
     {
-        //Debug.Log($"EndPhase::{this}");
-
-
         if (nextChild)
             nextChild.StartPhase(callback);
         else
@@ -96,7 +93,7 @@ public class Phase : SerializedMonoBehaviour
         if (nextSibling)
             nextSibling.StartPhase(callback);
         else
-            callback.Invoke(); // This should point to the Parent EndPhase
+            callback.Invoke(); 
     }
 
     public static void RunActionSequence(List<BaseAction> gameActions, UnityAction callback)

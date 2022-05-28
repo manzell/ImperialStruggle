@@ -14,18 +14,16 @@ public class RepairFortAction : PlayerAction
             baseActionCost = actionPointCost[0];
         else if (baseActionCost == null)
         {
-            baseActionCost = new ActionPoint();
-            baseActionCost.actionType = ActionPoint.ActionType.Military;
-            baseActionCost.actionTier = ActionPoint.ActionTier.Minor;
+            baseActionCost = new ActionPoint(ActionPoint.ActionType.Military, ActionPoint.ActionTier.Minor);
             actionPointCost.Add(baseActionCost);
         }
 
-        baseActionCost.actionPoints = fort.flagCost;
+        baseActionCost.baseValue = fort.flagCost;
 
         if (fort.flag == player.faction)
-            baseActionCost.actionPoints -= 1; 
+            baseActionCost.baseValue -= 1; 
         else if(fort.flag != Game.Faction.Neutral)
-            baseActionCost.actionPoints += 1;
+            baseActionCost.baseValue += 1;
 
         return base.Can();
     }

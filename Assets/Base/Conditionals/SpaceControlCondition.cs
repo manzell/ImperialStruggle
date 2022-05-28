@@ -28,6 +28,6 @@ public class SpaceControlCondition : Conditional
                     return spaceAction.target.flag == Game.Faction.Neutral;
             }
         }
-        return true; 
+        return false; 
     }
 }

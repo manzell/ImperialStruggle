@@ -9,55 +9,62 @@ public class UI_ActionPoints : SerializedMonoBehaviour
     [SerializeField] GameObject actionPointPrefab;
     [SerializeField] Dictionary<ActionPoint.ActionTier, GameObject> actionTiers = new Dictionary<ActionPoint.ActionTier, GameObject>(); 
     
-    Dictionary<ActionPoint.ActionPointKey, UI_ActionPoint> APtiles = new Dictionary<ActionPoint.ActionPointKey, UI_ActionPoint>();
+    Dictionary<string, UI_ActionPoint> APtiles = new Dictionary<string, UI_ActionPoint>();
 
-    ActionPoints actionPoints = new ActionPoints();
+    ActionPoints actionPoints;
+    Player activePlayer; 
 
     private void Awake()
     {
         AdjustAPCommand.adjustAPEvent.AddListener(UpdateTiles);
-        Game.setActivePlayerEvent.AddListener(player => actionPoints = player.actionPoints); 
+        Game.setActivePlayerEvent.AddListener(player => {
+            activePlayer = player; 
+            actionPoints = player.actionPoints;
+            UpdateTiles(); 
+        });
     }
 
-    void AddTile(ActionPoint.ActionPointKey key)
+    void AddTile(ActionPoint ap)
     {
-        //ActionPoint actionPoint = new ActionPoint(key.actionType, key.actionTier);
-        //AddTile(actionPoint);
+        Debug.Log($"AddTile {ap.baseValue} {ap.actionType} {ap.actionTier} {ap.conditionals}");
+        string name = ap.name;
+        if (!APtiles.ContainsKey(name))
+            APtiles.Add(name, Instantiate(actionPointPrefab, actionTiers[ap.actionTier].transform).GetComponent<UI_ActionPoint>());
 
-        GameObject tile = Instantiate(actionPointPrefab, actionTiers[key.actionTier].transform);
-        APtiles.Add(key, tile.GetComponent<UI_ActionPoint>());
-        APtiles[key].SetDisplay(key, actionPoints.Values[key]);
+        APtiles[name].SetTile(ap);
     }
 
-    void RemoveTile(ActionPoint.ActionPointKey key)
+    void RemoveTile(ActionPoint ap)
     {
-        Destroy(APtiles[key].transform);
-        APtiles.Remove(key); 
+        Debug.Log($"RemoveTile {ap.baseValue} {ap.actionType} {ap.actionTier} {ap.conditionals}");
+        string name = ap.name;
+        Destroy(APtiles[name].gameObject);
+        APtiles.Remove(name); 
     }
 
     public void UpdateTiles()
     {
-        Debug.Log("Update Tiles!"); 
-        // Sets our current Display to match the given set of Action Points
-
-        /* First let's get a list of each KEY in our suitcase of action points,
-         * then sort them how we like */
-
-        List<ActionPoint.ActionPointKey> ourKeys = actionPoints.suitcase.Keys.ToList();
-
-        foreach(ActionPoint.ActionPointKey key in APtiles.Where(kvp => !ourKeys.Contains(kvp.Key)).Select(kvp => kvp.Key))
-            RemoveTile(key); 
-
-        /* now we loop through ourKeys, and if we have the key in APTiles, update it's value, otherwise we create it
-         */
-        foreach(ActionPoint.ActionPointKey key in ourKeys)
+        // First cycle through our existing APTile keys and remove any uncessary ones
+        foreach (string key in APtiles.Keys)
         {
-            if (APtiles.ContainsKey(key))
-                APtiles[key].setAPValue(key, actionPoints.Values[key]); 
-            else
-                AddTile(key); 
+            Debug.Log($"Checking to remove {key} ({actionPoints.All(ap => ap.name != key)})");
+            if (actionPoints.All(ap => ap.name != key))
+            {
+                RemoveTile(APtiles[key].actionPoint);
+            }
         }
 
+        // Then cycle through our AP's and add tiles that we need
+        foreach (ActionPoint actionPoint in actionPoints)
+        {
+            Debug.Log($"Checking to add {actionPoint.baseValue} {actionPoint.actionType} {actionPoint.actionTier} Action Points");
+
+            string name = actionPoint.name;
+            if (!APtiles.Keys.Contains(name))
+            {
+                AddTile(actionPoint);
+            }    
+        }
     }
 
 }
