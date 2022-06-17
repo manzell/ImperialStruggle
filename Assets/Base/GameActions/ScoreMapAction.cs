@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class ScoreMapAction : GameAction, IAdjustTP, IAdjustVP
 {
     public Dictionary<Map, Game.Faction> mapWinners = new Dictionary<Map, Game.Faction>();
+    public static UnityEvent<Map> scoreMapEvent; 
 
     public Game.Faction faction => _faction;
     public int tp => _tp;
@@ -14,7 +15,7 @@ public class ScoreMapAction : GameAction, IAdjustTP, IAdjustVP
     int _tp, _vp;
     Game.Faction _faction;
 
-    protected override void Do(UnityAction callback)
+    public override void Do(UnityAction callback)
     {
         foreach(Map map in mapWinners.Keys)
         {
@@ -26,6 +27,7 @@ public class ScoreMapAction : GameAction, IAdjustTP, IAdjustVP
                 _tp = map.awardTile.treatyPoints;
                 map.awardTile.used = false; 
                 base.Do(() => { });
+                scoreMapEvent.Invoke(map); 
             }
         }
 

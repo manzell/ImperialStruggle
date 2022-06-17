@@ -16,7 +16,7 @@ public class ScoreGlobalDemandAction : GameAction, IAdjustVP, IAdjustTP, IAdjust
 
     public Dictionary<Game.Resource, Game.Faction> globalDemandWinners = new Dictionary<Game.Resource, Game.Faction>();
 
-    protected override void Do(UnityAction callback)
+    public override void Do(UnityAction callback)
     {
         GlobalDemandTrack demandTrack = Game.GlobalDemand; 
 

@@ -12,9 +12,9 @@ public class SelectMinistryCardAction : PlayerAction, ITargetType<List<ISelectab
 
     public List<ISelectable> target => selection.selectableItems
         .Where(kvp => kvp.Value == SelectionController.Selection.ItemSelectStatus.Selected)
-        .Select(kvp => kvp.Key).ToList(); 
+        .Select(kvp => kvp.Key).ToList();
 
-    protected override void Do(UnityAction callback)
+    public override void Do(UnityAction callback)
     {
         this.callback = callback;
         List<MinistryCard> ministers = player.ministers.Where(minister => minister.eras.Contains(Phase.currentPhase.era)).OrderBy(minister => minister.name).ToList();

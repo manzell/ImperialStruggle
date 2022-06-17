@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class AdjustDebtCommand : Command
 {
+    public Game.Faction faction; 
+    public int amount; 
+
     public override void Do(BaseAction action)
     {
-        if (action is IAdjustDebt adjustDebtAction && adjustDebtAction.debt != 0)
+        if (amount != 0 && faction != Game.Faction.Neutral)
         {
-            RecordsTrack.currentDebt[adjustDebtAction.faction] += adjustDebtAction.debt;
-
+            RecordsTrack.currentDebt[faction] += amount;
             RecordsTrack.adjustDebtEvent.Invoke(); 
             // Check to see if Debt > Debt Limit
         }

@@ -11,7 +11,7 @@ public class DealInvestmentTilesAction : GameAction, ITargetType<InvestmentTile>
 
     public InvestmentTile target => tile;
 
-    protected override void Do(UnityAction callback)
+    public override void Do(UnityAction callback)
     {
         List<InvestmentTile> tiles = FindObjectsOfType<InvestmentTile>().ToList();
 

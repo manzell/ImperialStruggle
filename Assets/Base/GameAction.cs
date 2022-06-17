@@ -7,8 +7,9 @@ using UnityEngine.Events;
 public class GameAction : BaseAction
 {
     public override bool Can() => conditionals.All(condition => condition.Test(this));
-    protected override void Do(UnityAction callback)
+    public override void Do(UnityAction callback)
     {
+
         if (conditionals.All(condition => condition.Test(this)))
             commands.ForEach(command => command.Do(this));
 

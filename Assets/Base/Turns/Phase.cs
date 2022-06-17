@@ -14,6 +14,8 @@ public class Phase : SerializedMonoBehaviour
         phaseMidEvent = new UnityEvent<Phase>(),
         phaseEndEvent = new UnityEvent<Phase>();
 
+    public Trigger phaseStartTrigger, phaseTrigger, phaseEndTrigger;
+
     public UnityAction callback;
     public Game.Era era;
     public List<BaseAction> executedActions = new List<BaseAction>();
@@ -61,12 +63,14 @@ public class Phase : SerializedMonoBehaviour
         if (rootPhase == null) rootPhase = this; 
 
         phaseStartEvent.Invoke(this);
+        phaseStartTrigger?.onTrigger.Invoke();
         RunActionSequence(phaseStartActions, () => OnPhase(callback));
     }
 
     void OnPhase(UnityAction callback)
     {
         phaseMidEvent.Invoke(this);
+        phaseTrigger?.onTrigger.Invoke();
         AdvanceToChildPhase(callback);
     }
 
@@ -84,6 +88,7 @@ public class Phase : SerializedMonoBehaviour
     void AfterPhase(UnityAction callback)
     {
         phaseEndEvent.Invoke(this);
+        phaseEndTrigger?.onTrigger.Invoke();
         //Debug.Log($"AfterPhase::{this}");
         RunActionSequence(phaseEndActions, () => AdvanceToNextPhase(callback));
     }

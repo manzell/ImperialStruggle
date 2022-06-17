@@ -11,12 +11,16 @@ public class PlayerAction : BaseAction
 
     public override bool Can() => player.CanAffordAction(this) && base.Can();
 
-    protected override void Do(UnityAction callback)
+    public override void Do(UnityAction callback)
     {
-        if (Can())
+        if (player.CanAffordAction(this) && base.Can())
         {
-            PayAPCommand payCommand = new PayAPCommand();
-            payCommand.Do(this); 
+            if(actionPointCost.Count > 0)
+            {
+                PayAPCommand payCommand = new PayAPCommand();
+                payCommand.Do(this);
+            }
+
             commands.ForEach(command => command.Do(this));
         }
     }

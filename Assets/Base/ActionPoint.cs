@@ -75,6 +75,5 @@ public class ActionPoint
         actionTier = ap.actionTier;
         actionType = ap.actionType;
         conditionals = ap.conditionals;
-        Debug.Log($"ActionPoint(ap) Constructor: {conditionals}");
     }
 }

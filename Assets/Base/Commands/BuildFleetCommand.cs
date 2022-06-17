@@ -8,7 +8,7 @@ public class BuildFleetCommand : Command
     {
         //This command adds a fleet to the Navy
 
-        if(action is PlayerAction playerAction)
+        if(action is IPlayerAction playerAction)
         {
             Squadron squadron = new Squadron();
             NavyBox.squadrons.Add(squadron);

@@ -11,11 +11,7 @@ public abstract class BaseAction : SerializedMonoBehaviour
     public string actionText;
     public List<Conditional> conditionals = new List<Conditional>();
     public List<Command> commands = new List<Command>();
-
-    public void Trigger()
-    {
-        Try(() => { }); 
-    }
+    public Trigger trigger;
 
     public bool Try(UnityAction callback) 
     {
@@ -23,6 +19,8 @@ public abstract class BaseAction : SerializedMonoBehaviour
         {
             Phase.currentPhase.executedActions.Add(this); 
             Do(callback);
+            trigger?.onTrigger.Invoke(); 
+
             return true; 
         }
         else
@@ -38,5 +36,5 @@ public abstract class BaseAction : SerializedMonoBehaviour
         return retVal;         
     }
 
-    protected abstract void Do(UnityAction callback); 
+    public abstract void Do(UnityAction callback); 
 }

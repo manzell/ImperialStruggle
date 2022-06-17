@@ -22,6 +22,14 @@ public class Player : SerializedMonoBehaviour, ISelectable
         RecordsTrack.treatyPoints.Add(faction, 0);
 
         Phase.phaseEndEvent.AddListener(phase => actionPoints = new ActionPoints()); 
+
+        foreach(WarTile warTile in GetComponentsInChildren<WarTile>())
+        {
+            if (warTile.warTileSet == WarTile.WarTileSet.Basic)
+                warTiles.Add(warTile);
+            else if (warTile.warTileSet == WarTile.WarTileSet.Bonus)
+                bonusWarTiles.Add(warTile); 
+        }
     }
 
     public List<Game.Keyword> keywords

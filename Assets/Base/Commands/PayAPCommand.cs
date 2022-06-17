@@ -20,13 +20,15 @@ public class PayAPCommand : Command
                 if (apCost.baseValue > 0)
                 {
                     int amtToCharge = Mathf.Min(apCost.baseValue, ap.Value((action as PlayerAction)));
-                    Debug.Log($"{(action as PlayerAction).player} paying {amtToCharge} of {ap.name} for {apCost.name} [{action.actionName}]");
+                    Debug.Log($"{(action as PlayerAction).player.name} paying {amtToCharge} of {ap.name} for {apCost.name} [{action.actionName}]");
 
                     apCost.baseValue -= amtToCharge;
                     ap.baseValue -= amtToCharge;
 
                     if (ap.baseValue <= 0)
                         playerAP.Remove(ap);
+
+                    AdjustAPCommand.adjustAPEvent.Invoke(); 
                 }
             }
         }

@@ -14,7 +14,7 @@ public class SelectInvestmentTileAction : PlayerAction, IAdjustAP
 
     Player IAdjustAP.player => player;
 
-    protected override void Do(UnityAction callback)
+    public override void Do(UnityAction callback)
     {
         
         List<InvestmentTile> investmentTiles = Phase.currentPhase.GetComponentInParent<PeaceTurn>().investmentTiles.Where(kvp => kvp.Value == Game.Faction.Neutral).Select(kvp => kvp.Key).ToList();

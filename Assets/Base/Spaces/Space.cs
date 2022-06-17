@@ -10,14 +10,21 @@ public class Space : MonoBehaviour, ICriteria, ISelectable
     public UnityEvent
         updateSpaceEvent = new UnityEvent();
 
-    public Map map; 
+    public SpaceData data; 
     public Game.Faction flag;
-    public Game.Faction control => conflictMarker ? Game.Faction.Neutral : flag; 
-    public Game.Era availableEra;
-    public List<Space> adjacentSpaces;
-    public int flagCost;
-    public bool prestige, alliance, conflictMarker;
-    public List<PlayerAction> standardActions = new List<PlayerAction>(); 
+    public bool conflictMarker;
+    public Game.Faction control => conflictMarker ? Game.Faction.Neutral : flag;
+
+    public new string name => data.spaceName;
+    public Map map => data.map;
+    public Game.Era availableEra => data.availableEra;
+    public List<Space> adjacentSpaces => data.adjacentSpaces;
+    public int flagCost => data.flagCost;
+    public bool prestige => data.prestige; 
+    public bool alliance => alliance;
+
+    public List<PlayerAction> standardActions = new List<PlayerAction>(); // Rethink how this system works? 
+        // Maybe the Standard Actions exist on the player, and they're passed in the Space as a context? 
 
     [Button] void Flag(Game.Faction faction)
     {

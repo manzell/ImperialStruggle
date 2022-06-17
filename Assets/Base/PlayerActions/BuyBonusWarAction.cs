@@ -12,7 +12,7 @@ public class BuyBonusWarAction : PlayerAction, ITargetType<Theater>, ITargetType
     WarTile bonusWarTile; 
     WarTile ITargetType<WarTile>.target => bonusWarTile;
 
-    protected override void Do(UnityAction callback)
+    public override void Do(UnityAction callback)
     {
         bonusWarTile = player.bonusWarTiles.OrderBy(tile => Random.value).First();
         SelectionController.Selection selection = new SelectionController.Selection(Game.NextWarTurn.theaters.ToList<ISelectable>(), 1);

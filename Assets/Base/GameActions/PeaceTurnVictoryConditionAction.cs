@@ -6,7 +6,7 @@ using System.Linq;
 
 public class PeaceTurnVictoryConditionAction : GameAction
 {
-    protected override void Do(UnityAction callback)
+    public override void Do(UnityAction callback)
     {
         Dictionary<Game.Resource, Game.Faction> demandWinners = Phase.currentPhase.GetComponentInChildren<ScoreGlobalDemandAction>().globalDemandWinners; 
         Dictionary<Map, Game.Faction> mapWinners = Phase.currentPhase.GetComponentInChildren<ScoreMapAction>().mapWinners; 

@@ -8,8 +8,8 @@ public class AdjustDebtLimitAction : GameAction
     [HideInInspector] public Game.Faction faction;
     [SerializeField] List<Game.Faction> factions;
     public int amount;
- 
-    protected override void Do(UnityAction callback)
+
+    public override void Do(UnityAction callback)
     {
         foreach(Game.Faction _faction in factions)
         {

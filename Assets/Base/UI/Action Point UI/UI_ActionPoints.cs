@@ -12,13 +12,11 @@ public class UI_ActionPoints : SerializedMonoBehaviour
     Dictionary<string, UI_ActionPoint> APtiles = new Dictionary<string, UI_ActionPoint>();
 
     ActionPoints actionPoints;
-    Player activePlayer; 
 
     private void Awake()
     {
         AdjustAPCommand.adjustAPEvent.AddListener(UpdateTiles);
         Game.setActivePlayerEvent.AddListener(player => {
-            activePlayer = player; 
             actionPoints = player.actionPoints;
             UpdateTiles(); 
         });
@@ -26,8 +24,8 @@ public class UI_ActionPoints : SerializedMonoBehaviour
 
     void AddTile(ActionPoint ap)
     {
-        Debug.Log($"AddTile {ap.baseValue} {ap.actionType} {ap.actionTier} {ap.conditionals}");
-        string name = ap.name;
+        string name = $"{ap.actionType}-{ap.actionTier}-{ap.conditionText}"; 
+
         if (!APtiles.ContainsKey(name))
             APtiles.Add(name, Instantiate(actionPointPrefab, actionTiers[ap.actionTier].transform).GetComponent<UI_ActionPoint>());
 
@@ -36,8 +34,7 @@ public class UI_ActionPoints : SerializedMonoBehaviour
 
     void RemoveTile(ActionPoint ap)
     {
-        Debug.Log($"RemoveTile {ap.baseValue} {ap.actionType} {ap.actionTier} {ap.conditionals}");
-        string name = ap.name;
+        string name = $"{ap.actionType}-{ap.actionTier}-{ap.conditionText}";
         Destroy(APtiles[name].gameObject);
         APtiles.Remove(name); 
     }
@@ -45,26 +42,18 @@ public class UI_ActionPoints : SerializedMonoBehaviour
     public void UpdateTiles()
     {
         // First cycle through our existing APTile keys and remove any uncessary ones
+        List<string> keysToRemove = new List<string>();
         foreach (string key in APtiles.Keys)
-        {
-            Debug.Log($"Checking to remove {key} ({actionPoints.All(ap => ap.name != key)})");
             if (actionPoints.All(ap => ap.name != key))
-            {
-                RemoveTile(APtiles[key].actionPoint);
-            }
-        }
+                keysToRemove.Add(key); 
+
+        foreach(string key in keysToRemove)
+            RemoveTile(APtiles[key].actionPoint);
 
         // Then cycle through our AP's and add tiles that we need
         foreach (ActionPoint actionPoint in actionPoints)
-        {
-            Debug.Log($"Checking to add {actionPoint.baseValue} {actionPoint.actionType} {actionPoint.actionTier} Action Points");
-
-            string name = actionPoint.name;
-            if (!APtiles.Keys.Contains(name))
-            {
+            if (!APtiles.Keys.Contains(actionPoint.name))
                 AddTile(actionPoint);
-            }    
-        }
     }
 
 }

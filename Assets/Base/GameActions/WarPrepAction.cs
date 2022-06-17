@@ -13,7 +13,7 @@ public class WarPrepAction : GameAction
 
     Game.Faction[] factions = { Game.Faction.France, Game.Faction.Britain };
 
-    protected override void Do(UnityAction callback)
+    public override void Do(UnityAction callback)
     {
         foreach (Theater _theater in war.theaters)
         {

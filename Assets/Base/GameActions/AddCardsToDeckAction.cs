@@ -11,7 +11,7 @@ public class AddCardsToDeckAction : GameAction, ITargetType<EventCard>
     EventCard card; 
     public EventCard target => card;
 
-    protected override void Do(UnityAction callback)
+    public override void Do(UnityAction callback)
     {
         foreach(EventCard eventCard in cards)
         {

@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class EndARAction : PlayerAction
 {
-    protected override void Do(UnityAction callback)
+    public override void Do(UnityAction callback)
     {
         ActionRound ar = Phase.currentPhase.GetComponent<ActionRound>();
         Debug.Log($"{player} ended their Action Round"); 

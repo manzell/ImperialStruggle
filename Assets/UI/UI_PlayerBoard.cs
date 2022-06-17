@@ -27,7 +27,7 @@ public class UI_PlayerBoard : MonoBehaviour
     void AddMinistryCard(MinistryCard card)
     {
         GameObject newMinistryCard = Instantiate(ministryCardPrefab, ministerCardArea.transform);        
-        newMinistryCard.GetComponent<UI_MinisterCard>().Style(card);
+        newMinistryCard.GetComponent<UI_MinisterCard>().SetMinistryCard(card);
         ministryCards.Add(newMinistryCard, card); 
     }
 

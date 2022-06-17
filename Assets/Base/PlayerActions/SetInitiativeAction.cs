@@ -21,7 +21,7 @@ public class SetInitiativeAction : PlayerAction, ITargetType<Player>, ITargetTyp
         return base.Can();
     }
 
-    protected override void Do(UnityAction callback)
+    public override void Do(UnityAction callback)
     {
         this.callback = callback;
 

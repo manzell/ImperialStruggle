@@ -21,7 +21,6 @@ public class UI_PopupMenu : MonoBehaviour, IPointerClickHandler
     {
         if (!open)
         {
-            Debug.Log("OPening"); 
             Open();
             open = true; 
         }

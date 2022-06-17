@@ -20,14 +20,9 @@ public class UI_ActionPoint : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     public void SetTile(ActionPoint ap)
     {
-        Debug.Log($"SetTile1({ap.baseValue} {ap.actionTier} {ap.actionType} | {ap.conditionals})");
         actionPoint = ap; 
-
-
-        Debug.Log($"SetTile2({ap.baseValue} {ap.actionTier} {ap.actionType} | {ap.conditionals})");
-        SetAPIcon(ap);
-        Debug.Log($"SetTile3({ap.baseValue} {ap.actionTier} {ap.actionType} | {ap.conditionals})");
-        setAPValue(ap);
+        SetAPIcon(actionPoint);
+        setAPValue(actionPoint);
     }
 
     public void SetAPIcon(ActionPoint ap)

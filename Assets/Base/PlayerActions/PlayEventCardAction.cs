@@ -6,8 +6,8 @@ using System.Linq;
 
 public class PlayEventCardAction : PlayerAction
 {
-    UnityAction callback; 
-    protected override void Do(UnityAction callback)
+    UnityAction callback;
+    public override void Do(UnityAction callback)
     {
         SelectionController selectionController = FindObjectOfType<SelectionController>();
         List<EventCard> eventCards = player.hand.Where(card =>

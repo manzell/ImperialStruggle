@@ -12,9 +12,9 @@ public class DealCardsAction : GameAction, ITargetType<Player>
     [SerializeField] List<Game.Faction> factions = new List<Game.Faction>();
 
     Player player;
-    public Player target => player; 
+    public Player target => player;
 
-    protected override void Do(UnityAction callback)
+    public override void Do(UnityAction callback)
     {
         for(int i = 0; i < numCards; i++)
         {

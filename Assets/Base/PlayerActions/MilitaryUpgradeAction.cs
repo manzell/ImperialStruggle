@@ -10,9 +10,9 @@ public class MilitaryUpgradeAction : PlayerAction, ITargetType<WarTile>, ITarget
     WarTurn ITargetType<WarTurn>.target => nextWar;
 
     WarTile warTile;
-    WarTurn nextWar; 
+    WarTurn nextWar;
 
-    protected override void Do(UnityAction callback)
+    public override void Do(UnityAction callback)
     {   
         List<ISelectable> warTiles = new List<ISelectable>();
         nextWar = Game.NextWarTurn;
