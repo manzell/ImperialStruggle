@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45c6d278b13fb184b98734a7c8b92255, type: 3}
+  m_Name: Jacobite Uprisings
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  faction: 1
+  keywords: 
+  eras: 000000000100000002000000
+  cardText: Once per turn, you may use MP to shift spaces in Scotland and/or Ireland.
+    Once per turn, on a different Action Round, you may spend 3 MP to score 1 VP
+    (max 4) for each FR-flagged such space and Jacobite Victory marker. Immediately
+    remove this card from the game after BR play of the Papacy-Hanover Negotiations
+    Ministry card, or after a Jacobite Defeat war result.
+  actions: []

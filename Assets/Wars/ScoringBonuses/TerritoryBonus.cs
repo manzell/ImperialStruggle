@@ -6,12 +6,12 @@ public class TerritoryBonus : ScoringBonus
 {
     public List<Space> spaces;
 
-    public override Game.Faction scoringFaction {
+    public override Faction scoringFaction {
         get 
         {
-            Dictionary<Game.Faction, int> spaceScore = new Dictionary<Game.Faction, int>();
-            spaceScore.Add(Game.Faction.Britain, 0);
-            spaceScore.Add(Game.Faction.France, 0); 
+            Dictionary<Faction, int> spaceScore = new Dictionary<Faction, int>();
+            spaceScore.Add(Game.Britain, 0);
+            spaceScore.Add(Game.France, 0); 
 
             foreach(Space space in spaces)
             {
@@ -19,12 +19,12 @@ public class TerritoryBonus : ScoringBonus
                     spaceScore[space.flag]++;
             }
 
-            if(spaceScore[Game.Faction.Britain] > spaceScore[Game.Faction.France])
-                return Game.Faction.Britain;
-            else if(spaceScore[Game.Faction.France] > spaceScore[Game.Faction.Britain])
-                return Game.Faction.France;
+            if(spaceScore[Game.Britain] > spaceScore[Game.France])
+                return Game.Britain;
+            else if(spaceScore[Game.France] > spaceScore[Game.Britain])
+                return Game.France;
             else
-                return Game.Faction.Neutral; 
+                return Game.Neutral; 
         }
     }
 

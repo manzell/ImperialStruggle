@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f108fe2974bb3a40850af968349c7fd, type: 3}
+  m_Name: Acts of Union
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: factionText
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[Game+Faction, Assembly-CSharp],[System.ValueTuple`2[[System.String,
+        mscorlib],[System.String, mscorlib]], mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Game+Faction, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2
+    - Name: $v
+      Entry: 7
+      Data: System.ValueTuple`2[[System.String, mscorlib],[System.String, mscorlib]],
+        mscorlib
+    - Name: Item1
+      Entry: 1
+      Data: 'Unified Parliament reduces Scottish intrigue in Europe: 1 DP (unflagging
+        in Europe only).'
+    - Name: Item2
+      Entry: 1
+      Data: Score 2 VP.
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 7
+      Data: System.ValueTuple`2[[System.String, mscorlib],[System.String, mscorlib]],
+        mscorlib
+    - Name: Item1
+      Entry: 1
+      Data: 'Hapsburgs isolated: 2 DP.'
+    - Name: Item2
+      Entry: 1
+      Data: Unflag a Political space in Europe (not Spain or Austria).
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  era: 0
+  keywords: 
+  reqdActionType: 0
+  bonusKeyword: 0
+  bonusCondition: More Prestige spaces in Scotland and Ireland

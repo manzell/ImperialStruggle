@@ -7,17 +7,17 @@ using Sirenix.OdinInspector;
 public class Theater : SerializedMonoBehaviour, ISelectable
 {
     public Map map;
-    public Dictionary<Game.Faction, List<WarTile>> warTiles; 
+    public List<WarTile> warTiles = new(); 
     public List<ScoringBonus> scoringBonuses; 
     public List<TheaterAwards> theaterAwards;
     public List<Territory> availableTerritories;
 
-    public Game.Faction winningFaction;
+    public Faction winningFaction;
 
-    public Dictionary<Game.Faction, int> theaterScore => new Dictionary<Game.Faction, int>() {
-        { Game.Faction.Britain, scoringBonuses.Where(bonus => bonus.scoringFaction == Game.Faction.Britain).Count()
-            +  warTiles[Game.Faction.Britain].Sum(tile => tile.value) },
-        { Game.Faction.France, scoringBonuses.Where(bonus => bonus.scoringFaction == Game.Faction.France).Count()
-            +  warTiles[Game.Faction.France].Sum(tile => tile.value) }
+    public Dictionary<Faction, int> theaterScore => new Dictionary<Faction, int>() {
+        { Game.Britain, scoringBonuses.Where(bonus => bonus.scoringFaction == Game.Britain).Count()
+            +  warTiles.Where(tile => tile.faction == Game.Britain).Sum(tile => tile.value) },
+        { Game.France, scoringBonuses.Where(bonus => bonus.scoringFaction == Game.France).Count()
+            +  warTiles.Where(tile => tile.faction == Game.France).Sum(tile => tile.value) }
     };
 }
