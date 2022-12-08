@@ -38,19 +38,7 @@ public class Player : SerializedMonoBehaviour, ISelectable
         actionPoints = new ActionPoints();
     }
 
-    public List<Game.Keyword> keywords
-    {
-        get
-        {
-            List<Game.Keyword> _keywords = new List<Game.Keyword>();
-            foreach (MinistryCard card in ministers)
-                foreach(Game.Keyword _keyword in card.keywords)                    
-                    if(!_keywords.Contains(_keyword))
-                        _keywords.Add(_keyword);
-
-            return _keywords;
-        }
-    }
+    public HashSet<MinistryCard.Keyword> Keywords => new HashSet<MinistryCard.Keyword>(ministers.SelectMany(minister => minister.keywords)); 
 
     public List<Squadron> squadrons;
 

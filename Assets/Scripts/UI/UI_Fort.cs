@@ -7,27 +7,29 @@ using Sirenix.OdinInspector;
 
 public class UI_Fort : UI_Space
 {
-    public Fort fort;
-    public Image background, highlight, trim;
-    public TextMeshProUGUI fortName, flagCost;
+    Fort fort;
+    [SerializeField] FortData fortData;
+    [SerializeField] Image background, highlight, trim;
+    [SerializeField] TextMeshProUGUI fortName, flagCost;
 
     private void Awake()
     {
-        GetComponent<Fort>().updateSpaceEvent.AddListener(Style);
         Game.startGameEvent += Style;
-        Game.Forts.Add(fort, this);
-        Game.Spaces.Add(fort, this); 
     }
 
     [Button] public override void Style()
     {
+        if (fort == null)
+        {
+            fort = (Fort)Game.SpaceLookup[fortData];
+            fort.updateSpaceEvent += Style;
+        }
         GraphicSettings graphics = FindObjectOfType<Game>().graphicSettings; 
-        fort = GetComponent<Fort>();
 
         fortName.text = fort.name;
-        flagCost.text = fort.flagCost.ToString();
-        background.color = graphics.factionColors[fort.flag];
-        fortName.color = fort.flag == null ? Color.black : Color.white; 
+        flagCost.text = fort.FlagCost.ToString();
+        background.color = graphics.factionColors[fort.Flag];
+        fortName.color = fort.Flag == null ? Color.black : Color.white; 
 
     }
 }

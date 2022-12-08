@@ -13,7 +13,7 @@ public class AdjustDebtLimitAction : GameAction
         foreach(Faction faction in factions)
         {
             AdjustDebtCommand command = new AdjustDebtCommand(faction, amount); 
-            commands.Push(command);
+            commands.Add(command);
         }
     }
 }

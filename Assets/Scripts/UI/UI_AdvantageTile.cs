@@ -15,8 +15,11 @@ public class UI_AdvantageTile : MonoBehaviour, IPointerClickHandler
 
     private void Awake()
     {
+        //throw new System.NotImplementedException(); 
+        /*
         foreach(Space space in advantageTile.adjacentSpaces)
-            space.updateSpaceEvent.AddListener(Style); 
+            space.updateSpaceEvent += Style; 
+        */
     }
 
     [Button]

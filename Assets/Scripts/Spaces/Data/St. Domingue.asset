@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 676c8adbf7dd3e7478f995b46cdc1f83, type: 3}
+  m_Name: St. Domingue
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  prefab: {fileID: 0}
+  map: {fileID: 0}
+  startingFlag: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
+  availableEra: 0
+  adjacentSpaces:
+  - {fileID: 11400000, guid: 8d05dbaf30b72d0449e6dad72fa4a5e2, type: 2}
+  - {fileID: 11400000, guid: 9762b012d2a737b4baa26d89c29559f1, type: 2}
+  - {fileID: 11400000, guid: a96a1479ecd099242af7019264a78fb5, type: 2}
+  conquestLineConnections:
+  - {fileID: 11400000, guid: e8d40c5e982f0f94cb82912136489068, type: 2}
+  - {fileID: 11400000, guid: e7622ceb11ceef342b0ef49d2da4d01f, type: 2}
+  prestige: 0

@@ -7,15 +7,8 @@ public class AdvantageTile : MonoBehaviour
 {
     public enum AdvantageTileState { Ready, Exhaused }
     public AdvantageTileState tileState { get; private set; }
-    public List<Space> adjacentSpaces = new();
+    [SerializeField] HashSet<Space> adjacentSpaces = new();
 
-    public Faction faction
-    {
-        get
-        {
-            if (adjacentSpaces.All(space => space.flag == adjacentSpaces[0].flag))
-                return adjacentSpaces[0].flag;
-            return null; 
-        }
-    }
+    // Heads up this won't work because we can't set Spaces until runtime
+    public Faction faction => adjacentSpaces.All(space => space.Flag == adjacentSpaces.First().Flag) ? adjacentSpaces.First().Flag : null; 
 }

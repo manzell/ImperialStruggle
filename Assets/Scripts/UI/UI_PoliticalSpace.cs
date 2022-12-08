@@ -7,29 +7,34 @@ using Sirenix.OdinInspector;
 
 public class UI_PoliticalSpace : UI_Space
 {
+    PoliticalSpace politicalSpace;
+    [SerializeField] PoliticalData politicalData;
+
     [SerializeField] TextMeshProUGUI spaceName, flagCost;
     [SerializeField] Image trim, highlight, background;
     [SerializeField] Color trimColor = new Color(235, 215, 171);
-    public PoliticalSpace politicalSpace; 
 
     private void Awake()
     {
-        politicalSpace.updateSpaceEvent.AddListener(Style);
         Game.startGameEvent += Style;
-        Game.PoliticalSpaces.Add(politicalSpace, this);
-        Game.Spaces.Add(politicalSpace, this);
     }
 
     [Button]
     public override void Style()
     {
+        if (politicalSpace == null)
+        {
+            politicalSpace = (PoliticalSpace)Game.SpaceLookup[politicalData];
+            politicalSpace.updateSpaceEvent += Style;
+        }
+
         GraphicSettings graphics = FindObjectOfType<Game>().graphicSettings;
 
         spaceName.text = politicalSpace.name;
-        flagCost.text = politicalSpace.flagCost.ToString();
-        trim.color = politicalSpace.prestige ? graphics.prestigeHighlightColor : trimColor; 
+        flagCost.text = politicalSpace.FlagCost.ToString();
+        trim.color = politicalSpace.Prestigious ? graphics.prestigeHighlightColor : trimColor; 
         highlight.gameObject.SetActive(politicalSpace.conflictMarker);
-        background.color = graphics.factionColors[politicalSpace.flag];
-        spaceName.color = politicalSpace.flag == null || politicalSpace.flag == Game.Spain ? Color.black : Color.white; 
+        background.color = graphics.factionColors[politicalSpace.Flag];
+        spaceName.color = politicalSpace.Flag == null || politicalSpace.Flag == Game.Spain ? Color.black : Color.white; 
     }
 }

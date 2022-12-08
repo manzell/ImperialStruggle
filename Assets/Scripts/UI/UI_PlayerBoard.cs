@@ -21,7 +21,7 @@ public class UI_PlayerBoard : MonoBehaviour
     {
         graphicSettings = FindObjectOfType<Game>().graphicSettings;
         SelectMinistryCardCommand.selectMinistryCardEvent.AddListener(card => { if (card.faction == player.faction) AddMinistryCard(card); });
-        DealCardCommand.dealCardEvent.AddListener(card => { if (player.hand.Contains(card)) AddEventCard(card); });
+        DealCardCommand.dealCardEvent += card => { if (player.hand.Contains(card)) AddEventCard(card); };
     }
 
     void AddMinistryCard(MinistryCard card)

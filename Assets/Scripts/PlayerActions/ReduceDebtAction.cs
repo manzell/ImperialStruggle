@@ -10,6 +10,6 @@ public class ReduceDebtAction : PlayerAction
 
     protected override void Do()
     {
-        commands.Push(new AdjustDebtCommand(actingPlayer.faction, debtAdjustment));
+        commands.Add(new AdjustDebtCommand(actingPlayer.faction, debtAdjustment));
     }
 }

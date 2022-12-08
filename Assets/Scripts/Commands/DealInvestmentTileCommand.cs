@@ -17,7 +17,7 @@ public class DealInvestmentTileCommand : Command
             peaceTurn.investmentTiles.Add(tile, null); 
             tile.status = InvestmentTile.InvestmentTileStatus.Available;
 
-            Game.Log($"{tile.name} added to Investment Tile Pool");
+            Debug.Log($"{tile.name} added to Investment Tile Pool");
             dealInvestmentTileEvent.Invoke(tile);
         }
     }

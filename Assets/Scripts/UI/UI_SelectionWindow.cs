@@ -5,16 +5,17 @@ using UnityEngine.UI;
 using UnityEngine.Events; 
 using TMPro; 
 
-public class UI_SelectionWindow : MonoBehaviour
+public class UI_SelectionWindow<T> : MonoBehaviour where T : ISelectable
 {
+    
     [SerializeField] GameObject tileArea, buttonArea;
     public Button okButton, resetButton;
     public TextMeshProUGUI windowTitle;
     [SerializeField] GameObject defaultTilePrefab, ministryCardPrefab, eventCardPrefab;
 
-    Dictionary<ISelectable, GameObject> itemLookup = new Dictionary<ISelectable, GameObject>();
+    Dictionary<T, GameObject> itemLookup = new Dictionary<T, GameObject>();
 
-    public void AddTile(ISelectable item, SelectionController.Selection selector)
+    public void AddTile(T item, SelectionController<T>.Selection selector)
     {
         GameObject tile = Instantiate(GetTilePrefab(item), tileArea.transform);
         ClickHandler toggle = tile.AddComponent<ClickHandler>();
@@ -26,7 +27,7 @@ public class UI_SelectionWindow : MonoBehaviour
 
     public void SetTitle(string title) => windowTitle.text = title;
 
-    GameObject GetTilePrefab<T>(T tile)
+    GameObject GetTilePrefab(T tile)
     {
         if (tile is MinistryCard)
             return ministryCardPrefab;
@@ -36,15 +37,15 @@ public class UI_SelectionWindow : MonoBehaviour
             return defaultTilePrefab;
     }
 
-    string GetTileName(ISelectable item) => item is MonoBehaviour g ? g.name : item.ToString(); 
+    string GetTileName(T item) => item is MonoBehaviour g ? g.name : item.ToString(); 
 
-    public void Deselect(ISelectable item)
+    public void Deselect(T item)
     {
         if(itemLookup.TryGetValue(item, out GameObject tile))
             tile.GetComponent<UI_SelectionTile>().RemoveHighlight(); 
     }
 
-    public void Select(ISelectable item)
+    public void Select(T item)
     {
         if (itemLookup.TryGetValue(item, out GameObject tile))
         {

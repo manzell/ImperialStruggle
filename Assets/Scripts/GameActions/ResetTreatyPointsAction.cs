@@ -11,6 +11,6 @@ public class ResetTreatyPointsAction : GameAction
     protected override void Do()
     {
         foreach (Faction faction in Player.players.Select(p => p.faction))
-            commands.Push(new AdjustTreatyPointsCommand(faction, Mathf.Min(0, treatyPointsCap - RecordsTrack.treatyPoints[faction]))); 
+            commands.Add(new AdjustTreatyPointsCommand(faction, Mathf.Min(0, treatyPointsCap - RecordsTrack.treatyPoints[faction]))); 
     }
 }

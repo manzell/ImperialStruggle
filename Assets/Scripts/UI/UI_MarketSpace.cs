@@ -7,30 +7,31 @@ using Sirenix.OdinInspector;
 
 public class UI_MarketSpace : UI_Space
 {
-    public Market market;
+    Market market;
+    [SerializeField] MarketData marketData; 
     [SerializeField] Image background, highlight, trim, resourceIcon, resourceBackground;
     [SerializeField] TextMeshProUGUI marketName, flagCost;
     [SerializeField] GameObject marketCircle; 
 
     public void Awake()
     {
-        market.updateSpaceEvent.AddListener(Style);
         Game.startGameEvent += Style;
-        Game.Markets.Add(market, this);
-        Game.Spaces.Add(market, this);
     }
 
     [Button]
     public override void Style()
     {
+        if (market == null)
+            market = (Market)Game.SpaceLookup[marketData];
+
         GraphicSettings graphics = FindObjectOfType<Game>().graphicSettings;
 
         marketName.text = market.name;
-        flagCost.text = market.flagCost.ToString();
+        flagCost.text = market.FlagCost.ToString();
 
-        resourceBackground.color = market.marketType.resourceColor;
-        resourceIcon.sprite = market.marketType.resourceIcon.sprite; 
-        background.color = graphics.factionColors[market.flag];
-        marketName.color = market.flag == null || market.flag == Game.Spain ? Color.black : Color.white;
+        resourceBackground.color = market.Resource.resourceColor;
+        resourceIcon.sprite = market.Resource.resourceIcon; 
+        background.color = graphics.factionColors[market.Flag];
+        marketName.color = market.Flag == null || market.Flag == Game.Spain ? Color.black : Color.white;
     }
 }

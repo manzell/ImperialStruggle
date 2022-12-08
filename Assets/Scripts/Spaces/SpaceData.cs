@@ -1,14 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Sirenix.OdinInspector; 
 
-[CreateAssetMenu]
-public class SpaceData : ScriptableObject
+public abstract class SpaceData : SerializedScriptableObject
 {
-    public string spaceName; 
+    public GameObject prefab;
     public Map map;
-    public Game.Era availableEra;
-    public List<Space> adjacentSpaces;
-    public int flagCost;
-    public bool prestige, alliance;
+    public Faction startingFlag;
+    public Phase.Era availableEra;
+    public List<SpaceData> adjacentSpaces;
 }

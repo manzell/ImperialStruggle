@@ -21,9 +21,9 @@ public class AdjustDebtLimitCommand : Command
             int debtLimit = Mathf.Max(0, RecordsTrack.debtLimit[faction] + debtAction.amount);
             RecordsTrack.debtLimit[faction] = debtLimit;
 
-            RecordsTrack.adjustDebtLimitEvent.Invoke(); 
+            RecordsTrack.adjustDebtLimitEvent.Invoke();
 
-            Game.Log($"Adjusting {faction} Debt Limit by {debtAction.amount} (to {debtLimit})");            
+            Debug.Log($"Adjusting {faction} Debt Limit by {debtAction.amount} (to {debtLimit})");
         }
     }
 }

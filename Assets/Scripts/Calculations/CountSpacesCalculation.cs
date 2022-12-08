@@ -11,6 +11,6 @@ public class CountSpacesCalculation : Calculation<int>
     public override int Calculate()
     {
         calculated = true;
-        return Mathf.Max(spaces.Where(space => space.flag == targetFaction).Count(), 0); 
+        return Mathf.Max(spaces.Where(space => space.Flag == targetFaction).Count(), 0); 
     }
 }

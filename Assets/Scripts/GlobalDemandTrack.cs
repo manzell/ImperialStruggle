@@ -1,10 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Sirenix.OdinInspector; 
+using Sirenix.OdinInspector;
+using System.Linq;
 
-[System.Serializable]
-public class GlobalDemandTrack : Dictionary<Game.Era, Dictionary<Resource, Dictionary<ActionPoint.ActionType, int>>>
+[CreateAssetMenu]
+public class GlobalDemandTrack: SerializedScriptableObject
 {
-    //public Dictionary<Game.Era, Dictionary<Game.Resource, int>> globalDemandAwards = new Dictionary<Game.Era,Dictionary<Game.Resource, int>>();
+    public Dictionary<GlobalDemandKey, ActionPoints> GlobalDemandAwards;
+
+    public HashSet<Resource> Resources => new(GlobalDemandAwards.Select(award => award.Key.Resource)); 
+}
+
+public struct GlobalDemandKey
+{
+    public Phase.Era Era;
+    public Resource Resource; 
+
 }

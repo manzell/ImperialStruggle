@@ -37,25 +37,4 @@ public class UI_GameBoard : SerializedMonoBehaviour, IDragHandler, IBeginDragHan
             previousPosition = Mouse.current.position.ReadValue();
         }
     }
-
-    [Button] 
-    void DrawLines()
-    {
-        foreach(Space source in FindObjectsOfType<Space>())
-        {
-            foreach(Space target in source.adjacentSpaces)
-            {
-                if (!connections.ContainsKey((source, target)) && !connections.ContainsKey((target, source)))
-                {
-                    GameObject go = Instantiate(linePrefab, lineContainer.transform); 
-                    go.name = source.name + "/" + target.name; 
-
-                    LineRenderer line = go.GetComponent<LineRenderer>(); 
-                    line.SetPositions(new Vector3[] { source.gameObject.transform.position, target.gameObject.transform.position});
-
-                    connections.Add((source, target), line);
-                }
-            }
-        }
-    }
 }

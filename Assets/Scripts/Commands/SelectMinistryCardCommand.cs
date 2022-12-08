@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Events;
+using UnityEngine; 
 
 public class SelectMinistryCardCommand : Command
 {
@@ -14,7 +15,7 @@ public class SelectMinistryCardCommand : Command
                 card.ministryCardStatus = MinistryCard.MinistryCardStatus.Selected;
                 selectMinistryCardEvent.Invoke(card);
 
-                Game.Log($"{card.faction} selects {card.name} Ministry Card");
+                Debug.Log($"{card.faction} selects {card.name} Ministry Card");
             }
         }
     }

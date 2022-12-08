@@ -7,11 +7,7 @@ using System.Linq;
 
 public class SelectMinistryCardAction : PlayerAction
 {
-    SelectionController.Selection selection;
-
-    public List<ISelectable> target => selection.selectableItems
-        .Where(kvp => kvp.Value == SelectionController.Selection.ItemSelectStatus.Selected)
-        .Select(kvp => kvp.Key).ToList();
+    SelectionController<MinistryCard>.Selection selection;
 
     protected override void Do()
     {

@@ -18,8 +18,8 @@ public class Map : MonoBehaviour, ICriteria, ISelectable
             }; 
 
             foreach(Space space in spaces)
-                if(retVal.ContainsKey(space.flag))
-                    retVal[space.flag]++; 
+                if(retVal.ContainsKey(space.Flag))
+                    retVal[space.Flag]++; 
 
             return retVal; 
         }

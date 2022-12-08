@@ -7,6 +7,8 @@ using System.Linq;
 
 public abstract class Phase : SerializedMonoBehaviour
 {
+    public enum Era { Succession, Empire, Revolution }
+
     public static Phase rootPhase;
     public static Phase PreviousPhase, CurrentPhase;
     public static System.Action<Phase> PhaseStartEvent, PhaseEndEvent;
@@ -15,7 +17,7 @@ public abstract class Phase : SerializedMonoBehaviour
     [SerializeField] Queue<GameAction> phaseStartActions = new(), phaseEndActions = new();
     public Stack<GameAction> executedActions { get; private set; } = new();
 
-    [field:SerializeField] public Game.Era era { get; private set; }
+    [field:SerializeField] public Era era { get; private set; }
 
     Phase childPhase => GetComponentsInChildren<Phase>().FirstOrDefault();
     Phase siblingPhase => transform.parent.GetComponentsInChildren<Phase>().Where(actionRound => actionRound.transform.GetSiblingIndex() == transform.GetSiblingIndex() + 1).FirstOrDefault();
@@ -24,14 +26,7 @@ public abstract class Phase : SerializedMonoBehaviour
     public virtual Phase NextPhase => childPhase ?? siblingPhase ?? parentPhase;
     public virtual Phase FollowingPhase => siblingPhase ?? parentPhase;
 
-
-    [ContextMenu("Start Game from Here")] 
-    public void StartHere()
-    {
-        Game.startGameEvent.Invoke(); 
-        StartPhase();
-    }
-
+    [ContextMenu("Start Phase")] 
     public virtual void StartPhase()
     {
         Debug.Log($"StartPhase:: {this}");
@@ -62,7 +57,10 @@ public abstract class Phase : SerializedMonoBehaviour
 
     void ProcessActionQueue(Queue<GameAction> queue)
     {
-        while (queue.Peek())
+        // TODO: Look into an Iterator. If one of the Actions triggers the end game state we dont want to 
+        Phase phase = CurrentPhase; 
+
+        while (phase == CurrentPhase && queue.Count > 0)
             queue.Dequeue().Execute();
     }
 

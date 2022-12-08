@@ -12,6 +12,6 @@ public class WarPrepAction : GameAction
     {
         foreach(Player player in Player.players)
             foreach(Theater theater in nextWar.theaters)
-                commands.Push(new AddWarTileToTheaterCommand(player.warTiles.Dequeue(), theater)); 
+                commands.Add(new AddWarTileToTheaterCommand(player.warTiles.Dequeue(), theater)); 
     }
 }

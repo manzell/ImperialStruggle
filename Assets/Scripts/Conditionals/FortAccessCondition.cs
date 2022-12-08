@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
 public class FortAccessCondition : Conditional
 {
     public Conditional.ConditionType ConditionalType => Conditional.ConditionType.Exactly;
@@ -20,6 +21,7 @@ public class FortAccessCondition : Conditional
                     return true;
         }
 
-        return false;
+        return false;        
     }
 }
+*/

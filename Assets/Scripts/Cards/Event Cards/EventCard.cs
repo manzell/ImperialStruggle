@@ -10,6 +10,6 @@ public class EventCard : SerializedMonoBehaviour, ICard, ISelectable
     [HideInInspector] public UnityAction callback;
 
     public ActionPoint.ActionType reqdActionType;
-    public Game.Era era;
+    public Phase.Era era;
     public List<PlayerAction> actions = new List<PlayerAction>();
 }

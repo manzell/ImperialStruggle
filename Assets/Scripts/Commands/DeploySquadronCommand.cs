@@ -9,6 +9,7 @@ public class DeploySquadronCommand : Command
     public static UnityEvent<Squadron, Space> deploySquadronEvent = new UnityEvent<Squadron, Space>(); 
     public override void Do(GameAction action)
     {
+        /*
         if(action is ActionTarget<NavalSpace> naval && action is ActionTarget<Squadron> squadron)
         {
             int countEnemySquadrons = naval.target.squadrons.Where(squad => squad.flag != squadron.target.flag).Count();
@@ -33,5 +34,6 @@ public class DeploySquadronCommand : Command
             deploySquadronEvent.Invoke(squadron.target, naval.target);
             naval.target.updateSpaceEvent.Invoke(); 
         }
+        */
     }
 }

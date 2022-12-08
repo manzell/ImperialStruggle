@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b97cc78e0bacb5409f8e527f0d96411, type: 3}
+  m_Name: Hooghly River
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  prefab: {fileID: 0}
+  map: {fileID: 0}
+  startingFlag: {fileID: 0}
+  availableEra: 0
+  adjacentSpaces:
+  - {fileID: 11400000, guid: 88d0ca5920183014ab1dc1d853d0c8ac, type: 2}
+  - {fileID: 11400000, guid: 6ba3f79dd50cb06438bacf3b5371abea, type: 2}
+  - {fileID: 11400000, guid: 3831be188c0fa7946a6b82f122591224, type: 2}
+  - {fileID: 11400000, guid: 4039bbf913276b0468815ebc7d24d36e, type: 2}
+  prestige: 0

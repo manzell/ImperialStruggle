@@ -16,7 +16,7 @@ public class NumFlagsCondition : Conditional
 
     public bool Test(GameAction action)
     {
-        int spacesCount = spaces.Where(space => space.flag == targetFaction).Count();
+        int spacesCount = spaces.Where(space => space.Flag == targetFaction).Count();
 
         switch (ConditionalType)
         {

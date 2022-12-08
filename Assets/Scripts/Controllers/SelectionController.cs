@@ -2,16 +2,15 @@ using System;
 using System.Collections.Specialized;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using System.Linq; 
 
-public class SelectionController : MonoBehaviour
+public class SelectionController<T> : MonoBehaviour where T : ISelectable
 {
     [SerializeField] GameObject selectionWindowPrefab;
 
-    public Selection Select(List<ISelectable> list, int num)
+    public Selection Select(IEnumerable<T> list, int num)
     {
-        Selection selection = new Selection(list, num);
+        Selection selection = new Selection(list);
 
         if (num > 0)
             selection.OpenSelectionWindow(selectionWindowPrefab, transform);
@@ -22,31 +21,42 @@ public class SelectionController : MonoBehaviour
     public class Selection
     {
         public enum ItemSelectStatus { Unselected, Selected, Rejected }
-        public Dictionary<ISelectable, ItemSelectStatus> selectableItems = new Dictionary<ISelectable, ItemSelectStatus>();
-        public UnityAction<List<ISelectable>> callback;
-        public List<ISelectable> selectedItems = new List<ISelectable>(); 
-        int maxSelectable; 
-
-        UI_SelectionWindow uiSelectionWindow;
+        public Dictionary<T, ItemSelectStatus> selectableItems = new Dictionary<T, ItemSelectStatus>();
+        public System.Action<IEnumerable<T>> multicallback;
+        public System.Action<T> solocallback;
+        public List<T> selectedItems = new List<T>();
+        int maxSelectable = 1;  
+        UI_SelectionWindow<T> uiSelectionWindow;
 
         public void SetTitle(string title) => uiSelectionWindow.SetTitle(title);
 
-        public Selection(List<ISelectable> items, int maxSelectable)
+        public Selection(IEnumerable<T> items)
         {
-            this.maxSelectable = maxSelectable;
-
             selectableItems.Clear();
-            foreach (ISelectable item in items)
-                selectableItems.Add(item, ItemSelectStatus.Unselected); 
+            foreach (T item in items)
+                selectableItems.Add(item, ItemSelectStatus.Unselected);
         }
 
+        public Selection(IEnumerable<T> items, System.Action<T> callback) : this(items)
+        {
+            solocallback = callback;
+        }
+
+        public Selection(IEnumerable<T> items, System.Action<IEnumerable<T>> callback, int numItems): this(items)
+        {
+            multicallback = callback;
+            this.maxSelectable = numItems; 
+        }
+
+       
         public void OpenSelectionWindow(GameObject prefab, Transform transform)
         {
-            uiSelectionWindow = Instantiate(prefab, transform).GetComponent<UI_SelectionWindow>();
-            uiSelectionWindow.okButton.onClick.AddListener(() => callback.Invoke(selectedItems));
+            uiSelectionWindow = Instantiate(prefab, transform).GetComponent<UI_SelectionWindow<T>>();
+
+            //uiSelectionWindow.okButton.onClick.AddListener(maxSelectable == 1 ? solocallback : multicallback);
             uiSelectionWindow.okButton.onClick.AddListener(CloseSelectionWindow);
 
-            foreach(ISelectable item in selectableItems.Keys)
+            foreach(T item in selectableItems.Keys)
                 uiSelectionWindow.AddTile(item, this);
         }
 
@@ -55,7 +65,7 @@ public class SelectionController : MonoBehaviour
             Destroy(uiSelectionWindow.gameObject); 
         }
 
-        public void SelectItem(ISelectable item)
+        public void SelectItem(T item)
         {
             // This gets called on a click, essentially. 
 
@@ -73,13 +83,12 @@ public class SelectionController : MonoBehaviour
 
                 while(maxSelectable != 0 && selectedItems.Count > maxSelectable)
                 {
-                    ISelectable _item = selectedItems.First();
+                    T _item = selectedItems.First();
                     selectableItems[_item] = ItemSelectStatus.Unselected;
                     selectedItems.Remove(_item);
                     uiSelectionWindow.Deselect(_item);
                 }
             }
         }
-
     }
 }

@@ -13,7 +13,7 @@ public class DeploySquadronAction : PlayerAction
 
     public int CalculateDeploymentCost(Player player)
     {
-        if (GetComponent<NavalSpace>().flag == player.faction)
+        if (GetComponent<NavalSpace>().Flag == player.faction)
             return 1;
         else
         {

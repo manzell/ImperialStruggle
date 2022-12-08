@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI; 
 
 [CreateAssetMenu]
-public class Faction : ScriptableObject
+public class Faction : ScriptableObject, ISelectable
 {
     public Sprite Icon;
     public Color Color;

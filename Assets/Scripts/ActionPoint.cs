@@ -8,7 +8,7 @@ using System;
 [System.Serializable]
 public class ActionPoint
 {
-    public enum ActionType { None, Finance, Diplomacy, Military, Debt, Treaty, Free, VictoryPoint } // move these to ActionPoint
+    public enum ActionType { None, Finance, Diplomacy, Military, Debt, Treaty, Free, VictoryPoint }
     public enum ActionTier { Minor, Major }
 
     public ActionType actionType;

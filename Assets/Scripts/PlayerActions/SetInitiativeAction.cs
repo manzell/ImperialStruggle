@@ -6,22 +6,18 @@ using System.Linq;
 
 public class SetInitiativeAction : PlayerAction
 {
-    SelectionController.Selection selection;
-
     protected override void Do()
     {
-        selection = FindObjectOfType<SelectionController>().Select(Player.players.ToList<ISelectable>(), 1);
-
-        selection.SetTitle($"{actingPlayer.faction} selects Initiative"); 
-        selection.callback = Finish;
+        SelectionController<Faction>.Selection selection = new(new List<Faction>() { Game.Britain, Game.France }, Finish);
+        selection.SetTitle($"{actingPlayer.faction} selects Initiative");         
     }
 
-    void Finish(List<ISelectable> players)
+    void Finish(Faction faction)
     {
         if(Phase.CurrentPhase is PeaceTurn peaceTurn)
         {
             ActionRound[] actionRounds = Phase.CurrentPhase.GetComponentsInChildren<ActionRound>();
-            peaceTurn.initiative = ((Player)players.First()).faction; 
+            peaceTurn.initiative = faction; 
 
             Debug.Log($"{actingPlayer.faction} elects to {(actingPlayer == peaceTurn.initiative ? "Play" : "Pass")} the first Action Round; " +
                 $"{actingPlayer.faction.Opposition()} will go {(actingPlayer.faction.Opposition() == peaceTurn.initiative ? "First" : "Second")}");

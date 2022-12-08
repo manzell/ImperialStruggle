@@ -5,6 +5,7 @@ using UnityEngine.Events;
 using System.Linq;
 using UnityEngine.Tilemaps;
 using Sirenix.Utilities;
+using ImperialStruggle;
 
 public class DealInvestmentTilesAction : GameAction
 {
@@ -12,15 +13,20 @@ public class DealInvestmentTilesAction : GameAction
 
     protected override void Do()
     {
-        Stack<InvestmentTile> tiles = new Stack<InvestmentTile>(FindObjectsOfType<InvestmentTile>()
-            .OrderBy(tile => tile.status != InvestmentTile.InvestmentTileStatus.Reserve).ThenBy(tile => Random.value));
-
-        for(int i = 0; i < numToDeal; i++)
+        if (Phase.CurrentPhase is PeaceTurn peaceTurn)
         {
-            if (tiles.ElementAt(i).status != InvestmentTile.InvestmentTileStatus.Reserve)
-                tiles.ForEach(tile => tile.status = InvestmentTile.InvestmentTileStatus.Reserve);
+            commands.Add(new ResetInvestmentTilesCommand()); 
 
-            commands.Push(new DealInvestmentTileCommand(tiles.ElementAt(i)));
+            Stack<InvestmentTile> tiles = new Stack<InvestmentTile>(FindObjectsOfType<InvestmentTile>()
+                .OrderBy(tile => tile.status != InvestmentTile.InvestmentTileStatus.Reserve).ThenBy(tile => Random.value));
+
+            for (int i = 0; i < numToDeal; i++)
+            {
+                if (tiles.ElementAt(i).status != InvestmentTile.InvestmentTileStatus.Reserve)
+                    tiles.ForEach(tile => tile.status = InvestmentTile.InvestmentTileStatus.Reserve);
+
+                commands.Add(new DealInvestmentTileCommand(tiles.ElementAt(i)));
+            }
         }
     }
 }

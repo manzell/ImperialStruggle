@@ -9,24 +9,27 @@ using DG.Tweening;
 
 public class UI_NavalSpace : UI_Space
 {
+    NavalSpace navalSpace;
+    [SerializeField] NavalData navalData; 
     [SerializeField] TextMeshProUGUI spaceName;
     [SerializeField] Image trim, highlight, background;
-    public NavalSpace navalSpace; 
-
+    
     private void Awake()
     {
-        GetComponent<NavalSpace>().updateSpaceEvent.AddListener(Style);
         Game.startGameEvent += Style;
-        Game.NavalSpaces.Add(navalSpace, this);
-        Game.Spaces.Add(navalSpace, this); 
     }
 
     [Button]
     public override void Style()
     {
+        if (navalSpace == null)
+        {
+            navalSpace = (NavalSpace)Game.SpaceLookup[navalData];
+            navalSpace.updateSpaceEvent += Style;
+        }
         GraphicSettings settings = FindObjectOfType<Game>().graphicSettings;
 
         spaceName.text = navalSpace.name;
-        trim.color = navalSpace.prestige ? settings.prestigeHighlightColor : Color.white; 
+        trim.color = navalSpace.Prestigious ? settings.prestigeHighlightColor : Color.white; 
     }
 }

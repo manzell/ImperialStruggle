@@ -13,7 +13,7 @@ public class CardinalMinistersAction : PlayerAction
     ActionPoint actionPoint;
     ActionPoints _actionPoints = new ActionPoints();
     public ActionPoints actionPoints => _actionPoints;
-    [SerializeField] int bonusDP => Mathf.Clamp(bonusSpaces.Count(space => space.flag == actingPlayer.faction), 0, maxDP);
+    [SerializeField] int bonusDP => Mathf.Clamp(bonusSpaces.Count(space => space.Flag == actingPlayer.faction), 0, maxDP);
 
 
     protected override void Do()

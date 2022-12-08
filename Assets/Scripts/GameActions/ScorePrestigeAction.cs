@@ -11,19 +11,19 @@ public class ScorePrestigeAction : GameAction
 
     protected override void Do()
     {
-        HashSet<Space> prestigeSpaces = new HashSet<Space>(Game.Spaces.Keys.Where(space => space.prestige == true));
+        HashSet<ISpace> prestigeSpaces = new (Game.Spaces.OfType<PrestigeSpace>().Where(space => space.Prestigious));
 
-        if (usaSpaces.Any(space => space.flag == Game.USA))
+        if (usaSpaces.Any(space => space.Flag == Game.USA))
             prestigeSpaces.UnionWith(usaSpaces);
 
-        int britainScore = prestigeSpaces.Count(space => space.flag == Game.Britain);
-        int franceScore = prestigeSpaces.Count(space => space.flag == Game.France);
+        int britainScore = prestigeSpaces.Count(space => space.Flag == Game.Britain);
+        int franceScore = prestigeSpaces.Count(space => space.Flag == Game.France);
 
         if (britainScore > franceScore)
             adjustVPCommand.faction = Game.Britain;
         else if (franceScore > britainScore)
             adjustVPCommand.faction = Game.France;
 
-        commands.Push(adjustVPCommand); 
+        commands.Add(adjustVPCommand); 
     }
 }

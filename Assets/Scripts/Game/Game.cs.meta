@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: e9649b526cb62ba469af801f587dcf32
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - britain: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
+  - france: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
+  - usa: {fileID: 11400000, guid: 7fc1ea7cd44976f45829e28093550f26, type: 2}
+  - spain: {fileID: 11400000, guid: b1ddcaf73c7dc44479196db223dbb84b, type: 2}
+  - neutral: {fileID: 11400000, guid: fa035a9950db4ba458654758b49c2e78, type: 2}
+  - startingPhase: {instanceID: 0}
+  - globalDemandTrack: {fileID: 11400000, guid: 91358f445dbed4447a50acc527b43fb0, type: 2}
+  - graphicSettings: {fileID: 11400000, guid: 0796ea962d44e2c4daea307d9cb65801, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

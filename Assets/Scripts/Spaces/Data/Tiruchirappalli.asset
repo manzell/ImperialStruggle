@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0554630cf84eef240a3a3e5dbaf5901c, type: 3}
+  m_Name: Tiruchirappalli
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  prefab: {fileID: 0}
+  map: {fileID: 0}
+  startingFlag: {fileID: 0}
+  availableEra: 0
+  adjacentSpaces:
+  - {fileID: 11400000, guid: 5aafc3894ed373b4f84939369f39ede1, type: 2}
+  - {fileID: 11400000, guid: 5281f154276c47d48bb8004af3b6ab57, type: 2}
+  - {fileID: 11400000, guid: e8092ba8af3aef646b9fd21400bed236, type: 2}
+  - {fileID: 11400000, guid: 2bc6a2aa0535c6744b2c9bbcee7011e1, type: 2}
+  resource: {fileID: 11400000, guid: 1b869c261556c7c42aa2e60e938cefa4, type: 2}
+  flagCost: 2

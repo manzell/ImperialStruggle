@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0554630cf84eef240a3a3e5dbaf5901c, type: 3}
+  m_Name: Cayman Passage
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  prefab: {fileID: 0}
+  map: {fileID: 0}
+  startingFlag: {fileID: 0}
+  availableEra: 0
+  adjacentSpaces:
+  - {fileID: 11400000, guid: 3559c37ba3295984e9d4085abab67e7a, type: 2}
+  - {fileID: 11400000, guid: 7f740aaaeb8931d44898d68db7b667e4, type: 2}
+  - {fileID: 11400000, guid: e7997a80369fa0748bcb0d697082babd, type: 2}
+  - {fileID: 11400000, guid: e01ea4c617e95ce42abc7fd897636ee0, type: 2}
+  resource: {fileID: 11400000, guid: faba19c7570ce384daeda70d40aafca1, type: 2}
+  flagCost: 2

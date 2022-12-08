@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class KeywordCondition : Conditional
 {
-    public Game.Keyword keyword;
+    public MinistryCard.Keyword keyword;
 
     public Conditional.ConditionType ConditionalType => Conditional.ConditionType.Exactly;
 
@@ -14,7 +14,7 @@ public class KeywordCondition : Conditional
     public bool Test(GameAction action)
     {
         if (action is PlayerAction playerAction)
-            return playerAction.actingPlayer.keywords.Contains(keyword);
+            return playerAction.actingPlayer.Keywords.Contains(keyword);
         else
             return true; 
     }

@@ -19,7 +19,7 @@ public class SetAwardTileCommand : Command
         if(Phase.CurrentPhase is PeaceTurn peaceTurn)
         { 
             peaceTurn.awardTiles.Add(map, tile);
-            Game.Log($"{tile} set as {map} Award Tile");
+            Debug.Log($"{tile} set as {map} Award Tile");
         }
     }
 }

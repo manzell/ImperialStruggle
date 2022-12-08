@@ -255,7 +255,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5611922876939140950}
   - component: {fileID: 6224538372838387954}
-  - component: {fileID: 4151728085982236477}
   m_Layer: 5
   m_Name: Market
   m_TagString: Untagged
@@ -301,7 +300,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e533d6fd2f1a821498acee72b4b56bd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  market: {fileID: 4151728085982236477}
   background: {fileID: 8803547010784788402}
   highlight: {fileID: 3761033291928801279}
   trim: {fileID: 9183880089295827908}
@@ -310,33 +308,6 @@ MonoBehaviour:
   marketName: {fileID: 1920022675910540586}
   flagCost: {fileID: 8659756594470036117}
   marketCircle: {fileID: 1462739459306316012}
---- !u!114 &4151728085982236477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3382272745718386284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7886aa234e90ddb4281338f2ddadddca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  updateSpaceEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  map: {fileID: 0}
-  flag: 0
-  availableEra: 0
-  adjacentSpaces: []
-  flagCost: 0
-  prestige: 0
-  alliance: 0
-  conflictMarker: 0
-  standardActions: []
-  marketType: 0
-  isolatedMarket: 0
-  protectedMarket: 0
 --- !u!1 &3926853243202905355
 GameObject:
   m_ObjectHideFlags: 0

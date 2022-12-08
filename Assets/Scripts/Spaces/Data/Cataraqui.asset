@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0554630cf84eef240a3a3e5dbaf5901c, type: 3}
+  m_Name: Cataraqui
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  prefab: {fileID: 0}
+  map: {fileID: 0}
+  startingFlag: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
+  availableEra: 0
+  adjacentSpaces:
+  - {fileID: 11400000, guid: a030d65798029c54194025c3d0eeb643, type: 2}
+  - {fileID: 11400000, guid: b61164e9d0dc57e45bd3aa851d46f3a6, type: 2}
+  resource: {fileID: 11400000, guid: c0cdb8595773a624c88342a4737bb4d1, type: 2}
+  flagCost: 2

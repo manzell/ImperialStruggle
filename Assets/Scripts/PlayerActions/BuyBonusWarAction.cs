@@ -12,14 +12,12 @@ public class BuyBonusWarAction : PlayerAction
     {
         bonusWarTile = actingPlayer.bonusWarTiles.OrderBy(tile => Random.value).First();
 
-        SelectionController.Selection selection = new SelectionController.Selection(Game.NextWarTurn.theaters.ToList<ISelectable>(), 1);
-
+        SelectionController<Theater>.Selection selection = new (Game.NextWarTurn.theaters, Finish);
         selection.SetTitle($"{actingPlayer} Select theater to add {bonusWarTile.tileName}");
-        selection.callback = selectedTheaters => Finish(selectedTheaters);
     }
 
-    void Finish(List<ISelectable> selectedTheaters)
+    void Finish(Theater selectedTheater)
     {
-        commands.Push(new AddWarTileToTheaterCommand(bonusWarTile, (Theater)selectedTheaters.First())); 
+        commands.Add(new AddWarTileToTheaterCommand(bonusWarTile, selectedTheater)); 
     }
 }

@@ -19,17 +19,17 @@ public class SpaceControlCondition : Conditional
             switch (spaceConditionType)
             {
                 case SpaceConditionType.Friendly:
-                    return spaceAction.target.flag == playerAction.actingPlayer.faction; 
+                    return spaceAction.target.Flag == playerAction.actingPlayer.faction; 
                 case SpaceConditionType.Nonfriendly:
-                    return spaceAction.target.flag != playerAction.actingPlayer.faction;
+                    return spaceAction.target.Flag != playerAction.actingPlayer.faction;
                 case SpaceConditionType.Opposed:
-                    return spaceAction.target.flag != playerAction.actingPlayer.faction &&
-                        spaceAction.target.flag != null; 
+                    return spaceAction.target.Flag != playerAction.actingPlayer.faction &&
+                        spaceAction.target.Flag != null; 
                 case SpaceConditionType.Nonopposed:
-                    return spaceAction.target.flag == playerAction.actingPlayer.faction ||
-                        spaceAction.target.flag == null;
+                    return spaceAction.target.Flag == playerAction.actingPlayer.faction ||
+                        spaceAction.target.Flag == null;
                 case SpaceConditionType.Neutral:
-                    return spaceAction.target.flag == null;
+                    return spaceAction.target.Flag == null;
             }
         }
         return false; 

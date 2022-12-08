@@ -6,11 +6,11 @@ using Sirenix.OdinInspector;
 [CreateAssetMenu]
 public class EventCardData : SerializedScriptableObject
 {
-    public Game.Era era; 
-    public List<Game.Keyword> keywords = new List<Game.Keyword>();
+    public Phase.Era era; 
+    public List<MinistryCard.Keyword> keywords = new ();
     public ActionPoint.ActionType reqdActionType;
 
-    public Game.Keyword bonusKeyword;
+    public MinistryCard.Keyword bonusKeyword;
     public string bonusCondition;
     public Dictionary<Faction, (string baseText, string bonusText)> factionText;
 }

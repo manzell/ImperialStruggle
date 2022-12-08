@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Linq; 
 
 // Neighbor Market Condition is: Does the <Space> in Question have a neighbor that is a market? 
+/*
 public class NeighborMarketCondition : Conditional
 {
     [SerializeField] List<Faction> neighborFactions = new List<Faction>();
@@ -21,3 +22,4 @@ public class NeighborMarketCondition : Conditional
             return true; 
     }
 }
+*/

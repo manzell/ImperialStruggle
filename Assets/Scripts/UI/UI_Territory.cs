@@ -4,29 +4,34 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Sirenix.OdinInspector;
+using UnityEditor.Experimental.GraphView;
 
 public class UI_Territory : UI_Space
 {
+    Territory territory;
+    [SerializeField] TerritoryData territoryData;
     [SerializeField] TextMeshProUGUI spaceName, flagCost;
-    [SerializeField] Image territoryFrame, background;
-    public Territory territory;
+    [SerializeField] Image territoryFrame, background;    
 
     private void Awake()
     {
-        GetComponent<Territory>().updateSpaceEvent.AddListener(Style);
         Game.startGameEvent += Style;
-        Game.Territories.Add(territory, this);
-        Game.Spaces.Add(territory, this);
     }
 
     [Button]
     public override void Style()
     {
+        if (territory == null)
+        {
+            territory = (Territory)Game.SpaceLookup[territoryData];
+            territory.updateSpaceEvent += Style;
+        }
+
         GraphicSettings graphics = FindObjectOfType<Game>().graphicSettings;
         spaceName.text = territory.name;
-        flagCost.text = territory.flagCost.ToString();
+        
 
-        if(territory.prestige)
+        if(territory.Prestigious)
         {
             territoryFrame.color = graphics.prestigeHighlightColor;
             flagCost.color = Color.white; 
@@ -37,7 +42,7 @@ public class UI_Territory : UI_Space
             flagCost.color = Color.black;
         }
 
-        background.color = graphics.factionColors[territory.flag];
-        spaceName.color = territory.flag == Game.Neutral || territory.flag == Game.Spain ? Color.black : Color.white; 
+        background.color = graphics.factionColors[territory.Flag];
+        spaceName.color = territory.Flag == Game.Neutral || territory.Flag == Game.Spain ? Color.black : Color.white; 
     }
 }

@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 114328601006868304}
   - component: {fileID: 114328601006868306}
   - component: {fileID: 114328601006868307}
-  - component: {fileID: 1128892571397080589}
   m_Layer: 5
   m_Name: BasicSelectionWindow
   m_TagString: Untagged
@@ -29,11 +28,12 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1546203467927177084}
   - {fileID: 8371525052857388096}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -78,26 +78,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1128892571397080589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 114328601006868305}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3161ff4c5ea81574c9adb183121806fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileArea: {fileID: 298233489477510920}
-  buttonArea: {fileID: 7993716336454942894}
-  okButton: {fileID: 3257304401553188270}
-  resetButton: {fileID: 8583353249979606020}
-  windowTitle: {fileID: 6416790140263718537}
-  defaultTilePrefab: {fileID: 6121498773127361383, guid: 145905830f63aa348b921f4fd5852cca, type: 3}
-  ministryCardPrefab: {fileID: 6121498773127361383, guid: 145905830f63aa348b921f4fd5852cca, type: 3}
-  eventCardPrefab: {fileID: 6121498773127361383, guid: 145905830f63aa348b921f4fd5852cca, type: 3}
 --- !u!1 &298233489477510920
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,6 +105,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 114328601006868304}
   m_RootOrder: 0
@@ -187,6 +168,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6839440715089679946}
   m_Father: {fileID: 8371525052857388096}
@@ -307,6 +289,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4132377606689741251}
   m_RootOrder: 0
@@ -441,6 +424,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4879143547936231339}
   m_RootOrder: 0
@@ -576,6 +560,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8949951063226179247}
   m_Father: {fileID: 8371525052857388096}
@@ -694,6 +679,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 313390095688043574}
   - {fileID: 4879143547936231339}
@@ -734,6 +720,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8371525052857388096}
   m_RootOrder: 0

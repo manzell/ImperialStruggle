@@ -6,11 +6,11 @@ using System.Linq;
 
 public class DealCardCommand : Command
 {
-    public static UnityEvent<EventCard> dealCardEvent = new UnityEvent<EventCard>();
+    public static System.Action<EventCard> dealCardEvent;
     [SerializeField] Player player;
     [SerializeField] int num = 1;
 
-    List<EventCard> dealtCards; 
+    HashSet<EventCard> dealtCards = new();  
 
     public DealCardCommand(Player player, int num)
     {
@@ -26,9 +26,9 @@ public class DealCardCommand : Command
             Game.eventDeck.Remove(card);
             player.hand.Add(card);
             dealtCards.Add(card);
-            dealCardEvent.Invoke(card);
+            dealCardEvent?.Invoke(card);
 
-            Game.Log($"{card} dealt to {player.name}");
+            Debug.Log($"{card} dealt to {player.name}");
         }
     }
 

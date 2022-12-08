@@ -17,6 +17,6 @@ public class SetAwardTiles : GameAction
         }
 
         foreach(Map map in FindObjectsOfType<Map>())
-            commands.Push(new SetAwardTileCommand(map, tiles.Dequeue()));
+            commands.Add(new SetAwardTileCommand(map, tiles.Dequeue()));
     }
 }

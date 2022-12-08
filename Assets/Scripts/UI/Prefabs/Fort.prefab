@@ -9,10 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8256398646140679372}
-  - component: {fileID: 2582359294430959599}
+  - component: {fileID: 7161924420617830646}
   - component: {fileID: 2889209640522031374}
   - component: {fileID: 6291307467840247739}
-  - component: {fileID: 7161924420617830646}
   m_Layer: 5
   m_Name: Fort
   m_TagString: Untagged
@@ -45,7 +44,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2582359294430959599
+--- !u!114 &7161924420617830646
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -54,24 +53,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1262467948319393270}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e120f4ffc5bcd54196a2f5dbcc35efa, type: 3}
+  m_Script: {fileID: 11500000, guid: 61ab83c0a79f33640ba53f55f6868853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updateSpaceEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  map: {fileID: 0}
-  flag: 0
-  availableEra: 0
-  adjacentSpaces: []
-  flagCost: 8
-  prestige: 0
-  alliance: 0
-  conflictMarker: 0
-  standardActions:
-  - {fileID: 6291307467840247739}
-  - {fileID: 2889209640522031374}
-  damaged: 0
+  background: {fileID: 4997143529586439208}
+  highlight: {fileID: 1063691577675912674}
+  trim: {fileID: 4613553560261621854}
+  fortName: {fileID: 2724777554966017712}
+  flagCost: {fileID: 5141055174644132111}
 --- !u!114 &2889209640522031374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,20 +90,11 @@ MonoBehaviour:
       Entry: 12
       Data: 2
     - Name: 
-      Entry: 7
-      Data: 1|FortAccessCondition, Assembly-CSharp
-    - Name: conditionalText
       Entry: 6
       Data: 
     - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
       Entry: 7
-      Data: 2|SpaceControlCondition, Assembly-CSharp
-    - Name: conditionalText
-      Entry: 1
-      Data: Neutral Fort Requirement
+      Data: 1|SpaceControlCondition, Assembly-CSharp
     - Name: spaceConditionType
       Entry: 3
       Data: 2
@@ -127,82 +107,9 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: commands
-      Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 4|FlagFortCommand, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: actionPointCost
-      Entry: 7
-      Data: 5|ActionPoints, Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 6|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 3
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: actionType
-      Entry: 3
-      Data: 3
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: actionPoints
-      Entry: 3
-      Data: 9
-    - Name: conditionals
-      Entry: 7
-      Data: 7|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
   actionName: Build Fort
   actionText: Build Fort
-  player: {fileID: 0}
+  actingPlayer: {fileID: 0}
 --- !u!114 &6291307467840247739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,20 +139,11 @@ MonoBehaviour:
       Entry: 12
       Data: 3
     - Name: 
-      Entry: 7
-      Data: 1|FortAccessCondition, Assembly-CSharp
-    - Name: conditionalText
       Entry: 6
       Data: 
     - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
       Entry: 7
-      Data: 2|SpaceControlCondition, Assembly-CSharp
-    - Name: conditionalText
-      Entry: 6
-      Data: 
+      Data: 1|SpaceControlCondition, Assembly-CSharp
     - Name: spaceConditionType
       Entry: 3
       Data: 3
@@ -254,89 +152,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 3|DamagedCondition, Assembly-CSharp
-    - Name: conditionalText
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 5|RepairFortCommand, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 6|FlagFortCommand, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: actionPointCost
-      Entry: 7
-      Data: 7|ActionPoints, Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 8|ActionPoint, Assembly-CSharp
-    - Name: apType
-      Entry: 7
-      Data: ActionPoint+ActionPointKey, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 0
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: condition
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: actionType
-      Entry: 3
-      Data: 3
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: actionPoints
-      Entry: 3
-      Data: 9
-    - Name: conditionals
-      Entry: 7
-      Data: 9|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
+      Data: 2|DamagedCondition, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -348,25 +164,7 @@ MonoBehaviour:
       Data: 
   actionName: Repair Fort
   actionText: Repairing Fort
-  player: {fileID: 0}
---- !u!114 &7161924420617830646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1262467948319393270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61ab83c0a79f33640ba53f55f6868853, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fort: {fileID: 2582359294430959599}
-  background: {fileID: 4997143529586439208}
-  highlight: {fileID: 1063691577675912674}
-  trim: {fileID: 4613553560261621854}
-  fortName: {fileID: 2724777554966017712}
-  flagCost: {fileID: 5141055174644132111}
+  actingPlayer: {fileID: 0}
 --- !u!1 &1834404671692783451
 GameObject:
   m_ObjectHideFlags: 0

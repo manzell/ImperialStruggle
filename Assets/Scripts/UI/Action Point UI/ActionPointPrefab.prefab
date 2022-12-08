@@ -373,7 +373,6 @@ GameObject:
   m_Component:
   - component: {fileID: 363257752554787230}
   - component: {fileID: 6259909340283282865}
-  - component: {fileID: 634903155407776682}
   m_Layer: 5
   m_Name: ActionPointPrefab
   m_TagString: Untagged
@@ -413,19 +412,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9133249338088538451}
   m_CullTransparentMesh: 1
---- !u!114 &634903155407776682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9133249338088538451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ffd3590c2ec1ce42a57366b7093635b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  apIcon: {fileID: 3230625150124312427}
-  apPoints: {fileID: 110538199102551643}
-  background: {fileID: 7854120871337515564}
-  highlight: {fileID: 7261538902805414466}

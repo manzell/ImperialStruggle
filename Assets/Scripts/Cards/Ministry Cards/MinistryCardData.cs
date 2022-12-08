@@ -9,7 +9,7 @@ using System.Linq;
 public class MinistryCardData : SerializedScriptableObject
 {
     public Faction faction;
-    public List<Game.Keyword> keywords = new List<Game.Keyword>();
-    public List<Game.Era> eras;
+    public List<MinistryCard.Keyword> keywords = new List<MinistryCard.Keyword>();
+    public List<Phase.Era> eras;
     [TextArea] public string cardText;
 }
