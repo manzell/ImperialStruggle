@@ -10,7 +10,7 @@ public class DealCardsAction : GameAction
     {
         for(int i = 0; i < numCards; i++)
             foreach (Player player in Player.players)
-                if(dealType == DealType.Fixed || (dealType == DealType.UpTo && player.hand.Count < numCards))
-                    commands.Add(new DealCardCommand(player, 1)); 
+                if (dealType == DealType.Fixed || (dealType == DealType.UpTo && player.hand.Count < numCards))
+                    commands.Add(new DealCardCommand(player));
     }
 }

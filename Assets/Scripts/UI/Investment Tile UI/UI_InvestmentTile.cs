@@ -32,7 +32,7 @@ public class UI_InvestmentTile : MonoBehaviour
             }
         }
 
-        eventIcon.enabled = tile.GetComponent<PlayEventCardAction>();
-        milUpgradeIcon.enabled = tile.GetComponent<MilitaryUpgradeAction>(); 
+        eventIcon.enabled = tile.data.EventTrigger;
+        milUpgradeIcon.enabled = tile.data.MilUpgrade;  
     }
 }

@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface ICard
 {
-    GameObject gameObject { get; }
+    string Name { get; }
 }

@@ -22,7 +22,7 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   prefab: {fileID: 0}
-  map: {fileID: 0}
+  map: {fileID: 11400000, guid: e88bd87cf9d80f548acfabe66dfa8b0c, type: 2}
   startingFlag: {fileID: 0}
   availableEra: 0
   adjacentSpaces: []

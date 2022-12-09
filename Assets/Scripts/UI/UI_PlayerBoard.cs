@@ -15,21 +15,25 @@ public class UI_PlayerBoard : MonoBehaviour
 
     public static UnityEvent<Faction> setFactionEvent = new UnityEvent<Faction>();
 
-    GraphicSettings graphicSettings;
-
     public void Awake()
     {
-        graphicSettings = FindObjectOfType<Game>().graphicSettings;
-        SelectMinistryCardCommand.selectMinistryCardEvent.AddListener(card => { if (card.faction == player.faction) AddMinistryCard(card); });
-        DealCardCommand.dealCardEvent += card => { if (player.hand.Contains(card)) AddEventCard(card); };
+        SelectMinistryCardCommand.selectMinistryCardEvent += AddMinistryCard;
+        DealCardCommand.dealCardEvent += AddEventCard;
     }
 
     void AddMinistryCard(MinistryCard card)
     {
-        GameObject newMinistryCard = Instantiate(ministryCardPrefab, ministerCardArea.transform);        
-        newMinistryCard.GetComponent<UI_MinisterCard>().SetMinistryCard(card);
-        ministryCards.Add(newMinistryCard, card); 
+        if (card.data.faction == player.faction)
+        {
+            GameObject newMinistryCard = Instantiate(ministryCardPrefab, ministerCardArea.transform);
+            newMinistryCard.GetComponent<UI_MinisterCard>().SetMinistryCard(card);
+            ministryCards.Add(newMinistryCard, card);
+        }
     }
 
-    public void AddEventCard(EventCard card) => Instantiate(cardPrefab, handArea.transform).GetComponent<UI_Card>().SetCard(card);
+    public void AddEventCard(Player player, EventCard card)
+    {
+        if(player.hand.Contains(card))
+            Instantiate(cardPrefab, handArea.transform).GetComponent<UI_Card>().SetCard(card);
+    }
 }

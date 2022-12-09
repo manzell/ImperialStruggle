@@ -12,7 +12,7 @@ public class UI_Card : MonoBehaviour
     public void SetCard(ICard card)
     {
         this.card = card;
-        cardName.text = card.gameObject.name;
+        cardName.text = card.Name;
     }
 
     public void SetHighlight(Color color)

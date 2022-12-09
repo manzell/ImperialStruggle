@@ -19,7 +19,7 @@ public class UI_MinisterCard : MonoBehaviour, IPointerClickHandler
         else if(ministryCard.ministryCardStatus == MinistryCard.MinistryCardStatus.Selected)
         {
             ministryCard.ministryCardStatus = MinistryCard.MinistryCardStatus.Revealed;
-            Debug.Log($"{ministryCard.faction} reveals {ministerName}."); 
+            Debug.Log($"{ministryCard.data.faction} reveals {ministerName}."); 
         }
     }
 
@@ -31,7 +31,7 @@ public class UI_MinisterCard : MonoBehaviour, IPointerClickHandler
 
     void Style()
     {
-        ministerName.text = ministryCard.name;
+        ministerName.text = ministryCard.Name;
         ministerName.color = ministryCard.ministryCardStatus == MinistryCard.MinistryCardStatus.Exhausted ? Color.gray : Color.black;
 
         switch(ministryCard.ministryCardStatus)

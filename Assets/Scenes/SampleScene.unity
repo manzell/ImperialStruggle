@@ -921,7 +921,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 69406464}
-  - component: {fileID: 69406465}
   m_Layer: 0
   m_Name: Fin 4/Dip 2
   m_TagString: Untagged
@@ -944,96 +943,6 @@ Transform:
   m_Father: {fileID: 391526258}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &69406465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 69406463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2880bc7dd458ce45ae80a952986541a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: actionPoints
-      Entry: 7
-      Data: 0|ActionPoints, Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 1|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 2
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: baseValue
-      Entry: 3
-      Data: 2
-    - Name: conditionals
-      Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 3|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 1
-    - Name: actionTier
-      Entry: 3
-      Data: 1
-    - Name: baseValue
-      Entry: 3
-      Data: 4
-    - Name: conditionals
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  status: 0
 --- !u!1 &76208713
 GameObject:
   m_ObjectHideFlags: 0
@@ -2481,7 +2390,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 162572563}
-  - component: {fileID: 162572564}
   m_Layer: 0
   m_Name: Dip 4/Fin 2
   m_TagString: Untagged
@@ -2504,96 +2412,6 @@ Transform:
   m_Father: {fileID: 391526258}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &162572564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 162572562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2880bc7dd458ce45ae80a952986541a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: actionPoints
-      Entry: 7
-      Data: 0|ActionPoints, Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 1|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 1
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: baseValue
-      Entry: 3
-      Data: 2
-    - Name: conditionals
-      Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 3|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 2
-    - Name: actionTier
-      Entry: 3
-      Data: 1
-    - Name: baseValue
-      Entry: 3
-      Data: 4
-    - Name: conditionals
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  status: 0
 --- !u!1 &162942061
 GameObject:
   m_ObjectHideFlags: 0
@@ -4173,7 +3991,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 251271954}
-  - component: {fileID: 251271955}
   m_Layer: 0
   m_Name: Mil 4/Fin 2
   m_TagString: Untagged
@@ -4196,96 +4013,6 @@ Transform:
   m_Father: {fileID: 391526258}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &251271955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 251271953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2880bc7dd458ce45ae80a952986541a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: actionPoints
-      Entry: 7
-      Data: 0|ActionPoints, Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 1|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 1
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: baseValue
-      Entry: 3
-      Data: 2
-    - Name: conditionals
-      Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 3|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 3
-    - Name: actionTier
-      Entry: 3
-      Data: 1
-    - Name: baseValue
-      Entry: 3
-      Data: 4
-    - Name: conditionals
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  status: 0
 --- !u!1 &264041428
 GameObject:
   m_ObjectHideFlags: 0
@@ -5419,9 +5146,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 368943095}
-  - component: {fileID: 368943096}
-  - component: {fileID: 368943097}
-  - component: {fileID: 368943098}
   m_Layer: 0
   m_Name: Fin 2/Dip 2 Event Mil
   m_TagString: Untagged
@@ -5444,194 +5168,6 @@ Transform:
   m_Father: {fileID: 391526258}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &368943096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 368943094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2880bc7dd458ce45ae80a952986541a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: actionPoints
-      Entry: 7
-      Data: 0|ActionPoints, Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 1|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 2
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: baseValue
-      Entry: 3
-      Data: 2
-    - Name: conditionals
-      Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 3|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 1
-    - Name: actionTier
-      Entry: 3
-      Data: 1
-    - Name: baseValue
-      Entry: 3
-      Data: 2
-    - Name: conditionals
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  status: 0
---- !u!114 &368943097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 368943094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09007fc5072ec714a8bf824e2ff35d9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: 
-  actionText: Play Event Card
-  actingPlayer: {fileID: 0}
---- !u!114 &368943098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 368943094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2104484f5f90917439de7c355d5f049e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: 
-  actionText: Military Upgrade Action
-  actingPlayer: {fileID: 0}
 --- !u!1 &370278904
 GameObject:
   m_ObjectHideFlags: 0
@@ -5864,76 +5400,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5117033103703584156, guid: 939abfe4d6c8b0e49946f28ee1d4a523, type: 3}
   m_PrefabInstance: {fileID: 782355504320364969}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &386524969
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 386524970}
-  - component: {fileID: 386524971}
-  m_Layer: 0
-  m_Name: 1 VP
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &386524970
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 386524969}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1960464588}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &386524971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 386524969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02648db47b6988c4a9f3e5334699aeda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  used: 0
-  victoryPoints: 1
-  treatyPoints: 0
-  requiredMargin: 1
 --- !u!1 &388984639
 GameObject:
   m_ObjectHideFlags: 0
@@ -6496,9 +5962,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 419445230}
-  - component: {fileID: 419445231}
-  - component: {fileID: 419445232}
-  - component: {fileID: 419445233}
   m_Layer: 0
   m_Name: Mil 2/Fin 2 Event War
   m_TagString: Untagged
@@ -6521,194 +5984,6 @@ Transform:
   m_Father: {fileID: 391526258}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &419445231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419445229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2880bc7dd458ce45ae80a952986541a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: actionPoints
-      Entry: 7
-      Data: 0|ActionPoints, Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 1|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 1
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: baseValue
-      Entry: 3
-      Data: 2
-    - Name: conditionals
-      Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 3|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 3
-    - Name: actionTier
-      Entry: 3
-      Data: 1
-    - Name: baseValue
-      Entry: 3
-      Data: 2
-    - Name: conditionals
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  status: 0
---- !u!114 &419445232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419445229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09007fc5072ec714a8bf824e2ff35d9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: 
-  actionText: Play Event Card
-  actingPlayer: {fileID: 0}
---- !u!114 &419445233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419445229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2104484f5f90917439de7c355d5f049e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: 
-  actionText: Military Upgrade Action
-  actingPlayer: {fileID: 0}
 --- !u!1 &421442314
 GameObject:
   m_ObjectHideFlags: 0
@@ -7900,8 +7175,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 510376289}
-  - component: {fileID: 510376290}
-  - component: {fileID: 510376291}
   m_Layer: 0
   m_Name: Mil 3/Fin 2 Event
   m_TagString: Untagged
@@ -7924,145 +7197,6 @@ Transform:
   m_Father: {fileID: 391526258}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &510376290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510376288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2880bc7dd458ce45ae80a952986541a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: actionPoints
-      Entry: 7
-      Data: 0|ActionPoints, Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 1|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 1
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: baseValue
-      Entry: 3
-      Data: 2
-    - Name: conditionals
-      Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 3|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 3
-    - Name: actionTier
-      Entry: 3
-      Data: 1
-    - Name: baseValue
-      Entry: 3
-      Data: 3
-    - Name: conditionals
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  status: 0
---- !u!114 &510376291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510376288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09007fc5072ec714a8bf824e2ff35d9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: 
-  actionText: Play Event Card
-  actingPlayer: {fileID: 0}
 --- !u!224 &516015914 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7215223539945967174, guid: 150aa36bfb117874dbbd02889ca62862, type: 3}
@@ -13340,7 +12474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
-    SerializedBytes: 
+    SerializedBytes: []
     ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
@@ -13388,6 +12522,10 @@ MonoBehaviour:
   actionText: The Cardinal Ministers
   actingPlayer: {fileID: 0}
   maxDP: 3
+  actionPoint:
+    actionType: 0
+    actionTier: 0
+    baseValue: 0
 --- !u!1 &787579219
 GameObject:
   m_ObjectHideFlags: 0
@@ -13511,8 +12649,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 804522849}
-  - component: {fileID: 804522850}
-  - component: {fileID: 804522851}
   m_Layer: 0
   m_Name: Dip 3/Mil 2 Event
   m_TagString: Untagged
@@ -13535,145 +12671,6 @@ Transform:
   m_Father: {fileID: 391526258}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &804522850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 804522848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2880bc7dd458ce45ae80a952986541a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: actionPoints
-      Entry: 7
-      Data: 0|ActionPoints, Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 1|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 3
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: baseValue
-      Entry: 3
-      Data: 2
-    - Name: conditionals
-      Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 3|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 2
-    - Name: actionTier
-      Entry: 3
-      Data: 1
-    - Name: baseValue
-      Entry: 3
-      Data: 3
-    - Name: conditionals
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  status: 0
---- !u!114 &804522851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 804522848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09007fc5072ec714a8bf824e2ff35d9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: 
-  actionText: Play Event Card
-  actingPlayer: {fileID: 0}
 --- !u!1 &810758133
 GameObject:
   m_ObjectHideFlags: 0
@@ -16039,9 +15036,24 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
+    - Name: hand
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[EventCard, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: ministers
+      Entry: 6
+      Data: 
     - Name: actionPoints
       Entry: 7
-      Data: 0|ActionPoints, Assembly-CSharp
+      Data: 1|ActionPoints, Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 0
@@ -16053,7 +15065,7 @@ MonoBehaviour:
       Data: 
     - Name: warTiles
       Entry: 7
-      Data: 1|System.Collections.Generic.Queue`1[[WarTile, Assembly-CSharp]], mscorlib
+      Data: 2|System.Collections.Generic.Queue`1[[WarTile, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -16065,7 +15077,7 @@ MonoBehaviour:
       Data: 
     - Name: bonusWarTiles
       Entry: 7
-      Data: 2|System.Collections.Generic.Queue`1[[WarTile, Assembly-CSharp]], mscorlib
+      Data: 3|System.Collections.Generic.Queue`1[[WarTile, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -16077,7 +15089,7 @@ MonoBehaviour:
       Data: 
     - Name: squadrons
       Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[Squadron, Assembly-CSharp]], mscorlib
+      Data: 4|System.Collections.Generic.List`1[[Squadron, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -16088,8 +15100,6 @@ MonoBehaviour:
       Entry: 8
       Data: 
   faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
-  hand: []
-  ministers: []
 --- !u!1 &901708576
 GameObject:
   m_ObjectHideFlags: 0
@@ -17687,7 +16697,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 983738531}
-  - component: {fileID: 983738532}
   m_Layer: 0
   m_Name: Mil 4/Dip 2
   m_TagString: Untagged
@@ -17710,96 +16719,6 @@ Transform:
   m_Father: {fileID: 391526258}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &983738532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 983738530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2880bc7dd458ce45ae80a952986541a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: actionPoints
-      Entry: 7
-      Data: 0|ActionPoints, Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 1|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 2
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: baseValue
-      Entry: 3
-      Data: 2
-    - Name: conditionals
-      Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 3|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 3
-    - Name: actionTier
-      Entry: 3
-      Data: 1
-    - Name: baseValue
-      Entry: 3
-      Data: 4
-    - Name: conditionals
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  status: 0
 --- !u!1 &985158773
 GameObject:
   m_ObjectHideFlags: 0
@@ -17912,76 +16831,6 @@ Transform:
   m_Father: {fileID: 1232245831}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &990118271
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 990118272}
-  - component: {fileID: 990118273}
-  m_Layer: 0
-  m_Name: 1 VP 1 TP
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &990118272
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 990118271}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1960464588}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &990118273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 990118271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02648db47b6988c4a9f3e5334699aeda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  used: 0
-  victoryPoints: 1
-  treatyPoints: 1
-  requiredMargin: 1
 --- !u!1 &990481296
 GameObject:
   m_ObjectHideFlags: 0
@@ -19150,76 +17999,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6259299893589143451, guid: e44f19883cd8dfe44960ea719aac27c8, type: 3}
   m_PrefabInstance: {fileID: 2614654886800496175}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1056227987
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1056227988}
-  - component: {fileID: 1056227989}
-  m_Layer: 0
-  m_Name: 3 VP (+2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1056227988
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1056227987}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1960464588}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1056227989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1056227987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02648db47b6988c4a9f3e5334699aeda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  used: 0
-  victoryPoints: 3
-  treatyPoints: 0
-  requiredMargin: 2
 --- !u!1 &1059206592
 GameObject:
   m_ObjectHideFlags: 0
@@ -19472,76 +18251,6 @@ Transform:
   m_Father: {fileID: 543138718}
   m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1073500722
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1073500723}
-  - component: {fileID: 1073500724}
-  m_Layer: 0
-  m_Name: 1 TP
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1073500723
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1073500722}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1960464588}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1073500724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1073500722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02648db47b6988c4a9f3e5334699aeda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  used: 0
-  victoryPoints: 0
-  treatyPoints: 1
-  requiredMargin: 1
 --- !u!1 &1096162055
 GameObject:
   m_ObjectHideFlags: 0
@@ -19795,9 +18504,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1105387812}
-  - component: {fileID: 1105387813}
-  - component: {fileID: 1105387814}
-  - component: {fileID: 1105387815}
   m_Layer: 0
   m_Name: Fin 2/Mil 2 Event Mil
   m_TagString: Untagged
@@ -19820,194 +18526,6 @@ Transform:
   m_Father: {fileID: 391526258}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1105387813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1105387811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2880bc7dd458ce45ae80a952986541a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: actionPoints
-      Entry: 7
-      Data: 0|ActionPoints, Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 1|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 3
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: baseValue
-      Entry: 3
-      Data: 2
-    - Name: conditionals
-      Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 3|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 1
-    - Name: actionTier
-      Entry: 3
-      Data: 1
-    - Name: baseValue
-      Entry: 3
-      Data: 2
-    - Name: conditionals
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  status: 0
---- !u!114 &1105387814
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1105387811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09007fc5072ec714a8bf824e2ff35d9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: 
-  actionText: Play Event Card
-  actingPlayer: {fileID: 0}
---- !u!114 &1105387815
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1105387811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2104484f5f90917439de7c355d5f049e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: 
-  actionText: Military Upgrade Action
-  actingPlayer: {fileID: 0}
 --- !u!224 &1109872600 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5600822855821372719, guid: c72c2e73b33fca143b6b015458ae18c2, type: 3}
@@ -20330,76 +18848,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1121567841}
   m_CullTransparentMesh: 1
---- !u!1 &1135912890
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1135912891}
-  - component: {fileID: 1135912892}
-  m_Layer: 0
-  m_Name: 2 VP (+2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1135912891
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1135912890}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1960464588}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1135912892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1135912890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02648db47b6988c4a9f3e5334699aeda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  used: 0
-  victoryPoints: 2
-  treatyPoints: 0
-  requiredMargin: 2
 --- !u!1 &1140415552
 GameObject:
   m_ObjectHideFlags: 0
@@ -20826,7 +19274,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1171972650}
-  - component: {fileID: 1171972651}
   m_Layer: 0
   m_Name: Fin 4/Dip 2
   m_TagString: Untagged
@@ -20849,96 +19296,6 @@ Transform:
   m_Father: {fileID: 391526258}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1171972651
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1171972649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2880bc7dd458ce45ae80a952986541a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: actionPoints
-      Entry: 7
-      Data: 0|ActionPoints, Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 1|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 2
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: baseValue
-      Entry: 3
-      Data: 2
-    - Name: conditionals
-      Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 3|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 1
-    - Name: actionTier
-      Entry: 3
-      Data: 1
-    - Name: baseValue
-      Entry: 3
-      Data: 4
-    - Name: conditionals
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  status: 0
 --- !u!1 &1172830683
 GameObject:
   m_ObjectHideFlags: 0
@@ -23271,8 +21628,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1311783602}
-  - component: {fileID: 1311783603}
-  - component: {fileID: 1311783604}
   m_Layer: 0
   m_Name: Fin 3/Mil 2 Event
   m_TagString: Untagged
@@ -23295,145 +21650,6 @@ Transform:
   m_Father: {fileID: 391526258}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1311783603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1311783601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2880bc7dd458ce45ae80a952986541a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: actionPoints
-      Entry: 7
-      Data: 0|ActionPoints, Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 1|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 3
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: baseValue
-      Entry: 3
-      Data: 2
-    - Name: conditionals
-      Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 3|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 1
-    - Name: actionTier
-      Entry: 3
-      Data: 1
-    - Name: baseValue
-      Entry: 3
-      Data: 3
-    - Name: conditionals
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  status: 0
---- !u!114 &1311783604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1311783601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09007fc5072ec714a8bf824e2ff35d9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: 
-  actionText: Play Event Card
-  actingPlayer: {fileID: 0}
 --- !u!1 &1316269718
 GameObject:
   m_ObjectHideFlags: 0
@@ -23918,76 +22134,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1341703664
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1341703665}
-  - component: {fileID: 1341703666}
-  m_Layer: 0
-  m_Name: 1 VP 1 TP
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1341703665
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1341703664}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1960464588}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1341703666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1341703664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02648db47b6988c4a9f3e5334699aeda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  used: 0
-  victoryPoints: 1
-  treatyPoints: 1
-  requiredMargin: 1
 --- !u!1 &1349882577
 GameObject:
   m_ObjectHideFlags: 0
@@ -24133,7 +22279,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1350733051}
-  - component: {fileID: 1350733052}
   m_Layer: 0
   m_Name: Dip 4/Mil 2
   m_TagString: Untagged
@@ -24156,96 +22301,6 @@ Transform:
   m_Father: {fileID: 391526258}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1350733052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1350733050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2880bc7dd458ce45ae80a952986541a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: actionPoints
-      Entry: 7
-      Data: 0|ActionPoints, Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 1|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 3
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: baseValue
-      Entry: 3
-      Data: 2
-    - Name: conditionals
-      Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 3|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 2
-    - Name: actionTier
-      Entry: 3
-      Data: 1
-    - Name: baseValue
-      Entry: 3
-      Data: 4
-    - Name: conditionals
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  status: 0
 --- !u!1 &1350785704
 GameObject:
   m_ObjectHideFlags: 0
@@ -24443,9 +22498,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1362741534}
-  - component: {fileID: 1362741535}
-  - component: {fileID: 1362741536}
-  - component: {fileID: 1362741537}
   m_Layer: 0
   m_Name: Mil 2/Dip 2 Event War
   m_TagString: Untagged
@@ -24468,194 +22520,6 @@ Transform:
   m_Father: {fileID: 391526258}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1362741535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1362741533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2880bc7dd458ce45ae80a952986541a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: actionPoints
-      Entry: 7
-      Data: 0|ActionPoints, Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 1|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 2
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: baseValue
-      Entry: 3
-      Data: 2
-    - Name: conditionals
-      Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 3|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 3
-    - Name: actionTier
-      Entry: 3
-      Data: 1
-    - Name: baseValue
-      Entry: 3
-      Data: 2
-    - Name: conditionals
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  status: 0
---- !u!114 &1362741536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1362741533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09007fc5072ec714a8bf824e2ff35d9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: 
-  actionText: Play Event Card
-  actingPlayer: {fileID: 0}
---- !u!114 &1362741537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1362741533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2104484f5f90917439de7c355d5f049e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: 
-  actionText: Military Upgrade Action
-  actingPlayer: {fileID: 0}
 --- !u!224 &1365309620 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7723440293843001244, guid: bba662d8389bda749b9d2c9bb331d298, type: 3}
@@ -25130,9 +22994,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1398396175}
-  - component: {fileID: 1398396176}
-  - component: {fileID: 1398396177}
-  - component: {fileID: 1398396178}
   m_Layer: 0
   m_Name: DIp 2/Fin 2 Event Mil
   m_TagString: Untagged
@@ -25155,194 +23016,6 @@ Transform:
   m_Father: {fileID: 391526258}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1398396176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1398396174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2880bc7dd458ce45ae80a952986541a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: actionPoints
-      Entry: 7
-      Data: 0|ActionPoints, Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 1|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 1
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: baseValue
-      Entry: 3
-      Data: 2
-    - Name: conditionals
-      Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 3|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 2
-    - Name: actionTier
-      Entry: 3
-      Data: 1
-    - Name: baseValue
-      Entry: 3
-      Data: 2
-    - Name: conditionals
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  status: 0
---- !u!114 &1398396177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1398396174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09007fc5072ec714a8bf824e2ff35d9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: 
-  actionText: Play Event Card
-  actingPlayer: {fileID: 0}
---- !u!114 &1398396178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1398396174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2104484f5f90917439de7c355d5f049e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: 
-  actionText: Military Upgrade Action
-  actingPlayer: {fileID: 0}
 --- !u!1 &1402747924
 GameObject:
   m_ObjectHideFlags: 0
@@ -25923,9 +23596,24 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
+    - Name: hand
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[EventCard, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: ministers
+      Entry: 6
+      Data: 
     - Name: actionPoints
       Entry: 7
-      Data: 0|ActionPoints, Assembly-CSharp
+      Data: 1|ActionPoints, Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 0
@@ -25937,7 +23625,7 @@ MonoBehaviour:
       Data: 
     - Name: warTiles
       Entry: 7
-      Data: 1|System.Collections.Generic.Queue`1[[WarTile, Assembly-CSharp]], mscorlib
+      Data: 2|System.Collections.Generic.Queue`1[[WarTile, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -25949,7 +23637,7 @@ MonoBehaviour:
       Data: 
     - Name: bonusWarTiles
       Entry: 7
-      Data: 2|System.Collections.Generic.Queue`1[[WarTile, Assembly-CSharp]], mscorlib
+      Data: 3|System.Collections.Generic.Queue`1[[WarTile, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -25961,7 +23649,7 @@ MonoBehaviour:
       Data: 
     - Name: squadrons
       Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[Squadron, Assembly-CSharp]], mscorlib
+      Data: 4|System.Collections.Generic.List`1[[Squadron, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -25972,8 +23660,6 @@ MonoBehaviour:
       Entry: 8
       Data: 
   faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
-  hand: []
-  ministers: []
 --- !u!1 &1437462156
 GameObject:
   m_ObjectHideFlags: 0
@@ -26493,7 +24179,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1960464588}
   - {fileID: 391526258}
   - {fileID: 329452460}
   m_Father: {fileID: 0}
@@ -26632,9 +24317,6 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: Resources
-      Entry: 6
-      Data: 
     - Name: startingSpaces
       Entry: 7
       Data: 0|System.Collections.Generic.HashSet`1[[SpaceData, Assembly-CSharp]],
@@ -26984,6 +24666,16 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+  awardTiles:
+  - {fileID: 11400000, guid: f8394b38a36230a4b8e2c22fa251d54b, type: 2}
+  - {fileID: 11400000, guid: f8394b38a36230a4b8e2c22fa251d54b, type: 2}
+  - {fileID: 11400000, guid: 0f967711ddc1b3142b534cd369b8d694, type: 2}
+  - {fileID: 11400000, guid: 0f967711ddc1b3142b534cd369b8d694, type: 2}
+  - {fileID: 11400000, guid: 7a682b0a4b1b7ff47845e71163af5e54, type: 2}
+  - {fileID: 11400000, guid: 7a682b0a4b1b7ff47845e71163af5e54, type: 2}
+  - {fileID: 11400000, guid: 7a2945001ec6093498816122d52441b3, type: 2}
+  - {fileID: 11400000, guid: f54cfff5903856d48a2251dc050b93c4, type: 2}
+  investmentTiles: []
   britain: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
   france: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
   usa: {fileID: 11400000, guid: 7fc1ea7cd44976f45829e28093550f26, type: 2}
@@ -27350,7 +25042,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1472566763}
-  - component: {fileID: 1472566764}
   m_Layer: 0
   m_Name: Mil 4/Dip 2
   m_TagString: Untagged
@@ -27373,96 +25064,6 @@ Transform:
   m_Father: {fileID: 391526258}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1472566764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1472566762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2880bc7dd458ce45ae80a952986541a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: actionPoints
-      Entry: 7
-      Data: 0|ActionPoints, Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 1|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 2
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: baseValue
-      Entry: 3
-      Data: 2
-    - Name: conditionals
-      Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 3|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 3
-    - Name: actionTier
-      Entry: 3
-      Data: 1
-    - Name: baseValue
-      Entry: 3
-      Data: 4
-    - Name: conditionals
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  status: 0
 --- !u!224 &1484635214 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1352772374436273901, guid: a89ddeb6e4903c649b07714ccca00246, type: 3}
@@ -29676,8 +27277,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1567515450}
-  - component: {fileID: 1567515451}
-  - component: {fileID: 1567515452}
   m_Layer: 0
   m_Name: DIp 3/Fin 2 Event
   m_TagString: Untagged
@@ -29700,145 +27299,6 @@ Transform:
   m_Father: {fileID: 391526258}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1567515451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1567515449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2880bc7dd458ce45ae80a952986541a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: actionPoints
-      Entry: 7
-      Data: 0|ActionPoints, Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 1|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 1
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: baseValue
-      Entry: 3
-      Data: 2
-    - Name: conditionals
-      Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 3|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 2
-    - Name: actionTier
-      Entry: 3
-      Data: 1
-    - Name: baseValue
-      Entry: 3
-      Data: 3
-    - Name: conditionals
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  status: 0
---- !u!114 &1567515452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1567515449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09007fc5072ec714a8bf824e2ff35d9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: 
-  actionText: Play Event Card
-  actingPlayer: {fileID: 0}
 --- !u!1 &1571907354
 GameObject:
   m_ObjectHideFlags: 0
@@ -30756,7 +28216,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1641766466}
-  - component: {fileID: 1641766467}
   m_Layer: 0
   m_Name: Fin 4/Mil 2
   m_TagString: Untagged
@@ -30779,96 +28238,6 @@ Transform:
   m_Father: {fileID: 391526258}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1641766467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1641766465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2880bc7dd458ce45ae80a952986541a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: actionPoints
-      Entry: 7
-      Data: 0|ActionPoints, Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 1|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 3
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: baseValue
-      Entry: 3
-      Data: 2
-    - Name: conditionals
-      Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 3|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 1
-    - Name: actionTier
-      Entry: 3
-      Data: 1
-    - Name: baseValue
-      Entry: 3
-      Data: 4
-    - Name: conditionals
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  status: 0
 --- !u!1 &1649269942
 GameObject:
   m_ObjectHideFlags: 0
@@ -31050,7 +28419,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1662819531}
-  - component: {fileID: 1662819532}
   m_Layer: 0
   m_Name: Dip 4/Mil 2
   m_TagString: Untagged
@@ -31073,96 +28441,6 @@ Transform:
   m_Father: {fileID: 391526258}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1662819532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1662819530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2880bc7dd458ce45ae80a952986541a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: actionPoints
-      Entry: 7
-      Data: 0|ActionPoints, Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 1|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 3
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: baseValue
-      Entry: 3
-      Data: 2
-    - Name: conditionals
-      Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 3|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 2
-    - Name: actionTier
-      Entry: 3
-      Data: 1
-    - Name: baseValue
-      Entry: 3
-      Data: 4
-    - Name: conditionals
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  status: 0
 --- !u!1 &1662872097
 GameObject:
   m_ObjectHideFlags: 0
@@ -32669,7 +29947,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1771300305}
-  - component: {fileID: 1771300306}
   m_Layer: 0
   m_Name: Dip 4/Fin 2
   m_TagString: Untagged
@@ -32692,96 +29969,6 @@ Transform:
   m_Father: {fileID: 391526258}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1771300306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1771300304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2880bc7dd458ce45ae80a952986541a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: actionPoints
-      Entry: 7
-      Data: 0|ActionPoints, Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 1|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 1
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: baseValue
-      Entry: 3
-      Data: 2
-    - Name: conditionals
-      Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 3|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 2
-    - Name: actionTier
-      Entry: 3
-      Data: 1
-    - Name: baseValue
-      Entry: 3
-      Data: 4
-    - Name: conditionals
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  status: 0
 --- !u!1 &1777359195
 GameObject:
   m_ObjectHideFlags: 0
@@ -35829,76 +33016,6 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
---- !u!1 &1927466745
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1927466746}
-  - component: {fileID: 1927466747}
-  m_Layer: 0
-  m_Name: 1 TP
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1927466746
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1927466745}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1960464588}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1927466747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1927466745}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02648db47b6988c4a9f3e5334699aeda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  used: 0
-  victoryPoints: 0
-  treatyPoints: 1
-  requiredMargin: 1
 --- !u!224 &1931457772 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6751341208474169843, guid: 204020fe73028ee46b359cf5d4b33552, type: 3}
@@ -36159,45 +33276,6 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
---- !u!1 &1960464587
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1960464588}
-  m_Layer: 0
-  m_Name: Award Tiles
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1960464588
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1960464587}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1056227988}
-  - {fileID: 1135912891}
-  - {fileID: 2133084288}
-  - {fileID: 386524970}
-  - {fileID: 1341703665}
-  - {fileID: 990118272}
-  - {fileID: 1927466746}
-  - {fileID: 1073500723}
-  m_Father: {fileID: 1447762581}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1961230352
 GameObject:
   m_ObjectHideFlags: 0
@@ -36428,8 +33506,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1974477221}
-  - component: {fileID: 1974477222}
-  - component: {fileID: 1974477223}
   m_Layer: 0
   m_Name: Fin 3/Dip 2 Event
   m_TagString: Untagged
@@ -36452,145 +33528,6 @@ Transform:
   m_Father: {fileID: 391526258}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1974477222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1974477220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2880bc7dd458ce45ae80a952986541a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: actionPoints
-      Entry: 7
-      Data: 0|ActionPoints, Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 1|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 2
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: baseValue
-      Entry: 3
-      Data: 2
-    - Name: conditionals
-      Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 3|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 1
-    - Name: actionTier
-      Entry: 3
-      Data: 1
-    - Name: baseValue
-      Entry: 3
-      Data: 3
-    - Name: conditionals
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  status: 0
---- !u!114 &1974477223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1974477220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09007fc5072ec714a8bf824e2ff35d9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: 
-  actionText: Play Event Card
-  actingPlayer: {fileID: 0}
 --- !u!224 &1975967586 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6206838634205518254, guid: bb7c7f589affacb4ba73886245b6a9bc, type: 3}
@@ -36968,7 +33905,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2013373330}
-  - component: {fileID: 2013373331}
   m_Layer: 0
   m_Name: Mil 4/Fin 2
   m_TagString: Untagged
@@ -36991,96 +33927,6 @@ Transform:
   m_Father: {fileID: 391526258}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2013373331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2013373329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2880bc7dd458ce45ae80a952986541a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: actionPoints
-      Entry: 7
-      Data: 0|ActionPoints, Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 1|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 1
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: baseValue
-      Entry: 3
-      Data: 2
-    - Name: conditionals
-      Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 3|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 3
-    - Name: actionTier
-      Entry: 3
-      Data: 1
-    - Name: baseValue
-      Entry: 3
-      Data: 4
-    - Name: conditionals
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  status: 0
 --- !u!1 &2015219705
 GameObject:
   m_ObjectHideFlags: 0
@@ -38050,8 +34896,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2062126970}
-  - component: {fileID: 2062126971}
-  - component: {fileID: 2062126972}
   m_Layer: 0
   m_Name: Mil 3/Dip 2 Event
   m_TagString: Untagged
@@ -38074,145 +34918,6 @@ Transform:
   m_Father: {fileID: 391526258}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2062126971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2062126969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2880bc7dd458ce45ae80a952986541a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: actionPoints
-      Entry: 7
-      Data: 0|ActionPoints, Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 1|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 2
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: baseValue
-      Entry: 3
-      Data: 2
-    - Name: conditionals
-      Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 3|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 3
-    - Name: actionTier
-      Entry: 3
-      Data: 1
-    - Name: baseValue
-      Entry: 3
-      Data: 3
-    - Name: conditionals
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  status: 0
---- !u!114 &2062126972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2062126969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09007fc5072ec714a8bf824e2ff35d9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: 
-  actionText: Play Event Card
-  actingPlayer: {fileID: 0}
 --- !u!1 &2065472440
 GameObject:
   m_ObjectHideFlags: 0
@@ -38439,9 +35144,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2078656157}
-  - component: {fileID: 2078656158}
-  - component: {fileID: 2078656159}
-  - component: {fileID: 2078656160}
   m_Layer: 0
   m_Name: Dip 2/Mil 2 Event Mil
   m_TagString: Untagged
@@ -38464,194 +35166,6 @@ Transform:
   m_Father: {fileID: 391526258}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2078656158
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2078656156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2880bc7dd458ce45ae80a952986541a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: actionPoints
-      Entry: 7
-      Data: 0|ActionPoints, Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 1|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 3
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: baseValue
-      Entry: 3
-      Data: 2
-    - Name: conditionals
-      Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 3|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 2
-    - Name: actionTier
-      Entry: 3
-      Data: 1
-    - Name: baseValue
-      Entry: 3
-      Data: 2
-    - Name: conditionals
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  status: 0
---- !u!114 &2078656159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2078656156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09007fc5072ec714a8bf824e2ff35d9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: 
-  actionText: Play Event Card
-  actingPlayer: {fileID: 0}
---- !u!114 &2078656160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2078656156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2104484f5f90917439de7c355d5f049e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: 
-  actionText: Military Upgrade Action
-  actingPlayer: {fileID: 0}
 --- !u!224 &2078693862 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2218923703980416800, guid: 209d1115101ec5b4ea826cb153251de4, type: 3}
@@ -39105,7 +35619,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2094681467}
-  - component: {fileID: 2094681468}
   m_Layer: 0
   m_Name: Fin 4/Mil 2
   m_TagString: Untagged
@@ -39128,96 +35641,6 @@ Transform:
   m_Father: {fileID: 391526258}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2094681468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2094681466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2880bc7dd458ce45ae80a952986541a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: actionPoints
-      Entry: 7
-      Data: 0|ActionPoints, Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 1|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 3
-    - Name: actionTier
-      Entry: 3
-      Data: 0
-    - Name: baseValue
-      Entry: 3
-      Data: 2
-    - Name: conditionals
-      Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 3|ActionPoint, Assembly-CSharp
-    - Name: actionType
-      Entry: 3
-      Data: 1
-    - Name: actionTier
-      Entry: 3
-      Data: 1
-    - Name: baseValue
-      Entry: 3
-      Data: 4
-    - Name: conditionals
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  status: 0
 --- !u!1 &2101216421
 GameObject:
   m_ObjectHideFlags: 0
@@ -39979,76 +36402,6 @@ Transform:
   m_Father: {fileID: 1718760935}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2133084287
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2133084288}
-  - component: {fileID: 2133084289}
-  m_Layer: 0
-  m_Name: 1 VP
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2133084288
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2133084287}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1960464588}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2133084289
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2133084287}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02648db47b6988c4a9f3e5334699aeda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  used: 0
-  victoryPoints: 1
-  treatyPoints: 0
-  requiredMargin: 1
 --- !u!1 &2133565536
 GameObject:
   m_ObjectHideFlags: 0
@@ -55408,7 +51761,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  actionName: 
+  actionName: Deal Starting Hand to Players
   actionText: Deal Starting Hand to Players
   dealType: 0
   numCards: 3
@@ -55458,11 +51811,11 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  actionName: 
+  actionName: Adjust Debt Limit
   actionText: Adjust Debt Limit
   factions:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
+  - {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
   amount: 5
 --- !u!114 &7095921346316974913
 MonoBehaviour:
@@ -55561,21 +51914,22 @@ MonoBehaviour:
   actionName: Adding Cards To Deck
   actionText: Add Cards To Deck
   cards:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 63adcaf2ba6ce5f49961009262e05adc, type: 2}
+  - {fileID: 11400000, guid: f26efbc8b1043d747aebb0af676b9587, type: 2}
+  - {fileID: 11400000, guid: 529ae2188da91044d8350e938046d127, type: 2}
+  - {fileID: 11400000, guid: 52d071f7000695b439cc6954f42003af, type: 2}
+  - {fileID: 11400000, guid: ae0da172f02df234da6969d7f760ab4f, type: 2}
+  - {fileID: 11400000, guid: 94dc6f8e51f8b8849b9c697fc829643b, type: 2}
+  - {fileID: 11400000, guid: 08fcc191f43247146b003913e4e2f10a, type: 2}
+  - {fileID: 11400000, guid: 08fcc191f43247146b003913e4e2f10a, type: 2}
+  - {fileID: 11400000, guid: d3d8a0ec35bd62b4f95c67804b1c313c, type: 2}
+  - {fileID: 11400000, guid: f63d70810066a2c469b3e3ed1daa166b, type: 2}
+  - {fileID: 11400000, guid: 238075b52bf4d2f42a82d6e184f7df51, type: 2}
+  - {fileID: 11400000, guid: f69db1ea9f8b182429cd4f527b44c8ac, type: 2}
+  - {fileID: 11400000, guid: 5f2f0a4344aea344380c855a388f2181, type: 2}
+  - {fileID: 11400000, guid: 6dae589852aab8142bc43e6598333ec7, type: 2}
+  - {fileID: 11400000, guid: d9134fb7b7505da458cae4232d54ef52, type: 2}
+  - {fileID: 11400000, guid: de7e19bf282c34d4c86265f22aed6c9a, type: 2}
 --- !u!114 &7095921346316974915
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -43,4 +43,25 @@ public class ActionPoints : HashSet<ActionPoint>
             return retVal; 
         }
     }
+
+    //public int CompareTo(InvestmentTile tile)
+    //{
+        /*
+        if (majorActionType > tile.data.majorActionType) return -1;
+        else if (majorActionType == tile.data.majorActionType)
+        {
+            if (majorActionPoints > tile.data.majorActionPoints) return -1;
+            else if (majorActionPoints == tile.data.majorActionPoints)
+            {
+                if (minorActionType > tile.minorActionType) return -1;
+                else if (minorActionType == tile.minorActionType)
+                {
+                    if (minorActionPoints > tile.minorActionPoints) return -1;
+                    else if (minorActionPoints == tile.minorActionPoints) return 0;
+                }
+            }
+        }
+        return 1;
+        */
+    //}
 }

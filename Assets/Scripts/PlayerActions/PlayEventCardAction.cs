@@ -8,6 +8,7 @@ public class PlayEventCardAction : PlayerAction
 {
     protected override void Do()
     {
+        /*
         List<EventCard> eventCards = actingPlayer.hand.Where(card =>
             card.reqdActionType == ActionPoint.ActionType.None || card.reqdActionType == Phase.CurrentPhase.GetComponent<ActionRound>()?.investmentTile.majorActionType).ToList();
 
@@ -16,10 +17,11 @@ public class PlayEventCardAction : PlayerAction
             SelectionController<EventCard>.Selection selector = new(eventCards, Finish);
             selector.SetTitle($"Select a {actingPlayer.faction} Event Card to Play");
         }
+        */
     }
 
     public void Finish(EventCard card)
     {
-        Debug.Log($"{actingPlayer.faction} plays {card.name}");
+        Debug.Log($"{actingPlayer.faction} plays {card}");
     }
 }

@@ -3,30 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using UnityEngine.Events;
-using Sirenix.OdinInspector; 
+using Sirenix.OdinInspector;
+using ImperialStruggle;
+using Sirenix.Utilities;
 
-public class CardinalMinistersAction : PlayerAction
+public class CardinalMinistersAction : CardAction
 {
     [SerializeField] int maxDP = 3;
-    [SerializeField] List<Space> bonusSpaces = new List<Space>();
+    [SerializeField] List<SpaceData> bonusSpaces;
 
-    ActionPoint actionPoint;
-    ActionPoints _actionPoints = new ActionPoints();
-    public ActionPoints actionPoints => _actionPoints;
-    [SerializeField] int bonusDP => Mathf.Clamp(bonusSpaces.Count(space => space.Flag == actingPlayer.faction), 0, maxDP);
+    bool used; 
 
-
-    protected override void Do()
+    protected override void Do(Player player) // NOTE: Do is the REVEAL action, 
     {
-        actionPoint = new ActionPoint(ActionPoint.ActionType.Diplomacy, ActionPoint.ActionTier.Major);
-        actionPoint.baseValue = bonusDP;
+        PeaceTurn peaceTurn = Phase.CurrentPhase.GetComponentInParent<PeaceTurn>();
 
-        actionPoint.actionTier = Phase.CurrentPhase.GetComponent<ActionRound>()?.investmentTile.majorActionType == ActionPoint.ActionType.Diplomacy ? 
-            ActionPoint.ActionTier.Major : ActionPoint.ActionTier.Minor;
+        peaceTurn.EndEvent += Reset; 
+        InvestmentTile.selectInvestmentTileEvent += GrantBonusDP;
 
-        Debug.Log($"Cardinal Ministers Award {actionPoint.baseValue} {actionPoint.actionTier} {actionPoint.actionType} {(actionPoint.baseValue == 1 ? "Bonus DP" : "Bonus DPs")}");
+        void GrantBonusDP(Player selectingPlayer, InvestmentTile tile)
+        {
+            ActionPoint AP = tile.actionPoints.FirstOrDefault(ap => ap.actionType == ActionPoint.ActionType.Diplomacy);
 
-        _actionPoints.Clear();
-        _actionPoints.Add(actionPoint);
+            if (selectingPlayer == Game.France && AP != null && used == false)
+            {
+                int BonusDP = Mathf.Min(maxDP, Game.SpaceLookup.Count(kvp => bonusSpaces.Contains(kvp.Key) && kvp.Value.Flag == Game.France));
+                AP.baseValue += BonusDP; 
+                used = true;
+            }
+        }
+
+        void Reset() => used = false;
     }
+
 }

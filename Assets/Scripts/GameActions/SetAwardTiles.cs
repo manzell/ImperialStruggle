@@ -6,18 +6,14 @@ using UnityEngine;
 
 public class SetAwardTiles : GameAction
 {
-    [SerializeField] List<Map> maps; 
     protected override void Do()
     {
         if(Phase.CurrentPhase is PeaceTurn peaceTurn)
         {
-            Queue<AwardTile> awardTiles = new Queue<AwardTile>(GameObject.FindObjectsOfType<AwardTile>().OrderBy(tile => tile.used).ThenBy(tile => Random.value).Take(4));
+            Queue<AwardTile> awardTiles = new(Game.AwardTiles); 
 
-            foreach (Map map in Game.Spaces.Select(space => space.map)) 
+            foreach (Map map in Game.Spaces.Select(space => space.map).Distinct().OrderBy(tile => Random.value)) 
                 commands.Add(new SetAwardTileCommand(map, awardTiles.Dequeue()));
-
-            if (!awardTiles.Any(tile => tile.used == false))
-                awardTiles.ForEach(tile => tile.used = false);
         }            
     }
 }

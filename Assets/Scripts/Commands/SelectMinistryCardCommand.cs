@@ -5,18 +5,14 @@ using UnityEngine;
 
 public class SelectMinistryCardCommand : Command
 {
-    public static UnityEvent<MinistryCard> selectMinistryCardEvent = new UnityEvent<MinistryCard>(); 
+    MinistryCard card; 
+    public static System.Action<MinistryCard> selectMinistryCardEvent;
+
+    public SelectMinistryCardCommand(MinistryCard card) => this.card = card; 
+
     public override void Do(GameAction action)
     {
-        if(action is ActionTarget<List<ISelectable>> ministryAction)
-        {
-            foreach(MinistryCard card in ministryAction.target)
-            {
-                card.ministryCardStatus = MinistryCard.MinistryCardStatus.Selected;
-                selectMinistryCardEvent.Invoke(card);
-
-                Debug.Log($"{card.faction} selects {card.name} Ministry Card");
-            }
-        }
+        card.ministryCardStatus = MinistryCard.MinistryCardStatus.Selected;
+        selectMinistryCardEvent.Invoke(card);
     }
 }

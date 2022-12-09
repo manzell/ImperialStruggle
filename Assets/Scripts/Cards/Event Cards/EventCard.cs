@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using Sirenix.OdinInspector;
-using System.Linq; 
+using System.Linq;
 
-public class EventCard : SerializedMonoBehaviour, ICard, ISelectable
+public class EventCard : ICard, ISelectable
 {
-    [HideInInspector] public UnityAction callback;
+    public EventCardData data { get; private set; }
 
-    public ActionPoint.ActionType reqdActionType;
-    public Phase.Era era;
-    public List<PlayerAction> actions = new List<PlayerAction>();
+    public string Name => data.name;
+    public EventCard(EventCardData data)
+    {
+        this.data = data;
+    }
 }

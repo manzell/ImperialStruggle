@@ -5,14 +5,18 @@ using UnityEngine.Events;
 using System.Linq;
 using Sirenix.OdinInspector;
 using Sirenix.Utilities;
+using UnityEditor;
+using ImperialStruggle;
 
 public class Game : SerializedMonoBehaviour
 {
     public static System.Action startGameEvent;
 
-    public static List<EventCard> eventDeck = new List<EventCard>(), eventDiscards = new List<EventCard>();
-    public static Dictionary<SpaceData, Space> SpaceLookup { get; private set; } = new();
+    public static Stack<EventCardData> EventDeck = new(), Discards = new ();
+    public static Dictionary<SpaceData, Space> SpaceLookup { get; private set; }
     public static HashSet<Space> Spaces { get; private set; }
+    public static IEnumerable<AwardTile> AwardTiles { get; private set; }
+    public static IEnumerable<InvestmentTile> InvestmentTiles { get; private set; }
 
     public static Faction Neutral { get; private set; }
     public static Faction Britain { get; private set; }
@@ -20,10 +24,12 @@ public class Game : SerializedMonoBehaviour
     public static Faction Spain { get; private set; }
     public static Faction USA { get; private set; }
 
-    [SerializeField] HashSet<Resource> Resources;
+    public static HashSet<Resource> Resources; 
+    [SerializeField] List<AwardTile> awardTiles;
+    [SerializeField] List<InvestmentTileData> investmentTiles;
+    [SerializeField] HashSet<SpaceData> startingSpaces;
     [SerializeField] Faction britain, france, usa, spain, neutral;
     [SerializeField] Phase startingPhase;
-    [SerializeField] HashSet<SpaceData> startingSpaces;
 
     public static GlobalDemandTrack GlobalDemandTrack { get; private set; }
     [SerializeField] GlobalDemandTrack globalDemandTrack;
@@ -38,8 +44,10 @@ public class Game : SerializedMonoBehaviour
         Spain = spain;
         Neutral = neutral;
 
-        GlobalDemandTrack = globalDemandTrack; 
-
+        GlobalDemandTrack = globalDemandTrack;
+        AwardTiles = awardTiles;
+        InvestmentTiles = investmentTiles.Select(tile => new InvestmentTile(tile)); 
+        Resources = new(startingSpaces.OfType<MarketData>().Where(market => market.resource != null).Select(market => market.resource));
         LoadSpaces(startingSpaces); 
     }
 
@@ -50,32 +58,19 @@ public class Game : SerializedMonoBehaviour
 
     private void LoadSpaces(IEnumerable<SpaceData> spaces)
     {
-        Spaces = new(); 
+        Spaces = new();
 
-        foreach (MarketData data in spaces.OfType<MarketData>())
-            Spaces.Add(new Market(data));
-
-        foreach (PoliticalData data in spaces.OfType<PoliticalData>())
-            Spaces.Add(new PoliticalSpace(data));
-
-        foreach (FortData data in spaces.OfType<FortData>())
-            Spaces.Add(new Fort(data));
-
-        foreach (TerritoryData data in spaces.OfType<TerritoryData>())
-            Spaces.Add(new Territory(data));
-
-        foreach (NavalData data in spaces.OfType<NavalData>())
-            Spaces.Add(new NavalSpace(data));
+        Spaces.AddRange(spaces.OfType<MarketData>().Select(data => new Market(data)));
+        Spaces.AddRange(spaces.OfType<PoliticalData>().Select(data => new PoliticalSpace(data)));
+        Spaces.AddRange(spaces.OfType<FortData>().Select(data => new Fort(data)));
+        Spaces.AddRange(spaces.OfType<TerritoryData>().Select(data => new Territory(data)));
+        Spaces.AddRange(spaces.OfType<NavalData>().Select(data => new NavalSpace(data)));
 
         // Now go back through and set the Adjacent Spaces using our Runtime Space Classes
-        foreach (Space space in Spaces)
-        {
-            Debug.Log($"Adding {space.data.name} to SpaceLookup"); 
-            SpaceLookup.Add(space.data, space);
-            Debug.Log(SpaceLookup.ContainsKey(space.data)); 
+        SpaceLookup = Spaces.ToDictionary(space => space.data); 
 
+        foreach (Space space in Spaces)
             space.adjacentSpaces.AddRange(space.data.adjacentSpaces.Select(spacedata => SpaceLookup[spacedata]));
-        }
     }
 
     public static Phase NextWarPhase => NextWarTurn.GetComponent<Phase>();
@@ -137,11 +132,9 @@ public struct GameState
                 squadronState.Add(squadron, squadron.space);
         }
 
-        foreach (AdvantageTile tile in GameObject.FindObjectsOfType<AdvantageTile>())
-            advantageTileState.Add(tile, tile.tileState);
+        // Advantage Tiles
+        // Ministry Tiles
 
-        foreach (MinistryCard card in GameObject.FindObjectsOfType<MinistryCard>())
-            ministryCardsState.Add(card, card.ministryCardStatus);
 
         victoryPointState = RecordsTrack.VictoryPoints;
     }

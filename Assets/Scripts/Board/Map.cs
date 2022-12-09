@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-[CreateAssetMenu]
 public class Map : ScriptableObject, ISelectable
 {
     public AwardTile awardTile;
@@ -21,7 +20,7 @@ public class Map : ScriptableObject, ISelectable
             List<Faction> winningFactions = new List<Faction>(); 
 
             foreach(Player player in Player.players)
-                if(mapScore[player.faction] == maxGameScore && winningMargin >= awardTile.requiredMargin) // Need to move the margin logic out to the ScoreMapAction?
+                if(mapScore[player.faction] == maxGameScore && winningMargin >= awardTile.RequiredMargin) // Need to move the margin logic out to the ScoreMapAction?
                     winningFactions.Add(player.faction);
 
             if(winningFactions.Count == 1)

@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using Sirenix.OdinInspector; 
 
-[CreateAssetMenu(menuName = "Graphic Settings")]
 public class GraphicSettings : SerializedScriptableObject
 {
     public Dictionary<Faction, Sprite> flags;

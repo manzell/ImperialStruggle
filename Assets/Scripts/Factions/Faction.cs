@@ -4,7 +4,6 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI; 
 
-[CreateAssetMenu]
 public class Faction : ScriptableObject, ISelectable
 {
     public Sprite Icon;

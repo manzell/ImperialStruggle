@@ -6,8 +6,8 @@ using System.Linq;
 
 public class Player : SerializedMonoBehaviour, ISelectable
 {
-    public Faction faction; 
-    public List<EventCard> hand;
+    public Faction faction;
+    public List<EventCard> hand; 
     public List<MinistryCard> ministers; // bool = revealed?
     public ActionPoints actionPoints = new ActionPoints(); 
     public Queue<WarTile> warTiles, bonusWarTiles;
@@ -38,7 +38,7 @@ public class Player : SerializedMonoBehaviour, ISelectable
         actionPoints = new ActionPoints();
     }
 
-    public HashSet<MinistryCard.Keyword> Keywords => new HashSet<MinistryCard.Keyword>(ministers.SelectMany(minister => minister.keywords)); 
+    public HashSet<MinistryCard.Keyword> Keywords => new HashSet<MinistryCard.Keyword>(ministers.SelectMany(minister => minister.data.keywords)); 
 
     public List<Squadron> squadrons;
 

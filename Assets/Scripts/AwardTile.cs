@@ -1,12 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Sirenix.OdinInspector; 
+using Sirenix.OdinInspector;
 
-public class AwardTile : SerializedMonoBehaviour
+public class AwardTile : SerializedScriptableObject
 {
-    public bool used;
-    public int victoryPoints, treatyPoints, requiredMargin = 1;
-
-    public List<Conditional> conditionals; 
+    public ActionPoints ActionPoints;
+    public readonly int RequiredMargin; 
 }

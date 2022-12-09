@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
+using System.Runtime.CompilerServices;
 
 public static class Extensions
 {
@@ -10,5 +12,4 @@ public static class Extensions
         else if (faction == Game.France) return Game.Britain;
         else return null; 
     }
-
 }
