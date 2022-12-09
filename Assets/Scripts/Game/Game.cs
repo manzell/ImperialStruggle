@@ -70,7 +70,10 @@ public class Game : SerializedMonoBehaviour
         // Now go back through and set the Adjacent Spaces using our Runtime Space Classes
         foreach (Space space in Spaces)
         {
-            SpaceLookup.Add(space.data, space); 
+            Debug.Log($"Adding {space.data.name} to SpaceLookup"); 
+            SpaceLookup.Add(space.data, space);
+            Debug.Log(SpaceLookup.ContainsKey(space.data)); 
+
             space.adjacentSpaces.AddRange(space.data.adjacentSpaces.Select(spacedata => SpaceLookup[spacedata]));
         }
     }

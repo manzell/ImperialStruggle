@@ -23,6 +23,7 @@ MonoBehaviour:
     SerializationNodes: []
   prefab: {fileID: 0}
   map: {fileID: 0}
+  startingFlag: {fileID: 0}
   availableEra: 0
   adjacentSpaces:
   - {fileID: 11400000, guid: e61c5032ae442ed4c82df888cdbf830e, type: 2}
@@ -30,6 +31,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: deb2762bedd8df14487a302e00e3d178, type: 2}
   - {fileID: 11400000, guid: eb11a043315771c40bc28364da7d8c69, type: 2}
   - {fileID: 11400000, guid: 4b6e444d1f731db44a733bbaa100a558, type: 2}
-  startingFlag: {fileID: 0}
   resource: {fileID: 11400000, guid: c0cdb8595773a624c88342a4737bb4d1, type: 2}
   flagCost: 3

@@ -1,41 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq; 
+using System.Linq;
 
-public class Map : MonoBehaviour, ICriteria, ISelectable
+[CreateAssetMenu]
+public class Map : ScriptableObject, ISelectable
 {
     public AwardTile awardTile;
-    public List<Space> spaces; 
+    public IEnumerable<Space> spaces => Game.Spaces.Where(space => space.map == this);
 
-    public Dictionary<Faction, int> mapScore
-    {
-        get
-        {
-            Dictionary<Faction, int>  retVal = new Dictionary<Faction, int> {
-                { Game.Britain, 0 },
-                { Game.France, 0 }
-            }; 
-
-            foreach(Space space in spaces)
-                if(retVal.ContainsKey(space.Flag))
-                    retVal[space.Flag]++; 
-
-            return retVal; 
-        }
-    }
+    public Dictionary<Faction, int> mapScore => spaces.GroupBy(space => space.Flag).ToDictionary(group => group.Key, group => group.Count()); 
 
     public Faction controllingFaction
     {
         get
         {
-            int maxGameScore = mapScore.Values.OrderByDescending(val => val).First();
+            int maxGameScore = mapScore.Max(kvp => kvp.Value); 
             int winningMargin = maxGameScore - mapScore.Values.OrderByDescending(val => val).ElementAt(1); 
 
             List<Faction> winningFactions = new List<Faction>(); 
 
             foreach(Player player in Player.players)
-                if(mapScore[player.faction] == maxGameScore && winningMargin >= awardTile.requiredMargin) // Need to move the margin logic out to the ScoreMapAction
+                if(mapScore[player.faction] == maxGameScore && winningMargin >= awardTile.requiredMargin) // Need to move the margin logic out to the ScoreMapAction?
                     winningFactions.Add(player.faction);
 
             if(winningFactions.Count == 1)
