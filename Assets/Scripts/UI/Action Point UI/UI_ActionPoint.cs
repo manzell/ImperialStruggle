@@ -5,69 +5,72 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
 using DG.Tweening;
-using System.Linq; 
+using System.Linq;
 
-public class UI_ActionPoint : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+namespace ImperialStruggle
 {
-    [SerializeField] Image apIcon;
-    [SerializeField] TextMeshProUGUI apPoints;
-    [SerializeField] Image background, highlight; 
-
-    IEnumerator popupTimer;
-    GameObject popupGameObject;
-
-    public ActionPoint actionPoint; 
-
-    public void SetTile(ActionPoint ap)
+    public class UI_ActionPoint : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
-        actionPoint = ap; 
-        SetAPIcon(actionPoint);
-        setAPValue(actionPoint);
-    }
+        [SerializeField] Image apIcon;
+        [SerializeField] TextMeshProUGUI apPoints;
+        [SerializeField] Image background, highlight;
 
-    public void SetAPIcon(ActionPoint ap)
-    {
-        apIcon.sprite = FindObjectOfType<Game>().graphicSettings.actionIcons[ap.actionType];
-        apIcon.color = ap.actionTier == ActionPoint.ActionTier.Major ? Color.black : Color.gray;
-    }
+        IEnumerator popupTimer;
+        GameObject popupGameObject;
 
-    public void setAPValue(ActionPoint ap)
-    {
-        apPoints.text = $"{ap.Value(null)}{(ap.conditionals.Count > 0 ? "*":string.Empty)}";
-        apPoints.color = ap.actionTier == ActionPoint.ActionTier.Major ? Color.black : Color.gray;
-    }
+        public ActionPoint actionPoint;
 
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        if(actionPoint.conditionText != string.Empty)
+        public void SetTile(ActionPoint ap)
         {
-            popupTimer = OpenPopup(eventData);
-            StartCoroutine(popupTimer);
+            actionPoint = ap;
+            SetAPIcon(actionPoint);
+            setAPValue(actionPoint);
         }
-    }
 
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        if(popupTimer != null)
+        public void SetAPIcon(ActionPoint ap)
         {
-            StopCoroutine(popupTimer);
-            ClosePopup(); 
+            apIcon.sprite = FindObjectOfType<Game>().graphicSettings.actionIcons[ap.actionType];
+            apIcon.color = ap.actionTier == ActionPoint.ActionTier.Major ? Color.black : Color.gray;
         }
-    }
 
-    IEnumerator ClosePopup()
-    {
-        yield return new WaitForSeconds(1f);
-        popupGameObject.transform.DOScale(0f, 0.3f); 
+        public void setAPValue(ActionPoint ap)
+        {
+            apPoints.text = $"{ap.Value(null)}{(ap.conditionals.Count > 0 ? "*" : string.Empty)}";
+            apPoints.color = ap.actionTier == ActionPoint.ActionTier.Major ? Color.black : Color.gray;
+        }
 
-    }
+        public void OnPointerEnter(PointerEventData eventData)
+        {
+            if (actionPoint.conditionText != string.Empty)
+            {
+                popupTimer = OpenPopup(eventData);
+                StartCoroutine(popupTimer);
+            }
+        }
 
-    IEnumerator OpenPopup(PointerEventData eventData)
-    {
-        yield return new WaitForSeconds(1f);
-        popupGameObject = Instantiate(new GameObject(), transform); // make this a prefab from Graphic Settings? 
-        popupGameObject.transform.position = eventData.position; 
-        TextMeshProUGUI tm = popupGameObject.AddComponent<TextMeshProUGUI>();
-        tm.text = actionPoint.conditionText; 
+        public void OnPointerExit(PointerEventData eventData)
+        {
+            if (popupTimer != null)
+            {
+                StopCoroutine(popupTimer);
+                ClosePopup();
+            }
+        }
+
+        IEnumerator ClosePopup()
+        {
+            yield return new WaitForSeconds(1f);
+            popupGameObject.transform.DOScale(0f, 0.3f);
+
+        }
+
+        IEnumerator OpenPopup(PointerEventData eventData)
+        {
+            yield return new WaitForSeconds(1f);
+            popupGameObject = Instantiate(new GameObject(), transform); // make this a prefab from Graphic Settings? 
+            popupGameObject.transform.position = eventData.position;
+            TextMeshProUGUI tm = popupGameObject.AddComponent<TextMeshProUGUI>();
+            tm.text = actionPoint.conditionText;
+        }
     }
 }

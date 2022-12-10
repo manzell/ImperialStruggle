@@ -2,14 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ReduceDebtAction : PlayerAction
+namespace ImperialStruggle
 {
-    Faction faction; 
-    public int debtAdjustment;
-
-
-    protected override void Do()
+    public class ReduceDebtAction : PlayerAction
     {
-        commands.Add(new AdjustDebtCommand(actingPlayer.faction, debtAdjustment));
+        Faction faction;
+        public int debtAdjustment;
+
+
+        protected override void Do()
+        {
+            commands.Add(new AdjustDebtCommand(actingPlayer.faction, debtAdjustment));
+        }
     }
 }

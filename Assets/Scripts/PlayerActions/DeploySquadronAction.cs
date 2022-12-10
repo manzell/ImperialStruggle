@@ -2,30 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DeploySquadronAction : PlayerAction
+namespace ImperialStruggle
 {
-    ActionPoint actionPoint;
-
-    public void Awake()
+    public class DeploySquadronAction : PlayerAction
     {
-        actionPoint = new ActionPoint(ActionPoint.ActionType.Military, ActionPoint.ActionTier.Minor);
-    }
+        ActionPoint actionPoint;
 
-    public int CalculateDeploymentCost(Player player)
-    {
-        if (GetComponent<NavalSpace>().Flag == player.faction)
-            return 1;
-        else
+        public void Awake()
         {
-            foreach (Squadron squadon in player.squadrons)
-                if (squadon.space != null) return 2;
-
-            return 3; 
+            actionPoint = new ActionPoint(ActionPoint.ActionType.Military, ActionPoint.ActionTier.Minor);
         }
-    }
 
-    protected override void Do()
-    {
-        throw new System.NotImplementedException();
+        public int CalculateDeploymentCost(Player player)
+        {
+            if (GetComponent<NavalSpace>().Flag == player.faction)
+                return 1;
+            else
+            {
+                foreach (Squadron squadon in player.squadrons)
+                    if (squadon.space != null) return 2;
+
+                return 3;
+            }
+        }
+
+        protected override void Do()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

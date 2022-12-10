@@ -6,13 +6,18 @@ using UnityEngine;
 public class SelectMinistryCardCommand : Command
 {
     MinistryCard card; 
-    public static System.Action<MinistryCard> selectMinistryCardEvent;
+    public static System.Action<MinistryCard> SelectEvent;
 
     public SelectMinistryCardCommand(MinistryCard card) => this.card = card; 
 
     public override void Do(GameAction action)
     {
         card.ministryCardStatus = MinistryCard.MinistryCardStatus.Selected;
-        selectMinistryCardEvent.Invoke(card);
+        SelectEvent?.Invoke(card);
+    }
+
+    public override void Undo()
+    {
+        card.ministryCardStatus = MinistryCard.MinistryCardStatus.Reserved;
     }
 }

@@ -2,28 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using System.Linq; 
+using System.Linq;
 
-public class UI_TheaterAward : MonoBehaviour
+namespace ImperialStruggle
 {
-    [SerializeField] Map map;
-    [SerializeField] TextMeshProUGUI mainText;
-
-    private void Awake()
+    public class UI_TheaterAward : MonoBehaviour
     {
-        //AwardPhase.SetMapAwardEvent.AddListener((map, tile) => { if (this.map == map) SetAwardText(tile); }); 
-    }
+        [SerializeField] Map map;
+        [SerializeField] TextMeshProUGUI mainText;
 
-    void SetAwardText(AwardTile tile)
-    {
-        //AdjustVPCommand vpCommand = tile.GetComponent<AdjustVPCommand>();
-        //AdjustTPCommand tpCommand = tile.GetComponent<AdjustTPCommand>();
+        private void Awake()
+        {
+            //AwardPhase.SetMapAwardEvent.AddListener((map, tile) => { if (this.map == map) SetAwardText(tile); }); 
+        }
 
-        //if (vpCommand != null) // TODO put this in the graphics manifold
-        //    mainText.text = $"<color = \"black\">{vpCommand.adjustAmount}</color>";
-        //if (vpCommand != null && tpCommand != null)
-        //    mainText.text += " ";
-        //if (tpCommand != null)
-        //    mainText.text += $"<color = \"green\">{tpCommand.adjustAmount}</color>";
+        void SetAwardText(AwardTile tile)
+        {
+            //AdjustVPCommand vpCommand = tile.GetComponent<AdjustVPCommand>();
+            //AdjustTPCommand tpCommand = tile.GetComponent<AdjustTPCommand>();
+
+            //if (vpCommand != null) // TODO put this in the graphics manifold
+            //    mainText.text = $"<color = \"black\">{vpCommand.adjustAmount}</color>";
+            //if (vpCommand != null && tpCommand != null)
+            //    mainText.text += " ";
+            //if (tpCommand != null)
+            //    mainText.text += $"<color = \"green\">{tpCommand.adjustAmount}</color>";
+        }
     }
 }

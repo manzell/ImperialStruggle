@@ -4,13 +4,18 @@ using UnityEngine;
 using Sirenix.OdinInspector;
 using System.Linq;
 
-public class PeaceTurn : Phase
+namespace ImperialStruggle
 {
-    public Faction initiative; 
-    public HashSet<Resource> globalDemandResources = new();
-    public Dictionary<Map, AwardTile> awardTiles = new Dictionary<Map, AwardTile>();
-    public Dictionary<InvestmentTile, Faction> investmentTiles = new();
+    public class PeaceTurn : Phase
+    {
+        public enum InvestmentTileStatus { Reserve, Available, Drafted, Exhausted }
 
-    // A Peace Turn is Completed when all Action Rounds are complete
-    public override bool Completed => GetComponentsInChildren<ActionRound>().All(actionRound => actionRound.Completed); 
+        public Faction initiative;
+        public HashSet<Resource> globalDemandResources = new();
+        public Dictionary<Map, AwardTile> awardTiles = new Dictionary<Map, AwardTile>();
+        public Dictionary<InvestmentTile, Faction> investmentTiles = new();
+
+        // A Peace Turn is Completed when all Action Rounds are complete
+        public override bool Completed => GetComponentsInChildren<ActionRound>().All(actionRound => actionRound.Completed);
+    }
 }

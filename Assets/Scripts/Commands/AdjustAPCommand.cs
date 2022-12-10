@@ -2,42 +2,46 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using System.Linq; 
+using System.Linq;
 
-public class AdjustAPCommand : Command
+namespace ImperialStruggle
 {
-    public static UnityEvent adjustAPEvent = new UnityEvent();
-
-    public override void Do(GameAction action)
+    public class AdjustAPCommand : Command
     {
-        // How do we determine if this is a 
-        if(action is ActionTarget<ActionPoints> APAction && action is ActionTarget<Player> playerAction)
-        {
-            foreach (ActionPoint ap in APAction.target)
-            {
-                ActionPoint matchingAP = playerAction.target.actionPoints.First(_ap => ap.Equals(_ap));
+        public static UnityEvent adjustAPEvent = new UnityEvent();
 
-                if (matchingAP != null)
-                    matchingAP.baseValue += ap.baseValue; 
-                else
-                    playerAction.target.actionPoints.Add(ap);
-                Debug.Log($"Adding {ap.name} to {playerAction.target} Action Point Pool");
-            }
-            adjustAPEvent.Invoke();
-        }
-        else if(action is IAdjustAP apAction)
+        public override void Do(GameAction action)
         {
-            foreach (ActionPoint ap in apAction.actionPoints)
+            /*
+            if (action is ActionTarget<ActionPoints> APAction && action is ActionTarget<Player> playerAction)
             {
-                ActionPoint matchingAP = apAction.actionPoints.First(_ap => ap.Equals(_ap));
+                foreach (ActionPoint ap in APAction.target)
+                {
+                    ActionPoint matchingAP = playerAction.target.actionPoints.First(_ap => ap.Equals(_ap));
 
-                if (matchingAP != null)
-                    matchingAP.baseValue += ap.baseValue;
-                else
-                    apAction.actionPoints.Add(ap);
-                Debug.Log($"Adding {ap.name} to {apAction.player} Action Point Pool");
+                    if (matchingAP != null)
+                        matchingAP.baseValue += ap.baseValue;
+                    else
+                        playerAction.target.actionPoints.Add(ap);
+                    Debug.Log($"Adding {ap.name} to {playerAction.target} Action Point Pool");
+                }
+                adjustAPEvent.Invoke();
             }
-            adjustAPEvent.Invoke(); // the actual AP is passed in - and can be modified
+            else if (action is IAdjustAP apAction)
+            {
+                foreach (ActionPoint ap in apAction.actionPoints)
+                {
+                    ActionPoint matchingAP = apAction.actionPoints.First(_ap => ap.Equals(_ap));
+
+                    if (matchingAP != null)
+                        matchingAP.baseValue += ap.baseValue;
+                    else
+                        apAction.actionPoints.Add(ap);
+                    Debug.Log($"Adding {ap.name} to {apAction.player} Action Point Pool");
+                }
+                adjustAPEvent.Invoke(); // the actual AP is passed in - and can be modified
+            }
+            */
         }
     }
 }

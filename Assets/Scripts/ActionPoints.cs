@@ -2,50 +2,52 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
-using System.Linq; 
+using System.Linq;
 
-public class ActionPoints : HashSet<ActionPoint>
+namespace ImperialStruggle
 {
-    public ActionPoints Merge(ActionPoints ap)
+    public class ActionPoints : HashSet<ActionPoint>
     {
-        UnionWith(ap);
-        return this;
-    }
-
-    public ActionPoints Merge(ActionPoint ap)
-    {
-        Add(ap);
-        return this;
-    }
-
-    public ActionPoints(ActionPoints points)
-    {
-        foreach (ActionPoint ap in points)
-            Add(new ActionPoint(ap));
-    }
-
-    public ActionPoints() { }
-
-    public Dictionary<string, int> Values
-    {
-        get
+        public ActionPoints Merge(ActionPoints ap)
         {
-            Dictionary<string, int> retVal = new Dictionary<string, int>();
-            
-            foreach(ActionPoint ap in this)
-            {
-                if (retVal.ContainsKey(ap.name))
-                    retVal[ap.name] += ap.baseValue;
-                else
-                    retVal.Add(ap.name, ap.baseValue); 
-            }
-
-            return retVal; 
+            UnionWith(ap);
+            return this;
         }
-    }
 
-    //public int CompareTo(InvestmentTile tile)
-    //{
+        public ActionPoints Merge(ActionPoint ap)
+        {
+            Add(ap);
+            return this;
+        }
+
+        public ActionPoints(ActionPoints points)
+        {
+            foreach (ActionPoint ap in points)
+                Add(new ActionPoint(ap));
+        }
+
+        public ActionPoints() { }
+
+        public Dictionary<string, int> Values
+        {
+            get
+            {
+                Dictionary<string, int> retVal = new Dictionary<string, int>();
+
+                foreach (ActionPoint ap in this)
+                {
+                    if (retVal.ContainsKey(ap.name))
+                        retVal[ap.name] += ap.baseValue;
+                    else
+                        retVal.Add(ap.name, ap.baseValue);
+                }
+
+                return retVal;
+            }
+        }
+
+        //public int CompareTo(InvestmentTile tile)
+        //{
         /*
         if (majorActionType > tile.data.majorActionType) return -1;
         else if (majorActionType == tile.data.majorActionType)
@@ -63,5 +65,6 @@ public class ActionPoints : HashSet<ActionPoint>
         }
         return 1;
         */
-    //}
+        //}
+    }
 }

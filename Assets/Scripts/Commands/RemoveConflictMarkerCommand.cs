@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RemoveConflictMarkerCommand : Command
+namespace ImperialStruggle
 {
-    Space space; 
-    public RemoveConflictMarkerCommand(Space space)
+    public class RemoveConflictMarkerCommand : Command
     {
-        this.space = space;
-    }
+        Space space;
+        public RemoveConflictMarkerCommand(Space space)
+        {
+            this.space = space;
+        }
 
-    public override void Do(GameAction action)
-    {
-        space.SetConflictMarker(false);
-        space.updateSpaceEvent.Invoke(); 
+        public override void Do(GameAction action)
+        {
+            space.SetConflictMarker(false);
+            space.updateSpaceEvent.Invoke();
+        }
     }
 }

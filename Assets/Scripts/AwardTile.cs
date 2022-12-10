@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
 
-public class AwardTile : SerializedScriptableObject
+namespace ImperialStruggle
 {
-    public ActionPoints ActionPoints;
-    public readonly int RequiredMargin; 
+    public class AwardTile : SerializedScriptableObject
+    {
+        public ActionPoints ActionPoints;
+        public readonly int RequiredMargin;
+    }
 }

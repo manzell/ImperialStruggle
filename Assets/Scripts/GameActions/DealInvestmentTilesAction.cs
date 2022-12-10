@@ -1,24 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using System.Linq;
-using UnityEngine.Tilemaps;
-using Sirenix.Utilities;
-using ImperialStruggle;
 
-public class DealInvestmentTilesAction : GameAction
+namespace ImperialStruggle
 {
-    [SerializeField] int numToDeal;
-
-    protected override void Do()
+    public class DealInvestmentTilesAction : GameAction
     {
-        if (Phase.CurrentPhase is PeaceTurn peaceTurn)
-        {
-            commands.Add(new ResetInvestmentTilesCommand()); // What does this even do??
+        [SerializeField] int numToDeal;
 
-            commands.Add(new DealInvestmentTileCommand(
-                Game.InvestmentTiles.OrderBy(tile => tile.status != InvestmentTile.InvestmentTileStatus.Reserve).ThenBy(tile => Random.value).Take(numToDeal))); 
+        protected override void Do()
+        {
+            if (Phase.CurrentPhase is PeaceTurn peaceTurn)
+            {
+                commands.Add(new ResetInvestmentTilesCommand()); // What does this even do??
+
+                IEnumerable<InvestmentTile> tiles = Game.InvestmentTiles.OrderBy(tile => tile.Value != PeaceTurn.InvestmentTileStatus.Reserve).ThenBy(tile => Random.value)
+                    .Select(kvp => kvp.Key).Take(numToDeal);
+
+                commands.Add(new DealInvestmentTileCommand(tiles)); 
+                    
+            }
         }
     }
 }

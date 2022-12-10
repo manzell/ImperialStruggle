@@ -1,25 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq; 
+using System.Linq;
 
-public class TargetSpaceCondition : Conditional
+namespace ImperialStruggle
 {
-    public List<Space> eligibleSpaces = new List<Space>();
-
-    public Conditional.ConditionType ConditionalType => Conditional.ConditionType.Exactly;
-
-    public string ConditionalText => "Target Space??";
-
-    public bool Test(GameAction context)
+    public class TargetSpaceCondition : Conditional
     {
-        if (context is ActionTarget<Space> space)
-            return eligibleSpaces.Contains(space.target);
+        public List<Space> eligibleSpaces = new List<Space>();
 
-        if(context is ActionTarget<List<Space>> spaceList)
-            return spaceList.target.All(space => eligibleSpaces.Contains(space));
+        public Conditional.ConditionType ConditionalType => Conditional.ConditionType.Exactly;
 
-        return false; 
-            
+        public string ConditionalText => "Target Space??";
+
+        public bool Test(GameAction context)
+        {
+            /*
+            if (context is ActionTarget<Space> space)
+                return eligibleSpaces.Contains(space.target);
+
+            if (context is ActionTarget<List<Space>> spaceList)
+                return spaceList.target.All(space => eligibleSpaces.Contains(space));
+            */
+            return false;
+        }
     }
 }

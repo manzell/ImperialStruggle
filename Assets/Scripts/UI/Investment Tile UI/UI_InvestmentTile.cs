@@ -4,35 +4,30 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Linq;
-using Sirenix.OdinInspector; 
+using Sirenix.OdinInspector;
 
-public class UI_InvestmentTile : MonoBehaviour
+namespace ImperialStruggle
 {
-    [SerializeField] TextMeshProUGUI majorActionPoints, minorActionPoints;
-    [SerializeField] Image majorIcon, minorIcon, eventIcon, milUpgradeIcon;
-    public InvestmentTile tile;
-
-    [Button]
-    public void SetTile(InvestmentTile tile)
+    public class UI_InvestmentTile : MonoBehaviour
     {
-        GraphicSettings graphicSettings = FindObjectOfType<Game>().graphicSettings;
-        this.tile = tile;        
+        [SerializeField] TextMeshProUGUI majorActionPoints, minorActionPoints;
+        [SerializeField] Image majorIcon, minorIcon, eventIcon, milUpgradeIcon;
+        public InvestmentTile tile;
 
-        foreach(ActionPoint actionPoint in tile.actionPoints)
+        [Button]
+        public void SetTile(InvestmentTile tile)
         {
-            if(actionPoint.actionTier == ActionPoint.ActionTier.Major)
-            {
-                majorActionPoints.text = actionPoint.Value(null).ToString(); 
-                majorIcon.sprite = graphicSettings.actionIcons[actionPoint.actionType];
-            }
-            else if (actionPoint.actionTier == ActionPoint.ActionTier.Minor)
-            {
-                minorActionPoints.text = actionPoint.Value(null).ToString();
-                minorIcon.sprite = graphicSettings.actionIcons[actionPoint.actionType];
-            }
-        }
+            GraphicSettings graphicSettings = FindObjectOfType<Game>().graphicSettings;
+            this.tile = tile;
 
-        eventIcon.enabled = tile.data.EventTrigger;
-        milUpgradeIcon.enabled = tile.data.MilUpgrade;  
+            majorActionPoints.text = tile.majorActionPoint.Value(null).ToString();
+            majorIcon.sprite = graphicSettings.actionIcons[tile.majorActionPoint.actionType];
+
+            minorActionPoints.text = tile.minorActionPoint.Value(null).ToString();
+            minorIcon.sprite = graphicSettings.actionIcons[tile.minorActionPoint.actionType];
+
+            eventIcon.enabled = tile.EventTrigger;
+            milUpgradeIcon.enabled = tile.MilUpgrade;
+        }
     }
 }

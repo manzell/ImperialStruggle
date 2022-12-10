@@ -4,45 +4,47 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Sirenix.OdinInspector;
-using UnityEditor.Experimental.GraphView;
 
-public class UI_Territory : UI_Space
+namespace ImperialStruggle
 {
-    Territory territory;
-    [SerializeField] TerritoryData territoryData;
-    [SerializeField] TextMeshProUGUI spaceName, flagCost;
-    [SerializeField] Image territoryFrame, background;    
-
-    private void Awake()
+    public class UI_Territory : UI_Space
     {
-        Game.startGameEvent += Style;
-    }
+        Territory territory;
+        [SerializeField] TerritoryData territoryData;
+        [SerializeField] TextMeshProUGUI spaceName, flagCost;
+        [SerializeField] Image territoryFrame, background;
 
-    [Button]
-    public override void Style()
-    {
-        if (territory == null)
+        private void Awake()
         {
-            territory = (Territory)Game.SpaceLookup[territoryData];
-            territory.updateSpaceEvent += Style;
+            Game.startGameEvent += Style;
         }
 
-        GraphicSettings graphics = FindObjectOfType<Game>().graphicSettings;
-        spaceName.text = territory.name;
-        
-
-        if(territory.Prestigious)
+        [Button]
+        public override void Style()
         {
-            territoryFrame.color = graphics.prestigeHighlightColor;
-            flagCost.color = Color.white; 
-        }
-        else
-        {
-            territoryFrame.color = Color.white;
-            flagCost.color = Color.black;
-        }
+            if (territory == null)
+            {
+                territory = (Territory)Game.SpaceLookup[territoryData];
+                territory.updateSpaceEvent += Style;
+            }
 
-        background.color = graphics.factionColors[territory.Flag];
-        spaceName.color = territory.Flag == Game.Neutral || territory.Flag == Game.Spain ? Color.black : Color.white; 
+            GraphicSettings graphics = FindObjectOfType<Game>().graphicSettings;
+            spaceName.text = territory.name;
+
+
+            if (territory.Prestigious)
+            {
+                territoryFrame.color = graphics.prestigeHighlightColor;
+                flagCost.color = Color.white;
+            }
+            else
+            {
+                territoryFrame.color = Color.white;
+                flagCost.color = Color.black;
+            }
+
+            background.color = graphics.factionColors[territory.Flag];
+            spaceName.color = territory.Flag == Game.Neutral || territory.Flag == Game.Spain ? Color.black : Color.white;
+        }
     }
 }

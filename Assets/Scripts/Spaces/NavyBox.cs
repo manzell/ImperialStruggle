@@ -2,7 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class NavyBox
+namespace ImperialStruggle
 {
-    public static List<Squadron> squadrons; 
+    public static class NavyBox
+    {
+        public static List<Squadron> squadrons;
+    }
 }

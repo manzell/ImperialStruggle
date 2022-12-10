@@ -1,29 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine.Events;
 
 public static class RecordsTrack
 {
-    public static Dictionary<Faction, int> debtLimit = new Dictionary<Faction, int>();
-    public static Dictionary<Faction, int> currentDebt = new Dictionary<Faction, int>();
-    public static Dictionary<Faction, int> treatyPoints = new Dictionary<Faction, int>();
-    public static int VictoryPoints;
+    public static System.Action adjustDebtLimitEvent, adjustDebtEvent, adjustVPEvent, adjustTPEvent;
 
-    public static UnityEvent adjustDebtLimitEvent = new UnityEvent(),
-        adjustDebtEvent = new UnityEvent(),
-        adjustVPEvent = new UnityEvent(),
-        adjustTPEvent = new UnityEvent();
+    public static int VictoryPoints; public static Dictionary<Faction, int> debtLimit = new ();
+    public static Dictionary<Faction, int> currentDebt = new ();
+    public static Dictionary<Faction, int> treatyPoints = new ();
+    public static Dictionary<Faction, int> availableDebt => debtLimit.ToDictionary(kvp => kvp.Key, kvp => debtLimit[kvp.Key] - currentDebt[kvp.Key]);
 
-    public static Dictionary<Faction, int> availableDebt
-    {
-        get
-        {
-            Dictionary<Faction, int> retVal = new Dictionary<Faction, int>(); 
 
-            foreach(Faction faction in debtLimit.Keys)
-                retVal.Add(faction, debtLimit[faction] - currentDebt[faction]); 
 
-            return retVal; 
-        }
-    }
 }

@@ -2,36 +2,39 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RepairFortAction : PlayerAction
+namespace ImperialStruggle
 {
-    ActionPoint baseActionCost;
-
-    /*
-    public override bool Can()
+    public class RepairFortAction : PlayerAction
     {
-        Fort fort = GetComponent<Fort>();
+        ActionPoint baseActionCost;
 
-        if (actionPointCost.Count > 0)
-            baseActionCost = actionPointCost[0];
-        else if (baseActionCost == null)
+        /*
+        public override bool Can()
         {
-            baseActionCost = new ActionPoint(ActionPoint.ActionType.Military, ActionPoint.ActionTier.Minor);
-            actionPointCost.Add(baseActionCost);
+            Fort fort = GetComponent<Fort>();
+
+            if (actionPointCost.Count > 0)
+                baseActionCost = actionPointCost[0];
+            else if (baseActionCost == null)
+            {
+                baseActionCost = new ActionPoint(ActionPoint.ActionType.Military, ActionPoint.ActionTier.Minor);
+                actionPointCost.Add(baseActionCost);
+            }
+
+            baseActionCost.baseValue = fort.flagCost;
+
+            if (fort.flag == player.faction)
+                baseActionCost.baseValue -= 1; 
+            else if(fort.flag != Game.Neutral)
+                baseActionCost.baseValue += 1;
+
+            return base.Can();
         }
+        */
 
-        baseActionCost.baseValue = fort.flagCost;
-
-        if (fort.flag == player.faction)
-            baseActionCost.baseValue -= 1; 
-        else if(fort.flag != Game.Neutral)
-            baseActionCost.baseValue += 1;
-
-        return base.Can();
-    }
-    */
-
-    protected override void Do()
-    {
-        throw new System.NotImplementedException();
+        protected override void Do()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

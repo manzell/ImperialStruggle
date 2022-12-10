@@ -2,30 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using System.Linq; 
+using System.Linq;
+using UnityEditor;
 
-public class SetInitiativeAction : PlayerAction
+namespace ImperialStruggle
 {
-    protected override void Do()
+    public class SetInitiativeAction : PlayerAction
     {
-        SelectionController<Faction>.Selection selection = new(new List<Faction>() { Game.Britain, Game.France }, Finish);
-        selection.SetTitle($"{actingPlayer.faction} selects Initiative");         
-    }
-
-    void Finish(Faction faction)
-    {
-        if(Phase.CurrentPhase is PeaceTurn peaceTurn)
+        protected override void Do()
         {
-            ActionRound[] actionRounds = Phase.CurrentPhase.GetComponentsInChildren<ActionRound>();
-            peaceTurn.initiative = faction; 
+            if (Phase.CurrentPhase is PeaceTurn peaceTurn)
+            {
+                Player initiativePlayer = Player.players.Where(player => player.faction == peaceTurn.initiative).First();
+                Selection<Faction> selection = new(initiativePlayer, new List<Faction>() { Game.Britain, Game.France }, Finish);
+                //selection.SetTitle($"{actingPlayer.faction} selects Initiative");
+            }
+        }
 
-            Debug.Log($"{actingPlayer.faction} elects to {(actingPlayer == peaceTurn.initiative ? "Play" : "Pass")} the first Action Round; " +
-                $"{actingPlayer.faction.Opposition()} will go {(actingPlayer.faction.Opposition() == peaceTurn.initiative ? "First" : "Second")}");
+        void Finish(IEnumerable<Faction> factions)
+        {
+            if (Phase.CurrentPhase is PeaceTurn peaceTurn)
+            {
+                ActionRound[] actionRounds = Phase.CurrentPhase.GetComponentsInChildren<ActionRound>();
+                peaceTurn.initiative = factions.First();
 
-            Debug.Log("Use a command to change the initiative!");
+                Debug.Log($"{actingPlayer.faction} elects to {(actingPlayer == peaceTurn.initiative ? "Play" : "Pass")} the first Action Round; " +
+                    $"{actingPlayer.faction.Opposition()} will go {(actingPlayer.faction.Opposition() == peaceTurn.initiative ? "First" : "Second")}");
 
-            for (int i = 0; i < actionRounds.Length; i++)
-                actionRounds[i].actingFaction = i % 2 == 0 ? peaceTurn.initiative : peaceTurn.initiative.Opposition(); 
+                Debug.Log("Use a command to change the initiative!");
+
+                for (int i = 0; i < actionRounds.Length; i++)
+                    actionRounds[i].actingFaction = i % 2 == 0 ? peaceTurn.initiative : peaceTurn.initiative.Opposition();
+            }
         }
     }
 }

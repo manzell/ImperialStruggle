@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using System.Linq; 
+using System.Linq;
 
-public class AddCardsToDeckAction : GameAction
+namespace ImperialStruggle
 {
-    [SerializeField] List<EventCardData> cards;
+    public class AddCardsToDeckAction : GameAction
+    {
+        [SerializeField] List<EventCardData> cards;
 
-    protected override void Do() => commands.Add(new AddCardsToDeckCommand(cards)); 
+        protected override void Do() => commands.Add(new AddCardsToDeckCommand(cards));
+    }
 }

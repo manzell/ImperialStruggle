@@ -4,34 +4,37 @@ using UnityEngine;
 using UnityEngine.Events;
 using System.Linq;
 
-public class ScoreGlobalDemandAction : GameAction
+namespace ImperialStruggle
 {
-    public Dictionary<Resource, Faction> globalDemandWinners = new ();
-
-    protected override void Do()
+    public class ScoreGlobalDemandAction : GameAction
     {
-        if(Phase.CurrentPhase is PeaceTurn peaceTurn)
+        public Dictionary<Resource, Faction> globalDemandWinners = new();
+
+        protected override void Do()
         {
-            foreach(Resource resource in peaceTurn.globalDemandResources)
+            if (Phase.CurrentPhase is PeaceTurn peaceTurn)
             {
-                Faction resourceWinningFaction = null; 
-
-                int britainCount = Game.Spaces.OfType<Market>().Count(market => market.Flag == Game.Britain && market.Resource == resource);
-                int franceCount = Game.Spaces.OfType<Market>().Count(market => market.Flag == Game.France && market.Resource == resource);
-
-                if (britainCount > franceCount)
-                    resourceWinningFaction = Game.Britain;
-                else if (franceCount > britainCount)
-                    resourceWinningFaction = Game.France;
-
-                if (resourceWinningFaction != null)
+                foreach (Resource resource in peaceTurn.globalDemandResources)
                 {
-                    globalDemandWinners.Add(resource, resourceWinningFaction);
+                    Faction resourceWinningFaction = null;
 
-                    throw new System.NotImplementedException();
-                    // commands.Push(new AdjustVPCommand(resourceWinningFaction, demandTrack[peaceTurn.era][resource][ActionPoint.ActionType.VictoryPoint])); 
-                    // commands.Push(new AdjustTPCommand(resourceWinningFaction, demandTrack[peaceTurn.era][resource][ActionPoint.ActionType.Treaty])); 
-                    // commands.Push(new AdjustDebtCommand(resourceWinningFaction, demandTrack[peaceTurn.era][resource][ActionPoint.ActionType.Debt])); 
+                    int britainCount = Game.Spaces.OfType<Market>().Count(market => market.Flag == Game.Britain && market.Resource == resource);
+                    int franceCount = Game.Spaces.OfType<Market>().Count(market => market.Flag == Game.France && market.Resource == resource);
+
+                    if (britainCount > franceCount)
+                        resourceWinningFaction = Game.Britain;
+                    else if (franceCount > britainCount)
+                        resourceWinningFaction = Game.France;
+
+                    if (resourceWinningFaction != null)
+                    {
+                        globalDemandWinners.Add(resource, resourceWinningFaction);
+
+                        throw new System.NotImplementedException();
+                        // commands.Push(new AdjustVPCommand(resourceWinningFaction, demandTrack[peaceTurn.era][resource][ActionPoint.ActionType.VictoryPoint])); 
+                        // commands.Push(new AdjustTPCommand(resourceWinningFaction, demandTrack[peaceTurn.era][resource][ActionPoint.ActionType.Treaty])); 
+                        // commands.Push(new AdjustDebtCommand(resourceWinningFaction, demandTrack[peaceTurn.era][resource][ActionPoint.ActionType.Debt])); 
+                    }
                 }
             }
         }

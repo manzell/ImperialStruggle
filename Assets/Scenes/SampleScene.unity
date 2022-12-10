@@ -310,7 +310,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 1
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &11382388
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,7 +553,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &40750933
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,7 +605,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &44492726
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,7 +693,7 @@ MonoBehaviour:
   debt: 1
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &50137837
 GameObject:
   m_ObjectHideFlags: 0
@@ -912,37 +912,6 @@ Transform:
   m_Father: {fileID: 352370348}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &69406463
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 69406464}
-  m_Layer: 0
-  m_Name: Fin 4/Dip 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &69406464
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 69406463}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 391526258}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &76208713
 GameObject:
   m_ObjectHideFlags: 0
@@ -994,7 +963,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &76917353
 GameObject:
   m_ObjectHideFlags: 0
@@ -1153,7 +1122,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &87423898
 GameObject:
   m_ObjectHideFlags: 0
@@ -1969,7 +1938,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &135841107
 GameObject:
   m_ObjectHideFlags: 0
@@ -2245,7 +2214,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &161619949
 GameObject:
   m_ObjectHideFlags: 0
@@ -2381,37 +2350,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 161619949}
   m_CullTransparentMesh: 1
---- !u!1 &162572562
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 162572563}
-  m_Layer: 0
-  m_Name: Dip 4/Fin 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &162572563
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 162572562}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 391526258}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &162942061
 GameObject:
   m_ObjectHideFlags: 0
@@ -2463,7 +2401,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &166805502
 GameObject:
   m_ObjectHideFlags: 0
@@ -2809,7 +2747,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &200561778
 GameObject:
   m_ObjectHideFlags: 0
@@ -2861,7 +2799,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &205081430
 GameObject:
   m_ObjectHideFlags: 0
@@ -3271,7 +3209,7 @@ MonoBehaviour:
   debt: 1
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &233747471
 GameObject:
   m_ObjectHideFlags: 0
@@ -3626,7 +3564,7 @@ MonoBehaviour:
   debt: 1
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &240123510
 GameObject:
   m_ObjectHideFlags: 0
@@ -3814,7 +3752,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &246625299
 GameObject:
   m_ObjectHideFlags: 0
@@ -3982,37 +3920,6 @@ Transform:
   m_Father: {fileID: 135841108}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &251271953
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 251271954}
-  m_Layer: 0
-  m_Name: Mil 4/Fin 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &251271954
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 251271953}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 391526258}
-  m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &264041428
 GameObject:
   m_ObjectHideFlags: 0
@@ -4095,7 +4002,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!224 &283315091 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 401937393358465873, guid: 90a9fc78bcf13694bb9aab0a9e0616f1, type: 3}
@@ -4152,7 +4059,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!224 &297424360 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6991337672068722500, guid: 24421d78fcd03d1479f5b1aa2d85ed75, type: 3}
@@ -4209,7 +4116,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &323614606
 GameObject:
   m_ObjectHideFlags: 0
@@ -4385,6 +4292,141 @@ Transform:
   m_Father: {fileID: 1447762581}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &333309955
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 333309956}
+  - component: {fileID: 333309958}
+  - component: {fileID: 333309957}
+  m_Layer: 5
+  m_Name: Text (TMP) (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &333309956
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333309955}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 535141499}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -30, y: -10}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &333309957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333309955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Reduce Debt
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281808695
+  m_fontColor: {r: 0.21698111, g: 0.21698111, b: 0.21698111, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 20
+  m_fontSizeBase: 20
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &333309958
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333309955}
+  m_CullTransparentMesh: 1
 --- !u!1 &336461944
 GameObject:
   m_ObjectHideFlags: 0
@@ -4771,13 +4813,14 @@ MonoBehaviour:
     SerializationNodes:
     - Name: connections
       Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[Space,
-        Assembly-CSharp],[Space, Assembly-CSharp]], mscorlib],[UnityEngine.LineRenderer,
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[UnityEngine.Space,
+        UnityEngine.CoreModule],[UnityEngine.Space, UnityEngine.CoreModule]], mscorlib],[UnityEngine.LineRenderer,
         UnityEngine.CoreModule]], mscorlib
     - Name: comparer
       Entry: 7
-      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[Space,
-        Assembly-CSharp],[Space, Assembly-CSharp]], mscorlib]], mscorlib
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[UnityEngine.Space,
+        UnityEngine.CoreModule],[UnityEngine.Space, UnityEngine.CoreModule]], mscorlib]],
+        mscorlib
     - Name: 
       Entry: 8
       Data: 
@@ -4789,14 +4832,14 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 7
-      Data: System.ValueTuple`2[[Space, Assembly-CSharp],[Space, Assembly-CSharp]],
-        mscorlib
+      Data: System.ValueTuple`2[[UnityEngine.Space, UnityEngine.CoreModule],[UnityEngine.Space,
+        UnityEngine.CoreModule]], mscorlib
     - Name: Item1
-      Entry: 6
-      Data: 
+      Entry: 3
+      Data: 0
     - Name: Item2
-      Entry: 6
-      Data: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -5069,7 +5112,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &357496098
 GameObject:
   m_ObjectHideFlags: 0
@@ -5136,37 +5179,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 135841108}
   m_RootOrder: 24
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &368943094
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 368943095}
-  m_Layer: 0
-  m_Name: Fin 2/Dip 2 Event Mil
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &368943095
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 368943094}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 391526258}
-  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &370278904
 GameObject:
@@ -5394,7 +5406,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!224 &385278201 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5117033103703584156, guid: 939abfe4d6c8b0e49946f28ee1d4a523, type: 3}
@@ -5561,61 +5573,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7251042402418737872, guid: 56e9d6254652c01489590f68d7851653, type: 3}
   m_PrefabInstance: {fileID: 2972778975038507319}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &391526257
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 391526258}
-  m_Layer: 0
-  m_Name: InvestmentTiles
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &391526258
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 391526257}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1662819531}
-  - {fileID: 1771300305}
-  - {fileID: 162572563}
-  - {fileID: 1350733051}
-  - {fileID: 804522849}
-  - {fileID: 2078656157}
-  - {fileID: 1567515450}
-  - {fileID: 1398396175}
-  - {fileID: 69406464}
-  - {fileID: 1171972650}
-  - {fileID: 2094681467}
-  - {fileID: 1641766466}
-  - {fileID: 1974477221}
-  - {fileID: 368943095}
-  - {fileID: 1311783602}
-  - {fileID: 1105387812}
-  - {fileID: 2013373330}
-  - {fileID: 251271954}
-  - {fileID: 983738531}
-  - {fileID: 1472566763}
-  - {fileID: 2062126970}
-  - {fileID: 1362741534}
-  - {fileID: 510376289}
-  - {fileID: 419445230}
-  m_Father: {fileID: 1447762581}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &392163052
 GameObject:
   m_ObjectHideFlags: 0
@@ -5802,7 +5759,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &401413788
 GameObject:
   m_ObjectHideFlags: 0
@@ -5921,7 +5878,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &416259278
 GameObject:
   m_ObjectHideFlags: 0
@@ -5952,37 +5909,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1662872098}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &419445229
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 419445230}
-  m_Layer: 0
-  m_Name: Mil 2/Fin 2 Event War
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &419445230
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419445229}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 391526258}
-  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &421442314
 GameObject:
@@ -6035,7 +5961,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 1
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &424083052
 GameObject:
   m_ObjectHideFlags: 0
@@ -6364,7 +6290,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &451531885
 GameObject:
   m_ObjectHideFlags: 0
@@ -6563,7 +6489,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &477348838
 GameObject:
   m_ObjectHideFlags: 0
@@ -6615,7 +6541,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!224 &481119347 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 9191434141378737671, guid: 2737a3cb80c85474691ba0785f383933, type: 3}
@@ -7160,13 +7086,8 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
---- !u!224 &503657676 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4781573265474458534, guid: adf98125ef5381044b06ecb6280f0e72, type: 3}
-  m_PrefabInstance: {fileID: 5627743874529280774}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &510376288
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
+--- !u!1 &502926995
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7174,29 +7095,244 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 510376289}
-  m_Layer: 0
-  m_Name: Mil 3/Fin 2 Event
+  - component: {fileID: 502926996}
+  - component: {fileID: 502926999}
+  - component: {fileID: 502926998}
+  - component: {fileID: 502926997}
+  m_Layer: 5
+  m_Name: British Player Board
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &510376289
-Transform:
+--- !u!224 &502926996
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510376288}
+  m_GameObject: {fileID: 502926995}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2100857644}
+  - {fileID: 854369139}
+  - {fileID: 535141499}
+  - {fileID: 827063757}
+  - {fileID: 1934241730}
+  - {fileID: 1102419487}
+  - {fileID: 1007813168}
+  - {fileID: 1306219362}
+  m_Father: {fileID: 1340919231}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: -490}
+  m_SizeDelta: {x: 1820, y: 250}
+  m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &502926997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502926995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff5a3ac797504f41b3357ade935ee37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 901540906}
+  ministerCardArea: {fileID: 1007813167}
+  handArea: {fileID: 1306219361}
+  flag: {fileID: 1102419489}
+  cardPrefab: {fileID: 6595363072325115555, guid: 84f4214bfc4ffd54399b7457988b4058, type: 3}
+  ministryCardPrefab: {fileID: 4470513594242991769, guid: 5d9d4a894648fca4eb25aec108f79d8e, type: 3}
+  selectionPrefab: {fileID: 0}
+--- !u!114 &502926998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502926995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.77950287, g: 0.7924528, b: 0.7730153, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &502926999
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502926995}
+  m_CullTransparentMesh: 1
+--- !u!224 &503657676 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4781573265474458534, guid: adf98125ef5381044b06ecb6280f0e72, type: 3}
+  m_PrefabInstance: {fileID: 5627743874529280774}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &505565904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 505565905}
+  - component: {fileID: 505565907}
+  - component: {fileID: 505565906}
+  m_Layer: 5
+  m_Name: Button Title
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &505565905
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505565904}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 391526258}
-  m_RootOrder: 22
+  m_Father: {fileID: 827063757}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -50, y: -10}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &505565906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505565904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'Recruit Army
+
+'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4290822336
+  m_fontColor: {r: 0.754717, g: 0.754717, b: 0.754717, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: -27
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &505565907
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505565904}
+  m_CullTransparentMesh: 1
 --- !u!224 &516015914 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7215223539945967174, guid: 150aa36bfb117874dbbd02889ca62862, type: 3}
@@ -7258,7 +7394,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &532898483
 GameObject:
   m_ObjectHideFlags: 0
@@ -7431,6 +7567,185 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!1 &535141498
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 535141499}
+  - component: {fileID: 535141503}
+  - component: {fileID: 535141502}
+  - component: {fileID: 535141501}
+  - component: {fileID: 535141500}
+  m_Layer: 5
+  m_Name: Reduce Debt Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &535141499
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535141498}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 333309956}
+  m_Father: {fileID: 502926996}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -10, y: -167}
+  m_SizeDelta: {x: 250, y: 60}
+  m_Pivot: {x: 1, y: 1}
+--- !u!114 &535141500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535141498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8103a5078fddec644a011a6893ba1010, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: conditionals
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|PlayerHasNotActedCondition, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: commands
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  actionName: Reduce Debt
+  actionText: Reduce Debt
+  actingPlayer: {fileID: 0}
+  debtAdjustment: 2
+--- !u!114 &535141501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535141498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 535141502}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &535141502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535141498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ffae772e6567bf04ba9bc05842f51fcb, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 3
+--- !u!222 &535141503
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535141498}
+  m_CullTransparentMesh: 1
 --- !u!224 &542253868 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6240040035244369584, guid: 2e34f88f8934bfe4c927d10c73fc9c6e, type: 3}
@@ -7826,7 +8141,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &551947741
 GameObject:
   m_ObjectHideFlags: 0
@@ -8976,16 +9291,7 @@ MonoBehaviour:
       Entry: 12
       Data: 1
     - Name: 
-      Entry: 7
-      Data: 1|AvailableDebtCondition, Assembly-CSharp
-    - Name: <ConditionalType>k__BackingField
-      Entry: 3
-      Data: 0
-    - Name: margin
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 13
@@ -8995,7 +9301,7 @@ MonoBehaviour:
       Data: 
     - Name: commands
       Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
+      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -9226,7 +9532,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &613518098
 GameObject:
   m_ObjectHideFlags: 0
@@ -9683,106 +9989,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!1 &652769297
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 652769298}
-  - component: {fileID: 652769299}
-  m_Layer: 0
-  m_Name: Score Global Demand
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &652769298
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 652769297}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3025975438137525869}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &652769299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 652769297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d14929e2f4a9764281e3db74eae88fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: globalDemandWinners
-      Entry: 7
-      Data: 2|System.Collections.Generic.Dictionary`2[[Resource, Assembly-CSharp],[Faction,
-        Assembly-CSharp]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 3|System.Collections.Generic.ObjectEqualityComparer`1[[Resource, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: 
-  actionText: Scoring Global Demand
 --- !u!224 &654198200 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2679742726425375673, guid: 6c6fc40703749b14fba7753ad1bcb3cb, type: 3}
@@ -9975,7 +10181,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &663512646
 GameObject:
   m_ObjectHideFlags: 0
@@ -10196,7 +10402,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &670018829
 GameObject:
   m_ObjectHideFlags: 0
@@ -10513,7 +10719,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &696597142
 GameObject:
   m_ObjectHideFlags: 0
@@ -10565,7 +10771,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &702446905
 GameObject:
   m_ObjectHideFlags: 0
@@ -10617,7 +10823,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!224 &704224085
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11066,7 +11272,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!224 &717939902 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1033942696888005172, guid: 7e17141d7c2b6294eb51d7792a99bd3e, type: 3}
@@ -11260,7 +11466,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &726929335
 GameObject:
   m_ObjectHideFlags: 0
@@ -11542,7 +11748,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 1
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!224 &734529232 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 863170110386587730, guid: badd3b31d910e9f40aebfa4e3b74f8ea, type: 3}
@@ -11754,7 +11960,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &747583261
 GameObject:
   m_ObjectHideFlags: 0
@@ -12317,7 +12523,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &761964348
 GameObject:
   m_ObjectHideFlags: 0
@@ -12437,7 +12643,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 770466885}
-  - component: {fileID: 770466887}
   m_Layer: 0
   m_Name: The Cardinal Ministers
   m_TagString: Untagged
@@ -12460,72 +12665,6 @@ Transform:
   m_Father: {fileID: 135841108}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &770466887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 770466884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d39405eda09528f45bedd33372502a7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: []
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: bonusSpaces
-      Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Space, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: The Cardinal Ministers
-  actionText: The Cardinal Ministers
-  actingPlayer: {fileID: 0}
-  maxDP: 3
-  actionPoint:
-    actionType: 0
-    actionTier: 0
-    baseValue: 0
 --- !u!1 &787579219
 GameObject:
   m_ObjectHideFlags: 0
@@ -12577,7 +12716,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &794080380
 GameObject:
   m_ObjectHideFlags: 0
@@ -12639,37 +12778,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 971645157}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &804522848
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 804522849}
-  m_Layer: 0
-  m_Name: Dip 3/Mil 2 Event
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &804522849
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 804522848}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 391526258}
-  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &810758133
 GameObject:
@@ -12771,7 +12879,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &814394963
 GameObject:
   m_ObjectHideFlags: 0
@@ -13002,7 +13110,180 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
+--- !u!1 &827063756
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 827063757}
+  - component: {fileID: 827063761}
+  - component: {fileID: 827063760}
+  - component: {fileID: 827063759}
+  - component: {fileID: 827063758}
+  m_Layer: 5
+  m_Name: Recruit Army
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &827063757
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827063756}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1144055360}
+  - {fileID: 505565905}
+  m_Father: {fileID: 502926996}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1345, y: -190}
+  m_SizeDelta: {x: 170, y: 70}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &827063758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827063756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0f3ca92abd18494eaadd1408db30e11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: conditionals
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: commands
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  actionName: Buy Bonus War Action
+  actionText: Drawing Bonus War Tile
+  actingPlayer: {fileID: 0}
+--- !u!114 &827063759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827063756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 827063760}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &827063760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827063756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9433962, g: 0.55412006, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ffae772e6567bf04ba9bc05842f51fcb, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 3
+--- !u!222 &827063761
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827063756}
+  m_CullTransparentMesh: 1
 --- !u!1 &827480342
 GameObject:
   m_ObjectHideFlags: 0
@@ -13189,7 +13470,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &831835909
 GameObject:
   m_ObjectHideFlags: 0
@@ -13241,7 +13522,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &834807586
 GameObject:
   m_ObjectHideFlags: 0
@@ -13431,7 +13712,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &844882977
 GameObject:
   m_ObjectHideFlags: 0
@@ -13595,7 +13876,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &849385140
 GameObject:
   m_ObjectHideFlags: 0
@@ -13647,7 +13928,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &851352858
 GameObject:
   m_ObjectHideFlags: 0
@@ -13922,6 +14203,218 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 854186545}
   m_CullTransparentMesh: 1
+--- !u!1 &854369138
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 854369139}
+  - component: {fileID: 854369143}
+  - component: {fileID: 854369142}
+  - component: {fileID: 854369141}
+  - component: {fileID: 854369140}
+  m_Layer: 5
+  m_Name: Spend Treaty Point Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &854369139
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854369138}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1546092712}
+  m_Father: {fileID: 502926996}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -10, y: -95}
+  m_SizeDelta: {x: 250, y: 60}
+  m_Pivot: {x: 1, y: 1}
+--- !u!114 &854369140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854369138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d29f765279bfd429aaeeb2b508fd79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: conditionals
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: commands
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: actionPointAward
+      Entry: 7
+      Data: 2|ImperialStruggle.ActionPoints, Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 3|ImperialStruggle.ActionPoint, Assembly-CSharp
+    - Name: actionType
+      Entry: 3
+      Data: 5
+    - Name: actionTier
+      Entry: 3
+      Data: 1
+    - Name: baseValue
+      Entry: 3
+      Data: 0
+    - Name: conditionals
+      Entry: 7
+      Data: 4|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  actionName: Activate Treaty Point
+  actionText: Activate Treaty Point
+  actingPlayer: {fileID: 0}
+--- !u!114 &854369141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854369138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 854369142}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &854369142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854369138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ffae772e6567bf04ba9bc05842f51fcb, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 3
+--- !u!222 &854369143
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854369138}
+  m_CullTransparentMesh: 1
 --- !u!1 &855873034
 GameObject:
   m_ObjectHideFlags: 0
@@ -13973,7 +14466,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!224 &859993595 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 9050074141105183979, guid: 674f1ddca40eaad41962cbb114214687, type: 3}
@@ -14202,7 +14695,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &869582721
 GameObject:
   m_ObjectHideFlags: 0
@@ -14949,7 +15442,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &897895395
 GameObject:
   m_ObjectHideFlags: 0
@@ -15053,7 +15546,7 @@ MonoBehaviour:
       Data: 
     - Name: actionPoints
       Entry: 7
-      Data: 1|ActionPoints, Assembly-CSharp
+      Data: 1|ImperialStruggle.ActionPoints, Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 0
@@ -15065,7 +15558,8 @@ MonoBehaviour:
       Data: 
     - Name: warTiles
       Entry: 7
-      Data: 2|System.Collections.Generic.Queue`1[[WarTile, Assembly-CSharp]], mscorlib
+      Data: 2|System.Collections.Generic.Queue`1[[ImperialStruggle.WarTile, Assembly-CSharp]],
+        mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -15077,7 +15571,8 @@ MonoBehaviour:
       Data: 
     - Name: bonusWarTiles
       Entry: 7
-      Data: 3|System.Collections.Generic.Queue`1[[WarTile, Assembly-CSharp]], mscorlib
+      Data: 3|System.Collections.Generic.Queue`1[[ImperialStruggle.WarTile, Assembly-CSharp]],
+        mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -15089,7 +15584,8 @@ MonoBehaviour:
       Data: 
     - Name: squadrons
       Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[Squadron, Assembly-CSharp]], mscorlib
+      Data: 4|System.Collections.Generic.List`1[[ImperialStruggle.Squadron, Assembly-CSharp]],
+        mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -15099,7 +15595,8 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
+  <Opponent>k__BackingField: {fileID: 0}
+  UI: {fileID: 0}
 --- !u!1 &901708576
 GameObject:
   m_ObjectHideFlags: 0
@@ -15232,7 +15729,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &922770285
 GameObject:
   m_ObjectHideFlags: 0
@@ -15540,7 +16037,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &938318478
 GameObject:
   m_ObjectHideFlags: 0
@@ -16102,7 +16599,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -16381,7 +16878,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 1
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &971645156
 GameObject:
   m_ObjectHideFlags: 0
@@ -16688,37 +17185,6 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
---- !u!1 &983738530
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 983738531}
-  m_Layer: 0
-  m_Name: Mil 4/Dip 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &983738531
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 983738530}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 391526258}
-  m_RootOrder: 18
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &985158773
 GameObject:
   m_ObjectHideFlags: 0
@@ -17240,7 +17706,70 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
+--- !u!1 &1007813167
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1007813168}
+  - component: {fileID: 1007813169}
+  m_Layer: 5
+  m_Name: Ministers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1007813168
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007813167}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 502926996}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -802.5, y: 0}
+  m_SizeDelta: {x: -1605, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1007813169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007813167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 7
+  m_Spacing: 10
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &1008990568
 GameObject:
   m_ObjectHideFlags: 0
@@ -17292,7 +17821,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &1009426544
 GameObject:
   m_ObjectHideFlags: 0
@@ -17344,7 +17873,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 1
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &1013671070
 GameObject:
   m_ObjectHideFlags: 0
@@ -17396,7 +17925,7 @@ MonoBehaviour:
   debt: 1
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &1017403718
 GameObject:
   m_ObjectHideFlags: 0
@@ -17690,86 +18219,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1031661597}
   m_CullTransparentMesh: 1
---- !u!1 &1032321692
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1032321693}
-  - component: {fileID: 1032321694}
-  m_Layer: 0
-  m_Name: Check Victory Conditions
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1032321693
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1032321692}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3025975438137525869}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1032321694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1032321692}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c0881f7976515a4badece2ba803963d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: Check Victory Conditions
-  actionText: Checking Victory Condition
 --- !u!224 &1037783808 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3353769758054804265, guid: 1fa6aea1818af024191d0fec91113903, type: 3}
@@ -17826,7 +18275,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &1042994722
 GameObject:
   m_ObjectHideFlags: 0
@@ -18081,7 +18530,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &1066739905
 GameObject:
   m_ObjectHideFlags: 0
@@ -18133,88 +18582,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
---- !u!1 &1067383216
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1067383217}
-  - component: {fileID: 1067383218}
-  m_Layer: 0
-  m_Name: Reset Treaty Points
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1067383217
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1067383216}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3025975438137525869}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1067383218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1067383216}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6ded3983267ba744aa53163cab0829e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: 
-  actionText: Reset Treaty Points
-  treatyPointsCap: 4
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!224 &1071299925 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8028650123597304755, guid: 8ac2b101a08d89549b5dddc9b897d16b, type: 3}
@@ -18419,6 +18787,98 @@ Transform:
   m_Father: {fileID: 1232245831}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1102419486
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1102419487}
+  - component: {fileID: 1102419490}
+  - component: {fileID: 1102419489}
+  - component: {fileID: 1102419488}
+  m_Layer: 5
+  m_Name: Flag
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1102419487
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102419486}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 502926996}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -270, y: -25}
+  m_SizeDelta: {x: 200, y: 200}
+  m_Pivot: {x: 1, y: 1}
+--- !u!114 &1102419488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102419486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 2, y: 2}
+  m_UseGraphicAlpha: 1
+--- !u!114 &1102419489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102419486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: f9874b0d76564b94b8bea8403885d155, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1102419490
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102419486}
+  m_CullTransparentMesh: 1
 --- !u!1 &1105346967
 GameObject:
   m_ObjectHideFlags: 0
@@ -18495,37 +18955,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1105346967}
   m_CullTransparentMesh: 1
---- !u!1 &1105387811
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1105387812}
-  m_Layer: 0
-  m_Name: Fin 2/Mil 2 Event Mil
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1105387812
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1105387811}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 391526258}
-  m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1109872600 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5600822855821372719, guid: c72c2e73b33fca143b6b015458ae18c2, type: 3}
@@ -18613,7 +19042,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &1112479647
 GameObject:
   m_ObjectHideFlags: 0
@@ -18665,7 +19094,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &1116455971
 GameObject:
   m_ObjectHideFlags: 0
@@ -18717,7 +19146,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &1120445040
 GameObject:
   m_ObjectHideFlags: 0
@@ -18769,7 +19198,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 1
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &1121567841
 GameObject:
   m_ObjectHideFlags: 0
@@ -19034,7 +19463,83 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
+--- !u!1 &1144055359
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1144055360}
+  - component: {fileID: 1144055362}
+  - component: {fileID: 1144055361}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1144055360
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144055359}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 827063757}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1144055361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144055359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.14115344, g: 0.14780223, b: 0.6132076, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 01424f33c2424844c80e642429790f4f, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 3
+--- !u!222 &1144055362
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144055359}
+  m_CullTransparentMesh: 1
 --- !u!1 &1144122812
 GameObject:
   m_ObjectHideFlags: 0
@@ -19197,7 +19702,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &1159547358
 GameObject:
   m_ObjectHideFlags: 0
@@ -19265,37 +19770,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 118304183930145887, guid: 0dd9467d62e57334ea4426b8a4c768fa, type: 3}
   m_PrefabInstance: {fileID: 5511398067966168676}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1171972649
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1171972650}
-  m_Layer: 0
-  m_Name: Fin 4/Dip 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1171972650
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1171972649}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 391526258}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1172830683
 GameObject:
   m_ObjectHideFlags: 0
@@ -19786,7 +20260,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!224 &1206898883 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2655932276812786011, guid: d7b4fa657264cbd41ba65cf0a80942ac, type: 3}
@@ -19853,7 +20327,142 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
+--- !u!1 &1219645252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1219645253}
+  - component: {fileID: 1219645255}
+  - component: {fileID: 1219645254}
+  m_Layer: 5
+  m_Name: Button Title
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1219645253
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219645252}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1934241730}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -50, y: -10}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1219645254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219645252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Build Squadron
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4290822336
+  m_fontColor: {r: 0.754717, g: 0.754717, b: 0.754717, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: -27
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1219645255
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219645252}
+  m_CullTransparentMesh: 1
 --- !u!1 &1219847481
 GameObject:
   m_ObjectHideFlags: 0
@@ -20643,7 +21252,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &1244895191
 GameObject:
   m_ObjectHideFlags: 0
@@ -20874,7 +21483,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 1
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &1257850603
 GameObject:
   m_ObjectHideFlags: 0
@@ -21483,6 +22092,202 @@ Transform:
   m_Father: {fileID: 496609987}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1306219361
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1306219362}
+  - component: {fileID: 1306219363}
+  m_Layer: 5
+  m_Name: Cards In Hand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1306219362
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306219361}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 502926996}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 315, y: 0}
+  m_SizeDelta: {x: 455, y: 410}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &1306219363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306219361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 8
+  m_StartCorner: 3
+  m_StartAxis: 0
+  m_CellSize: {x: 145, y: 200}
+  m_Spacing: {x: 10, y: 10}
+  m_Constraint: 0
+  m_ConstraintCount: 2
+--- !u!1 &1309530332
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1309530333}
+  - component: {fileID: 1309530335}
+  - component: {fileID: 1309530334}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1309530333
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309530332}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2100857644}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -30, y: -10}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1309530334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309530332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Take Debt
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281808695
+  m_fontColor: {r: 0.21698111, g: 0.21698111, b: 0.21698111, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 20
+  m_fontSizeBase: 20
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1309530335
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309530332}
+  m_CullTransparentMesh: 1
 --- !u!1 &1310967077
 GameObject:
   m_ObjectHideFlags: 0
@@ -21619,37 +22424,6 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
---- !u!1 &1311783601
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1311783602}
-  m_Layer: 0
-  m_Name: Fin 3/Mil 2 Event
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1311783602
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1311783601}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 391526258}
-  m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1316269718
 GameObject:
   m_ObjectHideFlags: 0
@@ -21868,7 +22642,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &1324740785
 GameObject:
   m_ObjectHideFlags: 0
@@ -22056,7 +22830,7 @@ MonoBehaviour:
   debt: 1
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &1331462549
 GameObject:
   m_ObjectHideFlags: 0
@@ -22124,8 +22898,9 @@ RectTransform:
   - {fileID: 1827738128}
   - {fileID: 1492320707}
   - {fileID: 173320246}
-  - {fileID: 1515798732}
   - {fileID: 1806286693}
+  - {fileID: 1515798732}
+  - {fileID: 502926996}
   m_Father: {fileID: 112856002}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22270,37 +23045,6 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
---- !u!1 &1350733050
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1350733051}
-  m_Layer: 0
-  m_Name: Dip 4/Mil 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1350733051
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1350733050}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 391526258}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1350785704
 GameObject:
   m_ObjectHideFlags: 0
@@ -22488,38 +23232,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
---- !u!1 &1362741533
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1362741534}
-  m_Layer: 0
-  m_Name: Mil 2/Dip 2 Event War
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1362741534
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1362741533}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 391526258}
-  m_RootOrder: 21
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!224 &1365309620 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7723440293843001244, guid: bba662d8389bda749b9d2c9bb331d298, type: 3}
@@ -22576,7 +23289,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &1371414413
 GameObject:
   m_ObjectHideFlags: 0
@@ -22985,37 +23698,6 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
---- !u!1 &1398396174
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1398396175}
-  m_Layer: 0
-  m_Name: DIp 2/Fin 2 Event Mil
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1398396175
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1398396174}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 391526258}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1402747924
 GameObject:
   m_ObjectHideFlags: 0
@@ -23405,7 +24087,7 @@ MonoBehaviour:
   debt: 1
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &1434539296
 GameObject:
   m_ObjectHideFlags: 0
@@ -23613,7 +24295,7 @@ MonoBehaviour:
       Data: 
     - Name: actionPoints
       Entry: 7
-      Data: 1|ActionPoints, Assembly-CSharp
+      Data: 1|ImperialStruggle.ActionPoints, Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 0
@@ -23625,7 +24307,8 @@ MonoBehaviour:
       Data: 
     - Name: warTiles
       Entry: 7
-      Data: 2|System.Collections.Generic.Queue`1[[WarTile, Assembly-CSharp]], mscorlib
+      Data: 2|System.Collections.Generic.Queue`1[[ImperialStruggle.WarTile, Assembly-CSharp]],
+        mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -23637,7 +24320,8 @@ MonoBehaviour:
       Data: 
     - Name: bonusWarTiles
       Entry: 7
-      Data: 3|System.Collections.Generic.Queue`1[[WarTile, Assembly-CSharp]], mscorlib
+      Data: 3|System.Collections.Generic.Queue`1[[ImperialStruggle.WarTile, Assembly-CSharp]],
+        mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -23649,7 +24333,8 @@ MonoBehaviour:
       Data: 
     - Name: squadrons
       Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[Squadron, Assembly-CSharp]], mscorlib
+      Data: 4|System.Collections.Generic.List`1[[ImperialStruggle.Squadron, Assembly-CSharp]],
+        mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -23659,7 +24344,8 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
+  <Opponent>k__BackingField: {fileID: 0}
+  UI: {fileID: 0}
 --- !u!1 &1437462156
 GameObject:
   m_ObjectHideFlags: 0
@@ -23877,7 +24563,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &1444494245
 GameObject:
   m_ObjectHideFlags: 0
@@ -24179,7 +24865,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 391526258}
   - {fileID: 329452460}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -24319,7 +25004,7 @@ MonoBehaviour:
     SerializationNodes:
     - Name: startingSpaces
       Entry: 7
-      Data: 0|System.Collections.Generic.HashSet`1[[SpaceData, Assembly-CSharp]],
+      Data: 0|System.Collections.Generic.HashSet`1[[ImperialStruggle.SpaceData, Assembly-CSharp]],
         System.Core
     - Name: 
       Entry: 12
@@ -24675,7 +25360,31 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7a682b0a4b1b7ff47845e71163af5e54, type: 2}
   - {fileID: 11400000, guid: 7a2945001ec6093498816122d52441b3, type: 2}
   - {fileID: 11400000, guid: f54cfff5903856d48a2251dc050b93c4, type: 2}
-  investmentTiles: []
+  investmentTiles:
+  - {fileID: 11400000, guid: 8488135628e18434391b2338958c57ed, type: 2}
+  - {fileID: 11400000, guid: d0170ed57d28a18488a5610e378fde49, type: 2}
+  - {fileID: 11400000, guid: 31726eb7cd3580c40b505812c0aa60d6, type: 2}
+  - {fileID: 11400000, guid: dcec7cc5105e6b0469595d2f55f8cbb7, type: 2}
+  - {fileID: 11400000, guid: a984bab594026b34486060cc59872b5e, type: 2}
+  - {fileID: 11400000, guid: cd7467bc647aee941bca13340ce3e1a8, type: 2}
+  - {fileID: 11400000, guid: adecd21592dd3864cb3e62c8161e1638, type: 2}
+  - {fileID: 11400000, guid: 84010c5288c26244e9277462ed7e4827, type: 2}
+  - {fileID: 11400000, guid: 1749c528d8abc214f9f48c75c99f5071, type: 2}
+  - {fileID: 11400000, guid: 3a427b882c4bc9946ac114111f104b71, type: 2}
+  - {fileID: 11400000, guid: 17361c422f017424097e806b17c3b6eb, type: 2}
+  - {fileID: 11400000, guid: 6abb2d4a2237d1749824eca549841ba7, type: 2}
+  - {fileID: 11400000, guid: 2f9bd8dc0e5c5ff4b9f7456c5a0e9c43, type: 2}
+  - {fileID: 11400000, guid: 6cacc1407dce58742856c646acaecd8f, type: 2}
+  - {fileID: 11400000, guid: b0a1d884eb4af2247830b8fc9fd6ecf7, type: 2}
+  - {fileID: 11400000, guid: e38c9bb999b11de489f7ac60fca606a3, type: 2}
+  - {fileID: 11400000, guid: 4f26d14e495d294458524db08d088f87, type: 2}
+  - {fileID: 11400000, guid: 147a0dae73f05334e893a586d3013062, type: 2}
+  - {fileID: 11400000, guid: b004e767384419044bd1dd737cc78dab, type: 2}
+  - {fileID: 11400000, guid: 4f581642de6c81640a6c5ca83e1075ad, type: 2}
+  - {fileID: 11400000, guid: ab31383ca8948624d8c1b5be73379b9e, type: 2}
+  - {fileID: 11400000, guid: 6de5ee318ecaaa94599759cc69d4dc4c, type: 2}
+  - {fileID: 11400000, guid: 076c75b4cb3da104dac89ee6b4ac9c21, type: 2}
+  - {fileID: 11400000, guid: 70d02291909986e458e93d11734d8ce0, type: 2}
   britain: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
   france: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
   usa: {fileID: 11400000, guid: 7fc1ea7cd44976f45829e28093550f26, type: 2}
@@ -25033,37 +25742,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1458811715}
   m_CullTransparentMesh: 1
---- !u!1 &1472566762
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1472566763}
-  m_Layer: 0
-  m_Name: Mil 4/Dip 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1472566763
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1472566762}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 391526258}
-  m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1484635214 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1352772374436273901, guid: a89ddeb6e4903c649b07714ccca00246, type: 3}
@@ -25276,7 +25954,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &1498391092
 GameObject:
   m_ObjectHideFlags: 0
@@ -25328,7 +26006,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &1515178238
 GameObject:
   m_ObjectHideFlags: 0
@@ -25478,7 +26156,7 @@ GameObject:
   - component: {fileID: 1515798733}
   - component: {fileID: 1515798735}
   m_Layer: 5
-  m_Name: Player Board
+  m_Name: French Player Board
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25565,9 +26243,10 @@ MonoBehaviour:
   player: {fileID: 1435854123}
   ministerCardArea: {fileID: 733172097}
   handArea: {fileID: 1571907354}
-  flag: {fileID: 1566646844}
+  flag: {fileID: 0}
   cardPrefab: {fileID: 6595363072325115555, guid: 84f4214bfc4ffd54399b7457988b4058, type: 3}
   ministryCardPrefab: {fileID: 4470513594242991769, guid: 5d9d4a894648fca4eb25aec108f79d8e, type: 3}
+  selectionPrefab: {fileID: 0}
 --- !u!1 &1516221792
 GameObject:
   m_ObjectHideFlags: 0
@@ -25891,7 +26570,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &1519840901
 GameObject:
   m_ObjectHideFlags: 0
@@ -26094,13 +26773,13 @@ MonoBehaviour:
       Data: 
     - Name: actionPointAward
       Entry: 7
-      Data: 2|ActionPoints, Assembly-CSharp
+      Data: 2|ImperialStruggle.ActionPoints, Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 3|ActionPoint, Assembly-CSharp
+      Data: 3|ImperialStruggle.ActionPoint, Assembly-CSharp
     - Name: actionType
       Entry: 3
       Data: 5
@@ -26186,7 +26865,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &1531686005
 GameObject:
   m_ObjectHideFlags: 0
@@ -26510,7 +27189,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &1542564707
 GameObject:
   m_ObjectHideFlags: 0
@@ -26573,6 +27252,141 @@ Transform:
   m_Father: {fileID: 613518099}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1546092711
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1546092712}
+  - component: {fileID: 1546092714}
+  - component: {fileID: 1546092713}
+  m_Layer: 5
+  m_Name: Text (TMP) (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1546092712
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546092711}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 854369139}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -30, y: -10}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1546092713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546092711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Spend Treaty Point
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281808695
+  m_fontColor: {r: 0.21698111, g: 0.21698111, b: 0.21698111, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 20
+  m_fontSizeBase: 20
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1546092714
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546092711}
+  m_CullTransparentMesh: 1
 --- !u!224 &1546266444 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2287768306375681643, guid: 58b629cd20ab6ae47be8cb5ff72bbadd, type: 3}
@@ -26629,7 +27443,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &1547452615
 GameObject:
   m_ObjectHideFlags: 0
@@ -27039,7 +27853,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &1553067492
 GameObject:
   m_ObjectHideFlags: 0
@@ -27123,7 +27937,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &1565414906
 GameObject:
   m_ObjectHideFlags: 0
@@ -27175,7 +27989,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &1566646841
 GameObject:
   m_ObjectHideFlags: 0
@@ -27268,37 +28082,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1566646841}
   m_CullTransparentMesh: 1
---- !u!1 &1567515449
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1567515450}
-  m_Layer: 0
-  m_Name: DIp 3/Fin 2 Event
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1567515450
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1567515449}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 391526258}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1571907354
 GameObject:
   m_ObjectHideFlags: 0
@@ -27416,7 +28199,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &1584913821
 GameObject:
   m_ObjectHideFlags: 0
@@ -27468,7 +28251,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &1587197542
 GameObject:
   m_ObjectHideFlags: 0
@@ -27520,7 +28303,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!224 &1588955519 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2485234382377863651, guid: 09a29e7d27028834d9b323bb898bb208, type: 3}
@@ -27740,6 +28523,82 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1602430382}
+  m_CullTransparentMesh: 1
+--- !u!1 &1608867176
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1608867177}
+  - component: {fileID: 1608867179}
+  - component: {fileID: 1608867178}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1608867177
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608867176}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1934241730}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1608867178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608867176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.14115344, g: 0.14780223, b: 0.6132076, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 01424f33c2424844c80e642429790f4f, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 3
+--- !u!222 &1608867179
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608867176}
   m_CullTransparentMesh: 1
 --- !u!1 &1617080036
 GameObject:
@@ -28006,7 +28865,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &1628761832
 GameObject:
   m_ObjectHideFlags: 0
@@ -28207,37 +29066,6 @@ Transform:
   m_Father: {fileID: 135841108}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1641766465
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1641766466}
-  m_Layer: 0
-  m_Name: Fin 4/Mil 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1641766466
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1641766465}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 391526258}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1649269942
 GameObject:
   m_ObjectHideFlags: 0
@@ -28397,7 +29225,8 @@ MonoBehaviour:
       Data: 
     - Name: scotlandSpaces
       Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Space, Assembly-CSharp]], mscorlib
+      Data: 2|System.Collections.Generic.List`1[[ImperialStruggle.Space, Assembly-CSharp]],
+        mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -28410,37 +29239,6 @@ MonoBehaviour:
   actionName: 
   actionText: 
   actingPlayer: {fileID: 0}
---- !u!1 &1662819530
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1662819531}
-  m_Layer: 0
-  m_Name: Dip 4/Mil 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1662819531
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1662819530}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 391526258}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1662872097
 GameObject:
   m_ObjectHideFlags: 0
@@ -29417,7 +30215,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &1730507938
 GameObject:
   m_ObjectHideFlags: 0
@@ -29469,7 +30267,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!224 &1733461544 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3161611761027378528, guid: 6d743648119d3584fb537c2b32dbdb95, type: 3}
@@ -29870,7 +30668,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!224 &1759694346 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8950641504724625867, guid: 8396ace841be420449184bdd984868e9, type: 3}
@@ -29937,37 +30735,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1649269943}
   m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1771300304
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1771300305}
-  m_Layer: 0
-  m_Name: Dip 4/Fin 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1771300305
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1771300304}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 391526258}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1777359195
 GameObject:
@@ -30572,7 +31339,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &1801799249
 GameObject:
   m_ObjectHideFlags: 0
@@ -30933,7 +31700,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &1806286692
 GameObject:
   m_ObjectHideFlags: 0
@@ -31103,7 +31870,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &1815078189
 GameObject:
   m_ObjectHideFlags: 0
@@ -31155,7 +31922,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &1816056388
 GameObject:
   m_ObjectHideFlags: 0
@@ -31424,7 +32191,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &1822543073
 GameObject:
   m_ObjectHideFlags: 0
@@ -31600,7 +32367,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &1826686280
 GameObject:
   m_ObjectHideFlags: 0
@@ -31652,7 +32419,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &1827403124
 GameObject:
   m_ObjectHideFlags: 0
@@ -32005,7 +32772,7 @@ MonoBehaviour:
   debt: 1
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &1832612182
 GameObject:
   m_ObjectHideFlags: 0
@@ -32415,7 +33182,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &1892563596
 GameObject:
   m_ObjectHideFlags: 0
@@ -32613,137 +33380,6 @@ Transform:
   m_Father: {fileID: 1631247921}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1898584671
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1898584672}
-  - component: {fileID: 1898584674}
-  - component: {fileID: 1898584673}
-  m_Layer: 0
-  m_Name: Select Ministry Cards
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1898584672
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1898584671}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3025975438137525869}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1898584673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1898584671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fa03b337c384a640aa9a1df222a7dce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: Select Ministry Cards
-  actionText: Select France Ministry Cards
-  actingPlayer: {fileID: 0}
---- !u!114 &1898584674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1898584671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fa03b337c384a640aa9a1df222a7dce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: Select Ministry Cards
-  actionText: Select Britain Ministry Cards
-  actingPlayer: {fileID: 0}
 --- !u!1 &1902640892
 GameObject:
   m_ObjectHideFlags: 0
@@ -33021,6 +33657,129 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6751341208474169843, guid: 204020fe73028ee46b359cf5d4b33552, type: 3}
   m_PrefabInstance: {fileID: 1175469262459435598}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1934241729
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1934241730}
+  - component: {fileID: 1934241733}
+  - component: {fileID: 1934241732}
+  - component: {fileID: 1934241731}
+  m_Layer: 5
+  m_Name: Build Squadron
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1934241730
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934241729}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1608867177}
+  - {fileID: 1219645253}
+  m_Father: {fileID: 502926996}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1345, y: -85}
+  m_SizeDelta: {x: 170, y: 70}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1934241731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934241729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1934241732}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1934241732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934241729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9433962, g: 0.55412006, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ffae772e6567bf04ba9bc05842f51fcb, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 3
+--- !u!222 &1934241733
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934241729}
+  m_CullTransparentMesh: 1
 --- !u!224 &1938378595 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1886064404869434426, guid: 9f55f02b451a3bb4599db66b1a2c742c, type: 3}
@@ -33327,7 +34086,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &1961482528
 GameObject:
   m_ObjectHideFlags: 0
@@ -33444,7 +34203,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 1
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &1972946075
 GameObject:
   m_ObjectHideFlags: 0
@@ -33496,38 +34255,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
---- !u!1 &1974477220
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1974477221}
-  m_Layer: 0
-  m_Name: Fin 3/Dip 2 Event
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1974477221
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1974477220}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 391526258}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!224 &1975967586 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6206838634205518254, guid: bb7c7f589affacb4ba73886245b6a9bc, type: 3}
@@ -33615,7 +34343,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &1990857432
 GameObject:
   m_ObjectHideFlags: 0
@@ -33698,7 +34426,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &1995958997
 GameObject:
   m_ObjectHideFlags: 0
@@ -33890,43 +34618,12 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 1
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!224 &2013060281 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2093934412354708801, guid: 13fcca7925048b24a9ff3b9316aca57d, type: 3}
   m_PrefabInstance: {fileID: 5831783693910984367}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2013373329
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2013373330}
-  m_Layer: 0
-  m_Name: Mil 4/Fin 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2013373330
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2013373329}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 391526258}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2015219705
 GameObject:
   m_ObjectHideFlags: 0
@@ -34615,7 +35312,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &2049056040
 GameObject:
   m_ObjectHideFlags: 0
@@ -34887,37 +35584,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2057365656}
   m_CullTransparentMesh: 1
---- !u!1 &2062126969
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2062126970}
-  m_Layer: 0
-  m_Name: Mil 3/Dip 2 Event
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2062126970
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2062126969}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 391526258}
-  m_RootOrder: 20
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2065472440
 GameObject:
   m_ObjectHideFlags: 0
@@ -35135,37 +35801,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2078499569}
   m_CullTransparentMesh: 1
---- !u!1 &2078656156
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2078656157}
-  m_Layer: 0
-  m_Name: Dip 2/Mil 2 Event Mil
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2078656157
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2078656156}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 391526258}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &2078693862 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2218923703980416800, guid: 209d1115101ec5b4ea826cb153251de4, type: 3}
@@ -35500,7 +36135,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 1
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
 --- !u!1 &2088129134
 GameObject:
   m_ObjectHideFlags: 0
@@ -35610,7 +36245,7 @@ Transform:
   m_Father: {fileID: 2041414120}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2094681466
+--- !u!1 &2100857643
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -35618,29 +36253,185 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2094681467}
-  m_Layer: 0
-  m_Name: Fin 4/Mil 2
+  - component: {fileID: 2100857644}
+  - component: {fileID: 2100857648}
+  - component: {fileID: 2100857647}
+  - component: {fileID: 2100857646}
+  - component: {fileID: 2100857645}
+  m_Layer: 5
+  m_Name: Take Debt Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2094681467
-Transform:
+--- !u!224 &2100857644
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2094681466}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 2100857643}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 391526258}
-  m_RootOrder: 10
+  m_Children:
+  - {fileID: 1309530333}
+  m_Father: {fileID: 502926996}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -10, y: -23}
+  m_SizeDelta: {x: 250, y: 60}
+  m_Pivot: {x: 1, y: 1}
+--- !u!114 &2100857645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100857643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29079d01290fd134e9e5a928ce807cb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: conditionals
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: commands
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  actionName: Take Debt
+  actionText: Take Debt
+  actingPlayer: {fileID: 0}
+--- !u!114 &2100857646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100857643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 2100857647}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2100857645}
+        m_TargetAssemblyTypeName: BaseAction, Assembly-CSharp
+        m_MethodName: Trigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2100857647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100857643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ffae772e6567bf04ba9bc05842f51fcb, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 3
+--- !u!222 &2100857648
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100857643}
+  m_CullTransparentMesh: 1
 --- !u!1 &2101216421
 GameObject:
   m_ObjectHideFlags: 0
@@ -36032,7 +36823,7 @@ MonoBehaviour:
   debt: 1
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &2116564069
 GameObject:
   m_ObjectHideFlags: 0
@@ -36292,7 +37083,7 @@ MonoBehaviour:
   debt: 0
   milDamage: 0
   unflag: 0
-  faction: {fileID: 0}
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
 --- !u!1 &2123018142
 GameObject:
   m_ObjectHideFlags: 0
@@ -37479,10 +38270,7 @@ MonoBehaviour:
       Entry: 12
       Data: 1
     - Name: 
-      Entry: 7
-      Data: 1|ConflictCondition, Assembly-CSharp
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 13
@@ -37492,7 +38280,7 @@ MonoBehaviour:
       Data: 
     - Name: commands
       Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
+      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -37534,13 +38322,7 @@ MonoBehaviour:
       Entry: 12
       Data: 1
     - Name: 
-      Entry: 7
-      Data: 1|SpaceControlCondition, Assembly-CSharp
-    - Name: spaceConditionType
-      Entry: 3
-      Data: 3
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 13
@@ -37550,7 +38332,7 @@ MonoBehaviour:
       Data: 
     - Name: commands
       Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
+      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -37562,7 +38344,7 @@ MonoBehaviour:
       Data: 
     - Name: actionPointBonusCost
       Entry: 7
-      Data: 3|ActionPoints, Assembly-CSharp
+      Data: 2|ImperialStruggle.ActionPoints, Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 0
@@ -37715,21 +38497,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d88b43f2da9500b42b17bd79c38af743, type: 3}
---- !u!4 &444816361014124379
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4506955177494840803}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3025975438137525869}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &463754343478106554
 RectTransform:
   m_ObjectHideFlags: 0
@@ -38268,7 +39035,6 @@ GameObject:
   - component: {fileID: 6526057950747273194}
   - component: {fileID: 849480319891410260}
   - component: {fileID: 849480319891410262}
-  - component: {fileID: 6526057950747273195}
   m_Layer: 0
   m_Name: Action Round 4B
   m_TagString: Untagged
@@ -42130,27 +42896,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 150aa36bfb117874dbbd02889ca62862, type: 3}
---- !u!4 &3025975438137525869
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3761144001751185223}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1898584672}
-  - {fileID: 1067383217}
-  - {fileID: 5094673747324820999}
-  - {fileID: 444816361014124379}
-  - {fileID: 652769298}
-  - {fileID: 1032321693}
-  m_Father: {fileID: 7095921346316974907}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &3040429571779382713 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3404130259972866874, guid: 4eccf0b1692fd9447998489a3fc31f7c, type: 3}
@@ -42961,7 +43706,17 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes:
     - Name: availableTerritories
-      Entry: 6
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[ImperialStruggle.Territory, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
   map: {fileID: 0}
   warTiles: []
@@ -44037,7 +44792,6 @@ GameObject:
   - component: {fileID: 2270896879549454623}
   - component: {fileID: 3652411898272536085}
   - component: {fileID: 3652411898272536087}
-  - component: {fileID: 3652411898272536088}
   m_Layer: 0
   m_Name: Action Round 1B
   m_TagString: Untagged
@@ -44149,55 +44903,6 @@ MonoBehaviour:
   actionName: Select Investment Tile
   actionText: Select Investment Tile
   actingPlayer: {fileID: 0}
---- !u!114 &3652411898272536088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3652411898272536084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c002e1a180ffaee408d63073b1645d17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: Await Player Input
-  actionText: Awaiting Player Input
-  actingPlayer: {fileID: 0}
 --- !u!1 &3734849112744899746
 GameObject:
   m_ObjectHideFlags: 0
@@ -44209,7 +44914,6 @@ GameObject:
   - component: {fileID: 8379082826945065725}
   - component: {fileID: 3734849112744899747}
   - component: {fileID: 3734849112744899749}
-  - component: {fileID: 8379082826945065726}
   m_Layer: 0
   m_Name: Action Round 2A
   m_TagString: Untagged
@@ -44321,22 +45025,6 @@ MonoBehaviour:
   actionName: Select Investment Tile
   actionText: Select Investment Tile
   actingPlayer: {fileID: 0}
---- !u!1 &3761144001751185223
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3025975438137525869}
-  m_Layer: 0
-  m_Name: Phase Actions
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1001 &3771290930358897734
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45530,77 +46218,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2efa09c19faed7b4b86a0b6195c181cc, type: 3}
---- !u!1 &4506955177494840803
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 444816361014124379}
-  - component: {fileID: 4506955177494840804}
-  m_Layer: 0
-  m_Name: Score Prestige
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &4506955177494840804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4506955177494840803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7beb79d0134a4864486ac3d58a11047a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: usaSpaces
-      Entry: 6
-      Data: 
-    - Name: adjustVPCommand
-      Entry: 6
-      Data: 
-  actionName: 
-  actionText: Score Prestige Spaces
 --- !u!114 &4613553560365757866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46010,21 +46627,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6423630553894043802}
   m_CullTransparentMesh: 1
---- !u!4 &5094673747324820999
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6616554609049661625}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3025975438137525869}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5185234649113139392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46073,13 +46675,13 @@ MonoBehaviour:
       Data: 
     - Name: awardAP
       Entry: 7
-      Data: 2|ActionPoints, Assembly-CSharp
+      Data: 2|ImperialStruggle.ActionPoints, Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 3|ActionPoint, Assembly-CSharp
+      Data: 3|ImperialStruggle.ActionPoint, Assembly-CSharp
     - Name: actionType
       Entry: 3
       Data: 2
@@ -46097,40 +46699,10 @@ MonoBehaviour:
       Entry: 12
       Data: 2
     - Name: 
-      Entry: 7
-      Data: 5|TargetSpaceCondition, Assembly-CSharp
-    - Name: eligibleSpaces
-      Entry: 7
-      Data: 6|System.Collections.Generic.List`1[[Space, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 3
-    - Name: 
       Entry: 6
       Data: 
     - Name: 
       Entry: 6
-      Data: 
-    - Name: 
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 7|SpaceControlCondition, Assembly-CSharp
-    - Name: spaceConditionType
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
       Data: 
     - Name: 
       Entry: 13
@@ -46262,7 +46834,6 @@ GameObject:
   - component: {fileID: 6587623830583151135}
   - component: {fileID: 5275003354640275535}
   - component: {fileID: 5275003354640275537}
-  - component: {fileID: 6587623830583151136}
   m_Layer: 0
   m_Name: Action Round 1A
   m_TagString: Untagged
@@ -46954,7 +47525,6 @@ GameObject:
   - component: {fileID: 6582457813713862957}
   - component: {fileID: 5536433233194205214}
   - component: {fileID: 5536433233194205216}
-  - component: {fileID: 6582457813713862958}
   m_Layer: 0
   m_Name: Action Round 4A
   m_TagString: Untagged
@@ -47944,7 +48514,6 @@ GameObject:
   - component: {fileID: 1882512423849374749}
   - component: {fileID: 6022973640711854770}
   - component: {fileID: 6022973640711854772}
-  - component: {fileID: 6022973640711854773}
   m_Layer: 0
   m_Name: Action Round 3A
   m_TagString: Untagged
@@ -48055,55 +48624,6 @@ MonoBehaviour:
       Data: 
   actionName: Select Investment Tile
   actionText: Select Investment Tile
-  actingPlayer: {fileID: 0}
---- !u!114 &6022973640711854773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6022973640711854769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c002e1a180ffaee408d63073b1645d17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: Await Player Input
-  actionText: Awaiting Player Input
   actingPlayer: {fileID: 0}
 --- !u!1001 &6116637912772421459
 PrefabInstance:
@@ -48885,55 +49405,6 @@ Transform:
   m_Father: {fileID: 7095921346316974907}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6526057950747273195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 849480319891410259}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c002e1a180ffaee408d63073b1645d17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: Await Player Input
-  actionText: Awaiting Player Input
-  actingPlayer: {fileID: 0}
 --- !u!1001 &6579668968044368179
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49050,55 +49521,6 @@ Transform:
   m_Father: {fileID: 7095921346316974907}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6582457813713862958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5536433233194205213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c002e1a180ffaee408d63073b1645d17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: Await Player Input
-  actionText: Awaiting Player Input
-  actingPlayer: {fileID: 0}
 --- !u!4 &6587623830583151135
 Transform:
   m_ObjectHideFlags: 0
@@ -49114,140 +49536,6 @@ Transform:
   m_Father: {fileID: 7095921346316974907}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6587623830583151136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5275003354640275534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c002e1a180ffaee408d63073b1645d17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: Await Player Input
-  actionText: Awaiting Player Input
-  actingPlayer: {fileID: 0}
---- !u!1 &6616554609049661625
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5094673747324820999}
-  - component: {fileID: 6616554609049661626}
-  m_Layer: 0
-  m_Name: Score Maps
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &6616554609049661626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6616554609049661625}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be438663737dcf242ac46051594e3420, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: mapWinners
-      Entry: 7
-      Data: 2|System.Collections.Generic.Dictionary`2[[Map, Assembly-CSharp],[Faction,
-        Assembly-CSharp]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 3|System.Collections.Generic.ObjectEqualityComparer`1[[Map, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: 
-  actionText: Score Map Phase
 --- !u!4 &6639605835865642153
 Transform:
   m_ObjectHideFlags: 0
@@ -51307,12 +51595,12 @@ MonoBehaviour:
       Data: 
     - Name: theaterWinners
       Entry: 7
-      Data: 2|System.Collections.Generic.Dictionary`2[[Theater, Assembly-CSharp],[Faction,
-        Assembly-CSharp]], mscorlib
+      Data: 2|System.Collections.Generic.Dictionary`2[[ImperialStruggle.Theater,
+        Assembly-CSharp],[Faction, Assembly-CSharp]], mscorlib
     - Name: comparer
       Entry: 7
-      Data: 3|System.Collections.Generic.ObjectEqualityComparer`1[[Theater, Assembly-CSharp]],
-        mscorlib
+      Data: 3|System.Collections.Generic.ObjectEqualityComparer`1[[ImperialStruggle.Theater,
+        Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 8
       Data: 
@@ -51456,6 +51744,12 @@ MonoBehaviour:
     - {fileID: 7095921346316974911}
     - {fileID: 7095921346316974910}
     - {fileID: 7095921346316974909}
+    - {fileID: 0}
+    - {fileID: 7095921346316974919}
+    - {fileID: 7095921346316974920}
+    - {fileID: 7095921346316974918}
+    - {fileID: 7095921346316974917}
+    - {fileID: 7095921346316974916}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -51473,7 +51767,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 7
+      Data: 8
     - Name: 
       Entry: 10
       Data: 0
@@ -51496,6 +51790,9 @@ MonoBehaviour:
       Entry: 10
       Data: 6
     - Name: 
+      Entry: 10
+      Data: 7
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -51507,7 +51804,22 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 5
+    - Name: 
+      Entry: 10
+      Data: 8
+    - Name: 
+      Entry: 10
+      Data: 9
+    - Name: 
+      Entry: 10
+      Data: 10
+    - Name: 
+      Entry: 10
+      Data: 11
+    - Name: 
+      Entry: 10
+      Data: 12
     - Name: 
       Entry: 13
       Data: 
@@ -51529,12 +51841,12 @@ MonoBehaviour:
       Data: 
     - Name: awardTiles
       Entry: 7
-      Data: 3|System.Collections.Generic.Dictionary`2[[Map, Assembly-CSharp],[AwardTile,
+      Data: 3|System.Collections.Generic.Dictionary`2[[ImperialStruggle.Map, Assembly-CSharp],[ImperialStruggle.AwardTile,
         Assembly-CSharp]], mscorlib
     - Name: comparer
       Entry: 7
-      Data: 4|System.Collections.Generic.ObjectEqualityComparer`1[[Map, Assembly-CSharp]],
-        mscorlib
+      Data: 4|System.Collections.Generic.ObjectEqualityComparer`1[[ImperialStruggle.Map,
+        Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 8
       Data: 
@@ -51549,11 +51861,11 @@ MonoBehaviour:
       Data: 
     - Name: investmentTiles
       Entry: 7
-      Data: 5|System.Collections.Generic.Dictionary`2[[InvestmentTile, Assembly-CSharp],[Faction,
-        Assembly-CSharp]], mscorlib
+      Data: 5|System.Collections.Generic.Dictionary`2[[ImperialStruggle.InvestmentTile,
+        Assembly-CSharp],[Faction, Assembly-CSharp]], mscorlib
     - Name: comparer
       Entry: 7
-      Data: 6|System.Collections.Generic.ObjectEqualityComparer`1[[InvestmentTile,
+      Data: 6|System.Collections.Generic.ObjectEqualityComparer`1[[ImperialStruggle.InvestmentTile,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 8
@@ -51586,6 +51898,12 @@ GameObject:
   - component: {fileID: 7095921346316974911}
   - component: {fileID: 7095921346316974910}
   - component: {fileID: 7095921346316974909}
+  - component: {fileID: 7095921346316974921}
+  - component: {fileID: 7095921346316974920}
+  - component: {fileID: 7095921346316974919}
+  - component: {fileID: 7095921346316974918}
+  - component: {fileID: 7095921346316974917}
+  - component: {fileID: 7095921346316974916}
   m_Layer: 0
   m_Name: Peace Turn
   m_TagString: Untagged
@@ -51613,7 +51931,6 @@ Transform:
   - {fileID: 2215815033341252661}
   - {fileID: 6582457813713862957}
   - {fileID: 6526057950747273194}
-  - {fileID: 3025975438137525869}
   m_Father: {fileID: 670742066}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -51978,6 +52295,341 @@ MonoBehaviour:
       Data: 
   actionName: 
   actionText: 
+--- !u!114 &7095921346316974916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7095921346316974906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c0881f7976515a4badece2ba803963d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: conditionals
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: commands
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  actionName: Check Victory Conditions
+  actionText: Checking Victory Condition
+--- !u!114 &7095921346316974917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7095921346316974906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d14929e2f4a9764281e3db74eae88fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: conditionals
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: commands
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: globalDemandWinners
+      Entry: 7
+      Data: 2|System.Collections.Generic.Dictionary`2[[Resource, Assembly-CSharp],[Faction,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 3|System.Collections.Generic.ObjectEqualityComparer`1[[Resource, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  actionName: 
+  actionText: Scoring Global Demand
+--- !u!114 &7095921346316974918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7095921346316974906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7beb79d0134a4864486ac3d58a11047a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: conditionals
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: commands
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: usaSpaces
+      Entry: 6
+      Data: 
+    - Name: adjustVPCommand
+      Entry: 6
+      Data: 
+  actionName: 
+  actionText: Score Prestige Spaces
+--- !u!114 &7095921346316974919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7095921346316974906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be438663737dcf242ac46051594e3420, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: conditionals
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: commands
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: mapWinners
+      Entry: 7
+      Data: 2|System.Collections.Generic.Dictionary`2[[ImperialStruggle.Map, Assembly-CSharp],[Faction,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 3|System.Collections.Generic.ObjectEqualityComparer`1[[ImperialStruggle.Map,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  actionName: 
+  actionText: Score Map Phase
+--- !u!114 &7095921346316974920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7095921346316974906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6ded3983267ba744aa53163cab0829e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: conditionals
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: commands
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  actionName: 
+  actionText: Reset Treaty Points
+  treatyPointsCap: 4
+--- !u!114 &7095921346316974921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7095921346316974906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa03b337c384a640aa9a1df222a7dce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: conditionals
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: commands
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  actionName: Select Ministry Cards
+  actionText: Select Britain Ministry Cards
 --- !u!224 &7123294765593724057
 RectTransform:
   m_ObjectHideFlags: 0
@@ -52283,7 +52935,17 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes:
     - Name: availableTerritories
-      Entry: 6
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[ImperialStruggle.Territory, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
   map: {fileID: 0}
   warTiles: []
@@ -52581,7 +53243,6 @@ GameObject:
   - component: {fileID: 6751338587201543076}
   - component: {fileID: 7717654462068964397}
   - component: {fileID: 7717654462068964399}
-  - component: {fileID: 7717654462068964400}
   m_Layer: 0
   m_Name: Action Round 2B
   m_TagString: Untagged
@@ -52692,55 +53353,6 @@ MonoBehaviour:
       Data: 
   actionName: Select Investment Tile
   actionText: Select Investment Tile
-  actingPlayer: {fileID: 0}
---- !u!114 &7717654462068964400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7717654462068964396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c002e1a180ffaee408d63073b1645d17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: Await Player Input
-  actionText: Awaiting Player Input
   actingPlayer: {fileID: 0}
 --- !u!1001 &7753156684044127578
 PrefabInstance:
@@ -53694,55 +54306,6 @@ Transform:
   m_Father: {fileID: 7095921346316974907}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8379082826945065726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3734849112744899746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c002e1a180ffaee408d63073b1645d17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: Await Player Input
-  actionText: Awaiting Player Input
-  actingPlayer: {fileID: 0}
 --- !u!1001 &8475018608054904416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53968,7 +54531,6 @@ GameObject:
   - component: {fileID: 2215815033341252661}
   - component: {fileID: 8769529187218029529}
   - component: {fileID: 8769529187218029531}
-  - component: {fileID: 8769529187218029532}
   m_Layer: 0
   m_Name: Action Round 3B
   m_TagString: Untagged
@@ -54079,55 +54641,6 @@ MonoBehaviour:
       Data: 
   actionName: Select Investment Tile
   actionText: Select Investment Tile
-  actingPlayer: {fileID: 0}
---- !u!114 &8769529187218029532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8769529187218029528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c002e1a180ffaee408d63073b1645d17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: commands
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Command, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: Await Player Input
-  actionText: Awaiting Player Input
   actingPlayer: {fileID: 0}
 --- !u!1001 &8791901488543419607
 PrefabInstance:
@@ -54277,7 +54790,17 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes:
     - Name: availableTerritories
-      Entry: 6
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[ImperialStruggle.Territory, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
   map: {fileID: 0}
   warTiles: []
@@ -54634,7 +55157,17 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes:
     - Name: availableTerritories
-      Entry: 6
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[ImperialStruggle.Territory, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
   map: {fileID: 0}
   warTiles: []

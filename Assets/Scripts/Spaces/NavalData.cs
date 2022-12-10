@@ -2,7 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NavalData : SpaceData
+namespace ImperialStruggle
 {
-    public bool prestige;
+    public class NavalData : SpaceData
+    {
+        public bool PrestigeSpace;
+    }
 }

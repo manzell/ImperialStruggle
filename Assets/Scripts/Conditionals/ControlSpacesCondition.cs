@@ -1,36 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq; 
+using System.Linq;
 
-// Returns true if the Target Faction controls Any of the given Spaces, All of the given spaces, or More than the opposition
-public class ControlSpacesCondition : Conditional
+namespace ImperialStruggle
 {
-    public enum ConditionalMode { Any, All, More, Most }
-    [SerializeField] ConditionalMode conditionalMode; 
-    [SerializeField] List<Space> spaces = new List<Space>();
-    [SerializeField] Faction faction;
-
-    public Conditional.ConditionType ConditionalType => throw new System.NotImplementedException();
-
-    public string ConditionalText => throw new System.NotImplementedException();
-
-    public bool Test(GameAction action)
+    // Returns true if the Target Faction controls Any of the given Spaces, All of the given spaces, or More than the opposition
+    public class ControlSpacesCondition : Conditional
     {
-        Faction opposingFaction = faction == Game.Britain ? Game.France : Game.Britain;
+        public enum ConditionalMode { Any, All, More, Most }
+        [SerializeField] ConditionalMode conditionalMode;
+        [SerializeField] List<Space> spaces = new List<Space>();
+        [SerializeField] Faction faction;
 
-        switch(conditionalMode)
+        public Conditional.ConditionType ConditionalType => throw new System.NotImplementedException();
+
+        public string ConditionalText => throw new System.NotImplementedException();
+
+        public bool Test(GameAction action)
         {
-            case ConditionalMode.Any:
-                return spaces.Any(space => space.control == faction);
-            case ConditionalMode.All:
-                return spaces.All(space => space.control == faction);
-            case ConditionalMode.Most:
-                return spaces.Count(space => space.control == faction) >= (spaces.Count / 2); 
-            case ConditionalMode.More:
-                return spaces.Count(space => space.control == faction) > spaces.Count(space => space.control == opposingFaction);
-            default:
-                return true; 
+            Faction opposingFaction = faction == Game.Britain ? Game.France : Game.Britain;
+
+            switch (conditionalMode)
+            {
+                case ConditionalMode.Any:
+                    return spaces.Any(space => space.control == faction);
+                case ConditionalMode.All:
+                    return spaces.All(space => space.control == faction);
+                case ConditionalMode.Most:
+                    return spaces.Count(space => space.control == faction) >= (spaces.Count / 2);
+                case ConditionalMode.More:
+                    return spaces.Count(space => space.control == faction) > spaces.Count(space => space.control == opposingFaction);
+                default:
+                    return true;
+            }
         }
     }
 }

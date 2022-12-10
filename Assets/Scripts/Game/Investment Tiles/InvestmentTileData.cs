@@ -6,8 +6,11 @@ using UnityEngine;
 namespace ImperialStruggle
 {
     [CreateAssetMenu]
-    public class InvestmentTileData : SerializedScriptableObject
+    public class InvestmentTile : SerializedScriptableObject, ISelectable
     {
+        public string Name => $"{majorActionPoint.baseValue} {majorActionPoint.actionType}/{minorActionPoint.actionType}" +
+            $"{(MilUpgrade ? "Mil" : string.Empty)}{(EventTrigger ? "Event" : string.Empty)}"; 
+
         public System.Action<Player> SelectEvent;
 
         public ActionPoint majorActionPoint;

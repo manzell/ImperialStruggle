@@ -4,12 +4,15 @@ using UnityEngine;
 using System.Linq;
 using System.Runtime.CompilerServices;
 
-public static class Extensions
+namespace ImperialStruggle
 {
-    public static Faction Opposition(this Faction faction)
+    public static class Extensions
     {
-        if (faction == Game.Britain) return Game.France;
-        else if (faction == Game.France) return Game.Britain;
-        else return null; 
+        public static Faction Opposition(this Faction faction)
+        {
+            if (faction == Game.Britain) return Game.France;
+            else if (faction == Game.France) return Game.Britain;
+            else return null;
+        }
     }
 }

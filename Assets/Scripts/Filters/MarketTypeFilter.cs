@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq; 
+using System.Linq;
 
-public class MarketTypeFilter : Filter<Space>
+namespace ImperialStruggle
 {
-    [SerializeField] HashSet<Resource> marketTypes; 
+    public class MarketTypeFilter : Filter<Space>
+    {
+        [SerializeField] HashSet<Resource> marketTypes;
 
-    public override IEnumerable<Space> Apply(IEnumerable<Space> t) =>
-        t.Where(space => space is Market && marketTypes.Contains((space as Market).Resource)); 
+        public override IEnumerable<Space> Apply(IEnumerable<Space> t) =>
+            t.Where(space => space is Market && marketTypes.Contains((space as Market).Resource));
+    }
 }

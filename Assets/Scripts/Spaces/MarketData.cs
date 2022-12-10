@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MarketData : SpaceData
+namespace ImperialStruggle
 {
-    public Resource resource;
-    public int flagCost;
+    public class MarketData : SpaceData
+    {
+        public Resource ResourceType;
+        public int FlagCost;
+    }
 }

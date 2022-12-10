@@ -4,8 +4,10 @@ using UnityEngine;
 using UnityEngine.Events; 
 using System.Linq;
 
-public abstract class PlayerAction : GameAction
+namespace ImperialStruggle
 {
-    public Player actingPlayer;
-
+    public abstract class PlayerAction : GameAction
+    {
+        public Player actingPlayer;
+    }
 }

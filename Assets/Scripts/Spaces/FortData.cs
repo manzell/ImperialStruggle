@@ -2,7 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FortData : SpaceData
+namespace ImperialStruggle
 {
-    public int flagCost;
+    public class FortData : SpaceData
+    {
+        public int FlagCost;
+    }
 }

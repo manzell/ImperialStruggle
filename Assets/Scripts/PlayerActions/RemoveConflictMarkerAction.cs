@@ -2,14 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using System.Linq; 
+using System.Linq;
 
-public class RemoveConflictMarkerAction : PlayerAction
+namespace ImperialStruggle
 {
-    List<Space> eligibleSpaces;
-
-    protected override void Do()
+    public class RemoveConflictMarkerAction : PlayerAction
     {
-        throw new System.NotImplementedException();
+        List<Space> eligibleSpaces;
+
+        protected override void Do()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

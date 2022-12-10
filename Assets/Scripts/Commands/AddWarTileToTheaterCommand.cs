@@ -1,18 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq; 
+using System.Linq;
 
-public class AddWarTileToTheaterCommand : Command
+namespace ImperialStruggle
 {
-    WarTile tile;
-    Theater theater; 
-
-    public AddWarTileToTheaterCommand(WarTile tile, Theater theater)
+    public class AddWarTileToTheaterCommand : Command
     {
-        this.tile = tile;
-        this.theater = theater;
-    }
+        WarTile tile;
+        Theater theater;
 
-    public override void Do(GameAction action) => theater.warTiles.Add(tile); 
+        public AddWarTileToTheaterCommand(WarTile tile, Theater theater)
+        {
+            this.tile = tile;
+            this.theater = theater;
+        }
+
+        public override void Do(GameAction action)
+        {
+            theater.warTiles.Add(tile);
+            Debug.Log($"{tile} ({tile.faction}) added to {theater.name}");
+        }
+    }
 }

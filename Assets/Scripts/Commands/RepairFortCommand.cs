@@ -2,14 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RepairFortCommand : Command
+namespace ImperialStruggle
 {
-    public override void Do(GameAction action)
+    public class RepairFortCommand : Command
     {
-        if(action is PlayerAction playerAction && action is ActionTarget<Fort> fort)
+        public override void Do(GameAction action)
         {
-            fort.target.damaged = false;
-            Debug.Log($"{playerAction.actingPlayer} repaired {fort.target.name}"); 
+            /*
+            if (action is PlayerAction playerAction && action is ActionTarget<Fort> fort)
+            {
+                fort.target.damaged = false;
+                Debug.Log($"{playerAction.actingPlayer} repaired {fort.target.name}");
+            }
+            */
         }
     }
 }

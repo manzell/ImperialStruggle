@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class BuildFortAction : PlayerAction
+namespace ImperialStruggle
 {
-    protected override void Do()
+    public class BuildFortAction : PlayerAction
     {
-        throw new System.NotImplementedException();
+        protected override void Do()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

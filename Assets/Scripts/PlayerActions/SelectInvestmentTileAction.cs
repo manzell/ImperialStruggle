@@ -3,24 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using System.Linq;
-using Sirenix.OdinInspector; 
+using Sirenix.OdinInspector;
 
-public class SelectInvestmentTileAction : PlayerAction
+namespace ImperialStruggle
 {
-    protected override void Do()
+    public class SelectInvestmentTileAction : PlayerAction
     {
-        if(Phase.CurrentPhase is ActionRound actionRound)
+        protected override void Do()
         {
-            IEnumerable<InvestmentTile> tiles = actionRound.GetComponentInParent<PeaceTurn>().investmentTiles.Where(kvp => kvp.Value == null).Select(kvp => kvp.Key);
+            if (Phase.CurrentPhase is ActionRound actionRound)
+            {
+                IEnumerable<InvestmentTile> tiles = actionRound.GetComponentInParent<PeaceTurn>().investmentTiles.Where(kvp => kvp.Value == null).Select(kvp => kvp.Key);
 
-            SelectionController<InvestmentTile>.Selection selection = new(tiles, InvestmentTileActions); 
-            selection.SetTitle($"Select Investment Tile for {actingPlayer.faction}");
+                Selection<InvestmentTile> selection = new(actingPlayer, tiles, InvestmentTileActions);
+                //selection.SetTitle($"Select Investment Tile for {actingPlayer.faction}");
+            }
         }
-    }
 
-    [Button]
-    void InvestmentTileActions(InvestmentTile tile)
-    {
-        commands.Add(new SelectInvestmentTileCommand(tile, actingPlayer.faction));
+        [Button]
+        void InvestmentTileActions(Selection<InvestmentTile> selection)
+        {
+            commands.Add(new SelectInvestmentTileCommand(selection.First(), actingPlayer.faction));
+        }
     }
 }

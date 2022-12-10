@@ -4,13 +4,16 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ResetTreatyPointsAction : GameAction
+namespace ImperialStruggle
 {
-    [SerializeField] int treatyPointsCap = 4;
-
-    protected override void Do()
+    public class ResetTreatyPointsAction : GameAction
     {
-        foreach (Faction faction in Player.players.Select(p => p.faction))
-            commands.Add(new AdjustTreatyPointsCommand(faction, Mathf.Min(0, treatyPointsCap - RecordsTrack.treatyPoints[faction]))); 
+        [SerializeField] int treatyPointsCap = 4;
+
+        protected override void Do()
+        {
+            foreach (Faction faction in Player.players.Select(p => p.faction))
+                commands.Add(new AdjustTreatyPointsCommand(faction, Mathf.Min(0, treatyPointsCap - RecordsTrack.treatyPoints[faction])));
+        }
     }
 }

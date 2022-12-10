@@ -1,15 +1,29 @@
+using Sirenix.Utilities;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
-using UnityEngine.InputSystem; 
+using UnityEngine.InputSystem;
 
-public class ToggleActivePlayerBehavior : MonoBehaviour
+namespace ImperialStruggle
 {
-    public void Update()
+    public class ToggleActivePlayerBehavior : MonoBehaviour
     {
-        if (Keyboard.current.tabKey.wasPressedThisFrame)
+        private void Start()
         {
-            Debug.Log("Toggle Game Acting Player and UI"); 
+            Game.setActivePlayerEvent += SetActivePlayer;
+        }
+
+        void SetActivePlayer(Player player)
+        {
+            Game.ActivePlayer = player;
+            FindObjectsOfType<UI_Player>().ForEach(ui => ui.gameObject.SetActive(ui.player == player));
+        }
+
+        public void Update()
+        {
+            if (Keyboard.current.tabKey.wasPressedThisFrame)
+                Game.setActivePlayerEvent(Game.ActivePlayer.Opponent);
         }
     }
 }

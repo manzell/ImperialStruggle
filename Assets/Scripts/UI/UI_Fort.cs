@@ -3,33 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using Sirenix.OdinInspector; 
+using Sirenix.OdinInspector;
 
-public class UI_Fort : UI_Space
+namespace ImperialStruggle
 {
-    Fort fort;
-    [SerializeField] FortData fortData;
-    [SerializeField] Image background, highlight, trim;
-    [SerializeField] TextMeshProUGUI fortName, flagCost;
-
-    private void Awake()
+    public class UI_Fort : UI_Space
     {
-        Game.startGameEvent += Style;
-    }
+        Fort fort;
+        [SerializeField] FortData fortData;
+        [SerializeField] Image background, highlight, trim;
+        [SerializeField] TextMeshProUGUI fortName, flagCost;
 
-    [Button] public override void Style()
-    {
-        if (fort == null)
+        private void Awake()
         {
-            fort = (Fort)Game.SpaceLookup[fortData];
-            fort.updateSpaceEvent += Style;
+            Game.startGameEvent += Style;
         }
-        GraphicSettings graphics = FindObjectOfType<Game>().graphicSettings; 
 
-        fortName.text = fort.name;
-        flagCost.text = fort.FlagCost.ToString();
-        background.color = graphics.factionColors[fort.Flag];
-        fortName.color = fort.Flag == null ? Color.black : Color.white; 
+        [Button]
+        public override void Style()
+        {
+            if (fort == null)
+            {
+                fort = (Fort)Game.SpaceLookup[fortData];
+                fort.updateSpaceEvent += Style;
+            }
+            GraphicSettings graphics = FindObjectOfType<Game>().graphicSettings;
 
+            fortName.text = fort.name;
+            flagCost.text = fort.FlagCost.ToString();
+            background.color = graphics.factionColors[fort.Flag];
+            fortName.color = fort.Flag == null ? Color.black : Color.white;
+
+        }
     }
 }

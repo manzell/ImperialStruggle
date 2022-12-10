@@ -2,16 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using System.Linq; 
+using System.Linq;
 
-public class WarPrepAction : GameAction
+namespace ImperialStruggle
 {
-    [SerializeField] WarTurn nextWar; 
-
-    protected override void Do()
+    public class WarPrepAction : GameAction
     {
-        foreach(Player player in Player.players)
-            foreach(Theater theater in nextWar.theaters)
-                commands.Add(new AddWarTileToTheaterCommand(player.warTiles.Dequeue(), theater)); 
+        [SerializeField] WarTurn nextWar;
+
+        protected override void Do()
+        {
+            foreach (Player player in Player.players)
+                foreach (Theater theater in nextWar.theaters)
+                    commands.Add(new AddWarTileToTheaterCommand(player.warTiles.Dequeue(), theater));
+        }
     }
 }

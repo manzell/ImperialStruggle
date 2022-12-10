@@ -2,31 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AvailableDebtCondition : Conditional
+namespace ImperialStruggle
 {
-    public string ConditionalText => $"{ConditionalType} {margin} Available Debt";
-    [field: SerializeField] public Conditional.ConditionType ConditionalType { get; private set; }
-    [SerializeField] int margin = 1;
-
-    public bool Test(GameAction action)
+    public class AvailableDebtCondition : Conditional
     {
-        if(action is ActionTarget<Faction> factionAction)
+        public string ConditionalText => $"{ConditionalType} {margin} Available Debt";
+        [field: SerializeField] public Conditional.ConditionType ConditionalType { get; private set; }
+        [SerializeField] int margin = 1;
+
+        public bool Test(GameAction action)
         {
-            int availableDebt = RecordsTrack.availableDebt[factionAction.target];
-
-            switch (ConditionalType)
+            /*
+            if (action is ActionTarget<Faction> factionAction)
             {
-                case Conditional.ConditionType.Exactly:
-                    return availableDebt == margin;
-                case Conditional.ConditionType.NotLessThan:
-                    return availableDebt >= margin;
-                case Conditional.ConditionType.NotMoreThan:
-                    return availableDebt <= margin; 
-                default:
-                    return true; 
-            }
-        }
+                int availableDebt = RecordsTrack.availableDebt[factionAction.target];
 
-        return false; 
+                switch (ConditionalType)
+                {
+                    case Conditional.ConditionType.Exactly:
+                        return availableDebt == margin;
+                    case Conditional.ConditionType.NotLessThan:
+                        return availableDebt >= margin;
+                    case Conditional.ConditionType.NotMoreThan:
+                        return availableDebt <= margin;
+                    default:
+                        return true;
+                }
+            }
+            */
+            return false;
+        }
     }
 }

@@ -2,17 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamagedCondition : Conditional
+namespace ImperialStruggle
 {
-    public Conditional.ConditionType ConditionalType => Conditional.ConditionType.Exactly;
-
-    public string ConditionalText => "Fort Damaged";
-
-    public bool Test(GameAction context)
+    public class DamagedCondition : Conditional
     {
-        if (context is ActionTarget<Fort> fort)
-            return fort.target.damaged;
-        else 
-            return false; 
+        public Conditional.ConditionType ConditionalType => Conditional.ConditionType.Exactly;
+
+        public string ConditionalText => "Fort Damaged";
+
+        public bool Test(GameAction context)
+        {
+            return true; 
+            /*
+            if (context is ActionTarget<Fort> fort)
+                return fort.target.damaged;
+            else
+                return false;
+            */
+        }
     }
 }

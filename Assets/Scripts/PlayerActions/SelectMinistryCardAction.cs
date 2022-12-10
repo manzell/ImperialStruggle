@@ -3,20 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using Sirenix.OdinInspector; 
-using System.Linq; 
+using System.Linq;
+using ImperialStruggle;
 
-public class SelectMinistryCardAction : PlayerAction
+public class SelectMinistryCardAction : GameAction
 {
-    SelectionController<MinistryCard>.Selection selection;
-
     protected override void Do()
     {
-        /*
-        List<MinistryCard> ministers = player.ministers.Where(minister => minister.eras.Contains(Phase.CurrentPhase.era)).OrderBy(minister => minister.name).ToList();
-        // Think on how to make this work for future turns. 
+        PeaceTurn peaceTurn = Phase.CurrentPhase.GetComponentInParent<PeaceTurn>();
 
-        selection = FindObjectOfType<SelectionController>().Select(ministers.ToList<ISelectable>(), 2 - player.ministers.Where(card => card.ministryCardStatus == MinistryCard.MinistryCardStatus.Selected).Count());
-        selection.SetTitle($"Select {player.faction} Ministry Cards"); 
-    */
+        if (peaceTurn != null)
+            foreach(Player player in Player.players)
+                new Selection<MinistryCard>(player, player.ministers.Where(minister => minister.data.eras.Contains(peaceTurn.era)), Finish);
+    }
+
+    void Finish(Selection<MinistryCard> selectedMinisters)
+    {
+        foreach(MinistryCard minister in selectedMinisters)
+            commands.Add(new SelectMinistryCardCommand(minister)); 
     }
 }

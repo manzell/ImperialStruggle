@@ -2,26 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using System.Linq; 
+using System.Linq;
 
-public class PlayEventCardAction : PlayerAction
+namespace ImperialStruggle
 {
-    protected override void Do()
+    public class PlayEventCardAction : PlayerAction
     {
-        /*
-        List<EventCard> eventCards = actingPlayer.hand.Where(card =>
-            card.reqdActionType == ActionPoint.ActionType.None || card.reqdActionType == Phase.CurrentPhase.GetComponent<ActionRound>()?.investmentTile.majorActionType).ToList();
-
-        if (eventCards.Count > 0)
+        protected override void Do()
         {
-            SelectionController<EventCard>.Selection selector = new(eventCards, Finish);
-            selector.SetTitle($"Select a {actingPlayer.faction} Event Card to Play");
-        }
-        */
-    }
+            /*
+            List<EventCard> eventCards = actingPlayer.hand.Where(card =>
+                card.reqdActionType == ActionPoint.ActionType.None || card.reqdActionType == Phase.CurrentPhase.GetComponent<ActionRound>()?.investmentTile.majorActionType).ToList();
 
-    public void Finish(EventCard card)
-    {
-        Debug.Log($"{actingPlayer.faction} plays {card}");
+            if (eventCards.Count > 0)
+            {
+                SelectionController<EventCard>.Selection selector = new(eventCards, Finish);
+                selector.SetTitle($"Select a {actingPlayer.faction} Event Card to Play");
+            }
+            */
+        }
+
+        public void Finish(EventCard card)
+        {
+            Debug.Log($"{actingPlayer.faction} plays {card}");
+        }
     }
 }

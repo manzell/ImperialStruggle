@@ -4,16 +4,19 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class SetAwardTiles : GameAction
+namespace ImperialStruggle
 {
-    protected override void Do()
+    public class SetAwardTiles : GameAction
     {
-        if(Phase.CurrentPhase is PeaceTurn peaceTurn)
+        protected override void Do()
         {
-            Queue<AwardTile> awardTiles = new(Game.AwardTiles); 
+            if (Phase.CurrentPhase is PeaceTurn peaceTurn)
+            {
+                Queue<AwardTile> awardTiles = new(Game.AwardTiles);
 
-            foreach (Map map in Game.Spaces.Select(space => space.map).Distinct().OrderBy(tile => Random.value)) 
-                commands.Add(new SetAwardTileCommand(map, awardTiles.Dequeue()));
-        }            
+                foreach (Map map in Game.Spaces.Select(space => space.map).Distinct().OrderBy(tile => Random.value))
+                    commands.Add(new SetAwardTileCommand(map, awardTiles.Dequeue()));
+            }
+        }
     }
 }

@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using Sirenix.OdinInspector; 
+using Sirenix.OdinInspector;
 
-public class AwaitPlayerAction : PlayerAction
+namespace ImperialStruggle
 {
-    protected override void Do()
+    public class AwaitPlayerAction : PlayerAction
     {
-        throw new System.NotImplementedException();
+        protected override void Do()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

@@ -4,4 +4,5 @@ using UnityEngine;
 
 public interface ISelectable
 {
+    public string Name { get; }
 }

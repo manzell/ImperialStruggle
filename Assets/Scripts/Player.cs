@@ -2,72 +2,84 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
-using System.Linq; 
+using System.Linq;
 
-public class Player : SerializedMonoBehaviour, ISelectable
+namespace ImperialStruggle
 {
-    public Faction faction;
-    public List<EventCard> hand; 
-    public List<MinistryCard> ministers; // bool = revealed?
-    public ActionPoints actionPoints = new ActionPoints(); 
-    public Queue<WarTile> warTiles, bonusWarTiles;
-
-    public static List<Player> players = new();  
-
-    private void Awake()
+    public class Player : SerializedMonoBehaviour, ISelectable
     {
-        players.Add(this);
-        RecordsTrack.currentDebt.Add(faction, 0);
-        RecordsTrack.debtLimit.Add(faction, 0);
-        RecordsTrack.treatyPoints.Add(faction, 0);
+        public Faction faction { get; private set; }
+        [field: SerializeField] public Player Opponent { get; private set; }
+        public List<EventCard> hand;
+        public List<MinistryCard> ministers; // bool = revealed?
+        public ActionPoints actionPoints = new ActionPoints();
+        public Queue<WarTile> warTiles, bonusWarTiles;
+        public UI_Player UI;
 
-        ActionRound.PhaseEndEvent += ResetActionPoints;
+        public static List<Player> players = new();
 
-        foreach (WarTile warTile in GetComponentsInChildren<WarTile>().OrderBy(tile => Random.value))
+        public string Name => faction.name;
+
+        private void Awake()
         {
-            if (warTile.warTileSet == WarTile.WarTileSet.Basic)
-                warTiles.Enqueue(warTile);
-            else if (warTile.warTileSet == WarTile.WarTileSet.Bonus)
-                bonusWarTiles.Enqueue(warTile); 
-        }
-    }
+            players.Add(this);
 
-    void ResetActionPoints(Phase phase) 
-    {
-        Debug.Log($"Resetting Action Points {phase}");
-        actionPoints = new ActionPoints();
-    }
+            Debug.Log(RecordsTrack.currentDebt); 
 
-    public HashSet<MinistryCard.Keyword> Keywords => new HashSet<MinistryCard.Keyword>(ministers.SelectMany(minister => minister.data.keywords)); 
+            RecordsTrack.currentDebt.Add(faction, 0);
+            RecordsTrack.debtLimit.Add(faction, 0);
+            RecordsTrack.treatyPoints.Add(faction, 0);
 
-    public List<Squadron> squadrons;
+            ActionRound.PhaseEndEvent += ResetActionPoints;
 
-    [Button]
-    public bool CanAffordAction(PlayerAction action)
-    {
-        return true; 
-        /*
-        ActionPoints apCosts = new ActionPoints(action.actionPointCost);
-        ActionPoints playerAPs = new ActionPoints(actionPoints);
-        
-        foreach (ActionPoint apCost in apCosts.Where(ap => ap.baseValue > 0))
-        {
-            foreach (ActionPoint playerAP in playerAPs.Where(ap => ap.Value(action) > 0))
+            foreach (WarTile warTile in GetComponentsInChildren<WarTile>().OrderBy(tile => Random.value))
             {
-                if(playerAP >= apCost) // note this is an actionPoint comparison which returns true if the first arg is eligible to pay for the 2nd
-                {
-                    int amtToCharge = Mathf.Min(playerAP.Value(action), apCost.baseValue);
-
-                    apCost.baseValue -= amtToCharge;
-                    playerAP.baseValue -= amtToCharge;
-                }
+                if (warTile.warTileSet == WarTile.WarTileSet.Basic)
+                    warTiles.Enqueue(warTile);
+                else if (warTile.warTileSet == WarTile.WarTileSet.Bonus)
+                    bonusWarTiles.Enqueue(warTile);
             }
 
-            if (apCost.baseValue > 0)
-                return false; 
+            Game.ActivePlayer = this;
         }
 
-        return true;
-        */
+        void ResetActionPoints(Phase phase)
+        {
+            Debug.Log($"Resetting Action Points {phase}");
+            actionPoints = new ActionPoints();
+        }
+
+        public HashSet<MinistryCard.Keyword> Keywords => new HashSet<MinistryCard.Keyword>(ministers.SelectMany(minister => minister.data.keywords));
+
+        public List<Squadron> squadrons;
+
+        [Button]
+        public bool CanAffordAction(PlayerAction action)
+        {
+            return true;
+            /*
+            ActionPoints apCosts = new ActionPoints(action.actionPointCost);
+            ActionPoints playerAPs = new ActionPoints(actionPoints);
+
+            foreach (ActionPoint apCost in apCosts.Where(ap => ap.baseValue > 0))
+            {
+                foreach (ActionPoint playerAP in playerAPs.Where(ap => ap.Value(action) > 0))
+                {
+                    if(playerAP >= apCost) // note this is an actionPoint comparison which returns true if the first arg is eligible to pay for the 2nd
+                    {
+                        int amtToCharge = Mathf.Min(playerAP.Value(action), apCost.baseValue);
+
+                        apCost.baseValue -= amtToCharge;
+                        playerAP.baseValue -= amtToCharge;
+                    }
+                }
+
+                if (apCost.baseValue > 0)
+                    return false; 
+            }
+
+            return true;
+            */
+        }
     }
 }

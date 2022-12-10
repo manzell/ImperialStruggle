@@ -1,16 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq; 
+using System.Linq;
 
-public class MapControlMarginCondition : Conditional
+namespace ImperialStruggle
 {
-    [SerializeField] int requiredMargin = 2;
+    public class MapControlMarginCondition : Conditional
+    {
+        //[SerializeField] int requiredMargin = 2;
 
-    public Conditional.ConditionType ConditionalType => Conditional.ConditionType.MoreThan;
+        public Conditional.ConditionType ConditionalType => Conditional.ConditionType.MoreThan;
 
-    public string ConditionalText => throw new System.NotImplementedException();
+        public string ConditionalText => throw new System.NotImplementedException();
 
-    public bool Test(GameAction action) => action is ITargetMap mapAction ?
-            Mathf.Abs(mapAction.map.mapScore[Game.Britain] - mapAction.map.mapScore[Game.France]) >= requiredMargin : true; 
+        public bool Test(GameAction action) => true;
+            //action is ITargetMap mapAction ?
+              //  Mathf.Abs(mapAction.map.mapScore[Game.Britain] - mapAction.map.mapScore[Game.France]) >= requiredMargin : true;
+    }
 }

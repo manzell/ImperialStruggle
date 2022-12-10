@@ -8,6 +8,6 @@ public class Faction : ScriptableObject, ISelectable
 {
     public Sprite Icon;
     public Color Color;
-
+    public string Name => name; 
     //public static Faction Britain, France, Spain, USA, Neutral; 
 }

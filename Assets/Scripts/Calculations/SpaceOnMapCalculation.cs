@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpaceOnMapCalculation : Calculation<List<Space>>
+namespace ImperialStruggle
 {
-    [SerializeField] List<Map> eligibleMaps = new List<Map>();
-
-    public override List<Space> Calculate()
+    public class SpaceOnMapCalculation : Calculation<List<Space>>
     {
-        List<Space> spaces = new List<Space>();
+        [SerializeField] List<Map> eligibleMaps = new List<Map>();
 
-        foreach (Map map in eligibleMaps)
-            spaces.AddRange(map.spaces);
+        public override List<Space> Calculate()
+        {
+            List<Space> spaces = new List<Space>();
 
-        return spaces; 
+            foreach (Map map in eligibleMaps)
+                spaces.AddRange(map.spaces);
+
+            return spaces;
+        }
     }
 }

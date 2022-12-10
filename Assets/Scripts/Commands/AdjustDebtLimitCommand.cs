@@ -15,15 +15,10 @@ public class AdjustDebtLimitCommand : Command
 
     public override void Do(GameAction action)
     {
-        // There is no side-effect of reducing debt limit below current debt. We just live with it! 
-        if (action is AdjustDebtLimitAction debtAction)
-        {
-            int debtLimit = Mathf.Max(0, RecordsTrack.debtLimit[faction] + debtAction.amount);
-            RecordsTrack.debtLimit[faction] = debtLimit;
+        int debtLimit = Mathf.Max(0, RecordsTrack.debtLimit[faction] + amount);
+        RecordsTrack.debtLimit[faction] = debtLimit;
+        RecordsTrack.adjustDebtLimitEvent.Invoke();
 
-            RecordsTrack.adjustDebtLimitEvent.Invoke();
-
-            Debug.Log($"Adjusting {faction} Debt Limit by {debtAction.amount} (to {debtLimit})");
-        }
+        Debug.Log($"Adjusting {faction} Debt Limit by {amount} (to {debtLimit})");
     }
 }

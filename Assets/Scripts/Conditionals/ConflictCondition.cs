@@ -2,17 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ConflictCondition : Conditional
+namespace ImperialStruggle
 {
-    public Conditional.ConditionType ConditionalType => Conditional.ConditionType.Exactly;
-
-    public string ConditionalText => "Space in Conflict";
-
-    public bool Test(GameAction context)
+    public class ConflictCondition : Conditional
     {
-        if (context is ActionTarget<Space> space)
-            return space.target.conflictMarker;
-        else 
-            return false; 
+        public Conditional.ConditionType ConditionalType => Conditional.ConditionType.Exactly;
+
+        public string ConditionalText => "Space in Conflict";
+
+        public bool Test(GameAction context)
+        {
+            return true;
+            /*
+            if (context is ActionTarget<Space> space)
+                return space.target.conflictMarker;
+            else
+                return false;
+            */
+        }
     }
 }

@@ -4,10 +4,13 @@ using UnityEngine;
 using Sirenix.OdinInspector;
 using Unity.Mathematics;
 
-public class WarTurn : Phase
+namespace ImperialStruggle
 {
-    public List<Theater> theaters;
-    public Dictionary<Theater, Faction> theaterWinners;
+    public class WarTurn : Phase
+    {
+        public List<Theater> theaters;
+        public Dictionary<Theater, Faction> theaterWinners;
 
-    public override bool Completed => throw new System.NotImplementedException();
+        public override bool Completed => throw new System.NotImplementedException();
+    }
 }

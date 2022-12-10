@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Squadron 
+namespace ImperialStruggle
 {
-    public Faction flag;
-    public NavalSpace space; 
+    public class Squadron
+    {
+        public Faction flag;
+        public NavalSpace space;
+    }
 }

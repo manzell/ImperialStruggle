@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TerritoryData : SpaceData
+namespace ImperialStruggle
 {
-    public List<SpaceData> conquestLineConnections;
-    public bool prestige;
+    public class TerritoryData : SpaceData
+    {
+        public List<SpaceData> ConquestLines;
+        public bool PrestigeSpace;
+    }
 }
