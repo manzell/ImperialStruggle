@@ -21,7 +21,7 @@ namespace ImperialStruggle
             if (Phase.CurrentPhase is PeaceTurn peaceTurn)
             {
                 peaceTurn.awardTiles.Add(map, tile);
-                Debug.Log($"{tile} set as {map} Award Tile");
+                Debug.Log($"{tile.name} set as {map.name} Award Tile");
             }
         }
     }

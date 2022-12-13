@@ -10,8 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8256398646140679372}
   - component: {fileID: 7161924420617830646}
-  - component: {fileID: 2889209640522031374}
-  - component: {fileID: 6291307467840247739}
   m_Layer: 5
   m_Name: Fort
   m_TagString: Untagged
@@ -56,115 +54,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61ab83c0a79f33640ba53f55f6868853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fortData: {fileID: 0}
   background: {fileID: 4997143529586439208}
   highlight: {fileID: 1063691577675912674}
   trim: {fileID: 4613553560261621854}
   fortName: {fileID: 2724777554966017712}
   flagCost: {fileID: 5141055174644132111}
---- !u!114 &2889209640522031374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1262467948319393270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72ab49b46c856874abfa52060ae3ea1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 1|SpaceControlCondition, Assembly-CSharp
-    - Name: spaceConditionType
-      Entry: 3
-      Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: Build Fort
-  actionText: Build Fort
-  actingPlayer: {fileID: 0}
---- !u!114 &6291307467840247739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1262467948319393270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d680173070a0359479fc6c4053fd2dd4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 3
-    - Name: 
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 1|SpaceControlCondition, Assembly-CSharp
-    - Name: spaceConditionType
-      Entry: 3
-      Data: 3
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 2|DamagedCondition, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: Repair Fort
-  actionText: Repairing Fort
-  actingPlayer: {fileID: 0}
 --- !u!1 &1834404671692783451
 GameObject:
   m_ObjectHideFlags: 0

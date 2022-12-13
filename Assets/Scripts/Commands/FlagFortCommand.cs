@@ -17,7 +17,7 @@ namespace ImperialStruggle
         public override void Do(GameAction action)
         {
             fort.SetFlag(faction);
-            Debug.Log($"{faction} flags {fort.name}");
+            Debug.Log($"{faction} flags {fort.Name}");
         }
     }
 }

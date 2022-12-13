@@ -1,17 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
-using Sirenix.OdinInspector;
-using System.Linq;
+using ImperialStruggle;
 
-public class EventCard : ICard, ISelectable
+namespace ImperialStruggle
 {
-    public EventCardData data { get; private set; }
-
-    public string Name => data.name;
-    public EventCard(EventCardData data)
+    [CreateAssetMenu]
+    public class EventCard : CardData, ICard, ISelectable
     {
-        this.data = data;
+        public string Name => name;
+
+        public ActionPoint.ActionType reqdActionType;
+
+        public Dictionary<Faction, (GameAction baseAction, GameAction bonusAction)> cardActions;
+        public Conditional bonusCondition; 
     }
 }

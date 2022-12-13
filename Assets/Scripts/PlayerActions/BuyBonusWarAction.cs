@@ -12,15 +12,15 @@ namespace ImperialStruggle
 
         protected override void Do()
         {
-            bonusWarTile = actingPlayer.bonusWarTiles.OrderBy(tile => Random.value).First();
+            bonusWarTile = player.bonusWarTiles.OrderBy(tile => Random.value).First();
 
-            Selection<Theater> selection = new(actingPlayer, Game.NextWarTurn.theaters, Finish);
+            Selection<Theater> selection = new(player, Game.NextWarTurn.theaters, Finish);
             //selection.SetTitle($"{actingPlayer} Select theater to add {bonusWarTile.tileName}");
         }
 
         void Finish(Selection<Theater> selection)
         {
-            commands.Add(new AddWarTileToTheaterCommand(bonusWarTile, selection.First()));
+            Commands.Push(new AddWarTileToTheaterCommand(bonusWarTile, selection.First()));
         }
     }
 }

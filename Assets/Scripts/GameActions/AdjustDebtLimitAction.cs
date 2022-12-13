@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class AdjustDebtLimitAction : GameAction
+namespace ImperialStruggle
 {
-    [SerializeField] List<Faction> factions;
-    public int amount;
-
-    protected override void Do()
+    public class AdjustDebtLimitAction : GameAction
     {
-        foreach(Faction faction in factions)
+        public int amount;
+
+        protected override void Do()
         {
-            AdjustDebtCommand command = new AdjustDebtCommand(faction, amount); 
-            commands.Add(command);
+            foreach (Faction faction in RecordsTrack.debtLimit.Keys)
+                Queue(new AdjustDebtCommand(faction, amount));
         }
     }
 }

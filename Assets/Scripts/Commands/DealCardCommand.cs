@@ -11,7 +11,7 @@ namespace ImperialStruggle
         public static System.Action<Player, EventCard> dealCardEvent;
         [SerializeField] Player player;
 
-        HashSet<EventCard> dealtCards = new();
+        Stack<EventCard> dealtCards = new();
 
         public DealCardCommand(Player player)
         {
@@ -20,14 +20,14 @@ namespace ImperialStruggle
 
         public override void Do(GameAction action)
         {
-            EventCard card = new(Game.EventDeck.Pop());
+            EventCard card = Game.EventDeck.Pop();
 
             player.hand.Add(card);
 
-            dealtCards.Add(card);
+            dealtCards.Push(card);
             dealCardEvent?.Invoke(player, card);
 
-            Debug.Log($"{card.data.name} dealt to {player.name}");
+            Debug.Log($"{card.Name} dealt to {player.name}");
         }
 
         public override void Undo()
@@ -35,7 +35,7 @@ namespace ImperialStruggle
             foreach (EventCard card in dealtCards)
             {
                 player.hand.Remove(card);
-                Game.EventDeck.Push(card.data);
+                Game.EventDeck.Push(card);
             }
         }
     }

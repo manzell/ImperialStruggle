@@ -1,9 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Sirenix.OdinInspector;
 using System.Linq;
-using System;
 
 namespace ImperialStruggle
 {
@@ -17,7 +15,8 @@ namespace ImperialStruggle
         public ActionTier actionTier;
         public int baseValue = 0;
         public string name => $"{baseValue} ({Value(null)}) {actionTier} {actionType}";
-        public List<Conditional> conditionals = new List<Conditional>();
+
+        [SerializeReference] public List<Conditional> conditionals = new ();
 
         public string conditionText
         {
@@ -52,7 +51,7 @@ namespace ImperialStruggle
                 return 0;
         }
 
-        public override int GetHashCode() => HashCode.Combine(actionType, actionTier, baseValue, conditionals);
+        public override int GetHashCode() => System.HashCode.Combine(actionType, actionTier, baseValue, conditionals);
         public override bool Equals(object obj) => GetHashCode() == obj.GetHashCode();
 
         /*
@@ -70,6 +69,7 @@ namespace ImperialStruggle
             actionType = type;
             actionTier = tier;
             baseValue = val;
+
             if (conditionals == null)
                 conditionals = new List<Conditional>();
         }

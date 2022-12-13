@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using System.Linq; 
+using System.Linq;
 
-public class PeaceTurnVictoryConditionAction : GameAction
+namespace ImperialStruggle
 {
-    protected override void Do()
+    public class PeaceTurnVictoryConditionAction : GameAction
     {
-        throw new System.NotImplementedException();
+        protected override void Do()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

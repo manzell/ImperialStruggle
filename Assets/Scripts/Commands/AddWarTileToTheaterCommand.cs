@@ -19,7 +19,7 @@ namespace ImperialStruggle
         public override void Do(GameAction action)
         {
             theater.warTiles.Add(tile);
-            Debug.Log($"{tile} ({tile.faction}) added to {theater.name}");
+            Debug.Log($"{tile.Name} added to {theater.Name}");
         }
     }
 }

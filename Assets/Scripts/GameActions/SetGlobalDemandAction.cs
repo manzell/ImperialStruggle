@@ -8,12 +8,13 @@ namespace ImperialStruggle
 {
     public class SetGlobalDemandAction : GameAction
     {
-        int numGlobalDemandTiles = 3;
+        [SerializeField] int numGlobalDemandTiles = 3;
 
         protected override void Do()
         {
             if (Phase.CurrentPhase is PeaceTurn peaceTurn)
-                commands.Add(new SetGlobalDemandCommand(Game.GlobalDemandTrack.Resources.OrderBy(r => Random.value).Take(numGlobalDemandTiles)));
+                Commands.Push(new SetGlobalDemandCommand(Game.GlobalDemandTrack.GlobalDemandAwards.Keys
+                    .OrderBy(res => Random.value).Select(gdk => gdk.Resource).Take(numGlobalDemandTiles)));
         }
     }
 }

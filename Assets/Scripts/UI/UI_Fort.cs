@@ -29,7 +29,7 @@ namespace ImperialStruggle
             }
             GraphicSettings graphics = FindObjectOfType<Game>().graphicSettings;
 
-            fortName.text = fort.name;
+            fortName.text = fort.Name;
             flagCost.text = fort.FlagCost.ToString();
             background.color = graphics.factionColors[fort.Flag];
             fortName.color = fort.Flag == null ? Color.black : Color.white;

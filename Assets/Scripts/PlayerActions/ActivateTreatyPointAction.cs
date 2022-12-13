@@ -8,7 +8,7 @@ namespace ImperialStruggle
     {
         public ActionPoints actionPointAward;
         public ActionPoints actionPoints => actionPointAward;
-        public Faction faction => actingPlayer.faction;
+        public Faction faction => player.faction;
         public int tp => -1;
 
         protected override void Do()

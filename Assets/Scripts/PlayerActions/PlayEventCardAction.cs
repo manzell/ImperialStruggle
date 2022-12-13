@@ -24,7 +24,7 @@ namespace ImperialStruggle
 
         public void Finish(EventCard card)
         {
-            Debug.Log($"{actingPlayer.faction} plays {card}");
+            Debug.Log($"{player.faction} plays {card}");
         }
     }
 }

@@ -1,3 +1,4 @@
+using ImperialStruggle;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -8,6 +9,9 @@ public class Faction : ScriptableObject, ISelectable
 {
     public Sprite Icon;
     public Color Color;
-    public string Name => name; 
-    //public static Faction Britain, France, Spain, USA, Neutral; 
+    public List<MinistryCardData> ministers;
+    public List<WarTile> basicWarTiles, advancedWarTiles;
+    public string Name => name;
+
+    public Player player; 
 }

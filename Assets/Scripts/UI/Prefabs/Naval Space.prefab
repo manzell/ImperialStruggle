@@ -239,7 +239,6 @@ GameObject:
   - component: {fileID: 5609275463475793101}
   - component: {fileID: 8411493156651537541}
   - component: {fileID: 5609275463475793100}
-  - component: {fileID: 5609275463475793103}
   m_Layer: 5
   m_Name: Naval Space
   m_TagString: Untagged
@@ -284,11 +283,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee14418f23908754885bf35c338b9b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  navalData: {fileID: 0}
   spaceName: {fileID: 1917656290612858545}
   trim: {fileID: 9172172210260983903}
   highlight: {fileID: 6328959237305616115}
   background: {fileID: 8797169529728076841}
-  navalSpace: {fileID: 0}
 --- !u!114 &5609275463475793100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,43 +300,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c303c7286f3f3504a879809e1a3789d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5609275463475793103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3371392283543207415}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b048c4df89b2ddc4da1d283ad4dff77f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: Deploy Squadron
-  actionText: Deploy Squadron
-  actingPlayer: {fileID: 0}
 --- !u!1 &6132717619637084625
 GameObject:
   m_ObjectHideFlags: 0

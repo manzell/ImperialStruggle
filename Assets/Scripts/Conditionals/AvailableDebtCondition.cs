@@ -6,11 +6,9 @@ namespace ImperialStruggle
 {
     public class AvailableDebtCondition : Conditional
     {
-        public string ConditionalText => $"{ConditionalType} {margin} Available Debt";
-        [field: SerializeField] public Conditional.ConditionType ConditionalType { get; private set; }
         [SerializeField] int margin = 1;
 
-        public bool Test(GameAction action)
+        public override bool Test(GameAction action)
         {
             /*
             if (action is ActionTarget<Faction> factionAction)

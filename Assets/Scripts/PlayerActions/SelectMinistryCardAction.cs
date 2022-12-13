@@ -1,25 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
-using Sirenix.OdinInspector; 
 using System.Linq;
 using ImperialStruggle;
+using Sirenix.Utilities;
 
-public class SelectMinistryCardAction : GameAction
+namespace ImperialStruggle
 {
-    protected override void Do()
+    public class SelectMinistryCardAction : GameAction
     {
-        PeaceTurn peaceTurn = Phase.CurrentPhase.GetComponentInParent<PeaceTurn>();
+        protected override void Do()
+        {
+            if (Phase.CurrentPhase is PeaceTurn peaceTurn)
+                foreach (Player player in Player.players)
+                    new Selection<MinistryCardData>(player, player.ministers.Keys.Where(minister => minister.eras.Contains(peaceTurn.era)), 
+                    selection => selection.ForEach(minister => Commands.Push(new SelectMinistryCardCommand(minister))));
 
-        if (peaceTurn != null)
-            foreach(Player player in Player.players)
-                new Selection<MinistryCard>(player, player.ministers.Where(minister => minister.data.eras.Contains(peaceTurn.era)), Finish);
-    }
-
-    void Finish(Selection<MinistryCard> selectedMinisters)
-    {
-        foreach(MinistryCard minister in selectedMinisters)
-            commands.Add(new SelectMinistryCardCommand(minister)); 
+            // TODO - Collect BOTH tasks and await them as a group
+        }
     }
 }

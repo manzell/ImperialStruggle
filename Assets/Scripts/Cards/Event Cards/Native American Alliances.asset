@@ -21,21 +21,32 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: factionText
+    - Name: eras
       Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[Game+Faction, Assembly-CSharp],[System.ValueTuple`2[[System.String,
-        mscorlib],[System.String, mscorlib]], mscorlib]], mscorlib
+      Data: 0|System.Collections.Generic.HashSet`1[[ImperialStruggle.Phase+Era, Assembly-CSharp]],
+        System.Core
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: cardActions
+      Entry: 7
+      Data: 1|System.Collections.Generic.Dictionary`2[[Faction, Assembly-CSharp],[System.ValueTuple`2[[ImperialStruggle.CardAction,
+        Assembly-CSharp],[ImperialStruggle.CardAction, Assembly-CSharp]], mscorlib]],
+        mscorlib
     - Name: comparer
       Entry: 7
-      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Game+Faction, Assembly-CSharp]],
+      Data: 2|System.Collections.Generic.ObjectEqualityComparer`1[[Faction, Assembly-CSharp]],
         mscorlib
     - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
       Entry: 8
       Data: 
     - Name: 
@@ -47,8 +58,14 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  era: 0
+    - Name: bonusCondition
+      Entry: 7
+      Data: 3|ImperialStruggle.KeywordCondition, Assembly-CSharp
+    - Name: keyword
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
   keywords: 
-  reqdActionType: 0
-  bonusKeyword: 0
-  bonusCondition: 
+  reqdActionType: 2

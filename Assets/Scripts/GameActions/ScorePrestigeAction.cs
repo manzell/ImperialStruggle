@@ -8,25 +8,24 @@ namespace ImperialStruggle
 {
     public class ScorePrestigeAction : GameAction
     {
-        [SerializeField] List<Space> usaSpaces;
-        [SerializeField] AdjustVPCommand adjustVPCommand;
+        [SerializeField] int VPaward; 
+        [SerializeField] List<SpaceData> usaSpaces;
 
         protected override void Do()
         {
             HashSet<ISpace> prestigeSpaces = new(Game.Spaces.OfType<PrestigeSpace>().Where(space => space.Prestigious));
 
-            if (usaSpaces.Any(space => space.Flag == Game.USA))
-                prestigeSpaces.UnionWith(usaSpaces);
+            if (usaSpaces.Any(spaceData => Game.SpaceLookup[spaceData].Flag == Game.USA))
+                prestigeSpaces.UnionWith(usaSpaces.Select(spaceData => Game.SpaceLookup[spaceData]));
 
             int britainScore = prestigeSpaces.Count(space => space.Flag == Game.Britain);
             int franceScore = prestigeSpaces.Count(space => space.Flag == Game.France);
 
             if (britainScore > franceScore)
-                adjustVPCommand.faction = Game.Britain;
+                Commands.Push(new AdjustVPCommand(Game.Britain, VPaward)); 
             else if (franceScore > britainScore)
-                adjustVPCommand.faction = Game.France;
+                Commands.Push(new AdjustVPCommand(Game.France, VPaward));
 
-            commands.Add(adjustVPCommand);
         }
     }
 }

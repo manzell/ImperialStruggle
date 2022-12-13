@@ -9,11 +9,7 @@ namespace ImperialStruggle
     {
         public List<Space> eligibleSpaces = new List<Space>();
 
-        public Conditional.ConditionType ConditionalType => Conditional.ConditionType.Exactly;
-
-        public string ConditionalText => "Target Space??";
-
-        public bool Test(GameAction context)
+        public override bool Test(GameAction context)
         {
             /*
             if (context is ActionTarget<Space> space)

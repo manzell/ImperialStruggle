@@ -16,7 +16,7 @@ namespace ImperialStruggle
         public static System.Action<Player> setActivePlayerEvent;
         public static System.Action<Player, InvestmentTile> selectInvestmentTileEvent;
 
-        public static Stack<EventCardData> EventDeck = new(), Discards = new();
+        public static Stack<EventCard> EventDeck = new(), Discards = new();
         public static Dictionary<SpaceData, Space> SpaceLookup { get; private set; }
         public static HashSet<Space> Spaces { get; private set; }
         public static IEnumerable<AwardTile> AwardTiles { get; private set; }
@@ -77,8 +77,6 @@ namespace ImperialStruggle
             foreach (Space space in Spaces)
                 space.adjacentSpaces.AddRange(space.data.adjacentSpaces.Select(spacedata => SpaceLookup[spacedata]));
         }
-
-        public static Phase NextWarPhase => NextWarTurn.GetComponent<Phase>();
 
         public static WarTurn NextWarTurn
         {

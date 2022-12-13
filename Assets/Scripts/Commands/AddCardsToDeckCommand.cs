@@ -7,8 +7,8 @@ namespace ImperialStruggle
 {
     public class AddCardsToDeckCommand : Command
     {
-        List<EventCardData> cards;
-        public AddCardsToDeckCommand(List<EventCardData> cards) => this.cards = cards;
+        List<EventCard> cards;
+        public AddCardsToDeckCommand(List<EventCard> cards) => this.cards = cards;
         public override void Do(GameAction action)
         {
             Debug.Log($"{cards.Count} added to Event Card Deck");

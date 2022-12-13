@@ -24,14 +24,29 @@ MonoBehaviour:
     - Name: SelectEvent
       Entry: 6
       Data: 
+    - Name: actions
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   majorActionPoint:
     actionType: 1
     actionTier: 1
     baseValue: 4
+    conditionals: []
   minorActionPoint:
     actionType: 2
     actionTier: 0
     baseValue: 2
-  cardActions: []
-  EventTrigger: 0
-  MilUpgrade: 0
+    conditionals: []
+  references:
+    version: 2
+    RefIds: []

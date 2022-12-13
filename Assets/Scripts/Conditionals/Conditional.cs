@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
 
-public interface Conditional
+namespace ImperialStruggle
 {
-    public enum ConditionType { Exactly, MoreThan, FewerThan, NotLessThan, NotMoreThan, Not }
-    public ConditionType ConditionalType { get; }
-    public bool Test(GameAction context);
-    public string ConditionalText { get; }
+    [System.Serializable]
+    public abstract class Conditional
+    {
+        public enum ConditionType { Exactly, MoreThan, FewerThan, NotLessThan, NotMoreThan, Not }
+        public ConditionType ConditionalType { get; }
+        public abstract bool Test(GameAction context);
+        public string ConditionalText { get; }
+    }
 }
-
-public interface ICriteria { }

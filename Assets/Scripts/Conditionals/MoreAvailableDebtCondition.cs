@@ -8,14 +8,11 @@ namespace ImperialStruggle
     {
         [SerializeField] int margin = 1;
 
-        public Conditional.ConditionType ConditionalType => Conditional.ConditionType.MoreThan;
-        public string ConditionalText => "Available Debt Condition";
-
-        public bool Test(GameAction context)
+        public override bool Test(GameAction context)
         {
             if (context is PlayerAction playerAction)
             {
-                Player player = playerAction.actingPlayer;
+                Player player = playerAction.player;
                 Dictionary<Faction, int> availableDebt = RecordsTrack.availableDebt;
                 Faction opposingFaction = player.faction == Game.Britain ? Game.France : Game.Britain;
 

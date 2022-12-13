@@ -8,6 +8,6 @@ namespace ImperialStruggle
 {
     public abstract class PlayerAction : GameAction
     {
-        public Player actingPlayer;
+        public Player player;
     }
 }

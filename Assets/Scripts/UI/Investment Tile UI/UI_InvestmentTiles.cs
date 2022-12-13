@@ -13,7 +13,7 @@ namespace ImperialStruggle
 
         private void Awake()
         {
-            DealInvestmentTileCommand.dealInvestmentTileEvent.AddListener(AddTile);
+            DealInvestmentTileCommand.dealInvestmentTileEvent += AddTile;
             Phase.PhaseEndEvent += ClearInvestmentTiles;
         }
 

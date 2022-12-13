@@ -128,7 +128,8 @@ PrefabInstance:
       propertyPath: navalData
       value: 
       objectReference: {fileID: 11400000, guid: da3371847a0f69a45b35bbd2450627b2, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5609275463475793103, guid: 36c7d8fe8651e60498194cae801a7ebf, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

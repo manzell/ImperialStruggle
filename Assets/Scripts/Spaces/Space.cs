@@ -7,8 +7,10 @@ using Sirenix.OdinInspector;
 namespace ImperialStruggle
 {
     [System.Serializable]
-    public abstract class Space : ISpace
+    public abstract class Space : ISpace, ISelectable
     {
+        public string Name => data.name;
+
         public System.Action updateSpaceEvent;
         public SpaceData data;
 
@@ -16,10 +18,10 @@ namespace ImperialStruggle
         public virtual Faction Flag { get; private set; }
         public bool conflictMarker { get; private set; }
 
-        public string name => data.name;
         public virtual Faction control => conflictMarker ? null : Flag;
         public Map map => data.map;
         public Phase.Era availableEra => data.availableEra;
+
 
         public Space(SpaceData data)
         {

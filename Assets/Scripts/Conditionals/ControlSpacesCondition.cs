@@ -13,11 +13,7 @@ namespace ImperialStruggle
         [SerializeField] List<Space> spaces = new List<Space>();
         [SerializeField] Faction faction;
 
-        public Conditional.ConditionType ConditionalType => throw new System.NotImplementedException();
-
-        public string ConditionalText => throw new System.NotImplementedException();
-
-        public bool Test(GameAction action)
+        public override bool Test(GameAction action)
         {
             Faction opposingFaction = faction == Game.Britain ? Game.France : Game.Britain;
 

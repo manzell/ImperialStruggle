@@ -13,12 +13,12 @@ namespace ImperialStruggle
         {
             if (Phase.CurrentPhase is PeaceTurn peaceTurn)
             {
-                commands.Add(new ResetInvestmentTilesCommand()); // What does this even do??
+                Commands.Push(new ResetInvestmentTilesCommand()); // What does this even do??
 
                 IEnumerable<InvestmentTile> tiles = Game.InvestmentTiles.OrderBy(tile => tile.Value != PeaceTurn.InvestmentTileStatus.Reserve).ThenBy(tile => Random.value)
                     .Select(kvp => kvp.Key).Take(numToDeal);
 
-                commands.Add(new DealInvestmentTileCommand(tiles)); 
+                Commands.Push(new DealInvestmentTileCommand(tiles)); 
                     
             }
         }

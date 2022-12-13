@@ -3,50 +3,55 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; 
 using UnityEngine.EventSystems;
-using TMPro; 
+using TMPro;
 
-public class UI_MinisterCard : MonoBehaviour, IPointerClickHandler
+namespace ImperialStruggle
 {
-    [SerializeField] MinistryCard ministryCard;
-    [SerializeField] TextMeshProUGUI ministerName;
-    [SerializeField] Image highlight; 
-
-    public void OnPointerClick(PointerEventData eventData)
+    public class UI_MinisterCard : MonoBehaviour, IPointerClickHandler
     {
-        if(ministryCard.ministryCardStatus == MinistryCard.MinistryCardStatus.Revealed)
+        [SerializeField] MinistryCardData ministryCard;
+        [SerializeField] TextMeshProUGUI ministerName;
+        [SerializeField] Image highlight;
+
+        Dictionary<MinistryCardData, MinistryCard.MinistryCardStatus> ministers => ministryCard.faction.player.ministers;
+
+        public void OnPointerClick(PointerEventData eventData)
         {
+            if (ministers[ministryCard] == MinistryCard.MinistryCardStatus.Revealed)
+            {
+            }
+            else if (ministers[ministryCard] == MinistryCard.MinistryCardStatus.Selected)
+            {
+                ministryCard.faction.player.ministers[ministryCard] = MinistryCard.MinistryCardStatus.Revealed;
+                Debug.Log($"{ministryCard.faction} reveals {ministerName}.");
+            }
         }
-        else if(ministryCard.ministryCardStatus == MinistryCard.MinistryCardStatus.Selected)
+
+        public void SetMinistryCard(MinistryCardData card)
         {
-            ministryCard.ministryCardStatus = MinistryCard.MinistryCardStatus.Revealed;
-            Debug.Log($"{ministryCard.data.faction} reveals {ministerName}."); 
+            ministryCard = card;
+            Style();
         }
-    }
 
-    public void SetMinistryCard(MinistryCard card)
-    {
-        ministryCard = card;
-        Style(); 
-    }
-
-    void Style()
-    {
-        ministerName.text = ministryCard.Name;
-        ministerName.color = ministryCard.ministryCardStatus == MinistryCard.MinistryCardStatus.Exhausted ? Color.gray : Color.black;
-
-        switch(ministryCard.ministryCardStatus)
+        void Style()
         {
-            case MinistryCard.MinistryCardStatus.Selected:
-                highlight.gameObject.SetActive(true);
-                highlight.color = Color.gray;
-                break;
-            case MinistryCard.MinistryCardStatus.Exhausted:
-                highlight.gameObject.SetActive(true);
-                highlight.color = Color.black; 
-                break;
-            case MinistryCard.MinistryCardStatus.Revealed:
-                highlight.gameObject.SetActive(false); 
-                break;
+            ministerName.text = ministryCard.Name;
+            ministerName.color = ministryCard.faction.player.ministers[ministryCard] == MinistryCard.MinistryCardStatus.Exhausted ? Color.gray : Color.black;
+
+            switch (ministers[ministryCard])
+            {
+                case MinistryCard.MinistryCardStatus.Selected:
+                    highlight.gameObject.SetActive(true);
+                    highlight.color = Color.gray;
+                    break;
+                case MinistryCard.MinistryCardStatus.Exhausted:
+                    highlight.gameObject.SetActive(true);
+                    highlight.color = Color.black;
+                    break;
+                case MinistryCard.MinistryCardStatus.Revealed:
+                    highlight.gameObject.SetActive(false);
+                    break;
+            }
         }
     }
 }

@@ -2,24 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AdjustDebtCommand : Command
+namespace ImperialStruggle
 {
-    public Faction faction; 
-    public int amount; 
-
-    public AdjustDebtCommand(Faction faction, int amount)
+    public class AdjustDebtCommand : Command
     {
-        this.faction = faction;
-        this.amount = amount;
-    }   
+        public Faction faction;
+        public int amount;
 
-    public override void Do(GameAction action)
-    {
-        if (amount != 0 && faction != null)
+        public AdjustDebtCommand(Faction faction, int amount)
         {
-            RecordsTrack.currentDebt[faction] += amount;
-            RecordsTrack.adjustDebtEvent.Invoke(); 
-            // Check to see if Debt > Debt Limit
+            this.faction = faction;
+            this.amount = amount;
+        }
+
+        public override void Do(GameAction action)
+        {
+            if (amount != 0 && faction != null)
+            {
+                RecordsTrack.currentDebt[faction] += amount;
+                RecordsTrack.adjustDebtEvent.Invoke();
+                // Check to see if Debt > Debt Limit
+            }
         }
     }
 }

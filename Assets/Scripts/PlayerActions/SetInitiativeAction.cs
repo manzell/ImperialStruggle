@@ -26,8 +26,8 @@ namespace ImperialStruggle
                 ActionRound[] actionRounds = Phase.CurrentPhase.GetComponentsInChildren<ActionRound>();
                 peaceTurn.initiative = factions.First();
 
-                Debug.Log($"{actingPlayer.faction} elects to {(actingPlayer == peaceTurn.initiative ? "Play" : "Pass")} the first Action Round; " +
-                    $"{actingPlayer.faction.Opposition()} will go {(actingPlayer.faction.Opposition() == peaceTurn.initiative ? "First" : "Second")}");
+                Debug.Log($"{player.faction} elects to {(player == peaceTurn.initiative ? "Play" : "Pass")} the first Action Round; " +
+                    $"{player.faction.Opposition()} will go {(player.faction.Opposition() == peaceTurn.initiative ? "First" : "Second")}");
 
                 Debug.Log("Use a command to change the initiative!");
 

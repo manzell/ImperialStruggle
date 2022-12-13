@@ -10,11 +10,13 @@ namespace ImperialStruggle
     public class UI_Player : MonoBehaviour
     {
         public Player player;
-        [SerializeField] Dictionary<GameObject, MinistryCard> ministryCards = new Dictionary<GameObject, MinistryCard>();
+        [SerializeField] Dictionary<GameObject, MinistryCardData> ministryCards = new ();
         [SerializeField] GameObject ministerCardArea, handArea;
         [SerializeField] Image flag;
         [SerializeField] GameObject cardPrefab, ministryCardPrefab;
         [SerializeField] UI_SelectionWindow selectionPrefab;
+
+        GameObject modalWindow; 
 
         public static UnityEvent<Faction> setFactionEvent = new UnityEvent<Faction>();
 
@@ -26,9 +28,9 @@ namespace ImperialStruggle
             DealCardCommand.dealCardEvent += OnDealEventCard;
         }
 
-        void AddMinistryCard(MinistryCard card)
+        void AddMinistryCard(MinistryCardData card)
         {
-            if (card.data.faction == player.faction)
+            if (card.faction == player.faction)
             {
                 GameObject newMinistryCard = Instantiate(ministryCardPrefab, ministerCardArea.transform);
                 newMinistryCard.GetComponent<UI_MinisterCard>().SetMinistryCard(card);
@@ -44,7 +46,9 @@ namespace ImperialStruggle
 
         public void Select<T>(Selection<T> selection) where T: ISelectable
         {
-            Instantiate(selectionPrefab, transform).Open(selection);
+            UI_SelectionWindow window = Instantiate(selectionPrefab, transform);
+            window.transform.position = new Vector3(0, 0, 0);
+            window.Open(selection);
         }
     }
 }

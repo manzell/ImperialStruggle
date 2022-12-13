@@ -11,18 +11,17 @@ namespace ImperialStruggle
     {
         public static UnityEvent<PeaceTurn> setGlobalDemandEvent = new UnityEvent<PeaceTurn>();
 
-        HashSet<Resource> resources;
-
-        public SetGlobalDemandCommand(IEnumerable<Resource> resources) => this.resources = new HashSet<Resource>(resources);
+        IEnumerable<Resource> resources;
+        public SetGlobalDemandCommand(IEnumerable<Resource> resources) => this.resources = resources;
 
         public override void Do(GameAction action)
         {
             if (Phase.CurrentPhase is PeaceTurn peaceTurn)
             {
-                peaceTurn.globalDemandResources = resources;
+                peaceTurn.globalDemandResources = new(resources);
                 setGlobalDemandEvent.Invoke(peaceTurn);
 
-                resources.ForEach(resource => Debug.Log($"{resource} is in Global Demand!"));
+                resources.ForEach(resource => Debug.Log($"{resource.Name} is in Global Demand!"));
             }
         }
     }

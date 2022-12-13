@@ -12,11 +12,7 @@ namespace ImperialStruggle
         [SerializeField] Faction targetFaction;
         [SerializeField] List<Space> spaces;
 
-        public Conditional.ConditionType ConditionalType => throw new System.NotImplementedException();
-
-        public string ConditionalText => throw new System.NotImplementedException();
-
-        public bool Test(GameAction action)
+        public override bool Test(GameAction action)
         {
             int spacesCount = spaces.Where(space => space.Flag == targetFaction).Count();
 

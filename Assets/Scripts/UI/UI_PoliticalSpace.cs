@@ -32,7 +32,7 @@ namespace ImperialStruggle
 
             GraphicSettings graphics = FindObjectOfType<Game>().graphicSettings;
 
-            spaceName.text = politicalSpace.name;
+            spaceName.text = politicalSpace.Name;
             flagCost.text = politicalSpace.FlagCost.ToString();
             trim.color = politicalSpace.Prestigious ? graphics.prestigeHighlightColor : trimColor;
             highlight.gameObject.SetActive(politicalSpace.conflictMarker);

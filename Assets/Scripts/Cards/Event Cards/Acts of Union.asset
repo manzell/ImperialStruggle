@@ -21,14 +21,34 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: factionText
+    - Name: eras
       Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[Game+Faction, Assembly-CSharp],[System.ValueTuple`2[[System.String,
-        mscorlib],[System.String, mscorlib]], mscorlib]], mscorlib
+      Data: 0|System.Collections.Generic.HashSet`1[[ImperialStruggle.Phase+Era, Assembly-CSharp]],
+        System.Core
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: cardActions
+      Entry: 7
+      Data: 1|System.Collections.Generic.Dictionary`2[[Faction, Assembly-CSharp],[System.ValueTuple`2[[ImperialStruggle.CardAction,
+        Assembly-CSharp],[ImperialStruggle.CardAction, Assembly-CSharp]], mscorlib]],
+        mscorlib
     - Name: comparer
       Entry: 7
-      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Game+Faction, Assembly-CSharp]],
+      Data: 2|System.Collections.Generic.ObjectEqualityComparer`1[[Faction, Assembly-CSharp]],
         mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 12
       Data: 0
@@ -38,62 +58,26 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: bonusCondition
+      Entry: 7
+      Data: 3|System.Collections.Generic.Dictionary`2[[Faction, Assembly-CSharp],[ImperialStruggle.Conditional,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 4|System.Collections.Generic.ObjectEqualityComparer`1[[Faction, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2
-    - Name: $v
-      Entry: 7
-      Data: System.ValueTuple`2[[System.String, mscorlib],[System.String, mscorlib]],
-        mscorlib
-    - Name: Item1
-      Entry: 1
-      Data: 'Unified Parliament reduces Scottish intrigue in Europe: 1 DP (unflagging
-        in Europe only).'
-    - Name: Item2
-      Entry: 1
-      Data: Score 2 VP.
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 1
-    - Name: $v
-      Entry: 7
-      Data: System.ValueTuple`2[[System.String, mscorlib],[System.String, mscorlib]],
-        mscorlib
-    - Name: Item1
-      Entry: 1
-      Data: 'Hapsburgs isolated: 2 DP.'
-    - Name: Item2
-      Entry: 1
-      Data: Unflag a Political space in Europe (not Spain or Austria).
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
     - Name: 
       Entry: 8
       Data: 
-  era: 0
   keywords: 
   reqdActionType: 0
   bonusKeyword: 0
-  bonusCondition: More Prestige spaces in Scotland and Ireland

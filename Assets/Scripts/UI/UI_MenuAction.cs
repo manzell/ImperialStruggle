@@ -27,7 +27,7 @@ namespace ImperialStruggle
         public void SetAction(PlayerAction action)
         {
             this.action = action;
-            actionName.text = action.actionName;
+            actionName.text = action.ToString();
 
             //if (action.actionPointCost.Count > 0)
             //    SetActionCost(action.actionPointCost); 

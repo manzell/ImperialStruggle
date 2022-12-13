@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 114328601006868304}
   - component: {fileID: 114328601006868306}
   - component: {fileID: 114328601006868307}
+  - component: {fileID: 1339756370990000179}
   m_Layer: 5
   m_Name: BasicSelectionWindow
   m_TagString: Untagged
@@ -78,6 +79,28 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1339756370990000179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114328601006868305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3161ff4c5ea81574c9adb183121806fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileArea: {fileID: 298233489477510920}
+  buttonArea: {fileID: 7993716336454942894}
+  defaultTilePrefab: {fileID: 6121498773127361383, guid: 145905830f63aa348b921f4fd5852cca, type: 3}
+  ministryCardPrefab: {fileID: 4470513594242991769, guid: 5d9d4a894648fca4eb25aec108f79d8e, type: 3}
+  eventCardPrefab: {fileID: 4470513594242991769, guid: 5d9d4a894648fca4eb25aec108f79d8e, type: 3}
+  windowTitle: {fileID: 6416790140263718537}
+  okButton: {fileID: 3257304401553188270}
+  resetButton: {fileID: 8583353249979606020}
+  passButton: {fileID: 0}
+  cancelButton: {fileID: 0}
 --- !u!1 &298233489477510920
 GameObject:
   m_ObjectHideFlags: 0

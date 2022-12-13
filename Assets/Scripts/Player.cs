@@ -8,13 +8,17 @@ namespace ImperialStruggle
 {
     public class Player : SerializedMonoBehaviour, ISelectable
     {
-        public Faction faction { get; private set; }
+        [field: SerializeField] public Faction faction { get; private set; }
         [field: SerializeField] public Player Opponent { get; private set; }
+        [field: SerializeField] public Dictionary<MinistryCardData, MinistryCard.MinistryCardStatus> ministers { get; private set; }
         public List<EventCard> hand;
-        public List<MinistryCard> ministers; // bool = revealed?
-        public ActionPoints actionPoints = new ActionPoints();
-        public Queue<WarTile> warTiles, bonusWarTiles;
+        public Queue<WarTile> warTiles { get; private set; }
+        public Queue<WarTile> bonusWarTiles { get; private set; }
+        public List<Squadron> squadrons { get; private set; }
+        public ActionPoints actionPoints { get; private set; } = new ();
         public UI_Player UI;
+
+        public HashSet<MinistryCard.Keyword> Keywords => new HashSet<MinistryCard.Keyword>(ministers.SelectMany(minister => minister.Key.keywords));
 
         public static List<Player> players = new();
 
@@ -22,9 +26,9 @@ namespace ImperialStruggle
 
         private void Awake()
         {
+            Game.ActivePlayer = this;
+            faction.player = this;
             players.Add(this);
-
-            Debug.Log(RecordsTrack.currentDebt); 
 
             RecordsTrack.currentDebt.Add(faction, 0);
             RecordsTrack.debtLimit.Add(faction, 0);
@@ -32,15 +36,9 @@ namespace ImperialStruggle
 
             ActionRound.PhaseEndEvent += ResetActionPoints;
 
-            foreach (WarTile warTile in GetComponentsInChildren<WarTile>().OrderBy(tile => Random.value))
-            {
-                if (warTile.warTileSet == WarTile.WarTileSet.Basic)
-                    warTiles.Enqueue(warTile);
-                else if (warTile.warTileSet == WarTile.WarTileSet.Bonus)
-                    bonusWarTiles.Enqueue(warTile);
-            }
-
-            Game.ActivePlayer = this;
+            warTiles = new(faction.basicWarTiles.OrderBy(x => Random.value));
+            bonusWarTiles = new(faction.advancedWarTiles.OrderBy(x => Random.value)); 
+            ministers = faction.ministers.ToDictionary(card => card, card => MinistryCard.MinistryCardStatus.Reserved);
         }
 
         void ResetActionPoints(Phase phase)
@@ -48,10 +46,6 @@ namespace ImperialStruggle
             Debug.Log($"Resetting Action Points {phase}");
             actionPoints = new ActionPoints();
         }
-
-        public HashSet<MinistryCard.Keyword> Keywords => new HashSet<MinistryCard.Keyword>(ministers.SelectMany(minister => minister.data.keywords));
-
-        public List<Squadron> squadrons;
 
         [Button]
         public bool CanAffordAction(PlayerAction action)

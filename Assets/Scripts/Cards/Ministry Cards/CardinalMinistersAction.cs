@@ -5,14 +5,14 @@ using System.Linq;
 
 namespace ImperialStruggle
 {
-    public class CardinalMinistersAction : CardAction
+    public class CardinalMinistersAction : PlayerAction
     {
         [SerializeField] int maxDP = 3;
         [SerializeField] List<SpaceData> bonusSpaces;
 
         bool used;
 
-        protected override void Do(Player player) // NOTE: Do is the REVEAL action, 
+        protected override void Do() // NOTE: Do is the REVEAL action, 
         {
             PeaceTurn peaceTurn = Phase.CurrentPhase.GetComponentInParent<PeaceTurn>();
 

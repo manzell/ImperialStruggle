@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using System.Collections;
+using System.Threading.Tasks;
 
 namespace ImperialStruggle
 {
@@ -12,8 +13,24 @@ namespace ImperialStruggle
         public int maxSelectable { get; private set; } = 1;
 
         public System.Action<Selection<T>> OnSelect, OnCancel, OnPass;
+        public TaskCompletionSource<T> Task { get; private set; }
 
-        public Selection(Player player, IEnumerable<T> items, System.Action<Selection<T>> callback)
+        public IEnumerator<T> GetEnumerator() => selectableItems.GetEnumerator();
+        IEnumerator IEnumerable.GetEnumerator() => this.GetEnumerator();
+
+        UI_SelectionWindow window;
+
+        public void SetTitle(string title)
+        {
+
+        }
+
+        public Selection()
+        {
+            Task = new(); 
+        }
+
+        public Selection(Player player, IEnumerable<T> items, System.Action<Selection<T>> callback) : this()
         {
             selectableItems = items.ToList();
             player.UI.Select(this);
@@ -38,7 +55,9 @@ namespace ImperialStruggle
             }
         }
 
-        public IEnumerator<T> GetEnumerator() => selectableItems.GetEnumerator();
-        IEnumerator IEnumerable.GetEnumerator() => this.GetEnumerator();
+        public Selection(Player player, WarTile warTileToReplace, IEnumerable<T> warTiles, System.Action<Theater, WarTile, WarTile> callback)
+        {
+            Debug.Log("Cool, a custom Constructor");
+        }
     }
 }

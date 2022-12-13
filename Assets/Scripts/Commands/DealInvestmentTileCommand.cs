@@ -10,7 +10,7 @@ namespace ImperialStruggle
 {
     public class DealInvestmentTileCommand : Command
     {
-        public static UnityEvent<InvestmentTile> dealInvestmentTileEvent = new UnityEvent<InvestmentTile>();
+        public static System.Action<InvestmentTile> dealInvestmentTileEvent;
 
         IEnumerable<InvestmentTile> tiles;
         public DealInvestmentTileCommand(IEnumerable<InvestmentTile> tiles) => this.tiles = tiles;
@@ -22,7 +22,7 @@ namespace ImperialStruggle
                 foreach (InvestmentTile tile in tiles)
                 {
                     peaceTurn.investmentTiles.Add(tile, null);
-                    dealInvestmentTileEvent.Invoke(tile);
+                    dealInvestmentTileEvent?.Invoke(tile);
                     Debug.Log($"{tile.Name} added to Investment Tile Pool");
                 }
             }

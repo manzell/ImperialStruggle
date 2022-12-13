@@ -13,7 +13,7 @@ namespace ImperialStruggle
         protected override void Do()
         {
             foreach (Faction faction in Player.players.Select(p => p.faction))
-                commands.Add(new AdjustTreatyPointsCommand(faction, Mathf.Min(0, treatyPointsCap - RecordsTrack.treatyPoints[faction])));
+                Commands.Push(new AdjustTreatyPointsCommand(faction, Mathf.Min(0, treatyPointsCap - RecordsTrack.treatyPoints[faction])));
         }
     }
 }

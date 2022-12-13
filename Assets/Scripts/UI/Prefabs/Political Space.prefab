@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 6193261512970342155}
   - component: {fileID: 2696837734608836166}
   - component: {fileID: 2696837734608836169}
-  - component: {fileID: 8829556159610327131}
-  - component: {fileID: 2696837734608836171}
   m_Layer: 5
   m_Name: Political Space
   m_TagString: Untagged
@@ -53,13 +51,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4b901042c3620044bb057150a62ac74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  politicalData: {fileID: 0}
   spaceName: {fileID: 195386396767014263}
   flagCost: {fileID: 6935207156884034248}
   trim: {fileID: 7449198835666568089}
   highlight: {fileID: 335809187342107822}
   background: {fileID: 7079403299999125487}
   trimColor: {r: 235, g: 215, b: 171, a: 1}
-  space: {fileID: 0}
 --- !u!114 &2696837734608836169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,107 +70,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c303c7286f3f3504a879809e1a3789d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8829556159610327131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3955096928532692529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdb04a89d55190945b17dc8bf374496f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 1|SpaceControlCondition, Assembly-CSharp
-    - Name: spaceConditionType
-      Entry: 3
-      Data: 3
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: actionPointBonusCost
-      Entry: 7
-      Data: 2|ActionPoints, Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: Shift Space
-  actionText: 
-  actingPlayer: {fileID: 0}
---- !u!114 &2696837734608836171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3955096928532692529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e2944b4e4401ab4bbc2e98176d1bd6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: conditionals
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 1|ConflictCondition, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  actionName: Remove Conflict Marker
-  actionText: Remove Conflict Marker
-  actingPlayer: {fileID: 0}
 --- !u!1 &8829556158330257167
 GameObject:
   m_ObjectHideFlags: 0

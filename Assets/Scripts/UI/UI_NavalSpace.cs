@@ -31,7 +31,7 @@ namespace ImperialStruggle
             }
             GraphicSettings settings = FindObjectOfType<Game>().graphicSettings;
 
-            spaceName.text = navalSpace.name;
+            spaceName.text = navalSpace.Name;
             trim.color = navalSpace.Prestigious ? settings.prestigeHighlightColor : Color.white;
         }
     }

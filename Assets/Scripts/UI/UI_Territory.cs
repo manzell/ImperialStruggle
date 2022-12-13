@@ -29,7 +29,7 @@ namespace ImperialStruggle
             }
 
             GraphicSettings graphics = FindObjectOfType<Game>().graphicSettings;
-            spaceName.text = territory.name;
+            spaceName.text = territory.Name;
 
 
             if (territory.Prestigious)

@@ -7,11 +7,11 @@ namespace ImperialStruggle
 {
     public class ScoreMapAction : GameAction
     {
-        public Dictionary<Map, Faction> mapWinners = new Dictionary<Map, Faction>();
         public static UnityEvent<Map> scoreMapEvent;
 
         protected override void Do()
         {
+            throw new System.NotImplementedException(); 
             /*
             foreach(Map map in mapWinners.Keys)
             {

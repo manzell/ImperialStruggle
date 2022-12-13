@@ -6,11 +6,7 @@ namespace ImperialStruggle
 {
     public class DamagedCondition : Conditional
     {
-        public Conditional.ConditionType ConditionalType => Conditional.ConditionType.Exactly;
-
-        public string ConditionalText => "Fort Damaged";
-
-        public bool Test(GameAction context)
+        public override bool Test(GameAction context)
         {
             return true; 
             /*

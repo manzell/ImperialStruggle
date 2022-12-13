@@ -10,11 +10,7 @@ namespace ImperialStruggle
         enum SpaceConditionType { Friendly, Opposed, Neutral, Nonfriendly, Nonopposed }
         [SerializeField] SpaceConditionType spaceConditionType;
 
-        public Conditional.ConditionType ConditionalType => throw new System.NotImplementedException();
-
-        public string ConditionalText => throw new System.NotImplementedException();
-
-        public bool Test(GameAction action)
+        public override bool Test(GameAction action)
         {    
             /*
             if(action is ActionTarget<Space> spaceAction && action is PlayerAction playerAction)

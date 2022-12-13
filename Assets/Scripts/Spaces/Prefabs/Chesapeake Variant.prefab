@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1462739459306316012, guid: a2547632e00cd35479dc50bcb4b7acad, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1920022675910540586, guid: a2547632e00cd35479dc50bcb4b7acad, type: 3}
       propertyPath: m_text
       value: Chesapeake

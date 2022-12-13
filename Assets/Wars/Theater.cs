@@ -6,7 +6,7 @@ using Sirenix.OdinInspector;
 
 namespace ImperialStruggle
 {
-    public class Theater : SerializedMonoBehaviour, ISelectable
+    public class Theater : Phase, ISelectable
     {
         public string Name => name;
         public Map map;
@@ -23,5 +23,7 @@ namespace ImperialStruggle
         { Game.France, scoringBonuses.Where(bonus => bonus.scoringFaction == Game.France).Count()
             +  warTiles.Where(tile => tile.faction == Game.France).Sum(tile => tile.value) }
         };
+
+        public override bool Completed => throw new System.NotImplementedException();
     }
 }

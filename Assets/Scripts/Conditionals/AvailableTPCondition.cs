@@ -6,11 +6,7 @@ namespace ImperialStruggle
 {
     public class AvailableTPCondition : Conditional
     {
-        public Conditional.ConditionType ConditionalType { get; private set; }
-
-        public string ConditionalText => "Available Treaty Points";
-
-        public bool Test(GameAction context)
+        public override bool Test(GameAction context)
         {
             return true;
             /*

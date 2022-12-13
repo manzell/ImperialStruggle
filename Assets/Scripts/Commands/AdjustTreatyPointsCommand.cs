@@ -2,20 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AdjustTreatyPointsCommand : Command
+namespace ImperialStruggle
 {
-    Faction faction;
-    int amount; 
-
-    public AdjustTreatyPointsCommand(Faction faction, int amount)
+    public class AdjustTreatyPointsCommand : Command
     {
-        this.faction = faction;
-        this.amount = amount; 
-    }
+        Faction faction;
+        int amount;
 
-    public override void Do(GameAction action)
-    {
-        RecordsTrack.treatyPoints[faction] += amount;
-        RecordsTrack.adjustTPEvent.Invoke(); 
+        public AdjustTreatyPointsCommand(Faction faction, int amount)
+        {
+            this.faction = faction;
+            this.amount = amount;
+        }
+
+        public override void Do(GameAction action)
+        {
+            RecordsTrack.treatyPoints[faction] += amount;
+            RecordsTrack.adjustTPEvent.Invoke();
+        }
     }
 }

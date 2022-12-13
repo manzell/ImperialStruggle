@@ -28,7 +28,7 @@ namespace ImperialStruggle
 
             GraphicSettings graphics = FindObjectOfType<Game>().graphicSettings;
 
-            marketName.text = market.name;
+            marketName.text = market.Name;
             flagCost.text = market.FlagCost.ToString();
 
             resourceBackground.color = market.Resource.resourceColor;

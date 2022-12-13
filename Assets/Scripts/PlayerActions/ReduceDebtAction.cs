@@ -6,13 +6,7 @@ namespace ImperialStruggle
 {
     public class ReduceDebtAction : PlayerAction
     {
-        Faction faction;
         public int debtAdjustment;
-
-
-        protected override void Do()
-        {
-            commands.Add(new AdjustDebtCommand(actingPlayer.faction, debtAdjustment));
-        }
+        protected override void Do() => Commands.Push(new AdjustDebtCommand(player.faction, debtAdjustment));
     }
 }
