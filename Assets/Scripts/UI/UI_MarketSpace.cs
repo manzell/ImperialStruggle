@@ -10,31 +10,32 @@ namespace ImperialStruggle
     public class UI_MarketSpace : UI_Space
     {
         Market market;
+        protected override Space Space => market;
         [SerializeField] MarketData marketData;
-        [SerializeField] Image background, highlight, trim, resourceIcon, resourceBackground;
-        [SerializeField] TextMeshProUGUI marketName, flagCost;
+        [SerializeField] Image resourceIcon, resourceBackground;
+        [SerializeField] TextMeshProUGUI flagCost;
         [SerializeField] GameObject marketCircle;
 
-        public void Awake()
+        void Start()
         {
-            Game.startGameEvent += Style;
+            market = (Market)Game.SpaceLookup[marketData];
+            market.updateSpaceEvent += Style;
         }
 
         [Button]
         public override void Style()
         {
-            if (market == null)
-                market = (Market)Game.SpaceLookup[marketData];
-
-            GraphicSettings graphics = FindObjectOfType<Game>().graphicSettings;
-
-            marketName.text = market.Name;
+            spaceName.text = market.Name;
             flagCost.text = market.FlagCost.ToString();
 
-            resourceBackground.color = market.Resource.resourceColor;
-            resourceIcon.sprite = market.Resource.resourceIcon;
-            background.color = graphics.factionColors[market.Flag];
-            marketName.color = market.Flag == null || market.Flag == Game.Spain ? Color.black : Color.white;
+            if(market.Resource != null)
+            {
+                resourceBackground.color = market.Resource.resourceColor;
+                resourceIcon.sprite = market.Resource.resourceIcon;
+            }
+
+            background.color = market.Flag.Color; 
+            spaceName.color = market.Flag == null || market.Flag == Game.Spain ? Color.black : Color.white;
         }
     }
 }

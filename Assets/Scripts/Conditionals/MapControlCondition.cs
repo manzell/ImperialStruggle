@@ -10,7 +10,7 @@ namespace ImperialStruggle
         public override bool Test(GameAction context)
         {
             if (context is PlayerAction playerAction)
-                return map.controllingFaction == playerAction.player.faction;
+                return map.controllingFaction == playerAction.Player.Faction;
             return false;
         }
     }

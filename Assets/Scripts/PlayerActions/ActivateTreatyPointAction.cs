@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace ImperialStruggle
@@ -8,12 +9,12 @@ namespace ImperialStruggle
     {
         public ActionPoints actionPointAward;
         public ActionPoints actionPoints => actionPointAward;
-        public Faction faction => player.faction;
+        public Faction faction => Player.Faction;
         public int tp => -1;
 
-        protected override void Do()
+        protected override Task Do()
         {
-            throw new System.NotImplementedException();
+            return Task.CompletedTask; 
         }
     }
 }

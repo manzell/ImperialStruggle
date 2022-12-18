@@ -13,7 +13,7 @@ namespace ImperialStruggle
         [SerializeField] TextMeshProUGUI ministerName;
         [SerializeField] Image highlight;
 
-        Dictionary<MinistryCardData, MinistryCard.MinistryCardStatus> ministers => ministryCard.faction.player.ministers;
+        Dictionary<MinistryCardData, MinistryCard.MinistryCardStatus> ministers => ministryCard.faction.player.Ministers;
 
         public void OnPointerClick(PointerEventData eventData)
         {
@@ -22,7 +22,7 @@ namespace ImperialStruggle
             }
             else if (ministers[ministryCard] == MinistryCard.MinistryCardStatus.Selected)
             {
-                ministryCard.faction.player.ministers[ministryCard] = MinistryCard.MinistryCardStatus.Revealed;
+                ministryCard.faction.player.Ministers[ministryCard] = MinistryCard.MinistryCardStatus.Revealed;
                 Debug.Log($"{ministryCard.faction} reveals {ministerName}.");
             }
         }
@@ -36,7 +36,7 @@ namespace ImperialStruggle
         void Style()
         {
             ministerName.text = ministryCard.Name;
-            ministerName.color = ministryCard.faction.player.ministers[ministryCard] == MinistryCard.MinistryCardStatus.Exhausted ? Color.gray : Color.black;
+            ministerName.color = ministryCard.faction.player.Ministers[ministryCard] == MinistryCard.MinistryCardStatus.Exhausted ? Color.gray : Color.black;
 
             switch (ministers[ministryCard])
             {

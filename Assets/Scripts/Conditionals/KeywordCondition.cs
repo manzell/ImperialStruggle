@@ -11,7 +11,7 @@ namespace ImperialStruggle
         public override bool Test(GameAction action)
         {
             if (action is PlayerAction playerAction)
-                return playerAction.player.Keywords.Contains(keyword);
+                return playerAction.Player.Keywords.Contains(keyword);
             else
                 return true;
         }

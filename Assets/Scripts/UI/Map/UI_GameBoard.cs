@@ -6,16 +6,14 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using Sirenix.OdinInspector; 
 
-public class UI_GameBoard : SerializedMonoBehaviour, IDragHandler, IBeginDragHandler, IPointerClickHandler
+public class UI_GameBoard : SerializedMonoBehaviour, IDragHandler, IBeginDragHandler
 {
-    public static UnityEvent<PointerEventData> clickEvent = new UnityEvent<PointerEventData>();
     [SerializeField] GameObject mapContainer, lineContainer, linePrefab;
     [SerializeField] float speed = 0.1f; 
     Vector2 previousPosition;
 
     [SerializeField] public Dictionary<(Space, Space), LineRenderer> connections = new Dictionary<(Space, Space), LineRenderer>(); 
 
-    public void OnPointerClick(PointerEventData eventData) => clickEvent.Invoke(eventData);
     public void OnBeginDrag(PointerEventData eventData) => previousPosition = Mouse.current.position.ReadValue(); 
 
     public void OnDrag(PointerEventData eventData)

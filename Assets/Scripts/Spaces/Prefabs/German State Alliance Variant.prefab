@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: f2dedbb241e85a746ac9a14627c61aa6, type: 2}
     - target: {fileID: 3955096928532692529, guid: 5a785fffa30489b479f2b49bca9a6312, type: 3}
       propertyPath: m_Name
-      value: German State Alliance
+      value: German State Alliance Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6193261512970342155, guid: 5a785fffa30489b479f2b49bca9a6312, type: 3}
       propertyPath: m_Pivot.x

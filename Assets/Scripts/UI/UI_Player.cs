@@ -16,21 +16,27 @@ namespace ImperialStruggle
         [SerializeField] GameObject cardPrefab, ministryCardPrefab;
         [SerializeField] UI_SelectionWindow selectionPrefab;
 
-        GameObject modalWindow; 
+        public static System.Action<Faction> setFactionEvent;
 
-        public static UnityEvent<Faction> setFactionEvent = new UnityEvent<Faction>();
+        public UI_SelectionWindow Select<T>(Selection<T> selection) where T : ISelectable
+        {
+            UI_SelectionWindow window = Instantiate(selectionPrefab, transform);
+            window.Open(selection);
+
+            return window;
+        }
 
         public void Awake()
         {
-            player.UI = this;
+            player.SetUI(this); 
             // Move these out of their Commands? Or Encapsulate it there?
-            SelectMinistryCardCommand.SelectEvent += AddMinistryCard;
-            DealCardCommand.dealCardEvent += OnDealEventCard;
+            //SelectMinistryCardCommand.SelectEvent += AddMinistryCard;
+            //DealCardCommand.dealCardEvent += OnDealEventCard;
         }
 
         void AddMinistryCard(MinistryCardData card)
         {
-            if (card.faction == player.faction)
+            if (card.faction == player.Faction)
             {
                 GameObject newMinistryCard = Instantiate(ministryCardPrefab, ministerCardArea.transform);
                 newMinistryCard.GetComponent<UI_MinisterCard>().SetMinistryCard(card);
@@ -42,13 +48,6 @@ namespace ImperialStruggle
         {
             if (this.player == player)
                 Instantiate(cardPrefab, handArea.transform).GetComponent<UI_Card>().SetCard(card);
-        }
-
-        public void Select<T>(Selection<T> selection) where T: ISelectable
-        {
-            UI_SelectionWindow window = Instantiate(selectionPrefab, transform);
-            window.transform.position = new Vector3(0, 0, 0);
-            window.Open(selection);
         }
     }
 }

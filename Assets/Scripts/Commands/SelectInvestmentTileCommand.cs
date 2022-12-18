@@ -9,25 +9,22 @@ namespace ImperialStruggle
     public class SelectInvestmentTileCommand : Command
     {
         InvestmentTile tile;
-        Faction faction;
+        Player player; 
 
-        public SelectInvestmentTileCommand(InvestmentTile tile, Faction faction)
+        public SelectInvestmentTileCommand(Player player, InvestmentTile tile)
         {
             this.tile = tile;
-            this.faction = faction;
+            this.player = player; 
         }
 
         public override void Do(GameAction action)
         {
-            if (Phase.CurrentPhase is PeaceTurn peaceTurn)
-                peaceTurn.investmentTiles.Add(tile, faction);
-        }
-
-        public override void Undo()
-        {
-            if (Phase.CurrentPhase is PeaceTurn peaceTurn)
-                peaceTurn.investmentTiles.Remove(tile);
-
+            if (Phase.CurrentPhase is ActionRound actionRound)
+            {
+                actionRound.investmentTile = tile;
+                actionRound.player.ActionPoints.Add(tile.majorActionPoint);
+                actionRound.player.ActionPoints.Add(tile.minorActionPoint);
+            }
         }
     }
 }

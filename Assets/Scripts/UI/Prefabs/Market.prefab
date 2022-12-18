@@ -300,12 +300,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e533d6fd2f1a821498acee72b4b56bd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  background: {fileID: 8803547010784788402}
   highlight: {fileID: 3761033291928801279}
+  background: {fileID: 8803547010784788402}
   trim: {fileID: 9183880089295827908}
+  spaceName: {fileID: 1920022675910540586}
+  marketData: {fileID: 0}
   resourceIcon: {fileID: 1963881591020585779}
   resourceBackground: {fileID: 2728077312471427609}
-  marketName: {fileID: 1920022675910540586}
   flagCost: {fileID: 8659756594470036117}
   marketCircle: {fileID: 1462739459306316012}
 --- !u!1 &3926853243202905355

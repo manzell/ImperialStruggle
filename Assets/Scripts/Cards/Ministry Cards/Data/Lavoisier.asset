@@ -20,11 +20,34 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
-  faction: 1
+    SerializationNodes:
+    - Name: eras
+      Entry: 7
+      Data: 0|System.Collections.Generic.HashSet`1[[ImperialStruggle.Phase+Era, Assembly-CSharp]],
+        System.Core
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   keywords: 03000000
-  eras: 02000000
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
   cardText: On any Action Round you play an Event with a Bonus effect, and your receive
     that Bonus effect, your Major and Minor Actions from Investment Tiles are worth
     1 extra Action Point.
-  actions: []
+  flavor: Antoine-Laurent de Lavoisier was a French chemist and nobleman who is considered
+    to be the father of modern chemistry. He was born in Paris in 1743 and was executed
+    by guillotine during the French Revolution in 1794. Lavoisier is best known for
+    his pioneering work in the field of chemistry, including his discovery of the
+    role of oxygen in combustion and his development of the modern system of chemical
+    nomenclature. He was a wealthy landowner and a member of the French Academy of
+    Sciences, and he used his wealth and influence to support the study of science.
+    Lavoisier was a key figure in the scientific revolution of the 18th century and
+    his work continues to be highly regarded by chemists today.

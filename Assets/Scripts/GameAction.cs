@@ -5,6 +5,7 @@ using UnityEngine.Events;
 using Sirenix.OdinInspector;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace ImperialStruggle
 {
@@ -21,15 +22,15 @@ namespace ImperialStruggle
 
         public void Queue(Command command) => Commands.Push(command); 
 
-        public void Execute()
+        public async Task Execute()
         {
             if (Can())
             {
                 if (Commands == null)
                     Commands = new();
 
-                Do();
-                Phase.CurrentPhase.Push(this);
+                await Do(); // Execution should pause here
+                Phase.CurrentPhase.Push(this); // Command execution happens here. 
             }
         }
 
@@ -41,6 +42,6 @@ namespace ImperialStruggle
             return retVal;
         }
 
-        protected abstract void Do();
+        protected abstract Task Do();
     }
 }

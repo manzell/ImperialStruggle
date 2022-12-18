@@ -3,25 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using Sirenix.OdinInspector;
+using Sirenix.OdinInspector.Editor.Drawers;
+using System.Linq;
 
 namespace ImperialStruggle
 {
     [System.Serializable]
     public abstract class Space : ISpace, ISelectable
     {
-        public string Name => data.name;
-
-        public System.Action updateSpaceEvent;
         public SpaceData data;
 
+        public string Name => data.name;
         public HashSet<Space> adjacentSpaces { get; private set; } = new();
         public virtual Faction Flag { get; private set; }
         public bool conflictMarker { get; private set; }
+        public System.Action UISelectionEvent { get; set; }
+        public System.Action UIDeselectEvent { get; set; }
+        public System.Action updateSpaceEvent;
 
         public virtual Faction control => conflictMarker ? null : Flag;
         public Map map => data.map;
         public Phase.Era availableEra => data.availableEra;
-
 
         public Space(SpaceData data)
         {
@@ -30,7 +32,11 @@ namespace ImperialStruggle
         }
 
         public void SetConflictMarker(bool status) => conflictMarker = status;
-        public void SetFlag(Faction faction) => Flag = faction;
+        public void SetFlag(Faction faction)
+        {
+            Flag = faction;
+            updateSpaceEvent?.Invoke(); 
+        }
     }
 
     public class Fort : Space, FlaggableSpace
@@ -46,14 +52,46 @@ namespace ImperialStruggle
         public Market(MarketData data) : base(data)
         {
             Resource = data.ResourceType;
-            FlagCost = data.FlagCost;
         }
 
         public Resource Resource;
-        public int FlagCost { get; private set; }
+        public int FlagCost => isolated || conflictMarker ? 1 : (data as MarketData).FlagCost; 
 
-        public bool isolated;
-        public bool unprotected;
+        public bool isolated => Isolated();
+        public bool Protected => !adjacentSpaces.Where(space => space.Flag == this.Flag).Any(space =>
+                space is NavalSpace navapSpace || (space is Fort fort && !fort.damaged)); 
+
+        bool Isolated()
+        {
+            Space currentSpace = this;
+            List<Space> spacesToCheck = new(); 
+            List<Space> checkedSpaces = new();
+
+            //Debug.Log($"Checking {Name} for Isolated Status"); 
+
+            while(currentSpace != null)                
+            {
+                if ((currentSpace is Territory || currentSpace is Fort || currentSpace is NavalSpace) && currentSpace.control == this.Flag)
+                {
+                    return false;
+                }
+                else
+                {
+                    checkedSpaces.Add(currentSpace);    
+
+                    List<Space> spacesToAdd = currentSpace.adjacentSpaces.Where(space =>
+                        !checkedSpaces.Contains(space) && space.Flag == this.Flag && !space.conflictMarker).ToList();
+
+                    //Debug.Log($"{currentSpace} is not Controlled Territory/Fort/NavalSpace. Adding {string.Join(", ", spacesToCheck.Select(space => space.Name).ToArray())}");
+
+                    spacesToCheck.AddRange(spacesToAdd);
+                    currentSpace = spacesToCheck.FirstOrDefault();
+                }
+
+            }
+
+            return true; 
+        }
     }
 
     public class NavalSpace : Space, PrestigeSpace
@@ -91,7 +129,7 @@ namespace ImperialStruggle
         public bool Prestigious { get; private set; }
     }
 
-    public interface ISpace
+    public interface ISpace : ISelectable
     {
         public Faction Flag { get; }
     }
@@ -99,6 +137,7 @@ namespace ImperialStruggle
     public interface FlaggableSpace : ISpace
     {
         public int FlagCost { get; }
+        public void SetFlag(Faction faction); 
     }
 
     public interface PrestigeSpace : ISpace

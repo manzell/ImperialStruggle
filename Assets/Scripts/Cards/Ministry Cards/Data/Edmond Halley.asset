@@ -20,11 +20,26 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
-  faction: 2
+    SerializationNodes:
+    - Name: eras
+      Entry: 7
+      Data: 0|System.Collections.Generic.HashSet`1[[ImperialStruggle.Phase+Era, Assembly-CSharp]],
+        System.Core
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   keywords: 03000000
-  eras: 00000000
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
   cardText: Once per turn, you may spend 2 MP to build a Squadron (instead of the
     usual 4). Once per turn, if you have a Squadron in Europe, you may discard an
     Event card from your hand and take 1 TRP.
-  actions: []
+  flavor: 

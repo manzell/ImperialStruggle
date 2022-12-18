@@ -4,49 +4,47 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using System.Linq;
 using DG.Tweening;
+using Sirenix.Utilities;
 
 namespace ImperialStruggle
 {
-    public class UI_PopupMenu : MonoBehaviour, IPointerClickHandler
+    public class UI_PopupMenu : MonoBehaviour
     {
-        static GameObject popupMenuContainer; // We only want 1 open at a time, this will ensure we don't always reinstantiate the thing\
+        static GameObject popupMenuContainer;
         bool open = false;
         GraphicSettings settings;
 
         void Awake()
         {
             settings = FindObjectOfType<Game>().graphicSettings;
-            UI_GameBoard.clickEvent.AddListener(ped => Close());
         }
 
-        public void OnPointerClick(PointerEventData eventData)
+        public void Open(Space space)
         {
-            if (!open)
+            Debug.Log($"Open({space})"); 
+            if(!open)
             {
-                Open();
-                open = true;
-            }
-        }
+                Game.ActivePlayer.Actions.OfType<TargetSpaceAction>().ForEach(action => action.SetSpace(space));
+                Player player = Game.ActivePlayer;
+                List<PlayerAction> actions = new();
 
-        void Open()
-        {
-            /*
-            Space space = GetComponent<Space>();
-            ActionRound actionRound = Phase.CurrentPhase.GetComponent<ActionRound>();
+                foreach (PlayerAction action in player.Actions)
+                {
+                    if (action is TargetSpaceAction targetSpaceAction)
+                    {
+                        targetSpaceAction.SetSpace(space);
 
-            if (actionRound != null)
-            {
-                foreach (PlayerAction action in space.standardActions)
-                    action.actingPlayer = actionRound.actingFaction;
-
-                List<PlayerAction> actions = space.standardActions.Where(action => action.Can()).ToList();
+                        if (action.Can())
+                            actions.Add(action);
+                    }
+                }
 
                 if (actions.Count > 0)
                 {
                     GameObject popupActionPrefab = FindObjectOfType<Game>().graphicSettings.PopupAction;
                     RectTransform rect = popupActionPrefab.GetComponent<RectTransform>();
 
-                    if(popupMenuContainer == null)
+                    if (popupMenuContainer == null)
                         popupMenuContainer = Instantiate(settings.PopupMenu, GetComponentInParent<Canvas>().transform);
 
                     popupMenuContainer.transform.position = transform.position;
@@ -61,9 +59,10 @@ namespace ImperialStruggle
                         popupMenuAction.SetAction(action);
                         popupMenuAction.SetMenu(this);
                     }
+
+                    open = true; 
                 }
             }
-            */
         }
 
         public void Close()

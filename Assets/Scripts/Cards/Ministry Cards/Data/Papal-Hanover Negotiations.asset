@@ -20,11 +20,26 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
-  faction: 2
+    SerializationNodes:
+    - Name: eras
+      Entry: 7
+      Data: 0|System.Collections.Generic.HashSet`1[[ImperialStruggle.Phase+Era, Assembly-CSharp]],
+        System.Core
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   keywords: 00000000
-  eras: 02000000
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
   cardText: Remove the Jacobite Uprisings Ministry card from the game. Once per turn,
     when taking a Diplomatic action, you receive 2 DP usable only to shift spaces
     in Scotland and Ireland.
-  actions: []
+  flavor: 

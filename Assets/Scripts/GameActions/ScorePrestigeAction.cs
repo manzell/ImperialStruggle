@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace ImperialStruggle
 {
@@ -11,7 +12,7 @@ namespace ImperialStruggle
         [SerializeField] int VPaward; 
         [SerializeField] List<SpaceData> usaSpaces;
 
-        protected override void Do()
+        protected override Task Do()
         {
             HashSet<ISpace> prestigeSpaces = new(Game.Spaces.OfType<PrestigeSpace>().Where(space => space.Prestigious));
 
@@ -26,6 +27,7 @@ namespace ImperialStruggle
             else if (franceScore > britainScore)
                 Commands.Push(new AdjustVPCommand(Game.France, VPaward));
 
+            return Task.CompletedTask; 
         }
     }
 }

@@ -12,27 +12,21 @@ namespace ImperialStruggle
     public class UI_NavalSpace : UI_Space
     {
         NavalSpace navalSpace;
+        protected override Space Space => navalSpace; 
         [SerializeField] NavalData navalData;
-        [SerializeField] TextMeshProUGUI spaceName;
-        [SerializeField] Image trim, highlight, background;
 
-        private void Awake()
+        void Start()
         {
-            Game.startGameEvent += Style;
+            navalSpace = (NavalSpace)Game.SpaceLookup[navalData];
+            navalSpace.updateSpaceEvent += Style;
         }
 
-        [Button]
-        public override void Style()
+        [Button] public override void Style()
         {
-            if (navalSpace == null)
-            {
-                navalSpace = (NavalSpace)Game.SpaceLookup[navalData];
-                navalSpace.updateSpaceEvent += Style;
-            }
             GraphicSettings settings = FindObjectOfType<Game>().graphicSettings;
 
             spaceName.text = navalSpace.Name;
-            trim.color = navalSpace.Prestigious ? settings.prestigeHighlightColor : Color.white;
+            trim.color = (navalSpace as NavalSpace).Prestigious ? settings.prestigeHighlightColor : Color.white;
         }
     }
 }

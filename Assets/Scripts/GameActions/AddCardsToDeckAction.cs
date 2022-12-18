@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Threading.Tasks;
 
 namespace ImperialStruggle
 {
@@ -8,6 +9,11 @@ namespace ImperialStruggle
     {
         [SerializeField] List<EventCard> cards;
 
-        protected override void Do() => Queue(new AddCardsToDeckCommand(cards));
+        protected override Task Do()
+        {
+            Queue(new AddCardsToDeckCommand(cards));
+
+            return Task.CompletedTask;
+        }
     }
 }

@@ -6,21 +6,9 @@ namespace ImperialStruggle
 {
     public class BuildFleetCommand : Command
     {
-        public override void Do(GameAction action)
-        {
-            //This command adds a fleet to the Navy
-            /*
-            if (action is IPlayerAction playerAction)
-            {
-                Squadron squadron = new Squadron();
-                NavyBox.squadrons.Add(squadron);
+        Player player;
+        public BuildFleetCommand(Player player) => this.player = player; 
 
-                squadron.flag = playerAction.player.faction;
-                playerAction.player.squadrons.Add(squadron);
-
-                Debug.Log($"{playerAction.player} adds a Squadron to the Naval Box");
-            }
-            */
-        }
+        public override void Do(GameAction action) => player.Squadrons.Add(new Squadron()); 
     }
 }

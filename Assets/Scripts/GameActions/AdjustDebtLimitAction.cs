@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -9,10 +10,12 @@ namespace ImperialStruggle
     {
         public int amount;
 
-        protected override void Do()
+        protected override Task Do()
         {
             foreach (Faction faction in RecordsTrack.debtLimit.Keys)
                 Queue(new AdjustDebtCommand(faction, amount));
+
+            return Task.CompletedTask; 
         }
     }
 }

@@ -19,5 +19,7 @@ namespace ImperialStruggle
         public int value;
 
         [SerializeField] Queue<PlayerAction> actions;
+        public System.Action UISelectionEvent { get; set; }
+        public System.Action UIDeselectEvent { get; set; }
     }
 }

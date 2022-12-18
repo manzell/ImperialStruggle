@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 676c8adbf7dd3e7478f995b46cdc1f83, type: 3}
+  m_Name: Acadia
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  prefab: {fileID: 0}
+  map: {fileID: 11400000, guid: e88bd87cf9d80f548acfabe66dfa8b0c, type: 2}
+  startingFlag: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
+  availableEra: 0
+  adjacentSpaces:
+  - {fileID: 11400000, guid: afcbaefa698e8e74ebf7ca0872dec8ba, type: 2}
+  - {fileID: 11400000, guid: 211533accc7c85d4f844d47066ef95c6, type: 2}
+  ConquestLines:
+  - {fileID: 11400000, guid: 211533accc7c85d4f844d47066ef95c6, type: 2}
+  PrestigeSpace: 0

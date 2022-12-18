@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using System.Threading.Tasks;
 
 namespace ImperialStruggle
 {
@@ -9,7 +10,7 @@ namespace ImperialStruggle
     {
         public static UnityEvent<Map> scoreMapEvent;
 
-        protected override void Do()
+        protected override Task Do()
         {
             throw new System.NotImplementedException(); 
             /*

@@ -20,10 +20,28 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
-  faction: 2
+    SerializationNodes:
+    - Name: eras
+      Entry: 7
+      Data: 0|System.Collections.Generic.HashSet`1[[ImperialStruggle.Phase+Era, Assembly-CSharp]],
+        System.Core
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   keywords: 03000000
-  eras: 0100000002000000
+  faction: {fileID: 0}
   cardText: The Award for Europe is worth 1 extra VP to you, and 1 less VP to France
     (minimum 0).
-  actions: []
+  flavor: 

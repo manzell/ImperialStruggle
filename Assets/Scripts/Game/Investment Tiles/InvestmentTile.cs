@@ -9,10 +9,13 @@ namespace ImperialStruggle
     [CreateAssetMenu]
     public class InvestmentTile : SerializedScriptableObject, ISelectable
     {
+        public enum InvestmentTileStatus { Reserve, Available, Drafted, Exhausted }
         public string Name => $"{majorActionPoint.baseValue} {majorActionPoint.actionType.ToString().Substring(0,3)}/{minorActionPoint.actionType.ToString().Substring(0,3)}" +
-            $"{(actions.Any(a => a is MilitaryUpgradeAction) ? " Mil" : string.Empty)}{(actions.Any(a => a is TriggerEventAction)? " Event" : string.Empty)}"; 
+            $"{(actions.Any(a => a is MilitaryUpgradeAction) ? " Mil" : string.Empty)}{(actions.Any(a => a is TriggerEventCardAction)? " Event" : string.Empty)}";
 
-        public System.Action<Player> SelectEvent;
+        public System.Action UISelectionEvent { get; set; }
+        public System.Action UIDeselectEvent { get; set; }
+        public System.Action<Player> DraftEvent;
 
         public ActionPoint majorActionPoint;
         public ActionPoint minorActionPoint; 

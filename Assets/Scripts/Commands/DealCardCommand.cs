@@ -22,7 +22,7 @@ namespace ImperialStruggle
         {
             EventCard card = Game.EventDeck.Pop();
 
-            player.hand.Add(card);
+            player.Cards.Add(card);
 
             dealtCards.Push(card);
             dealCardEvent?.Invoke(player, card);
@@ -34,7 +34,7 @@ namespace ImperialStruggle
         {
             foreach (EventCard card in dealtCards)
             {
-                player.hand.Remove(card);
+                player.Cards.Remove(card);
                 Game.EventDeck.Push(card);
             }
         }

@@ -8,6 +8,8 @@ namespace ImperialStruggle
     public class Map : ScriptableObject, ISelectable
     {
         public string Name => name;
+        public System.Action UISelectionEvent { get; set; }
+        public System.Action UIDeselectEvent { get; set; }
         public AwardTile awardTile;
         public IEnumerable<Space> spaces => Game.Spaces.Where(space => space.map == this);
 
@@ -22,9 +24,9 @@ namespace ImperialStruggle
 
                 List<Faction> winningFactions = new List<Faction>();
 
-                foreach (Player player in Player.players)
-                    if (mapScore[player.faction] == maxGameScore && winningMargin >= awardTile.RequiredMargin) // Need to move the margin logic out to the ScoreMapAction?
-                        winningFactions.Add(player.faction);
+                foreach (Player player in Player.Players)
+                    if (mapScore[player.Faction] == maxGameScore && winningMargin >= awardTile.RequiredMargin) // Need to move the margin logic out to the ScoreMapAction?
+                        winningFactions.Add(player.Faction);
 
                 if (winningFactions.Count == 1)
                     return winningFactions[0];

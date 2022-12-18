@@ -20,10 +20,28 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
-  faction: 2
+    SerializationNodes:
+    - Name: eras
+      Entry: 7
+      Data: 0|System.Collections.Generic.HashSet`1[[ImperialStruggle.Phase+Era, Assembly-CSharp]],
+        System.Core
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   keywords: 02000000
-  eras: 0000000001000000
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
   cardText: 'During the Scoring Phase, score 1 VP for each of the following unexhausted
     Advantages you control (maximum 3): Textiles, Silk, Fruit, Fur Trade, Rum.'
-  actions: []
+  flavor: 

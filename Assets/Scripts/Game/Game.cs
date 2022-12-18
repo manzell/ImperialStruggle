@@ -20,7 +20,7 @@ namespace ImperialStruggle
         public static Dictionary<SpaceData, Space> SpaceLookup { get; private set; }
         public static HashSet<Space> Spaces { get; private set; }
         public static IEnumerable<AwardTile> AwardTiles { get; private set; }
-        public static Dictionary<InvestmentTile, PeaceTurn.InvestmentTileStatus> InvestmentTiles { get; private set; }
+        public static Dictionary<InvestmentTile, InvestmentTile.InvestmentTileStatus> InvestmentTiles { get; private set; }
 
         public static Faction Neutral { get; private set; }
         public static Faction Britain { get; private set; }
@@ -51,13 +51,14 @@ namespace ImperialStruggle
 
             GlobalDemandTrack = globalDemandTrack;
             AwardTiles = awardTiles;
-            InvestmentTiles = investmentTiles.ToDictionary(tile => tile, tile => PeaceTurn.InvestmentTileStatus.Reserve); 
+            InvestmentTiles = investmentTiles.ToDictionary(tile => tile, tile => InvestmentTile.InvestmentTileStatus.Reserve); 
             Resources = new(startingSpaces.OfType<MarketData>().Where(market => market.ResourceType != null).Select(market => market.ResourceType));
             LoadSpaces(startingSpaces);
         }
 
         private void Start()
         {
+            startGameEvent?.Invoke(); 
             startingPhase?.StartPhase();
         }
 
@@ -122,14 +123,14 @@ namespace ImperialStruggle
 
             foreach (Player player in GameObject.FindObjectsOfType<Player>())
             {
-                actionPointState.Add(player.faction, player.actionPoints);
-                debtState.Add(player.faction, (RecordsTrack.currentDebt[player.faction], RecordsTrack.debtLimit[player.faction]));
-                treatyPointState.Add(player.faction, RecordsTrack.treatyPoints[player.faction]);
+                actionPointState.Add(player.Faction, player.ActionPoints);
+                debtState.Add(player.Faction, (RecordsTrack.currentDebt[player.Faction], RecordsTrack.debtLimit[player.Faction]));
+                treatyPointState.Add(player.Faction, RecordsTrack.treatyPoints[player.Faction]);
 
-                foreach (EventCard card in player.hand)
+                foreach (EventCard card in player.Cards)
                     eventCardStates.Add(card, player);
 
-                foreach (Squadron squadron in player.squadrons)
+                foreach (Squadron squadron in player.Squadrons)
                     squadronState.Add(squadron, squadron.space);
             }
 

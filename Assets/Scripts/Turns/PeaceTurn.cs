@@ -8,9 +8,9 @@ namespace ImperialStruggle
 {
     public class PeaceTurn : Phase
     {
-        public enum InvestmentTileStatus { Reserve, Available, Drafted, Exhausted }
+        //
 
-        public Faction initiative;
+        public Player initiative;
         public HashSet<Resource> globalDemandResources = new();
         public Dictionary<Map, AwardTile> awardTiles = new Dictionary<Map, AwardTile>();
         public Dictionary<InvestmentTile, Faction> investmentTiles = new();

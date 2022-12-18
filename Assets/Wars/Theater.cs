@@ -9,6 +9,8 @@ namespace ImperialStruggle
     public class Theater : Phase, ISelectable
     {
         public string Name => name;
+        public System.Action UISelectionEvent { get; set; }
+        public System.Action UIDeselectEvent { get; set; }
         public Map map;
         public List<WarTile> warTiles = new();
         public List<ScoringBonus> scoringBonuses;

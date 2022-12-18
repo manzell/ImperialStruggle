@@ -1,15 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
-using System.Linq;
+using System.Threading.Tasks; 
 
 namespace ImperialStruggle
 {
     public class PlayEventCardAction : PlayerAction
     {
-        protected override void Do()
+        protected override Task Do()
         {
+            return Task.CompletedTask; 
             /*
             List<EventCard> eventCards = actingPlayer.hand.Where(card =>
                 card.reqdActionType == ActionPoint.ActionType.None || card.reqdActionType == Phase.CurrentPhase.GetComponent<ActionRound>()?.investmentTile.majorActionType).ToList();
@@ -24,7 +24,7 @@ namespace ImperialStruggle
 
         public void Finish(EventCard card)
         {
-            Debug.Log($"{player.faction} plays {card}");
+            Debug.Log($"{Player.Faction} plays {card}");
         }
     }
 }

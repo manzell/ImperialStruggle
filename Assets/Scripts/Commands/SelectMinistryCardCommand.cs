@@ -9,22 +9,21 @@ namespace ImperialStruggle
     public class SelectMinistryCardCommand : Command
     {
         MinistryCardData card;
+        Player player; 
         public static System.Action<MinistryCardData> SelectEvent;
 
-        public SelectMinistryCardCommand(MinistryCardData card) => this.card = card;
+        public SelectMinistryCardCommand(Player player, MinistryCardData card)
+        {
+            this.card = card;
+            this.player = player;
+        }
 
         public override void Do(GameAction action)
         {
-            Player player = Player.players.Where(player => player.faction == card.faction).First();
-
-            player.ministers[card] = MinistryCard.MinistryCardStatus.Selected;
+            player.Ministers[card] = MinistryCard.MinistryCardStatus.Selected;
             SelectEvent?.Invoke(card);
         }
 
-        public override void Undo()
-        {
-            Player player = Player.players.Where(player => player.faction == card.faction).First();
-            player.ministers[card] = MinistryCard.MinistryCardStatus.Reserved;
-        }
+        public override void Undo() => player.Ministers[card] = MinistryCard.MinistryCardStatus.Reserved;
     }
 }

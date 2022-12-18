@@ -20,11 +20,26 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
-  faction: 2
+    SerializationNodes:
+    - Name: eras
+      Entry: 7
+      Data: 0|System.Collections.Generic.HashSet`1[[ImperialStruggle.Phase+Era, Assembly-CSharp]],
+        System.Core
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   keywords: 02000000
-  eras: 02000000
+  faction: {fileID: 0}
   cardText: Once per turn, at the start of an Action Round, place the Townshend Acts
     marker on a commodity on the Global Demand display. You may use Minor Actions
     to unflag that commodity's Markets this turn.
-  actions: []
+  flavor: 

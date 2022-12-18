@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0554630cf84eef240a3a3e5dbaf5901c, type: 3}
+  m_Name: Caicos
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  prefab: {fileID: 0}
+  map: {fileID: 11400000, guid: 5e460598291e3794a8ee7e5a51147d40, type: 2}
+  startingFlag: {fileID: 11400000, guid: fa035a9950db4ba458654758b49c2e78, type: 2}
+  availableEra: 0
+  adjacentSpaces:
+  - {fileID: 11400000, guid: ba7d555fa5670d842ba358cb6bb2e9e5, type: 2}
+  - {fileID: 11400000, guid: e8d40c5e982f0f94cb82912136489068, type: 2}
+  - {fileID: 11400000, guid: 3cdee7efa9150d84fa4ba8be473c3a33, type: 2}
+  - {fileID: 11400000, guid: 1b9d8e17e68ee2a4f95125d7f874a106, type: 2}
+  ResourceType: {fileID: 0}
+  FlagCost: 0

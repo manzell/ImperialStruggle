@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace ImperialStruggle
 {
@@ -12,7 +13,7 @@ namespace ImperialStruggle
 
         bool used;
 
-        protected override void Do() // NOTE: Do is the REVEAL action, 
+        protected override Task Do() // NOTE: Do is the REVEAL action, 
         {
             PeaceTurn peaceTurn = Phase.CurrentPhase.GetComponentInParent<PeaceTurn>();
 
@@ -33,6 +34,8 @@ namespace ImperialStruggle
             }
 
             void Reset() => used = false;
+
+            return Task.CompletedTask; 
         }
     }
 }

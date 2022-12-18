@@ -21,7 +21,7 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: SelectEvent
+    - Name: DraftEvent
       Entry: 6
       Data: 
     - Name: actions
@@ -33,10 +33,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 1|ImperialStruggle.TriggerEventAction, Assembly-CSharp
-    - Name: player
-      Entry: 6
-      Data: 
+      Data: 1|ImperialStruggle.TriggerEventCardAction, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 

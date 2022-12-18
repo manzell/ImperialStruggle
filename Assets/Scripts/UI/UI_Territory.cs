@@ -10,41 +10,35 @@ namespace ImperialStruggle
     public class UI_Territory : UI_Space
     {
         Territory territory;
+        protected override Space Space => territory; 
         [SerializeField] TerritoryData territoryData;
-        [SerializeField] TextMeshProUGUI spaceName, flagCost;
-        [SerializeField] Image territoryFrame, background;
+        [SerializeField] TextMeshProUGUI flagCost;
 
-        private void Awake()
+        void Start()
         {
-            Game.startGameEvent += Style;
+            territory = (Territory)Game.SpaceLookup[territoryData];
+            territory.updateSpaceEvent += Style;
         }
 
         [Button]
         public override void Style()
         {
-            if (territory == null)
-            {
-                territory = (Territory)Game.SpaceLookup[territoryData];
-                territory.updateSpaceEvent += Style;
-            }
-
             GraphicSettings graphics = FindObjectOfType<Game>().graphicSettings;
-            spaceName.text = territory.Name;
+            spaceName.text = Space.Name;
 
-
-            if (territory.Prestigious)
+            if ((Space as Territory).Prestigious)
             {
-                territoryFrame.color = graphics.prestigeHighlightColor;
+                trim.color = graphics.prestigeHighlightColor;
                 flagCost.color = Color.white;
             }
             else
             {
-                territoryFrame.color = Color.white;
+                trim.color = Color.white;
                 flagCost.color = Color.black;
             }
 
-            background.color = graphics.factionColors[territory.Flag];
-            spaceName.color = territory.Flag == Game.Neutral || territory.Flag == Game.Spain ? Color.black : Color.white;
+            background.color = Space.Flag.Color;
+            spaceName.color = Space.Flag == Game.Neutral || Space.Flag == Game.Spain ? Color.black : Color.white;
         }
     }
 }

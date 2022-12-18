@@ -93,9 +93,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileArea: {fileID: 298233489477510920}
   buttonArea: {fileID: 7993716336454942894}
-  defaultTilePrefab: {fileID: 6121498773127361383, guid: 145905830f63aa348b921f4fd5852cca, type: 3}
-  ministryCardPrefab: {fileID: 4470513594242991769, guid: 5d9d4a894648fca4eb25aec108f79d8e, type: 3}
-  eventCardPrefab: {fileID: 4470513594242991769, guid: 5d9d4a894648fca4eb25aec108f79d8e, type: 3}
+  defaultTilePrefab: {fileID: 1851436217429288963, guid: 145905830f63aa348b921f4fd5852cca, type: 3}
   windowTitle: {fileID: 6416790140263718537}
   okButton: {fileID: 3257304401553188270}
   resetButton: {fileID: 8583353249979606020}

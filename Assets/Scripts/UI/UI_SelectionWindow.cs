@@ -3,43 +3,44 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Linq;
 
 namespace ImperialStruggle
 {
     public class UI_SelectionWindow : MonoBehaviour
     {
         [SerializeField] GameObject tileArea, buttonArea;
-        [SerializeField] GameObject defaultTilePrefab, ministryCardPrefab, eventCardPrefab;
+        [SerializeField] UI_SelectionTile defaultTilePrefab; //, ministryCardPrefab, eventCardPrefab;
         [SerializeField] TextMeshProUGUI windowTitle;
 
         public Button okButton, resetButton, passButton, cancelButton;
 
         public void Open<T>(Selection<T> selection) where T : ISelectable
         {
-            tileArea.SetActive(true);
-
             foreach (T item in selection.selectableItems)
             {
-                GameObject tile = Instantiate(GetTilePrefab(item), tileArea.transform);
-                tile.name = item.Name;
+                UI_SelectionTile tile = Instantiate(GetTilePrefab(item), tileArea.transform);
+                tile.Setup(item);
 
-                ClickHandler toggle = tile.AddComponent<ClickHandler>();
-                toggle.pointerClickEvent.AddListener(() => selection.Select(item));
-
-                okButton.onClick.RemoveAllListeners();
-                okButton.onClick.AddListener(() =>
-                {
-                    tileArea.SetActive(false);
-                    selection.OnSelect?.Invoke(selection);
-                });
+                ClickHandler toggle = tile.gameObject.AddComponent<ClickHandler>();
+                toggle.pointerClickEvent += () => selection.Select(item);
                 // TODO: Add Pass and Cancel buttons
             }
+
+            okButton.onClick.AddListener(() =>
+            {
+                gameObject.SetActive(false);
+                selection.OnSubmit?.Invoke(selection);
+                Destroy(gameObject); 
+            });
         }
 
-        public GameObject GetTilePrefab<T>(T item)
+        public void SetTitle(string title) => windowTitle.text = title;
+
+        public UI_SelectionTile GetTilePrefab<T>(T item)
         {
-            if (item is MinistryCard) return ministryCardPrefab;
-            if (item is EventCard) return eventCardPrefab;
+            //if (item is MinistryCard) return ministryCardPrefab;
+            //if (item is EventCard) return eventCardPrefab;
             return defaultTilePrefab;
         }
     }

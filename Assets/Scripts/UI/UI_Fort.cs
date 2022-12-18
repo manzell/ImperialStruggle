@@ -10,30 +10,22 @@ namespace ImperialStruggle
     public class UI_Fort : UI_Space
     {
         Fort fort;
+        protected override Space Space => fort;
         [SerializeField] FortData fortData;
-        [SerializeField] Image background, highlight, trim;
-        [SerializeField] TextMeshProUGUI fortName, flagCost;
+        [SerializeField] TextMeshProUGUI flagCost;
 
-        private void Awake()
+        void Start()
         {
-            Game.startGameEvent += Style;
+            fort = (Fort)Game.SpaceLookup[fortData];
+            fort.updateSpaceEvent += Style;
         }
 
-        [Button]
-        public override void Style()
+        [Button] public override void Style()
         {
-            if (fort == null)
-            {
-                fort = (Fort)Game.SpaceLookup[fortData];
-                fort.updateSpaceEvent += Style;
-            }
-            GraphicSettings graphics = FindObjectOfType<Game>().graphicSettings;
-
-            fortName.text = fort.Name;
-            flagCost.text = fort.FlagCost.ToString();
-            background.color = graphics.factionColors[fort.Flag];
-            fortName.color = fort.Flag == null ? Color.black : Color.white;
-
+            spaceName.text = Space.Name;
+            flagCost.text = (Space as Fort).FlagCost.ToString();
+            background.color = Space.Flag.Color;
+            spaceName.color = Space.Flag == null ? Color.black : Color.white;
         }
     }
 }

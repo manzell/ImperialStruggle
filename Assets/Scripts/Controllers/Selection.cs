@@ -12,29 +12,29 @@ namespace ImperialStruggle
         public List<T> selectedItems { get; private set; }
         public int maxSelectable { get; private set; } = 1;
 
-        public System.Action<Selection<T>> OnSelect, OnCancel, OnPass;
-        public TaskCompletionSource<T> Task { get; private set; }
+        public System.Action<Selection<T>> OnSubmit, OnCancel, OnPass;
+        public Task<IEnumerable<T>> Completion => task.Task; 
+        TaskCompletionSource<IEnumerable<T>> task;
 
         public IEnumerator<T> GetEnumerator() => selectableItems.GetEnumerator();
         IEnumerator IEnumerable.GetEnumerator() => this.GetEnumerator();
 
-        UI_SelectionWindow window;
+        public System.Action<string> SetTitle { get; private set; }
 
-        public void SetTitle(string title)
+        public Selection(Player player, IEnumerable<T> items)
         {
-
+            selectableItems = items;
+            selectedItems = new();
+            task = new();
         }
 
-        public Selection()
+        public Selection(Player player, IEnumerable<T> items, System.Action<Selection<T>> callback) : this(player, items)
         {
-            Task = new(); 
-        }
+            OnSubmit += callback;
+            OnSubmit += SetResults;
 
-        public Selection(Player player, IEnumerable<T> items, System.Action<Selection<T>> callback) : this()
-        {
-            selectableItems = items.ToList();
-            player.UI.Select(this);
-            OnSelect = callback;
+            UI_SelectionWindow window = player.UI.Select(this);
+            SetTitle = window.SetTitle; 
         }
 
         public Selection(Player player, IEnumerable<T> items, System.Action<Selection<T>> callback, int numItems) : this(player, items, callback)
@@ -44,18 +44,29 @@ namespace ImperialStruggle
 
         public void Select(T item)
         {
-            if (selectedItems.Contains(item))
-                selectedItems.Remove(item);
-            else if (selectedItems.Count() < maxSelectable)
+            if (!selectedItems.Contains(item))
+            {
+                Debug.Log($"Selecting {item.Name} ({item})"); 
+                item.UISelectionEvent?.Invoke();
                 selectedItems.Add(item);
+            }
             else
             {
-                selectedItems.Remove(selectedItems.First());
-                selectedItems.Add(item);
+                item.UIDeselectEvent?.Invoke();
+                selectedItems.Remove(item);
+            }
+
+            if (selectedItems.Count() > maxSelectable)
+            {
+                item = selectedItems.First();
+                item.UIDeselectEvent?.Invoke();
+                selectedItems.Remove(item);
             }
         }
 
-        public Selection(Player player, WarTile warTileToReplace, IEnumerable<T> warTiles, System.Action<Theater, WarTile, WarTile> callback)
+        public void SetResults(IEnumerable<T> results) => task.SetResult(results); 
+
+        public Selection(Player player, WarTile warTileToReplace, IEnumerable<WarTile> warTiles, System.Action<Theater, WarTile, WarTile> callback)
         {
             Debug.Log("Cool, a custom Constructor");
         }

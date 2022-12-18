@@ -8,6 +8,14 @@ namespace ImperialStruggle
 {
     public abstract class PlayerAction : GameAction
     {
-        public Player player;
+        public Player Player { get; private set; }
+
+        public void Setup(Player player)
+        {
+            this.Player = player;
+            Setup(); 
+        }
+
+        public virtual void Setup() { }
     }
 }

@@ -2,20 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace ImperialStruggle
 {
     public class MilitaryUpgradeAction : PlayerAction
     {
-        protected override void Do()
+        protected async override Task Do()
         {
-            WarTile drawnWarTile = player.warTiles.Dequeue(); 
+            WarTile drawnWarTile = Player.WarTiles.Dequeue(); 
             IEnumerable<WarTile> eligibleTiles = Game.NextWarTurn.theaters.SelectMany(theater => 
-                theater.warTiles.Where(tile => tile.faction == player.faction && tile.warTileSet == WarTile.WarTileSet.Basic));
+                theater.warTiles.Where(tile => tile.faction == Player.Faction && tile.warTileSet == WarTile.WarTileSet.Basic));
 
             // TODO - Also display the Drawn Tile to the player. Probably need a custom receiver on Selection
-            new Selection<WarTile>(player, drawnWarTile, eligibleTiles, Finish);
-
+            await new Selection<WarTile>(Player, drawnWarTile, eligibleTiles, Finish).Completion; 
+           
             void Finish(Theater theater, WarTile replacedTile, WarTile newTile)
             {
                 theater.warTiles.Remove(replacedTile);

@@ -21,7 +21,7 @@ namespace ImperialStruggle
             AdjustAPCommand.adjustAPEvent.AddListener(UpdateTiles);
             Game.setActivePlayerEvent += player =>
             {
-                actionPoints = player.actionPoints;
+                actionPoints = player.ActionPoints;
                 UpdateTiles();
             };
         }

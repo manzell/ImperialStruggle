@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace ImperialStruggle
@@ -8,12 +9,14 @@ namespace ImperialStruggle
         [SerializeField] DealType dealType;
         [SerializeField] int numCards;
 
-        protected override void Do()
+        protected override Task Do()
         {
             for (int i = 0; i < numCards; i++)
-                foreach (Player player in Player.players)
-                    if (dealType == DealType.Fixed || (dealType == DealType.UpTo && player.hand.Count < numCards))
+                foreach (Player player in Player.Players)
+                    if (dealType == DealType.Fixed || (dealType == DealType.UpTo && player.Cards.Count < numCards))
                         Commands.Push(new DealCardCommand(player));
+
+            return Task.CompletedTask; 
         }
     }
 }

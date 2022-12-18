@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace ImperialStruggle
 {
@@ -10,11 +11,13 @@ namespace ImperialStruggle
     {
         [SerializeField] WarTurn nextWar;
 
-        protected override void Do()
+        protected override Task Do()
         {
-            foreach (Player player in Player.players)
+            foreach (Player player in Player.Players)
                 foreach (Theater theater in nextWar.theaters)
-                    Commands.Push(new AddWarTileToTheaterCommand(player.warTiles.Dequeue(), theater));
+                    Commands.Push(new AddWarTileToTheaterCommand(player.WarTiles.Dequeue(), theater));
+
+            return Task.CompletedTask; 
         }
     }
 }

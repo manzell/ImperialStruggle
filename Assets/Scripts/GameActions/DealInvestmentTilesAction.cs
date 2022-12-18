@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace ImperialStruggle
 {
@@ -9,18 +10,22 @@ namespace ImperialStruggle
     {
         [SerializeField] int numToDeal;
 
-        protected override void Do()
+        protected override Task Do()
         {
             if (Phase.CurrentPhase is PeaceTurn peaceTurn)
             {
-                Commands.Push(new ResetInvestmentTilesCommand()); // What does this even do??
+                //Commands.Push(new ResetInvestmentTilesCommand()); // What does this even do??
 
-                IEnumerable<InvestmentTile> tiles = Game.InvestmentTiles.OrderBy(tile => tile.Value != PeaceTurn.InvestmentTileStatus.Reserve).ThenBy(tile => Random.value)
+                IEnumerable<InvestmentTile> tiles = Game.InvestmentTiles.OrderBy(tile => tile.Value != InvestmentTile.InvestmentTileStatus.Reserve).ThenBy(tile => Random.value)
                     .Select(kvp => kvp.Key).Take(numToDeal);
 
-                Commands.Push(new DealInvestmentTileCommand(tiles)); 
-                    
+                Commands.Push(new DealInvestmentTileCommand(tiles));
+
+                Debug.Log($"#### {peaceTurn.name} has {peaceTurn.investmentTiles.Count()} Investment Tiles");
+
             }
+
+            return Task.CompletedTask; 
         }
     }
 }

@@ -3,24 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using System.Linq;
+using System.Threading.Tasks; 
 
 namespace ImperialStruggle
 {
-    public class BuyBonusWarAction : PlayerAction
+    public class BuyBonusWarAction : PlayerAction, PurchaseAction
     {
         WarTile bonusWarTile;
 
-        protected override void Do()
-        {
-            bonusWarTile = player.bonusWarTiles.OrderBy(tile => Random.value).First();
+        public ActionPoint ActionCost => new ActionPoint(ActionPoint.ActionType.Military, ActionPoint.ActionTier.Minor, 2);
 
-            Selection<Theater> selection = new(player, Game.NextWarTurn.theaters, Finish);
-            //selection.SetTitle($"{actingPlayer} Select theater to add {bonusWarTile.tileName}");
+        public override bool Can() => base.Can() && Phase.CurrentPhase.ExecutedActions.Count(action => action is BuyBonusWarAction) >= 2; 
+
+        protected override async Task Do()
+        {
+            bonusWarTile = Player.BonusWarTiles.OrderBy(tile => Random.value).First();
+
+            Selection<Theater> selection = new(Player, Game.NextWarTurn.theaters, Finish);
+            selection.SetTitle($"{Player} Select theater to add {bonusWarTile.Name}");
+
+            await selection.Completion;
         }
 
-        void Finish(Selection<Theater> selection)
-        {
-            Commands.Push(new AddWarTileToTheaterCommand(bonusWarTile, selection.First()));
-        }
+        void Finish(IEnumerable<Theater> theater) => Commands.Push(new AddWarTileToTheaterCommand(bonusWarTile, theater.First()));
     }
 }

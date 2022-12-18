@@ -14,7 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Icon: {fileID: 21300000, guid: 53d9ebaf5390eac4ea4b62d9604e1d8c, type: 3}
   Color: {r: 0.6792453, g: 0, b: 0, a: 1}
-  ministers: []
+  ministers:
+  - {fileID: 11400000, guid: 802e4706405ecb846b77387e22a41079, type: 2}
+  - {fileID: 11400000, guid: 0b5bb00d2ecb9ae4c96899d5e71f5424, type: 2}
+  - {fileID: 11400000, guid: 8c2c2543664492f499f06f0e50019688, type: 2}
+  - {fileID: 11400000, guid: ae3e77bb9c383de429177c7107a6542b, type: 2}
+  - {fileID: 11400000, guid: 0e2a1e221dae5324a969933e71e11df7, type: 2}
+  - {fileID: 11400000, guid: 5d9e4f6a8df5e944a8b1f864a9a1ee84, type: 2}
+  - {fileID: 11400000, guid: 37e243bbdb54d6d48b7194110bea7515, type: 2}
+  - {fileID: 11400000, guid: 96760887f0d28904a8dd2fba5729f031, type: 2}
+  - {fileID: 11400000, guid: 85980ea4a221d9d42a884a03992dec2c, type: 2}
+  - {fileID: 11400000, guid: ed93fc79f8069834d99aeb2079235c3e, type: 2}
+  - {fileID: 11400000, guid: 3ccce2120d81860429ae3b1c00334829, type: 2}
+  - {fileID: 11400000, guid: 7fbed36c2df1ea3489d0bc2eca354268, type: 2}
+  - {fileID: 11400000, guid: 4a720d3bfc7c828479aaf7eb005d12e3, type: 2}
   basicWarTiles:
   - {fileID: 11400000, guid: 419993b37e697624492a04d24d1ec022, type: 2}
   - {fileID: 11400000, guid: 9ea5d3bcc44819d47931f69a03f4120e, type: 2}

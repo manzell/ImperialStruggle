@@ -1,40 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Threading.Tasks;
+using System.Linq;
 
 namespace ImperialStruggle
 {
-    public class RepairFortAction : PlayerAction
+    public class RepairFortAction : PlayerAction, PurchaseAction, TargetSpaceAction
     {
-        ActionPoint baseActionCost;
+        Fort space;
+        public ActionPoint ActionCost => new ActionPoint(ActionPoint.ActionType.Military, ActionPoint.ActionTier.Minor,
+            space.FlagCost + (space.Flag == Player.Faction ? -1 : 0) + (space.Flag == Player.Opponent.Faction ? 1 : 0));
 
-        /*
-        public override bool Can()
+        public Space Space => space; 
+
+        public override bool Can() => base.Can() && space != null && space.damaged == true && 
+            (space.Flag != Player.Opponent.Faction || space.adjacentSpaces.Where(space => space.control == Player.Faction).Any(space => space is Market || space is NavalSpace));
+
+        public void SetSpace(Space space) => this.space = space is Fort ? (Fort)space : null;
+
+        protected override Task Do()
         {
-            Fort fort = GetComponent<Fort>();
+            Commands.Push(new RemoveDamageMarkerCommand(space));
 
-            if (actionPointCost.Count > 0)
-                baseActionCost = actionPointCost[0];
-            else if (baseActionCost == null)
-            {
-                baseActionCost = new ActionPoint(ActionPoint.ActionType.Military, ActionPoint.ActionTier.Minor);
-                actionPointCost.Add(baseActionCost);
-            }
+            if (space.Flag != Player.Faction)
+                Commands.Push(new FlagSpaceCommand(space, Player.Faction));
 
-            baseActionCost.baseValue = fort.flagCost;
-
-            if (fort.flag == player.faction)
-                baseActionCost.baseValue -= 1; 
-            else if(fort.flag != Game.Neutral)
-                baseActionCost.baseValue += 1;
-
-            return base.Can();
-        }
-        */
-
-        protected override void Do()
-        {
-            throw new System.NotImplementedException();
+            return Task.CompletedTask; 
         }
     }
 }

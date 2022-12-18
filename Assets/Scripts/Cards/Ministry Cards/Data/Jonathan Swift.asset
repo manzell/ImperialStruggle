@@ -20,11 +20,32 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
-  faction: 2
+    SerializationNodes:
+    - Name: eras
+      Entry: 7
+      Data: 0|System.Collections.Generic.HashSet`1[[ImperialStruggle.Phase+Era, Assembly-CSharp]],
+        System.Core
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   keywords: 00000000
-  eras: 00000000
+  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
   cardText: Spaces in Ireland and Scotland cost you 1 less DP to flag. If you control
     any spaces in Ireland, your Minor Diplomatic Actions may be used to remove FR
     flags in Europe.
-  actions: []
+  flavor: Jonathan Swift was an 18th-century Irish writer and satirist. He is best
+    known for his novel "Gulliver's Travels", which tells the story of a man who
+    travels to different fantasy lands and encounters a variety of strange and wonderful
+    creatures. Swift was born in Dublin, Ireland, in 1667 and died in 1745. He was
+    a brilliant writer who used his talents to expose the flaws and corruption of
+    the society he lived in. Many of his works, including "Gulliver's Travels," are
+    still widely read and admired today.

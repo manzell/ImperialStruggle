@@ -552,8 +552,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b767c758a4e7fb94a8fcec50783fbb89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highlight: {fileID: 6343255177231920064}
+  background: {fileID: 4291853422391780495}
+  trim: {fileID: 4526241760106588409}
   spaceName: {fileID: 6559080391400236567}
+  territoryData: {fileID: 0}
   flagCost: {fileID: 4147357945841596840}
   territoryFrame: {fileID: 4526241760106588409}
-  background: {fileID: 4291853422391780495}
-  territory: {fileID: 0}

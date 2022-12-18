@@ -1,20 +1,42 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using System.Linq;
-using Sirenix.OdinInspector;
+using System.Threading.Tasks;
 
 namespace ImperialStruggle
 {
     public class SelectInvestmentTileAction : PlayerAction
     {
-        protected override void Do()
+        protected async override Task Do()
         {
             if (Phase.CurrentPhase is ActionRound actionRound)
             {
-                IEnumerable<InvestmentTile> tiles = actionRound.GetComponentInParent<PeaceTurn>().investmentTiles.Where(kvp => kvp.Value == null).Select(kvp => kvp.Key);
-                Selection<InvestmentTile> selection = new(player, tiles, selection => Commands.Push(new SelectInvestmentTileCommand(selection.First(), player.faction)));
+                PeaceTurn peaceTurn = actionRound.GetComponentInParent<PeaceTurn>();
+                IEnumerable<InvestmentTile> tiles = peaceTurn.investmentTiles.Where(kvp => kvp.Value == Game.Neutral).Select(kvp => kvp.Key);
+
+                Selection<InvestmentTile> selection = new(actionRound.player, tiles, Finish);
+                selection.SetTitle("Select Investment Tile");
+
+                await selection.Completion;
+            }
+        }
+
+        async void Finish(Selection<InvestmentTile> tiles)
+        {
+            if(Phase.CurrentPhase is ActionRound actionRound)
+            {
+                InvestmentTile tile = tiles.selectedItems.First(); 
+                Debug.Log($"{tile.Name} Selected by {Player.Faction}"); 
+
+                actionRound.Push(new SelectInvestmentTileCommand(actionRound.player, tile));
+
+                foreach(PlayerAction action in tile.actions)
+                {
+                    action.Setup(Player); 
+
+                    if(action.Can())
+                        await action.Execute();
+                }
             }
         }
     }

@@ -12,12 +12,12 @@ namespace ImperialStruggle
         {
             if (context is PlayerAction playerAction)
             {
-                Player player = playerAction.player;
+                Player player = playerAction.Player;
                 Dictionary<Faction, int> availableDebt = RecordsTrack.availableDebt;
-                Faction opposingFaction = player.faction == Game.Britain ? Game.France : Game.Britain;
+                Faction opposingFaction = player.Faction == Game.Britain ? Game.France : Game.Britain;
 
-                return margin == 0 ? availableDebt[player.faction] == availableDebt[opposingFaction] :
-                    availableDebt[player.faction] - availableDebt[opposingFaction] >= margin;
+                return margin == 0 ? availableDebt[player.Faction] == availableDebt[opposingFaction] :
+                    availableDebt[player.Faction] - availableDebt[opposingFaction] >= margin;
             }
             return true;
         }

@@ -21,7 +21,7 @@ namespace ImperialStruggle
             {
                 foreach (InvestmentTile tile in tiles)
                 {
-                    peaceTurn.investmentTiles.Add(tile, null);
+                    peaceTurn.investmentTiles.Add(tile, Game.Neutral);
                     dealInvestmentTileEvent?.Invoke(tile);
                     Debug.Log($"{tile.Name} added to Investment Tile Pool");
                 }

@@ -26,7 +26,7 @@ namespace ImperialStruggle
             minorActionPoints.text = tile.minorActionPoint.Value(null).ToString();
             minorIcon.sprite = graphicSettings.actionIcons[tile.minorActionPoint.actionType];
 
-            eventIcon.enabled = tile.actions.Any(a => a is TriggerEventAction);
+            eventIcon.enabled = tile.actions.Any(a => a is TriggerEventCardAction);
             milUpgradeIcon.enabled = tile.actions.Any(a => a is MilitaryUpgradeAction); 
         }
     }

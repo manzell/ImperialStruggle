@@ -20,13 +20,35 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
-  faction: 1
+    SerializationNodes:
+    - Name: eras
+      Entry: 7
+      Data: 0|System.Collections.Generic.HashSet`1[[ImperialStruggle.Phase+Era, Assembly-CSharp]],
+        System.Core
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   keywords: 02000000
-  eras: 00000000
+  faction: {fileID: 0}
   cardText: Once per turn, during a FR Action Round, place 1 Huguenots marker in
     one FR-flagged Territory in N. America or the Caribbean where there isn't one
     already. A Huguenots marker increases its space's CP cost by 1. It may be flipped
     once per game to reduce the EP cost of a Market in its Region by 1. It is permanently
     removed if its space becomes BR-flagged.
-  actions: []
+  flavor: The Huguenots were a group of French Protestants who were members of the
+    Reformed Church of France during the 16th and 17th centuries. The term "Huguenot"
+    is derived from the Swiss city of Geneva, which was a center of the Reformed
+    faith, and it was first used as a pejorative term to describe French Calvinists
+    in the 1560s. The Huguenots were a significant minority in France, and they faced
+    persecution and discrimination from the Catholic majority. Despite these challenges,
+    the Huguenots made important contributions to French society and culture, particularly
+    in the areas of art, literature, and science.

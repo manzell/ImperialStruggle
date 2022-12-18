@@ -8,71 +8,63 @@ namespace ImperialStruggle
 {
     public class Player : SerializedMonoBehaviour, ISelectable
     {
-        [field: SerializeField] public Faction faction { get; private set; }
+        public static List<Player> Players = new();
+
+        [field: SerializeField] public Faction Faction { get; private set; }
         [field: SerializeField] public Player Opponent { get; private set; }
-        [field: SerializeField] public Dictionary<MinistryCardData, MinistryCard.MinistryCardStatus> ministers { get; private set; }
-        public List<EventCard> hand;
-        public Queue<WarTile> warTiles { get; private set; }
-        public Queue<WarTile> bonusWarTiles { get; private set; }
-        public List<Squadron> squadrons { get; private set; }
-        public ActionPoints actionPoints { get; private set; } = new ();
-        public UI_Player UI;
+        [field: SerializeField] public List<PlayerAction> Actions { get; private set; }
+        public Dictionary<MinistryCardData, MinistryCard.MinistryCardStatus> Ministers { get; private set; }
+        public List<EventCard> Cards { get; private set; }
+        public Queue<WarTile> WarTiles { get; private set; }
+        public Queue<WarTile> BonusWarTiles { get; private set; }
+        public List<Squadron> Squadrons { get; private set; }
+        public ActionPoints ActionPoints { get; private set; }
+        public System.Action UISelectionEvent { get; set; }
+        public System.Action UIDeselectEvent { get; set; }
+        public UI_Player UI { get; private set; }
 
-        public HashSet<MinistryCard.Keyword> Keywords => new HashSet<MinistryCard.Keyword>(ministers.SelectMany(minister => minister.Key.keywords));
-
-        public static List<Player> players = new();
-
-        public string Name => faction.name;
+        public string Name => Faction.name;
+        public HashSet<MinistryCard.Keyword> Keywords => new HashSet<MinistryCard.Keyword>(Ministers.SelectMany(minister => minister.Key.keywords));
 
         private void Awake()
         {
             Game.ActivePlayer = this;
-            faction.player = this;
-            players.Add(this);
+            Faction.player = this;
+            Players.Add(this);
 
-            RecordsTrack.currentDebt.Add(faction, 0);
-            RecordsTrack.debtLimit.Add(faction, 0);
-            RecordsTrack.treatyPoints.Add(faction, 0);
+            RecordsTrack.currentDebt.Add(Faction, 0);
+            RecordsTrack.debtLimit.Add(Faction, 0);
+            RecordsTrack.treatyPoints.Add(Faction, 0);
 
             ActionRound.PhaseEndEvent += ResetActionPoints;
 
-            warTiles = new(faction.basicWarTiles.OrderBy(x => Random.value));
-            bonusWarTiles = new(faction.advancedWarTiles.OrderBy(x => Random.value)); 
-            ministers = faction.ministers.ToDictionary(card => card, card => MinistryCard.MinistryCardStatus.Reserved);
+            ActionPoints = new();
+            Cards = new(); 
+            WarTiles = new(Faction.basicWarTiles.OrderBy(x => Random.value));
+            BonusWarTiles = new(Faction.advancedWarTiles.OrderBy(x => Random.value));
+            Ministers = Faction.ministers.ToDictionary(card => card, card => MinistryCard.MinistryCardStatus.Reserved);
         }
+
+        void Start()
+        { 
+            foreach (PlayerAction action in Actions)
+                action.Setup(this); 
+        }
+
+        public void SetUI(UI_Player ui) => UI = ui; 
 
         void ResetActionPoints(Phase phase)
         {
             Debug.Log($"Resetting Action Points {phase}");
-            actionPoints = new ActionPoints();
+            ActionPoints = new ActionPoints();
         }
 
         [Button]
-        public bool CanAffordAction(PlayerAction action)
+        public bool CanAfford(ActionPoints cost)
         {
             return true;
             /*
-            ActionPoints apCosts = new ActionPoints(action.actionPointCost);
-            ActionPoints playerAPs = new ActionPoints(actionPoints);
-
-            foreach (ActionPoint apCost in apCosts.Where(ap => ap.baseValue > 0))
-            {
-                foreach (ActionPoint playerAP in playerAPs.Where(ap => ap.Value(action) > 0))
-                {
-                    if(playerAP >= apCost) // note this is an actionPoint comparison which returns true if the first arg is eligible to pay for the 2nd
-                    {
-                        int amtToCharge = Mathf.Min(playerAP.Value(action), apCost.baseValue);
-
-                        apCost.baseValue -= amtToCharge;
-                        playerAP.baseValue -= amtToCharge;
-                    }
-                }
-
-                if (apCost.baseValue > 0)
-                    return false; 
-            }
-
-            return true;
+            create an object that represents each point of the player's total action points
             */
         }
     }

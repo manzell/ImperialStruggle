@@ -20,9 +20,24 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
-  faction: 1
+    SerializationNodes:
+    - Name: eras
+      Entry: 7
+      Data: 0|System.Collections.Generic.HashSet`1[[ImperialStruggle.Phase+Era, Assembly-CSharp]],
+        System.Core
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   keywords: 02000000
-  eras: 01000000
+  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
   cardText: The Awards for India, Cotton, and Spice are worth 1 extra TRP to you.
-  actions: []
+  flavor: 

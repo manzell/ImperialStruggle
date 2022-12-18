@@ -8,6 +8,6 @@ using System.Linq;
 
 public class ClickHandler : MonoBehaviour, IPointerClickHandler
 {
-    public UnityEvent pointerClickEvent = new UnityEvent();
-    public void OnPointerClick(PointerEventData eventData) => pointerClickEvent.Invoke();
+    public System.Action pointerClickEvent;
+    public void OnPointerClick(PointerEventData eventData) => pointerClickEvent?.Invoke();
 }

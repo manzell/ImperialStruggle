@@ -54,11 +54,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61ab83c0a79f33640ba53f55f6868853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fortData: {fileID: 0}
-  background: {fileID: 4997143529586439208}
   highlight: {fileID: 1063691577675912674}
+  background: {fileID: 4997143529586439208}
   trim: {fileID: 4613553560261621854}
-  fortName: {fileID: 2724777554966017712}
+  spaceName: {fileID: 2724777554966017712}
+  fortData: {fileID: 0}
   flagCost: {fileID: 5141055174644132111}
 --- !u!1 &1834404671692783451
 GameObject:

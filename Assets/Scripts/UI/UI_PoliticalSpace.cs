@@ -9,35 +9,29 @@ namespace ImperialStruggle
 {
     public class UI_PoliticalSpace : UI_Space
     {
-        PoliticalSpace politicalSpace;
+        PoliticalSpace space;
+        protected override Space Space => space; 
         [SerializeField] PoliticalData politicalData;
-
-        [SerializeField] TextMeshProUGUI spaceName, flagCost;
-        [SerializeField] Image trim, highlight, background;
+        [SerializeField] TextMeshProUGUI flagCost;
         [SerializeField] Color trimColor = new Color(235, 215, 171);
 
-        private void Awake()
+        void Start()
         {
-            Game.startGameEvent += Style;
+            space = (PoliticalSpace)Game.SpaceLookup[politicalData];
+            space.updateSpaceEvent += Style;
         }
 
-        [Button]
-        public override void Style()
+        [Button] public override void Style()
         {
-            if (politicalSpace == null)
-            {
-                politicalSpace = (PoliticalSpace)Game.SpaceLookup[politicalData];
-                politicalSpace.updateSpaceEvent += Style;
-            }
-
+            Debug.Log("Style"); 
             GraphicSettings graphics = FindObjectOfType<Game>().graphicSettings;
 
-            spaceName.text = politicalSpace.Name;
-            flagCost.text = politicalSpace.FlagCost.ToString();
-            trim.color = politicalSpace.Prestigious ? graphics.prestigeHighlightColor : trimColor;
-            highlight.gameObject.SetActive(politicalSpace.conflictMarker);
-            background.color = graphics.factionColors[politicalSpace.Flag];
-            spaceName.color = politicalSpace.Flag == null || politicalSpace.Flag == Game.Spain ? Color.black : Color.white;
+            spaceName.text = space.Name;
+            flagCost.text = space.FlagCost.ToString();
+            trim.color = space.Prestigious ? graphics.prestigeHighlightColor : trimColor;
+            highlight.gameObject.SetActive(space.conflictMarker);
+            background.color = space.Flag.Color;
+            spaceName.color = space.Flag == null || space.Flag == Game.Spain ? Color.black : Color.white;
         }
     }
 }

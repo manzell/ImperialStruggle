@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace ImperialStruggle
 {
     public class ScoreGlobalDemandAction : GameAction
     {
-        protected override void Do()
+        protected override Task Do()
         {
             if (Phase.CurrentPhase is PeaceTurn peaceTurn)
             {
@@ -33,6 +34,8 @@ namespace ImperialStruggle
                     }
                 }
             }
+
+            return Task.CompletedTask; 
         }
     }
 }

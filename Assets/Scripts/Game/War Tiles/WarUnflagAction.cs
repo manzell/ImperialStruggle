@@ -2,21 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Sockets;
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace ImperialStruggle
 {
     public class WarUnflagAction : PlayerAction
     {
-        protected override void Do()
+        protected async override Task Do()
         {
             if (Phase.CurrentPhase is Theater theater)
             {
-                List<Space> eligible = Game.Spaces.Where(space =>
-                    ((space is Market market && !market.conflictMarker) || (space is PoliticalSpace polySpace && !polySpace.conflictMarker)) && 
-                    space.control == player.Opponent.faction && space.map == theater.map).ToList();
+                IEnumerable<Space> eligible = Game.Spaces.Where(space =>
+                    !space.conflictMarker && space.control == Player.Opponent.Faction && space.map == theater.map &&
+                    (space is Market || space is PoliticalSpace)); 
 
-                new Selection<Space>(player, eligible, selection => Commands.Push(new UnflagCommand(selection.First())));
+                Space space = (await new Selection<Space>(Player, eligible).Completion).First();
+
+                throw new System.NotImplementedException(); 
             }
         }
     }

@@ -4,35 +4,49 @@ using UnityEngine;
 using UnityEngine.Events;
 using System.Linq;
 using UnityEditor;
+using System.Threading.Tasks;
 
 namespace ImperialStruggle
 {
-    public class SetInitiativeAction : PlayerAction
+    public class SetInitiativeAction : GameAction
     {
-        protected override void Do()
+        protected override async Task Do()
         {
             if (Phase.CurrentPhase is PeaceTurn peaceTurn)
             {
-                Player initiativePlayer = Player.players.Where(player => player.faction == peaceTurn.initiative).First();
-                Selection<Faction> selection = new(initiativePlayer, new List<Faction>() { Game.Britain, Game.France }, Finish);
-                //selection.SetTitle($"{actingPlayer.faction} selects Initiative");
+                Player initiativePlayer = GetInitiativePlayer(peaceTurn); 
+                Selection<Player> selection = new (initiativePlayer, Player.Players, Finish);
+                selection.SetTitle($"{initiativePlayer.Faction.Name} selects which faction will act first:");
+
+                await selection.Completion; 
+
+                void Finish(IEnumerable<Player> players)
+                {
+                    Player player = players.First(); 
+                    Debug.Log($"{initiativePlayer.Faction.name} elects to {(player == peaceTurn.initiative ? "Play" : "Pass")} the first Action Round; " +
+                            $"{player.Faction.Opposition().Name} will go {(player.Faction.Opposition() == peaceTurn.initiative ? "First" : "Second")}");
+
+                    ActionRound[] actionRounds = Phase.CurrentPhase.GetComponentsInChildren<ActionRound>();
+
+                    for (int i = 0; i < actionRounds.Length; i++)
+                        actionRounds[i].Setup(i % 2 == 0 ? peaceTurn.initiative : peaceTurn.initiative.Opponent);
+                }
             }
         }
 
-        void Finish(IEnumerable<Faction> factions)
+        Player GetInitiativePlayer(PeaceTurn peaceTurn)
         {
-            if (Phase.CurrentPhase is PeaceTurn peaceTurn)
+            if (RecordsTrack.VictoryPoints > 15)
+                return Player.Players.Where(player => player.Faction == Game.Britain).First();
+            else if (RecordsTrack.VictoryPoints < 15)
+                return Player.Players.Where(player => player.Faction == Game.France).First();
+            else
             {
-                ActionRound[] actionRounds = Phase.CurrentPhase.GetComponentsInChildren<ActionRound>();
-                peaceTurn.initiative = factions.First();
+                int l = peaceTurn.transform.GetSiblingIndex();
 
-                Debug.Log($"{player.faction} elects to {(player == peaceTurn.initiative ? "Play" : "Pass")} the first Action Round; " +
-                    $"{player.faction.Opposition()} will go {(player.faction.Opposition() == peaceTurn.initiative ? "First" : "Second")}");
-
-                Debug.Log("Use a command to change the initiative!");
-
-                for (int i = 0; i < actionRounds.Length; i++)
-                    actionRounds[i].actingFaction = i % 2 == 0 ? peaceTurn.initiative : peaceTurn.initiative.Opposition();
+                return peaceTurn.initiative ??
+                    peaceTurn.transform.parent.GetComponentsInChildren<PeaceTurn>().Where(pt => pt.transform.GetSiblingIndex() < l).Last().initiative ??
+                    Player.Players.Where(player => player.Faction == Game.France).First();
             }
         }
     }

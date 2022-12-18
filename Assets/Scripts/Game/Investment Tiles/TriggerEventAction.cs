@@ -1,38 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace ImperialStruggle
 {
-    public class TriggerEventAction : PlayerAction
+    public class TriggerEventCardAction : PlayerAction
     {
-        protected override void Do()
+        protected override async Task Do()
         {
             if(Phase.CurrentPhase is ActionRound actionRound)
             {
                 ActionPoint.ActionType investmentActionType = actionRound.investmentTile.majorActionPoint.actionType;
-                IEnumerable<EventCard> eligibleCards = player.hand.Where(card => card.reqdActionType == ActionPoint.ActionType.None || card.reqdActionType == investmentActionType);
+                IEnumerable<EventCard> eligibleCards = Player.Cards.Where(card => card.reqdActionType == ActionPoint.ActionType.None || card.reqdActionType == investmentActionType);
 
                 if (eligibleCards.Count() > 0)
-                    new Selection<EventCard>(player, eligibleCards, Finish);
-
-                void Finish(Selection<EventCard> selection)
                 {
-                    EventCard card = selection.First();
-                    Faction actingFaction = card.cardActions.ContainsKey(player.faction) ? player.faction : Game.Neutral;
+                    Selection<EventCard> selection = new (Player, eligibleCards, Finish);
+                    selection.SetTitle("You may play an Event Card");
 
-                    GameAction baseAction = card.cardActions[actingFaction].baseAction; 
-                    GameAction bonusAction = card.cardActions[actingFaction].bonusAction;
-
-                    // TODO - Learn how to Queue Actions and then have a single iterator that works on the Queue and waits for a finish beep from the 
-
-                    if (baseAction != null) 
-                        baseAction.Execute();
-
-                    if (bonusAction != null && card.bonusCondition.Test(null))
-                        bonusAction.Execute(); 
+                    await selection.Completion; 
                 }
+            }
+        }
+
+        async void Finish(IEnumerable<EventCard> cards)
+        {
+            if(cards.Count() > 0)
+            {
+                EventCard card = cards.First();
+                Faction actingFaction = card.cardActions.ContainsKey(Player.Faction) ? Player.Faction : Game.Neutral;
+                GameAction baseAction = card.cardActions[actingFaction].baseAction;
+                GameAction bonusAction = card.cardActions[actingFaction].bonusAction;
+
+                bool bonusEligible = card.bonusCondition.Test(null);
+
+                if (baseAction != null)
+                    await baseAction.Execute();
+
+                if (bonusEligible && bonusAction != null)
+                    await bonusAction.Execute();
             }
         }
     }
