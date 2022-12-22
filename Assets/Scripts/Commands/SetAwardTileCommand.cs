@@ -8,7 +8,7 @@ namespace ImperialStruggle
     public class SetAwardTileCommand : Command
     {
         [SerializeField] Map map;
-        [SerializeField] AwardTile tile;
+        [SerializeField] public AwardTile tile;
 
         public SetAwardTileCommand(Map map, AwardTile tile)
         {

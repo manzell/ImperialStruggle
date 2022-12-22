@@ -6,6 +6,6 @@ namespace ImperialStruggle
 {
     public class NavalData : SpaceData
     {
-        public bool PrestigeSpace;
+        [field: SerializeField] public bool PrestigeSpace { get; private set; }
     }
 }

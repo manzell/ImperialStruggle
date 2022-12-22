@@ -41,56 +41,58 @@ namespace ImperialStruggle
 
     public class Fort : Space, FlaggableSpace
     {
-        public Fort(FortData data) : base(data) => FlagCost = data.FlagCost;
-
         public bool damaged;
-        public int FlagCost { get; private set; }
+
+        public Fort(FortData data) : base(data) { }
+
+        public int GetFlagCost(Player player) => (data as FortData).FlagCost;
     }
 
     public class Market : Space, FlaggableSpace
     {
+        public Resource Resource;
         public Market(MarketData data) : base(data)
         {
             Resource = data.ResourceType;
         }
 
-        public Resource Resource;
-        public int FlagCost => isolated || conflictMarker ? 1 : (data as MarketData).FlagCost; 
-
-        public bool isolated => Isolated();
+        public int GetFlagCost(Player player) => Isolated(player) || conflictMarker ? 1 : (data as MarketData).FlagCost; 
         public bool Protected => !adjacentSpaces.Where(space => space.Flag == this.Flag).Any(space =>
                 space is NavalSpace navapSpace || (space is Fort fort && !fort.damaged)); 
 
-        bool Isolated()
+        public bool Isolated(Player player)
         {
+            int counter = 1; 
             Space currentSpace = this;
-            List<Space> spacesToCheck = new(); 
-            List<Space> checkedSpaces = new();
+            HashSet<Space> spacesToCheck = new();
+            HashSet<Space> checkedSpaces = new();
 
             //Debug.Log($"Checking {Name} for Isolated Status"); 
 
-            while(currentSpace != null)                
+            if (player == null) return false; 
+            while(currentSpace != null)
             {
-                if ((currentSpace is Territory || currentSpace is Fort || currentSpace is NavalSpace) && currentSpace.control == this.Flag)
+                counter++;
+                if ((currentSpace is Territory || currentSpace is Fort || currentSpace is NavalSpace) && currentSpace.control == player.Faction)
                 {
+                    //Debug.Log($"{currentSpace.Name} is Eligible connection [{counter}]"); 
                     return false;
                 }
                 else
                 {
-                    checkedSpaces.Add(currentSpace);    
+                    checkedSpaces.Add(currentSpace);
 
-                    List<Space> spacesToAdd = currentSpace.adjacentSpaces.Where(space =>
-                        !checkedSpaces.Contains(space) && space.Flag == this.Flag && !space.conflictMarker).ToList();
+                    //Debug.Log($"{currentSpace.Name} is not Controlled Territory/Fort/NavalSpace. Adding " +
+                    //    $"{string.Join(", ", spacesToAdd.Select(space => space.Name))} [{counter}]");
 
-                    //Debug.Log($"{currentSpace} is not Controlled Territory/Fort/NavalSpace. Adding {string.Join(", ", spacesToCheck.Select(space => space.Name).ToArray())}");
-
-                    spacesToCheck.AddRange(spacesToAdd);
+                    spacesToCheck.UnionWith(currentSpace.adjacentSpaces.Where(space => !checkedSpaces.Contains(space)
+                        && space.Flag == this.Flag && !space.conflictMarker).Except(spacesToCheck));
                     currentSpace = spacesToCheck.FirstOrDefault();
+                    spacesToCheck.Remove(currentSpace);
                 }
-
             }
 
-            return true; 
+            return true;             
         }
     }
 
@@ -105,14 +107,14 @@ namespace ImperialStruggle
 
     public class PoliticalSpace : Space, FlaggableSpace, PrestigeSpace, AllianceSpace
     {
+        public virtual int GetFlagCost(Player player) => conflictMarker ? 1 : (data as PoliticalData).FlagCost;
+
         public PoliticalSpace(PoliticalData data) : base(data)
         {
-            FlagCost = data.FlagCost;
             Alliance = data.AllianceSpace;
             Prestigious = data.PrestigeSpace;
         }
 
-        public int FlagCost { get; private set; }
         public bool Alliance { get; private set; }
         public bool Prestigious { get; private set; }
     }
@@ -136,7 +138,7 @@ namespace ImperialStruggle
 
     public interface FlaggableSpace : ISpace
     {
-        public int FlagCost { get; }
+        public int GetFlagCost(Player player); 
         public void SetFlag(Faction faction); 
     }
 

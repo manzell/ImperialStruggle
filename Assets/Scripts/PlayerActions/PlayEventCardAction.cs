@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq; 
 using System.Threading.Tasks; 
 
 namespace ImperialStruggle
@@ -9,22 +10,25 @@ namespace ImperialStruggle
     {
         protected override Task Do()
         {
-            return Task.CompletedTask; 
-            /*
-            List<EventCard> eventCards = actingPlayer.hand.Where(card =>
-                card.reqdActionType == ActionPoint.ActionType.None || card.reqdActionType == Phase.CurrentPhase.GetComponent<ActionRound>()?.investmentTile.majorActionType).ToList();
+            IEnumerable<EventCard> eventCards = Player.Cards.Where(card =>
+                card.reqdActionType == ActionPoint.ActionType.None || card.reqdActionType == Phase.CurrentPhase.GetComponent<ActionRound>()?.investmentTile.majorActionPoint.type);
 
-            if (eventCards.Count > 0)
+            if (eventCards.Count() > 0)
             {
-                SelectionController<EventCard>.Selection selector = new(eventCards, Finish);
-                selector.SetTitle($"Select a {actingPlayer.faction} Event Card to Play");
+                Selection<EventCard> selection = new(Player, eventCards, Finish); 
+                selection.SetTitle($"Select a {Player.Faction} Event Card to Play");
             }
-            */
+
+            return Task.CompletedTask;
         }
 
-        public void Finish(EventCard card)
+        public void Finish(Selection<EventCard> selection)
         {
-            Debug.Log($"{Player.Faction} plays {card}");
+            if(selection.Count() > 0)
+            {
+                Debug.Log($"{Player.Faction} plays {selection.selectedItems.First()} <Not Implemented>");
+                
+            }
         }
     }
 }

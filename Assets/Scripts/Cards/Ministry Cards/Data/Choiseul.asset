@@ -38,7 +38,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   keywords: 0100000004000000
-  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
+  Faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
   cardText: Once per turn, when taking a Military action, you receive 1 extra MP
     that you may spend on Bonus War TIles or deploying Squadrons (only). Once per
     turn, if you have a Squadron in North America, you may pay 2 MP to construct

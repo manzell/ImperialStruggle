@@ -38,7 +38,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   keywords: 03000000
-  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
+  Faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
   cardText: Once per turn, you may spend 2 MP to build a Squadron (instead of the
     usual 4). Once per turn, if you have a Squadron in Europe, you may discard an
     Event card from your hand and take 1 TRP.

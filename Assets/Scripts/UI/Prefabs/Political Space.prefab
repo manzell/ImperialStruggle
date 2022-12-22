@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6193261512970342155}
   - component: {fileID: 2696837734608836166}
-  - component: {fileID: 2696837734608836169}
+  - component: {fileID: 2366534614159442002}
   m_Layer: 5
   m_Name: Political Space
   m_TagString: Untagged
@@ -51,14 +51,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4b901042c3620044bb057150a62ac74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  politicalData: {fileID: 0}
-  spaceName: {fileID: 195386396767014263}
-  flagCost: {fileID: 6935207156884034248}
-  trim: {fileID: 7449198835666568089}
   highlight: {fileID: 335809187342107822}
   background: {fileID: 7079403299999125487}
+  trim: {fileID: 7449198835666568089}
+  spaceName: {fileID: 195386396767014263}
+  popup: {fileID: 2366534614159442002}
+  politicalData: {fileID: 0}
+  flagCost: {fileID: 6935207156884034248}
   trimColor: {r: 235, g: 215, b: 171, a: 1}
---- !u!114 &2696837734608836169
+--- !u!114 &2366534614159442002
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -70,6 +71,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c303c7286f3f3504a879809e1a3789d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameBoard: {fileID: 0}
 --- !u!1 &8829556158330257167
 GameObject:
   m_ObjectHideFlags: 0

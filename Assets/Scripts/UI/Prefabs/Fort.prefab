@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8256398646140679372}
   - component: {fileID: 7161924420617830646}
+  - component: {fileID: 3463648711823923786}
   m_Layer: 5
   m_Name: Fort
   m_TagString: Untagged
@@ -58,8 +59,22 @@ MonoBehaviour:
   background: {fileID: 4997143529586439208}
   trim: {fileID: 4613553560261621854}
   spaceName: {fileID: 2724777554966017712}
+  popup: {fileID: 3463648711823923786}
   fortData: {fileID: 0}
   flagCost: {fileID: 5141055174644132111}
+--- !u!114 &3463648711823923786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262467948319393270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c303c7286f3f3504a879809e1a3789d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameBoard: {fileID: 0}
 --- !u!1 &1834404671692783451
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,7 +556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0, g: 1, b: 0.10713959, a: 0.5803922}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

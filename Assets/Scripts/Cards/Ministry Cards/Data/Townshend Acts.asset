@@ -38,7 +38,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   keywords: 02000000
-  faction: {fileID: 0}
+  Faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
   cardText: Once per turn, at the start of an Action Round, place the Townshend Acts
     marker on a commodity on the Global Demand display. You may use Minor Actions
     to unflag that commodity's Markets this turn.

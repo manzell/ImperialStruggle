@@ -7,19 +7,26 @@ namespace ImperialStruggle
 {
     public class DeploySquadronAction : PlayerAction, PurchaseAction, TargetSpaceAction
     {
-        NavalSpace space;
+        NavalSpace navalSpace;
         Squadron squadron;
-        public ActionPoint ActionCost => new ActionPoint(ActionPoint.ActionType.Military, ActionPoint.ActionTier.Minor,
-            space.Squadron == null ? 1 : squadron.space == null ? 3 : 2);
+        public ActionPoint ActionCost => new ActionPoint(ActionPoint.ActionTier.Minor, ActionPoint.ActionType.Military, 
+            navalSpace.Squadron == null ? 1 : squadron.space == null ? 3 : 2);
 
-        public Space Space => space;
-        public override bool Can() => space != null && base.Can();
-        public void SetSpace(Space space) => this.space = space is NavalSpace ? (NavalSpace)space : null;
+        public Space Space => navalSpace;
+        public override bool Can() => navalSpace != null && base.Can();
+        public void SetSpace(Space space) => this.navalSpace = space is NavalSpace ? (NavalSpace)space : null;
+
+        public override bool Eligible(Space space) => space is NavalSpace;
 
         protected override Task Do()
         {
-            Commands.Push(new DeploySquadronCommand(squadron, space));
+            Commands.Push(new DeploySquadronCommand(squadron, navalSpace));
             return Task.CompletedTask; 
+        }
+
+        public override void Setup(Player player)
+        {
+            Name = "Deploy Squadron"; 
         }
     }
 }

@@ -38,6 +38,6 @@ MonoBehaviour:
       Entry: 8
       Data: 
   keywords: 01000000
-  faction: {fileID: 0}
+  Faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
   cardText: Once per turn, your may draw one Event card, then discard one Event card.
   flavor: 

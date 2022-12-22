@@ -14,46 +14,44 @@ namespace ImperialStruggle
         [SerializeField] TextMeshProUGUI cost, actionName;
 
         PlayerAction action;
-        UI_PopupMenu popupMenu;
 
-        public void OnPointerEnter(PointerEventData eventData) => highlight.gameObject.SetActive(true);
+        public void OnPointerEnter(PointerEventData eventData) => highlight.gameObject.SetActive(action.Can());
         public void OnPointerExit(PointerEventData eventData) => highlight.gameObject.SetActive(false);
         public async void OnPointerClick(PointerEventData eventData)
         {
-            popupMenu.Close();
-            await action.Execute();
+            if(action.Can())
+            {
+                UI_PopupMenu.Close();
+                await action.Execute();
+            }
         }
 
         public void SetAction(PlayerAction action)
         {
             this.action = action;
-            actionName.text = action.ToString();
+            actionName.text = action.Name;
 
-            //if (action.actionPointCost.Count > 0)
-            //    SetActionCost(action.actionPointCost); 
+            actionName.color = action.Can() ? Color.black : Color.gray; 
+
+            if(action is PurchaseAction purchaseAction)
+                SetActionCost(purchaseAction); 
         }
 
-        public void SetMenu(UI_PopupMenu popupMenu) => this.popupMenu = popupMenu;
-
-        public void SetActionCost(ActionPoints actionPointCost)
+        public void SetActionCost(PurchaseAction purchaseAction)
         {
-            List<ActionPoint> majorActionPoints = actionPointCost.Where(actionPoint => actionPoint.actionTier == ActionPoint.ActionTier.Major).ToList();
-            List<ActionPoint> minorActionPoints = actionPointCost.Where(actionPoint => actionPoint.actionTier == ActionPoint.ActionTier.Minor).ToList();
-
-            if (majorActionPoints.Count > 0)
+            if (purchaseAction.ActionCost.tier == ActionPoint.ActionTier.Major)
             {
-                cost.text = majorActionPoints[0].Value(action).ToString();
                 cost.color = Color.black;
-                costIcon.sprite = FindObjectOfType<Game>().graphicSettings.actionIcons[majorActionPoints[0].actionType];
                 costIcon.color = Color.white;
             }
-            else if (minorActionPoints.Count > 0)
+            else if (purchaseAction.ActionCost.tier == ActionPoint.ActionTier.Minor)
             {
-                cost.text = minorActionPoints[0].Value(action).ToString();
                 cost.color = Color.gray;
-                costIcon.sprite = FindObjectOfType<Game>().graphicSettings.actionIcons[minorActionPoints[0].actionType];
                 costIcon.color = Color.gray;
             }
+
+            cost.text = purchaseAction.ActionCost.Value(purchaseAction).ToString();
+            costIcon.sprite = FindObjectOfType<Game>().graphicSettings.actionIcons[purchaseAction.ActionCost.type];
         }
     }
 }

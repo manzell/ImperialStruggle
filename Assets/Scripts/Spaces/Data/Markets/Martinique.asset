@@ -21,14 +21,14 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  prefab: {fileID: 0}
-  map: {fileID: 11400000, guid: 5e460598291e3794a8ee7e5a51147d40, type: 2}
-  startingFlag: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
-  availableEra: 0
-  adjacentSpaces:
+  <prefab>k__BackingField: {fileID: 0}
+  <map>k__BackingField: {fileID: 11400000, guid: 5e460598291e3794a8ee7e5a51147d40, type: 2}
+  <startingFlag>k__BackingField: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
+  <availableEra>k__BackingField: 0
+  <adjacentSpaces>k__BackingField:
   - {fileID: 11400000, guid: 1746107fa3d14874db1b0705342a08a2, type: 2}
   - {fileID: 11400000, guid: 722f790ad87061a4ea029cac6df48c7b, type: 2}
   - {fileID: 11400000, guid: 00dff704d4b0b4c45af423c942967b02, type: 2}
   - {fileID: 11400000, guid: da3371847a0f69a45b35bbd2450627b2, type: 2}
-  resource: {fileID: 11400000, guid: df3448d296fcada4db9b0216f32311da, type: 2}
-  flagCost: 2
+  <ResourceType>k__BackingField: {fileID: 11400000, guid: df3448d296fcada4db9b0216f32311da, type: 2}
+  <FlagCost>k__BackingField: 2

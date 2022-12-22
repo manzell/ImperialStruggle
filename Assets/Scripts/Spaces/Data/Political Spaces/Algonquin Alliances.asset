@@ -21,11 +21,11 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  prefab: {fileID: 0}
-  map: {fileID: 11400000, guid: e88bd87cf9d80f548acfabe66dfa8b0c, type: 2}
-  startingFlag: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
-  availableEra: 0
-  adjacentSpaces: []
-  flagCost: 2
-  alliance: 0
-  prestige: 0
+  <prefab>k__BackingField: {fileID: 0}
+  <map>k__BackingField: {fileID: 11400000, guid: e88bd87cf9d80f548acfabe66dfa8b0c, type: 2}
+  <startingFlag>k__BackingField: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
+  <availableEra>k__BackingField: 0
+  <adjacentSpaces>k__BackingField: []
+  <FlagCost>k__BackingField: 2
+  <AllianceSpace>k__BackingField: 0
+  <PrestigeSpace>k__BackingField: 0

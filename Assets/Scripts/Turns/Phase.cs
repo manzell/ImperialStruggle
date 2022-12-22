@@ -37,7 +37,6 @@ namespace ImperialStruggle
             ExecutedCommands = new();
         }
 
-        [ContextMenu("Start Phase")]
         public virtual void StartPhase()
         {
             Debug.Log($"StartPhase:: {this}");

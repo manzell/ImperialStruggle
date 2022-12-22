@@ -1,32 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Events;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace ImperialStruggle
 {
     public class ScoreMapAction : GameAction
     {
-        public static UnityEvent<Map> scoreMapEvent;
+        public static System.Action<Map, AwardTile> scoreMapEvent;
 
         protected override Task Do()
         {
-            throw new System.NotImplementedException(); 
-            /*
-            foreach(Map map in mapWinners.Keys)
+            if (Phase.CurrentPhase is PeaceTurn peaceTurn)
             {
-                if(map.controllingFaction != Game.Neutral)
+                foreach (KeyValuePair<Map, AwardTile> award in peaceTurn.awardTiles)
                 {
-                    _faction = map.controllingFaction;
-                    mapWinners[map] = _faction;
-                    _vp = map.awardTile.victoryPoints;
-                    _tp = map.awardTile.treatyPoints;
-                    map.awardTile.used = false; 
-                    scoreMapEvent.Invoke(map); 
+                    scoreMapEvent?.Invoke(award.Key, award.Value);
+
+                    if (award.Key.mapScore.Max(kvp => kvp.Value) - award.Key.mapScore.Min(kvp => kvp.Value) >= award.Value.RequiredMargin)
+                        Commands.Push(new AddActionPointCommand(award.Key.controllingFaction.player, award.Value.ActionPoints));
                 }
             }
-            */
+
+            return Task.CompletedTask; 
         }
     }
 }

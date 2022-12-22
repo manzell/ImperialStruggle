@@ -29,14 +29,14 @@ namespace ImperialStruggle
 
         public void SetAPIcon(ActionPoint ap)
         {
-            apIcon.sprite = FindObjectOfType<Game>().graphicSettings.actionIcons[ap.actionType];
-            apIcon.color = ap.actionTier == ActionPoint.ActionTier.Major ? Color.black : Color.gray;
+            apIcon.sprite = FindObjectOfType<Game>().graphicSettings.actionIcons[ap.type];
+            apIcon.color = ap.tier == ActionPoint.ActionTier.Major ? Color.black : Color.gray;
         }
 
         public void setAPValue(ActionPoint ap)
         {
             apPoints.text = $"{ap.Value(null)}{(ap.conditionals.Count > 0 ? "*" : string.Empty)}";
-            apPoints.color = ap.actionTier == ActionPoint.ActionTier.Major ? Color.black : Color.gray;
+            apPoints.color = ap.tier == ActionPoint.ActionTier.Major ? Color.black : Color.gray;
         }
 
         public void OnPointerEnter(PointerEventData eventData)

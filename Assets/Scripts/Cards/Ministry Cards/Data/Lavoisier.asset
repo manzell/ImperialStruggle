@@ -38,7 +38,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   keywords: 03000000
-  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
+  Faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
   cardText: On any Action Round you play an Event with a Bonus effect, and your receive
     that Bonus effect, your Major and Minor Actions from Investment Tiles are worth
     1 extra Action Point.

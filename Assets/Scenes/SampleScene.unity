@@ -299,6 +299,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1492320707}
   - {fileID: 1339671885}
   - {fileID: 2007638620}
   - {fileID: 1406319762}
@@ -1070,6 +1071,109 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!1 &96531894
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 96531895}
+  - component: {fileID: 96531898}
+  - component: {fileID: 96531897}
+  - component: {fileID: 96531896}
+  m_Layer: 5
+  m_Name: Minor Action Points
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &96531895
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96531894}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1849529720}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 50}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &96531896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96531894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 3
+  m_Spacing: 20
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
+--- !u!114 &96531897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96531894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.37208968, g: 0.4417699, b: 0.49056602, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &96531898
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96531894}
+  m_CullTransparentMesh: 1
 --- !u!224 &105411722 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7173288527765749541, guid: e3f87f6d3b8f6da41a4970e4e8719a2e, type: 3}
@@ -1304,9 +1408,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 810758134}
   - {fileID: 348034037}
   - {fileID: 861551498}
-  - {fileID: 810758134}
   - {fileID: 1340919231}
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -3275,56 +3379,14 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 1350785706}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
     - Name: connections
-      Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[UnityEngine.Space,
-        UnityEngine.CoreModule],[UnityEngine.Space, UnityEngine.CoreModule]], mscorlib],[UnityEngine.LineRenderer,
-        UnityEngine.CoreModule]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[UnityEngine.Space,
-        UnityEngine.CoreModule],[UnityEngine.Space, UnityEngine.CoreModule]], mscorlib]],
-        mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 7
-      Data: System.ValueTuple`2[[UnityEngine.Space, UnityEngine.CoreModule],[UnityEngine.Space,
-        UnityEngine.CoreModule]], mscorlib
-    - Name: Item1
-      Entry: 3
-      Data: 0
-    - Name: Item2
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: $v
-      Entry: 10
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
   mapContainer: {fileID: 861551497}
   lineContainer: {fileID: 820233790}
@@ -10673,54 +10735,81 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ImperialStruggle.ShiftMarketAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 2|ImperialStruggle.ShiftPoliticalSpaceAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 3|ImperialStruggle.DrawEventCardAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 4|ImperialStruggle.BuyBonusWarAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 5|ImperialStruggle.RemoveConflictMarkerAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 6|ImperialStruggle.BuildFortAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 7|ImperialStruggle.RepairFortAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 8|ImperialStruggle.BuildSquadronAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 9|ImperialStruggle.DeploySquadronAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -16401,7 +16490,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1827738128}
-  - {fileID: 1492320707}
   - {fileID: 173320246}
   - {fileID: 1806286693}
   - {fileID: 502926996}
@@ -17099,6 +17187,109 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!1 &1397821681
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1397821682}
+  - component: {fileID: 1397821685}
+  - component: {fileID: 1397821684}
+  - component: {fileID: 1397821683}
+  m_Layer: 5
+  m_Name: Major Action Points
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1397821682
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397821681}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1849529720}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 50}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &1397821683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397821681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 3
+  m_Spacing: 20
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
+--- !u!114 &1397821684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397821681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.46678498, g: 0.5849056, b: 0.43812743, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1397821685
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397821681}
+  m_CullTransparentMesh: 1
 --- !u!1 &1406319761
 GameObject:
   m_ObjectHideFlags: 0
@@ -17695,54 +17886,81 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ImperialStruggle.ShiftMarketAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 2|ImperialStruggle.ShiftPoliticalSpaceAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 3|ImperialStruggle.DrawEventCardAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 4|ImperialStruggle.BuyBonusWarAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 5|ImperialStruggle.RemoveConflictMarkerAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 6|ImperialStruggle.BuildFortAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 7|ImperialStruggle.RepairFortAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 8|ImperialStruggle.BuildSquadronAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 9|ImperialStruggle.DeploySquadronAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -19101,6 +19319,7 @@ GameObject:
   - component: {fileID: 1492320707}
   - component: {fileID: 1492320709}
   - component: {fileID: 1492320708}
+  - component: {fileID: 1492320710}
   m_Layer: 5
   m_Name: Action Points
   m_TagString: Untagged
@@ -19122,12 +19341,12 @@ RectTransform:
   m_Children:
   - {fileID: 1817650398}
   - {fileID: 748889669}
-  m_Father: {fileID: 1340919231}
+  m_Father: {fileID: 26858292}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 830}
   m_SizeDelta: {x: 530, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1492320708
@@ -19168,6 +19387,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1492320706}
   m_CullTransparentMesh: 1
+--- !u!114 &1492320710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492320706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e6e395cb9f1e944188feef551430d34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 748889668}
+    - {fileID: 1817650397}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: actionTiers
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[ImperialStruggle.ActionPoint+ActionTier,
+        Assembly-CSharp],[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[ImperialStruggle.ActionPoint+ActionTier,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 0
+    - Name: $v
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  player: {fileID: 1435854123}
+  actionPointPrefab: {fileID: 9133249338088538451, guid: 25f577571b4367b469132b4f8f14ca2a, type: 3}
 --- !u!1 &1515178238
 GameObject:
   m_ObjectHideFlags: 0
@@ -23529,6 +23823,160 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1832612182}
   m_CullTransparentMesh: 1
+--- !u!1 &1849529719
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1849529720}
+  - component: {fileID: 1849529723}
+  - component: {fileID: 1849529722}
+  - component: {fileID: 1849529721}
+  m_Layer: 5
+  m_Name: Action Points
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1849529720
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849529719}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1397821682}
+  - {fileID: 96531895}
+  m_Father: {fileID: 1917858153}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: 830}
+  m_SizeDelta: {x: 530, y: 100}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &1849529721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849529719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e6e395cb9f1e944188feef551430d34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 96531894}
+    - {fileID: 1397821681}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: actionTiers
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[ImperialStruggle.ActionPoint+ActionTier,
+        Assembly-CSharp],[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[ImperialStruggle.ActionPoint+ActionTier,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 0
+    - Name: $v
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  player: {fileID: 901540906}
+  actionPointPrefab: {fileID: 9133249338088538451, guid: 25f577571b4367b469132b4f8f14ca2a, type: 3}
+--- !u!114 &1849529722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849529719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.6886792, g: 0.59382343, b: 0.59382343, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1849529723
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849529719}
+  m_CullTransparentMesh: 1
 --- !u!1 &1853806146
 GameObject:
   m_ObjectHideFlags: 0
@@ -24114,6 +24562,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1849529720}
   - {fileID: 2100857644}
   - {fileID: 854369139}
   - {fileID: 535141499}
@@ -28653,6 +29102,9 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ImperialStruggle.SelectInvestmentTileAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -34175,6 +34627,9 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ImperialStruggle.SelectInvestmentTileAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -34254,6 +34709,9 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ImperialStruggle.SelectInvestmentTileAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -36030,6 +36488,9 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ImperialStruggle.SelectInvestmentTileAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -36661,6 +37122,9 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ImperialStruggle.SelectInvestmentTileAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -37587,6 +38051,9 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ImperialStruggle.SelectInvestmentTileAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -38242,7 +38709,7 @@ PrefabInstance:
       objectReference: {fileID: 3255749983818563039, guid: a84e8e7b62f796141a6aac76b9bf503b, type: 3}
     - target: {fileID: 7009024217907680181, guid: a84e8e7b62f796141a6aac76b9bf503b, type: 3}
       propertyPath: m_Name
-      value: Bucaneers
+      value: Buccaneers
       objectReference: {fileID: 0}
     - target: {fileID: 8271787011449830351, guid: a84e8e7b62f796141a6aac76b9bf503b, type: 3}
       propertyPath: serializationData.Prefab
@@ -40724,6 +41191,9 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ImperialStruggle.AddCardsToDeckAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: cards
       Entry: 7
       Data: 2|System.Collections.Generic.List`1[[ImperialStruggle.EventCard, Assembly-CSharp]],
@@ -40788,6 +41258,9 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 3|ImperialStruggle.AdjustDebtLimitAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: amount
       Entry: 3
       Data: 5
@@ -40797,12 +41270,18 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 4|ImperialStruggle.SetAwardTiles, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 5|ImperialStruggle.SetGlobalDemandAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: numGlobalDemandTiles
       Entry: 3
       Data: 3
@@ -40812,6 +41291,9 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 6|ImperialStruggle.DealCardsAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: dealType
       Entry: 3
       Data: 0
@@ -40824,6 +41306,9 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 7|ImperialStruggle.WarPrepAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: nextWar
       Entry: 10
       Data: 15
@@ -40833,6 +41318,9 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 8|ImperialStruggle.DealInvestmentTilesAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: numToDeal
       Entry: 3
       Data: 9
@@ -40842,18 +41330,27 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 9|ImperialStruggle.SelectMinistryCardAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 10|ImperialStruggle.SetInitiativeAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 11|ImperialStruggle.NextPhaseAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -40873,6 +41370,9 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 13|ImperialStruggle.ResetTreatyPointsAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: treatyPointsCap
       Entry: 3
       Data: 4
@@ -40882,12 +41382,18 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 14|ImperialStruggle.ScoreMapAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 15|ImperialStruggle.ScorePrestigeAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: VPaward
       Entry: 3
       Data: 2
@@ -40916,12 +41422,18 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 17|ImperialStruggle.ScoreGlobalDemandAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 18|ImperialStruggle.PeaceTurnVictoryConditionAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -41627,6 +42139,9 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ImperialStruggle.SelectInvestmentTileAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -42786,6 +43301,9 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ImperialStruggle.SelectInvestmentTileAction, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 

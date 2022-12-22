@@ -12,7 +12,7 @@ namespace ImperialStruggle
     public class UI_NavalSpace : UI_Space
     {
         NavalSpace navalSpace;
-        protected override Space Space => navalSpace; 
+        protected override Space space => navalSpace; 
         [SerializeField] NavalData navalData;
 
         void Start()

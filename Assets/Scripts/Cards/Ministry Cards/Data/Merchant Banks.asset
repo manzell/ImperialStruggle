@@ -41,7 +41,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   keywords: 04000000
-  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
+  Faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
   cardText: Ignore the first 2 Debt you take as EP each Peace turn, provided you
     use the Debt. (If this ability is available, you may use it even while at your
     Debt Limit.)

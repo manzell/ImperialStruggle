@@ -4,76 +4,73 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using System.Linq;
 using DG.Tweening;
-using Sirenix.Utilities;
 
 namespace ImperialStruggle
 {
-    public class UI_PopupMenu : MonoBehaviour
+    public class UI_PopupMenu : MonoBehaviour, IPointerClickHandler
     {
         static GameObject popupMenuContainer;
-        bool open = false;
-        GraphicSettings settings;
+        static bool open;
+        Space space; 
+        GraphicSettings settings; 
 
         void Awake()
         {
             settings = FindObjectOfType<Game>().graphicSettings;
+            Game.startGameEvent += () => space = GetComponent<UI_Space>().Space; 
+        }
+
+        public void OnPointerClick(PointerEventData eventData)
+        {
+            if (open)
+                Close();
+
+            Open(space);
         }
 
         public void Open(Space space)
         {
-            Debug.Log($"Open({space})"); 
-            if(!open)
+            Debug.Log("Opening");
+            open = true; 
+            Player player = Game.ActivePlayer;
+            List<PlayerAction> actions = new();
+
+            foreach (PlayerAction action in player.Actions.Where(action => action.Eligible(space)))
             {
-                Game.ActivePlayer.Actions.OfType<TargetSpaceAction>().ForEach(action => action.SetSpace(space));
-                Player player = Game.ActivePlayer;
-                List<PlayerAction> actions = new();
-
-                foreach (PlayerAction action in player.Actions)
+                if (action is TargetSpaceAction targetSpaceAction)
                 {
-                    if (action is TargetSpaceAction targetSpaceAction)
-                    {
-                        targetSpaceAction.SetSpace(space);
-
-                        if (action.Can())
-                            actions.Add(action);
-                    }
+                    targetSpaceAction.SetSpace(space);
+                    actions.Add(action);
                 }
+            }
 
-                if (actions.Count > 0)
+            if (actions.Count > 0)
+            {
+                GameObject popupActionPrefab = FindObjectOfType<Game>().graphicSettings.PopupAction;
+                Vector2 menuSize = popupActionPrefab.GetComponent<RectTransform>().sizeDelta; 
+
+                popupMenuContainer = Instantiate(settings.PopupMenu, FindObjectOfType<UI_GameBoard>().transform);
+
+                popupMenuContainer.transform.position = transform.position; 
+                popupMenuContainer.GetComponent<RectTransform>().sizeDelta = new Vector2(menuSize.x, menuSize.y * actions.Count);
+
+                foreach (Transform child in popupMenuContainer.transform)
+                    Destroy(child.gameObject);
+
+                foreach (PlayerAction action in actions)
                 {
-                    GameObject popupActionPrefab = FindObjectOfType<Game>().graphicSettings.PopupAction;
-                    RectTransform rect = popupActionPrefab.GetComponent<RectTransform>();
-
-                    if (popupMenuContainer == null)
-                        popupMenuContainer = Instantiate(settings.PopupMenu, GetComponentInParent<Canvas>().transform);
-
-                    popupMenuContainer.transform.position = transform.position;
-                    popupMenuContainer.GetComponent<RectTransform>().DOSizeDelta(new Vector2(rect.sizeDelta.x, rect.sizeDelta.y * actions.Count), 0.5f);
-
-                    foreach (Transform child in popupMenuContainer.transform)
-                        Destroy(child.gameObject);
-
-                    foreach (PlayerAction action in actions)
-                    {
-                        UI_MenuAction popupMenuAction = Instantiate(popupActionPrefab, popupMenuContainer.transform).GetComponent<UI_MenuAction>();
-                        popupMenuAction.SetAction(action);
-                        popupMenuAction.SetMenu(this);
-                    }
-
-                    open = true; 
+                    UI_MenuAction popupMenuAction = Instantiate(popupActionPrefab, popupMenuContainer.transform).GetComponent<UI_MenuAction>();
+                    popupMenuAction.SetAction(action);
                 }
             }
         }
 
-        public void Close()
+        public static void Close()
         {
-            open = false;
-
+            Debug.Log("Closing");
+            open = false; 
             if (popupMenuContainer != null)
-            {
-                RectTransform popupRectTransform = popupMenuContainer?.GetComponent<RectTransform>();
-                popupRectTransform.DOSizeDelta(new Vector2(popupRectTransform.sizeDelta.x, 0), 0.5f).OnComplete(() => Destroy(popupMenuContainer));
-            }
+                Destroy(popupMenuContainer);
         }
     }
 }

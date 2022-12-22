@@ -4,35 +4,45 @@ using UnityEngine;
 using UnityEngine.Events; 
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
-using Sirenix.OdinInspector; 
+using Sirenix.OdinInspector;
+using System.Linq;
+using Sirenix.Utilities;
 
-public class UI_GameBoard : SerializedMonoBehaviour, IDragHandler, IBeginDragHandler
+namespace ImperialStruggle
 {
-    [SerializeField] GameObject mapContainer, lineContainer, linePrefab;
-    [SerializeField] float speed = 0.1f; 
-    Vector2 previousPosition;
-
-    [SerializeField] public Dictionary<(Space, Space), LineRenderer> connections = new Dictionary<(Space, Space), LineRenderer>(); 
-
-    public void OnBeginDrag(PointerEventData eventData) => previousPosition = Mouse.current.position.ReadValue(); 
-
-    public void OnDrag(PointerEventData eventData)
+    public class UI_GameBoard : SerializedMonoBehaviour, IDragHandler, IBeginDragHandler, IPointerClickHandler
     {
-        Vector2 frameSize = mapContainer.GetComponent<RectTransform>().sizeDelta;
-        Vector2 boardSize = GetComponent<RectTransform>().sizeDelta;
-        Vector3 drag = (Mouse.current.position.ReadValue() - previousPosition) * speed;
+        [SerializeField] GameObject mapContainer, lineContainer, linePrefab;
+        [SerializeField] float speed = 0.1f;
+        Vector2 previousPosition;
 
-        Vector3 newPosition = transform.position + drag;
+        [SerializeField] public Dictionary<(Space, Space), LineRenderer> connections = new Dictionary<(Space, Space), LineRenderer>();
 
-        bool maxXrespected = (newPosition.x + boardSize.x / 2) > (mapContainer.transform.position.x + frameSize.x / 2);
-        bool maxYrespected = (newPosition.y + boardSize.y / 2) > (mapContainer.transform.position.y + frameSize.y / 2);
-        bool minXrespected = (newPosition.x - boardSize.x / 2) < (mapContainer.transform.position.x - frameSize.x / 2);
-        bool minYrespected = (newPosition.y - boardSize.y / 2) < (mapContainer.transform.position.y - frameSize.y / 2);
+        public void OnBeginDrag(PointerEventData eventData) => previousPosition = Mouse.current.position.ReadValue();
 
-        if (maxXrespected && maxYrespected && minXrespected && minYrespected)
+        public void OnDrag(PointerEventData eventData)
         {
-            transform.position += drag;
-            previousPosition = Mouse.current.position.ReadValue();
+            Vector2 frameSize = mapContainer.GetComponent<RectTransform>().sizeDelta;
+            Vector2 boardSize = GetComponent<RectTransform>().sizeDelta;
+            Vector3 drag = (Mouse.current.position.ReadValue() - previousPosition) * speed;
+
+            Vector3 newPosition = transform.position + drag;
+
+            bool maxXrespected = (newPosition.x + boardSize.x / 2) > (mapContainer.transform.position.x + frameSize.x / 2);
+            bool maxYrespected = (newPosition.y + boardSize.y / 2) > (mapContainer.transform.position.y + frameSize.y / 2);
+            bool minXrespected = (newPosition.x - boardSize.x / 2) < (mapContainer.transform.position.x - frameSize.x / 2);
+            bool minYrespected = (newPosition.y - boardSize.y / 2) < (mapContainer.transform.position.y - frameSize.y / 2);
+
+            if (maxXrespected && maxYrespected && minXrespected && minYrespected)
+            {
+                transform.position += drag;
+                previousPosition = Mouse.current.position.ReadValue();
+            }
+        }
+
+        public void OnPointerClick(PointerEventData eventData)
+        {
+            UI_PopupMenu.Close(); 
         }
     }
 }

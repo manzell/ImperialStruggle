@@ -13,4 +13,9 @@ MonoBehaviour:
   m_Name: Neutral
   m_EditorClassIdentifier: 
   Icon: {fileID: 0}
-  Color: {r: 0, g: 0, b: 0, a: 0}
+  Flag: {fileID: 0}
+  Color: {r: 0.6415094, g: 0.63493717, b: 0.5955144, a: 1}
+  ministers: []
+  basicWarTiles: []
+  advancedWarTiles: []
+  player: {fileID: 0}

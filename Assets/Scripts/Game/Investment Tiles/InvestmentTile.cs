@@ -10,7 +10,7 @@ namespace ImperialStruggle
     public class InvestmentTile : SerializedScriptableObject, ISelectable
     {
         public enum InvestmentTileStatus { Reserve, Available, Drafted, Exhausted }
-        public string Name => $"{majorActionPoint.baseValue} {majorActionPoint.actionType.ToString().Substring(0,3)}/{minorActionPoint.actionType.ToString().Substring(0,3)}" +
+        public string Name => $"{majorActionPoint.baseValue} {majorActionPoint.type.ToString().Substring(0,3)}/{minorActionPoint.type.ToString().Substring(0,3)}" +
             $"{(actions.Any(a => a is MilitaryUpgradeAction) ? " Mil" : string.Empty)}{(actions.Any(a => a is TriggerEventCardAction)? " Event" : string.Empty)}";
 
         public System.Action UISelectionEvent { get; set; }

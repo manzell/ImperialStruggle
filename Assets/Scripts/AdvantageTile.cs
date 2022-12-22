@@ -8,11 +8,9 @@ using System;
 
 namespace ImperialStruggle
 {
-    public abstract class AdvantageTile : PlayerAction, ISelectable
+    public abstract class AdvantageTile // : PlayerAction, ISelectable
     {
-        public enum AdvantageTileState { Ready, Exhaused }
-        public AdvantageTileState tileState { get; private set; }
-        public string Name { get; private set; }
+        public bool Exhausted = false; 
 
         [SerializeField] HashSet<SpaceData> adjacentSpaces;
 
@@ -21,6 +19,5 @@ namespace ImperialStruggle
 
         public Action UISelectionEvent { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public Action UIDeselectEvent { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
- 
     }
 }

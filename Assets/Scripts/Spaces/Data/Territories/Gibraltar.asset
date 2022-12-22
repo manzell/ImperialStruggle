@@ -21,10 +21,10 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  prefab: {fileID: 0}
-  map: {fileID: 11400000, guid: d539b3597d25b5940a836fda6d471339, type: 2}
-  startingFlag: {fileID: 11400000, guid: b1ddcaf73c7dc44479196db223dbb84b, type: 2}
-  availableEra: 0
-  adjacentSpaces: []
-  conquestLineConnections: []
-  prestige: 0
+  <prefab>k__BackingField: {fileID: 0}
+  <map>k__BackingField: {fileID: 11400000, guid: d539b3597d25b5940a836fda6d471339, type: 2}
+  <startingFlag>k__BackingField: {fileID: 11400000, guid: b1ddcaf73c7dc44479196db223dbb84b, type: 2}
+  <availableEra>k__BackingField: 0
+  <adjacentSpaces>k__BackingField: []
+  <ConquestLines>k__BackingField: []
+  <PrestigeSpace>k__BackingField: 0

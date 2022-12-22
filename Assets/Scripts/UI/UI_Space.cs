@@ -7,22 +7,18 @@ using Sirenix.Utilities;
 
 namespace ImperialStruggle
 {
-    public abstract class UI_Space : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
+    public abstract class UI_Space : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
-        [SerializeField] protected abstract Space Space { get; }
+        public Space Space => space; 
+        [SerializeField] protected abstract Space space { get; }
         [SerializeField] protected Image highlight, background, trim;
         [SerializeField] protected TextMeshProUGUI spaceName;
+        [SerializeField] UI_PopupMenu popup; 
 
         private void Awake()
         {
             Game.startGameEvent += Style;
-        }
-
-        public void OnPointerClick(PointerEventData eventData)
-        {
-            Debug.Log($"On Pointer Click ({Space})"); 
-            UI_PopupMenu popup = gameObject.AddComponent<UI_PopupMenu>();
-            popup.Open(Space); 
+            Game.setActivePlayerEvent += player => Style(); 
         }
 
         public void OnPointerEnter(PointerEventData eventData)

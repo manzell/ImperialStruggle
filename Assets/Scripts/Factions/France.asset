@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: France
   m_EditorClassIdentifier: 
   Icon: {fileID: 21300000, guid: f9874b0d76564b94b8bea8403885d155, type: 3}
-  Color: {r: 0.25, g: 0.2, b: 0.8, a: 1}
+  Flag: {fileID: 0}
+  Color: {r: 0.3578561, g: 0.31679997, b: 0.8, a: 1}
   ministers:
   - {fileID: 11400000, guid: 398289f80fd61b041983d8b0949b17c3, type: 2}
   - {fileID: 11400000, guid: 11b3db2dcdf8215448c371df3664e362, type: 2}

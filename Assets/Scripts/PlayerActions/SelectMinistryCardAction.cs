@@ -18,7 +18,7 @@ namespace ImperialStruggle
                 foreach (Player player in Player.Players)
                 {
                     Selection<MinistryCardData> selection = new(player, player.Ministers.Keys.Where(minister => minister.eras.Contains(peaceTurn.era)),
-                        selection => selection.ForEach(minister => Commands.Push(new SelectMinistryCardCommand(player, minister))), 2);
+                        Finish, 2); 
 
                     selection.SetTitle("Select your Ministry Card(s)");
 
@@ -27,6 +27,13 @@ namespace ImperialStruggle
 
                 await Task.WhenAll(tasks);
             }
+        }
+
+        void Finish(Selection<MinistryCardData> selection)
+        {
+            Debug.Log($"{selection.player} seleted {string.Join(" & ", selection.selectedItems.Select(m => m.Name))}"); 
+            foreach(MinistryCardData minister in selection.selectedItems)
+                Commands.Push(new SelectMinistryCardCommand(selection.player, minister));
         }
     }
 }

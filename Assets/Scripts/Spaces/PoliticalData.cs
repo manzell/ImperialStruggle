@@ -6,8 +6,8 @@ namespace ImperialStruggle
 {
     public class PoliticalData : SpaceData
     {
-        public int FlagCost;
-        public bool AllianceSpace;
-        public bool PrestigeSpace;
+        [field: SerializeField] public int FlagCost { get; private set; }
+        [field: SerializeField] public bool AllianceSpace { get; private set; }
+        [field: SerializeField] public bool PrestigeSpace { get; private set; }
     }
 }

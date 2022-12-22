@@ -10,7 +10,7 @@ namespace ImperialStruggle
     public class UI_Fort : UI_Space
     {
         Fort fort;
-        protected override Space Space => fort;
+        protected override Space space => fort;
         [SerializeField] FortData fortData;
         [SerializeField] TextMeshProUGUI flagCost;
 
@@ -22,10 +22,10 @@ namespace ImperialStruggle
 
         [Button] public override void Style()
         {
-            spaceName.text = Space.Name;
-            flagCost.text = (Space as Fort).FlagCost.ToString();
-            background.color = Space.Flag.Color;
-            spaceName.color = Space.Flag == null ? Color.black : Color.white;
+            spaceName.text = space.Name;
+            flagCost.text = (space as Fort).GetFlagCost(null).ToString();
+            background.color = space.Flag.Color;
+            spaceName.color = space.Flag == null ? Color.black : Color.white;
         }
     }
 }

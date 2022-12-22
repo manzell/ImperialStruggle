@@ -8,6 +8,7 @@ namespace ImperialStruggle
 {
     public class Selection<T> : IEnumerable<T> where T : ISelectable
     {
+        public Player player { get; private set; }
         public IEnumerable<T> selectableItems { get; private set; }
         public List<T> selectedItems { get; private set; }
         public int maxSelectable { get; private set; } = 1;
@@ -16,13 +17,14 @@ namespace ImperialStruggle
         public Task<IEnumerable<T>> Completion => task.Task; 
         TaskCompletionSource<IEnumerable<T>> task;
 
-        public IEnumerator<T> GetEnumerator() => selectableItems.GetEnumerator();
-        IEnumerator IEnumerable.GetEnumerator() => this.GetEnumerator();
+        public IEnumerator<T> GetEnumerator() => selectedItems.GetEnumerator();
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
         public System.Action<string> SetTitle { get; private set; }
 
         public Selection(Player player, IEnumerable<T> items)
         {
+            this.player = player; 
             selectableItems = items;
             selectedItems = new();
             task = new();
@@ -46,7 +48,6 @@ namespace ImperialStruggle
         {
             if (!selectedItems.Contains(item))
             {
-                Debug.Log($"Selecting {item.Name} ({item})"); 
                 item.UISelectionEvent?.Invoke();
                 selectedItems.Add(item);
             }

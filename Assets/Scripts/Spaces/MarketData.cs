@@ -5,8 +5,8 @@ using UnityEngine;
 namespace ImperialStruggle
 {
     public class MarketData : SpaceData
-    {
-        public Resource ResourceType;
-        public int FlagCost;
+    { 
+        [field: SerializeField] public Resource ResourceType { get; private set; }
+        [field: SerializeField] public int FlagCost { get; private set; }
     }
 }

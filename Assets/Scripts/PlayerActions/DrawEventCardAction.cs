@@ -8,7 +8,7 @@ namespace ImperialStruggle
 {
     public class DrawEventCardAction : PlayerAction, PurchaseAction
     {
-        public ActionPoint ActionCost => new ActionPoint(ActionPoint.ActionType.Diplomacy, ActionPoint.ActionTier.Minor, 3);
+        public ActionPoint ActionCost => new ActionPoint(ActionPoint.ActionTier.Minor, ActionPoint.ActionType.Diplomacy, 3);
 
         public override bool Can() => Game.EventDeck.Count > 0 && base.Can(); 
 

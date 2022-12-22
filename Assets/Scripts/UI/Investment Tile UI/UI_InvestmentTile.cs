@@ -21,10 +21,10 @@ namespace ImperialStruggle
             this.tile = tile;
 
             majorActionPoints.text = tile.majorActionPoint.Value(null).ToString();
-            majorIcon.sprite = graphicSettings.actionIcons[tile.majorActionPoint.actionType];
+            majorIcon.sprite = graphicSettings.actionIcons[tile.majorActionPoint.type];
 
             minorActionPoints.text = tile.minorActionPoint.Value(null).ToString();
-            minorIcon.sprite = graphicSettings.actionIcons[tile.minorActionPoint.actionType];
+            minorIcon.sprite = graphicSettings.actionIcons[tile.minorActionPoint.type];
 
             eventIcon.enabled = tile.actions.Any(a => a is TriggerEventCardAction);
             milUpgradeIcon.enabled = tile.actions.Any(a => a is MilitaryUpgradeAction); 

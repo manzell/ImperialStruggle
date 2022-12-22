@@ -43,10 +43,7 @@ namespace ImperialStruggle
             WarTiles = new(Faction.basicWarTiles.OrderBy(x => Random.value));
             BonusWarTiles = new(Faction.advancedWarTiles.OrderBy(x => Random.value));
             Ministers = Faction.ministers.ToDictionary(card => card, card => MinistryCard.MinistryCardStatus.Reserved);
-        }
 
-        void Start()
-        { 
             foreach (PlayerAction action in Actions)
                 action.Setup(this); 
         }
@@ -56,7 +53,7 @@ namespace ImperialStruggle
         void ResetActionPoints(Phase phase)
         {
             Debug.Log($"Resetting Action Points {phase}");
-            ActionPoints = new ActionPoints();
+            ActionPoints = new ();
         }
 
         [Button]

@@ -38,7 +38,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   keywords: 02000000
-  faction: {fileID: 0}
+  Faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
   cardText: Once per turn, during a FR Action Round, place 1 Huguenots marker in
     one FR-flagged Territory in N. America or the Caribbean where there isn't one
     already. A Huguenots marker increases its space's CP cost by 1. It may be flipped

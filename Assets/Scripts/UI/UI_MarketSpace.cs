@@ -10,7 +10,7 @@ namespace ImperialStruggle
     public class UI_MarketSpace : UI_Space
     {
         Market market;
-        protected override Space Space => market;
+        protected override Space space => market;
         [SerializeField] MarketData marketData;
         [SerializeField] Image resourceIcon, resourceBackground;
         [SerializeField] TextMeshProUGUI flagCost;
@@ -22,20 +22,18 @@ namespace ImperialStruggle
             market.updateSpaceEvent += Style;
         }
 
-        [Button]
         public override void Style()
         {
             spaceName.text = market.Name;
-            flagCost.text = market.FlagCost.ToString();
+            flagCost.text = market.GetFlagCost(Game.ActivePlayer).ToString();
+            background.color = market.Flag.Color;
+            spaceName.color = market.Flag == null || market.Flag == Game.Spain ? Color.black : Color.white;
 
-            if(market.Resource != null)
+            if (market.Resource != null)
             {
                 resourceBackground.color = market.Resource.resourceColor;
                 resourceIcon.sprite = market.Resource.resourceIcon;
             }
-
-            background.color = market.Flag.Color; 
-            spaceName.color = market.Flag == null || market.Flag == Game.Spain ? Color.black : Color.white;
         }
     }
 }

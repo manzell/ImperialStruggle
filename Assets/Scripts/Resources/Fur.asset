@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Fur
   m_EditorClassIdentifier: 
   resourceIcon: {fileID: 21300000, guid: 92e4f0944cc62274ca98dd5f22ade532, type: 3}
-  resourceColor: {r: 0.31676215, g: 0.1686899, b: 0.764151, a: 1}
+  resourceColor: {r: 0.14276963, g: 0.043859016, b: 0.3018868, a: 1}

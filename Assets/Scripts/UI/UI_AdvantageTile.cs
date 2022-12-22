@@ -13,7 +13,7 @@ namespace ImperialStruggle
     {
         [SerializeField] Image trim, background, exhaustion;
         [SerializeField] TextMeshProUGUI tileName;
-        [SerializeField] AdvantageTile advantageTile;
+        AdvantageTile advantageTile;
 
         private void Awake()
         {
@@ -27,19 +27,23 @@ namespace ImperialStruggle
         [Button]
         public void Style()
         {
+            /*
             GraphicSettings settings = FindObjectOfType<Game>().graphicSettings;
 
             tileName.text = advantageTile.Name;
             background.color = settings.factionColors[advantageTile.faction];
             exhaustion.gameObject.SetActive(advantageTile.tileState == AdvantageTile.AdvantageTileState.Exhaused);
+            */
         }
 
-        public async void OnPointerClick(PointerEventData eventData)
+        public void OnPointerClick(PointerEventData eventData)
         {
+            /*
             if(Phase.CurrentPhase is ActionRound actionRound)
             {
                 await advantageTile.Execute(); 
             }
+            */
         }
     }
 }

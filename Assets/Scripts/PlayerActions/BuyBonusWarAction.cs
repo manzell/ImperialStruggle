@@ -11,7 +11,7 @@ namespace ImperialStruggle
     {
         WarTile bonusWarTile;
 
-        public ActionPoint ActionCost => new ActionPoint(ActionPoint.ActionType.Military, ActionPoint.ActionTier.Minor, 2);
+        public ActionPoint ActionCost => new ActionPoint(ActionPoint.ActionTier.Minor, ActionPoint.ActionType.Military, 2);
 
         public override bool Can() => base.Can() && Phase.CurrentPhase.ExecutedActions.Count(action => action is BuyBonusWarAction) >= 2; 
 

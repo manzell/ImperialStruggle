@@ -255,6 +255,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5611922876939140950}
   - component: {fileID: 6224538372838387954}
+  - component: {fileID: 2820057255129919357}
   m_Layer: 5
   m_Name: Market
   m_TagString: Untagged
@@ -304,11 +305,25 @@ MonoBehaviour:
   background: {fileID: 8803547010784788402}
   trim: {fileID: 9183880089295827908}
   spaceName: {fileID: 1920022675910540586}
+  popup: {fileID: 2820057255129919357}
   marketData: {fileID: 0}
   resourceIcon: {fileID: 1963881591020585779}
   resourceBackground: {fileID: 2728077312471427609}
   flagCost: {fileID: 8659756594470036117}
   marketCircle: {fileID: 1462739459306316012}
+--- !u!114 &2820057255129919357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3382272745718386284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c303c7286f3f3504a879809e1a3789d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameBoard: {fileID: 0}
 --- !u!1 &3926853243202905355
 GameObject:
   m_ObjectHideFlags: 0

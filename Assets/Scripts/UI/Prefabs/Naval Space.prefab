@@ -238,7 +238,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5609275463475793101}
   - component: {fileID: 8411493156651537541}
-  - component: {fileID: 5609275463475793100}
+  - component: {fileID: 1047105332929307489}
   m_Layer: 5
   m_Name: Naval Space
   m_TagString: Untagged
@@ -283,12 +283,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee14418f23908754885bf35c338b9b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  navalData: {fileID: 0}
-  spaceName: {fileID: 1917656290612858545}
-  trim: {fileID: 9172172210260983903}
   highlight: {fileID: 6328959237305616115}
   background: {fileID: 8797169529728076841}
---- !u!114 &5609275463475793100
+  trim: {fileID: 9172172210260983903}
+  spaceName: {fileID: 1917656290612858545}
+  popup: {fileID: 1047105332929307489}
+  navalData: {fileID: 0}
+--- !u!114 &1047105332929307489
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -300,6 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c303c7286f3f3504a879809e1a3789d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameBoard: {fileID: 0}
 --- !u!1 &6132717619637084625
 GameObject:
   m_ObjectHideFlags: 0

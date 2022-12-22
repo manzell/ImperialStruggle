@@ -28,15 +28,13 @@ namespace ImperialStruggle
 
         public void Awake()
         {
-            player.SetUI(this); 
-            // Move these out of their Commands? Or Encapsulate it there?
-            //SelectMinistryCardCommand.SelectEvent += AddMinistryCard;
-            //DealCardCommand.dealCardEvent += OnDealEventCard;
+            player.SetUI(this);
+            SelectMinistryCardCommand.SelectEvent += AddMinistryCard; 
         }
 
         void AddMinistryCard(MinistryCardData card)
         {
-            if (card.faction == player.Faction)
+            if (card.Faction == player.Faction)
             {
                 GameObject newMinistryCard = Instantiate(ministryCardPrefab, ministerCardArea.transform);
                 newMinistryCard.GetComponent<UI_MinisterCard>().SetMinistryCard(card);

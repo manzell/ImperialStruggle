@@ -21,13 +21,13 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  prefab: {fileID: 0}
-  map: {fileID: 11400000, guid: 5e460598291e3794a8ee7e5a51147d40, type: 2}
-  startingFlag: {fileID: 11400000, guid: fa035a9950db4ba458654758b49c2e78, type: 2}
-  availableEra: 0
-  adjacentSpaces:
-  - {fileID: 11400000, guid: a96a1479ecd099242af7019264a78fb5, type: 2}
-  - {fileID: 11400000, guid: e8d40c5e982f0f94cb82912136489068, type: 2}
+  <prefab>k__BackingField: {fileID: 0}
+  <map>k__BackingField: {fileID: 11400000, guid: 5e460598291e3794a8ee7e5a51147d40, type: 2}
+  <startingFlag>k__BackingField: {fileID: 11400000, guid: fa035a9950db4ba458654758b49c2e78, type: 2}
+  <availableEra>k__BackingField: 0
+  <adjacentSpaces>k__BackingField:
   - {fileID: 11400000, guid: ba7d555fa5670d842ba358cb6bb2e9e5, type: 2}
-  ResourceType: {fileID: 0}
-  FlagCost: 0
+  - {fileID: 11400000, guid: e8d40c5e982f0f94cb82912136489068, type: 2}
+  - {fileID: 11400000, guid: a96a1479ecd099242af7019264a78fb5, type: 2}
+  <ResourceType>k__BackingField: {fileID: 11400000, guid: faba19c7570ce384daeda70d40aafca1, type: 2}
+  <FlagCost>k__BackingField: 3

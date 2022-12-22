@@ -12,26 +12,13 @@ namespace ImperialStruggle
         public FlaggableSpace Space => space;
         Space TargetSpaceAction.Space => space;
 
-        public void SetSpace(Space space)
-        {
-            Debug.Log(space);
-            Debug.Log(space is PoliticalSpace); 
-            this.space = space is PoliticalSpace ? (PoliticalSpace)space : null;
-        }
+        public void SetSpace(Space space) => this.space = space is PoliticalSpace ? (PoliticalSpace)space : null;
 
-        public ActionPoint ActionCost => new ActionPoint(ActionPoint.ActionType.Diplomacy,
-            space.Flag == Player.Opponent.Faction ? ActionPoint.ActionTier.Major : ActionPoint.ActionTier.Minor, space.FlagCost);
+        public ActionPoint ActionCost => new (space.Flag == Player.Opponent.Faction ? ActionPoint.ActionTier.Major : ActionPoint.ActionTier.Minor,
+            ActionPoint.ActionType.Diplomacy, space.GetFlagCost(Player));
 
-        public override bool Can()
-        {
-            if (space == null)
-            {
-                Debug.Log("Space not set");
-                return false;
-            }
-            else
-                return base.Can();
-        }
+        public override bool Can() => space == null ? false : base.Can();
+        public override bool Eligible(Space space) => space is PoliticalSpace;
 
         protected override Task Do()
         {
@@ -41,6 +28,12 @@ namespace ImperialStruggle
                 Commands.Push(new UnflagCommand(space));
 
             return Task.CompletedTask;
+        }
+
+        public override void Setup(Player player)
+        {
+            Name = "Shift Space";
+            base.Setup(player);
         }
     }
 }

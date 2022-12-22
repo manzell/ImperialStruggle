@@ -10,7 +10,7 @@ namespace ImperialStruggle
     public class UI_Territory : UI_Space
     {
         Territory territory;
-        protected override Space Space => territory; 
+        protected override Space space => territory; 
         [SerializeField] TerritoryData territoryData;
         [SerializeField] TextMeshProUGUI flagCost;
 
@@ -24,9 +24,11 @@ namespace ImperialStruggle
         public override void Style()
         {
             GraphicSettings graphics = FindObjectOfType<Game>().graphicSettings;
-            spaceName.text = Space.Name;
+            spaceName.text = space.Name;
+            background.color = space.Flag.Color;
+            spaceName.color = space.Flag == Game.Neutral || space.Flag == Game.Spain ? Color.black : Color.white;
 
-            if ((Space as Territory).Prestigious)
+            if ((space as Territory).Prestigious)
             {
                 trim.color = graphics.prestigeHighlightColor;
                 flagCost.color = Color.white;
@@ -36,9 +38,6 @@ namespace ImperialStruggle
                 trim.color = Color.white;
                 flagCost.color = Color.black;
             }
-
-            background.color = Space.Flag.Color;
-            spaceName.color = Space.Flag == Game.Neutral || Space.Flag == Game.Spain ? Color.black : Color.white;
         }
     }
 }

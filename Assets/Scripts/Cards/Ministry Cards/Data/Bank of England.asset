@@ -38,7 +38,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   keywords: 04000000
-  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
+  Faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
   cardText: Once per turn, you may increase your Debt Limit by 1. Once per turn,
     you may play an Economic event even if your selected Investment Tile does not
     have an Economic Major Action. (It still must have the Event symbol.)

@@ -35,7 +35,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   keywords: 01000000
-  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
+  Faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
   cardText: Once per turn, at the start of your Action Round, you can play an Event
     even if your selected Investment Tile does not have an event symbol. You must
     still match the Event's type, if it has one, to the Major Action on the Investment

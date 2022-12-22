@@ -38,7 +38,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   keywords: 03000000
-  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
+  Faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
   cardText: If you are forced to take Debt in excess of your Debt Limit, your opponent
     scores no VP. The first time each Action Round your opponent exhausts an Advantage,
     gain 1 TRP.

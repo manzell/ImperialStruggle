@@ -9,12 +9,17 @@ namespace ImperialStruggle
 {
     public class ScoreGlobalDemandAction : GameAction
     {
+        public static System.Action ScoreGlobalDemandEvent;
+        public static System.Action<Resource> ScoreGlobalDemandResource; 
+
         protected override Task Do()
         {
             if (Phase.CurrentPhase is PeaceTurn peaceTurn)
             {
                 foreach (Resource resource in peaceTurn.globalDemandResources)
                 {
+                    ScoreGlobalDemandResource?.Invoke(resource); 
+
                     Faction resourceWinningFaction = null;
 
                     int britainCount = Game.Spaces.OfType<Market>().Count(market => market.control == Game.Britain && market.Resource == resource);
@@ -31,8 +36,9 @@ namespace ImperialStruggle
                         // commands.Push(new AdjustVPCommand(resourceWinningFaction, demandTrack[peaceTurn.era][resource][ActionPoint.ActionType.VictoryPoint])); 
                         // commands.Push(new AdjustTPCommand(resourceWinningFaction, demandTrack[peaceTurn.era][resource][ActionPoint.ActionType.Treaty])); 
                         // commands.Push(new AdjustDebtCommand(resourceWinningFaction, demandTrack[peaceTurn.era][resource][ActionPoint.ActionType.Debt])); 
-                    }
+                    }                    
                 }
+                ScoreGlobalDemandEvent?.Invoke(); 
             }
 
             return Task.CompletedTask; 

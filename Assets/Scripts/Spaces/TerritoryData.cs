@@ -6,7 +6,7 @@ namespace ImperialStruggle
 {
     public class TerritoryData : SpaceData
     {
-        public List<SpaceData> ConquestLines;
-        public bool PrestigeSpace;
+        [field: SerializeField] public List<SpaceData> ConquestLines { get; private set; }
+        [field: SerializeField] public bool PrestigeSpace { get; private set; }
     }
 }

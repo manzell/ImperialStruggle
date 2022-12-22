@@ -20,9 +20,6 @@ namespace ImperialStruggle
                     .Select(kvp => kvp.Key).Take(numToDeal);
 
                 Commands.Push(new DealInvestmentTileCommand(tiles));
-
-                Debug.Log($"#### {peaceTurn.name} has {peaceTurn.investmentTiles.Count()} Investment Tiles");
-
             }
 
             return Task.CompletedTask; 

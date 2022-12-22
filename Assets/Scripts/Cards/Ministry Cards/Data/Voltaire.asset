@@ -41,7 +41,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   keywords: 03000000
-  faction: {fileID: 0}
+  Faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
   cardText: When the Europe Award is given, gain 1 TRP for each multi-space country
     in which you control a Prestige space (max 3).
   flavor: 

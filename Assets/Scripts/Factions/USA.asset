@@ -13,4 +13,9 @@ MonoBehaviour:
   m_Name: USA
   m_EditorClassIdentifier: 
   Icon: {fileID: 0}
-  Color: {r: 0, g: 0, b: 0, a: 0}
+  Flag: {fileID: 0}
+  Color: {r: 0, g: 0.65159893, b: 1, a: 1}
+  ministers: []
+  basicWarTiles: []
+  advancedWarTiles: []
+  player: {fileID: 0}

@@ -10,7 +10,7 @@ namespace ImperialStruggle
         public string Name => name;
         public System.Action UISelectionEvent { get; set; }
         public System.Action UIDeselectEvent { get; set; }
-        public Faction faction;
+        public Faction Faction;
         [TextArea] public string cardText;
         [TextArea] public string flavor; 
     }

@@ -7,12 +7,13 @@ namespace ImperialStruggle
     public class RemoveConflictMarkerAction : PlayerAction, PurchaseAction, TargetSpaceAction
     {
         public Space Space { get; private set; }
-        public ActionPoint ActionCost => new ActionPoint(ActionPoint.ActionType.Military, ActionPoint.ActionTier.Minor, 
+        public ActionPoint ActionCost => new ActionPoint(ActionPoint.ActionTier.Minor, ActionPoint.ActionType.Military, 
             Space is Market market && market.Protected ? 1 : 2);
 
-        public override bool Can() => Space != null && base.Can() && Space.Flag == Player.Faction && Space.conflictMarker;
+        public override bool Can() => Space != null && base.Can() && Space.Flag == Player.Faction && Eligible(Space);
+        public void SetSpace(Space space) => Space = space;
 
-        public void SetSpace(Space space) => this.Space = space;
+        public override bool Eligible(Space space) => space != null & space.conflictMarker;
 
         protected override Task Do()
         {

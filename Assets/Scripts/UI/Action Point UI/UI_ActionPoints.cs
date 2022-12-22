@@ -6,39 +6,32 @@ using Sirenix.OdinInspector;
 
 namespace ImperialStruggle
 {
-    // TODO: Make this a Per-Player UI
     public class UI_ActionPoints : SerializedMonoBehaviour
     {
+        [SerializeField] Player player;
         [SerializeField] GameObject actionPointPrefab;
-        [SerializeField] Dictionary<ActionPoint.ActionTier, GameObject> actionTiers = new Dictionary<ActionPoint.ActionTier, GameObject>();
+        [SerializeField] Dictionary<ActionPoint.ActionTier, GameObject> actionTiers = new ();
 
-        Dictionary<string, UI_ActionPoint> APtiles = new Dictionary<string, UI_ActionPoint>();
+        Dictionary<string, UI_ActionPoint> APtiles = new ();
 
-        ActionPoints actionPoints;
-
-        private void Awake()
+        private void Start()
         {
-            AdjustAPCommand.adjustAPEvent.AddListener(UpdateTiles);
-            Game.setActivePlayerEvent += player =>
-            {
-                actionPoints = player.ActionPoints;
-                UpdateTiles();
-            };
+            player.ActionPoints.AdjustAPEvent += UpdateTiles;
         }
 
         void AddTile(ActionPoint ap)
         {
-            string name = $"{ap.actionType}-{ap.actionTier}-{ap.conditionText}";
+            string name = $"{ap.type}-{ap.tier}-{ap.conditionText}";
 
             if (!APtiles.ContainsKey(name))
-                APtiles.Add(name, Instantiate(actionPointPrefab, actionTiers[ap.actionTier].transform).GetComponent<UI_ActionPoint>());
+                APtiles.Add(name, Instantiate(actionPointPrefab, actionTiers[ap.tier].transform).GetComponent<UI_ActionPoint>());
 
             APtiles[name].SetTile(ap);
         }
 
         void RemoveTile(ActionPoint ap)
         {
-            string name = $"{ap.actionType}-{ap.actionTier}-{ap.conditionText}";
+            string name = $"{ap.type}-{ap.tier}-{ap.conditionText}";
             Destroy(APtiles[name].gameObject);
             APtiles.Remove(name);
         }
@@ -46,16 +39,16 @@ namespace ImperialStruggle
         public void UpdateTiles()
         {
             // First cycle through our existing APTile keys and remove any uncessary ones
-            List<string> keysToRemove = new List<string>();
+            List<string> keysToRemove = new ();
             foreach (string key in APtiles.Keys)
-                if (actionPoints.All(ap => ap.name != key))
+                if (player.ActionPoints.All(ap => ap.name != key))
                     keysToRemove.Add(key);
 
             foreach (string key in keysToRemove)
                 RemoveTile(APtiles[key].actionPoint);
 
             // Then cycle through our AP's and add tiles that we need
-            foreach (ActionPoint actionPoint in actionPoints)
+            foreach (ActionPoint actionPoint in player.ActionPoints)
                 if (!APtiles.Keys.Contains(actionPoint.name))
                     AddTile(actionPoint);
         }

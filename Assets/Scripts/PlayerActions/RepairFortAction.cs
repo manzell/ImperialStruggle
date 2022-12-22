@@ -8,25 +8,29 @@ namespace ImperialStruggle
 {
     public class RepairFortAction : PlayerAction, PurchaseAction, TargetSpaceAction
     {
-        Fort space;
-        public ActionPoint ActionCost => new ActionPoint(ActionPoint.ActionType.Military, ActionPoint.ActionTier.Minor,
-            space.FlagCost + (space.Flag == Player.Faction ? -1 : 0) + (space.Flag == Player.Opponent.Faction ? 1 : 0));
+        Fort fort;
+        public ActionPoint ActionCost => new ActionPoint(ActionPoint.ActionTier.Minor, ActionPoint.ActionType.Military, 
+            fort.GetFlagCost(Player) + (fort.Flag == Player.Faction ? -1 : 0) + (fort.Flag == Player.Opponent.Faction ? 1 : 0));
 
-        public Space Space => space; 
+        public Space Space => fort; 
 
-        public override bool Can() => base.Can() && space != null && space.damaged == true && 
-            (space.Flag != Player.Opponent.Faction || space.adjacentSpaces.Where(space => space.control == Player.Faction).Any(space => space is Market || space is NavalSpace));
+        public override bool Can() => fort != null && base.Can() && fort.damaged == true && 
+            (fort.Flag != Player.Opponent.Faction || fort.adjacentSpaces.Where(space => space.control == Player.Faction).Any(space => space is Market || space is NavalSpace));
 
-        public void SetSpace(Space space) => this.space = space is Fort ? (Fort)space : null;
+        public void SetSpace(Space space) => this.fort = space is Fort ? (Fort)space : null;
+        public override bool Eligible(Space space) => space is Fort fort && fort.damaged; 
 
         protected override Task Do()
         {
-            Commands.Push(new RemoveDamageMarkerCommand(space));
+            Commands.Push(new RemoveDamageMarkerCommand(fort));
+            Commands.Push(new FlagSpaceCommand(fort, Player.Faction));
 
-            if (space.Flag != Player.Faction)
-                Commands.Push(new FlagSpaceCommand(space, Player.Faction));
+            return Task.CompletedTask;
+        }
 
-            return Task.CompletedTask; 
+        public override void Setup(Player player)
+        {
+            Name = "Repair Fort";
         }
     }
 }

@@ -7,7 +7,7 @@ namespace ImperialStruggle
 {
     public class GermanDiplomacyAction : PlayerAction
     {
-        public ActionPoints awardAP = new ActionPoints();
+        [SerializeField] public ActionPoints awardAP;
 
         protected override Task Do()
         {

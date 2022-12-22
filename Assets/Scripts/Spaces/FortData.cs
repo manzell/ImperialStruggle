@@ -6,6 +6,6 @@ namespace ImperialStruggle
 {
     public class FortData : SpaceData
     {
-        public int FlagCost;
+        [field: SerializeField] public int FlagCost { get; private set; }
     }
 }

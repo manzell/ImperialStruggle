@@ -41,7 +41,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   keywords: 03000000
-  faction: {fileID: 0}
+  Faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
   cardText: The Award for Europe is worth 1 extra VP to you, and 1 less VP to France
     (minimum 0).
   flavor: 

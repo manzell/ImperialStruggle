@@ -38,7 +38,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   keywords: 00000000
-  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
+  Faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
   cardText: Spaces in Ireland and Scotland cost you 1 less DP to flag. If you control
     any spaces in Ireland, your Minor Diplomatic Actions may be used to remove FR
     flags in Europe.

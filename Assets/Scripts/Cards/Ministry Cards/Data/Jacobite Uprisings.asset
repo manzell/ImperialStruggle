@@ -44,7 +44,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   keywords: 
-  faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
+  Faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
   cardText: Once per turn, you may use MP to shift spaces in Scotland and/or Ireland.
     Once per turn, on a different Action Round, you may spend 3 MP to score 1 VP
     (max 4) for each FR-flagged such space and Jacobite Victory marker. Immediately

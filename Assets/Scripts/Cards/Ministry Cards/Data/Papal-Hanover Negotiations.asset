@@ -38,7 +38,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   keywords: 00000000
-  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
+  Faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
   cardText: Remove the Jacobite Uprisings Ministry card from the game. Once per turn,
     when taking a Diplomatic action, you receive 2 DP usable only to shift spaces
     in Scotland and Ireland.

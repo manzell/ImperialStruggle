@@ -508,6 +508,7 @@ GameObject:
   m_Component:
   - component: {fileID: 883352802865964139}
   - component: {fileID: 8706259595364549735}
+  - component: {fileID: 4077634769868040949}
   m_Layer: 5
   m_Name: Territory
   m_TagString: Untagged
@@ -556,6 +557,19 @@ MonoBehaviour:
   background: {fileID: 4291853422391780495}
   trim: {fileID: 4526241760106588409}
   spaceName: {fileID: 6559080391400236567}
+  popup: {fileID: 4077634769868040949}
   territoryData: {fileID: 0}
   flagCost: {fileID: 4147357945841596840}
-  territoryFrame: {fileID: 4526241760106588409}
+--- !u!114 &4077634769868040949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8022034132017354065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c303c7286f3f3504a879809e1a3789d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameBoard: {fileID: 0}

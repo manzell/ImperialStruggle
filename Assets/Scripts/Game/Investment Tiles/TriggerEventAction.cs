@@ -12,7 +12,7 @@ namespace ImperialStruggle
         {
             if(Phase.CurrentPhase is ActionRound actionRound)
             {
-                ActionPoint.ActionType investmentActionType = actionRound.investmentTile.majorActionPoint.actionType;
+                ActionPoint.ActionType investmentActionType = actionRound.investmentTile.majorActionPoint.type;
                 IEnumerable<EventCard> eligibleCards = Player.Cards.Where(card => card.reqdActionType == ActionPoint.ActionType.None || card.reqdActionType == investmentActionType);
 
                 if (eligibleCards.Count() > 0)

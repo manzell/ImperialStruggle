@@ -38,7 +38,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   keywords: 01000000
-  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
+  Faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
   cardText: 'Major Diplomatic Actions spent entirely in Europe are worth up to 2
     extra DP: one for each Ireland space you control. Sons of Liberty and USA spaces
     cost 1 less DP for you to shift.'

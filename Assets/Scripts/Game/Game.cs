@@ -101,7 +101,7 @@ namespace ImperialStruggle
         public Dictionary<Faction, ActionPoints> actionPointState;
         public Dictionary<Faction, (int debt, int debtLimit)> debtState;
         public Dictionary<Faction, int> treatyPointState;
-        public Dictionary<AdvantageTile, AdvantageTile.AdvantageTileState> advantageTileState;
+        public Dictionary<AdvantageTile, bool> advantageTileState;
         public Dictionary<EventCard, Player> eventCardStates;
         public Dictionary<MinistryCard, MinistryCard.MinistryCardStatus> ministryCardsState;
         public Dictionary<Space, Faction> spaceStates;
