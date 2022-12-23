@@ -37,40 +37,40 @@ namespace ImperialStruggle
             if (actionPoints.Contains(ap))
                 ap.AdjustBaseValue(ap.baseValue); 
             else
-                actionPoints.Add(ap);
+                actionPoints.Add(new(ap));
 
             AdjustAPEvent?.Invoke();
         }
-
 
         public void Charge(PurchaseAction context)
         {
             if(Can(context))
             {
-                List<ActionPoint> eligiblePaymentAPs = new(); 
+                List<ActionPoint> eligiblePaymentAPs = new();
+                ActionPoint actionCost = new(context.ActionCost); 
 
                 foreach(ActionPoint AP in actionPoints)
                 {
-                    bool typeOK = AP.type == context.ActionCost.type || AP.type > ActionPoint.ActionType.VictoryPoint;
-                    bool majorMinorOK = AP.tier == ActionPoint.ActionTier.Major || context.ActionCost.tier == ActionPoint.ActionTier.Minor;
+                    bool typeOK = AP.type == actionCost.type || AP.type > ActionPoint.ActionType.VictoryPoint;
+                    bool majorMinorOK = AP.tier == ActionPoint.ActionTier.Major || actionCost.tier == ActionPoint.ActionTier.Minor;
                     bool allConditions = AP.conditionals.All(condition => condition.Test(context as GameAction));
 
                     if (typeOK && majorMinorOK && allConditions)
                         eligiblePaymentAPs.Add(AP); 
                 }
 
-                while (context.ActionCost.Value(context) > 0 && eligiblePaymentAPs.Any(ap => ap.Value(context) > 0))
+                while (actionCost.Value(context) > 0 && eligiblePaymentAPs.Any(ap => ap.Value(context) > 0))
                 {
                     ActionPoint thisAP = eligiblePaymentAPs.Where(ap => ap.Value(context) > 0)
                         .OrderBy(ap => ap.tier == ActionPoint.ActionTier.Major) // Spend Minor APs before Major APs
-                        .ThenByDescending(ap => ap.type == context.ActionCost.type) // Use restricted-type APs before wild-card type APs
+                        .ThenByDescending(ap => ap.type == actionCost.type) // Use restricted-type APs before wild-card type APs
                         .ThenByDescending(ap => ap.conditionals.Count()) // default to more-conditions first
                         .FirstOrDefault();
 
                     if(thisAP != null)
                     {
                         thisAP.AdjustBaseValue(-1);
-                        context.ActionCost.AdjustBaseValue(-1);
+                        actionCost.AdjustBaseValue(-1);
                     }
                 }
 
@@ -144,7 +144,7 @@ namespace ImperialStruggle
             (ap1.tier == ap2.tier && ap1.type == ap2.type && ap1.baseValue < ap2.baseValue) ||
             (ap1.tier == ap2.tier && ap1.type == ap2.type && ap1.baseValue == ap2.baseValue && ap1.conditionals.Count > ap2.conditionals.Count);
 
-        public void AdjustBaseValue(int x) => baseValue += x; 
+        public void AdjustBaseValue(int x) => baseValue += x;
 
         public int Value(PurchaseAction context)
         {

@@ -37,7 +37,7 @@ namespace ImperialStruggle
 
         protected override Task Do()
         {
-            if(market.Flag == null)
+            if(market.Flag == Game.Neutral)
                 Commands.Push(new FlagSpaceCommand(market, Player.Faction)); 
             if(market.Flag == Player.Opponent.Faction)
                 Commands.Push(new UnflagCommand(market)); 

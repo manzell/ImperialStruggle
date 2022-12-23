@@ -17,13 +17,11 @@ namespace ImperialStruggle
 
         public void OnPointerEnter(PointerEventData eventData) => highlight.gameObject.SetActive(action.Can());
         public void OnPointerExit(PointerEventData eventData) => highlight.gameObject.SetActive(false);
+        
         public async void OnPointerClick(PointerEventData eventData)
         {
-            if(action.Can())
-            {
-                UI_PopupMenu.Close();
-                await action.Execute();
-            }
+            UI_PopupMenu.Close();
+            await action.Execute();
         }
 
         public void SetAction(PlayerAction action)
