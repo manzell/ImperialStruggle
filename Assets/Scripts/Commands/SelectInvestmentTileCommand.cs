@@ -22,6 +22,7 @@ namespace ImperialStruggle
             if (Phase.CurrentPhase is ActionRound actionRound)
             {
                 actionRound.investmentTile = tile;
+
                 actionRound.player.ActionPoints.Credit(tile.majorActionPoint);
                 actionRound.player.ActionPoints.Credit(tile.minorActionPoint);
                 player.ActionPoints.AdjustAPEvent.Invoke();

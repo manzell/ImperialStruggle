@@ -17,7 +17,7 @@ namespace ImperialStruggle
             {
                 foreach (Player player in Player.Players)
                 {
-                    Selection<MinistryCardData> selection = new(player, player.Ministers.Keys.Where(minister => minister.eras.Contains(peaceTurn.era)),
+                    Selection<MinistryCardData> selection = new(player, player.Faction.ministers.Where(minister => minister.eras.Contains(peaceTurn.era)),
                         Finish, 2); 
 
                     selection.SetTitle("Select your Ministry Card(s)");

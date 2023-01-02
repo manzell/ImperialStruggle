@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6761527704493874418}
   - component: {fileID: 6089124885733163064}
   - component: {fileID: 2630046860430786891}
+  - component: {fileID: 7058865497358874209}
   m_Layer: 5
   m_Name: MinistryCard
   m_TagString: Untagged
@@ -94,6 +95,18 @@ MonoBehaviour:
   ministryCard: {fileID: 0}
   ministerName: {fileID: 9219952213369890570}
   highlight: {fileID: 5825746507374420533}
+--- !u!114 &7058865497358874209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4470513594242991769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c303c7286f3f3504a879809e1a3789d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4913249176826043045
 GameObject:
   m_ObjectHideFlags: 0

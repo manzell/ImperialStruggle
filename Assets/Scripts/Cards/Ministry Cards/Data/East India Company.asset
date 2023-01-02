@@ -40,8 +40,11 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: MinisterActions
+      Entry: 6
+      Data: 
   keywords: 02000000
-  faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
+  Faction: {fileID: 0}
   cardText: 'During the Scoring Phase, score 1 VP for each of the following unexhausted
     Advantages you control (maximum 3): Textiles, Silk, Fruit, Fur Trade, Rum.'
   flavor: 

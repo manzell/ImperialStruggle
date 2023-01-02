@@ -56,44 +56,14 @@ namespace ImperialStruggle
             Resource = data.ResourceType;
         }
 
-        public int GetFlagCost(Player player) => Isolated(player) || conflictMarker ? 1 : (data as MarketData).FlagCost; 
+        public int GetFlagCost(Player player)
+        {
+            int cost = conflictMarker ? 1 : (data as MarketData).FlagCost;
+            return cost; 
+        }
+
         public bool Protected => !adjacentSpaces.Where(space => space.Flag == this.Flag).Any(space =>
                 space is NavalSpace navapSpace || (space is Fort fort && !fort.damaged)); 
-
-        public bool Isolated(Player player)
-        {
-            int counter = 1; 
-            Space currentSpace = this;
-            HashSet<Space> spacesToCheck = new();
-            HashSet<Space> checkedSpaces = new();
-
-            //Debug.Log($"Checking {Name} for Isolated Status"); 
-
-            if (player == null) return false; 
-            while(currentSpace != null)
-            {
-                counter++;
-                if ((currentSpace is Territory || currentSpace is Fort || currentSpace is NavalSpace) && currentSpace.control == player.Faction)
-                {
-                    //Debug.Log($"{currentSpace.Name} is Eligible connection [{counter}]"); 
-                    return false;
-                }
-                else
-                {
-                    checkedSpaces.Add(currentSpace);
-
-                    //Debug.Log($"{currentSpace.Name} is not Controlled Territory/Fort/NavalSpace. Adding " +
-                    //    $"{string.Join(", ", spacesToAdd.Select(space => space.Name))} [{counter}]");
-
-                    spacesToCheck.UnionWith(currentSpace.adjacentSpaces.Where(space => !checkedSpaces.Contains(space)
-                        && space.Flag == this.Flag && !space.conflictMarker).Except(spacesToCheck));
-                    currentSpace = spacesToCheck.FirstOrDefault();
-                    spacesToCheck.Remove(currentSpace);
-                }
-            }
-
-            return true;             
-        }
     }
 
     public class NavalSpace : Space, PrestigeSpace
@@ -107,7 +77,7 @@ namespace ImperialStruggle
 
     public class PoliticalSpace : Space, FlaggableSpace, PrestigeSpace, AllianceSpace
     {
-        public virtual int GetFlagCost(Player player) => conflictMarker ? 1 : (data as PoliticalData).FlagCost;
+        public virtual int GetFlagCost(Player player) => conflictMarker == true ? 1 : (data as PoliticalData).FlagCost;
 
         public PoliticalSpace(PoliticalData data) : base(data)
         {

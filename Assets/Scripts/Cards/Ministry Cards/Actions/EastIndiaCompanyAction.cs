@@ -10,7 +10,7 @@ namespace ImperialStruggle
     {
         [SerializeField] List<AdvantageTile> tiles; 
 
-        public override Task Do(Player player)
+        protected override Task Do()
         {
             ScoreGlobalDemandAction.ScoreGlobalDemandEvent += Bonus;
             return Task.CompletedTask; 

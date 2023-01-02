@@ -10,10 +10,10 @@ namespace ImperialStruggle
     {
         public ActionPoint ActionCost => new ActionPoint(ActionPoint.ActionTier.Minor, ActionPoint.ActionType.Military, 2);
 
-        public override Task Do(Player player)
+        protected override Task Do()
         {
             Exhausted = true;
-            Commands.Push(new BuildFleetCommand(player)); 
+            Commands.Push(new BuildFleetCommand(Player)); 
             return Task.CompletedTask;
         }
     }
@@ -25,9 +25,9 @@ namespace ImperialStruggle
         protected override bool Can(Player player) => player.Squadrons.Any(squadron => squadron.space?.map == europe) && player.Cards.Count() > 0
             && base.Can(player);
 
-        public async override Task Do(Player player)
+        protected async override Task Do()
         {
-            await new Selection<EventCard>(player, player.Cards, Finish).Completion; 
+            await new Selection<EventCard>(Player, Player.Cards, Finish).Completion; 
         }
 
         void Finish(Selection<EventCard> selection)

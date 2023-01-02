@@ -13,7 +13,7 @@ namespace ImperialStruggle
         [field: SerializeField] public Faction Faction { get; private set; }
         [field: SerializeField] public Player Opponent { get; private set; }
         [field: SerializeField] public List<PlayerAction> Actions { get; private set; }
-        public Dictionary<MinistryCardData, MinistryCard.MinistryCardStatus> Ministers { get; private set; }
+        public List<MinistryCard> Ministers { get; private set; }
         public List<EventCard> Cards { get; private set; }
         public Queue<WarTile> WarTiles { get; private set; }
         public Queue<WarTile> BonusWarTiles { get; private set; }
@@ -24,7 +24,7 @@ namespace ImperialStruggle
         public UI_Player UI { get; private set; }
 
         public string Name => Faction.name;
-        public HashSet<MinistryCard.Keyword> Keywords => new HashSet<MinistryCard.Keyword>(Ministers.SelectMany(minister => minister.Key.keywords));
+        public HashSet<MinistryCard.Keyword> Keywords => new HashSet<MinistryCard.Keyword>(Ministers.SelectMany(minister => minister.data.keywords));
 
         private void Awake()
         {
@@ -36,13 +36,13 @@ namespace ImperialStruggle
             RecordsTrack.debtLimit.Add(Faction, 0);
             RecordsTrack.treatyPoints.Add(Faction, 0);
 
-            ActionRound.PhaseEndEvent += ResetActionPoints;
+            ActionRound.ActionRoundEndEvent += ResetActionPoints;
 
+            Ministers = new(); 
             ActionPoints = new();
             Cards = new(); 
             WarTiles = new(Faction.basicWarTiles.OrderBy(x => Random.value));
             BonusWarTiles = new(Faction.advancedWarTiles.OrderBy(x => Random.value));
-            Ministers = Faction.ministers.ToDictionary(card => card, card => MinistryCard.MinistryCardStatus.Reserved);
 
             foreach (PlayerAction action in Actions)
                 action.Setup(this); 
@@ -55,14 +55,13 @@ namespace ImperialStruggle
             Debug.Log($"Resetting Action Points {phase}");
             ActionPoints = new ();
         }
-
+        /*
         [Button]
         public bool CanAfford(ActionPoints cost)
         {
             return true;
-            /*
-            create an object that represents each point of the player's total action points
-            */
+            //create an object that represents each point of the player's total action points blah blah 
         }
+        */
     }
 }

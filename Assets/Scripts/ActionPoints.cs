@@ -27,7 +27,7 @@ namespace ImperialStruggle
                 (ap.type == context.ActionCost.type || ap.type >= ActionPoint.ActionType.Free) && (ap.tier >= context.ActionCost.tier))
                 .Sum(ap => ap.Value(context)) > context.ActionCost.Value(context);
 
-            Debug.Log($"Testing if {context.Player} can afford {context.Name} ({context.ActionCost.name}) {retVal}");
+            //Debug.Log($"Testing if {context.Player} can afford {context.Name} ({context.ActionCost.name}) {retVal}");
             return retVal;
         }
 

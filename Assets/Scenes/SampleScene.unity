@@ -3379,14 +3379,37 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 1340919231}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
+    - Name: uiOverlay
+      Entry: 10
+      Data: 0
     - Name: connections
-      Entry: 6
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.ValueTuple`2[[ImperialStruggle.Space,
+        Assembly-CSharp],[ImperialStruggle.Space, Assembly-CSharp]], mscorlib],[UnityEngine.LineRenderer,
+        UnityEngine.CoreModule]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.ValueTuple`2[[ImperialStruggle.Space,
+        Assembly-CSharp],[ImperialStruggle.Space, Assembly-CSharp]], mscorlib]],
+        mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
   mapContainer: {fileID: 861551497}
   lineContainer: {fileID: 820233790}
@@ -10735,81 +10758,54 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ImperialStruggle.ShiftMarketAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 2|ImperialStruggle.ShiftPoliticalSpaceAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 3|ImperialStruggle.DrawEventCardAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 4|ImperialStruggle.BuyBonusWarAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 5|ImperialStruggle.RemoveConflictMarkerAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 6|ImperialStruggle.BuildFortAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 7|ImperialStruggle.RepairFortAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 8|ImperialStruggle.BuildSquadronAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 9|ImperialStruggle.DeploySquadronAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -17886,81 +17882,54 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ImperialStruggle.ShiftMarketAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 2|ImperialStruggle.ShiftPoliticalSpaceAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 3|ImperialStruggle.DrawEventCardAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 4|ImperialStruggle.BuyBonusWarAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 5|ImperialStruggle.RemoveConflictMarkerAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 6|ImperialStruggle.BuildFortAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 7|ImperialStruggle.RepairFortAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 8|ImperialStruggle.BuildSquadronAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 9|ImperialStruggle.DeploySquadronAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -29102,9 +29071,6 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ImperialStruggle.SelectInvestmentTileAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -34627,9 +34593,6 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ImperialStruggle.SelectInvestmentTileAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -34709,9 +34672,6 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ImperialStruggle.SelectInvestmentTileAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -36488,9 +36448,6 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ImperialStruggle.SelectInvestmentTileAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -37122,9 +37079,6 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ImperialStruggle.SelectInvestmentTileAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -38051,9 +38005,6 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ImperialStruggle.SelectInvestmentTileAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -41191,9 +41142,6 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ImperialStruggle.AddCardsToDeckAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: cards
       Entry: 7
       Data: 2|System.Collections.Generic.List`1[[ImperialStruggle.EventCard, Assembly-CSharp]],
@@ -41258,9 +41206,6 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 3|ImperialStruggle.AdjustDebtLimitAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: amount
       Entry: 3
       Data: 5
@@ -41270,18 +41215,12 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 4|ImperialStruggle.SetAwardTiles, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 5|ImperialStruggle.SetGlobalDemandAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: numGlobalDemandTiles
       Entry: 3
       Data: 3
@@ -41291,9 +41230,6 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 6|ImperialStruggle.DealCardsAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: dealType
       Entry: 3
       Data: 0
@@ -41306,9 +41242,6 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 7|ImperialStruggle.WarPrepAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: nextWar
       Entry: 10
       Data: 15
@@ -41318,9 +41251,6 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 8|ImperialStruggle.DealInvestmentTilesAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: numToDeal
       Entry: 3
       Data: 9
@@ -41330,27 +41260,18 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 9|ImperialStruggle.SelectMinistryCardAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 10|ImperialStruggle.SetInitiativeAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 11|ImperialStruggle.NextPhaseAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -41370,9 +41291,6 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 13|ImperialStruggle.ResetTreatyPointsAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: treatyPointsCap
       Entry: 3
       Data: 4
@@ -41382,18 +41300,12 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 14|ImperialStruggle.ScoreMapAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 15|ImperialStruggle.ScorePrestigeAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: VPaward
       Entry: 3
       Data: 2
@@ -41422,18 +41334,12 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 17|ImperialStruggle.ScoreGlobalDemandAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 18|ImperialStruggle.PeaceTurnVictoryConditionAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -42139,9 +42045,6 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ImperialStruggle.SelectInvestmentTileAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -43301,9 +43204,6 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ImperialStruggle.SelectInvestmentTileAction, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 

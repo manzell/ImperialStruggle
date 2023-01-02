@@ -37,6 +37,9 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: MinisterActions
+      Entry: 6
+      Data: 
   keywords: 02000000
   Faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
   cardText: If you control more Fur and Fish Markets (combined) than your opponent

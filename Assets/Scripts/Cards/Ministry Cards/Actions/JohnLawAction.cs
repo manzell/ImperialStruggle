@@ -24,6 +24,11 @@ namespace ImperialStruggle
                 PeaceTurn.EndPeaceTurnEvent += ReduceDebt; 
         }
 
+        protected override Task Do()
+        {
+            throw new System.NotImplementedException();
+        }
+
         void ReduceDebt(PeaceTurn peaceTurn)
         {
             int debtReduction = scotlandSpaces.Any(space => space.control == Player.Faction) ? 2 : 1;

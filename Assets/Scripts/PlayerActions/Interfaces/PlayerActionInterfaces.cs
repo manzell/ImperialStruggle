@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Threading.Tasks; 
 
 namespace ImperialStruggle
 {
     public interface IPlayerAction
     {
         public string Name { get; }
-        public bool Can(); 
+        public bool Can();
+        public Task Execute(); 
         public Stack<Command> Commands { get; }
     }
 

@@ -12,6 +12,7 @@ namespace ImperialStruggle
 {
     public class UI_GameBoard : SerializedMonoBehaviour, IDragHandler, IBeginDragHandler, IPointerClickHandler
     {
+        public readonly Transform uiOverlay; 
         [SerializeField] GameObject mapContainer, lineContainer, linePrefab;
         [SerializeField] float speed = 0.1f;
         Vector2 previousPosition;

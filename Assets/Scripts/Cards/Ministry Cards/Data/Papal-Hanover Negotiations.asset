@@ -37,6 +37,9 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: MinisterActions
+      Entry: 6
+      Data: 
   keywords: 00000000
   Faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
   cardText: Remove the Jacobite Uprisings Ministry card from the game. Once per turn,

@@ -2,43 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; 
-using UnityEngine.EventSystems;
 using TMPro;
 
 namespace ImperialStruggle
 {
-    public class UI_MinisterCard : MonoBehaviour, IPointerClickHandler
+    public class UI_MinisterCard : MonoBehaviour, IPopupMenu
     {
-        [SerializeField] MinistryCardData ministryCard;
+        public MinistryCard Minister { get; private set; }
         [SerializeField] TextMeshProUGUI ministerName;
         [SerializeField] Image highlight;
 
-        Dictionary<MinistryCardData, MinistryCard.MinistryCardStatus> ministers => ministryCard.Faction.player.Ministers;
-
-        public void OnPointerClick(PointerEventData eventData)
+        public void SetMinistryCard(MinistryCard card)
         {
-            if (ministers[ministryCard] == MinistryCard.MinistryCardStatus.Revealed)
-            {
-            }
-            else if (ministers[ministryCard] == MinistryCard.MinistryCardStatus.Selected)
-            {
-                ministryCard.Faction.player.Ministers[ministryCard] = MinistryCard.MinistryCardStatus.Revealed;
-                Debug.Log($"{ministryCard.Faction} reveals {ministerName}.");
-            }
-        }
-
-        public void SetMinistryCard(MinistryCardData card)
-        {
-            ministryCard = card;
+            Minister = card;
             Style();
         }
 
         void Style()
         {
-            ministerName.text = ministryCard.Name;
-            ministerName.color = ministryCard.Faction.player.Ministers[ministryCard] == MinistryCard.MinistryCardStatus.Exhausted ? Color.gray : Color.black;
+            ministerName.text = Minister.Name;
+            ministerName.color = Minister.ministryCardStatus == MinistryCard.MinistryCardStatus.Exhausted ? Color.gray : Color.black;
 
-            switch (ministers[ministryCard])
+            switch (Minister.ministryCardStatus)
             {
                 case MinistryCard.MinistryCardStatus.Selected:
                     highlight.gameObject.SetActive(true);
@@ -50,6 +35,23 @@ namespace ImperialStruggle
                     break;
                 case MinistryCard.MinistryCardStatus.Revealed:
                     highlight.gameObject.SetActive(false);
+                    break;
+            }
+        }
+
+        public void OpenPopupMenu()
+        {
+            switch (Minister.ministryCardStatus)
+            {
+                case MinistryCard.MinistryCardStatus.Selected:
+                    UI_PopupMenu.Open(new List<IPlayerAction>() { new RevealAction(Minister, Minister.data.Faction.player) });
+                    break;
+                case MinistryCard.MinistryCardStatus.Revealed:
+                    UI_PopupMenu.Open(Minister.data.MinisterActions); 
+                    break;
+                case MinistryCard.MinistryCardStatus.Exhausted:
+                    break;
+                case MinistryCard.MinistryCardStatus.Reserved:
                     break;
             }
         }

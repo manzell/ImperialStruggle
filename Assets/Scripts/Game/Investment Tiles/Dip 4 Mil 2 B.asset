@@ -21,7 +21,7 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: SelectEvent
+    - Name: DraftEvent
       Entry: 6
       Data: 
     - Name: actions
@@ -38,15 +38,15 @@ MonoBehaviour:
       Entry: 8
       Data: 
   majorActionPoint:
-    actionType: 2
-    actionTier: 1
-    baseValue: 4
-    conditionals: []
+    <tier>k__BackingField: 1
+    <type>k__BackingField: 2
+    <baseValue>k__BackingField: 4
+    <conditionals>k__BackingField: []
   minorActionPoint:
-    actionType: 3
-    actionTier: 0
-    baseValue: 2
-    conditionals: []
+    <tier>k__BackingField: 0
+    <type>k__BackingField: 3
+    <baseValue>k__BackingField: 2
+    <conditionals>k__BackingField: []
   references:
     version: 2
     RefIds: []

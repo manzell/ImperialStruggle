@@ -12,6 +12,8 @@ namespace ImperialStruggle
         public System.Action UIDeselectEvent { get; set; }
         public Faction Faction;
         [TextArea] public string cardText;
-        [TextArea] public string flavor; 
+        [TextArea] public string flavor;
+
+        public List<IPlayerAction> MinisterActions; 
     }
 }

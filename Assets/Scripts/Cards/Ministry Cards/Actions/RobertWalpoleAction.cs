@@ -8,12 +8,12 @@ namespace ImperialStruggle
 {
     public class RobertWalpoleAction : MinisterAction
     {
-        public override async Task Do(Player player)
+        protected override async Task Do()
         {
             Exhausted = true;
-            Commands.Push(new DealCardCommand(player));
+            Commands.Push(new DealCardCommand(Player));
 
-            Selection<EventCard> selection = new(player, player.Cards, Finish);
+            Selection<EventCard> selection = new(Player, Player.Cards, Finish);
             await selection.Completion; 
         }
 

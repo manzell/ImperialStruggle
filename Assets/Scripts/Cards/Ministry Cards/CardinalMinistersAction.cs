@@ -17,6 +17,11 @@ namespace ImperialStruggle
             Game.selectInvestmentTileEvent += GrantBonusDP;
         }
 
+        protected override Task Do()
+        {
+            throw new System.NotImplementedException();
+        }
+
         void GrantBonusDP(Player selectingPlayer, InvestmentTile tile)
         {
             int BonusDP = Mathf.Min(maxDP, Game.SpaceLookup.Count(kvp => bonusSpaces.Contains(kvp.Key) && kvp.Value.Flag == Game.France));

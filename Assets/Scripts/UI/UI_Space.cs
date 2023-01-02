@@ -4,10 +4,12 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
 using Sirenix.Utilities;
+using System.Collections.Generic;
+using UnityEngine.InputSystem;
 
 namespace ImperialStruggle
 {
-    public abstract class UI_Space : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+    public abstract class UI_Space : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPopupMenu
     {
         public Space Space => space; 
         [SerializeField] protected abstract Space space { get; }
@@ -32,5 +34,19 @@ namespace ImperialStruggle
         }
 
         public abstract void Style();
+
+        public void OpenPopupMenu()
+        {
+            List<IPlayerAction> actions = new();
+
+            foreach (TargetSpaceAction action in Game.ActivePlayer.Actions.Where(action => action.Eligible(space)))
+            {
+                action.SetSpace(space);
+                actions.Add(action);
+            }
+
+            if (actions.Count > 0)
+                UI_PopupMenu.Open(actions); 
+        }
     }
 }

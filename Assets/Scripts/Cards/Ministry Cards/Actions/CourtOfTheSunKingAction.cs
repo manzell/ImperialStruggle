@@ -9,7 +9,7 @@ namespace ImperialStruggle
     {
         [SerializeField] Map map; 
 
-        public override Task Do(Player player)
+        protected override Task Do()
         {
             ScoreMapAction.scoreMapEvent += BonusVP;
             return Task.CompletedTask; 

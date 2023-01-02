@@ -12,7 +12,7 @@ namespace ImperialStruggle
 
         bool canFlagWithMinorAP => IrelandSpaces.Any(space => space.control == Game.France); 
 
-        public override Task Do(Player player)
+        protected override Task Do()
         {
             Debug.Log("System Not Implemented");
             return Task.CompletedTask; 

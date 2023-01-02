@@ -40,6 +40,9 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: MinisterActions
+      Entry: 6
+      Data: 
   keywords: 03000000
   Faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
   cardText: The Award for Europe is worth 1 extra VP to you, and 1 less VP to France

@@ -37,6 +37,9 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: MinisterActions
+      Entry: 6
+      Data: 
   keywords: 04000000
   Faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
   cardText: At the end of each Peace turn, reduce your Debt by 1 (or 2, if you control

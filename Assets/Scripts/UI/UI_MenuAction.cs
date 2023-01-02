@@ -13,7 +13,7 @@ namespace ImperialStruggle
         [SerializeField] Image costIcon, background, highlight;
         [SerializeField] TextMeshProUGUI cost, actionName;
 
-        PlayerAction action;
+        IPlayerAction action;
 
         public void OnPointerEnter(PointerEventData eventData) => highlight.gameObject.SetActive(action.Can());
         public void OnPointerExit(PointerEventData eventData) => highlight.gameObject.SetActive(false);
@@ -24,7 +24,7 @@ namespace ImperialStruggle
             await action.Execute();
         }
 
-        public void SetAction(PlayerAction action)
+        public void SetAction(IPlayerAction action)
         {
             this.action = action;
             actionName.text = action.Name;

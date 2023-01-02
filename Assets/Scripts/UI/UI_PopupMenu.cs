@@ -9,68 +9,53 @@ namespace ImperialStruggle
 {
     public class UI_PopupMenu : MonoBehaviour, IPointerClickHandler
     {
-        static GameObject popupMenuContainer;
-        static bool open;
-        Space space; 
-        GraphicSettings settings; 
+        public static GameObject popupMenuContainer;
+        public static GameObject popupActionPrefab;
+        static PointerEventData lastClick;
 
         void Awake()
         {
-            settings = FindObjectOfType<Game>().graphicSettings;
-            Game.startGameEvent += () => space = GetComponent<UI_Space>().Space; 
+            if(popupActionPrefab == null)
+                popupActionPrefab = FindObjectOfType<Game>().graphicSettings.PopupAction;
+
+            if(popupMenuContainer == null)
+            {
+                popupMenuContainer = Instantiate(FindObjectOfType<Game>().graphicSettings.PopupMenu, FindObjectOfType<UI_GameBoard>().uiOverlay);
+                popupMenuContainer.SetActive(false);
+            }
         }
+
 
         public void OnPointerClick(PointerEventData eventData)
         {
-            if (open)
+            lastClick = eventData;
+            if (popupMenuContainer.activeSelf)
                 Close();
-
-            Open(space);
+            else if(TryGetComponent(out IPopupMenu popup))
+                popup.OpenPopupMenu(); 
         }
 
-        public void Open(Space space)
+        public static void Open(List<IPlayerAction> actions)
         {
-            Debug.Log("Opening");
-            open = true; 
-            Player player = Game.ActivePlayer;
-            List<PlayerAction> actions = new();
+            Debug.Log(popupActionPrefab);
+            Debug.Log(popupActionPrefab.GetComponent<RectTransform>());
 
-            foreach (PlayerAction action in player.Actions.Where(action => action.Eligible(space)))
-            {
-                if (action is TargetSpaceAction targetSpaceAction)
-                {
-                    targetSpaceAction.SetSpace(space);
-                    actions.Add(action);
-                }
-            }
+            Vector2 menuSize = popupActionPrefab.GetComponent<RectTransform>().sizeDelta;
 
-            if (actions.Count > 0)
-            {
-                GameObject popupActionPrefab = FindObjectOfType<Game>().graphicSettings.PopupAction;
-                Vector2 menuSize = popupActionPrefab.GetComponent<RectTransform>().sizeDelta; 
+            popupMenuContainer.SetActive(true);
+            popupMenuContainer.transform.position = lastClick.position; 
+            popupMenuContainer.GetComponent<RectTransform>().sizeDelta = new Vector2(menuSize.x, menuSize.y * actions.Count);
 
-                popupMenuContainer = Instantiate(settings.PopupMenu, FindObjectOfType<UI_GameBoard>().transform);
-
-                popupMenuContainer.transform.position = transform.position; 
-                popupMenuContainer.GetComponent<RectTransform>().sizeDelta = new Vector2(menuSize.x, menuSize.y * actions.Count);
-
-                foreach (Transform child in popupMenuContainer.transform)
-                    Destroy(child.gameObject);
-
-                foreach (PlayerAction action in actions)
-                {
-                    UI_MenuAction popupMenuAction = Instantiate(popupActionPrefab, popupMenuContainer.transform).GetComponent<UI_MenuAction>();
-                    popupMenuAction.SetAction(action);
-                }
-            }
+            foreach (IPlayerAction action in actions)
+                Instantiate(popupActionPrefab, popupMenuContainer.transform).GetComponent<UI_MenuAction>().SetAction(action);
         }
 
         public static void Close()
         {
-            Debug.Log("Closing");
-            open = false; 
-            if (popupMenuContainer != null)
-                Destroy(popupMenuContainer);
+            foreach (Transform child in popupMenuContainer.transform)
+                Destroy(child.gameObject);
+
+            popupMenuContainer.SetActive(false);
         }
     }
 }

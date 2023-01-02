@@ -11,7 +11,7 @@ namespace ImperialStruggle
         public Space Space => market;
         FlaggableSpace RegionalPurchase.Space => market;
 
-        IEnumerable<Market> eligibleMarkets;
+        HashSet<Market> eligibleMarkets;
 
         public ActionPoint ActionCost => new ActionPoint(market.Flag == Player.Opponent.Faction ? ActionPoint.ActionTier.Major : ActionPoint.ActionTier.Minor,
             ActionPoint.ActionType.Finance, market.GetFlagCost(Player) + (!market.Protected && market.Flag == Player.Opponent.Faction ? 1 : 0));
@@ -19,10 +19,9 @@ namespace ImperialStruggle
         public void SetSpace(Space space) => this.market = space is Market ? (Market)space : null;
 
         public override void Setup(Player player)
-        {
-            Name = "Shift Market"; 
+        {Name = "Shift Market";
             base.Setup(player);
-            ActionRound.ActionRoundStartEvent += phase => eligibleMarkets = GetEligibleSpaces(phase.player.Faction);
+            ActionRound.ActionRoundStartEvent += SetEligibleSpaces;                
         }
 
         public override bool Eligible(Space space) => space is Market; 
@@ -30,9 +29,10 @@ namespace ImperialStruggle
         {
             if (market == null) return false;
 
-            return base.Can() && market != null && eligibleMarkets.Contains(market) && market.adjacentSpaces.Any(space =>
-                ((space is Territory || space is Fort || space is NavalSpace) && space.Flag == Player.Faction) ||
-                (space is Market targetMarket && space.control == Player.Faction && !targetMarket.Isolated(Player)));
+            return base.Can() && market != null && eligibleMarkets.Contains(market) && 
+                market.adjacentSpaces.Any(neighbor =>
+                    ((neighbor is Territory || neighbor is Fort || neighbor is NavalSpace) && neighbor.Flag == Player.Faction) ||
+                    (neighbor is Market targetMarket && neighbor.control == Player.Faction && !Isolated(targetMarket, Player)));
         }
 
         protected override Task Do()
@@ -45,6 +45,49 @@ namespace ImperialStruggle
             return Task.CompletedTask;
         }
 
-        IEnumerable<Market> GetEligibleSpaces(Faction faction) => Game.Spaces.OfType<Market>().Where(market => market.adjacentSpaces.Any(adjacent => adjacent.control == faction));
+        void SetEligibleSpaces(ActionRound ar)
+        {
+            eligibleMarkets = new(); 
+
+            if (ar.player == Player)
+                foreach (Market market in Game.Spaces.OfType<Market>().Where(m => m.adjacentSpaces.Any(space => space.control == Player.Faction)))
+                    eligibleMarkets.Add(market);
+        }
+
+        public bool Isolated(Market market, Player player)
+        {
+            int counter = 99;
+            bool retVal = true; 
+            Space currentSpace = market;
+            HashSet<Space> spacesToCheck = new();
+            HashSet<Space> checkedSpaces = new();
+
+            while (currentSpace != null && counter > 0)
+            {
+                counter--;
+                if ((currentSpace is Territory || currentSpace is Fort || currentSpace is NavalSpace) && currentSpace.control == player.Faction)
+                {
+                    //Debug.Log($"{currentSpace.Name} is Eligible connection [{counter}]"); 
+                    retVal = false;
+                    break; 
+                }
+                else
+                {
+                    checkedSpaces.Add(currentSpace);
+
+                    //Debug.Log($"{currentSpace.Name} is not Controlled Territory/Fort/NavalSpace. Adding " +
+                    //    $"{string.Join(", ", spacesToAdd.Select(space => space.Name))} [{counter}]");
+
+                    spacesToCheck.UnionWith(currentSpace.adjacentSpaces.Where(space => !checkedSpaces.Contains(space)
+                        && space.Flag == market.Flag && !space.conflictMarker).Except(spacesToCheck));
+                    currentSpace = spacesToCheck.FirstOrDefault();
+                    spacesToCheck.Remove(currentSpace);
+                }
+            }
+
+            Debug.Log($"Checking {market.Name} for Isolated Status: {retVal}");
+            return retVal; 
+        }
+
     }
 }
