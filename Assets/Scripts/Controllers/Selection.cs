@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ImperialStruggle
 {
     public class Selection<T> : IEnumerable<T> where T : ISelectable
-    {
+    {        
         public Player player { get; private set; }
         public IEnumerable<T> selectableItems { get; private set; }
         public List<T> selectedItems { get; private set; }
@@ -20,6 +20,8 @@ namespace ImperialStruggle
         public IEnumerator<T> GetEnumerator() => selectedItems.GetEnumerator();
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
+        UI_SelectionWindow window; 
+
         public System.Action<string> SetTitle { get; private set; }
 
         public Selection(Player player, IEnumerable<T> items)
@@ -28,15 +30,21 @@ namespace ImperialStruggle
             selectableItems = items;
             selectedItems = new();
             task = new();
+
+            window = player.UI.Select(this);
+            SetTitle = window.SetTitle;
+        }
+
+        public void Add(T item)
+        {
+            selectableItems.Append(item);
+            window.Add(this, item); 
         }
 
         public Selection(Player player, IEnumerable<T> items, System.Action<Selection<T>> callback) : this(player, items)
         {
             OnSubmit += callback;
             OnSubmit += SetResults;
-
-            UI_SelectionWindow window = player.UI.Select(this);
-            SetTitle = window.SetTitle; 
         }
 
         public Selection(Player player, IEnumerable<T> items, System.Action<Selection<T>> callback, int numItems) : this(player, items, callback)

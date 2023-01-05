@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-using System.Threading.Tasks;
-using static UnityEngine.UIElements.UxmlAttributeDescription;
 
 namespace ImperialStruggle
 {
@@ -12,15 +10,15 @@ namespace ImperialStruggle
         [SerializeField] int maxDP = 3;
         [SerializeField] List<SpaceData> bonusSpaces;
 
-        public override void Reveal(Player player)
+        public override void Reveal()
         {
             Game.selectInvestmentTileEvent += GrantBonusDP;
-        }
 
-        protected override Task Do()
-        {
-            throw new System.NotImplementedException();
+            // If the only thing the player has done is select their Investment Tile, they can also get the bonus
+            if (Phase.CurrentPhase is ActionRound ar && ar.ExecutedCommands.Last() is SelectInvestmentTileCommand)
+                GrantBonusDP(Player, ar.investmentTile); 
         }
+        protected override void Retire() => Game.selectInvestmentTileEvent += GrantBonusDP;
 
         void GrantBonusDP(Player selectingPlayer, InvestmentTile tile)
         {

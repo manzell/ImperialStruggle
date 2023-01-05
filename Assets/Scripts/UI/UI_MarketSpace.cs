@@ -25,7 +25,7 @@ namespace ImperialStruggle
         public override void Style()
         {
             spaceName.text = market.Name;
-            flagCost.text = market.GetFlagCost(Game.ActivePlayer).ToString();
+            flagCost.text = market.flagCost.GetAPCost(Game.ActivePlayer, market).Value(null).ToString();
             background.color = market.Flag.Color;
             spaceName.color = market.Flag == null || market.Flag == Game.Spain ? Color.black : Color.white;
 

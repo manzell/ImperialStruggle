@@ -22,8 +22,8 @@ namespace ImperialStruggle
     {
         [SerializeField] Map europe; 
 
-        protected override bool Can(Player player) => player.Squadrons.Any(squadron => squadron.space?.map == europe) && player.Cards.Count() > 0
-            && base.Can(player);
+        public override bool Can() => Player.Squadrons.Any(squadron => squadron.space?.map == europe) && Player.Cards.Count() > 0
+            && base.Can();
 
         protected async override Task Do()
         {

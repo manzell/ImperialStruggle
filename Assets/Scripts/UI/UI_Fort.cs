@@ -23,7 +23,7 @@ namespace ImperialStruggle
         [Button] public override void Style()
         {
             spaceName.text = space.Name;
-            flagCost.text = (space as Fort).GetFlagCost(null).ToString();
+            flagCost.text = (space as Fort).flagCost.GetAPCost(Game.ActivePlayer, fort).Value(null).ToString();
             background.color = space.Flag.Color;
             spaceName.color = space.Flag == null ? Color.black : Color.white;
         }

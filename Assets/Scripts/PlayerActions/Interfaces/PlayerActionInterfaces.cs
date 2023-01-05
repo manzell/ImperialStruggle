@@ -8,6 +8,7 @@ namespace ImperialStruggle
     public interface IPlayerAction
     {
         public string Name { get; }
+        public bool Passive { get; }
         public bool Can();
         public Task Execute(); 
         public Stack<Command> Commands { get; }

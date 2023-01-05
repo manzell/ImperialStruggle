@@ -9,8 +9,16 @@ namespace ImperialStruggle
     public class RepairFortAction : PlayerAction, PurchaseAction, TargetSpaceAction
     {
         Fort fort;
-        public ActionPoint ActionCost => new ActionPoint(ActionPoint.ActionTier.Minor, ActionPoint.ActionType.Military, 
-            fort.GetFlagCost(Player) + (fort.Flag == Player.Faction ? -1 : 0) + (fort.Flag == Player.Opponent.Faction ? 1 : 0));
+        public ActionPoint ActionCost
+        {
+            get
+            {
+                ActionPoint AP = fort.flagCost.GetAPCost(Player, fort);
+                AP.AdjustBaseValue((fort.Flag == Player.Opponent.Faction ? 1 : 0) - (fort.Flag == Player.Faction ? 1 : 0)); 
+
+                return AP; 
+            }
+        }
 
         public Space Space => fort; 
 

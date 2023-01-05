@@ -13,7 +13,7 @@ namespace ImperialStruggle
         public override bool Can() => Space != null && base.Can() && Space.Flag == Player.Faction && Eligible(Space);
         public void SetSpace(Space space) => Space = space;
 
-        public override bool Eligible(Space space) => space != null & space.conflictMarker;
+        public override bool Eligible(Space space) => space != null & space.ConflictMarker;
 
         protected override Task Do()
         {

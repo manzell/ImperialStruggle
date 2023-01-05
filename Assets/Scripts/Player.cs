@@ -55,13 +55,5 @@ namespace ImperialStruggle
             Debug.Log($"Resetting Action Points {phase}");
             ActionPoints = new ();
         }
-        /*
-        [Button]
-        public bool CanAfford(ActionPoints cost)
-        {
-            return true;
-            //create an object that represents each point of the player's total action points blah blah 
-        }
-        */
     }
 }

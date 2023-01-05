@@ -6,6 +6,7 @@ using UnityEngine;
 
 namespace ImperialStruggle
 {
+    // This is an active action
     public class BankOfEnglandDebtLimitAction : MinisterAction
     {
         protected override Task Do()
@@ -16,16 +17,27 @@ namespace ImperialStruggle
         }
     }
 
+    // So this is a passive action
     public class BankOfEnglandEconEventAction : MinisterAction
     {
-        protected override bool Can(Player player) => base.Can() && Phase.CurrentPhase is ActionRound ar && 
-            ar.investmentTile.actions.Any(action => action is PlayEventCardAction) && player.Cards.Count() > 0;
+        public override bool Can() => base.Can() && Phase.CurrentPhase is ActionRound ar && 
+            ar.investmentTile.actions.Any(action => action is PlayEventCardAction) && Player.Cards.Count() > 0;
 
-        protected override Task Do()
+        public override void Reveal()
         {
-            Exhausted = true;
-            Commands.Push(new AdjustDebtLimitCommand(Player.Faction, 1));
-            return Task.CompletedTask;
+            PlayEventCardAction.SelectEventCardEvent += AddDiplomaticCards;
+        }
+
+        // This is a Passive Action which doesn't actually need a Do. Should it be part of the Action System at all?
+        protected override Task Do() { return Task.CompletedTask; }
+
+        void AddDiplomaticCards(Selection<EventCard> selection)
+        {
+            Debug.Log("Add Diplomatic Card");
+
+            if(!Exhausted)
+                foreach (EventCard card in Player.Cards.Where(card => card.reqdActionType == ActionPoint.ActionType.Diplomacy && !selection.selectableItems.Contains(card)))
+                    selection.Add(card); 
         }
     }
 }

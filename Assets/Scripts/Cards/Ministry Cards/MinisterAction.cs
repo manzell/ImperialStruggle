@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Threading.Tasks; 
 
 namespace ImperialStruggle
 {
@@ -10,10 +9,10 @@ namespace ImperialStruggle
     {
         protected bool Exhausted;
 
-        protected virtual bool Can() => !Exhausted;
+        public override bool Can() => !Exhausted;
 
         public virtual void Reveal() { }
-        protected virtual void Retire() { }
+        protected virtual void Retire() { }        
 
         protected void Reset(Phase phase)
         {

@@ -44,6 +44,8 @@ namespace ImperialStruggle
                 action.SetSpace(space);
                 actions.Add(action);
             }
+            foreach (IPlayerAction action in space.Actions)
+                actions.Add(action); 
 
             if (actions.Count > 0)
                 UI_PopupMenu.Open(actions); 

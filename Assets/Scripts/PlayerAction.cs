@@ -9,6 +9,7 @@ namespace ImperialStruggle
     public abstract class PlayerAction : GameAction, IPlayerAction
     {
         public Player Player { get; private set; }
+        [field: SerializeField] public bool Passive { get; protected set; }
 
         public virtual void Setup(Player player)
         {

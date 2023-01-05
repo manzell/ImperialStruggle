@@ -26,9 +26,9 @@ namespace ImperialStruggle
             GraphicSettings graphics = FindObjectOfType<Game>().graphicSettings;
 
             spaceName.text = space.Name;
-            flagCost.text = poliSpace.GetFlagCost(Game.ActivePlayer).ToString();
+            flagCost.text = poliSpace.flagCost.GetAPCost(Game.ActivePlayer, poliSpace).Value(null).ToString();
             trim.color = poliSpace.Prestigious ? graphics.prestigeHighlightColor : trimColor;
-            highlight.gameObject.SetActive(space.conflictMarker);
+            highlight.gameObject.SetActive(space.ConflictMarker);
             background.color = space.Flag.Color;
             spaceName.color = space.Flag == null || space.Flag == Game.Spain ? Color.black : Color.white;
         }

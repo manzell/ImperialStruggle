@@ -14,7 +14,7 @@ namespace ImperialStruggle
             if (Phase.CurrentPhase is Theater theater)
             {
                 IEnumerable<Space> eligible = Game.Spaces.Where(space =>
-                    !space.conflictMarker && space.control == Player.Opponent.Faction && space.map == theater.map &&
+                    !space.ConflictMarker && space.control == Player.Opponent.Faction && space.map == theater.map &&
                     (space is Market || space is PoliticalSpace)); 
 
                 Space space = (await new Selection<Space>(Player, eligible).Completion).First();

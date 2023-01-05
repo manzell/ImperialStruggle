@@ -42,7 +42,7 @@ namespace ImperialStruggle
             card.ministryCardStatus = MinistryCard.MinistryCardStatus.Revealed;
             foreach(MinisterAction ministerAction in card.data.MinisterActions)
             {
-                ministerAction.Reveal(player); 
+                ministerAction.Reveal(); 
             }
         }
     }

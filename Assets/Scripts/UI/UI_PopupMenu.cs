@@ -25,7 +25,6 @@ namespace ImperialStruggle
             }
         }
 
-
         public void OnPointerClick(PointerEventData eventData)
         {
             lastClick = eventData;
@@ -41,12 +40,12 @@ namespace ImperialStruggle
             Debug.Log(popupActionPrefab.GetComponent<RectTransform>());
 
             Vector2 menuSize = popupActionPrefab.GetComponent<RectTransform>().sizeDelta;
-
+            
             popupMenuContainer.SetActive(true);
             popupMenuContainer.transform.position = lastClick.position; 
             popupMenuContainer.GetComponent<RectTransform>().sizeDelta = new Vector2(menuSize.x, menuSize.y * actions.Count);
 
-            foreach (IPlayerAction action in actions)
+            foreach (IPlayerAction action in actions.Where(action => action.Passive == false))
                 Instantiate(popupActionPrefab, popupMenuContainer.transform).GetComponent<UI_MenuAction>().SetAction(action);
         }
 

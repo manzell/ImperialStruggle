@@ -14,8 +14,7 @@ namespace ImperialStruggle
 
         public void SetSpace(Space space) => this.space = space is PoliticalSpace ? (PoliticalSpace)space : null;
 
-        public ActionPoint ActionCost => new (space.Flag == Player.Opponent.Faction ? ActionPoint.ActionTier.Major : ActionPoint.ActionTier.Minor,
-            ActionPoint.ActionType.Diplomacy, space.GetFlagCost(Player));
+        public ActionPoint ActionCost => space.flagCost.GetAPCost(Player, space); 
 
         public override bool Can() => space == null ? false : base.Can();
         public override bool Eligible(Space space) => space is PoliticalSpace;

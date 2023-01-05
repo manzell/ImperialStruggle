@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Linq;
+using UnityEditor;
+using Sirenix.Utilities;
 
 namespace ImperialStruggle
 {
@@ -15,17 +17,18 @@ namespace ImperialStruggle
 
         public Button okButton, resetButton, passButton, cancelButton;
 
+        public void Add<T>(Selection<T> selection, T item) where T : ISelectable
+        {
+            UI_SelectionTile tile = Instantiate(GetTilePrefab(item), tileArea.transform);
+            tile.Setup(item);
+
+            ClickHandler toggle = tile.gameObject.AddComponent<ClickHandler>();
+            toggle.pointerClickEvent += () => selection.Select(item);
+        }
+
         public void Open<T>(Selection<T> selection) where T : ISelectable
         {
-            foreach (T item in selection.selectableItems)
-            {
-                UI_SelectionTile tile = Instantiate(GetTilePrefab(item), tileArea.transform);
-                tile.Setup(item);
-
-                ClickHandler toggle = tile.gameObject.AddComponent<ClickHandler>();
-                toggle.pointerClickEvent += () => selection.Select(item);
-                // TODO: Add Pass and Cancel buttons
-            }
+            selection.selectableItems.ForEach(item => Add(selection, item)); 
 
             okButton.onClick.AddListener(() =>
             {

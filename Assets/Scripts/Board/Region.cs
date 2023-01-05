@@ -2,17 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Region : MonoBehaviour
+namespace ImperialStruggle
 {
-    // Start is called before the first frame update
-    void Start()
+    [CreateAssetMenu]
+    public class Region : ScriptableObject, ISelectable
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public string Name => name;
+        [field:SerializeField] public Map map { get; private set; }
+        public System.Action UISelectionEvent { get; set; }
+        public System.Action UIDeselectEvent { get; set; }
     }
 }

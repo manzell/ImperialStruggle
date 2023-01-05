@@ -11,7 +11,7 @@ namespace ImperialStruggle
     {
         Fort fort;
         IEnumerable<Fort> eligibleForts;
-        public ActionPoint ActionCost => new ActionPoint(ActionPoint.ActionTier.Minor, ActionPoint.ActionType.Military, fort.GetFlagCost(Player));
+        public ActionPoint ActionCost => fort.flagCost.GetAPCost(Player, fort); 
 
         public Space Space => fort;
         public void SetSpace(Space space) => this.fort = space is Fort ? (Fort)space : null;

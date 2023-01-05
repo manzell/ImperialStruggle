@@ -50,7 +50,7 @@ namespace ImperialStruggle
 
             return retVal;
         }
-        
-        protected abstract Task Do();
+
+        protected virtual Task Do() => Task.CompletedTask;
     }
 }

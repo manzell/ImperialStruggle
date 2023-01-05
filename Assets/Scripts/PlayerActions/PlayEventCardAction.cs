@@ -8,16 +8,22 @@ namespace ImperialStruggle
 {
     public class PlayEventCardAction : PlayerAction
     {
+        public static System.Action<Selection<EventCard>> SelectEventCardEvent; 
+
+        public virtual IEnumerable<EventCard> GetEligibleEventCards()
+        {
+            return Player.Cards.Where(card =>
+                card.reqdActionType == ActionPoint.ActionType.None || card.reqdActionType == Phase.CurrentPhase.GetComponent<ActionRound>()?.investmentTile.majorActionPoint.type);
+        }
+
         protected override Task Do()
         {
-            IEnumerable<EventCard> eventCards = Player.Cards.Where(card =>
-                card.reqdActionType == ActionPoint.ActionType.None || card.reqdActionType == Phase.CurrentPhase.GetComponent<ActionRound>()?.investmentTile.majorActionPoint.type);
+            IEnumerable<EventCard> eventCards = GetEligibleEventCards(); 
 
-            if (eventCards.Count() > 0)
-            {
-                Selection<EventCard> selection = new(Player, eventCards, Finish); 
-                selection.SetTitle($"Select a {Player.Faction} Event Card to Play");
-            }
+            Selection<EventCard> selection = new(Player, eventCards, Finish); 
+            selection.SetTitle($"Select a {Player.Faction} Event Card to Play");
+
+            SelectEventCardEvent?.Invoke(selection); 
 
             return Task.CompletedTask;
         }
