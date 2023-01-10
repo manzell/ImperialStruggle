@@ -5,17 +5,11 @@ using UnityEngine;
 
 namespace ImperialStruggle
 {
-    public class ShiftMarketAction : PlayerAction, RegionalPurchase, TargetSpaceAction
+    public class ShiftMarketAction : PlayerAction, RegionalPurchase<Market>
     {
-        Market market;
-        public Space Space => market;
-        FlaggableSpace RegionalPurchase.Space => market;
-
+        public Market Space { get; private set; }
+        public ActionPoint ActionCost => Space.flagCost.GetAPCost(Player, Space);
         HashSet<Market> eligibleMarkets;
-
-        public ActionPoint ActionCost => market.flagCost.GetAPCost(Player, market);
-
-        public void SetSpace(Space space) => this.market = space is Market ? (Market)space : null;
 
         public override void Setup(Player player)
         {
@@ -24,23 +18,23 @@ namespace ImperialStruggle
             ActionRound.ActionRoundStartEvent += SetEligibleSpaces;                
         }
 
+        public void SetSpace(Market space) => Space = space;
         public override bool Eligible(Space space) => space is Market; 
         public override bool Can()
         {
-            if (market == null) return false;
+            if (Space == null) return false;
 
-            return base.Can() && market != null && eligibleMarkets.Contains(market) && 
-                market.adjacentSpaces.Any(neighbor =>
+            return base.Can() && eligibleMarkets.Contains(Space) && Space.adjacentSpaces.Any(neighbor =>
                     ((neighbor is Territory || neighbor is Fort || neighbor is NavalSpace) && neighbor.Flag == Player.Faction) ||
-                    (neighbor is Market targetMarket && neighbor.control == Player.Faction && !targetMarket.Isolated(Player)));
+                    (neighbor is Market targetMarket && neighbor.Control == Player.Faction && !targetMarket.Isolated(Player)));
         }
 
         protected override Task Do()
         {
-            if(market.Flag == Game.Neutral)
-                Commands.Push(new FlagSpaceCommand(market, Player.Faction)); 
-            if(market.Flag == Player.Opponent.Faction)
-                Commands.Push(new UnflagCommand(market)); 
+            if(Space.Flag == Game.Neutral)
+                Commands.Push(new FlagSpaceCommand(Space, Player.Faction)); 
+            if(Space.Flag == Player.Opponent.Faction)
+                Commands.Push(new UnflagCommand(Space)); 
 
             return Task.CompletedTask;
         }
@@ -50,7 +44,7 @@ namespace ImperialStruggle
             eligibleMarkets = new(); 
 
             if (ar.player == Player)
-                foreach (Market market in Game.Spaces.OfType<Market>().Where(m => m.adjacentSpaces.Any(space => space.control == Player.Faction)))
+                foreach (Market market in Game.Spaces.OfType<Market>().Where(m => m.adjacentSpaces.Any(space => space.Control == Player.Faction)))
                     eligibleMarkets.Add(market);
         }
     }

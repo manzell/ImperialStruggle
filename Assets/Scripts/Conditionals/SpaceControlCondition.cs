@@ -8,31 +8,26 @@ namespace ImperialStruggle
     public class SpaceControlCondition : Conditional
     {
         enum SpaceConditionType { Friendly, Opposed, Neutral, Nonfriendly, Nonopposed }
+        [SerializeField] Space space; 
         [SerializeField] SpaceConditionType spaceConditionType;
 
-        public override bool Test(GameAction action)
-        {    
-            /*
-            if(action is ActionTarget<Space> spaceAction && action is PlayerAction playerAction)
+        public override bool Test(IPlayerAction action)
+        {
+            switch (spaceConditionType)
             {
-                switch (spaceConditionType)
-                {
-                    case SpaceConditionType.Friendly:
-                        return spaceAction.target.Flag == playerAction.actingPlayer.faction; 
-                    case SpaceConditionType.Nonfriendly:
-                        return spaceAction.target.Flag != playerAction.actingPlayer.faction;
-                    case SpaceConditionType.Opposed:
-                        return spaceAction.target.Flag != playerAction.actingPlayer.faction &&
-                            spaceAction.target.Flag != null; 
-                    case SpaceConditionType.Nonopposed:
-                        return spaceAction.target.Flag == playerAction.actingPlayer.faction ||
-                            spaceAction.target.Flag == null;
-                    case SpaceConditionType.Neutral:
-                        return spaceAction.target.Flag == null;
-                }
+                case SpaceConditionType.Friendly:
+                    return space.Flag == action.Player.Faction;
+                case SpaceConditionType.Nonfriendly:
+                    return space.Flag != action.Player.Faction;
+                case SpaceConditionType.Opposed:
+                    return space.Flag != action.Player.Faction && space.Flag != null;
+                case SpaceConditionType.Nonopposed:
+                    return space.Flag == action.Player.Faction || space.Flag == null;
+                case SpaceConditionType.Neutral:
+                    return space.Flag == Game.Neutral;
+                default:
+                    return false; 
             }
-            */
-            return false; 
         }
     }
 }

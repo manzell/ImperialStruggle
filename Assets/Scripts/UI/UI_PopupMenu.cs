@@ -34,7 +34,7 @@ namespace ImperialStruggle
                 popup.OpenPopupMenu(); 
         }
 
-        public static void Open(List<IPlayerAction> actions)
+        public static void Open(IEnumerable<IPlayerAction> actions)
         {
             Debug.Log(popupActionPrefab);
             Debug.Log(popupActionPrefab.GetComponent<RectTransform>());
@@ -43,9 +43,9 @@ namespace ImperialStruggle
             
             popupMenuContainer.SetActive(true);
             popupMenuContainer.transform.position = lastClick.position; 
-            popupMenuContainer.GetComponent<RectTransform>().sizeDelta = new Vector2(menuSize.x, menuSize.y * actions.Count);
+            popupMenuContainer.GetComponent<RectTransform>().sizeDelta = new Vector2(menuSize.x, menuSize.y * actions.Count());
 
-            foreach (IPlayerAction action in actions.Where(action => action.Passive == false))
+            foreach (IPlayerAction action in actions)
                 Instantiate(popupActionPrefab, popupMenuContainer.transform).GetComponent<UI_MenuAction>().SetAction(action);
         }
 

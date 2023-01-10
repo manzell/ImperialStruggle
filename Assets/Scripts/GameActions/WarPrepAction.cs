@@ -15,7 +15,7 @@ namespace ImperialStruggle
         {
             foreach (Player player in Player.Players)
                 foreach (Theater theater in nextWar.theaters)
-                    Commands.Push(new AddWarTileToTheaterCommand(player.WarTiles.Dequeue(), theater));
+                    Commands.Push(new AddWarTileToTheaterCommand(player.WarTiles.OrderBy(x => Random.value).FirstOrDefault(), theater));
 
             return Task.CompletedTask; 
         }

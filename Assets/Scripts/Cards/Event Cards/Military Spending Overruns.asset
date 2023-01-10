@@ -15,7 +15,8 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: fa035a9950db4ba458654758b49c2e78, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -39,8 +40,8 @@ MonoBehaviour:
       Data: 
     - Name: cardActions
       Entry: 7
-      Data: 1|System.Collections.Generic.Dictionary`2[[Faction, Assembly-CSharp],[System.ValueTuple`2[[ImperialStruggle.CardAction,
-        Assembly-CSharp],[ImperialStruggle.CardAction, Assembly-CSharp]], mscorlib]],
+      Data: 1|System.Collections.Generic.Dictionary`2[[Faction, Assembly-CSharp],[System.ValueTuple`2[[ImperialStruggle.PlayerAction,
+        Assembly-CSharp],[ImperialStruggle.PlayerAction, Assembly-CSharp]], mscorlib]],
         mscorlib
     - Name: comparer
       Entry: 7
@@ -51,7 +52,29 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 10
       Data: 0
+    - Name: $v
+      Entry: 7
+      Data: System.ValueTuple`2[[ImperialStruggle.PlayerAction, Assembly-CSharp],[ImperialStruggle.PlayerAction,
+        Assembly-CSharp]], mscorlib
+    - Name: Item1
+      Entry: 6
+      Data: 
+    - Name: Item2
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 

@@ -41,7 +41,7 @@ namespace ImperialStruggle
             // First cycle through our existing APTile keys and remove any uncessary ones
             List<string> keysToRemove = new ();
             foreach (string key in APtiles.Keys)
-                if (player.ActionPoints.All(ap => ap.name != key))
+                if (player.ActionPoints.All(ap => ap.Name != key))
                     keysToRemove.Add(key);
 
             foreach (string key in keysToRemove)
@@ -49,7 +49,7 @@ namespace ImperialStruggle
 
             // Then cycle through our AP's and add tiles that we need
             foreach (ActionPoint actionPoint in player.ActionPoints)
-                if (!APtiles.Keys.Contains(actionPoint.name))
+                if (!APtiles.Keys.Contains(actionPoint.Name))
                     AddTile(actionPoint);
         }
     }

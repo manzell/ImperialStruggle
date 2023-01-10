@@ -15,7 +15,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: fa035a9950db4ba458654758b49c2e78, type: 2}
+    - {fileID: 11400000, guid: 5e460598291e3794a8ee7e5a51147d40, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -39,8 +41,8 @@ MonoBehaviour:
       Data: 
     - Name: cardActions
       Entry: 7
-      Data: 1|System.Collections.Generic.Dictionary`2[[Faction, Assembly-CSharp],[System.ValueTuple`2[[ImperialStruggle.CardAction,
-        Assembly-CSharp],[ImperialStruggle.CardAction, Assembly-CSharp]], mscorlib]],
+      Data: 1|System.Collections.Generic.Dictionary`2[[Faction, Assembly-CSharp],[System.ValueTuple`2[[ImperialStruggle.PlayerAction,
+        Assembly-CSharp],[ImperialStruggle.PlayerAction, Assembly-CSharp]], mscorlib]],
         mscorlib
     - Name: comparer
       Entry: 7
@@ -51,7 +53,47 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 10
       Data: 0
+    - Name: $v
+      Entry: 7
+      Data: System.ValueTuple`2[[ImperialStruggle.PlayerAction, Assembly-CSharp],[ImperialStruggle.PlayerAction,
+        Assembly-CSharp]], mscorlib
+    - Name: Item1
+      Entry: 7
+      Data: 3|ImperialStruggle.TropicalDiseases_Base, Assembly-CSharp
+    - Name: <Passive>k__BackingField
+      Entry: 5
+      Data: false
+    - Name: carribean
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Item2
+      Entry: 7
+      Data: 4|ImperialStruggle.TropicalDiseases_Bonus, Assembly-CSharp
+    - Name: <Passive>k__BackingField
+      Entry: 5
+      Data: false
+    - Name: carribean
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -60,7 +102,13 @@ MonoBehaviour:
       Data: 
     - Name: bonusCondition
       Entry: 7
-      Data: 3|ImperialStruggle.KeywordCondition, Assembly-CSharp
+      Data: 5|ImperialStruggle.KeywordCondition, Assembly-CSharp
+    - Name: <ConditionalType>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <ConditionalText>k__BackingField
+      Entry: 6
+      Data: 
     - Name: keyword
       Entry: 3
       Data: 3

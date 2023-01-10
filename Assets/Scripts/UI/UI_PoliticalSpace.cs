@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using Sirenix.OdinInspector;
 
 namespace ImperialStruggle
 {
@@ -21,14 +20,14 @@ namespace ImperialStruggle
             space.updateSpaceEvent += Style;
         }
 
-        [Button] public override void Style()
+        public override void Style()
         {
             GraphicSettings graphics = FindObjectOfType<Game>().graphicSettings;
 
             spaceName.text = space.Name;
             flagCost.text = poliSpace.flagCost.GetAPCost(Game.ActivePlayer, poliSpace).Value(null).ToString();
             trim.color = poliSpace.Prestigious ? graphics.prestigeHighlightColor : trimColor;
-            highlight.gameObject.SetActive(space.ConflictMarker);
+            highlight.gameObject.SetActive(space.ConflictMarkers.Count > 0);
             background.color = space.Flag.Color;
             spaceName.color = space.Flag == null || space.Flag == Game.Spain ? Color.black : Color.white;
         }

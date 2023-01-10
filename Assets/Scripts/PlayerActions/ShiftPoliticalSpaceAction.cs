@@ -6,32 +6,27 @@ using System.Threading.Tasks;
 
 namespace ImperialStruggle
 {
-    public class ShiftPoliticalSpaceAction : PlayerAction, RegionalPurchase, TargetSpaceAction
+    public class ShiftPoliticalSpaceAction : PlayerAction, RegionalPurchase<PoliticalSpace>
     {
-        PoliticalSpace space;
-        public FlaggableSpace Space => space;
-        Space TargetSpaceAction.Space => space;
+        public PoliticalSpace Space { get; private set; }        
+        public void SetSpace(PoliticalSpace space) => Space = space;
+        public ActionPoint ActionCost => Space.flagCost.GetAPCost(Player, Space); 
 
-        public void SetSpace(Space space) => this.space = space is PoliticalSpace ? (PoliticalSpace)space : null;
-
-        public ActionPoint ActionCost => space.flagCost.GetAPCost(Player, space); 
-
-        public override bool Can() => space == null ? false : base.Can();
         public override bool Eligible(Space space) => space is PoliticalSpace;
 
         protected override Task Do()
         {
-            if (space.Flag == null)
-                Commands.Push(new FlagSpaceCommand(space, Player.Faction));
-            if (space.Flag == Player.Opponent.Faction)
-                Commands.Push(new UnflagCommand(space));
+            if (Space.Flag == null)
+                Commands.Push(new FlagSpaceCommand(Space, Player.Faction));
+            if (Space.Flag == Player.Opponent.Faction)
+                Commands.Push(new UnflagCommand(Space));
 
             return Task.CompletedTask;
         }
 
         public override void Setup(Player player)
         {
-            Name = "Shift Space";
+            Name = Space.Flag == Game.Neutral ? "Flag" : "Unflag";
             base.Setup(player);
         }
     }

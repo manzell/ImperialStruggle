@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace ImperialStruggle
 {
-    public class SpaceOnMapCalculation : Calculation<List<Space>>
+    public class SpaceOnMapCalculation : Calculation<IEnumerable<Space>>
     {
         [SerializeField] List<Map> eligibleMaps = new List<Map>();
 
-        public override List<Space> Calculate()
+        public override IEnumerable<Space> Calculate()
         {
             List<Space> spaces = new List<Space>();
 

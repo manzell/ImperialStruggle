@@ -8,27 +8,25 @@ namespace ImperialStruggle
     {
         [SerializeField] int margin = 1;
 
-        public override bool Test(GameAction action)
+        public override bool Test(IPlayerAction action)
         {
-            /*
-            if (action is ActionTarget<Faction> factionAction)
-            {
-                int availableDebt = RecordsTrack.availableDebt[factionAction.target];
+            int availableDebt = RecordsTrack.availableDebt[action.Player.Faction];
 
-                switch (ConditionalType)
-                {
-                    case Conditional.ConditionType.Exactly:
-                        return availableDebt == margin;
-                    case Conditional.ConditionType.NotLessThan:
-                        return availableDebt >= margin;
-                    case Conditional.ConditionType.NotMoreThan:
-                        return availableDebt <= margin;
-                    default:
-                        return true;
-                }
+            switch (ConditionalType)
+            {
+                case ConditionType.Exactly:
+                    return availableDebt == margin;
+                case ConditionType.NotLessThan:
+                    return availableDebt >= margin;
+                case ConditionType.NotMoreThan:
+                    return availableDebt <= margin;
+                case ConditionType.MoreThan:
+                    return availableDebt > margin;
+                case ConditionType.FewerThan:
+                    return availableDebt < margin;
+                default:
+                    return true;
             }
-            */
-            return false;
         }
     }
 }

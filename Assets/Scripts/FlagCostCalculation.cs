@@ -14,7 +14,7 @@ namespace ImperialStruggle
         public override ActionPoint GetAPCost(Player player, FlaggableSpace space)
         {
             return new(space.Flag == player.Opponent.Faction ? ActionPoint.ActionTier.Major : ActionPoint.ActionTier.Minor, ActionPoint.ActionType.Diplomacy,
-                space.ConflictMarker ? 1 : (space.Data as PoliticalData).FlagCost);
+                space.ConflictMarkers.Count > 0 ? 1 : (space.Data as PoliticalData).FlagCost);
         }
     }
 
@@ -23,7 +23,7 @@ namespace ImperialStruggle
         public override ActionPoint GetAPCost(Player player, FlaggableSpace space)
         {
             return new(space.Flag == player.Opponent.Faction ? ActionPoint.ActionTier.Major : ActionPoint.ActionTier.Minor, ActionPoint.ActionType.Finance,
-                space.ConflictMarker ? 1 : (space.Data as MarketData).FlagCost);
+                space.ConflictMarkers.Count > 0 ? 1 : (space.Data as MarketData).FlagCost);
         }
     }
 
@@ -34,7 +34,7 @@ namespace ImperialStruggle
             Market market = space as Market; 
 
             return new(space.Flag == player.Opponent.Faction ? ActionPoint.ActionTier.Major : ActionPoint.ActionTier.Minor, ActionPoint.ActionType.Military,
-                (market.Protected && space.Flag == player.Opponent.Faction ? 1 : 0) + (space.ConflictMarker || market.Isolated(player) ? 1 : (space.Data as PoliticalData).FlagCost));
+                (market.Protected && space.Flag == player.Opponent.Faction ? 1 : 0) + (space.ConflictMarkers.Count > 0 || market.Isolated(player) ? 1 : (space.Data as PoliticalData).FlagCost));
         }
     }
 }

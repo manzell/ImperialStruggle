@@ -18,6 +18,7 @@ namespace ImperialStruggle
 
         public override void Do(GameAction action)
         {
+            tile.faction.player.WarTiles.Remove(tile);
             theater.warTiles.Add(tile);
             Debug.Log($"{tile.Name} added to {theater.Name}");
         }

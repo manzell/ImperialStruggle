@@ -14,7 +14,8 @@ namespace ImperialStruggle
 
         public override void Do(GameAction action)
         {
-            space.SetConflictMarker(false);
+            if (space.ConflictMarkers.Count > 0)
+                space.ConflictMarkers.RemoveAt(0); 
             space.updateSpaceEvent.Invoke();
         }
     }

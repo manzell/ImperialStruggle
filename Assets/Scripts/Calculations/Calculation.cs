@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
 
-public abstract class Calculation<T> : SerializedMonoBehaviour
+[System.Serializable]
+public abstract class Calculation<T>
 {
-    [ShowInInspector]
     public T value
     {
         get
@@ -27,5 +27,5 @@ public abstract class Calculation<T> : SerializedMonoBehaviour
     private T _value = default(T);
     [SerializeField] protected bool calculated = false; // Calculate() Functions MUST set the calculated flag
 
-    public virtual T Calculate() => default(T);
+    public abstract T Calculate();
 }

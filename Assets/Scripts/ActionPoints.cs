@@ -1,9 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Sirenix.OdinInspector;
 using System.Linq;
-using static ImperialStruggle.ActionPoints;
 using Sirenix.Utilities;
 
 namespace ImperialStruggle
@@ -23,8 +21,7 @@ namespace ImperialStruggle
 
         public bool Can(PurchaseAction context)
         {
-            bool retVal = actionPoints.Where(ap => ap.conditionals.All(condition => condition.Test(context as GameAction)) &&
-                (ap.type == context.ActionCost.type || ap.type >= ActionPoint.ActionType.Free) && (ap.tier >= context.ActionCost.tier))
+            bool retVal = actionPoints.Where(ap => (ap.type == context.ActionCost.type || ap.type >= ActionPoint.ActionType.Free) && ap.tier >= context.ActionCost.tier)
                 .Sum(ap => ap.Value(context)) > context.ActionCost.Value(context);
 
             //Debug.Log($"Testing if {context.Player} can afford {context.Name} ({context.ActionCost.name}) {retVal}");
@@ -53,7 +50,7 @@ namespace ImperialStruggle
                 {
                     bool typeOK = AP.type == actionCost.type || AP.type > ActionPoint.ActionType.VictoryPoint;
                     bool majorMinorOK = AP.tier == ActionPoint.ActionTier.Major || actionCost.tier == ActionPoint.ActionTier.Minor;
-                    bool allConditions = AP.conditionals.All(condition => condition.Test(context as GameAction));
+                    bool allConditions = AP.conditionals.All(condition => condition.Test(context));
 
                     if (typeOK && majorMinorOK && allConditions)
                         eligiblePaymentAPs.Add(AP); 
@@ -101,7 +98,7 @@ namespace ImperialStruggle
     }
 
     [System.Serializable]
-    public class ActionPoint
+    public class ActionPoint : ISelectable
     {
         public enum ActionType { None, Finance, Diplomacy, Military, VictoryPoint, Free, Debt, Treaty }
         public enum ActionTier { Minor, Major }
@@ -114,8 +111,11 @@ namespace ImperialStruggle
         [field: SerializeField] public int baseValue { get; private set; }
         [field: SerializeReference] public List<Conditional> conditionals { get; private set; }
 
-        public string conditionText => conditionals != null && conditionals.Count > 0 ? string.Join(" ", conditionals.Select(c => c.ToString())) : string.Empty;
-        public string name => $"{Value(null)} [{baseValue}] {tier} {type} ({conditionText})";
+        public string conditionText => conditionals != null && conditionals.Count > 0 ? string.Join(", ", conditionals.Select(c => c.ToString())) : string.Empty;
+        public string Name => $"{Value(null)} [{baseValue}] {tier} {type} ({conditionText})";
+
+        public System.Action UISelectionEvent { get; set; }
+        public System.Action UIDeselectEvent { get; set; }
 
         public ActionPoint(ActionTier tier, ActionType type, int baseValue)
         {
@@ -156,7 +156,7 @@ namespace ImperialStruggle
                 else
                     return 0;
             }
-            else if (conditionals.All(condition => condition.Test(context as GameAction)))
+            else if (conditionals.All(condition => condition.Test(context)))
                 return baseValue;
             else
                 return 0;

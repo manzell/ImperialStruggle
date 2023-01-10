@@ -19,7 +19,7 @@ namespace ImperialStruggle
         {
             if (amount != 0 && faction != null)
             {
-                RecordsTrack.currentDebt[faction] += amount;
+                RecordsTrack.currentDebt[faction ?? (action as PlayerAction)?.Player.Faction] += amount;
                 RecordsTrack.adjustDebtEvent.Invoke();
                 // Check to see if Debt > Debt Limit
             }

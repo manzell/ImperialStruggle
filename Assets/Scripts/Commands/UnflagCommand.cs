@@ -6,8 +6,8 @@ namespace ImperialStruggle
 {
     public class UnflagCommand : Command
     {
-        Space space; 
-        public UnflagCommand(Space space) => this.space = space;
+        FlaggableSpace space; 
+        public UnflagCommand(FlaggableSpace space) => this.space = space;
 
         public override void Do(GameAction action) => space.SetFlag(null);
     }

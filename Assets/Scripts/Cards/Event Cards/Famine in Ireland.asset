@@ -15,7 +15,13 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
+    - {fileID: 11400000, guid: 6398034ff8583374197632ba1ed570e6, type: 2}
+    - {fileID: 11400000, guid: 89f58c20b4e77524f9778f9fa981907e, type: 2}
+    - {fileID: 11400000, guid: 06ef2ce398da0cf43b4a5bdebe92ba24, type: 2}
+    - {fileID: 11400000, guid: 34706d5e5218fcc4ca95751daad6639f, type: 2}
+    - {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -39,8 +45,8 @@ MonoBehaviour:
       Data: 
     - Name: cardActions
       Entry: 7
-      Data: 1|System.Collections.Generic.Dictionary`2[[Faction, Assembly-CSharp],[System.ValueTuple`2[[ImperialStruggle.CardAction,
-        Assembly-CSharp],[ImperialStruggle.CardAction, Assembly-CSharp]], mscorlib]],
+      Data: 1|System.Collections.Generic.Dictionary`2[[Faction, Assembly-CSharp],[System.ValueTuple`2[[ImperialStruggle.PlayerAction,
+        Assembly-CSharp],[ImperialStruggle.PlayerAction, Assembly-CSharp]], mscorlib]],
         mscorlib
     - Name: comparer
       Entry: 7
@@ -51,7 +57,107 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 10
       Data: 0
+    - Name: $v
+      Entry: 7
+      Data: System.ValueTuple`2[[ImperialStruggle.PlayerAction, Assembly-CSharp],[ImperialStruggle.PlayerAction,
+        Assembly-CSharp]], mscorlib
+    - Name: Item1
+      Entry: 7
+      Data: 3|ImperialStruggle.FamineInIreland_BR, Assembly-CSharp
+    - Name: <Passive>k__BackingField
+      Entry: 5
+      Data: false
+    - Name: eligibleSpaces
+      Entry: 7
+      Data: 4|System.Collections.Generic.HashSet`1[[ImperialStruggle.PoliticalData,
+        Assembly-CSharp]], System.Core
+    - Name: 
+      Entry: 12
+      Data: 4
+    - Name: 
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 10
+      Data: 4
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Item2
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 10
+      Data: 5
+    - Name: $v
+      Entry: 7
+      Data: System.ValueTuple`2[[ImperialStruggle.PlayerAction, Assembly-CSharp],[ImperialStruggle.PlayerAction,
+        Assembly-CSharp]], mscorlib
+    - Name: Item1
+      Entry: 7
+      Data: 5|ImperialStruggle.FamineInIreland_FR, Assembly-CSharp
+    - Name: <Passive>k__BackingField
+      Entry: 5
+      Data: false
+    - Name: irelandSpaces
+      Entry: 7
+      Data: 6|System.Collections.Generic.HashSet`1[[ImperialStruggle.PoliticalData,
+        Assembly-CSharp]], System.Core
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Item2
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 

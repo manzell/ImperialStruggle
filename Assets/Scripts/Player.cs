@@ -15,8 +15,9 @@ namespace ImperialStruggle
         [field: SerializeField] public List<PlayerAction> Actions { get; private set; }
         public List<MinistryCard> Ministers { get; private set; }
         public List<EventCard> Cards { get; private set; }
-        public Queue<WarTile> WarTiles { get; private set; }
-        public Queue<WarTile> BonusWarTiles { get; private set; }
+        public List<WarTile> WarTiles { get; private set; }
+        public List<WarTile> BonusWarTiles { get; private set; }
+        public List<AdvantageTile> AdvantageTiles { get; private set; }
         public List<Squadron> Squadrons { get; private set; }
         public ActionPoints ActionPoints { get; private set; }
         public System.Action UISelectionEvent { get; set; }

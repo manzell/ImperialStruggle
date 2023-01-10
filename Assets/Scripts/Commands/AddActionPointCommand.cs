@@ -4,20 +4,20 @@ using UnityEngine;
 
 namespace ImperialStruggle
 {
-    public class AddActionPointCommand : Command
+    public class AddAPCommand : Command
     {
         Player player;
         ActionPoint apAward; 
         ActionPoints apsAward;
         ActionPoints prevAP; 
 
-        public AddActionPointCommand(Player player, ActionPoints AP)
+        public AddAPCommand(Player player, ActionPoints AP)
         {
             apsAward = AP; 
             this.player = player;
         }
 
-        public AddActionPointCommand(Player player, ActionPoint AP)
+        public AddAPCommand(Player player, ActionPoint AP)
         {
             apAward = AP;
             this.player = player;

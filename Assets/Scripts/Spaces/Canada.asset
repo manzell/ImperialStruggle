@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cac2bc0cdc985b64dad3da3ae052d896, type: 3}
   m_Name: Canada
   m_EditorClassIdentifier: 
+  <map>k__BackingField: {fileID: 11400000, guid: d539b3597d25b5940a836fda6d471339, type: 2}

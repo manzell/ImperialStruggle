@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace ImperialStruggle
 {
-    [CreateAssetMenu]
     public class Region : ScriptableObject, ISelectable
     {
         public string Name => name;

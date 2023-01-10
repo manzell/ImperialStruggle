@@ -33,6 +33,9 @@ namespace ImperialStruggle
 
             window = player.UI.Select(this);
             SetTitle = window.SetTitle;
+
+            if (items.Count() == 0)
+                task.SetResult(null); 
         }
 
         public void Add(T item)

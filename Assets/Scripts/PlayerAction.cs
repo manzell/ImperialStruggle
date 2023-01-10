@@ -16,6 +16,19 @@ namespace ImperialStruggle
             this.Player = player;
         }
 
-        public virtual bool Eligible(Space space) => false; 
+        public virtual bool Eligible(Space space) => false;
+
+        public override bool Can()
+        {
+            if (conditionals == null)
+                conditionals = new();
+
+            bool retVal = conditionals.All(c => c.Test(this));
+
+            if (this is PurchaseAction purchaseAction)
+                retVal &= purchaseAction.Player.ActionPoints.Can(purchaseAction);
+
+            return retVal;
+        }
     }
 }

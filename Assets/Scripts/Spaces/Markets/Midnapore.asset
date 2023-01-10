@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0554630cf84eef240a3a3e5dbaf5901c, type: 3}
+  m_Name: Midnapore
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  <prefab>k__BackingField: {fileID: 0}
+  <Map>k__BackingField: {fileID: 11400000, guid: 34b34415192546040af253ee289328c4, type: 2}
+  <Region>k__BackingField: {fileID: 11400000, guid: 75ba9ee94ee909b4b8ed41abbdafa16d, type: 2}
+  <startingFlag>k__BackingField: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
+  <availableEra>k__BackingField: 0
+  <adjacentSpaces>k__BackingField:
+  - {fileID: 11400000, guid: 3a1b023e57895094994ca6e2a2077f42, type: 2}
+  - {fileID: 11400000, guid: 6ba3f79dd50cb06438bacf3b5371abea, type: 2}
+  - {fileID: 11400000, guid: f0e8b89f1729a264ea4e2ef7a7844db5, type: 2}
+  - {fileID: 11400000, guid: 46db25b65ebd7ec42ab7220ec178b45d, type: 2}
+  <ResourceType>k__BackingField: {fileID: 11400000, guid: 4a05d52d3c271fd44b4179da3f37cba3, type: 2}
+  <FlagCost>k__BackingField: 2

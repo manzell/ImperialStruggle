@@ -12,7 +12,7 @@ namespace ImperialStruggle
     public abstract class GameAction
     {
         public string Name { get; protected set; }
-        public List<Conditional> conditionals { get; private set; }
+        public List<Conditional> conditionals { get; protected set; }
         public Stack<Command> Commands { get; private set; }
 
         public GameAction()
@@ -37,19 +37,8 @@ namespace ImperialStruggle
                 Phase.CurrentPhase.Push(this); // Command execution happens here. 
             }
         }
-        
-        public virtual bool Can()
-        {
-            if (conditionals == null)
-                conditionals = new(); 
 
-            bool retVal = conditionals.All(c => c.Test(this));
-
-            if (this is PurchaseAction purchaseAction)
-                retVal &= purchaseAction.Player.ActionPoints.Can(purchaseAction);
-
-            return retVal;
-        }
+        public virtual bool Can() => true; 
 
         protected virtual Task Do() => Task.CompletedTask;
     }

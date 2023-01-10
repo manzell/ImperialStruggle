@@ -14,7 +14,7 @@ namespace ImperialStruggle
         public SpaceData data;         
         public SpaceData Data => data;
         public List<IPlayerAction> Actions { get; private set; }
-        public bool ConflictMarker { get; private set; }
+        public List<ConflictMarker> ConflictMarkers { get; private set; } = new();
 
         public string Name => data.name;
         public HashSet<Space> adjacentSpaces { get; private set; } = new();
@@ -24,7 +24,7 @@ namespace ImperialStruggle
         public System.Action UIDeselectEvent { get; set; }
         public System.Action updateSpaceEvent;
 
-        public virtual Faction control => ConflictMarker ? null : Flag;
+        public virtual Faction Control => ConflictMarkers.Count > 0 ? null : Flag;
         public Map map => data.Map;
         public Phase.Era availableEra => data.availableEra;
 
@@ -34,7 +34,6 @@ namespace ImperialStruggle
             Flag = data.startingFlag;
         }
 
-        public void SetConflictMarker(bool status) => ConflictMarker = status;
         public void SetFlag(Faction faction)
         {
             Flag = faction;
@@ -75,7 +74,7 @@ namespace ImperialStruggle
             while (currentSpace != null && counter > 0)
             {
                 counter--;
-                if ((currentSpace is Territory || currentSpace is Fort || currentSpace is NavalSpace) && currentSpace.control == player.Faction)
+                if ((currentSpace is Territory || currentSpace is Fort || currentSpace is NavalSpace) && currentSpace.Control == player.Faction)
                 {
                     //Debug.Log($"{currentSpace.Name} is Eligible connection [{counter}]"); 
                     retVal = false;
@@ -89,7 +88,7 @@ namespace ImperialStruggle
                     //    $"{string.Join(", ", spacesToAdd.Select(space => space.Name))} [{counter}]");
 
                     spacesToCheck.UnionWith(currentSpace.adjacentSpaces.Where(space => !checkedSpaces.Contains(space)
-                        && space.Flag == Flag && !space.ConflictMarker).Except(spacesToCheck));
+                        && space.Flag == Flag && space.ConflictMarkers.Count == 0).Except(spacesToCheck));
                     currentSpace = spacesToCheck.FirstOrDefault();
                     spacesToCheck.Remove(currentSpace);
                 }
@@ -140,7 +139,7 @@ namespace ImperialStruggle
     {
         public Faction Flag { get; }
         public SpaceData Data { get; }
-        public bool ConflictMarker { get; }
+        public List<ConflictMarker> ConflictMarkers { get; }
     }
 
     public interface FlaggableSpace : ISpace

@@ -16,5 +16,11 @@ namespace ImperialStruggle
     {
         public Phase.Era Era;
         public Resource Resource;
+
+        public GlobalDemandKey(Phase.Era era, Resource resource)
+        {
+            Era = era;
+            Resource = resource; 
+        }
     }
 }

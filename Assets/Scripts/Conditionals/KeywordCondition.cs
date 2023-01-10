@@ -8,12 +8,6 @@ namespace ImperialStruggle
     {
         [SerializeField] MinistryCard.Keyword keyword;
 
-        public override bool Test(GameAction action)
-        {
-            if (action is PlayerAction playerAction)
-                return playerAction.Player.Keywords.Contains(keyword);
-            else
-                return true;
-        }
+        public override bool Test(IPlayerAction action) => action.Player.Keywords.Contains(keyword);
     }
 }

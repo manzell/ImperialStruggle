@@ -13,14 +13,6 @@ namespace ImperialStruggle
         [field: SerializeField] public ConditionType ConditionalType { get; }
         [field: SerializeField] public string ConditionalText { get; }
 
-        public abstract bool Test(GameAction context);
+        public abstract bool Test(IPlayerAction context);
     }
-    /*
-    public interface IConditional
-    {
-        public bool Test(GameAction context);
-        public Conditional.ConditionType ConditionalType { get; }
-        public string ConditionalText { get; }
-    }
-    */
 }

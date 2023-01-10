@@ -37,17 +37,11 @@ namespace ImperialStruggle
 
         public void OpenPopupMenu()
         {
-            List<IPlayerAction> actions = new();
+            IEnumerable<IPlayerAction> actions = Game.ActivePlayer.Actions.Where(action => action.Eligible(space)).Union(space.Actions);
 
-            foreach (TargetSpaceAction action in Game.ActivePlayer.Actions.Where(action => action.Eligible(space)))
-            {
-                action.SetSpace(space);
-                actions.Add(action);
-            }
-            foreach (IPlayerAction action in space.Actions)
-                actions.Add(action); 
+            actions.OfType<TargetSpaceAction<Space>>().ForEach(action => action.SetSpace(space));
 
-            if (actions.Count > 0)
+            if (actions.Count() > 0)
                 UI_PopupMenu.Open(actions); 
         }
     }

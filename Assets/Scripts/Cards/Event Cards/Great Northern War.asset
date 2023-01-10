@@ -15,7 +15,12 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
+    - {fileID: 11400000, guid: f2dedbb241e85a746ac9a14627c61aa6, type: 2}
+    - {fileID: 11400000, guid: ba490b2098c2e42418ecc8a22071c488, type: 2}
+    - {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
+    - {fileID: 11400000, guid: ab3e94f8e2558b742b3289c0ea64578b, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -39,8 +44,8 @@ MonoBehaviour:
       Data: 
     - Name: cardActions
       Entry: 7
-      Data: 1|System.Collections.Generic.Dictionary`2[[Faction, Assembly-CSharp],[System.ValueTuple`2[[ImperialStruggle.CardAction,
-        Assembly-CSharp],[ImperialStruggle.CardAction, Assembly-CSharp]], mscorlib]],
+      Data: 1|System.Collections.Generic.Dictionary`2[[Faction, Assembly-CSharp],[System.ValueTuple`2[[ImperialStruggle.PlayerAction,
+        Assembly-CSharp],[ImperialStruggle.PlayerAction, Assembly-CSharp]], mscorlib]],
         mscorlib
     - Name: comparer
       Entry: 7
@@ -51,7 +56,159 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 10
       Data: 0
+    - Name: $v
+      Entry: 7
+      Data: System.ValueTuple`2[[ImperialStruggle.PlayerAction, Assembly-CSharp],[ImperialStruggle.PlayerAction,
+        Assembly-CSharp]], mscorlib
+    - Name: Item1
+      Entry: 7
+      Data: 3|ImperialStruggle.GreatNorthernWar_BR, Assembly-CSharp
+    - Name: <Passive>k__BackingField
+      Entry: 5
+      Data: false
+    - Name: germanStates
+      Entry: 7
+      Data: 4|System.Collections.Generic.HashSet`1[[ImperialStruggle.PoliticalData,
+        Assembly-CSharp]], System.Core
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: VPaward
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Item2
+      Entry: 7
+      Data: 5|ImperialStruggle.AddAPAction, Assembly-CSharp
+    - Name: <Passive>k__BackingField
+      Entry: 5
+      Data: false
+    - Name: actionPoint
+      Entry: 7
+      Data: 6|ImperialStruggle.ActionPoint, Assembly-CSharp
+    - Name: <tier>k__BackingField
+      Entry: 3
+      Data: 1
+    - Name: <type>k__BackingField
+      Entry: 3
+      Data: 2
+    - Name: <baseValue>k__BackingField
+      Entry: 3
+      Data: 1
+    - Name: <conditionals>k__BackingField
+      Entry: 7
+      Data: 7|System.Collections.Generic.List`1[[ImperialStruggle.Conditional, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 10
+      Data: 3
+    - Name: $v
+      Entry: 7
+      Data: System.ValueTuple`2[[ImperialStruggle.PlayerAction, Assembly-CSharp],[ImperialStruggle.PlayerAction,
+        Assembly-CSharp]], mscorlib
+    - Name: Item1
+      Entry: 7
+      Data: 8|ImperialStruggle.GreatNorthernWar_FR, Assembly-CSharp
+    - Name: <Passive>k__BackingField
+      Entry: 5
+      Data: false
+    - Name: russia
+      Entry: 10
+      Data: 4
+    - Name: VPAward
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Item2
+      Entry: 7
+      Data: 9|ImperialStruggle.AddAPAction, Assembly-CSharp
+    - Name: <Passive>k__BackingField
+      Entry: 5
+      Data: false
+    - Name: actionPoint
+      Entry: 7
+      Data: 10|ImperialStruggle.ActionPoint, Assembly-CSharp
+    - Name: <tier>k__BackingField
+      Entry: 3
+      Data: 1
+    - Name: <type>k__BackingField
+      Entry: 3
+      Data: 2
+    - Name: <baseValue>k__BackingField
+      Entry: 3
+      Data: 1
+    - Name: <conditionals>k__BackingField
+      Entry: 7
+      Data: 11|System.Collections.Generic.List`1[[ImperialStruggle.Conditional, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -60,7 +217,13 @@ MonoBehaviour:
       Data: 
     - Name: bonusCondition
       Entry: 7
-      Data: 3|ImperialStruggle.KeywordCondition, Assembly-CSharp
+      Data: 12|ImperialStruggle.KeywordCondition, Assembly-CSharp
+    - Name: <ConditionalType>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <ConditionalText>k__BackingField
+      Entry: 6
+      Data: 
     - Name: keyword
       Entry: 3
       Data: 0

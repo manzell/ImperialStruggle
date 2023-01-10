@@ -8,18 +8,8 @@ namespace ImperialStruggle
     {
         [SerializeField] int margin = 1;
 
-        public override bool Test(GameAction context)
-        {
-            if (context is PlayerAction playerAction)
-            {
-                Player player = playerAction.Player;
-                Dictionary<Faction, int> availableDebt = RecordsTrack.availableDebt;
-                Faction opposingFaction = player.Faction == Game.Britain ? Game.France : Game.Britain;
-
-                return margin == 0 ? availableDebt[player.Faction] == availableDebt[opposingFaction] :
-                    availableDebt[player.Faction] - availableDebt[opposingFaction] >= margin;
-            }
-            return true;
-        }
+        public override bool Test(IPlayerAction context) => margin == 0 ? 
+            RecordsTrack.availableDebt[context.Player.Faction] == RecordsTrack.availableDebt[context.Player.Opponent.Faction] :
+            RecordsTrack.availableDebt[context.Player.Faction] - RecordsTrack.availableDebt[context.Player.Opponent.Faction] >= margin;
     }
 }

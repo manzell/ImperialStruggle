@@ -7,11 +7,6 @@ namespace ImperialStruggle
     public class MapControlCondition : Conditional
     {
         [SerializeField] Map map;
-        public override bool Test(GameAction context)
-        {
-            if (context is PlayerAction playerAction)
-                return map.controllingFaction == playerAction.Player.Faction;
-            return false;
-        }
+        public override bool Test(IPlayerAction context) => map.controllingFaction == context.Player.Faction;
     }
 }

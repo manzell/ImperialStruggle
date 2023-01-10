@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b97cc78e0bacb5409f8e527f0d96411, type: 3}
+  m_Name: Gulf of Cazones
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  <prefab>k__BackingField: {fileID: 0}
+  <Map>k__BackingField: {fileID: 11400000, guid: 5e460598291e3794a8ee7e5a51147d40, type: 2}
+  <Region>k__BackingField: {fileID: 0}
+  <startingFlag>k__BackingField: {fileID: 11400000, guid: fa035a9950db4ba458654758b49c2e78, type: 2}
+  <availableEra>k__BackingField: 0
+  <adjacentSpaces>k__BackingField:
+  - {fileID: 11400000, guid: c040c9b0ea06be241a8a3f593dfd8cd2, type: 2}
+  - {fileID: 11400000, guid: d222d7eb6dd1f5443b2f42b8db6849c9, type: 2}
+  - {fileID: 11400000, guid: 9762b012d2a737b4baa26d89c29559f1, type: 2}
+  <PrestigeSpace>k__BackingField: 0

@@ -12,21 +12,21 @@ namespace ImperialStruggle
         [SerializeField] Faction targetFaction;
         [SerializeField] List<Space> spaces;
 
-        public override bool Test(GameAction action)
+        public override bool Test(IPlayerAction action)
         {
-            int spacesCount = spaces.Where(space => space.Flag == targetFaction).Count();
+            int spacesCount = spaces.Where(space => space.Flag == (targetFaction ?? action.Player.Faction)).Count();
 
             switch (ConditionalType)
             {
-                case Conditional.ConditionType.Exactly:
+                case ConditionType.Exactly:
                     return spacesCount == targetFlags;
-                case Conditional.ConditionType.MoreThan:
+                case ConditionType.MoreThan:
                     return spacesCount > targetFlags;
-                case Conditional.ConditionType.FewerThan:
+                case ConditionType.FewerThan:
                     return spacesCount < targetFlags;
-                case Conditional.ConditionType.NotMoreThan:
+                case ConditionType.NotMoreThan:
                     return spacesCount <= targetFlags;
-                case Conditional.ConditionType.NotLessThan:
+                case ConditionType.NotLessThan:
                     return spacesCount >= targetFlags;
                 default:
                     return true;

@@ -9,7 +9,7 @@ namespace ImperialStruggle
     {
         [SerializeField] int requiredMargin = 2;
 
-        public override bool Test(GameAction action) => true;
+        public override bool Test(IPlayerAction action) => true;
             //action is ITargetMap mapAction ?
               //  Mathf.Abs(mapAction.map.mapScore[Game.Britain] - mapAction.map.mapScore[Game.France]) >= requiredMargin : true;
     }
