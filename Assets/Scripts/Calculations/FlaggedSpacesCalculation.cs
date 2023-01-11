@@ -5,11 +5,15 @@ using System.Linq;
 
 namespace ImperialStruggle
 {
-    public class FlaggedSpacesCalculation : Calculation<List<Space>>
+    public class FlaggedSpacesCalculation : Calculation<int>
     {
-        [SerializeField] List<Space> eligibleSpaces = new List<Space>();
-        [SerializeField] List<Faction> eligibleFlags = new List<Faction>();
+        [SerializeField] Calculation<HashSet<Space>> eligibleSpaces;
 
-        public override List<Space> Calculate() => eligibleSpaces.Where(space => eligibleFlags.Contains(space.Flag)).ToList();
+        protected override int Calc(Player player) => eligibleSpaces.Calculate(player).Count(space => space.Flag == player.Faction); 
+    }
+    public class ControlledSpacesCalculation : Calculation<int>
+    {
+        [SerializeField] Calculation<HashSet<Space>> eligibleSpaces;
+        protected override int Calc(Player player) => eligibleSpaces.Calculate(player).Count(space => space.Control == player.Faction);
     }
 }

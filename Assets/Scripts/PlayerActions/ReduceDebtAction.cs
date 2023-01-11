@@ -6,9 +6,9 @@ using UnityEngine;
 
 namespace ImperialStruggle
 {
-    public class ReduceDebtAction : PlayerAction
+    public class AdjustDebtAction : PlayerAction
     {
-        public int debtAdjustment;
+        [SerializeField] int debtAdjustment;
 
         public override bool Can()
         {

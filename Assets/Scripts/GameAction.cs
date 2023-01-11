@@ -13,7 +13,7 @@ namespace ImperialStruggle
     {
         public string Name { get; protected set; }
         public List<Conditional> conditionals { get; protected set; }
-        public Stack<Command> Commands { get; private set; }
+        public Stack<Command> Commands { get; private set; } // TODO Make this Fully Private and force usage of the Queue() Method. 
 
         public GameAction()
         {
@@ -23,17 +23,18 @@ namespace ImperialStruggle
 
         public void Queue(Command command) => Commands.Push(command); 
 
-        public async Task Execute()
+        public virtual async Task Execute()
         {
             if (Can())
             {
                 if (Commands == null)
                     Commands = new();
 
-                if (this is PurchaseAction purchaseAction)
-                    purchaseAction.Player.ActionPoints.Charge(purchaseAction); 
-
                 await Do(); // Execution should pause here
+
+                if (this is PurchaseAction purchaseAction)
+                    purchaseAction.Player.ActionPoints.Charge(purchaseAction);
+
                 Phase.CurrentPhase.Push(this); // Command execution happens here. 
             }
         }

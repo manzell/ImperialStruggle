@@ -4,8 +4,6 @@ using UnityEngine;
 using UnityEngine.Events;
 using Sirenix.OdinInspector;
 using System.Linq;
-using Sirenix.OdinInspector.Editor.Drawers;
-using System;
 
 namespace ImperialStruggle
 {
@@ -24,12 +22,12 @@ namespace ImperialStruggle
 
         [field: SerializeField] public Era era { get; private set; }
 
-        Phase childPhase => GetComponentsInChildren<Phase>().Where(child => child != this).FirstOrDefault();
-        Phase siblingPhase => transform.parent.GetComponentsInChildren<Phase>().Where(actionRound => actionRound.transform.GetSiblingIndex() == transform.GetSiblingIndex() + 1).FirstOrDefault();
-        Phase parentPhase => transform.GetComponentInParent<Phase>().FollowingPhase;
+        Phase nextChild => GetComponentsInChildren<Phase>().Where(child => child != this).FirstOrDefault();
+        Phase nextSibling => transform.parent.GetComponentsInChildren<Phase>().Where(actionRound => actionRound.transform.GetSiblingIndex() == transform.GetSiblingIndex() + 1).FirstOrDefault();
+        Phase nextParent => transform.GetComponentInParent<Phase>().FollowingPhase;
 
-        public virtual Phase NextPhase => childPhase ?? siblingPhase ?? parentPhase;
-        public virtual Phase FollowingPhase => siblingPhase ?? parentPhase;
+        public virtual Phase NextPhase => nextChild ?? nextSibling ?? nextParent;
+        public virtual Phase FollowingPhase => nextSibling ?? nextParent;
 
         private void Awake()
         {
@@ -55,8 +53,8 @@ namespace ImperialStruggle
 
         public void Advance()
         {
-            if (childPhase != null)
-                childPhase.StartPhase();
+            if (nextChild != null)
+                nextChild.StartPhase();
             else
                 EndPhase();
         }
@@ -74,7 +72,7 @@ namespace ImperialStruggle
         {
             foreach (Command command in action.Commands)
             {
-                command.Do(null);
+                command.Do(action);
                 ExecutedCommands.Push(command);
             }
         } 

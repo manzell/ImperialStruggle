@@ -25,10 +25,10 @@ namespace ImperialStruggle
         {
             if(Phase.CurrentPhase is ActionRound actionRound)
             {
-                InvestmentTile tile = tiles.selectedItems.First(); 
+                InvestmentTile tile = tiles.First(); 
                 Debug.Log($"{tile.Name} Selected by {Player.Faction}"); 
 
-                actionRound.Push(new SelectInvestmentTileCommand(actionRound.player, tile));
+                Commands.Push(new SelectInvestmentTileCommand(actionRound.player, tile));
 
                 foreach(PlayerAction action in tile.actions)
                 {

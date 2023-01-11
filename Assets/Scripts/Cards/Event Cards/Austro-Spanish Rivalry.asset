@@ -22,8 +22,6 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 5f342005289eb544cbe0155577b22196, type: 2}
     - {fileID: 11400000, guid: ea26333ea8cde804189442c8ea3e3804, type: 2}
     - {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
-    - {fileID: 11400000, guid: 5f4c1c9ae935c444f85af57e0a507200, type: 2}
-    - {fileID: 11400000, guid: 64038aadb4c1f9147bf8f7c49d032239, type: 2}
     - {fileID: 11400000, guid: 34b34415192546040af253ee289328c4, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
@@ -132,23 +130,35 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: Item1
       Entry: 7
-      Data: 6|ImperialStruggle.AustroSpanish_FR_Base, Assembly-CSharp
+      Data: 6|ImperialStruggle.ShiftSpaceAdvantageAction, Assembly-CSharp
     - Name: <Passive>k__BackingField
       Entry: 5
       Data: false
-    - Name: spaces
+    - Name: eligibleSpaces
+      Entry: 6
+      Data: 
+    - Name: shiftType
+      Entry: 3
+      Data: 2
+    - Name: <ActionCost>k__BackingField
       Entry: 7
-      Data: 7|System.Collections.Generic.HashSet`1[[ImperialStruggle.PoliticalData,
-        Assembly-CSharp]], System.Core
+      Data: 7|ImperialStruggle.ActionPoint, Assembly-CSharp
+    - Name: <tier>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <type>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <baseValue>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <conditionals>k__BackingField
+      Entry: 7
+      Data: 8|System.Collections.Generic.List`1[[ImperialStruggle.Conditional, Assembly-CSharp]],
+        mscorlib
     - Name: 
       Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 10
-      Data: 6
-    - Name: 
-      Entry: 10
-      Data: 7
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -158,15 +168,18 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: Item2
       Entry: 7
-      Data: 8|ImperialStruggle.AustroSpanish_FR_Bonus, Assembly-CSharp
+      Data: 9|ImperialStruggle.AustroSpanish_FR_Bonus, Assembly-CSharp
     - Name: <Passive>k__BackingField
       Entry: 5
       Data: false
     - Name: india
       Entry: 10
-      Data: 8
+      Data: 6
     - Name: 
       Entry: 8
       Data: 
@@ -184,7 +197,7 @@ MonoBehaviour:
       Data: 
     - Name: bonusCondition
       Entry: 7
-      Data: 9|ImperialStruggle.KeywordCondition, Assembly-CSharp
+      Data: 10|ImperialStruggle.KeywordCondition, Assembly-CSharp
     - Name: <ConditionalType>k__BackingField
       Entry: 3
       Data: 0

@@ -6,34 +6,33 @@ using UnityEngine;
 
 namespace ImperialStruggle
 {
-    public class MarketCalculation : Calculation<IEnumerable<Space>>
+    public class MarketCalculation : Calculation<HashSet<Space>>
     {
-        [SerializeField] HashSet<Map> maps;
-        [SerializeField] HashSet<Resource> resources;
-        [SerializeField] HashSet<Status> status; 
+        [SerializeField] HashSet<Map> maps = new();
+        [SerializeField] HashSet<Region> regions = new();
+        [SerializeField] HashSet<Resource> resources = new();
+        [SerializeField] HashSet<Status> status = new(); 
 
         enum Status { Protected, Unprotected, Isolated, }
 
-        public override IEnumerable<Space> Calculate()
+        protected override HashSet<Space> Calc(Player player)
         {
             IEnumerable<Market> spaces = Game.Spaces.OfType<Market>();
 
-            if (maps != null)
+            if (maps.Count > 0)
                 spaces = spaces.Where(space => maps.Contains(space.map));
-
-            if (resources != null)
+            if (regions.Count > 0)
+                spaces = spaces.Where(space => regions.Contains(space.data.Region));
+            if (resources != null && resources.Count > 0)
                 spaces = spaces.Where(space => resources.Contains(space.Resource));
-
-            if (status.Contains(Status.Isolated))
+            if (status != null && status.Contains(Status.Isolated))
                 spaces = spaces.Where(space => space.Isolated(null)); // TODO Fix this. Should Calculations require a PlayerAction context?
-
-            if (status.Contains(Status.Protected))
+            if (status != null && status.Contains(Status.Protected))
                 spaces = spaces.Where(space => space.Protected);
-
-            if (status.Contains(Status.Unprotected))
+            if (status != null && status.Contains(Status.Unprotected))
                 spaces = spaces.Where(space => !space.Protected);
 
-            return spaces; 
+            return new HashSet<Space>(spaces); 
         }
     }
 }

@@ -177,7 +177,17 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: conditions
-      Entry: 6
+      Entry: 7
+      Data: 11|System.Collections.Generic.List`1[[ImperialStruggle.Conditional, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
     - Name: 
       Entry: 8
@@ -200,13 +210,13 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: Item1
       Entry: 7
-      Data: 11|ImperialStruggle.AddAPAction, Assembly-CSharp
+      Data: 12|ImperialStruggle.AddAPAction, Assembly-CSharp
     - Name: <Passive>k__BackingField
       Entry: 5
       Data: false
     - Name: actionPoint
       Entry: 7
-      Data: 12|ImperialStruggle.ActionPoint, Assembly-CSharp
+      Data: 13|ImperialStruggle.ActionPoint, Assembly-CSharp
     - Name: <tier>k__BackingField
       Entry: 3
       Data: 1
@@ -218,7 +228,7 @@ MonoBehaviour:
       Data: 2
     - Name: <conditionals>k__BackingField
       Entry: 7
-      Data: 13|System.Collections.Generic.List`1[[ImperialStruggle.Conditional, Assembly-CSharp]],
+      Data: 14|System.Collections.Generic.List`1[[ImperialStruggle.Conditional, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
@@ -237,7 +247,7 @@ MonoBehaviour:
       Data: 
     - Name: Item2
       Entry: 7
-      Data: 14|ImperialStruggle.ActsOfUnion_FR_Bonus, Assembly-CSharp
+      Data: 15|ImperialStruggle.ActsOfUnion_FR_Bonus, Assembly-CSharp
     - Name: <Passive>k__BackingField
       Entry: 5
       Data: false
@@ -246,7 +256,7 @@ MonoBehaviour:
       Data: 2
     - Name: excludedSpaces
       Entry: 7
-      Data: 15|System.Collections.Generic.List`1[[ImperialStruggle.PoliticalData,
+      Data: 16|System.Collections.Generic.List`1[[ImperialStruggle.PoliticalData,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
@@ -298,7 +308,7 @@ MonoBehaviour:
       Data: 
     - Name: bonusCondition
       Entry: 7
-      Data: 16|ImperialStruggle.ControlSpacesCondition, Assembly-CSharp
+      Data: 17|ImperialStruggle.ControlSpacesCondition, Assembly-CSharp
     - Name: <ConditionalType>k__BackingField
       Entry: 3
       Data: 1
@@ -310,7 +320,7 @@ MonoBehaviour:
       Data: 2
     - Name: spaces
       Entry: 7
-      Data: 17|System.Collections.Generic.List`1[[ImperialStruggle.SpaceData, Assembly-CSharp]],
+      Data: 18|System.Collections.Generic.List`1[[ImperialStruggle.SpaceData, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12

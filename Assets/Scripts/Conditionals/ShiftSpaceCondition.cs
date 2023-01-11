@@ -8,10 +8,9 @@ namespace ImperialStruggle
     public class ShiftSpaceCondition : Conditional
     {
         public enum ShiftType { Any, Unflag, Flag }
-        public enum SpaceType { Any, Market, Political, Fort, Naval, Territory }
 
         [SerializeField] ShiftType shiftType;
-        [SerializeField] SpaceType spaceType;
+        [SerializeField] Space.SpaceType spaceType;
 
         public override bool Test(IPlayerAction context)
         {            
@@ -32,15 +31,15 @@ namespace ImperialStruggle
                         break;
                 }
 
-                if (spaceType == SpaceType.Market)
+                if (spaceType == Space.SpaceType.Market)
                     retval &= space is Market;
-                else if (spaceType == SpaceType.Political)
+                else if (spaceType == Space.SpaceType.Political)
                     retval &= space is PoliticalSpace;
-                else if (spaceType == SpaceType.Naval)
+                else if (spaceType == Space.SpaceType.Naval)
                     retval &= space is NavalSpace;
-                else if (spaceType == SpaceType.Fort)
+                else if (spaceType == Space.SpaceType.Fort)
                     retval &= space is Fort;
-                else if (spaceType == SpaceType.Territory)
+                else if (spaceType == Space.SpaceType.Territory)
                     retval &= space is Territory;
 
                 return retval;

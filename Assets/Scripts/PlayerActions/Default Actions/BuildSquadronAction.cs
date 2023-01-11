@@ -8,7 +8,7 @@ namespace ImperialStruggle
 {
     public class BuildSquadronAction : PlayerAction, PurchaseAction
     {
-        public ActionPoint ActionCost => new ActionPoint(ActionPoint.ActionTier.Minor, ActionPoint.ActionType.Military, 4);
+        [field: SerializeField] public ActionPoint ActionCost { get; private set; } = new ActionPoint(ActionPoint.ActionTier.Minor, ActionPoint.ActionType.Military, 4);
 
         protected override Task Do()
         {

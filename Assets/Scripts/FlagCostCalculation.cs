@@ -6,7 +6,9 @@ namespace ImperialStruggle
 {
     public abstract class FlagCostCalculation
     {
-        public abstract ActionPoint GetAPCost(Player player, FlaggableSpace space); 
+        [SerializeField] protected ActionPoint AP; 
+        public abstract ActionPoint GetAPCost(Player player, FlaggableSpace space);
+        public void SetAPCost(ActionPoint AP) => this.AP = AP;  
     }
 
     public class DefaultPoliticalFlagCost : FlagCostCalculation

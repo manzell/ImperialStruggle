@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StaticIntCalculation : Calculation<int>
+namespace ImperialStruggle
 {
-    public override int Calculate()
+    public class StaticIntCalculation : Calculation<int>
     {
-        calculated = true;
-        return value;
+        [SerializeField] int value;
+
+        protected override int Calc(Player player) => value; 
     }
 }

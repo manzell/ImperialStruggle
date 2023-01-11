@@ -16,17 +16,14 @@ namespace ImperialStruggle
                     ((space is Fort fort && fort.damaged == false) || space is NavalSpace) && space.Control == Player.Opponent.Faction &&
                     space.map == theater.map).ToList();
 
-                await new Selection<Space>(Player, eligible, Finish).Completion; 
-            }
-        }
+                Selection<Space> selection = new Selection<Space>(Player, eligible);
+                await selection.Completion;
 
-        void Finish(IEnumerable<Space> spaces)
-        {
-            Space space = spaces.First();
-            if (space is Fort fort)
-                Commands.Push(new DamageFortCommand(fort));
-            else if (space is NavalSpace navalSpace)
-                Commands.Push(new ReturnFleetToNavalBoxCommand(navalSpace));
+                if (selection.First() is Fort fort)
+                    Commands.Push(new DamageFortCommand(fort));
+                else if (selection.First() is NavalSpace navalSpace)
+                    Commands.Push(new ReturnFleetToNavalBoxCommand(navalSpace));
+            }
         }
     }
 }

@@ -11,6 +11,6 @@ namespace ImperialStruggle
         public List<Theater> theaters;
         public Dictionary<Theater, Faction> theaterWinners;
 
-        public override bool Completed => throw new System.NotImplementedException();
+        public override bool Completed { get; }
     }
 }

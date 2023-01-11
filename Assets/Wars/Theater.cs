@@ -11,12 +11,24 @@ namespace ImperialStruggle
         public string Name => name;
         public System.Action UISelectionEvent { get; set; }
         public System.Action UIDeselectEvent { get; set; }
-        public Map map;
-        public List<WarTile> warTiles = new();
-        public List<ScoringBonus> scoringBonuses;
-        public List<TheaterAwards> theaterAwards;
-        public List<Territory> availableTerritories;
+        [field: SerializeField] public Map map { get; private set; }
+        [field: SerializeField] public List<WarTile> warTiles { get; private set; } = new();
+        [field: SerializeField] public List<Calculation<int>> scoringBonuses { get; private set; }
+        [field: SerializeField] public Dictionary<int, (List<PlayerAction>, List<PlayerAction>)> Spoils { get; private set; }
+        [field: SerializeField] public List<TerritoryData> availableTerritories { get; private set; }
+        [field: SerializeField] public List<PlayerAction> SpecialActions { get; private set; }
 
+        Dictionary<Faction, int> theaterScore;
+
+        public int GetTheaterScore(Faction faction) => theaterScore[faction];
+        public void AdjustTheaterScore(Faction faction, int amount) => theaterScore[faction] += amount; 
+
+        void Start()
+        {
+            theaterScore = new() { { Game.Britain, 0}, { Game.France, 0} };
+        }
+
+        /*
         public Faction winningFaction;
 
         public Dictionary<Faction, int> theaterScore => new Dictionary<Faction, int>() {
@@ -25,7 +37,10 @@ namespace ImperialStruggle
         { Game.France, scoringBonuses.Where(bonus => bonus.scoringFaction == Game.France).Count()
             +  warTiles.Where(tile => tile.faction == Game.France).Sum(tile => tile.value) }
         };
+        */
 
         public override bool Completed => throw new System.NotImplementedException();
+
+
     }
 }

@@ -12,3 +12,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0603748cf040fb4a9279439c132cfd1, type: 3}
   m_Name: German Diplomacy
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: ac751d9cdba8f664580bd29a3f49b1d7, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: adjacentSpaces
+      Entry: 7
+      Data: 0|System.Collections.Generic.HashSet`1[[ImperialStruggle.SpaceData, Assembly-CSharp]],
+        System.Core
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: playerActions
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[ImperialStruggle.IPlayerAction,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 2|ImperialStruggle.AdjustFlagCostAdvantageAction, Assembly-CSharp
+    - Name: <Passive>k__BackingField
+      Entry: 5
+      Data: false
+    - Name: eligibleSpaces
+      Entry: 6
+      Data: 
+    - Name: flagCostAdjustment
+      Entry: 3
+      Data: -1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 

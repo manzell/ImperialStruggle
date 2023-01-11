@@ -4,7 +4,8 @@ using UnityEngine;
 
 namespace ImperialStruggle
 {
-    public class GermanDiplomacy : PlayerAction
+    public static class Jacobites
     {
+        public static int VictoryMarkers = 0;
     }
 }

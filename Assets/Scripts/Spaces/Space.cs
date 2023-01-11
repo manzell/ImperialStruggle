@@ -1,9 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
-using Sirenix.OdinInspector;
-using Sirenix.OdinInspector.Editor.Drawers;
 using System.Linq;
 
 namespace ImperialStruggle
@@ -11,8 +8,11 @@ namespace ImperialStruggle
     [System.Serializable]
     public abstract class Space : ISpace, ISelectable
     {
+        public enum SpaceType { Any, Market, Political, Fort, Naval, Territory }
+
         public SpaceData data;         
         public SpaceData Data => data;
+        public SpaceType spaceType { get; private set; }
         public List<IPlayerAction> Actions { get; private set; }
         public List<ConflictMarker> ConflictMarkers { get; private set; } = new();
 
@@ -43,7 +43,9 @@ namespace ImperialStruggle
 
     public class Fort : Space, FlaggableSpace
     {
+        public System.Action<PlayerAction> ShiftSpaceEvent { get; set; }
         public FlagCostCalculation flagCost { get; set; }
+
         public bool damaged;
 
         public Fort(FortData data) : base(data) => flagCost = new DefaultFortFlagCost(); 
@@ -51,6 +53,7 @@ namespace ImperialStruggle
 
     public class Market : Space, FlaggableSpace
     {
+        public System.Action<PlayerAction> ShiftSpaceEvent { get; set; }
         public FlagCostCalculation flagCost { get; set; }
         public Resource Resource;
 
@@ -110,6 +113,7 @@ namespace ImperialStruggle
 
     public class PoliticalSpace : Space, FlaggableSpace, PrestigeSpace, AllianceSpace
     {
+        public System.Action<PlayerAction> ShiftSpaceEvent { get; set; }
         public FlagCostCalculation flagCost { get; set; }
         public bool Alliance { get; private set; }
         public bool Prestigious { get; private set; }
@@ -144,7 +148,8 @@ namespace ImperialStruggle
 
     public interface FlaggableSpace : ISpace
     {
-        public FlagCostCalculation flagCost { get; }
+        public System.Action<PlayerAction> ShiftSpaceEvent { get; set; }
+        public FlagCostCalculation flagCost { get; set; }
         public void SetFlag(Faction faction); 
     }
 

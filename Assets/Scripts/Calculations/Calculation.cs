@@ -3,29 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
 
-[System.Serializable]
-public abstract class Calculation<T>
+namespace ImperialStruggle
 {
-    public T value
+    [System.Serializable]
+    public abstract class Calculation<T>
     {
-        get
-        {
-            if (!calculated || calculationType == CalculationType.Dynamic)
-                _value = Calculate();
+        protected bool calculated = false;
 
-            return _value;
-        }
-        set
+        protected abstract T Calc(Player player);
+        public T Calculate(Player player)
         {
-            _value = value;
+            calculated = true;
+            return Calc(player); 
         }
     }
-    public enum CalculationType { Once, Dynamic }
-    public CalculationType calculationType;
-    public string calculationText;
-
-    private T _value = default(T);
-    [SerializeField] protected bool calculated = false; // Calculate() Functions MUST set the calculated flag
-
-    public abstract T Calculate();
 }
