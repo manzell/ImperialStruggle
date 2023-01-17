@@ -13,7 +13,7 @@ namespace ImperialStruggle
             this.tile = tile;
         }
 
-        public override void Do(GameAction action)
+        public override void Do(IAction action)
         {
             foreach(Theater theater in Game.NextWarTurn.theaters)
                 if(theater.warTiles.Remove(tile))

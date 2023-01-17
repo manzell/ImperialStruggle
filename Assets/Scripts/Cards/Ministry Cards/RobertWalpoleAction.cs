@@ -8,7 +8,7 @@ namespace ImperialStruggle
 {
     public class RobertWalpoleAction : MinisterAction
     {
-        protected override async Task Do()
+        protected override async Task Do(IAction context)
         {
             Exhausted = true;
             Commands.Push(new DealCardCommand(Player));
@@ -20,7 +20,7 @@ namespace ImperialStruggle
 
         void Finish(Selection<EventCard> selection)
         {
-            Commands.Push(new DiscardCardCommand(Player, selection.First()));
+            Commands.Push(new DiscardCardCommand(selection.player, selection.First()));
         }
     }
 }

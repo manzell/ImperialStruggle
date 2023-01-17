@@ -11,7 +11,7 @@ namespace ImperialStruggle
     {
         [SerializeField] HashSet<PoliticalData> spanishSpaces; 
 
-        protected override async Task Do()
+        protected override async Task Do(IAction context)
         {
             Selection<PoliticalSpace> selection = new (Player, spanishSpaces.Select(space => Game.SpaceLookup[space] as PoliticalSpace));
 
@@ -27,7 +27,7 @@ namespace ImperialStruggle
 
     public class AustroSpanish_BR_Bonus : PlayerAction
     {
-        protected override async Task Do()
+        protected override async Task Do(IAction context)
         {
             IEnumerable<Theater> theaters = Game.NextWarTurn.theaters.Where(theater =>
                 theater.warTiles.Any(tile => tile.faction == Game.France && tile.warTileSet == WarTile.WarTileSet.Bonus));
@@ -47,10 +47,10 @@ namespace ImperialStruggle
     {
         [SerializeField] HashSet<PoliticalData> spaces; 
 
-        protected override async Task Do()
+        protected override async Task Do(IAction context)
         {
-            Selection<PoliticalSpace> select = new(Player, 
-                spaces.Where(space => Game.SpaceLookup[space].Flag == Game.Britain).Select(space => Game.SpaceLookup[space] as PoliticalSpace));
+            Selection<PoliticalSpace> select = new(Player, spaces.Select(data => Game.SpaceLookup[data]).OfType<PoliticalSpace>()
+                .Where(space => space.Flag == Game.Britain)); 
 
             await select.Completion;
 
@@ -58,15 +58,13 @@ namespace ImperialStruggle
 
             Commands.Push(new UnflagCommand(select.First())); 
         }
-
-        void Finish(Selection<PoliticalSpace> select) { }
     }
 
     public class AustroSpanish_FR_Bonus : PlayerAction
     {
         [SerializeField] Map india; 
 
-        protected override async Task Do()
+        protected override async Task Do(IAction context)
         {
             List<ActionPoint> APs = new() { 
                 new(ActionPoint.ActionTier.Major, ActionPoint.ActionType.Diplomacy, 2), 
@@ -78,7 +76,7 @@ namespace ImperialStruggle
             await selection.Completion;
 
             ActionPoint AP = selection.First();
-            AP.conditionals.Add(new TargetMapCondition(india));
+            //AP.conditionals.Add(new TargetMapCondition(india));
             Commands.Push(new AddAPCommand(Player, AP)); 
         }
     }

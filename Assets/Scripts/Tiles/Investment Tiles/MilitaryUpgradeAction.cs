@@ -8,9 +8,9 @@ namespace ImperialStruggle
 {
     public class MilitaryUpgradeAction : PlayerAction
     {
-        protected async override Task Do()
+        protected async override Task Do(IAction context)
         {
-            WarTile drawnWarTile = Player.WarTiles.OrderBy(x => Random.value).FirstOrDefault(); 
+            WarTile drawnWarTile = Player.WarTiles.OrderBy(x => Random.value).FirstOrDefault();
             IEnumerable<WarTile> eligibleTiles = Game.NextWarTurn.theaters.SelectMany(theater => 
                 theater.warTiles.Where(tile => tile.faction == Player.Faction && tile.warTileSet == WarTile.WarTileSet.Basic));
 

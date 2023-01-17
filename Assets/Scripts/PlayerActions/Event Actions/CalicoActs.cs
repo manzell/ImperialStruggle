@@ -9,7 +9,7 @@ namespace ImperialStruggle
     public class CalicoActs_BR_Bonus : PlayerAction
     {
         [SerializeField] Resource cotton; 
-        protected override Task Do()
+        protected override Task Do(IAction context)
         {
             Debug.LogWarning("Give the player the Boolean Yes/No option!"); 
 
@@ -36,7 +36,7 @@ namespace ImperialStruggle
     {
         [SerializeField] Resource cotton; 
 
-        protected override async Task Do()
+        protected override async Task Do(IAction context)
         {
             HashSet<Market> cottonMarkets = new(Game.Spaces.OfType<Market>().Where(market => market.Resource == cotton));
 
@@ -50,7 +50,7 @@ namespace ImperialStruggle
 
     public class CalicoActs_FR_Bonus : PlayerAction
     {
-        protected override async Task Do()
+        protected override async Task Do(IAction context)
         {
             HashSet<Squadron> squadrons = new(Game.Britain.player.Squadrons.Where(squadron => squadron.space != null)); 
 

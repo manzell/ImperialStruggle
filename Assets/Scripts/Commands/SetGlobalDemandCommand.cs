@@ -2,27 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events; 
-using System;
-using Sirenix.Utilities;
+using System.Linq;
 
 namespace ImperialStruggle
 {
     public class SetGlobalDemandCommand : Command
     {
-        public static UnityEvent<PeaceTurn> setGlobalDemandEvent = new UnityEvent<PeaceTurn>();
+        public static System.Action setGlobalDemandEvent;
+        [SerializeField] Calculation<IEnumerable<Resource>> inputResources; 
 
-        IEnumerable<Resource> resources;
-        public SetGlobalDemandCommand(IEnumerable<Resource> resources) => this.resources = resources;
-
-        public override void Do(GameAction action)
+        public override void Do(IAction action)
         {
             if (Phase.CurrentPhase is PeaceTurn peaceTurn)
             {
-                peaceTurn.globalDemandResources = new(resources);
-                setGlobalDemandEvent.Invoke(peaceTurn);
+                foreach(Resource resource in inputResources.Calculate(action))
+                {
+                    peaceTurn.globalDemandResources.Add(resource);
+                    Debug.Log($"{resource.Name} is in Global Demand!");
+                }
 
-                resources.ForEach(resource => Debug.Log($"{resource.Name} is in Global Demand!"));
+                setGlobalDemandEvent?.Invoke();
             }
         }
+    }
+
+    public class RandomGlobalDemandResources : Calculation<IEnumerable<Resource>>
+    {
+        [SerializeField] List<Resource> resources;
+        [SerializeField] int numResources; 
+        protected override IEnumerable<Resource> Calc(IAction context) => resources.OrderBy(x => Random.value).Take(numResources);
     }
 }

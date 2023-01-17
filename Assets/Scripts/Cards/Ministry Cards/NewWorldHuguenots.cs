@@ -12,7 +12,7 @@ namespace ImperialStruggle
         [SerializeField] List<Map> maps;
         List<Territory> selectedTerritories = new();
 
-        protected override async Task Do()
+        protected override async Task Do(IAction context)
         {
             HashSet<Territory> territories = new(maps.SelectMany(map => map.spaces.OfType<Territory>()
                 .Where(territory => territory.Flag == Game.France && !selectedTerritories.Contains(territory))));
@@ -45,7 +45,7 @@ namespace ImperialStruggle
             Name = "Flip New World Huguenots Token"; 
         }
 
-        protected override Task Do()
+        protected override Task Do(IAction context)
         {
             territory.Actions.Remove(this);
 

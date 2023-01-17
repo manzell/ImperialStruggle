@@ -15,11 +15,11 @@ namespace ImperialStruggle
             this.amount = amount;
         }
 
-        public override void Do(GameAction action)
+        public override void Do(IAction action)
         {
             if (amount != 0 && faction != null)
             {
-                RecordsTrack.currentDebt[faction ?? (action as PlayerAction)?.Player.Faction] += amount;
+                RecordsTrack.currentDebt[faction] += amount;
                 RecordsTrack.adjustDebtEvent.Invoke();
                 // Check to see if Debt > Debt Limit
             }

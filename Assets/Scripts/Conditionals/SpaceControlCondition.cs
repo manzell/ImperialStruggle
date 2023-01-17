@@ -5,24 +5,24 @@ using UnityEngine;
 namespace ImperialStruggle
 {
     [System.Serializable]
-    public class SpaceControlCondition : Conditional
+    public class SpaceControlCondition : Conditional<Space>
     {
         enum SpaceConditionType { Friendly, Opposed, Neutral, Nonfriendly, Nonopposed }
-        [SerializeField] Space space; 
+        [SerializeField] Faction faction; 
         [SerializeField] SpaceConditionType spaceConditionType;
 
-        public override bool Test(IPlayerAction action)
+        protected override bool Test(Space space)
         {
             switch (spaceConditionType)
             {
                 case SpaceConditionType.Friendly:
-                    return space.Flag == action.Player.Faction;
+                    return space.Flag == faction;
                 case SpaceConditionType.Nonfriendly:
-                    return space.Flag != action.Player.Faction;
+                    return space.Flag != faction;
                 case SpaceConditionType.Opposed:
-                    return space.Flag != action.Player.Faction && space.Flag != null;
+                    return space.Flag != faction && space.Flag != null;
                 case SpaceConditionType.Nonopposed:
-                    return space.Flag == action.Player.Faction || space.Flag == null;
+                    return space.Flag == faction || space.Flag == null;
                 case SpaceConditionType.Neutral:
                     return space.Flag == Game.Neutral;
                 default:

@@ -33,10 +33,11 @@ namespace ImperialStruggle
     {
         public override ActionPoint GetAPCost(Player player, FlaggableSpace space)
         {
-            Market market = space as Market; 
+            Fort fort = space as Fort;
 
-            return new(space.Flag == player.Opponent.Faction ? ActionPoint.ActionTier.Major : ActionPoint.ActionTier.Minor, ActionPoint.ActionType.Military,
-                (market.Protected && space.Flag == player.Opponent.Faction ? 1 : 0) + (space.ConflictMarkers.Count > 0 || market.Isolated(player) ? 1 : (space.Data as PoliticalData).FlagCost));
+            return new(space.Flag == player.Opponent.Faction ? ActionPoint.ActionTier.Major : ActionPoint.ActionTier.Minor,
+                ActionPoint.ActionType.Military,
+                (fort.Data as FortData).FlagCost + (space.Flag == player.Opponent.Faction ? 1 : 0) - (space.Flag == player.Faction ? 1 : 0)); 
         }
     }
 }

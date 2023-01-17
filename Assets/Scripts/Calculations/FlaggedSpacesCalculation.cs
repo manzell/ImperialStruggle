@@ -9,11 +9,11 @@ namespace ImperialStruggle
     {
         [SerializeField] Calculation<HashSet<Space>> eligibleSpaces;
 
-        protected override int Calc(Player player) => eligibleSpaces.Calculate(player).Count(space => space.Flag == player.Faction); 
+        protected override int Calc(IAction context) => eligibleSpaces.Calculate(context).Count(space => space.Flag == (context as PlayerAction)?.Player.Faction); 
     }
     public class ControlledSpacesCalculation : Calculation<int>
     {
         [SerializeField] Calculation<HashSet<Space>> eligibleSpaces;
-        protected override int Calc(Player player) => eligibleSpaces.Calculate(player).Count(space => space.Control == player.Faction);
+        protected override int Calc(IAction context) => eligibleSpaces.Calculate(context).Count(space => space.Control == (context as PlayerAction)?.Player.Faction);
     }
 }

@@ -11,7 +11,7 @@ namespace ImperialStruggle
         [SerializeField] int cpAdjustAmount;
         [SerializeField] Theater theater;
 
-        protected override async Task Do()
+        protected override async Task Do(IAction context)
         {
             for (int i = 0; i < cpAdjustAmount; i++)
             {

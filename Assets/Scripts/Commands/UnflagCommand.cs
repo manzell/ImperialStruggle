@@ -9,6 +9,6 @@ namespace ImperialStruggle
         FlaggableSpace space; 
         public UnflagCommand(FlaggableSpace space) => this.space = space;
 
-        public override void Do(GameAction action) => space.SetFlag(null);
+        public override void Do(IAction context) => space.SetFlag(null);
     }
 }

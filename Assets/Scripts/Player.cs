@@ -44,9 +44,6 @@ namespace ImperialStruggle
             Cards = new(); 
             WarTiles = new(Faction.basicWarTiles.OrderBy(x => Random.value));
             BonusWarTiles = new(Faction.advancedWarTiles.OrderBy(x => Random.value));
-
-            foreach (PlayerAction action in Actions)
-                action.Setup(this); 
         }
 
         public void SetUI(UI_Player ui) => UI = ui; 

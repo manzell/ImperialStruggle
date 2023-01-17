@@ -6,7 +6,7 @@ namespace ImperialStruggle
 {
     public class ResetInvestmentTilesCommand : Command
     {
-        public override void Do(GameAction action)
+        public override void Do(IAction action)
         {
             if (Phase.CurrentPhase is PeaceTurn peaceTurn)
                 peaceTurn.investmentTiles.Clear(); 

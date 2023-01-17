@@ -14,7 +14,7 @@ namespace ImperialStruggle
             this.space = space;
         }
 
-        public override void Do(GameAction action)
+        public override void Do(IAction context)
         {
             if(space.Flag == Game.Neutral)
                 space.SetFlag(faction);

@@ -7,32 +7,32 @@ using System.Linq;
 
 namespace ImperialStruggle
 {
-    public class BuildFortAction : PlayerAction, PurchaseAction, TargetSpaceAction<Fort>
+    public class BuildFortAction : PlayerAction, _PurchaseAction, TargetSpaceAction<Fort>
     {
         IEnumerable<Fort> eligibleForts;
-        public ActionPoint ActionCost => Space.flagCost.GetAPCost(Player, Space); 
+        public ActionPoint ActionCost { get; private set; } 
 
         public Fort Space {get; private set;}
         public void SetSpace(Fort space) => Space = space;
 
-        public override bool Can()
+        public BuildFortAction()
+        {
+            Name = "Build Fort";
+            ActionRound.ActionRoundStartEvent += phase => eligibleForts = GetEligibleForts(phase.player.Faction);
+        }
+
+        public override bool Eligible(Space space) => space is Fort;
+
+        public override bool Can(Player player)
         {
             if (Space == null) return false; 
             //Debug.Log($"BuildFortAction {fort?.Name} Base {base.Can()} Eligible {eligibleForts.Contains(fort)}");
-            return base.Can() && eligibleForts.Contains(Space);
+            return base.Can(player) && eligibleForts.Contains(Space);
         }
 
-        public override void Setup(Player player)
+        protected override Task Do(IAction context)
         {
-            Name = "Build Fort"; 
-            base.Setup(player);
-            ActionRound.ActionRoundStartEvent += phase => eligibleForts = GetEligibleForts(player.Faction);
-        }
-
-        public override bool Eligible(Space space) => space is Fort; 
-
-        protected override Task Do()
-        {
+            ActionCost = Space.flagCost.GetAPCost(Player, Space); 
             Commands.Push(new FlagSpaceCommand(Space, Player.Faction));
             return Task.CompletedTask; 
         }

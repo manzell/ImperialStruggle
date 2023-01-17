@@ -15,7 +15,7 @@ namespace ImperialStruggle
         IEnumerable<InvestmentTile> tiles;
         public DealInvestmentTileCommand(IEnumerable<InvestmentTile> tiles) => this.tiles = tiles;
 
-        public override void Do(GameAction action)
+        public override void Do(IAction action)
         {
             if (Phase.CurrentPhase is PeaceTurn peaceTurn)
             {

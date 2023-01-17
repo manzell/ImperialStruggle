@@ -9,7 +9,7 @@ namespace ImperialStruggle
         Fort fort; 
         public RemoveDamageMarkerCommand(Fort fort) => this.fort = fort; 
 
-        public override void Do(GameAction action)
+        public override void Do(IAction action)
         {
             fort.damaged = false; 
         }

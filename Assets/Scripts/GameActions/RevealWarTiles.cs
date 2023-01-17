@@ -17,19 +17,18 @@ namespace ImperialStruggle
                 Debug.Log($"{tile.faction} reveals {tile.Name} in {theater.Name}");
                 foreach (PlayerAction action in tile.Actions)
                 {
-                    action.Setup(tile.faction.player);
                     theater.AdjustTheaterScore(tile.faction, tile.value);
-                    await action.Execute(); 
+                    await action.Execute(this); 
                 }
             }
 
             foreach (Calculation<int> calc in theater.scoringBonuses)
                 foreach (Player player in Player.Players)
-                    theater.AdjustTheaterScore(player.Faction, calc.Calculate(player)); 
+                    theater.AdjustTheaterScore(player.Faction, calc.Calculate(this)); 
 
             if(theater.GetTheaterScore(Game.France) != theater.GetTheaterScore(Game.Britain))
             {
-                Faction winningFaction = theater.GetTheaterScore(Game.France) > theater.GetTheaterScore(Game.Britain) ? Game.France : Game.Britain;
+                Player winningPlayer = (theater.GetTheaterScore(Game.France) > theater.GetTheaterScore(Game.Britain) ? Game.France : Game.Britain).player;
                 int winningMargin = Mathf.Abs(theater.GetTheaterScore(Game.France) - theater.GetTheaterScore(Game.Britain));
                 int key = theater.Spoils.Where(kvp => kvp.Key <= winningMargin).Max(kvp => kvp.Key);
 
@@ -38,14 +37,14 @@ namespace ImperialStruggle
 
                 foreach (PlayerAction action in spoils)
                 {
-                    action.Setup(winningFaction.player);
-                    await action.Execute(); 
+                    action.SetPlayer(winningPlayer); 
+                    await action.Execute(this);
                 }
 
                 foreach(PlayerAction action in consolation)
                 {
-                    action.Setup(winningFaction.Opposition().player);
-                    await action.Execute(); 
+                    action.SetPlayer(winningPlayer.Opponent);
+                    await action.Execute(this);
                 }
             }
         }

@@ -15,7 +15,7 @@ namespace ImperialStruggle
             this.card = card; 
         }
 
-        public override void Do(GameAction action)
+        public override void Do(IAction context)
         {
             player.Cards.Remove(card);
         }

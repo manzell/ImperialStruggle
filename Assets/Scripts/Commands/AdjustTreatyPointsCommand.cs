@@ -15,7 +15,7 @@ namespace ImperialStruggle
             this.amount = amount;
         }
 
-        public override void Do(GameAction action)
+        public override void Do(IAction action)
         {
             RecordsTrack.treatyPoints[faction] += amount;
             RecordsTrack.adjustTPEvent.Invoke();

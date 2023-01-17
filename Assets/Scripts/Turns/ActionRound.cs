@@ -9,7 +9,7 @@ namespace ImperialStruggle
 {
     public class ActionRound : Phase
     {
-        public static System.Action<ActionRound> ActionRoundStartEvent, ActionRoundEndEvent; 
+        public static System.Action<ActionRound> ActionRoundStartEvent, ActionRoundEndEvent;
         public Player player;
         public InvestmentTile investmentTile;
         bool actionRoundCompleted;
@@ -26,11 +26,8 @@ namespace ImperialStruggle
         public void Setup(Player player)
         {
             this.player = player;
-            
-            foreach(PlayerAction action in phaseStartActions)
-                action.Setup(player);
-            foreach (PlayerAction action in phaseEndActions)
-                action.Setup(player); 
+            foreach (PlayerAction action in PhaseStartActions)
+                action.SetPlayer(player); 
         }
     }
 }

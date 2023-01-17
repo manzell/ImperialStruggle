@@ -8,6 +8,6 @@ namespace ImperialStruggle
     {
         [SerializeField] int value;
 
-        protected override int Calc(Player player) => value; 
+        protected override int Calc(IAction context) => value; 
     }
 }

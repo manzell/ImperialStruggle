@@ -5,13 +5,12 @@ using UnityEngine;
 
 namespace ImperialStruggle
 {
-    public class AddAPAction : PlayerAction
+    public class DamageFortAction : PlayerAction
     {
-        [SerializeField] ActionPoint actionPoint; 
-        protected override Task Do()
+        protected override Task Do(IAction context)
         {
-            Commands.Push(new AddAPCommand(Player, actionPoint));
             return Task.CompletedTask; 
+
         }
     }
 }

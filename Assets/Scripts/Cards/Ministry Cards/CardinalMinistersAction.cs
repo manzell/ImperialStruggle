@@ -10,15 +10,15 @@ namespace ImperialStruggle
         [SerializeField] int maxDP = 3;
         [SerializeField] List<SpaceData> bonusSpaces;
 
-        public override void Reveal()
+        public override void Reveal(Player player)
         {
             Game.selectInvestmentTileEvent += GrantBonusDP;
 
             // If the only thing the player has done is select their Investment Tile, they can also get the bonus
             if (Phase.CurrentPhase is ActionRound ar && ar.ExecutedCommands.Last() is SelectInvestmentTileCommand)
-                GrantBonusDP(Player, ar.investmentTile); 
+                GrantBonusDP(player, ar.investmentTile); 
         }
-        protected override void Retire() => Game.selectInvestmentTileEvent += GrantBonusDP;
+        protected override void Retire(Player player) => Game.selectInvestmentTileEvent += GrantBonusDP;
 
         void GrantBonusDP(Player selectingPlayer, InvestmentTile tile)
         {
@@ -31,7 +31,7 @@ namespace ImperialStruggle
             {
                 Debug.Log("Cardinal Ministers Bonus Conferred");
                 ActionPoint ap = new(AP.tier, ActionPoint.ActionType.Diplomacy, BonusDP);
-                Commands.Push(new AddAPCommand(Player, ap)); 
+                Commands.Push(new AddAPCommand(selectingPlayer, ap)); 
                 Exhausted = true;
             }
         }

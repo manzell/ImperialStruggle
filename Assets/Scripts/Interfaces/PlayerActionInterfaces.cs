@@ -5,28 +5,27 @@ using System.Threading.Tasks;
 
 namespace ImperialStruggle
 {
-    public interface IPlayerAction
+    public interface IAction
     {
         public string Name { get; }
-        public Player Player { get; }
-        public bool Passive { get; }
-        public bool Can();
-        public Task Execute(); 
         public Stack<Command> Commands { get; }
+        public Task Execute(IAction context = null);
     }
 
-    public interface PurchaseAction : IPlayerAction
+    public interface _PurchaseAction : IAction
     {
         public ActionPoint ActionCost { get; }
     }
 
-    public interface TargetSpaceAction<T> : IPlayerAction
+    public interface TargetSpaceAction<T> : IAction
     {
         public T Space { get; }
         public void SetSpace(T space);
     }
 
-    public interface RegionalPurchase<T> : PurchaseAction, TargetSpaceAction<T> where T : Space
+    public interface RegionalPurchase<T> : _PurchaseAction, TargetSpaceAction<T> where T : Space
     {
     }
+
+    public interface PassiveAction : IAction { }
 }

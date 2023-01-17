@@ -16,7 +16,7 @@ namespace ImperialStruggle
             this.squadron = squadron;
         }
 
-        public override void Do(GameAction action)
+        public override void Do(IAction context)
         {
             navalSpace.Squadron = squadron;
             squadron.space = navalSpace; 

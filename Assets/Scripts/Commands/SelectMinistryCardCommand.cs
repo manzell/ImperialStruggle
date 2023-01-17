@@ -18,10 +18,10 @@ namespace ImperialStruggle
             card = new MinistryCard(data);
         }
 
-        public override void Do(GameAction action)
+        public override void Do(IAction action)
         {
             player.Ministers.Add(card); 
-            card.ministryCardStatus = MinistryCard.MinistryCardStatus.Selected;
+            card.SetMinistryCardStatus(MinistryCard.MinistryCardStatus.Selected);
             SelectEvent?.Invoke(card);
         }
     }

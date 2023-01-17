@@ -7,7 +7,7 @@ namespace ImperialStruggle
 {
     public class PayAPCommand : Command
     {
-        public override void Do(GameAction action)
+        public override void Do(IAction context)
         {
             /*
             ActionPoints playerAP = (action as PlayerAction).player.actionPoints;  

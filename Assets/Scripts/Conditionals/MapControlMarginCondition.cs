@@ -5,12 +5,14 @@ using System.Linq;
 
 namespace ImperialStruggle
 {
-    public class MapControlMarginCondition : Conditional
+    public class MapControlMarginCondition : Conditional<Faction>
     {
-        [SerializeField] int requiredMargin = 2;
+        [SerializeField] Calculation<Map> mapCalc; 
 
-        public override bool Test(IPlayerAction action) => true;
-            //action is ITargetMap mapAction ?
-              //  Mathf.Abs(mapAction.map.mapScore[Game.Britain] - mapAction.map.mapScore[Game.France]) >= requiredMargin : true;
+        protected override bool Test(Faction faction)
+        {
+            Map map = mapCalc.Calculate();
+            return Mathf.Abs(map.mapScore[faction] - map.mapScore[faction.Opposition()]) >= map.awardTile.RequiredMargin; 
+        }
     }
 }

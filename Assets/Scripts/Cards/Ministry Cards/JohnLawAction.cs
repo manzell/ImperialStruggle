@@ -10,24 +10,23 @@ namespace ImperialStruggle
     public class JohnLawAction : MinisterAction
     {
         [SerializeField] List<Space> scotlandSpaces = new List<Space>();
+        System.Action<PeaceTurn> reduceDebt; 
 
-        public override void Reveal() => Do(); 
-
-        protected override Task Do()
+        public override void Reveal(Player player)
         {
-            PeaceTurn.EndPeaceTurnEvent += ReduceDebt;
-            return Task.CompletedTask; 
+            reduceDebt = turn => ReduceDebt(player); 
+            PeaceTurn.EndPeaceTurnEvent += reduceDebt; 
         }
 
-        protected override void Retire()
+        protected override void Retire(Player player)
         {
-            PeaceTurn.EndPeaceTurnEvent -= ReduceDebt;
+            PeaceTurn.EndPeaceTurnEvent -= reduceDebt;
         }
 
-        void ReduceDebt(PeaceTurn peaceTurn)
+        void ReduceDebt(Player player)
         {
-            int debtReduction = scotlandSpaces.Any(space => space.Control == Player.Faction) ? 2 : 1;
-            Commands.Push(new AdjustDebtCommand(Player.Faction, -debtReduction)); 
+            int debtReduction = scotlandSpaces.Any(space => space.Control == player.Faction) ? 2 : 1;
+            Commands.Push(new AdjustDebtCommand(player.Faction, -debtReduction)); 
         }
     }
 }

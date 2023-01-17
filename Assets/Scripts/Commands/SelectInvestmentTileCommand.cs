@@ -17,7 +17,7 @@ namespace ImperialStruggle
             this.player = player; 
         }
 
-        public override void Do(GameAction action)
+        public override void Do(IAction context)
         {
             if (Phase.CurrentPhase is ActionRound actionRound)
             {

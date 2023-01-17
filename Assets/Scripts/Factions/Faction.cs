@@ -1,10 +1,6 @@
 using ImperialStruggle;
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.UI; 
 
 public class Faction : ScriptableObject, ISelectable
 {
@@ -15,6 +11,6 @@ public class Faction : ScriptableObject, ISelectable
     public string Name => name;
 
     public Player player;
-    public Action UISelectionEvent { get; set; }
-    public Action UIDeselectEvent { get; set; }
+    public System.Action UISelectionEvent { get; set; }
+    public System.Action UIDeselectEvent { get; set; }
 }

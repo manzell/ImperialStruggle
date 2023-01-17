@@ -38,7 +38,17 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: MinisterActions
-      Entry: 6
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[ImperialStruggle.MinisterAction,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
   keywords: 04000000
   Faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}

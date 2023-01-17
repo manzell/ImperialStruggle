@@ -10758,72 +10758,48 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ImperialStruggle.ShiftMarketAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 2|ImperialStruggle.ShiftPoliticalSpaceAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 3|ImperialStruggle.DrawEventCardAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 4|ImperialStruggle.BuyBonusWarAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 5|ImperialStruggle.RemoveConflictMarkerAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 6|ImperialStruggle.BuildFortAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 7|ImperialStruggle.RepairFortAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 8|ImperialStruggle.BuildSquadronAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
     - Name: <ActionCost>k__BackingField
       Entry: 6
       Data: 
@@ -10833,9 +10809,6 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 9|ImperialStruggle.DeploySquadronAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
     - Name: 
       Entry: 8
       Data: 
@@ -17912,72 +17885,48 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|ImperialStruggle.ShiftMarketAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 2|ImperialStruggle.ShiftPoliticalSpaceAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 3|ImperialStruggle.DrawEventCardAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 4|ImperialStruggle.BuyBonusWarAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 5|ImperialStruggle.RemoveConflictMarkerAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 6|ImperialStruggle.BuildFortAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 7|ImperialStruggle.RepairFortAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
       Data: 8|ImperialStruggle.BuildSquadronAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
     - Name: <ActionCost>k__BackingField
       Entry: 6
       Data: 
@@ -17987,9 +17936,6 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 9|ImperialStruggle.DeploySquadronAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
     - Name: 
       Entry: 8
       Data: 
@@ -18827,7 +18773,7 @@ MonoBehaviour:
   usa: {fileID: 11400000, guid: 7fc1ea7cd44976f45829e28093550f26, type: 2}
   spain: {fileID: 11400000, guid: b1ddcaf73c7dc44479196db223dbb84b, type: 2}
   neutral: {fileID: 11400000, guid: fa035a9950db4ba458654758b49c2e78, type: 2}
-  startingPhase: {fileID: 7095921346316974904}
+  startingPhase: {fileID: 7095921346316974908}
   globalDemandTrack: {fileID: 11400000, guid: 009b1b8bb3e310a44974046a38e6e44f, type: 2}
   graphicSettings: {fileID: 11400000, guid: 0796ea962d44e2c4daea307d9cb65801, type: 2}
 --- !u!1 &1448098303
@@ -29116,25 +29062,37 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: StartEvent
-      Entry: 6
-      Data: 
-    - Name: EndEvent
-      Entry: 6
-      Data: 
-    - Name: phaseStartActions
+    - Name: PhaseStartActions
       Entry: 7
-      Data: 0|System.Collections.Generic.Queue`1[[ImperialStruggle.GameAction, Assembly-CSharp]],
+      Data: 0|System.Collections.Generic.Queue`1[[ImperialStruggle.IAction, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 1|ImperialStruggle.SelectInvestmentTileAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
+      Data: 1|ImperialStruggle.SelectionAction, Assembly-CSharp
+    - Name: prompt
+      Entry: 1
+      Data: Select an Investment Tile
+    - Name: source
+      Entry: 7
+      Data: 2|ImperialStruggle.AvailableInvestmentTilesCalc, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: response
+      Entry: 7
+      Data: 3|ImperialStruggle.SelectInvestmentTileResponse, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: min
+      Entry: 3
+      Data: 1
+    - Name: max
+      Entry: 3
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -29144,9 +29102,9 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: phaseEndActions
+    - Name: PhaseEndActions
       Entry: 7
-      Data: 2|System.Collections.Generic.Queue`1[[ImperialStruggle.GameAction, Assembly-CSharp]],
+      Data: 4|System.Collections.Generic.Queue`1[[ImperialStruggle.IAction, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
@@ -29156,6 +29114,12 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 8
+      Data: 
+    - Name: StartEvent
+      Entry: 6
+      Data: 
+    - Name: EndEvent
+      Entry: 6
       Data: 
   <era>k__BackingField: 0
   player: {fileID: 0}
@@ -33496,173 +33460,48 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
+    - Name: PhaseStartActions
+      Entry: 6
+      Data: 
+    - Name: PhaseEndActions
+      Entry: 6
+      Data: 
     - Name: StartEvent
       Entry: 6
       Data: 
     - Name: EndEvent
       Entry: 6
       Data: 
-    - Name: phaseStartActions
-      Entry: 7
-      Data: 0|System.Collections.Generic.Queue`1[[ImperialStruggle.GameAction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 1|ImperialStruggle.RevealWarTiles, Assembly-CSharp
-    - Name: theater
-      Entry: 10
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: phaseEndActions
-      Entry: 7
-      Data: 2|System.Collections.Generic.Queue`1[[ImperialStruggle.GameAction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: <scoringBonuses>k__BackingField
       Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[ImperialStruggle.Calculation`1[[System.Int32,
+      Data: 0|System.Collections.Generic.List`1[[ImperialStruggle.Calculation`1[[System.Int32,
         mscorlib]], Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 3
     - Name: 
       Entry: 7
-      Data: 4|ImperialStruggle.ConflictsCalculation, Assembly-CSharp
+      Data: 1|ImperialStruggle.ConflictsCalculation, Assembly-CSharp
     - Name: spaces
-      Entry: 7
-      Data: 5|ImperialStruggle.SpaceCalculation, Assembly-CSharp
-    - Name: eligibleMaps
-      Entry: 7
-      Data: 6|System.Collections.Generic.List`1[[ImperialStruggle.Map, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 10
-      Data: 1
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: eligibleRegions
-      Entry: 7
-      Data: 7|System.Collections.Generic.List`1[[ImperialStruggle.Region, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 8|ImperialStruggle.FortsCalc, Assembly-CSharp
+      Data: 2|ImperialStruggle.FortsCalc, Assembly-CSharp
     - Name: spaces
-      Entry: 7
-      Data: 9|ImperialStruggle.SpaceCalculation, Assembly-CSharp
-    - Name: eligibleMaps
-      Entry: 7
-      Data: 10|System.Collections.Generic.List`1[[ImperialStruggle.Map, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 10
-      Data: 1
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: eligibleRegions
-      Entry: 7
-      Data: 11|System.Collections.Generic.List`1[[ImperialStruggle.Region, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 12|ImperialStruggle.SquadronsCalc, Assembly-CSharp
+      Data: 3|ImperialStruggle.SquadronsCalc, Assembly-CSharp
     - Name: spaces
-      Entry: 7
-      Data: 13|ImperialStruggle.SpaceCalculation, Assembly-CSharp
-    - Name: eligibleMaps
-      Entry: 7
-      Data: 14|System.Collections.Generic.List`1[[ImperialStruggle.Map, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 10
-      Data: 1
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: eligibleRegions
-      Entry: 7
-      Data: 15|System.Collections.Generic.List`1[[ImperialStruggle.Region, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 8
@@ -33675,12 +33514,12 @@ MonoBehaviour:
       Data: 
     - Name: <Spoils>k__BackingField
       Entry: 7
-      Data: 16|System.Collections.Generic.Dictionary`2[[System.Int32, mscorlib],[System.ValueTuple`2[[System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
+      Data: 4|System.Collections.Generic.Dictionary`2[[System.Int32, mscorlib],[System.ValueTuple`2[[System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
         Assembly-CSharp]], mscorlib],[System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
         Assembly-CSharp]], mscorlib]], mscorlib]], mscorlib
     - Name: comparer
       Entry: 7
-      Data: 17|System.Collections.Generic.GenericEqualityComparer`1[[System.Int32,
+      Data: 5|System.Collections.Generic.GenericEqualityComparer`1[[System.Int32,
         mscorlib]], mscorlib
     - Name: 
       Entry: 8
@@ -33701,22 +33540,13 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib]], mscorlib
     - Name: Item1
       Entry: 7
-      Data: 18|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
-        Assembly-CSharp]], mscorlib
+      Data: 6|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction, Assembly-CSharp]],
+        mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
-      Entry: 7
-      Data: 19|ImperialStruggle.AdjustVPAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
-    - Name: amount
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 13
@@ -33726,8 +33556,8 @@ MonoBehaviour:
       Data: 
     - Name: Item2
       Entry: 7
-      Data: 20|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
-        Assembly-CSharp]], mscorlib
+      Data: 7|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction, Assembly-CSharp]],
+        mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -33756,29 +33586,17 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib]], mscorlib
     - Name: Item1
       Entry: 7
-      Data: 21|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
-        Assembly-CSharp]], mscorlib
+      Data: 8|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction, Assembly-CSharp]],
+        mscorlib
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
-      Entry: 7
-      Data: 22|ImperialStruggle.AdjustVPAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
-    - Name: amount
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 7
-      Data: 23|ImperialStruggle.AdjustCPAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
+      Data: 9|ImperialStruggle.AdjustCPAction, Assembly-CSharp
     - Name: cpAdjustAmount
       Entry: 3
       Data: 1
@@ -33796,22 +33614,13 @@ MonoBehaviour:
       Data: 
     - Name: Item2
       Entry: 7
-      Data: 24|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
+      Data: 10|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
-      Entry: 7
-      Data: 25|ImperialStruggle.AdjustTPAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
-    - Name: tpAdjustAmount
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 13
@@ -33838,35 +33647,23 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib]], mscorlib
     - Name: Item1
       Entry: 7
-      Data: 26|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
+      Data: 11|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 3
     - Name: 
-      Entry: 7
-      Data: 27|ImperialStruggle.AdjustVPAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
-    - Name: amount
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 7
-      Data: 28|ImperialStruggle.ShiftSpaceAdvantageAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
+      Data: 12|ImperialStruggle.ShiftSpaceAdvantageAction, Assembly-CSharp
     - Name: eligibleSpaces
       Entry: 7
-      Data: 29|ImperialStruggle.MarketCalculation, Assembly-CSharp
+      Data: 13|ImperialStruggle.MarketCalculation, Assembly-CSharp
     - Name: maps
       Entry: 7
-      Data: 30|System.Collections.Generic.HashSet`1[[ImperialStruggle.Map, Assembly-CSharp]],
+      Data: 14|System.Collections.Generic.HashSet`1[[ImperialStruggle.Map, Assembly-CSharp]],
         System.Core
     - Name: 
       Entry: 12
@@ -33882,7 +33679,7 @@ MonoBehaviour:
       Data: 
     - Name: regions
       Entry: 7
-      Data: 31|System.Collections.Generic.HashSet`1[[ImperialStruggle.Region, Assembly-CSharp]],
+      Data: 15|System.Collections.Generic.HashSet`1[[ImperialStruggle.Region, Assembly-CSharp]],
         System.Core
     - Name: 
       Entry: 12
@@ -33895,7 +33692,7 @@ MonoBehaviour:
       Data: 
     - Name: resources
       Entry: 7
-      Data: 32|System.Collections.Generic.HashSet`1[[Resource, Assembly-CSharp]],
+      Data: 16|System.Collections.Generic.HashSet`1[[Resource, Assembly-CSharp]],
         System.Core
     - Name: 
       Entry: 12
@@ -33908,7 +33705,7 @@ MonoBehaviour:
       Data: 
     - Name: status
       Entry: 7
-      Data: 33|System.Collections.Generic.HashSet`1[[ImperialStruggle.MarketCalculation+Status,
+      Data: 17|System.Collections.Generic.HashSet`1[[ImperialStruggle.MarketCalculation+Status,
         Assembly-CSharp]], System.Core
     - Name: 
       Entry: 12
@@ -33927,7 +33724,7 @@ MonoBehaviour:
       Data: 2
     - Name: <ActionCost>k__BackingField
       Entry: 7
-      Data: 34|ImperialStruggle.ActionPoint, Assembly-CSharp
+      Data: 18|ImperialStruggle.ActionPoint, Assembly-CSharp
     - Name: <tier>k__BackingField
       Entry: 3
       Data: 0
@@ -33939,8 +33736,8 @@ MonoBehaviour:
       Data: 0
     - Name: <conditionals>k__BackingField
       Entry: 7
-      Data: 35|System.Collections.Generic.List`1[[ImperialStruggle.Conditional, Assembly-CSharp]],
-        mscorlib
+      Data: 19|System.Collections.Generic.List`1[[ImperialStruggle.Conditional`1[[ImperialStruggle.PlayerAction,
+        Assembly-CSharp]], Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -33958,10 +33755,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 36|ImperialStruggle.AdjustCPAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
+      Data: 20|ImperialStruggle.AdjustCPAction, Assembly-CSharp
     - Name: cpAdjustAmount
       Entry: 3
       Data: 2
@@ -33979,22 +33773,13 @@ MonoBehaviour:
       Data: 
     - Name: Item2
       Entry: 7
-      Data: 37|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
+      Data: 21|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
-      Entry: 7
-      Data: 38|ImperialStruggle.AdjustTPAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
-    - Name: tpAdjustAmount
-      Entry: 3
-      Data: 2
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 13
@@ -34016,7 +33801,7 @@ MonoBehaviour:
       Data: 
     - Name: <SpecialActions>k__BackingField
       Entry: 7
-      Data: 39|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
+      Data: 22|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
@@ -35127,25 +34912,37 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: StartEvent
-      Entry: 6
-      Data: 
-    - Name: EndEvent
-      Entry: 6
-      Data: 
-    - Name: phaseStartActions
+    - Name: PhaseStartActions
       Entry: 7
-      Data: 0|System.Collections.Generic.Queue`1[[ImperialStruggle.GameAction, Assembly-CSharp]],
+      Data: 0|System.Collections.Generic.Queue`1[[ImperialStruggle.IAction, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 1|ImperialStruggle.SelectInvestmentTileAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
+      Data: 1|ImperialStruggle.SelectionAction, Assembly-CSharp
+    - Name: prompt
+      Entry: 1
+      Data: Select an Investment Tile
+    - Name: source
+      Entry: 7
+      Data: 2|ImperialStruggle.AvailableInvestmentTilesCalc, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: response
+      Entry: 7
+      Data: 3|ImperialStruggle.SelectInvestmentTileResponse, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: min
+      Entry: 3
+      Data: 1
+    - Name: max
+      Entry: 3
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -35155,9 +34952,9 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: phaseEndActions
+    - Name: PhaseEndActions
       Entry: 7
-      Data: 2|System.Collections.Generic.Queue`1[[ImperialStruggle.GameAction, Assembly-CSharp]],
+      Data: 4|System.Collections.Generic.Queue`1[[ImperialStruggle.IAction, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
@@ -35167,6 +34964,12 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 8
+      Data: 
+    - Name: StartEvent
+      Entry: 6
+      Data: 
+    - Name: EndEvent
+      Entry: 6
       Data: 
   <era>k__BackingField: 0
   player: {fileID: 0}
@@ -35209,25 +35012,37 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: StartEvent
-      Entry: 6
-      Data: 
-    - Name: EndEvent
-      Entry: 6
-      Data: 
-    - Name: phaseStartActions
+    - Name: PhaseStartActions
       Entry: 7
-      Data: 0|System.Collections.Generic.Queue`1[[ImperialStruggle.GameAction, Assembly-CSharp]],
+      Data: 0|System.Collections.Generic.Queue`1[[ImperialStruggle.IAction, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 1|ImperialStruggle.SelectInvestmentTileAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
+      Data: 1|ImperialStruggle.SelectionAction, Assembly-CSharp
+    - Name: prompt
+      Entry: 1
+      Data: Select an Investment Tile
+    - Name: source
+      Entry: 7
+      Data: 2|ImperialStruggle.AvailableInvestmentTilesCalc, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: response
+      Entry: 7
+      Data: 3|ImperialStruggle.SelectInvestmentTileResponse, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: min
+      Entry: 3
+      Data: 1
+    - Name: max
+      Entry: 3
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -35237,9 +35052,9 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: phaseEndActions
+    - Name: PhaseEndActions
       Entry: 7
-      Data: 2|System.Collections.Generic.Queue`1[[ImperialStruggle.GameAction, Assembly-CSharp]],
+      Data: 4|System.Collections.Generic.Queue`1[[ImperialStruggle.IAction, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
@@ -35249,6 +35064,12 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 8
+      Data: 
+    - Name: StartEvent
+      Entry: 6
+      Data: 
+    - Name: EndEvent
+      Entry: 6
       Data: 
   <era>k__BackingField: 0
   player: {fileID: 0}
@@ -36988,25 +36809,37 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: StartEvent
-      Entry: 6
-      Data: 
-    - Name: EndEvent
-      Entry: 6
-      Data: 
-    - Name: phaseStartActions
+    - Name: PhaseStartActions
       Entry: 7
-      Data: 0|System.Collections.Generic.Queue`1[[ImperialStruggle.GameAction, Assembly-CSharp]],
+      Data: 0|System.Collections.Generic.Queue`1[[ImperialStruggle.IAction, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 1|ImperialStruggle.SelectInvestmentTileAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
+      Data: 1|ImperialStruggle.SelectionAction, Assembly-CSharp
+    - Name: prompt
+      Entry: 1
+      Data: Select an Investment Tile
+    - Name: source
+      Entry: 7
+      Data: 2|ImperialStruggle.AvailableInvestmentTilesCalc, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: response
+      Entry: 7
+      Data: 3|ImperialStruggle.SelectInvestmentTileResponse, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: min
+      Entry: 3
+      Data: 1
+    - Name: max
+      Entry: 3
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -37016,9 +36849,9 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: phaseEndActions
+    - Name: PhaseEndActions
       Entry: 7
-      Data: 2|System.Collections.Generic.Queue`1[[ImperialStruggle.GameAction, Assembly-CSharp]],
+      Data: 4|System.Collections.Generic.Queue`1[[ImperialStruggle.IAction, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
@@ -37028,6 +36861,12 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 8
+      Data: 
+    - Name: StartEvent
+      Entry: 6
+      Data: 
+    - Name: EndEvent
+      Entry: 6
       Data: 
   <era>k__BackingField: 0
   player: {fileID: 0}
@@ -37622,25 +37461,37 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: StartEvent
-      Entry: 6
-      Data: 
-    - Name: EndEvent
-      Entry: 6
-      Data: 
-    - Name: phaseStartActions
+    - Name: PhaseStartActions
       Entry: 7
-      Data: 0|System.Collections.Generic.Queue`1[[ImperialStruggle.GameAction, Assembly-CSharp]],
+      Data: 0|System.Collections.Generic.Queue`1[[ImperialStruggle.IAction, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 1|ImperialStruggle.SelectInvestmentTileAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
+      Data: 1|ImperialStruggle.SelectionAction, Assembly-CSharp
+    - Name: prompt
+      Entry: 1
+      Data: Select an Investment Tile
+    - Name: source
+      Entry: 7
+      Data: 2|ImperialStruggle.AvailableInvestmentTilesCalc, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: response
+      Entry: 7
+      Data: 3|ImperialStruggle.SelectInvestmentTileResponse, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: min
+      Entry: 3
+      Data: 1
+    - Name: max
+      Entry: 3
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -37650,9 +37501,9 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: phaseEndActions
+    - Name: PhaseEndActions
       Entry: 7
-      Data: 2|System.Collections.Generic.Queue`1[[ImperialStruggle.GameAction, Assembly-CSharp]],
+      Data: 4|System.Collections.Generic.Queue`1[[ImperialStruggle.IAction, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
@@ -37662,6 +37513,12 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 8
+      Data: 
+    - Name: StartEvent
+      Entry: 6
+      Data: 
+    - Name: EndEvent
+      Entry: 6
       Data: 
   <era>k__BackingField: 0
   player: {fileID: 0}
@@ -38551,25 +38408,37 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: StartEvent
-      Entry: 6
-      Data: 
-    - Name: EndEvent
-      Entry: 6
-      Data: 
-    - Name: phaseStartActions
+    - Name: PhaseStartActions
       Entry: 7
-      Data: 0|System.Collections.Generic.Queue`1[[ImperialStruggle.GameAction, Assembly-CSharp]],
+      Data: 0|System.Collections.Generic.Queue`1[[ImperialStruggle.IAction, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 1|ImperialStruggle.SelectInvestmentTileAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
+      Data: 1|ImperialStruggle.SelectionAction, Assembly-CSharp
+    - Name: prompt
+      Entry: 1
+      Data: Select an Investment Tile
+    - Name: source
+      Entry: 7
+      Data: 2|ImperialStruggle.AvailableInvestmentTilesCalc, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: response
+      Entry: 7
+      Data: 3|ImperialStruggle.SelectInvestmentTileResponse, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: min
+      Entry: 3
+      Data: 1
+    - Name: max
+      Entry: 3
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -38579,9 +38448,9 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: phaseEndActions
+    - Name: PhaseEndActions
       Entry: 7
-      Data: 2|System.Collections.Generic.Queue`1[[ImperialStruggle.GameAction, Assembly-CSharp]],
+      Data: 4|System.Collections.Generic.Queue`1[[ImperialStruggle.IAction, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
@@ -38591,6 +38460,12 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 8
+      Data: 
+    - Name: StartEvent
+      Entry: 6
+      Data: 
+    - Name: EndEvent
+      Entry: 6
       Data: 
   <era>k__BackingField: 0
   player: {fileID: 0}
@@ -41498,37 +41373,37 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
+    - Name: PhaseStartActions
+      Entry: 7
+      Data: 0|System.Collections.Generic.Queue`1[[ImperialStruggle.IAction, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: PhaseEndActions
+      Entry: 7
+      Data: 1|System.Collections.Generic.Queue`1[[ImperialStruggle.IAction, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: StartEvent
       Entry: 6
       Data: 
     - Name: EndEvent
       Entry: 6
-      Data: 
-    - Name: phaseStartActions
-      Entry: 7
-      Data: 0|System.Collections.Generic.Queue`1[[ImperialStruggle.GameAction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: phaseEndActions
-      Entry: 7
-      Data: 1|System.Collections.Generic.Queue`1[[ImperialStruggle.GameAction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
       Data: 
     - Name: theaterWinners
       Entry: 7
@@ -41652,7 +41527,47 @@ MonoBehaviour:
   background: {fileID: 7990297065185292060}
   exhaustion: {fileID: 3005759376016740838}
   tileName: {fileID: 6840642963996746737}
---- !u!114 &7095921346316974904
+--- !u!1 &7095921346316974906
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7095921346316974907}
+  - component: {fileID: 7095921346316974908}
+  m_Layer: 0
+  m_Name: Peace Turn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7095921346316974907
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7095921346316974906}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6587623830583151135}
+  - {fileID: 2270896879549454623}
+  - {fileID: 8379082826945065725}
+  - {fileID: 6751338587201543076}
+  - {fileID: 1882512423849374749}
+  - {fileID: 2215815033341252661}
+  - {fileID: 6582457813713862957}
+  - {fileID: 6526057950747273194}
+  m_Father: {fileID: 670742066}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7095921346316974908
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41683,27 +41598,26 @@ MonoBehaviour:
     - {fileID: 11400000, guid: ea2e43abe6844f047b19ab5e4d3510f9, type: 2}
     - {fileID: 11400000, guid: b1a56aba722ae1842a94928f06f0d382, type: 2}
     - {fileID: 11400000, guid: 109fd3e571aec8c4b9728b34410a0f25, type: 2}
-    - {fileID: 7007228987556792857}
-    - {fileID: 11400000, guid: 44de97e0601df214ba41bf7c6f890461, type: 2}
-    - {fileID: 11400000, guid: 58648409d1e5bcf4d972ed174591863f, type: 2}
+    - {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
+    - {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
+    - {fileID: 11400000, guid: 4a05d52d3c271fd44b4179da3f37cba3, type: 2}
+    - {fileID: 11400000, guid: e2d1ce45b75e37146a4bddd9f1f53323, type: 2}
+    - {fileID: 11400000, guid: c0cdb8595773a624c88342a4737bb4d1, type: 2}
+    - {fileID: 11400000, guid: 1b869c261556c7c42aa2e60e938cefa4, type: 2}
+    - {fileID: 11400000, guid: df3448d296fcada4db9b0216f32311da, type: 2}
+    - {fileID: 11400000, guid: faba19c7570ce384daeda70d40aafca1, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: StartEvent
-      Entry: 6
-      Data: 
-    - Name: EndEvent
-      Entry: 6
-      Data: 
-    - Name: phaseStartActions
+    - Name: PhaseStartActions
       Entry: 7
-      Data: 0|System.Collections.Generic.Queue`1[[ImperialStruggle.GameAction, Assembly-CSharp]],
+      Data: 0|System.Collections.Generic.Queue`1[[ImperialStruggle.IAction, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
-      Data: 10
+      Data: 7
     - Name: 
       Entry: 7
       Data: 1|ImperialStruggle.AddCardsToDeckAction, Assembly-CSharp
@@ -41770,31 +41684,146 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 3|ImperialStruggle.AdjustDebtLimitAction, Assembly-CSharp
+      Data: 3|ImperialStruggle.QueueCommandAction, Assembly-CSharp
+    - Name: commands
+      Entry: 7
+      Data: 4|System.Collections.Generic.List`1[[ImperialStruggle.Command, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 5|ImperialStruggle.AdjustDebtLimitCommand, Assembly-CSharp
+    - Name: faction
+      Entry: 10
+      Data: 15
     - Name: amount
       Entry: 3
-      Data: 5
+      Data: 4
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 4|ImperialStruggle.SetAwardTiles, Assembly-CSharp
+      Data: 6|ImperialStruggle.AdjustDebtLimitCommand, Assembly-CSharp
+    - Name: faction
+      Entry: 10
+      Data: 16
+    - Name: amount
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: conditionals
+      Entry: 7
+      Data: 7|System.Collections.Generic.List`1[[ImperialStruggle.Conditional`1[[ImperialStruggle.IAction,
+        Assembly-CSharp]], Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 5|ImperialStruggle.SetGlobalDemandAction, Assembly-CSharp
-    - Name: numGlobalDemandTiles
+      Data: 8|ImperialStruggle.SetAwardTiles, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 9|ImperialStruggle.QueueCommandAction, Assembly-CSharp
+    - Name: commands
+      Entry: 7
+      Data: 10|System.Collections.Generic.List`1[[ImperialStruggle.Command, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 11|ImperialStruggle.SetGlobalDemandCommand, Assembly-CSharp
+    - Name: inputResources
+      Entry: 7
+      Data: 12|ImperialStruggle.RandomGlobalDemandResources, Assembly-CSharp
+    - Name: resources
+      Entry: 7
+      Data: 13|System.Collections.Generic.List`1[[Resource, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 6
+    - Name: 
+      Entry: 10
+      Data: 17
+    - Name: 
+      Entry: 10
+      Data: 18
+    - Name: 
+      Entry: 10
+      Data: 19
+    - Name: 
+      Entry: 10
+      Data: 20
+    - Name: 
+      Entry: 10
+      Data: 21
+    - Name: 
+      Entry: 10
+      Data: 22
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: numResources
       Entry: 3
       Data: 3
     - Name: 
       Entry: 8
       Data: 
     - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: conditionals
       Entry: 7
-      Data: 6|ImperialStruggle.DealCardsAction, Assembly-CSharp
+      Data: 14|System.Collections.Generic.List`1[[ImperialStruggle.Conditional`1[[ImperialStruggle.IAction,
+        Assembly-CSharp]], Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 15|ImperialStruggle.DealCardsAction, Assembly-CSharp
     - Name: dealType
       Entry: 3
       Data: 0
@@ -41806,37 +41835,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 7|ImperialStruggle.WarPrepAction, Assembly-CSharp
-    - Name: nextWar
-      Entry: 10
-      Data: 15
+      Data: 16|ImperialStruggle.SelectMinistryCardAction, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 8|ImperialStruggle.DealInvestmentTilesAction, Assembly-CSharp
-    - Name: numToDeal
-      Entry: 3
-      Data: 9
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 9|ImperialStruggle.SelectMinistryCardAction, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 10|ImperialStruggle.SetInitiativeAction, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 11|ImperialStruggle.NextPhaseAction, Assembly-CSharp
+      Data: 17|ImperialStruggle.SetInitiativeAction, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -41846,73 +41851,24 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: phaseEndActions
+    - Name: PhaseEndActions
       Entry: 7
-      Data: 12|System.Collections.Generic.Queue`1[[ImperialStruggle.GameAction, Assembly-CSharp]],
+      Data: 18|System.Collections.Generic.Queue`1[[ImperialStruggle.IAction, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
-      Data: 5
-    - Name: 
-      Entry: 7
-      Data: 13|ImperialStruggle.ResetTreatyPointsAction, Assembly-CSharp
-    - Name: treatyPointsCap
-      Entry: 3
-      Data: 4
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 14|ImperialStruggle.ScoreMapAction, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 15|ImperialStruggle.ScorePrestigeAction, Assembly-CSharp
-    - Name: VPaward
-      Entry: 3
-      Data: 2
-    - Name: usaSpaces
-      Entry: 7
-      Data: 16|System.Collections.Generic.List`1[[ImperialStruggle.SpaceData, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 10
-      Data: 16
-    - Name: 
-      Entry: 10
-      Data: 17
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
     - Name: 
       Entry: 8
       Data: 
-    - Name: 
-      Entry: 8
+    - Name: StartEvent
+      Entry: 6
       Data: 
-    - Name: 
-      Entry: 7
-      Data: 17|ImperialStruggle.ScoreGlobalDemandAction, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 18|ImperialStruggle.PeaceTurnVictoryConditionAction, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
+    - Name: EndEvent
+      Entry: 6
       Data: 
     - Name: globalDemandResources
       Entry: 7
@@ -41969,46 +41925,6 @@ MonoBehaviour:
       Data: 
   <era>k__BackingField: 0
   initiative: {fileID: 1435854123}
---- !u!1 &7095921346316974906
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7095921346316974907}
-  - component: {fileID: 7095921346316974904}
-  m_Layer: 0
-  m_Name: Peace Turn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7095921346316974907
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7095921346316974906}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 6587623830583151135}
-  - {fileID: 2270896879549454623}
-  - {fileID: 8379082826945065725}
-  - {fileID: 6751338587201543076}
-  - {fileID: 1882512423849374749}
-  - {fileID: 2215815033341252661}
-  - {fileID: 6582457813713862957}
-  - {fileID: 6526057950747273194}
-  m_Father: {fileID: 670742066}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &7272882932630137123
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42288,7 +42204,6 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 7534191138924097081}
     - {fileID: 11400000, guid: 84f1ef17c0e1bf54db8cd441f31d7d11, type: 2}
     - {fileID: 11400000, guid: c1b5c4ab266aaff4d94caa6d86ee8cce, type: 2}
     - {fileID: 11400000, guid: 2b51c06aa61d13142afa5e52b515af74, type: 2}
@@ -42297,72 +42212,47 @@ MonoBehaviour:
     - {fileID: 11400000, guid: f2dedbb241e85a746ac9a14627c61aa6, type: 2}
     - {fileID: 11400000, guid: ba490b2098c2e42418ecc8a22071c488, type: 2}
     - {fileID: 11400000, guid: 8bb64b8215ee4f24a80e126aa87bf4ae, type: 2}
+    - {fileID: 7534191138924097081}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
+    - Name: PhaseStartActions
+      Entry: 6
+      Data: 
+    - Name: PhaseEndActions
+      Entry: 6
+      Data: 
     - Name: StartEvent
       Entry: 6
       Data: 
     - Name: EndEvent
       Entry: 6
       Data: 
-    - Name: phaseStartActions
-      Entry: 7
-      Data: 0|System.Collections.Generic.Queue`1[[ImperialStruggle.GameAction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 1|ImperialStruggle.RevealWarTiles, Assembly-CSharp
-    - Name: theater
-      Entry: 10
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: phaseEndActions
-      Entry: 7
-      Data: 2|System.Collections.Generic.Queue`1[[ImperialStruggle.GameAction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: <scoringBonuses>k__BackingField
       Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[ImperialStruggle.Calculation`1[[System.Int32,
+      Data: 0|System.Collections.Generic.List`1[[ImperialStruggle.Calculation`1[[System.Int32,
         mscorlib]], Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 4|ImperialStruggle.FlaggedSpacesCalculation, Assembly-CSharp
+      Data: 1|ImperialStruggle.FlaggedSpacesCalculation, Assembly-CSharp
     - Name: eligibleSpaces
       Entry: 7
-      Data: 5|ImperialStruggle.StaticSpacesCalculation, Assembly-CSharp
+      Data: 2|ImperialStruggle.StaticSpacesCalculation, Assembly-CSharp
     - Name: spaces
       Entry: 7
-      Data: 6|System.Collections.Generic.HashSet`1[[ImperialStruggle.SpaceData, Assembly-CSharp]],
+      Data: 3|System.Collections.Generic.HashSet`1[[ImperialStruggle.SpaceData, Assembly-CSharp]],
         System.Core
     - Name: 
       Entry: 12
       Data: 8
+    - Name: 
+      Entry: 10
+      Data: 0
     - Name: 
       Entry: 10
       Data: 1
@@ -42385,9 +42275,6 @@ MonoBehaviour:
       Entry: 10
       Data: 7
     - Name: 
-      Entry: 10
-      Data: 8
-    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -42407,12 +42294,12 @@ MonoBehaviour:
       Data: 
     - Name: <Spoils>k__BackingField
       Entry: 7
-      Data: 7|System.Collections.Generic.Dictionary`2[[System.Int32, mscorlib],[System.ValueTuple`2[[System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
+      Data: 4|System.Collections.Generic.Dictionary`2[[System.Int32, mscorlib],[System.ValueTuple`2[[System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
         Assembly-CSharp]], mscorlib],[System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
         Assembly-CSharp]], mscorlib]], mscorlib]], mscorlib
     - Name: comparer
       Entry: 7
-      Data: 8|System.Collections.Generic.GenericEqualityComparer`1[[System.Int32,
+      Data: 5|System.Collections.Generic.GenericEqualityComparer`1[[System.Int32,
         mscorlib]], mscorlib
     - Name: 
       Entry: 8
@@ -42433,22 +42320,13 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib]], mscorlib
     - Name: Item1
       Entry: 7
-      Data: 9|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction, Assembly-CSharp]],
+      Data: 6|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
-      Entry: 7
-      Data: 10|ImperialStruggle.AdjustVPAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
-    - Name: amount
-      Entry: 3
-      Data: 2
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 13
@@ -42458,22 +42336,13 @@ MonoBehaviour:
       Data: 
     - Name: Item2
       Entry: 7
-      Data: 11|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
-        Assembly-CSharp]], mscorlib
+      Data: 7|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction, Assembly-CSharp]],
+        mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
-      Entry: 7
-      Data: 12|ImperialStruggle.AdjustTPAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
-    - Name: tpAdjustAmount
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 13
@@ -42500,35 +42369,23 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib]], mscorlib
     - Name: Item1
       Entry: 7
-      Data: 13|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
-        Assembly-CSharp]], mscorlib
+      Data: 8|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction, Assembly-CSharp]],
+        mscorlib
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
-      Entry: 7
-      Data: 14|ImperialStruggle.AdjustVPAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
-    - Name: amount
-      Entry: 3
-      Data: 2
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 7
-      Data: 15|ImperialStruggle.AdjustCPAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
+      Data: 9|ImperialStruggle.AdjustCPAction, Assembly-CSharp
     - Name: cpAdjustAmount
       Entry: 3
       Data: 1
     - Name: theater
       Entry: 10
-      Data: 0
+      Data: 8
     - Name: 
       Entry: 8
       Data: 
@@ -42540,22 +42397,13 @@ MonoBehaviour:
       Data: 
     - Name: Item2
       Entry: 7
-      Data: 16|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
+      Data: 10|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
-      Entry: 7
-      Data: 17|ImperialStruggle.AdjustTPAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
-    - Name: tpAdjustAmount
-      Entry: 3
-      Data: 2
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 13
@@ -42582,35 +42430,23 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib]], mscorlib
     - Name: Item1
       Entry: 7
-      Data: 18|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
+      Data: 11|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
-      Entry: 7
-      Data: 19|ImperialStruggle.AdjustVPAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
-    - Name: amount
-      Entry: 3
-      Data: 3
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 7
-      Data: 20|ImperialStruggle.AdjustCPAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
+      Data: 12|ImperialStruggle.AdjustCPAction, Assembly-CSharp
     - Name: cpAdjustAmount
       Entry: 3
       Data: 2
     - Name: theater
       Entry: 10
-      Data: 0
+      Data: 8
     - Name: 
       Entry: 8
       Data: 
@@ -42622,22 +42458,13 @@ MonoBehaviour:
       Data: 
     - Name: Item2
       Entry: 7
-      Data: 21|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
+      Data: 13|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
-      Entry: 7
-      Data: 22|ImperialStruggle.AdjustTPAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
-    - Name: tpAdjustAmount
-      Entry: 3
-      Data: 3
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 13
@@ -42659,7 +42486,7 @@ MonoBehaviour:
       Data: 
     - Name: <SpecialActions>k__BackingField
       Entry: 7
-      Data: 23|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
+      Data: 14|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
@@ -42930,25 +42757,37 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: StartEvent
-      Entry: 6
-      Data: 
-    - Name: EndEvent
-      Entry: 6
-      Data: 
-    - Name: phaseStartActions
+    - Name: PhaseStartActions
       Entry: 7
-      Data: 0|System.Collections.Generic.Queue`1[[ImperialStruggle.GameAction, Assembly-CSharp]],
+      Data: 0|System.Collections.Generic.Queue`1[[ImperialStruggle.IAction, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 1|ImperialStruggle.SelectInvestmentTileAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
+      Data: 1|ImperialStruggle.SelectionAction, Assembly-CSharp
+    - Name: prompt
+      Entry: 1
+      Data: Select an Investment Tile
+    - Name: source
+      Entry: 7
+      Data: 2|ImperialStruggle.AvailableInvestmentTilesCalc, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: response
+      Entry: 7
+      Data: 3|ImperialStruggle.SelectInvestmentTileResponse, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: min
+      Entry: 3
+      Data: 1
+    - Name: max
+      Entry: 3
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -42958,9 +42797,9 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: phaseEndActions
+    - Name: PhaseEndActions
       Entry: 7
-      Data: 2|System.Collections.Generic.Queue`1[[ImperialStruggle.GameAction, Assembly-CSharp]],
+      Data: 4|System.Collections.Generic.Queue`1[[ImperialStruggle.IAction, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
@@ -42970,6 +42809,12 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 8
+      Data: 
+    - Name: StartEvent
+      Entry: 6
+      Data: 
+    - Name: EndEvent
+      Entry: 6
       Data: 
   <era>k__BackingField: 0
   player: {fileID: 0}
@@ -44092,25 +43937,37 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: StartEvent
-      Entry: 6
-      Data: 
-    - Name: EndEvent
-      Entry: 6
-      Data: 
-    - Name: phaseStartActions
+    - Name: PhaseStartActions
       Entry: 7
-      Data: 0|System.Collections.Generic.Queue`1[[ImperialStruggle.GameAction, Assembly-CSharp]],
+      Data: 0|System.Collections.Generic.Queue`1[[ImperialStruggle.IAction, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 1|ImperialStruggle.SelectInvestmentTileAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
+      Data: 1|ImperialStruggle.SelectionAction, Assembly-CSharp
+    - Name: prompt
+      Entry: 1
+      Data: Select an Investment Tile
+    - Name: source
+      Entry: 7
+      Data: 2|ImperialStruggle.AvailableInvestmentTilesCalc, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: response
+      Entry: 7
+      Data: 3|ImperialStruggle.SelectInvestmentTileResponse, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: min
+      Entry: 3
+      Data: 1
+    - Name: max
+      Entry: 3
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -44120,9 +43977,9 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: phaseEndActions
+    - Name: PhaseEndActions
       Entry: 7
-      Data: 2|System.Collections.Generic.Queue`1[[ImperialStruggle.GameAction, Assembly-CSharp]],
+      Data: 4|System.Collections.Generic.Queue`1[[ImperialStruggle.IAction, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
@@ -44132,6 +43989,12 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 8
+      Data: 
+    - Name: StartEvent
+      Entry: 6
+      Data: 
+    - Name: EndEvent
+      Entry: 6
       Data: 
   <era>k__BackingField: 0
   player: {fileID: 0}
@@ -44278,68 +44141,39 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 8979241849580163013}
     - {fileID: 11400000, guid: c445a1dca8e33db45affeca434b30a26, type: 2}
     - {fileID: 11400000, guid: 0112d523b6190e042a65bb9bd85a2656, type: 2}
     - {fileID: 11400000, guid: 1661978c02569c44184af28cf268385a, type: 2}
     - {fileID: 11400000, guid: 9fbc691f309f68c4692d997b2d12af87, type: 2}
     - {fileID: 11400000, guid: 070dbcf9bb9a5d54891229af04c578d2, type: 2}
+    - {fileID: 8979241849580163013}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
+    - Name: PhaseStartActions
+      Entry: 6
+      Data: 
+    - Name: PhaseEndActions
+      Entry: 6
+      Data: 
     - Name: StartEvent
       Entry: 6
       Data: 
     - Name: EndEvent
       Entry: 6
       Data: 
-    - Name: phaseStartActions
-      Entry: 7
-      Data: 0|System.Collections.Generic.Queue`1[[ImperialStruggle.GameAction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 1|ImperialStruggle.RevealWarTiles, Assembly-CSharp
-    - Name: theater
-      Entry: 10
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: phaseEndActions
-      Entry: 7
-      Data: 2|System.Collections.Generic.Queue`1[[ImperialStruggle.GameAction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: <scoringBonuses>k__BackingField
       Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[ImperialStruggle.Calculation`1[[System.Int32,
+      Data: 0|System.Collections.Generic.List`1[[ImperialStruggle.Calculation`1[[System.Int32,
         mscorlib]], Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 3
     - Name: 
       Entry: 7
-      Data: 4|ImperialStruggle.KeywordsCalc, Assembly-CSharp
+      Data: 1|ImperialStruggle.KeywordsCalc, Assembly-CSharp
     - Name: keyword
       Entry: 3
       Data: 1
@@ -44348,26 +44182,26 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 5|ImperialStruggle.FlaggedSpacesCalculation, Assembly-CSharp
+      Data: 2|ImperialStruggle.FlaggedSpacesCalculation, Assembly-CSharp
     - Name: eligibleSpaces
       Entry: 7
-      Data: 6|ImperialStruggle.StaticSpacesCalculation, Assembly-CSharp
+      Data: 3|ImperialStruggle.StaticSpacesCalculation, Assembly-CSharp
     - Name: spaces
       Entry: 7
-      Data: 7|System.Collections.Generic.HashSet`1[[ImperialStruggle.SpaceData, Assembly-CSharp]],
+      Data: 4|System.Collections.Generic.HashSet`1[[ImperialStruggle.SpaceData, Assembly-CSharp]],
         System.Core
     - Name: 
       Entry: 12
       Data: 3
     - Name: 
       Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 10
       Data: 1
     - Name: 
       Entry: 10
       Data: 2
-    - Name: 
-      Entry: 10
-      Data: 3
     - Name: 
       Entry: 13
       Data: 
@@ -44382,23 +44216,23 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 8|ImperialStruggle.SquadronsCalc, Assembly-CSharp
+      Data: 5|ImperialStruggle.SquadronsCalc, Assembly-CSharp
     - Name: spaces
       Entry: 7
-      Data: 9|ImperialStruggle.StaticSpacesCalculation, Assembly-CSharp
+      Data: 6|ImperialStruggle.StaticSpacesCalculation, Assembly-CSharp
     - Name: spaces
       Entry: 7
-      Data: 10|System.Collections.Generic.HashSet`1[[ImperialStruggle.SpaceData,
-        Assembly-CSharp]], System.Core
+      Data: 7|System.Collections.Generic.HashSet`1[[ImperialStruggle.SpaceData, Assembly-CSharp]],
+        System.Core
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 10
-      Data: 4
+      Data: 3
     - Name: 
       Entry: 10
-      Data: 5
+      Data: 4
     - Name: 
       Entry: 13
       Data: 
@@ -44419,12 +44253,12 @@ MonoBehaviour:
       Data: 
     - Name: <Spoils>k__BackingField
       Entry: 7
-      Data: 11|System.Collections.Generic.Dictionary`2[[System.Int32, mscorlib],[System.ValueTuple`2[[System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
+      Data: 8|System.Collections.Generic.Dictionary`2[[System.Int32, mscorlib],[System.ValueTuple`2[[System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
         Assembly-CSharp]], mscorlib],[System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
         Assembly-CSharp]], mscorlib]], mscorlib]], mscorlib
     - Name: comparer
       Entry: 7
-      Data: 12|System.Collections.Generic.GenericEqualityComparer`1[[System.Int32,
+      Data: 9|System.Collections.Generic.GenericEqualityComparer`1[[System.Int32,
         mscorlib]], mscorlib
     - Name: 
       Entry: 8
@@ -44445,22 +44279,13 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib]], mscorlib
     - Name: Item1
       Entry: 7
-      Data: 13|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
+      Data: 10|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
-      Entry: 7
-      Data: 14|ImperialStruggle.AdjustVPAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
-    - Name: amount
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 13
@@ -44470,22 +44295,13 @@ MonoBehaviour:
       Data: 
     - Name: Item2
       Entry: 7
-      Data: 15|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
+      Data: 11|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
-      Entry: 7
-      Data: 16|ImperialStruggle.AdjustTPAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
-    - Name: tpAdjustAmount
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 13
@@ -44512,35 +44328,23 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib]], mscorlib
     - Name: Item1
       Entry: 7
-      Data: 17|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
+      Data: 12|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
-      Entry: 7
-      Data: 18|ImperialStruggle.AdjustVPAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
-    - Name: amount
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 7
-      Data: 19|ImperialStruggle.AdjustCPAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
+      Data: 13|ImperialStruggle.AdjustCPAction, Assembly-CSharp
     - Name: cpAdjustAmount
       Entry: 3
       Data: 1
     - Name: theater
       Entry: 10
-      Data: 0
+      Data: 5
     - Name: 
       Entry: 8
       Data: 
@@ -44552,22 +44356,13 @@ MonoBehaviour:
       Data: 
     - Name: Item2
       Entry: 7
-      Data: 20|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
+      Data: 14|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
-      Entry: 7
-      Data: 21|ImperialStruggle.AdjustTPAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
-    - Name: tpAdjustAmount
-      Entry: 3
-      Data: 2
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 13
@@ -44594,29 +44389,17 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib]], mscorlib
     - Name: Item1
       Entry: 7
-      Data: 22|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
+      Data: 15|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
-      Entry: 7
-      Data: 23|ImperialStruggle.AdjustVPAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
-    - Name: amount
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 7
-      Data: 24|ImperialStruggle.AdjustCPAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
+      Data: 16|ImperialStruggle.AdjustCPAction, Assembly-CSharp
     - Name: cpAdjustAmount
       Entry: 3
       Data: 2
@@ -44634,22 +44417,13 @@ MonoBehaviour:
       Data: 
     - Name: Item2
       Entry: 7
-      Data: 25|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
+      Data: 17|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
-      Entry: 7
-      Data: 26|ImperialStruggle.AdjustTPAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
-    - Name: tpAdjustAmount
-      Entry: 3
-      Data: 2
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 13
@@ -44671,7 +44445,7 @@ MonoBehaviour:
       Data: 
     - Name: <SpecialActions>k__BackingField
       Entry: 7
-      Data: 27|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
+      Data: 18|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
@@ -45034,67 +44808,37 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 9180024856613105370}
     - {fileID: 11400000, guid: 5f4c1c9ae935c444f85af57e0a507200, type: 2}
     - {fileID: 11400000, guid: 6398034ff8583374197632ba1ed570e6, type: 2}
     - {fileID: 11400000, guid: 06ef2ce398da0cf43b4a5bdebe92ba24, type: 2}
-    - {fileID: 11400000, guid: d539b3597d25b5940a836fda6d471339, type: 2}
+    - {fileID: 9180024856613105370}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
+    - Name: PhaseStartActions
+      Entry: 6
+      Data: 
+    - Name: PhaseEndActions
+      Entry: 6
+      Data: 
     - Name: StartEvent
       Entry: 6
       Data: 
     - Name: EndEvent
       Entry: 6
       Data: 
-    - Name: phaseStartActions
-      Entry: 7
-      Data: 0|System.Collections.Generic.Queue`1[[ImperialStruggle.GameAction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 1|ImperialStruggle.RevealWarTiles, Assembly-CSharp
-    - Name: theater
-      Entry: 10
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: phaseEndActions
-      Entry: 7
-      Data: 2|System.Collections.Generic.Queue`1[[ImperialStruggle.GameAction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: <scoringBonuses>k__BackingField
       Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[ImperialStruggle.Calculation`1[[System.Int32,
+      Data: 0|System.Collections.Generic.List`1[[ImperialStruggle.Calculation`1[[System.Int32,
         mscorlib]], Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 3
     - Name: 
       Entry: 7
-      Data: 4|ImperialStruggle.KeywordsCalc, Assembly-CSharp
+      Data: 1|ImperialStruggle.KeywordsCalc, Assembly-CSharp
     - Name: keyword
       Entry: 3
       Data: 0
@@ -45103,17 +44847,20 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 5|ImperialStruggle.FlaggedSpacesCalculation, Assembly-CSharp
+      Data: 2|ImperialStruggle.FlaggedSpacesCalculation, Assembly-CSharp
     - Name: eligibleSpaces
       Entry: 7
-      Data: 6|ImperialStruggle.StaticSpacesCalculation, Assembly-CSharp
+      Data: 3|ImperialStruggle.StaticSpacesCalculation, Assembly-CSharp
     - Name: spaces
       Entry: 7
-      Data: 7|System.Collections.Generic.HashSet`1[[ImperialStruggle.SpaceData, Assembly-CSharp]],
+      Data: 4|System.Collections.Generic.HashSet`1[[ImperialStruggle.SpaceData, Assembly-CSharp]],
         System.Core
     - Name: 
       Entry: 12
       Data: 3
+    - Name: 
+      Entry: 10
+      Data: 0
     - Name: 
       Entry: 10
       Data: 1
@@ -45121,9 +44868,6 @@ MonoBehaviour:
       Entry: 10
       Data: 2
     - Name: 
-      Entry: 10
-      Data: 3
-    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -45137,41 +44881,9 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 8|ImperialStruggle.SquadronsCalc, Assembly-CSharp
+      Data: 5|ImperialStruggle.SquadronsCalc, Assembly-CSharp
     - Name: spaces
-      Entry: 7
-      Data: 9|ImperialStruggle.SpaceCalculation, Assembly-CSharp
-    - Name: eligibleMaps
-      Entry: 7
-      Data: 10|System.Collections.Generic.List`1[[ImperialStruggle.Map, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 10
-      Data: 4
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: eligibleRegions
-      Entry: 7
-      Data: 11|System.Collections.Generic.List`1[[ImperialStruggle.Region, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 8
@@ -45184,12 +44896,12 @@ MonoBehaviour:
       Data: 
     - Name: <Spoils>k__BackingField
       Entry: 7
-      Data: 12|System.Collections.Generic.Dictionary`2[[System.Int32, mscorlib],[System.ValueTuple`2[[System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
+      Data: 6|System.Collections.Generic.Dictionary`2[[System.Int32, mscorlib],[System.ValueTuple`2[[System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
         Assembly-CSharp]], mscorlib],[System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
         Assembly-CSharp]], mscorlib]], mscorlib]], mscorlib
     - Name: comparer
       Entry: 7
-      Data: 13|System.Collections.Generic.GenericEqualityComparer`1[[System.Int32,
+      Data: 7|System.Collections.Generic.GenericEqualityComparer`1[[System.Int32,
         mscorlib]], mscorlib
     - Name: 
       Entry: 8
@@ -45210,22 +44922,13 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib]], mscorlib
     - Name: Item1
       Entry: 7
-      Data: 14|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
-        Assembly-CSharp]], mscorlib
+      Data: 8|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction, Assembly-CSharp]],
+        mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
-      Entry: 7
-      Data: 15|ImperialStruggle.AdjustVPAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
-    - Name: amount
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 13
@@ -45235,8 +44938,8 @@ MonoBehaviour:
       Data: 
     - Name: Item2
       Entry: 7
-      Data: 16|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
-        Assembly-CSharp]], mscorlib
+      Data: 9|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction, Assembly-CSharp]],
+        mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -45265,22 +44968,13 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib]], mscorlib
     - Name: Item1
       Entry: 7
-      Data: 17|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
+      Data: 10|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
-      Entry: 7
-      Data: 18|ImperialStruggle.AdjustVPAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
-    - Name: amount
-      Entry: 3
-      Data: 2
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 13
@@ -45290,22 +44984,13 @@ MonoBehaviour:
       Data: 
     - Name: Item2
       Entry: 7
-      Data: 19|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
+      Data: 11|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
-      Entry: 7
-      Data: 20|ImperialStruggle.AdjustTPAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
-    - Name: tpAdjustAmount
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 13
@@ -45332,22 +45017,13 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib]], mscorlib
     - Name: Item1
       Entry: 7
-      Data: 21|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
+      Data: 12|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
-      Entry: 7
-      Data: 22|ImperialStruggle.AdjustVPAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
-    - Name: amount
-      Entry: 3
-      Data: 4
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 13
@@ -45357,22 +45033,13 @@ MonoBehaviour:
       Data: 
     - Name: Item2
       Entry: 7
-      Data: 23|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
+      Data: 13|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
-      Entry: 7
-      Data: 24|ImperialStruggle.AdjustTPAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
-    - Name: tpAdjustAmount
-      Entry: 3
-      Data: 2
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 13
@@ -45394,23 +45061,20 @@ MonoBehaviour:
       Data: 
     - Name: <SpecialActions>k__BackingField
       Entry: 7
-      Data: 25|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
+      Data: 14|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 26|ImperialStruggle.PlaceJacobiteMarkerAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
+      Data: 15|ImperialStruggle.PlaceJacobiteMarkerAction, Assembly-CSharp
     - Name: requiredVictoryMargin
       Entry: 3
       Data: 3
     - Name: theater
       Entry: 10
-      Data: 0
+      Data: 3
     - Name: 
       Entry: 8
       Data: 

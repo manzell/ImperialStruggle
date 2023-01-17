@@ -2,17 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
-using JetBrains.Annotations;
 
 namespace ImperialStruggle
 {
-    [System.Serializable]
-    public abstract class Conditional
-    {
-        public enum ConditionType { Exactly, MoreThan, FewerThan, NotLessThan, NotMoreThan, Not }
-        [field: SerializeField] public ConditionType ConditionalType { get; }
-        [field: SerializeField] public string ConditionalText { get; }
 
-        public abstract bool Test(IPlayerAction context);
+    // A Condition is a run-time calculation before which a PLAYER ACTION may be executed
+    // Is a Conditional anything different than a Calculation<Bool>?
+
+    [System.Serializable]
+    public abstract class Conditional<T>
+    {
+        [field: SerializeField] public string Name { get; }
+
+        public bool Check(T test)
+        {
+            bool retVal = Test(test);
+            Debug.Log($"Checking {Name}: {retVal}");
+
+            return retVal;
+        }
+
+        protected abstract bool Test(T context);
     }
 }

@@ -8,7 +8,7 @@ namespace ImperialStruggle
 {
     public class TriggerEventCardAction : PlayerAction
     {
-        protected override async Task Do()
+        protected override async Task Do(IAction context)
         {
             if(Phase.CurrentPhase is ActionRound actionRound)
             {
@@ -25,22 +25,22 @@ namespace ImperialStruggle
             }
         }
 
-        async void Finish(IEnumerable<EventCard> cards)
+        async void Finish(Selection<EventCard> cards)
         {
             if(cards.Count() > 0)
             {
                 EventCard card = cards.First();
                 Faction actingFaction = card.cardActions.ContainsKey(Player.Faction) ? Player.Faction : Game.Neutral;
-                GameAction baseAction = card.cardActions[actingFaction].baseAction;
-                GameAction bonusAction = card.cardActions[actingFaction].bonusAction;
+                PlayerAction baseAction = card.cardActions[actingFaction].baseAction;
+                PlayerAction bonusAction = card.cardActions[actingFaction].bonusAction;
 
-                bool bonusEligible = card.bonusCondition.Test(null);
+                bool bonusEligible = card.bonusCondition.Check(this);
 
                 if (baseAction != null)
-                    await baseAction.Execute();
+                    await baseAction.Execute(this);
 
                 if (bonusEligible && bonusAction != null)
-                    await bonusAction.Execute();
+                    await bonusAction.Execute(this);
             }
         }
     }

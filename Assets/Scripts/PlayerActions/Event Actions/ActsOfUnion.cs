@@ -11,7 +11,7 @@ namespace ImperialStruggle
         [SerializeField] Map europe;
         [SerializeField] List<PoliticalData> excludedSpaces; 
 
-        protected override async Task Do()
+        protected override async Task Do(IAction context)
         {
             IEnumerable<PoliticalSpace> eligibleSpaces = Game.Spaces.OfType<PoliticalSpace>()
                 .Where(space => space.map == europe && !excludedSpaces.Contains(space.data) && space.Flag == Player.Opponent);

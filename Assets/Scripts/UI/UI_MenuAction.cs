@@ -13,9 +13,9 @@ namespace ImperialStruggle
         [SerializeField] Image costIcon, background, highlight;
         [SerializeField] TextMeshProUGUI cost, actionName;
 
-        IPlayerAction action;
+        PlayerAction action;
 
-        public void OnPointerEnter(PointerEventData eventData) => highlight.gameObject.SetActive(action.Can());
+        public void OnPointerEnter(PointerEventData eventData) => highlight.gameObject.SetActive(action.Can(Game.ActivePlayer));
         public void OnPointerExit(PointerEventData eventData) => highlight.gameObject.SetActive(false);
         
         public async void OnPointerClick(PointerEventData eventData)
@@ -24,18 +24,18 @@ namespace ImperialStruggle
             await action.Execute();
         }
 
-        public void SetAction(IPlayerAction action)
+        public void SetAction(PlayerAction action)
         {
             this.action = action;
             actionName.text = action.Name;
 
-            actionName.color = action.Can() ? Color.black : Color.gray; 
+            actionName.color = action.Can(Game.ActivePlayer) ? Color.black : Color.gray; 
 
-            if(action is PurchaseAction purchaseAction)
+            if(action is _PurchaseAction purchaseAction)
                 SetActionCost(purchaseAction); 
         }
 
-        public void SetActionCost(PurchaseAction purchaseAction)
+        public void SetActionCost(_PurchaseAction purchaseAction)
         {
             if (purchaseAction.ActionCost.tier == ActionPoint.ActionTier.Major)
             {

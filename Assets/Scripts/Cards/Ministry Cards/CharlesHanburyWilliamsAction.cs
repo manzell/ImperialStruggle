@@ -9,7 +9,7 @@ namespace ImperialStruggle
     {
         [SerializeField] List<PoliticalData> eligibleSpaces;
 
-        protected override Task Do()
+        protected override Task Do(IAction context)
         {
             // Add Effect to 
             return Task.CompletedTask;

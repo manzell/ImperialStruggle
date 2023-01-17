@@ -14,13 +14,13 @@ namespace ImperialStruggle
         public static Phase rootPhase;
         public static Phase PreviousPhase, CurrentPhase;
         public static System.Action<Phase> PhaseStartEvent, PhaseEndEvent;
-        public System.Action StartEvent, EndEvent;
-
-        [SerializeField] protected Queue<GameAction> phaseStartActions, phaseEndActions;
-        public Stack<GameAction> ExecutedActions { get; private set; }
-        public Stack<Command> ExecutedCommands { get; private set; }
 
         [field: SerializeField] public Era era { get; private set; }
+        [SerializeField] protected Queue<IAction> PhaseStartActions, PhaseEndActions;
+        [HideInInspector] public System.Action StartEvent, EndEvent;
+
+        public Stack<Command> ExecutedCommands { get; private set; }
+
 
         Phase nextChild => GetComponentsInChildren<Phase>().Where(child => child != this).FirstOrDefault();
         Phase nextSibling => transform.parent.GetComponentsInChildren<Phase>().Where(actionRound => actionRound.transform.GetSiblingIndex() == transform.GetSiblingIndex() + 1).FirstOrDefault();
@@ -31,7 +31,6 @@ namespace ImperialStruggle
 
         private void Awake()
         {
-            ExecutedActions = new(); 
             ExecutedCommands = new();
         }
 
@@ -48,7 +47,7 @@ namespace ImperialStruggle
 
             StartEvent?.Invoke();
             PhaseStartEvent?.Invoke(this);
-            ProcessActionQueue(phaseStartActions);
+            ProcessActionQueue(PhaseStartActions); 
         }
 
         public void Advance()
@@ -61,14 +60,14 @@ namespace ImperialStruggle
 
         public virtual void EndPhase()
         {
-            ProcessActionQueue(phaseEndActions);
+            ProcessActionQueue(PhaseEndActions);
             EndEvent?.Invoke();
             PhaseEndEvent?.Invoke(this);
 
             FollowingPhase.StartPhase();
         }
 
-        public void Push(GameAction action)
+        public void Push(IAction action)
         {
             foreach (Command command in action.Commands)
             {
@@ -83,18 +82,14 @@ namespace ImperialStruggle
             ExecutedCommands.Push(command);
         }
 
-        async void ProcessActionQueue(Queue<GameAction> queue)
+        protected async void ProcessActionQueue(Queue<IAction> queue)
         {
-            // TODO: Look into an Iterator. If one of the Actions triggers the end game state we dont want to keep going through this list. 
-            //       Note: Checking that CurrentPhase is consistent help, but isn't a real solution. 
             Phase phase = CurrentPhase;
 
-            while (phase == CurrentPhase && queue.Count > 0)
+            while (phase == CurrentPhase && queue.Count() > 0)
             {
-                GameAction action = queue.Dequeue(); 
-                await action.Execute();
-
-                ExecutedActions.Push(action); 
+                IAction next = queue.Dequeue();
+                await next.Execute();
             }
         }
 

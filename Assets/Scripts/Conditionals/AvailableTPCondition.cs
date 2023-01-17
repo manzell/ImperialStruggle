@@ -4,10 +4,10 @@ using UnityEngine;
 
 namespace ImperialStruggle
 {
-    public class AvailableTPCondition : Conditional
+    public class AvailableTPCondition : Conditional<Faction>
     {
         [SerializeField] int margin = 1; 
 
-        public override bool Test(IPlayerAction context) => RecordsTrack.treatyPoints[context.Player.Faction] >= margin;
+        protected override bool Test(Faction faction) => RecordsTrack.treatyPoints[faction] >= margin;
     }
 }

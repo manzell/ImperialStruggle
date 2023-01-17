@@ -7,15 +7,17 @@ using System.Threading.Tasks;
 
 namespace ImperialStruggle
 {
-    public class BuyBonusWarAction : PlayerAction, PurchaseAction
+    public class BuyBonusWarAction : PlayerAction, _PurchaseAction, IExhaustable
     {
         WarTile bonusWarTile;
 
         public ActionPoint ActionCost => new ActionPoint(ActionPoint.ActionTier.Minor, ActionPoint.ActionType.Military, 2);
 
-        public override bool Can() => base.Can() && Phase.CurrentPhase.ExecutedActions.Count(action => action is BuyBonusWarAction) >= 2; 
+        public bool exhausted { get; set; }
 
-        protected override async Task Do()
+        public override bool Can(Player player) => base.Can(player);// && Phase.CurrentPhase.ExecutedActions.Count(action => action is BuyBonusWarAction) >= 2; 
+
+        protected override async Task Do(IAction context)
         {
             bonusWarTile = Player.BonusWarTiles.OrderBy(tile => Random.value).First();
 

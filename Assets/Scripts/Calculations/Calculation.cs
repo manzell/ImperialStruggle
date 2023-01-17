@@ -1,20 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Sirenix.OdinInspector;
 
 namespace ImperialStruggle
 {
+    // A Calculating returns some values based on the given Game Context (a PlayerAction)
+    // Calculations generally speaking must not be collapsed until the Do() function of the PlayerAction
     [System.Serializable]
     public abstract class Calculation<T>
     {
         protected bool calculated = false;
 
-        protected abstract T Calc(Player player);
-        public T Calculate(Player player)
+        protected abstract T Calc(IAction context);
+
+        public T Calculate(IAction context = null)
         {
             calculated = true;
-            return Calc(player); 
+            return Calc(context);
         }
     }
 }

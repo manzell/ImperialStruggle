@@ -5,10 +5,10 @@ using UnityEngine;
 
 namespace ImperialStruggle
 {
-    public class PlayerActionCondition : Conditional
+    public class PlayerActionCondition : Conditional<IAction>
     {
         [SerializeField] List<PlayerAction> eligibleActions = new(); 
 
-        public override bool Test(IPlayerAction context) => eligibleActions.Any(action => action.GetType() == context.GetType()); 
+        protected override bool Test(IAction context) => eligibleActions.Any(action => action.GetType() == context.GetType()); 
     }
 }

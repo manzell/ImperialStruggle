@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-using System;
 using Sirenix.Utilities;
 
 namespace ImperialStruggle
@@ -18,8 +17,8 @@ namespace ImperialStruggle
         public Faction faction => adjacentSpaces.All(space => space.Flag == adjacentSpaces.First().Flag) ? 
             adjacentSpaces.First().Flag : null;
 
-        public Action UISelectionEvent { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public Action UIDeselectEvent { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public System.Action UISelectionEvent { get; set; }
+        public System.Action UIDeselectEvent { get; set; }
 
         public AdvantageTile(AdvantageData data)
         {
@@ -31,7 +30,7 @@ namespace ImperialStruggle
         {
             foreach(PlayerAction action in Data.playerActions)
             {
-                action.Setup(player);
+                action.SetPlayer(player);
                 await action.Execute(); 
             }
         }

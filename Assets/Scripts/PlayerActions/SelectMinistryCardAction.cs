@@ -18,7 +18,8 @@ namespace ImperialStruggle
                 foreach (Player player in Player.Players)
                 {
                     Selection<MinistryCardData> selection = new(player, player.Faction.ministers.Where(minister => minister.eras.Contains(peaceTurn.era)),
-                        Finish, 2); 
+                        Finish);
+                    selection.SetMinMax(2, 2); 
 
                     selection.SetTitle("Select your Ministry Card(s)");
 
@@ -34,6 +35,16 @@ namespace ImperialStruggle
             Debug.Log($"{selection.player} seleted {string.Join(" & ", selection.selectedItems.Select(m => m.Name))}"); 
             foreach(MinistryCardData minister in selection.selectedItems)
                 Commands.Push(new SelectMinistryCardCommand(selection.player, minister));
+        }
+    }
+
+    public class SelectMinistryCardResponse : SelectionReceiver<MinistryCardData>
+    {
+        public override void OnSelect(Selection<MinistryCardData> selection)
+        {
+            Debug.Log($"{selection.player} selected {string.Join(" & ", selection.selectedItems.Select(ministryCard => ministryCard.Name))}");
+            foreach (MinistryCardData minister in selection.selectedItems)
+                Commands.Append(new SelectMinistryCardCommand(selection.player, minister));
         }
     }
 }

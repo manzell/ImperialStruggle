@@ -14,7 +14,7 @@ namespace ImperialStruggle
         bool canFlagWithMinorAP => IrelandSpaces.Any(space => space.Control == Game.France);
         Dictionary<Space, FlagCostCalculation> previousCalculations = new();
 
-        public override void Reveal()
+        public override void Reveal(Player player)
         {
             foreach (PoliticalSpace space in IrelandSpaces.Union(ScotlandSpaces))
             {
@@ -30,7 +30,7 @@ namespace ImperialStruggle
             }
         }
 
-        protected override void Retire()
+        protected override void Retire(Player player)
         {
             foreach (PoliticalSpace space in previousCalculations.Keys)
             {

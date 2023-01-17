@@ -9,7 +9,7 @@ namespace ImperialStruggle
     {
         [SerializeField] int amount = 1; 
 
-        protected override Task Do()
+        protected override Task Do(IAction context)
         {
             Commands.Push(new AdjustDebtCommand(Player.Opponent.Faction, amount));
             return Task.CompletedTask; 

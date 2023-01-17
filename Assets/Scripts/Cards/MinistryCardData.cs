@@ -13,6 +13,6 @@ namespace ImperialStruggle
         [TextArea] public string cardText;
         [TextArea] public string flavor;
 
-        public List<IPlayerAction> MinisterActions; 
+        public List<PlayerAction> MinisterActions; 
     }
 }

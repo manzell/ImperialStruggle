@@ -10,7 +10,7 @@ namespace ImperialStruggle
     {
         [SerializeField] HashSet<PoliticalData> eligibleSpaces; 
 
-        protected override async Task Do()
+        protected override async Task Do(IAction context)
         {
             Selection<FlaggableSpace> selection = new(Player, eligibleSpaces.Where(space => Game.SpaceLookup[space].Flag == Game.France)
                 .Select(space => Game.SpaceLookup[space] as FlaggableSpace));
@@ -24,7 +24,7 @@ namespace ImperialStruggle
     {
         [SerializeField] HashSet<PoliticalData> irelandSpaces;
 
-        protected override Task Do()
+        protected override Task Do(IAction context)
         {
             foreach(Space space in irelandSpaces.Select(s => Game.SpaceLookup[s]))
             {

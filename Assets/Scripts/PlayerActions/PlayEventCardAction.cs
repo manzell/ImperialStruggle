@@ -8,33 +8,33 @@ namespace ImperialStruggle
 {
     public class PlayEventCardAction : PlayerAction
     {
-        public static System.Action<Selection<EventCard>> SelectEventCardEvent; 
+        public static System.Action<EventCard> PlayEventCardEvent;
+        public static System.Action<Selection<EventCard>> SelectEventCardsEvent; 
 
-        public virtual IEnumerable<EventCard> GetEligibleEventCards()
+        protected override async Task Do(IAction context)
         {
-            return Player.Cards.Where(card =>
+            IEnumerable<EventCard> eventCards = Player.Cards.Where(card =>
                 card.reqdActionType == ActionPoint.ActionType.None || card.reqdActionType == Phase.CurrentPhase.GetComponent<ActionRound>()?.investmentTile.majorActionPoint.type);
-        }
 
-        protected override Task Do()
-        {
-            IEnumerable<EventCard> eventCards = GetEligibleEventCards(); 
-
-            Selection<EventCard> selection = new(Player, eventCards, Finish); 
+            Selection<EventCard> selection = new(Player, eventCards); 
             selection.SetTitle($"Select a {Player.Faction} Event Card to Play");
 
-            SelectEventCardEvent?.Invoke(selection); 
-
-            return Task.CompletedTask;
-        }
-
-        public void Finish(Selection<EventCard> selection)
-        {
-            if(selection.Count() > 0)
+            await selection.Completion; 
+            
+            if (selection.FirstOrDefault() is EventCard card)
             {
-                Debug.Log($"{Player.Faction} plays {selection.selectedItems.First()} <Not Implemented>");
-                
+                PlayEventCardEvent?.Invoke(card);
+                Debug.Log($"{selection.player.Faction} plays {card} <Not Implemented>");
             }
+        }
+    }
+
+    public class PlayEventCardResponse : SelectionReceiver<EventCard>
+    {
+        public override void OnSelect(Selection<EventCard> selection)
+        {
+            if (selection.Count() > 0)
+                Debug.Log($"{selection.player.Faction} plays {selection.selectedItems.First()} <Not Implemented>");
         }
     }
 }

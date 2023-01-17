@@ -8,7 +8,7 @@ namespace ImperialStruggle
     public class TaxReform_Base : PlayerAction
     {
         [SerializeField] int debtReductionAmount = 2; 
-        protected override Task Do()
+        protected override Task Do(IAction context)
         {
             int debtReduction = Mathf.Min(debtReductionAmount, RecordsTrack.currentDebt[Player.Faction]);
             int EPaward = debtReductionAmount - debtReduction;
@@ -26,7 +26,7 @@ namespace ImperialStruggle
     public class TaxReform_Bonus : PlayerAction
     {
         [SerializeField] int debtReductionAmount = 1;
-        protected override Task Do()
+        protected override Task Do(IAction context)
         {
             int debtReduction = Mathf.Min(debtReductionAmount, RecordsTrack.currentDebt[Player.Faction]);
             int EPaward = debtReductionAmount - debtReduction;

@@ -44,7 +44,7 @@ namespace ImperialStruggle
             switch (Minister.ministryCardStatus)
             {
                 case MinistryCard.MinistryCardStatus.Selected:
-                    UI_PopupMenu.Open(new List<IPlayerAction>() { new RevealAction(Minister, Minister.data.Faction.player) });
+                    UI_PopupMenu.Open(new List<PlayerAction>() { new RevealAction(Minister) });
                     break;
                 case MinistryCard.MinistryCardStatus.Revealed:
                     UI_PopupMenu.Open(Minister.data.MinisterActions); 

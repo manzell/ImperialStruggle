@@ -11,7 +11,7 @@ namespace ImperialStruggle
     {
         [SerializeField] Map map;
 
-        protected override Task Do()
+        protected override Task Do(IAction context)
         {
             ScoreMapAction.scoreMapEvent += BonusVP;
             return Task.CompletedTask;

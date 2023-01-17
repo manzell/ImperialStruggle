@@ -5,11 +5,29 @@ using System.Linq;
 
 namespace ImperialStruggle
 {
-    public class MarketTypeFilter : Filter<Space>
+    public class MarketTypeFilter : Conditional<Space>
     {
-        [SerializeField] HashSet<Resource> marketTypes;
+        enum Status { Protected, Unprotected, Isolated, }
+        [SerializeField] HashSet<Resource> marketTypes = new();
+        [SerializeField] HashSet<Status> requiredStatus = new();
 
-        public override IEnumerable<Space> Apply(IEnumerable<Space> t) =>
-            t.Where(space => space is Market && marketTypes.Contains((space as Market).Resource));
+        protected override bool Test(Space context)
+        {
+            if(context is Market market && (marketTypes.Count() == 0 || marketTypes.Contains(market.Resource)))
+            {
+                bool retVal = true;
+
+                if (requiredStatus.Contains(Status.Protected))
+                    retVal &= market.Protected;
+                if (requiredStatus.Contains(Status.Unprotected))
+                    retVal &= !market.Protected;
+                if (requiredStatus.Contains(Status.Isolated))
+                    retVal &= market.Isolated();
+
+                return retVal; 
+            }
+
+            return false; 
+        }
     }
 }

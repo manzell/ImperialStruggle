@@ -6,8 +6,8 @@ namespace ImperialStruggle
 {
     public class AdjustDebtLimitCommand : Command
     {
-        Faction faction;
-        int amount;
+        [SerializeField] Faction faction;
+        [SerializeField] int amount;
 
         public AdjustDebtLimitCommand(Faction faction, int amount)
         {
@@ -15,7 +15,7 @@ namespace ImperialStruggle
             this.amount = amount;
         }
 
-        public override void Do(GameAction action)
+        public override void Do(IAction action)
         {
             int debtLimit = Mathf.Max(0, RecordsTrack.debtLimit[faction] + amount);
             Debug.Log($"Adjusting {faction} Debt Limit by {amount} (to {debtLimit})");

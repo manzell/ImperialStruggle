@@ -9,9 +9,9 @@ namespace ImperialStruggle
     {
         List<EventCard> cards;
         public AddCardsToDeckCommand(List<EventCard> cards) => this.cards = cards;
-        public override void Do(GameAction action)
+        public override void Do(IAction context)
         {
-            Debug.Log($"{cards.Count} added to Event Card Deck");
+            Debug.Log($"{cards.Count} cards added to Event Card Deck");
             cards.ForEach(card => Game.EventDeck.Push(card));
             Game.EventDeck = new(Game.EventDeck.OrderBy(card => Random.value)); // Consider adding a Shuffle Command separately
         }

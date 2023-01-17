@@ -10,7 +10,7 @@ namespace ImperialStruggle
     {
         [SerializeField] int vpAward = 1;
         [SerializeField] int debtLimitReduction = 1; 
-        protected override Task Do()
+        protected override Task Do(IAction context)
         {
             Commands.Push(new AdjustDebtLimitCommand(Player.Opponent.Faction, -debtLimitReduction));
 
@@ -28,7 +28,7 @@ namespace ImperialStruggle
     {
         [SerializeField] int debtReduction = 2; 
 
-        protected override Task Do()
+        protected override Task Do(IAction context)
         {
             Commands.Push(new AdjustDebtCommand(Player.Faction, -debtReduction));
             return Task.CompletedTask; 

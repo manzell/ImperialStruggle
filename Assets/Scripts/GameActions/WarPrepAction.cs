@@ -13,9 +13,9 @@ namespace ImperialStruggle
 
         protected override Task Do()
         {
-            foreach (Player player in Player.Players)
+            foreach (Player p in Player.Players)
                 foreach (Theater theater in nextWar.theaters)
-                    Commands.Push(new AddWarTileToTheaterCommand(player.WarTiles.OrderBy(x => Random.value).FirstOrDefault(), theater));
+                    Commands.Push(new AddWarTileToTheaterCommand(p.WarTiles.OrderBy(x => Random.value).FirstOrDefault(), theater));
 
             return Task.CompletedTask; 
         }

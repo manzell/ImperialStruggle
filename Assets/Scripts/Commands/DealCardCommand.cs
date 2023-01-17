@@ -8,7 +8,7 @@ namespace ImperialStruggle
 {
     public class DealCardCommand : Command
     {
-        public static System.Action<Player, EventCard> dealCardEvent;
+        public static System.Action<Player, EventCard> DealCardEvent;
         [SerializeField] Player player;
 
         Stack<EventCard> dealtCards = new();
@@ -18,14 +18,14 @@ namespace ImperialStruggle
             this.player = player;
         }
 
-        public override void Do(GameAction action)
+        public override void Do(IAction action)
         {
             EventCard card = Game.EventDeck.Pop();
 
             player.Cards.Add(card);
 
             dealtCards.Push(card);
-            dealCardEvent?.Invoke(player, card);
+            DealCardEvent?.Invoke(player, card);
 
             Debug.Log($"{card.Name} dealt to {player.name}");
         }

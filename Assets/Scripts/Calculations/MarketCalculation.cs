@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace ImperialStruggle
 {
-    public class MarketCalculation : Calculation<HashSet<Space>>
+    public class MarketCalculation : Calculation<IEnumerable<ISelectable>>
     {
         [SerializeField] HashSet<Map> maps = new();
         [SerializeField] HashSet<Region> regions = new();
@@ -15,7 +15,7 @@ namespace ImperialStruggle
 
         enum Status { Protected, Unprotected, Isolated, }
 
-        protected override HashSet<Space> Calc(Player player)
+        protected override IEnumerable<ISelectable> Calc(IAction context)
         {
             IEnumerable<Market> spaces = Game.Spaces.OfType<Market>();
 
@@ -26,13 +26,13 @@ namespace ImperialStruggle
             if (resources != null && resources.Count > 0)
                 spaces = spaces.Where(space => resources.Contains(space.Resource));
             if (status != null && status.Contains(Status.Isolated))
-                spaces = spaces.Where(space => space.Isolated(null)); // TODO Fix this. Should Calculations require a PlayerAction context?
+                spaces = spaces.Where(space => space.Isolated()); // TODO Fix this. Should Calculations require a PlayerAction context?
             if (status != null && status.Contains(Status.Protected))
                 spaces = spaces.Where(space => space.Protected);
             if (status != null && status.Contains(Status.Unprotected))
                 spaces = spaces.Where(space => !space.Protected);
 
-            return new HashSet<Space>(spaces); 
+            return spaces; 
         }
     }
 }

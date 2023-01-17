@@ -9,7 +9,7 @@ namespace ImperialStruggle
     public class CarnaticWar_Base : PlayerAction
     {
         [SerializeField] Map india; 
-        protected override async Task Do()
+        protected override async Task Do(IAction context)
         {
             IEnumerable<PoliticalSpace> localAlliances = Game.Spaces.OfType<PoliticalSpace>().Where(space => space.map == india); 
 
@@ -33,7 +33,7 @@ namespace ImperialStruggle
     {
         [SerializeField] Map india;
         [SerializeField] Resource cotton; 
-        protected override async Task Do()
+        protected override async Task Do(IAction context)
         {
             List<FlaggableSpace> eligibleSpaces = Game.Spaces.OfType<Fort>().Where(fort => !fort.damaged).ToList<FlaggableSpace>();
             eligibleSpaces.AddRange(Game.Spaces.OfType<Market>().Where(market => market.Resource == cotton && market.Flag != Player.Faction));

@@ -7,17 +7,15 @@ using UnityEngine.TextCore;
 namespace ImperialStruggle
 {
     // Returns true if the Target Faction controls Any of the given Spaces, All of the given spaces, or More than the opposition
-    public class ControlSpacesCondition : Conditional
+    public class ControlSpacesCondition : Conditional<Space>
     {
         public enum ComparisonType { Any, All, More, Most, None }
         [SerializeField] ComparisonType conditionalMode;
         [SerializeField] List<SpaceData> spaces = new();
         [SerializeField] Faction faction; 
 
-        public override bool Test(IPlayerAction action)
+        protected override bool Test(Space space)
         {
-            faction = faction ?? action.Player.Faction; 
-
             switch (conditionalMode)
             {
                 case ComparisonType.Any:

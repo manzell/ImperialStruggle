@@ -9,6 +9,6 @@ namespace ImperialStruggle
         Player player;
         public BuildFleetCommand(Player player) => this.player = player; 
 
-        public override void Do(GameAction action) => player.Squadrons.Add(new Squadron()); 
+        public override void Do(IAction context) => player.Squadrons.Add(new Squadron()); 
     }
 }

@@ -7,7 +7,7 @@ namespace ImperialStruggle
     public class NextPhaseCommand : Command
     {
         Phase lastPhase; 
-        public override void Do(GameAction action)
+        public override void Do(IAction context)
         {
             lastPhase = Phase.CurrentPhase;
             Phase.CurrentPhase.Advance();

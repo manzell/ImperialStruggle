@@ -12,7 +12,7 @@ namespace ImperialStruggle
             this.space = space;
         }
 
-        public override void Do(GameAction action)
+        public override void Do(IAction action)
         {
             if (space.ConflictMarkers.Count > 0)
                 space.ConflictMarkers.RemoveAt(0); 

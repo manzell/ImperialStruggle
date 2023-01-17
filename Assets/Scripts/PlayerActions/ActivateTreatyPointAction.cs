@@ -9,10 +9,9 @@ namespace ImperialStruggle
     {
         public ActionPoints actionPointAward;
         public ActionPoints actionPoints => actionPointAward;
-        public Faction faction => Player.Faction;
         public int tp => -1;
 
-        protected override Task Do()
+        protected override Task Do(IAction context)
         {
             return Task.CompletedTask; 
         }

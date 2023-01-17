@@ -19,7 +19,7 @@ namespace ImperialStruggle
         public ActionPoints() => actionPoints = new();
         public ActionPoints(List<ActionPoint> points) => this.actionPoints = points;
 
-        public bool Can(PurchaseAction context)
+        public bool Can(_PurchaseAction context)
         {
             bool retVal = actionPoints.Where(ap => (ap.type == context.ActionCost.type || ap.type >= ActionPoint.ActionType.Free) && ap.tier >= context.ActionCost.tier)
                 .Sum(ap => ap.Value(context)) > context.ActionCost.Value(context);
@@ -39,7 +39,7 @@ namespace ImperialStruggle
             AdjustAPEvent?.Invoke();
         }
 
-        public void Charge(PurchaseAction context)
+        public void Charge(_PurchaseAction context)
         {
             if(Can(context))
             {
@@ -50,7 +50,7 @@ namespace ImperialStruggle
                 {
                     bool typeOK = AP.type == actionCost.type || AP.type > ActionPoint.ActionType.VictoryPoint;
                     bool majorMinorOK = AP.tier == ActionPoint.ActionTier.Major || actionCost.tier == ActionPoint.ActionTier.Minor;
-                    bool allConditions = AP.conditionals.All(condition => condition.Test(context));
+                    bool allConditions = AP.conditionals.All(condition => condition.Check(context as PlayerAction));
 
                     if (typeOK && majorMinorOK && allConditions)
                         eligiblePaymentAPs.Add(AP); 
@@ -109,7 +109,7 @@ namespace ImperialStruggle
         [field: SerializeField] public ActionTier tier { get; private set; }
         [field: SerializeField] public ActionType type { get; private set; }
         [field: SerializeField] public int baseValue { get; private set; }
-        [field: SerializeReference] public List<Conditional> conditionals { get; private set; }
+        [field: SerializeField] public List<Conditional<PlayerAction>> conditionals { get; private set; }
 
         public string conditionText => conditionals != null && conditionals.Count > 0 ? string.Join(", ", conditionals.Select(c => c.ToString())) : string.Empty;
         public string Name => $"{Value(null)} [{baseValue}] {tier} {type} ({conditionText})";
@@ -146,7 +146,7 @@ namespace ImperialStruggle
 
         public void AdjustBaseValue(int x) => baseValue += x;
 
-        public int Value(PurchaseAction context)
+        public int Value(_PurchaseAction context)
         {
             if (context == null)
             {
@@ -156,7 +156,7 @@ namespace ImperialStruggle
                 else
                     return 0;
             }
-            else if (conditionals.All(condition => condition.Test(context)))
+            else if (conditionals.All(condition => condition.Check(context as PlayerAction)))
                 return baseValue;
             else
                 return 0;

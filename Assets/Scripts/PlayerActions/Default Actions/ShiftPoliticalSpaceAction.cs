@@ -14,7 +14,7 @@ namespace ImperialStruggle
 
         public override bool Eligible(Space space) => space is PoliticalSpace;
 
-        protected override Task Do()
+        protected override Task Do(IAction context)
         {
             if (Space.Flag == null)
                 Commands.Push(new FlagSpaceCommand(Space, Player.Faction));
@@ -24,10 +24,9 @@ namespace ImperialStruggle
             return Task.CompletedTask;
         }
 
-        public override void Setup(Player player)
+        public ShiftPoliticalSpaceAction()
         {
             Name = Space.Flag == Game.Neutral ? "Flag" : "Unflag";
-            base.Setup(player);
         }
     }
 }

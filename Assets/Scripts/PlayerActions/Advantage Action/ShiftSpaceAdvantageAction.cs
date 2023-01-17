@@ -6,24 +6,24 @@ using UnityEngine;
 
 namespace ImperialStruggle
 {
-    public class ShiftSpaceAdvantageAction : PlayerAction, PurchaseAction
+    public class ShiftSpaceAdvantageAction : PlayerAction, _PurchaseAction
     {
         enum ShiftType { Any, Flag, Unflag }
-        [SerializeField] Calculation<HashSet<Space>> eligibleSpaces;
+        [SerializeField] Calculation<IEnumerable<ISelectable>> eligibleSpaces;
         [SerializeField] ShiftType shiftType; 
         [field: SerializeField] public ActionPoint ActionCost { get; private set; }
 
-        protected override async Task Do()
+        protected override async Task Do(IAction context)
         {
-            Selection<Space> selection = new(Player, eligibleSpaces.Calculate(Player));
+            Selection<ISelectable> selection = new(Player, eligibleSpaces.Calculate(this)); 
             await selection.Completion; 
 
-            if(selection.Count() > 0)
+            if(selection.FirstOrDefault() is FlaggableSpace space)
             {
-                if (selection.First().Flag == Game.Neutral && shiftType != ShiftType.Unflag)
-                    Commands.Push(new FlagSpaceCommand(selection.First() as FlaggableSpace, Player.Faction));
-                else if (selection.First().Flag != Game.Neutral && shiftType != ShiftType.Flag)
-                    Commands.Push(new UnflagCommand(selection.First() as FlaggableSpace));
+                if (space.Flag == Game.Neutral && shiftType != ShiftType.Unflag)
+                    Commands.Push(new FlagSpaceCommand(space, Player.Faction));
+                else if (space.Flag != Game.Neutral && shiftType != ShiftType.Flag)
+                    Commands.Push(new UnflagCommand(space));
             }
         }
     }

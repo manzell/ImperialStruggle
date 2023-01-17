@@ -10,7 +10,7 @@ namespace ImperialStruggle
     {
         [SerializeField] Map carribean; 
 
-        protected override Task Do()
+        protected override Task Do(IAction context)
         {
             Selection<Market> selection = new(Player, Game.Spaces.OfType<Market>().Where(market => market.Flag == Player.Opponent.Faction && market.map == carribean));
 
@@ -31,7 +31,7 @@ namespace ImperialStruggle
     {
         [SerializeField] Map carribean;
 
-        protected override Task Do()
+        protected override Task Do(IAction context)
         {
             Selection<Market> selection = new(Player, Game.Spaces.OfType<Market>().Where(market => market.Flag == Player.Opponent.Faction && market.map == carribean));
 

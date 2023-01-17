@@ -9,14 +9,14 @@ namespace ImperialStruggle
 {
     public class AdjustFlagCostAdvantageAction : PlayerAction
     {
-        [SerializeField] Calculation<HashSet<Space>> eligibleSpaces; 
+        [SerializeField] Calculation<IEnumerable<ISelectable>> eligibleSpaces; 
         [SerializeField] int flagCostAdjustment; 
 
         Dictionary<FlaggableSpace, FlagCostCalculation> previousFlagCosts = new(); 
 
-        protected override Task Do()
+        protected override Task Do(IAction context)
         {
-            foreach(FlaggableSpace space in eligibleSpaces.Calculate(Player))
+            foreach(FlaggableSpace space in eligibleSpaces.Calculate(this))
             {
                 previousFlagCosts.Add(space, space.flagCost);
 

@@ -17,7 +17,7 @@ namespace ImperialStruggle
             this.amount = amount;
         }
 
-        public override void Do(GameAction action)
+        public override void Do(IAction context)
         {
             if (amount != 0)
             {

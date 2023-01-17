@@ -8,17 +8,16 @@ namespace ImperialStruggle
 {
     public class AlberonisAmbition : MonoBehaviour
     {
-        public class Alberonis_BR_MarketCondition : Conditional
+        public class AdjacentToBritishMarketCondition : Conditional<Space>
         {
-            public override bool Test(IPlayerAction context) => context is TargetSpaceAction<Market> targetAction && 
-                targetAction.Space.adjacentSpaces.OfType<Market>().Any(neighbor => neighbor.Flag == Game.Britain);
+            protected override bool Test(Space space) => space.adjacentSpaces.OfType<Market>().Any(neighbor => neighbor.Flag == Game.Britain);
         }
 
         public class Alberonis_FR_Base : PlayerAction
         {
             [SerializeField] HashSet<PoliticalData> eligibleSpaces;
 
-            protected override async Task Do()
+            protected override async Task Do(IAction context)
             {
                 await new Selection<PoliticalSpace>(Player, eligibleSpaces.Select(space => Game.SpaceLookup[space] as PoliticalSpace), Finish).Completion; 
             }
@@ -34,7 +33,7 @@ namespace ImperialStruggle
         {
             [SerializeField] HashSet<PoliticalData> spaces;
 
-            protected override Task Do()
+            protected override Task Do(IAction context)
             {
                 if (spaces.All(space => Game.SpaceLookup[space].Flag == Player.Faction))
                     Commands.Push(new AdjustVPCommand(Player.Faction, 3));

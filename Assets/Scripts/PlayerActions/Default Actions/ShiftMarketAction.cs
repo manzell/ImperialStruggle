@@ -11,25 +11,24 @@ namespace ImperialStruggle
         public ActionPoint ActionCost => Space.flagCost.GetAPCost(Player, Space);
         HashSet<Market> eligibleMarkets;
 
-        public override void Setup(Player player)
+        public ShiftMarketAction()
         {
             Name = "Shift Market";
-            base.Setup(player);
             ActionRound.ActionRoundStartEvent += SetEligibleSpaces;                
         }
 
         public void SetSpace(Market space) => Space = space;
         public override bool Eligible(Space space) => space is Market; 
-        public override bool Can()
+        public override bool Can(Player player)
         {
             if (Space == null) return false;
 
-            return base.Can() && eligibleMarkets.Contains(Space) && Space.adjacentSpaces.Any(neighbor =>
+            return base.Can(player) && eligibleMarkets.Contains(Space) && Space.adjacentSpaces.Any(neighbor =>
                     ((neighbor is Territory || neighbor is Fort || neighbor is NavalSpace) && neighbor.Flag == Player.Faction) ||
-                    (neighbor is Market targetMarket && neighbor.Control == Player.Faction && !targetMarket.Isolated(Player)));
+                    (neighbor is Market targetMarket && neighbor.Control == Player.Faction && !targetMarket.Isolated()));
         }
 
-        protected override Task Do()
+        protected override Task Do(IAction context)
         {
             if(Space.Flag == Game.Neutral)
                 Commands.Push(new FlagSpaceCommand(Space, Player.Faction)); 

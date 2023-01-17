@@ -11,7 +11,7 @@ namespace ImperialStruggle
         [SerializeField] Map northAmerica;
         new public string Name = "Four Mohawk Kings"; 
 
-        protected override async Task Do()
+        protected override async Task Do(IAction context)
         {
             IEnumerable<PoliticalSpace> eligibleSpaces = Game.Spaces.OfType<PoliticalSpace>().Where(space => space.map == northAmerica && space.Flag != Player.Faction);
 
@@ -26,7 +26,7 @@ namespace ImperialStruggle
     public class NativeAmericanAlliances_BR_Bonus : PlayerAction
     {
         [SerializeField] Map northAmerica; 
-        protected override async Task Do()
+        protected override async Task Do(IAction context)
         {
             Selection<AdvantageTile> selection = new(Player,
                 Player.AdvantageTiles.Where(tile => tile.adjacentSpaces.All(space => space.map == northAmerica))); 
@@ -42,7 +42,7 @@ namespace ImperialStruggle
     {
         [SerializeField] Map northAmerica;
 
-        protected override async Task Do()
+        protected override async Task Do(IAction context)
         {
             IEnumerable<PoliticalSpace> eligibleSpaces = Game.Spaces.OfType<PoliticalSpace>().Where(space => space.map == northAmerica && space.Flag != Player.Faction);
 

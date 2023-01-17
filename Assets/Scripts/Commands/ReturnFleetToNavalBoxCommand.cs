@@ -10,7 +10,7 @@ namespace ImperialStruggle
 
         public ReturnFleetToNavalBoxCommand(NavalSpace navalSpace) => this.navalSpace = navalSpace;
 
-        public override void Do(GameAction action)
+        public override void Do(IAction action)
         {
             navalSpace.Squadron.space = null; // TODO - Make this the Naval Box
             navalSpace.SetFlag(null); 

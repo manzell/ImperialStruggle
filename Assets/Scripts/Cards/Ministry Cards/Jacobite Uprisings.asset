@@ -44,7 +44,47 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: MinisterActions
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[ImperialStruggle.MinisterAction,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 2|ImperialStruggle.JacobiteShiftAction, Assembly-CSharp
+    - Name: EligibilityFilters
       Entry: 6
+      Data: 
+    - Name: CanFilters
+      Entry: 6
+      Data: 
+    - Name: jacobiteSpaces
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|ImperialStruggle.ScoreJacobitesAction, Assembly-CSharp
+    - Name: EligibilityFilters
+      Entry: 6
+      Data: 
+    - Name: CanFilters
+      Entry: 6
+      Data: 
+    - Name: scoringSpaces
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
   keywords: 
   Faction: {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}

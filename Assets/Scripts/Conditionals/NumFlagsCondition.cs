@@ -6,17 +6,18 @@ using System.Linq;
 namespace ImperialStruggle
 {
     // Does the Target Player control a number of spaces? 
-    public class NumFlagsCondition : Conditional
+    public class NumFlagsCondition : Conditional<Faction>
     {
+        enum ConditionType { Exactly, MoreThan, FewerThan, NotMoreThan, NotLessThan }
         [SerializeField] int targetFlags;
-        [SerializeField] Faction targetFaction;
-        [SerializeField] List<Space> spaces;
+        [SerializeField] Calculation<List<Space>> spacesCalc;
+        [SerializeField] ConditionType conditionType; 
 
-        public override bool Test(IPlayerAction action)
+        protected override bool Test(Faction faction)
         {
-            int spacesCount = spaces.Where(space => space.Flag == (targetFaction ?? action.Player.Faction)).Count();
+            int spacesCount = spacesCalc.Calculate().Where(space => space.Flag == faction).Count();
 
-            switch (ConditionalType)
+            switch (conditionType)
             {
                 case ConditionType.Exactly:
                     return spacesCount == targetFlags;

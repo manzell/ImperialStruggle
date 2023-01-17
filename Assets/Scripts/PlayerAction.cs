@@ -3,32 +3,49 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events; 
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace ImperialStruggle
 {
-    public abstract class PlayerAction : GameAction, IPlayerAction
+    public abstract class PlayerAction : ISelectable, IAction
     {
+        public string Name { get; protected set; }
+        public Stack<Command> Commands { get; private set; } // TODO Make this Fully Private and force usage of the Queue() Method. 
+        public System.Action UISelectionEvent { get; set; }
+        public System.Action UIDeselectEvent { get; set; }
         public Player Player { get; private set; }
-        [field: SerializeField] public bool Passive { get; protected set; }
-
-        public virtual void Setup(Player player)
-        {
-            this.Player = player;
-        }
 
         public virtual bool Eligible(Space space) => false;
 
-        public override bool Can()
+        public virtual bool Can(Player player)
         {
-            if (conditionals == null)
-                conditionals = new();
+            bool retVal = true;// = CanFilters.All(can => can.Calculate(this));
 
-            bool retVal = conditionals.All(c => c.Test(this));
-
-            if (this is PurchaseAction purchaseAction)
-                retVal &= purchaseAction.Player.ActionPoints.Can(purchaseAction);
+            if (this is _PurchaseAction purchaseAction)
+                retVal &= player.ActionPoints.Can(purchaseAction);
 
             return retVal;
         }
+
+        protected virtual Task Do(IAction context) => Task.CompletedTask;
+
+        public async virtual Task Execute(IAction context = null)
+        {
+            Player = Player ?? (context as PlayerAction)?.Player ?? (Phase.CurrentPhase as ActionRound)?.player ?? Game.ActivePlayer; 
+
+            if (Can(Player))
+            {
+                Commands = new();
+
+                await Do(context); // Execution should pause here
+
+                if (this is _PurchaseAction purchaseAction)
+                    Player.ActionPoints.Charge(purchaseAction);
+
+                Phase.CurrentPhase.Push(this); // Command execution happens here. 
+            }
+        }
+
+        public void SetPlayer(Player player) => Player = player; 
     }
 }

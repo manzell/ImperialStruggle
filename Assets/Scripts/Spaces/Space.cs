@@ -13,7 +13,7 @@ namespace ImperialStruggle
         public SpaceData data;         
         public SpaceData Data => data;
         public SpaceType spaceType { get; private set; }
-        public List<IPlayerAction> Actions { get; private set; }
+        public List<PlayerAction> Actions { get; private set; }
         public List<ConflictMarker> ConflictMarkers { get; private set; } = new();
 
         public string Name => data.name;
@@ -66,10 +66,9 @@ namespace ImperialStruggle
         public bool Protected => !adjacentSpaces.Where(space => space.Flag == this.Flag).Any(space =>
                 space is NavalSpace navapSpace || (space is Fort fort && !fort.damaged));
 
-        public bool Isolated(Player player)
+        public bool Isolated()
         {
             int counter = 99;
-            bool retVal = true;
             Space currentSpace = this;
             HashSet<Space> spacesToCheck = new();
             HashSet<Space> checkedSpaces = new();
@@ -77,18 +76,11 @@ namespace ImperialStruggle
             while (currentSpace != null && counter > 0)
             {
                 counter--;
-                if ((currentSpace is Territory || currentSpace is Fort || currentSpace is NavalSpace) && currentSpace.Control == player.Faction)
-                {
-                    //Debug.Log($"{currentSpace.Name} is Eligible connection [{counter}]"); 
-                    retVal = false;
-                    break;
-                }
+                if ((currentSpace is Territory || currentSpace is Fort || currentSpace is NavalSpace) && currentSpace.Control == Flag)
+                    return false; 
                 else
                 {
                     checkedSpaces.Add(currentSpace);
-
-                    //Debug.Log($"{currentSpace.Name} is not Controlled Territory/Fort/NavalSpace. Adding " +
-                    //    $"{string.Join(", ", spacesToAdd.Select(space => space.Name))} [{counter}]");
 
                     spacesToCheck.UnionWith(currentSpace.adjacentSpaces.Where(space => !checkedSpaces.Contains(space)
                         && space.Flag == Flag && space.ConflictMarkers.Count == 0).Except(spacesToCheck));
@@ -97,8 +89,7 @@ namespace ImperialStruggle
                 }
             }
 
-            Debug.Log($"Checking {Name} for Isolated Status: {retVal}");
-            return retVal;
+            return true;
         }
     }
 

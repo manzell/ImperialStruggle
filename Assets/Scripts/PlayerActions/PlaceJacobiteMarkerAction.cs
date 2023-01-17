@@ -10,7 +10,7 @@ namespace ImperialStruggle
         [SerializeField] int requiredVictoryMargin;
         [SerializeField] Theater theater; 
 
-        protected override Task Do()
+        protected override Task Do(IAction context)
         {
             if(theater.GetTheaterScore(Player.Faction) - theater.GetTheaterScore(Player.Opponent.Faction) >= requiredVictoryMargin &&
                 Player.Faction == Game.France)

@@ -50,7 +50,7 @@ namespace ImperialStruggle
         [SerializeField] Resource resource;
         [SerializeField] Phase.Era era;
 
-        public override void Do(GameAction action)
+        public override void Do(IAction action)
         {
 
 

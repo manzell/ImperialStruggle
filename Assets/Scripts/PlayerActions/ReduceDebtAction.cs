@@ -10,13 +10,14 @@ namespace ImperialStruggle
     {
         [SerializeField] int debtAdjustment;
 
-        public override bool Can()
+        public override bool Can(Player player)
         {
-            return base.Can() && RecordsTrack.currentDebt[Player.Faction] > 0 && 
-                !Phase.CurrentPhase.ExecutedActions.OfType<PurchaseAction>().Any();
+            Debug.Log("Warning - Does not check for purchases in Multiple Regions/Maps");
+            return base.Can(player) && RecordsTrack.currentDebt[player.Faction] > 0; //&& 
+                //!Phase.CurrentPhase.ExecutedActions.OfType<_PurchaseAction>().Any();
         }
 
-        protected override Task Do()
+        protected override Task Do(IAction context)
         {
             Commands.Push(new AdjustDebtCommand(Player.Faction, debtAdjustment));
             return Task.CompletedTask;

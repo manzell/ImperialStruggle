@@ -11,7 +11,7 @@ namespace ImperialStruggle
         [SerializeField] HashSet<PoliticalData> germanStates;
         [SerializeField] int VPaward = 2; 
 
-        protected override async Task Do()
+        protected override async Task Do(IAction context)
         {
             Selection<FlaggableSpace> selection = new(Player, germanStates.Select(data => Game.SpaceLookup[data] as FlaggableSpace)
                 .Where(space => space.Flag != Player.Faction));
@@ -34,7 +34,7 @@ namespace ImperialStruggle
         [SerializeField] PoliticalData russia;
         [SerializeField] int VPAward = 2; 
 
-        protected override Task Do()
+        protected override Task Do(IAction context)
         {
             if (Game.SpaceLookup[russia].Flag == Game.France)
                 Commands.Push(new AdjustVPCommand(Player.Faction, VPAward));

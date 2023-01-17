@@ -8,7 +8,7 @@ namespace ImperialStruggle
 {
     public class MilitaryDamageAction : PlayerAction
     {
-        protected async override Task Do()
+        protected async override Task Do(IAction context)
         {
             if(Phase.CurrentPhase is Theater theater)
             {

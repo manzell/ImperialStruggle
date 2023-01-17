@@ -8,6 +8,6 @@ namespace ImperialStruggle
     public class ConflictsCalculation : Calculation<int>
     {
         [SerializeField] Calculation<HashSet<Space>> spaces;
-        protected override int Calc(Player player) => spaces.Calculate(player).Count(space => space.Flag == player.Opponent.Faction);
+        protected override int Calc(IAction context) => spaces.Calculate(context).Count(space => space.Flag == (context as PlayerAction)?.Player.Opponent.Faction);
     }
 }

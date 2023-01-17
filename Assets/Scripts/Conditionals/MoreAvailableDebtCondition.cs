@@ -4,12 +4,12 @@ using UnityEngine;
 
 namespace ImperialStruggle
 {
-    public class MoreAvailableDebtCondition : Conditional
+    public class MoreAvailableDebtCondition : Conditional<Faction>
     {
         [SerializeField] int margin = 1;
 
-        public override bool Test(IPlayerAction context) => margin == 0 ? 
-            RecordsTrack.availableDebt[context.Player.Faction] == RecordsTrack.availableDebt[context.Player.Opponent.Faction] :
-            RecordsTrack.availableDebt[context.Player.Faction] - RecordsTrack.availableDebt[context.Player.Opponent.Faction] >= margin;
+        protected override bool Test(Faction faction) => margin == 0 ?
+                RecordsTrack.availableDebt[faction] == RecordsTrack.availableDebt[faction.Opposition()] :
+                RecordsTrack.availableDebt[faction] - RecordsTrack.availableDebt[faction.Opposition()] >= margin;
     }
 }

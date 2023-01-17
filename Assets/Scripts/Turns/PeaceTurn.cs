@@ -8,7 +8,7 @@ namespace ImperialStruggle
 {
     public class PeaceTurn : Phase
     {
-        public static System.Action<PeaceTurn> StartPeaceTurnEvent, EndPeaceTurnEvent; 
+        public static System.Action<PeaceTurn> StartPeaceTurnEvent, EndPeaceTurnEvent;
         public Player initiative;
         public HashSet<Resource> globalDemandResources = new();
         public Dictionary<Map, AwardTile> awardTiles = new Dictionary<Map, AwardTile>();

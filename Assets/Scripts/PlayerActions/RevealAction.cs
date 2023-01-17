@@ -8,21 +8,17 @@ namespace ImperialStruggle
     public class RevealAction : PlayerAction
     {
         MinistryCard card;
-        Player player; 
 
-        public RevealAction(MinistryCard minister, Player player)
+        public RevealAction(MinistryCard minister)
         {
             Name = "Reveal " + minister.Name;
             card = minister; 
-            this.player = player;
-
-            Setup(player);
         }
 
-        protected override Task Do()
+        protected override Task Do(IAction context)
         {
             Debug.Log($"{Player.Name} reveals {card.Name}");
-            Commands.Push(new RevealCommand(player, card)); 
+            Commands.Push(new RevealCommand(Player, card)); 
             return Task.CompletedTask; 
         }
     }
@@ -37,13 +33,12 @@ namespace ImperialStruggle
             this.player = player;
         }
 
-        public override void Do(GameAction action)
+        public override void Do(IAction action)
         {
-            card.ministryCardStatus = MinistryCard.MinistryCardStatus.Revealed;
+            card.SetMinistryCardStatus(MinistryCard.MinistryCardStatus.Revealed);
+
             foreach(MinisterAction ministerAction in card.data.MinisterActions)
-            {
-                ministerAction.Reveal(); 
-            }
+                ministerAction.Reveal(player); 
         }
     }
 }

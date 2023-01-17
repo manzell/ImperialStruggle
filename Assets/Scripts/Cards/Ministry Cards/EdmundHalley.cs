@@ -6,11 +6,11 @@ using System.Linq;
 
 namespace ImperialStruggle
 {
-    public class EdmundHalleyBuildSquadronAction : MinisterAction, PurchaseAction
+    public class EdmundHalleyBuildSquadronAction : MinisterAction, _PurchaseAction
     {
         public ActionPoint ActionCost => new ActionPoint(ActionPoint.ActionTier.Minor, ActionPoint.ActionType.Military, 2);
 
-        protected override Task Do()
+        protected override Task Do(IAction context)
         {
             Exhausted = true;
             Commands.Push(new BuildFleetCommand(Player)); 
@@ -22,10 +22,10 @@ namespace ImperialStruggle
     {
         [SerializeField] Map europe; 
 
-        public override bool Can() => Player.Squadrons.Any(squadron => squadron.space?.map == europe) && Player.Cards.Count() > 0
-            && base.Can();
+        public override bool Can(Player player) => Player.Squadrons.Any(squadron => squadron.space?.map == europe) && Player.Cards.Count() > 0
+            && base.Can(player);
 
-        protected async override Task Do()
+        protected async override Task Do(IAction context)
         {
             await new Selection<EventCard>(Player, Player.Cards, Finish).Completion; 
         }
