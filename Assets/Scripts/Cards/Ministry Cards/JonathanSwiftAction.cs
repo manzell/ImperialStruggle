@@ -8,24 +8,24 @@ namespace ImperialStruggle
 {
     public class JonathanSwiftAction : MinisterAction
     {
-        [SerializeField] Map Europe; 
-        [SerializeField] HashSet<PoliticalSpace> IrelandSpaces, ScotlandSpaces;
+        [SerializeField] Map Europe;
+        [SerializeField] HashSet<PoliticalData> IrelandSpaces, ScotlandSpaces;
 
-        bool canFlagWithMinorAP => IrelandSpaces.Any(space => space.Control == Game.France);
+
         Dictionary<Space, FlagCostCalculation> previousCalculations = new();
 
         public override void Reveal(Player player)
         {
-            foreach (PoliticalSpace space in IrelandSpaces.Union(ScotlandSpaces))
+            foreach (PoliticalSpace space in IrelandSpaces.Union(ScotlandSpaces).Select(data => Game.SpaceLookup[data]))
             {
                 previousCalculations.Add(space, space.flagCost); 
-                space.flagCost = new IrelandScotlandSwiftFlagCost(previousCalculations[space]);
+                space.flagCost = new IrelandScotlandSwiftFlagCost(previousCalculations[space], this);
                 space.updateSpaceEvent?.Invoke();
             }
-            foreach(PoliticalSpace space in Europe.spaces.Except(IrelandSpaces).Except(ScotlandSpaces))
+            foreach(PoliticalSpace space in Game.Spaces.Where(space => space.map == Europe))
             {
                 previousCalculations.Add(space, space.flagCost);
-                space.flagCost = new EuropeDeflagSwiftFlagCost(previousCalculations[space], IrelandSpaces);
+                space.flagCost = new EuropeDeflagSwiftFlagCost(previousCalculations[space], IrelandSpaces.Select(data => Game.SpaceLookup[data] as PoliticalSpace)); 
                 space.updateSpaceEvent?.Invoke(); 
             }
         }
@@ -42,16 +42,21 @@ namespace ImperialStruggle
         public class IrelandScotlandSwiftFlagCost : FlagCostCalculation
         {
             FlagCostCalculation previousCalculation;
+            IAction context; 
 
-            public IrelandScotlandSwiftFlagCost(FlagCostCalculation calculation) => previousCalculation = calculation; 
+            public IrelandScotlandSwiftFlagCost(FlagCostCalculation calculation, IAction context)
+            {
+                this.context = context; 
+                previousCalculation = calculation;
+            }
 
             public override ActionPoint GetAPCost(Player player, FlaggableSpace space)
             {
                 if (player.Faction == Game.Britain)
                     return new(ActionPoint.ActionTier.Minor, ActionPoint.ActionType.Diplomacy,
-                        space.ConflictMarkers.Count > 0 ? 1 : (space.Data as PoliticalData).FlagCost - 1);
+                        Mathf.Max(1, previousCalculation.GetAPCost(player, space).Value(context as _PurchaseAction) - 1)); 
                 else
-                    return previousCalculation.GetAPCost(player, space); 
+                    return previousCalculation.GetAPCost(player, space);
             }
         }
 
@@ -59,16 +64,17 @@ namespace ImperialStruggle
         {
             FlagCostCalculation previousCalculation;
             HashSet<PoliticalSpace> irelandSpaces;
+            bool canFlagWithMinorAP => irelandSpaces.Any(space => space.Control == Game.Britain);
 
-            public EuropeDeflagSwiftFlagCost(FlagCostCalculation calculation, HashSet<PoliticalSpace> irelandSpaces)
+            public EuropeDeflagSwiftFlagCost(FlagCostCalculation calculation, IEnumerable<PoliticalSpace> irelandSpaces)
             {
                 previousCalculation = calculation;
-                this.irelandSpaces = irelandSpaces; 
+                this.irelandSpaces = new(irelandSpaces);
             }
 
             public override ActionPoint GetAPCost(Player player, FlaggableSpace space)
             {
-                if (player.Faction == Game.Britain && space.Flag == Game.France && irelandSpaces.Any(space => space.Control == Game.Britain))
+                if (canFlagWithMinorAP)
                     return new(ActionPoint.ActionTier.Minor, ActionPoint.ActionType.Diplomacy,
                         space.ConflictMarkers.Count > 0 ? 1 : (space.Data as PoliticalData).FlagCost);
                 else

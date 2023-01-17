@@ -7,15 +7,7 @@ namespace ImperialStruggle
     public class AddAPCommand : Command
     {
         Player player;
-        ActionPoint apAward; 
-        ActionPoints apsAward;
-        ActionPoints prevAP; 
-
-        public AddAPCommand(Player player, ActionPoints AP)
-        {
-            apsAward = AP; 
-            this.player = player;
-        }
+        [SerializeField] ActionPoint apAward; 
 
         public AddAPCommand(Player player, ActionPoint AP)
         {
@@ -25,11 +17,7 @@ namespace ImperialStruggle
 
         public override void Do(IAction context)
         {
-            prevAP = player.ActionPoints;
-
-            if (apAward != null)
-                foreach (ActionPoint ap in apsAward)
-                    player.ActionPoints.Credit(ap);
+            player.ActionPoints.Credit(apAward);
 
             Debug.Log("Add Action Point Event Invoked");
 

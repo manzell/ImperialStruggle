@@ -9,7 +9,7 @@ namespace ImperialStruggle
 {
     public class JohnLawAction : MinisterAction
     {
-        [SerializeField] List<Space> scotlandSpaces = new List<Space>();
+        [SerializeField] List<PoliticalData> scotlandSpaces = new();
         System.Action<PeaceTurn> reduceDebt; 
 
         public override void Reveal(Player player)
@@ -25,7 +25,7 @@ namespace ImperialStruggle
 
         void ReduceDebt(Player player)
         {
-            int debtReduction = scotlandSpaces.Any(space => space.Control == player.Faction) ? 2 : 1;
+            int debtReduction = scotlandSpaces.Any(data => Game.SpaceLookup[data].Control == player.Faction) ? 2 : 1;
             Commands.Push(new AdjustDebtCommand(player.Faction, -debtReduction)); 
         }
     }
