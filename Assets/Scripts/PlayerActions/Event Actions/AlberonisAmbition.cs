@@ -6,40 +6,37 @@ using UnityEngine;
 
 namespace ImperialStruggle
 {
-    public class AlberonisAmbition : MonoBehaviour
+    public class AdjacentToBritishMarketCondition : Conditional<IAction>
     {
-        public class AdjacentToBritishMarketCondition : Conditional<Space>
+        protected override bool Test(IAction action) => (action as TargetSpaceAction<Space>).Space.adjacentSpaces.OfType<Market>().Any(neighbor => neighbor.Flag == Game.Britain);
+    }
+
+    public class Alberonis_FR_Base : PlayerAction
+    {
+        [SerializeField] HashSet<PoliticalData> eligibleSpaces;
+
+        protected override async Task Do(IAction context)
         {
-            protected override bool Test(Space space) => space.adjacentSpaces.OfType<Market>().Any(neighbor => neighbor.Flag == Game.Britain);
+            await new Selection<PoliticalSpace>(Player, eligibleSpaces.Select(space => Game.SpaceLookup[space] as PoliticalSpace), Finish).Completion;
         }
 
-        public class Alberonis_FR_Base : PlayerAction
+        void Finish(Selection<PoliticalSpace> selection)
         {
-            [SerializeField] HashSet<PoliticalData> eligibleSpaces;
-
-            protected override async Task Do(IAction context)
-            {
-                await new Selection<PoliticalSpace>(Player, eligibleSpaces.Select(space => Game.SpaceLookup[space] as PoliticalSpace), Finish).Completion; 
-            }
-
-            void Finish(Selection<PoliticalSpace> selection)
-            {
-                if(selection.Count() > 0)
-                    Commands.Push(new ShiftSpaceCommand(selection.First(), Game.France)); 
-            }
+            if (selection.Count() > 0)
+                Commands.Push(new ShiftSpaceCommand(selection.First(), Game.France));
         }
+    }
 
-        public class Alberonis_FR_Bonus : PlayerAction
+    public class Alberonis_FR_Bonus : PlayerAction
+    {
+        [SerializeField] HashSet<PoliticalData> spaces;
+
+        protected override Task Do(IAction context)
         {
-            [SerializeField] HashSet<PoliticalData> spaces;
+            if (spaces.All(space => Game.SpaceLookup[space].Flag == Player.Faction))
+                Commands.Push(new AdjustVPCommand(Player.Faction, 3));
 
-            protected override Task Do(IAction context)
-            {
-                if (spaces.All(space => Game.SpaceLookup[space].Flag == Player.Faction))
-                    Commands.Push(new AdjustVPCommand(Player.Faction, 3));
-
-                return Task.CompletedTask; 
-            }
+            return Task.CompletedTask;
         }
     }
 }

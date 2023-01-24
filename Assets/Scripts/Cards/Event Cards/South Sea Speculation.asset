@@ -84,10 +84,7 @@ MonoBehaviour:
     - Name: bonusCondition
       Entry: 7
       Data: 3|ImperialStruggle.KeywordCondition, Assembly-CSharp
-    - Name: <ConditionalType>k__BackingField
-      Entry: 3
-      Data: 0
-    - Name: <ConditionalText>k__BackingField
+    - Name: <Name>k__BackingField
       Entry: 6
       Data: 
     - Name: keyword

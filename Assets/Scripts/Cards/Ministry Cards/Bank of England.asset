@@ -15,7 +15,8 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -39,26 +40,58 @@ MonoBehaviour:
       Data: 
     - Name: MinisterActions
       Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[ImperialStruggle.IPlayerAction,
-        Assembly-CSharp]], mscorlib
+      Data: 1|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction, Assembly-CSharp]],
+        mscorlib
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 2|ImperialStruggle.BankOfEnglandDebtLimitAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: true
+      Data: 2|ImperialStruggle.QueueCommandAction, Assembly-CSharp
+    - Name: commands
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[ImperialStruggle.Command, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 4|ImperialStruggle.AdjustDebtLimitCommand, Assembly-CSharp
+    - Name: faction
+      Entry: 10
+      Data: 0
+    - Name: amount
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: conditionals
+      Entry: 7
+      Data: 5|System.Collections.Generic.List`1[[ImperialStruggle.Conditional`1[[ImperialStruggle.IAction,
+        Assembly-CSharp]], Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 3|ImperialStruggle.BankOfEnglandEconEventAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
+      Data: 6|ImperialStruggle.BankOfEnglandEconEventAction, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 

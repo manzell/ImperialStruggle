@@ -17,6 +17,10 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 11400000, guid: 067a9e540ac894e4284ffb361336af00, type: 2}
+    - {fileID: 11400000, guid: 541b826ef51c36e4ea407eb3b12ac325, type: 2}
+    - {fileID: 11400000, guid: ceccd1d6d1c550b41b53738979957be0, type: 2}
+    - {fileID: 11400000, guid: f294329a10ddd2f4ba8dfaca608fda01, type: 2}
+    - {fileID: 11400000, guid: ac751d9cdba8f664580bd29a3f49b1d7, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -40,26 +44,73 @@ MonoBehaviour:
       Data: 
     - Name: playerActions
       Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[ImperialStruggle.IPlayerAction,
-        Assembly-CSharp]], mscorlib
+      Data: 1|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction, Assembly-CSharp]],
+        mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
       Data: 2|ImperialStruggle.ShiftSpaceAdvantageAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
     - Name: eligibleSpaces
+      Entry: 7
+      Data: 3|ImperialStruggle.SpacesCalc, Assembly-CSharp
+    - Name: SpaceFilters
+      Entry: 7
+      Data: 4|System.Collections.Generic.List`1[[ImperialStruggle.Conditional`1[[ImperialStruggle.Space,
+        Assembly-CSharp]], Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 5|ImperialStruggle.TargetSpaceCondition, Assembly-CSharp
+    - Name: <Name>k__BackingField
       Entry: 6
+      Data: 
+    - Name: eligibleSpaces
+      Entry: 7
+      Data: 6|System.Collections.Generic.HashSet`1[[ImperialStruggle.SpaceData, Assembly-CSharp]],
+        System.Core
+    - Name: 
+      Entry: 12
+      Data: 4
+    - Name: 
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 10
+      Data: 4
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
     - Name: shiftType
       Entry: 3
       Data: 2
     - Name: <ActionCost>k__BackingField
       Entry: 7
-      Data: 3|ImperialStruggle.ActionPoint, Assembly-CSharp
+      Data: 7|ImperialStruggle.ActionPoint, Assembly-CSharp
     - Name: <tier>k__BackingField
       Entry: 3
       Data: 0
@@ -70,17 +121,7 @@ MonoBehaviour:
       Entry: 3
       Data: 1
     - Name: <conditionals>k__BackingField
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[ImperialStruggle.Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 8

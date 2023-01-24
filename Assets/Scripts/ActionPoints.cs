@@ -109,7 +109,7 @@ namespace ImperialStruggle
         [field: SerializeField] public ActionTier tier { get; private set; }
         [field: SerializeField] public ActionType type { get; private set; }
         [field: SerializeField] public int baseValue { get; private set; }
-        [field: SerializeField] public List<Conditional<PlayerAction>> conditionals { get; private set; }
+        [field: SerializeField] public List<Conditional<IAction>> conditionals { get; private set; }
 
         public string conditionText => conditionals != null && conditionals.Count > 0 ? string.Join(", ", conditionals.Select(c => c.ToString())) : string.Empty;
         public string Name => $"{Value(null)} [{baseValue}] {tier} {type} ({conditionText})";
@@ -156,7 +156,7 @@ namespace ImperialStruggle
                 else
                     return 0;
             }
-            else if (conditionals.All(condition => condition.Check(context as PlayerAction)))
+            else if (conditionals.All(condition => condition.Check(context)))
                 return baseValue;
             else
                 return 0;

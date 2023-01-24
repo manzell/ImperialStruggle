@@ -21,7 +21,7 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  <prefab>k__BackingField: {fileID: 0}
+  <prefab>k__BackingField: {fileID: 2599398615842905254, guid: 939abfe4d6c8b0e49946f28ee1d4a523, type: 3}
   <Map>k__BackingField: {fileID: 11400000, guid: 5e460598291e3794a8ee7e5a51147d40, type: 2}
   <Region>k__BackingField: {fileID: 0}
   <startingFlag>k__BackingField: {fileID: 11400000, guid: fa035a9950db4ba458654758b49c2e78, type: 2}

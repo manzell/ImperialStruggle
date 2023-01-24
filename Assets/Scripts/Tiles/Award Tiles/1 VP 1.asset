@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45c6d278b13fb184b98734a7c8b92255, type: 3}
-  m_Name: Robert Walpole
+  m_Script: {fileID: 11500000, guid: 02648db47b6988c4a9f3e5334699aeda, type: 3}
+  m_Name: 1 VP 1
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -21,15 +21,30 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: eras
+    - Name: ActionPoints
       Entry: 7
-      Data: 0|System.Collections.Generic.HashSet`1[[ImperialStruggle.Phase+Era, Assembly-CSharp]],
-        System.Core
+      Data: 0|ActionPoints, Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
+      Entry: 7
+      Data: 1|ActionPoint, Assembly-CSharp
+    - Name: actionType
       Entry: 3
+      Data: 7
+    - Name: actionTier
+      Entry: 3
+      Data: 0
+    - Name: baseValue
+      Entry: 3
+      Data: 1
+    - Name: conditionals
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[Conditional, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
       Data: 0
     - Name: 
       Entry: 13
@@ -37,16 +52,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: MinisterActions
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 2|ImperialStruggle.RobertWalpoleAction, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -56,7 +61,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  keywords: 01000000
-  Faction: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
-  cardText: Once per turn, your may draw one Event card, then discard one Event card.
-  flavor: 
+    - Name: RequiredMargin
+      Entry: 3
+      Data: 0

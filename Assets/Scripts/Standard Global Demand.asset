@@ -30,7 +30,8 @@ MonoBehaviour:
     - Name: GlobalDemandAwards
       Entry: 7
       Data: 0|System.Collections.Generic.Dictionary`2[[ImperialStruggle.GlobalDemandKey,
-        Assembly-CSharp],[ImperialStruggle.ActionPoints, Assembly-CSharp]], mscorlib
+        Assembly-CSharp],[ImperialStruggle.GlobalDemandValue, Assembly-CSharp]],
+        mscorlib
     - Name: comparer
       Entry: 7
       Data: 1|System.Collections.Generic.ObjectEqualityComparer`1[[ImperialStruggle.GlobalDemandKey,
@@ -40,7 +41,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 6
+      Data: 18
     - Name: 
       Entry: 7
       Data: 
@@ -58,13 +59,16 @@ MonoBehaviour:
       Data: 
     - Name: $v
       Entry: 7
-      Data: 2|ImperialStruggle.ActionPoints, Assembly-CSharp
-    - Name: 
-      Entry: 12
+      Data: ImperialStruggle.GlobalDemandValue, Assembly-CSharp
+    - Name: VP
+      Entry: 3
+      Data: 2
+    - Name: TP
+      Entry: 3
+      Data: 1
+    - Name: debt
+      Entry: 3
       Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -88,13 +92,16 @@ MonoBehaviour:
       Data: 
     - Name: $v
       Entry: 7
-      Data: 3|ImperialStruggle.ActionPoints, Assembly-CSharp
-    - Name: 
-      Entry: 12
+      Data: ImperialStruggle.GlobalDemandValue, Assembly-CSharp
+    - Name: VP
+      Entry: 3
+      Data: 2
+    - Name: TP
+      Entry: 3
       Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
+    - Name: debt
+      Entry: 3
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -118,13 +125,16 @@ MonoBehaviour:
       Data: 
     - Name: $v
       Entry: 7
-      Data: 4|ImperialStruggle.ActionPoints, Assembly-CSharp
-    - Name: 
-      Entry: 12
+      Data: ImperialStruggle.GlobalDemandValue, Assembly-CSharp
+    - Name: VP
+      Entry: 3
+      Data: 2
+    - Name: TP
+      Entry: 3
+      Data: 1
+    - Name: debt
+      Entry: 3
       Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -148,13 +158,16 @@ MonoBehaviour:
       Data: 
     - Name: $v
       Entry: 7
-      Data: 5|ImperialStruggle.ActionPoints, Assembly-CSharp
-    - Name: 
-      Entry: 12
+      Data: ImperialStruggle.GlobalDemandValue, Assembly-CSharp
+    - Name: VP
+      Entry: 3
+      Data: 1
+    - Name: TP
+      Entry: 3
       Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
+    - Name: debt
+      Entry: 3
+      Data: -1
     - Name: 
       Entry: 8
       Data: 
@@ -178,13 +191,16 @@ MonoBehaviour:
       Data: 
     - Name: $v
       Entry: 7
-      Data: 6|ImperialStruggle.ActionPoints, Assembly-CSharp
-    - Name: 
-      Entry: 12
+      Data: ImperialStruggle.GlobalDemandValue, Assembly-CSharp
+    - Name: VP
+      Entry: 3
+      Data: 2
+    - Name: TP
+      Entry: 3
       Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
+    - Name: debt
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -208,13 +224,412 @@ MonoBehaviour:
       Data: 
     - Name: $v
       Entry: 7
-      Data: 7|ImperialStruggle.ActionPoints, Assembly-CSharp
+      Data: ImperialStruggle.GlobalDemandValue, Assembly-CSharp
+    - Name: VP
+      Entry: 3
+      Data: 3
+    - Name: TP
+      Entry: 3
+      Data: 0
+    - Name: debt
+      Entry: 3
+      Data: 1
     - Name: 
-      Entry: 12
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: ImperialStruggle.GlobalDemandKey, Assembly-CSharp
+    - Name: Era
+      Entry: 3
+      Data: 1
+    - Name: Resource
+      Entry: 10
       Data: 0
     - Name: 
-      Entry: 13
+      Entry: 8
       Data: 
+    - Name: $v
+      Entry: 7
+      Data: ImperialStruggle.GlobalDemandValue, Assembly-CSharp
+    - Name: VP
+      Entry: 3
+      Data: 0
+    - Name: TP
+      Entry: 3
+      Data: 0
+    - Name: debt
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: ImperialStruggle.GlobalDemandKey, Assembly-CSharp
+    - Name: Era
+      Entry: 3
+      Data: 1
+    - Name: Resource
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: ImperialStruggle.GlobalDemandValue, Assembly-CSharp
+    - Name: VP
+      Entry: 3
+      Data: 0
+    - Name: TP
+      Entry: 3
+      Data: 0
+    - Name: debt
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: ImperialStruggle.GlobalDemandKey, Assembly-CSharp
+    - Name: Era
+      Entry: 3
+      Data: 1
+    - Name: Resource
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: ImperialStruggle.GlobalDemandValue, Assembly-CSharp
+    - Name: VP
+      Entry: 3
+      Data: 2
+    - Name: TP
+      Entry: 3
+      Data: 1
+    - Name: debt
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: ImperialStruggle.GlobalDemandKey, Assembly-CSharp
+    - Name: Era
+      Entry: 3
+      Data: 1
+    - Name: Resource
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: ImperialStruggle.GlobalDemandValue, Assembly-CSharp
+    - Name: VP
+      Entry: 3
+      Data: 2
+    - Name: TP
+      Entry: 3
+      Data: 0
+    - Name: debt
+      Entry: 3
+      Data: -1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: ImperialStruggle.GlobalDemandKey, Assembly-CSharp
+    - Name: Era
+      Entry: 3
+      Data: 1
+    - Name: Resource
+      Entry: 10
+      Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: ImperialStruggle.GlobalDemandValue, Assembly-CSharp
+    - Name: VP
+      Entry: 3
+      Data: 3
+    - Name: TP
+      Entry: 3
+      Data: 1
+    - Name: debt
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: ImperialStruggle.GlobalDemandKey, Assembly-CSharp
+    - Name: Era
+      Entry: 3
+      Data: 1
+    - Name: Resource
+      Entry: 10
+      Data: 5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: ImperialStruggle.GlobalDemandValue, Assembly-CSharp
+    - Name: VP
+      Entry: 3
+      Data: 0
+    - Name: TP
+      Entry: 3
+      Data: 0
+    - Name: debt
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: ImperialStruggle.GlobalDemandKey, Assembly-CSharp
+    - Name: Era
+      Entry: 3
+      Data: 2
+    - Name: Resource
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: ImperialStruggle.GlobalDemandValue, Assembly-CSharp
+    - Name: VP
+      Entry: 3
+      Data: 3
+    - Name: TP
+      Entry: 3
+      Data: 0
+    - Name: debt
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: ImperialStruggle.GlobalDemandKey, Assembly-CSharp
+    - Name: Era
+      Entry: 3
+      Data: 2
+    - Name: Resource
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: ImperialStruggle.GlobalDemandValue, Assembly-CSharp
+    - Name: VP
+      Entry: 3
+      Data: 2
+    - Name: TP
+      Entry: 3
+      Data: 0
+    - Name: debt
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: ImperialStruggle.GlobalDemandKey, Assembly-CSharp
+    - Name: Era
+      Entry: 3
+      Data: 2
+    - Name: Resource
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: ImperialStruggle.GlobalDemandValue, Assembly-CSharp
+    - Name: VP
+      Entry: 3
+      Data: 1
+    - Name: TP
+      Entry: 3
+      Data: 0
+    - Name: debt
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: ImperialStruggle.GlobalDemandKey, Assembly-CSharp
+    - Name: Era
+      Entry: 3
+      Data: 2
+    - Name: Resource
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: ImperialStruggle.GlobalDemandValue, Assembly-CSharp
+    - Name: VP
+      Entry: 3
+      Data: 3
+    - Name: TP
+      Entry: 3
+      Data: 0
+    - Name: debt
+      Entry: 3
+      Data: -1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: ImperialStruggle.GlobalDemandKey, Assembly-CSharp
+    - Name: Era
+      Entry: 3
+      Data: 2
+    - Name: Resource
+      Entry: 10
+      Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: ImperialStruggle.GlobalDemandValue, Assembly-CSharp
+    - Name: VP
+      Entry: 3
+      Data: 3
+    - Name: TP
+      Entry: 3
+      Data: 0
+    - Name: debt
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: ImperialStruggle.GlobalDemandKey, Assembly-CSharp
+    - Name: Era
+      Entry: 3
+      Data: 2
+    - Name: Resource
+      Entry: 10
+      Data: 5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: ImperialStruggle.GlobalDemandValue, Assembly-CSharp
+    - Name: VP
+      Entry: 3
+      Data: 1
+    - Name: TP
+      Entry: 3
+      Data: 0
+    - Name: debt
+      Entry: 3
+      Data: 1
     - Name: 
       Entry: 8
       Data: 

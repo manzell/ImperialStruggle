@@ -41,47 +41,34 @@ MonoBehaviour:
       Data: 
     - Name: playerActions
       Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[ImperialStruggle.IPlayerAction,
-        Assembly-CSharp]], mscorlib
+      Data: 1|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction, Assembly-CSharp]],
+        mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 2|ImperialStruggle.PlaceConflictMarkerAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
-    - Name: eligibleSpaces
+      Data: 2|ImperialStruggle.SelectionAction, Assembly-CSharp
+    - Name: prompt
+      Entry: 1
+      Data: 'Place 1 Conflict Marker in a Cotton Market '
+    - Name: source
       Entry: 7
-      Data: 3|ImperialStruggle.MarketCalculation, Assembly-CSharp
-    - Name: maps
+      Data: 3|ImperialStruggle.SpacesCalc, Assembly-CSharp
+    - Name: SpaceFilters
       Entry: 7
-      Data: 4|System.Collections.Generic.HashSet`1[[ImperialStruggle.Map, Assembly-CSharp]],
-        System.Core
+      Data: 4|System.Collections.Generic.List`1[[ImperialStruggle.Conditional`1[[ImperialStruggle.Space,
+        Assembly-CSharp]], Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 1
     - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: regions
       Entry: 7
-      Data: 5|System.Collections.Generic.HashSet`1[[ImperialStruggle.Region, Assembly-CSharp]],
-        System.Core
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
+      Data: 5|ImperialStruggle.MarketTypeFilter, Assembly-CSharp
+    - Name: <Name>k__BackingField
+      Entry: 6
       Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: resources
+    - Name: marketTypes
       Entry: 7
       Data: 6|System.Collections.Generic.HashSet`1[[Resource, Assembly-CSharp]],
         System.Core
@@ -97,9 +84,9 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: status
+    - Name: requiredStatus
       Entry: 7
-      Data: 7|System.Collections.Generic.HashSet`1[[ImperialStruggle.MarketCalculation+Status,
+      Data: 7|System.Collections.Generic.HashSet`1[[ImperialStruggle.MarketTypeFilter+Status,
         Assembly-CSharp]], System.Core
     - Name: 
       Entry: 12
@@ -113,7 +100,28 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: ConflictMarkerRemovalCost
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: response
+      Entry: 7
+      Data: 8|ImperialStruggle.PlaceConflictMarkerResponse, Assembly-CSharp
+    - Name: removalCost
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: min
+      Entry: 3
+      Data: 1
+    - Name: max
       Entry: 3
       Data: 1
     - Name: 

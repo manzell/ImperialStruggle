@@ -20,9 +20,14 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
     - {fileID: 11400000, guid: 84f1ef17c0e1bf54db8cd441f31d7d11, type: 2}
     - {fileID: 11400000, guid: c1b5c4ab266aaff4d94caa6d86ee8cce, type: 2}
+    - {fileID: 11400000, guid: 067a9e540ac894e4284ffb361336af00, type: 2}
+    - {fileID: 11400000, guid: 1582d5adbdc70de46b684a162e6fe122, type: 2}
     - {fileID: 11400000, guid: 5f4c1c9ae935c444f85af57e0a507200, type: 2}
+    - {fileID: 11400000, guid: 64038aadb4c1f9147bf8f7c49d032239, type: 2}
     - {fileID: 11400000, guid: 0112d523b6190e042a65bb9bd85a2656, type: 2}
     - {fileID: 11400000, guid: 1661978c02569c44184af28cf268385a, type: 2}
+    - {fileID: 11400000, guid: 5f342005289eb544cbe0155577b22196, type: 2}
+    - {fileID: 11400000, guid: ea26333ea8cde804189442c8ea3e3804, type: 2}
     - {fileID: 11400000, guid: 8bb64b8215ee4f24a80e126aa87bf4ae, type: 2}
     - {fileID: 11400000, guid: c445a1dca8e33db45affeca434b30a26, type: 2}
     SerializedBytesString: 
@@ -73,13 +78,20 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: Item1
       Entry: 7
-      Data: 3|ImperialStruggle.AddAPAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
-    - Name: actionPoint
+      Data: 3|ImperialStruggle.QueueCommandAction, Assembly-CSharp
+    - Name: commands
       Entry: 7
-      Data: 4|ImperialStruggle.ActionPoint, Assembly-CSharp
+      Data: 4|System.Collections.Generic.List`1[[ImperialStruggle.Command, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 5|ImperialStruggle.AddAPCommand, Assembly-CSharp
+    - Name: apAward
+      Entry: 7
+      Data: 6|ImperialStruggle.ActionPoint, Assembly-CSharp
     - Name: <tier>k__BackingField
       Entry: 3
       Data: 1
@@ -91,18 +103,15 @@ MonoBehaviour:
       Data: 2
     - Name: <conditionals>k__BackingField
       Entry: 7
-      Data: 5|System.Collections.Generic.List`1[[ImperialStruggle.Conditional, Assembly-CSharp]],
-        mscorlib
+      Data: 7|System.Collections.Generic.List`1[[ImperialStruggle.Conditional`1[[ImperialStruggle.IAction,
+        Assembly-CSharp]], Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 6|ImperialStruggle.AlberonisAmbition+Alberonis_BR_MarketCondition, Assembly-CSharp
-    - Name: <ConditionalType>k__BackingField
-      Entry: 3
-      Data: 0
-    - Name: <ConditionalText>k__BackingField
+      Data: 8|ImperialStruggle.AdjacentToBritishMarketCondition, Assembly-CSharp
+    - Name: <Name>k__BackingField
       Entry: 6
       Data: 
     - Name: 
@@ -113,6 +122,28 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: conditionals
+      Entry: 7
+      Data: 9|System.Collections.Generic.List`1[[ImperialStruggle.Conditional`1[[ImperialStruggle.IAction,
+        Assembly-CSharp]], Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
       Data: 
     - Name: 
       Entry: 8
@@ -122,36 +153,40 @@ MonoBehaviour:
       Data: 
     - Name: Item2
       Entry: 7
-      Data: 7|ImperialStruggle.AddAPAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
-    - Name: actionPoint
+      Data: 10|ImperialStruggle.QueueCommandAction, Assembly-CSharp
+    - Name: commands
       Entry: 7
-      Data: 8|ImperialStruggle.ActionPoint, Assembly-CSharp
-    - Name: <tier>k__BackingField
-      Entry: 3
-      Data: 1
-    - Name: <type>k__BackingField
-      Entry: 3
-      Data: 1
-    - Name: <baseValue>k__BackingField
-      Entry: 3
-      Data: 1
-    - Name: <conditionals>k__BackingField
-      Entry: 7
-      Data: 9|System.Collections.Generic.List`1[[ImperialStruggle.Conditional, Assembly-CSharp]],
+      Data: 11|System.Collections.Generic.List`1[[ImperialStruggle.Command, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 10|ImperialStruggle.AlberonisAmbition+Alberonis_BR_MarketCondition, Assembly-CSharp
-    - Name: <ConditionalType>k__BackingField
+      Data: 12|ImperialStruggle.AddAPCommand, Assembly-CSharp
+    - Name: apAward
+      Entry: 7
+      Data: 13|ImperialStruggle.ActionPoint, Assembly-CSharp
+    - Name: <tier>k__BackingField
       Entry: 3
       Data: 0
-    - Name: <ConditionalText>k__BackingField
+    - Name: <type>k__BackingField
+      Entry: 3
+      Data: 2
+    - Name: <baseValue>k__BackingField
+      Entry: 3
+      Data: 1
+    - Name: <conditionals>k__BackingField
+      Entry: 7
+      Data: 14|System.Collections.Generic.List`1[[ImperialStruggle.Conditional`1[[ImperialStruggle.IAction,
+        Assembly-CSharp]], Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 15|ImperialStruggle.AdjacentToBritishMarketCondition, Assembly-CSharp
+    - Name: <Name>k__BackingField
       Entry: 6
       Data: 
     - Name: 
@@ -162,6 +197,28 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: conditionals
+      Entry: 7
+      Data: 16|System.Collections.Generic.List`1[[ImperialStruggle.Conditional`1[[ImperialStruggle.IAction,
+        Assembly-CSharp]], Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
       Data: 
     - Name: 
       Entry: 8
@@ -187,17 +244,34 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: Item1
       Entry: 7
-      Data: 11|ImperialStruggle.AlberonisAmbition+Alberonis_FR_Base, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
+      Data: 17|ImperialStruggle.SelectionAction, Assembly-CSharp
+    - Name: prompt
+      Entry: 1
+      Data: 'Fleury''s masterpiece: Shift an Alliance space in Austria, the Dutch
+        Republic, or Spain.'
+    - Name: source
+      Entry: 7
+      Data: 18|ImperialStruggle.SpacesCalc, Assembly-CSharp
+    - Name: SpaceFilters
+      Entry: 7
+      Data: 19|System.Collections.Generic.List`1[[ImperialStruggle.Conditional`1[[ImperialStruggle.Space,
+        Assembly-CSharp]], Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 20|ImperialStruggle.TargetSpaceCondition, Assembly-CSharp
+    - Name: <Name>k__BackingField
+      Entry: 6
+      Data: 
     - Name: eligibleSpaces
       Entry: 7
-      Data: 12|System.Collections.Generic.HashSet`1[[ImperialStruggle.PoliticalData,
+      Data: 21|System.Collections.Generic.HashSet`1[[ImperialStruggle.SpaceData,
         Assembly-CSharp]], System.Core
     - Name: 
       Entry: 12
-      Data: 5
+      Data: 10
     - Name: 
       Entry: 10
       Data: 2
@@ -214,6 +288,21 @@ MonoBehaviour:
       Entry: 10
       Data: 6
     - Name: 
+      Entry: 10
+      Data: 7
+    - Name: 
+      Entry: 10
+      Data: 8
+    - Name: 
+      Entry: 10
+      Data: 9
+    - Name: 
+      Entry: 10
+      Data: 10
+    - Name: 
+      Entry: 10
+      Data: 11
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -222,22 +311,43 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: response
+      Entry: 7
+      Data: 22|ImperialStruggle.ShiftSpaceResponse, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: min
+      Entry: 3
+      Data: 0
+    - Name: max
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: Item2
       Entry: 7
-      Data: 13|ImperialStruggle.QueueAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
+      Data: 23|ImperialStruggle.QueueCommandAction, Assembly-CSharp
     - Name: commands
       Entry: 7
-      Data: 14|System.Collections.Generic.List`1[[ImperialStruggle.Command, Assembly-CSharp]],
+      Data: 24|System.Collections.Generic.List`1[[ImperialStruggle.Command, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 15|ImperialStruggle.AdjustVPCommand, Assembly-CSharp
+      Data: 25|ImperialStruggle.AdjustVPCommand, Assembly-CSharp
     - Name: faction
       Entry: 10
       Data: 1
@@ -253,46 +363,68 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: conditions
+    - Name: conditionals
       Entry: 7
-      Data: 16|System.Collections.Generic.List`1[[ImperialStruggle.Conditional, Assembly-CSharp]],
-        mscorlib
+      Data: 26|System.Collections.Generic.List`1[[ImperialStruggle.Conditional`1[[ImperialStruggle.IAction,
+        Assembly-CSharp]], Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 17|ImperialStruggle.ControlSpacesCondition, Assembly-CSharp
-    - Name: <ConditionalType>k__BackingField
-      Entry: 3
-      Data: 0
-    - Name: <ConditionalText>k__BackingField
-      Entry: 6
-      Data: 
+      Data: 27|ImperialStruggle.ControlSpacesCondition, Assembly-CSharp
+    - Name: <Name>k__BackingField
+      Entry: 1
+      Data: Both Savoy and Sardinia are FR-Flagged
     - Name: conditionalMode
       Entry: 3
       Data: 1
-    - Name: spaces
+    - Name: spacesCalc
       Entry: 7
-      Data: 18|System.Collections.Generic.List`1[[ImperialStruggle.SpaceData, Assembly-CSharp]],
-        mscorlib
+      Data: 28|ImperialStruggle.SpacesCalc, Assembly-CSharp
+    - Name: SpaceFilters
+      Entry: 7
+      Data: 29|System.Collections.Generic.List`1[[ImperialStruggle.Conditional`1[[ImperialStruggle.Space,
+        Assembly-CSharp]], Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 30|ImperialStruggle.TargetSpaceCondition, Assembly-CSharp
+    - Name: <Name>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: eligibleSpaces
+      Entry: 7
+      Data: 31|System.Collections.Generic.HashSet`1[[ImperialStruggle.SpaceData,
+        Assembly-CSharp]], System.Core
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 10
-      Data: 7
+      Data: 12
     - Name: 
       Entry: 10
-      Data: 8
+      Data: 13
     - Name: 
       Entry: 13
       Data: 
     - Name: 
       Entry: 8
       Data: 
-    - Name: faction
-      Entry: 6
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
     - Name: 
       Entry: 8
@@ -320,11 +452,8 @@ MonoBehaviour:
       Data: 
     - Name: bonusCondition
       Entry: 7
-      Data: 19|ImperialStruggle.KeywordCondition, Assembly-CSharp
-    - Name: <ConditionalType>k__BackingField
-      Entry: 3
-      Data: 0
-    - Name: <ConditionalText>k__BackingField
+      Data: 32|ImperialStruggle.KeywordCondition, Assembly-CSharp
+    - Name: <Name>k__BackingField
       Entry: 6
       Data: 
     - Name: keyword

@@ -18758,14 +18758,36 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 076c75b4cb3da104dac89ee6b4ac9c21, type: 2}
   - {fileID: 11400000, guid: 6de5ee318ecaaa94599759cc69d4dc4c, type: 2}
   - {fileID: 11400000, guid: 70d02291909986e458e93d11734d8ce0, type: 2}
-  advantageTiles: []
+  advantageTiles:
+  - {fileID: 11400000, guid: 005dbefc72334994c956f502dde828ad, type: 2}
+  - {fileID: 11400000, guid: a232d4a913ffb344fbbce7b84ca6d2f4, type: 2}
+  - {fileID: 11400000, guid: fc69ebe57f15083428ff47352c32e43e, type: 2}
+  - {fileID: 11400000, guid: 0b0b843829b6f3949930b31c48f6c724, type: 2}
+  - {fileID: 11400000, guid: 58ef484ef1a0e07429e4db4803f5516b, type: 2}
+  - {fileID: 11400000, guid: 1e8236b07feebbc4db76b056b50d4483, type: 2}
+  - {fileID: 11400000, guid: f5822143930502245a0062884843ca27, type: 2}
+  - {fileID: 11400000, guid: bd4772a700050d24a9cc72c09bf4dd80, type: 2}
+  - {fileID: 11400000, guid: 201b79246deafc241b8b771e7f8b171b, type: 2}
+  - {fileID: 11400000, guid: 01b2e302c4a1a6443b48916658de456e, type: 2}
+  - {fileID: 11400000, guid: 1f48d6f6f5b1a714988bb2befb74c5d5, type: 2}
+  - {fileID: 11400000, guid: 747b5c0a27f020b48a3756708e51c136, type: 2}
+  - {fileID: 11400000, guid: aa0f21013c6febc43ae1ab0dc550947f, type: 2}
+  - {fileID: 11400000, guid: 487b4f536e5757642a2421337bc0d9aa, type: 2}
+  - {fileID: 11400000, guid: c7404c87836773d4d860fdde15376939, type: 2}
+  - {fileID: 11400000, guid: 2d9709c09f106de41839701377d7d116, type: 2}
+  - {fileID: 11400000, guid: 19e59f53302f4af4cad83523d4483b7d, type: 2}
+  - {fileID: 11400000, guid: daa9d523a7090624e827500c74f34f29, type: 2}
+  - {fileID: 11400000, guid: a2290a46a493a5f4c9ce02fab5614ab4, type: 2}
+  - {fileID: 11400000, guid: c17ee1e090cf6bd4793b98b500e6a940, type: 2}
+  - {fileID: 11400000, guid: 16461aeb977f5c74db0972314336b051, type: 2}
+  - {fileID: 11400000, guid: 8ee3a3ae7f7770c419b831d4a313cfbb, type: 2}
   awardTiles:
   - {fileID: 11400000, guid: f8394b38a36230a4b8e2c22fa251d54b, type: 2}
-  - {fileID: 11400000, guid: f8394b38a36230a4b8e2c22fa251d54b, type: 2}
+  - {fileID: 11400000, guid: f22bee01a3b7dbd4c956cf004ff9fd83, type: 2}
   - {fileID: 11400000, guid: 0f967711ddc1b3142b534cd369b8d694, type: 2}
-  - {fileID: 11400000, guid: 0f967711ddc1b3142b534cd369b8d694, type: 2}
+  - {fileID: 11400000, guid: d493c47889a17c748b03454bc2c41165, type: 2}
   - {fileID: 11400000, guid: 7a682b0a4b1b7ff47845e71163af5e54, type: 2}
-  - {fileID: 11400000, guid: 7a682b0a4b1b7ff47845e71163af5e54, type: 2}
+  - {fileID: 11400000, guid: 1bd82e0d420fffa4f965357250344b67, type: 2}
   - {fileID: 11400000, guid: 7a2945001ec6093498816122d52441b3, type: 2}
   - {fileID: 11400000, guid: f54cfff5903856d48a2251dc050b93c4, type: 2}
   britain: {fileID: 11400000, guid: 50a21bd2b99176a44aca3a58118bdbfd, type: 2}
@@ -33454,7 +33476,6 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 3314514578899166964}
-    - {fileID: 11400000, guid: e88bd87cf9d80f548acfabe66dfa8b0c, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -33659,72 +33680,14 @@ MonoBehaviour:
       Entry: 7
       Data: 12|ImperialStruggle.ShiftSpaceAdvantageAction, Assembly-CSharp
     - Name: eligibleSpaces
-      Entry: 7
-      Data: 13|ImperialStruggle.MarketCalculation, Assembly-CSharp
-    - Name: maps
-      Entry: 7
-      Data: 14|System.Collections.Generic.HashSet`1[[ImperialStruggle.Map, Assembly-CSharp]],
-        System.Core
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 10
-      Data: 1
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: regions
-      Entry: 7
-      Data: 15|System.Collections.Generic.HashSet`1[[ImperialStruggle.Region, Assembly-CSharp]],
-        System.Core
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: resources
-      Entry: 7
-      Data: 16|System.Collections.Generic.HashSet`1[[Resource, Assembly-CSharp]],
-        System.Core
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: status
-      Entry: 7
-      Data: 17|System.Collections.Generic.HashSet`1[[ImperialStruggle.MarketCalculation+Status,
-        Assembly-CSharp]], System.Core
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: shiftType
       Entry: 3
       Data: 2
     - Name: <ActionCost>k__BackingField
       Entry: 7
-      Data: 18|ImperialStruggle.ActionPoint, Assembly-CSharp
+      Data: 13|ImperialStruggle.ActionPoint, Assembly-CSharp
     - Name: <tier>k__BackingField
       Entry: 3
       Data: 0
@@ -33735,17 +33698,7 @@ MonoBehaviour:
       Entry: 3
       Data: 0
     - Name: <conditionals>k__BackingField
-      Entry: 7
-      Data: 19|System.Collections.Generic.List`1[[ImperialStruggle.Conditional`1[[ImperialStruggle.PlayerAction,
-        Assembly-CSharp]], Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 8
@@ -33755,7 +33708,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 20|ImperialStruggle.AdjustCPAction, Assembly-CSharp
+      Data: 14|ImperialStruggle.AdjustCPAction, Assembly-CSharp
     - Name: cpAdjustAmount
       Entry: 3
       Data: 2
@@ -33773,7 +33726,7 @@ MonoBehaviour:
       Data: 
     - Name: Item2
       Entry: 7
-      Data: 21|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
+      Data: 15|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
@@ -33801,7 +33754,7 @@ MonoBehaviour:
       Data: 
     - Name: <SpecialActions>k__BackingField
       Entry: 7
-      Data: 22|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
+      Data: 16|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12

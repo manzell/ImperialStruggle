@@ -17,6 +17,7 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 11400000, guid: d435660e25e59e44d84964c6388ee74b, type: 2}
+    - {fileID: 11400000, guid: c0cdb8595773a624c88342a4737bb4d1, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -49,17 +50,67 @@ MonoBehaviour:
       Entry: 7
       Data: 2|ImperialStruggle.SelectionAction, Assembly-CSharp
     - Name: prompt
+      Entry: 1
+      Data: Place 1 Conflict in a Fur Market
+    - Name: source
+      Entry: 7
+      Data: 3|ImperialStruggle.SpacesCalc, Assembly-CSharp
+    - Name: SpaceFilters
+      Entry: 7
+      Data: 4|System.Collections.Generic.List`1[[ImperialStruggle.Conditional`1[[ImperialStruggle.Space,
+        Assembly-CSharp]], Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 5|ImperialStruggle.MarketTypeFilter, Assembly-CSharp
+    - Name: <Name>k__BackingField
       Entry: 6
       Data: 
-    - Name: source
+    - Name: marketTypes
+      Entry: 7
+      Data: 6|System.Collections.Generic.HashSet`1[[Resource, Assembly-CSharp]],
+        System.Core
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: requiredStatus
       Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
     - Name: response
-      Entry: 6
+      Entry: 7
+      Data: 7|ImperialStruggle.PlaceConflictMarkerResponse, Assembly-CSharp
+    - Name: removalCost
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
       Data: 
     - Name: min
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: max
       Entry: 3
       Data: 1

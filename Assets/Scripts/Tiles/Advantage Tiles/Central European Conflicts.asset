@@ -18,6 +18,21 @@ MonoBehaviour:
     ReferencedUnityObjects:
     - {fileID: 11400000, guid: ba490b2098c2e42418ecc8a22071c488, type: 2}
     - {fileID: 11400000, guid: 2b51c06aa61d13142afa5e52b515af74, type: 2}
+    - {fileID: 11400000, guid: 84f1ef17c0e1bf54db8cd441f31d7d11, type: 2}
+    - {fileID: 11400000, guid: c1b5c4ab266aaff4d94caa6d86ee8cce, type: 2}
+    - {fileID: 11400000, guid: c07f5df43c669294298ea824c5bb4d4f, type: 2}
+    - {fileID: 11400000, guid: 5f4c1c9ae935c444f85af57e0a507200, type: 2}
+    - {fileID: 11400000, guid: f2dedbb241e85a746ac9a14627c61aa6, type: 2}
+    - {fileID: 11400000, guid: 6398034ff8583374197632ba1ed570e6, type: 2}
+    - {fileID: 11400000, guid: 541b826ef51c36e4ea407eb3b12ac325, type: 2}
+    - {fileID: 11400000, guid: ceccd1d6d1c550b41b53738979957be0, type: 2}
+    - {fileID: 11400000, guid: ab3e94f8e2558b742b3289c0ea64578b, type: 2}
+    - {fileID: 11400000, guid: c445a1dca8e33db45affeca434b30a26, type: 2}
+    - {fileID: 11400000, guid: 8bb64b8215ee4f24a80e126aa87bf4ae, type: 2}
+    - {fileID: 11400000, guid: 06ef2ce398da0cf43b4a5bdebe92ba24, type: 2}
+    - {fileID: 11400000, guid: 0112d523b6190e042a65bb9bd85a2656, type: 2}
+    - {fileID: 11400000, guid: 1661978c02569c44184af28cf268385a, type: 2}
+    - {fileID: 11400000, guid: cbee3e5f33a9c4e41af1c1f6923a5d6b, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -44,21 +59,122 @@ MonoBehaviour:
       Data: 
     - Name: playerActions
       Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[ImperialStruggle.IPlayerAction,
-        Assembly-CSharp]], mscorlib
+      Data: 1|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction, Assembly-CSharp]],
+        mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 2|ImperialStruggle.PlaceConflictMarkerAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
-    - Name: eligibleSpaces
+      Data: 2|ImperialStruggle.SelectionAction, Assembly-CSharp
+    - Name: prompt
+      Entry: 1
+      Data: Place 1 Conflict Marker in a European Alliance Space
+    - Name: source
+      Entry: 7
+      Data: 3|ImperialStruggle.SpacesCalc, Assembly-CSharp
+    - Name: SpaceFilters
+      Entry: 7
+      Data: 4|System.Collections.Generic.List`1[[ImperialStruggle.Conditional`1[[ImperialStruggle.Space,
+        Assembly-CSharp]], Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 5|ImperialStruggle.TargetSpaceCondition, Assembly-CSharp
+    - Name: <Name>k__BackingField
       Entry: 6
       Data: 
-    - Name: ConflictMarkerRemovalCost
+    - Name: eligibleSpaces
+      Entry: 7
+      Data: 6|System.Collections.Generic.HashSet`1[[ImperialStruggle.SpaceData, Assembly-CSharp]],
+        System.Core
+    - Name: 
+      Entry: 12
+      Data: 17
+    - Name: 
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 10
+      Data: 4
+    - Name: 
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 10
+      Data: 5
+    - Name: 
+      Entry: 10
+      Data: 6
+    - Name: 
+      Entry: 10
+      Data: 7
+    - Name: 
+      Entry: 10
+      Data: 8
+    - Name: 
+      Entry: 10
+      Data: 9
+    - Name: 
+      Entry: 10
+      Data: 10
+    - Name: 
+      Entry: 10
+      Data: 11
+    - Name: 
+      Entry: 10
+      Data: 12
+    - Name: 
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 10
+      Data: 13
+    - Name: 
+      Entry: 10
+      Data: 14
+    - Name: 
+      Entry: 10
+      Data: 15
+    - Name: 
+      Entry: 10
+      Data: 16
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: response
+      Entry: 7
+      Data: 7|ImperialStruggle.PlaceConflictMarkerResponse, Assembly-CSharp
+    - Name: removalCost
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: min
+      Entry: 3
+      Data: 0
+    - Name: max
       Entry: 3
       Data: 1
     - Name: 

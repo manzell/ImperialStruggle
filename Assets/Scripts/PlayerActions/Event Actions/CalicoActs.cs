@@ -26,7 +26,16 @@ namespace ImperialStruggle
                 resourceWinningFaction = Game.France;
 
             if(resourceWinningFaction != null)
-                Commands.Push(new AddAPCommand(resourceWinningFaction.player, Game.GlobalDemandTrack.GlobalDemandAwards[demandKey])); 
+            {
+                GlobalDemandValue demandAward = Game.GlobalDemandTrack.GlobalDemandAwards[demandKey];
+
+                if (demandAward.VP > 0)
+                    Commands.Push(new AdjustVPCommand(resourceWinningFaction, demandAward.VP)); 
+                if(demandAward.TP > 0)
+                    Commands.Push(new AdjustTreatyPointsCommand(resourceWinningFaction, demandAward.VP));
+                if (demandAward.debt != 0)
+                    Commands.Push(new AdjustDebtCommand(resourceWinningFaction, demandAward.debt)); 
+            }
 
             return Task.CompletedTask;
         }

@@ -90,41 +90,7 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Item2
-      Entry: 7
-      Data: 3|ImperialStruggle.AddAPAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
-    - Name: actionPoint
-      Entry: 7
-      Data: 4|ImperialStruggle.ActionPoint, Assembly-CSharp
-    - Name: <tier>k__BackingField
-      Entry: 3
-      Data: 1
-    - Name: <type>k__BackingField
-      Entry: 3
-      Data: 2
-    - Name: <baseValue>k__BackingField
-      Entry: 3
-      Data: 1
-    - Name: <conditionals>k__BackingField
-      Entry: 7
-      Data: 5|System.Collections.Generic.List`1[[ImperialStruggle.Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 8
@@ -140,11 +106,8 @@ MonoBehaviour:
       Data: 
     - Name: bonusCondition
       Entry: 7
-      Data: 6|ImperialStruggle.KeywordCondition, Assembly-CSharp
-    - Name: <ConditionalType>k__BackingField
-      Entry: 3
-      Data: 0
-    - Name: <ConditionalText>k__BackingField
+      Data: 3|ImperialStruggle.KeywordCondition, Assembly-CSharp
+    - Name: <Name>k__BackingField
       Entry: 6
       Data: 
     - Name: keyword

@@ -19,20 +19,13 @@ namespace ImperialStruggle
 
         void BonusVP(Map map, AwardTile tile)
         {
-            int adjustment = 0;
-
-            if (map.controllingFaction == Game.France)
-                adjustment = -1;
-            else if (map.controllingFaction == Game.Britain)
-                adjustment = 1; 
-
-            if (map == this.map)
+            if(this.map == map)
             {
-                Debug.Log("WARNING, THIS PERMANENTLY INCREASES THE VP Value, Fix!!"); 
-                ActionPoint ap = tile.ActionPoints.Where(t => t.type == ActionPoint.ActionType.VictoryPoint).First();                
-                ap.AdjustBaseValue(adjustment); 
+                if (map.controllingFaction == Game.France && tile.VP > 0)
+                    Commands.Push(new AdjustVPCommand(Game.France, -1));
+                else if (map.controllingFaction == Game.Britain)
+                    Commands.Push(new AdjustVPCommand(Game.Britain, 1)); 
             }
-
         }
     }
 }

@@ -12,7 +12,7 @@ namespace ImperialStruggle
         protected override bool Test(Faction faction)
         {
             Map map = mapCalc.Calculate();
-            return Mathf.Abs(map.mapScore[faction] - map.mapScore[faction.Opposition()]) >= map.awardTile.RequiredMargin; 
+            return Mathf.Abs(map.mapScore[faction] - map.mapScore[faction.Opposition()]) >= map.awardTile.Margin; 
         }
     }
 }

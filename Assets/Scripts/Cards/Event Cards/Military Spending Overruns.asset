@@ -66,12 +66,6 @@ MonoBehaviour:
     - Name: Item1
       Entry: 7
       Data: 3|ImperialStruggle.MilitarySpendingOverruns, Assembly-CSharp
-    - Name: EligibilityFilters
-      Entry: 6
-      Data: 
-    - Name: CanFilters
-      Entry: 6
-      Data: 
     - Name: actions
       Entry: 7
       Data: 4|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction, Assembly-CSharp]],
@@ -82,12 +76,6 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 5|ImperialStruggle.DeploySquadronAction, Assembly-CSharp
-    - Name: EligibilityFilters
-      Entry: 6
-      Data: 
-    - Name: CanFilters
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 

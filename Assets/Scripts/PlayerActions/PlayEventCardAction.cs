@@ -33,8 +33,11 @@ namespace ImperialStruggle
     {
         public override void OnSelect(Selection<EventCard> selection)
         {
-            if (selection.Count() > 0)
-                Debug.Log($"{selection.player.Faction} plays {selection.selectedItems.First()} <Not Implemented>");
+            if (selection.FirstOrDefault() is EventCard card)
+            {
+                Debug.Log($"{selection.player.Faction} plays {card} <Not Implemented>");
+
+            }
         }
     }
 }

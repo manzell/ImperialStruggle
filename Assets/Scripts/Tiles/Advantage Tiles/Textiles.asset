@@ -17,7 +17,7 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 11400000, guid: cb7e1b6185677054aaa41d9e7626d9ed, type: 2}
-    - {fileID: 11400000, guid: 34b34415192546040af253ee289328c4, type: 2}
+    - {fileID: 11400000, guid: e88bd87cf9d80f548acfabe66dfa8b0c, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -41,39 +41,61 @@ MonoBehaviour:
       Data: 
     - Name: playerActions
       Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[ImperialStruggle.IPlayerAction,
-        Assembly-CSharp]], mscorlib
+      Data: 1|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction, Assembly-CSharp]],
+        mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
       Data: 2|ImperialStruggle.AdjustFlagCostAdvantageAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
     - Name: eligibleSpaces
       Entry: 7
-      Data: 3|ImperialStruggle.MarketCalculation, Assembly-CSharp
-    - Name: maps
+      Data: 3|ImperialStruggle.SpacesCalc, Assembly-CSharp
+    - Name: SpaceFilters
       Entry: 7
-      Data: 4|System.Collections.Generic.HashSet`1[[ImperialStruggle.Map, Assembly-CSharp]],
-        System.Core
+      Data: 4|System.Collections.Generic.List`1[[ImperialStruggle.Conditional`1[[ImperialStruggle.Space,
+        Assembly-CSharp]], Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 5|ImperialStruggle.MapFilter, Assembly-CSharp
+    - Name: <Name>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: maps
+      Entry: 7
+      Data: 6|System.Collections.Generic.List`1[[ImperialStruggle.Map, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
     - Name: 
       Entry: 10
       Data: 1
     - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
       Entry: 8
       Data: 
-    - Name: regions
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 7
-      Data: 5|System.Collections.Generic.HashSet`1[[ImperialStruggle.Region, Assembly-CSharp]],
+      Data: 7|ImperialStruggle.MarketTypeFilter, Assembly-CSharp
+    - Name: <Name>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: marketTypes
+      Entry: 7
+      Data: 8|System.Collections.Generic.HashSet`1[[Resource, Assembly-CSharp]],
         System.Core
     - Name: 
       Entry: 12
@@ -84,26 +106,22 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: resources
+    - Name: requiredStatus
       Entry: 7
-      Data: 6|System.Collections.Generic.HashSet`1[[Resource, Assembly-CSharp]],
-        System.Core
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: status
-      Entry: 7
-      Data: 7|System.Collections.Generic.HashSet`1[[ImperialStruggle.MarketCalculation+Status,
+      Data: 9|System.Collections.Generic.HashSet`1[[ImperialStruggle.MarketTypeFilter+Status,
         Assembly-CSharp]], System.Core
     - Name: 
       Entry: 12
       Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 

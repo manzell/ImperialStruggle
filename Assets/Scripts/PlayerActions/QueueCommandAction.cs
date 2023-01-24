@@ -9,8 +9,8 @@ namespace ImperialStruggle
 {
     public class QueueCommandAction : PlayerAction
     {
-        [SerializeField] List<Command> commands;
-        [SerializeField] List<Conditional<IAction>> conditionals;
+        [SerializeField] List<Command> commands = new();
+        [SerializeField] List<Conditional<IAction>> conditionals = new();
 
         public void AddCommand(Command command) => commands.Append(command); 
         public void AddCondition(Conditional<IAction> condition) => conditionals.Append(condition);

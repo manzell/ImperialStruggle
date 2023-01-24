@@ -68,9 +68,6 @@ MonoBehaviour:
     - Name: Item1
       Entry: 7
       Data: 3|ImperialStruggle.CarnaticWar_Base, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
     - Name: india
       Entry: 10
       Data: 1
@@ -80,9 +77,6 @@ MonoBehaviour:
     - Name: Item2
       Entry: 7
       Data: 4|ImperialStruggle.CarnaticWar_Bonus, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
     - Name: india
       Entry: 10
       Data: 1
@@ -107,10 +101,7 @@ MonoBehaviour:
     - Name: bonusCondition
       Entry: 7
       Data: 5|ImperialStruggle.KeywordCondition, Assembly-CSharp
-    - Name: <ConditionalType>k__BackingField
-      Entry: 3
-      Data: 0
-    - Name: <ConditionalText>k__BackingField
+    - Name: <Name>k__BackingField
       Entry: 6
       Data: 
     - Name: keyword

@@ -8,6 +8,7 @@ namespace ImperialStruggle
 {
     public class ShiftPoliticalSpaceAction : PlayerAction, RegionalPurchase<PoliticalSpace>
     {
+        public ShiftType shiftType { get; private set; }
         public PoliticalSpace Space { get; private set; }        
         public void SetSpace(PoliticalSpace space) => Space = space;
         public ActionPoint ActionCost => Space.flagCost.GetAPCost(Player, Space); 
@@ -26,7 +27,16 @@ namespace ImperialStruggle
 
         public ShiftPoliticalSpaceAction()
         {
-            Name = Space.Flag == Game.Neutral ? "Flag" : "Unflag";
+            if (Space.Flag == Game.Neutral)
+            {
+                shiftType = ShiftType.Flag;
+                Name = "Flag Space";
+            }
+            else if (Space.Flag == Player.Opponent.Faction)
+            {
+                shiftType = ShiftType.Unflag;
+                Name = "Unflag Space";
+            }
         }
     }
 }

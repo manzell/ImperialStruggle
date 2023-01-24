@@ -15,7 +15,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: e88bd87cf9d80f548acfabe66dfa8b0c, type: 2}
+    - {fileID: 11400000, guid: 5e460598291e3794a8ee7e5a51147d40, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -39,11 +41,36 @@ MonoBehaviour:
       Data: 
     - Name: MinisterActions
       Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[ImperialStruggle.MinisterAction,
-        Assembly-CSharp]], mscorlib
+      Data: 1|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction, Assembly-CSharp]],
+        mscorlib
     - Name: 
       Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 2|ImperialStruggle.NewWorldHuguenots, Assembly-CSharp
+    - Name: maps
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[ImperialStruggle.Map, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 10
       Data: 0
+    - Name: 
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 

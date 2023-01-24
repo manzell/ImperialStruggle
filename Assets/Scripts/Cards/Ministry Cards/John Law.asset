@@ -39,11 +39,20 @@ MonoBehaviour:
       Data: 
     - Name: MinisterActions
       Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[ImperialStruggle.MinisterAction,
-        Assembly-CSharp]], mscorlib
+      Data: 1|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction, Assembly-CSharp]],
+        mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 2|ImperialStruggle.JohnLawAction, Assembly-CSharp
+    - Name: scotlandSpaces
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 

@@ -29,10 +29,11 @@ namespace ImperialStruggle
         public void Awake()
         {
             player.SetUI(this);
-            SelectMinistryCardCommand.SelectEvent += AddMinistryCard; 
+            SelectMinistryCardCommand.SelectEvent += OnSelectMinistryCard;
+            DealCardCommand.DealCardEvent += OnDealEventCard; 
         }
 
-        void AddMinistryCard(MinistryCard card)
+        void OnSelectMinistryCard(MinistryCard card)
         {
             if (card.data.Faction == player.Faction)
             {
@@ -44,6 +45,7 @@ namespace ImperialStruggle
 
         public void OnDealEventCard(Player player, EventCard card)
         {
+            Debug.Log("OnDealCardEvent"); 
             if (this.player == player)
                 Instantiate(cardPrefab, handArea.transform).GetComponent<UI_Card>().SetCard(card);
         }

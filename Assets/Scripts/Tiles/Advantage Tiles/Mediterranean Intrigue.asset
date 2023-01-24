@@ -18,6 +18,13 @@ MonoBehaviour:
     ReferencedUnityObjects:
     - {fileID: 11400000, guid: ea26333ea8cde804189442c8ea3e3804, type: 2}
     - {fileID: 11400000, guid: 8bb64b8215ee4f24a80e126aa87bf4ae, type: 2}
+    - {fileID: 11400000, guid: 84f1ef17c0e1bf54db8cd441f31d7d11, type: 2}
+    - {fileID: 11400000, guid: c1b5c4ab266aaff4d94caa6d86ee8cce, type: 2}
+    - {fileID: 11400000, guid: 067a9e540ac894e4284ffb361336af00, type: 2}
+    - {fileID: 11400000, guid: 1582d5adbdc70de46b684a162e6fe122, type: 2}
+    - {fileID: 11400000, guid: 0112d523b6190e042a65bb9bd85a2656, type: 2}
+    - {fileID: 11400000, guid: 1661978c02569c44184af28cf268385a, type: 2}
+    - {fileID: 11400000, guid: 5f342005289eb544cbe0155577b22196, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -44,21 +51,95 @@ MonoBehaviour:
       Data: 
     - Name: playerActions
       Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[ImperialStruggle.IPlayerAction,
-        Assembly-CSharp]], mscorlib
+      Data: 1|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction, Assembly-CSharp]],
+        mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 2|ImperialStruggle.PlaceConflictMarkerAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
-    - Name: eligibleSpaces
+      Data: 2|ImperialStruggle.SelectionAction, Assembly-CSharp
+    - Name: prompt
+      Entry: 1
+      Data: 'Place 1 Conflict Marker in Spain or Austria '
+    - Name: source
+      Entry: 7
+      Data: 3|ImperialStruggle.SpacesCalc, Assembly-CSharp
+    - Name: SpaceFilters
+      Entry: 7
+      Data: 4|System.Collections.Generic.List`1[[ImperialStruggle.Conditional`1[[ImperialStruggle.Space,
+        Assembly-CSharp]], Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 5|ImperialStruggle.TargetSpaceCondition, Assembly-CSharp
+    - Name: <Name>k__BackingField
       Entry: 6
       Data: 
-    - Name: ConflictMarkerRemovalCost
+    - Name: eligibleSpaces
+      Entry: 7
+      Data: 6|System.Collections.Generic.HashSet`1[[ImperialStruggle.SpaceData, Assembly-CSharp]],
+        System.Core
+    - Name: 
+      Entry: 12
+      Data: 8
+    - Name: 
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 10
+      Data: 4
+    - Name: 
+      Entry: 10
+      Data: 5
+    - Name: 
+      Entry: 10
+      Data: 6
+    - Name: 
+      Entry: 10
+      Data: 7
+    - Name: 
+      Entry: 10
+      Data: 8
+    - Name: 
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: response
+      Entry: 7
+      Data: 7|ImperialStruggle.PlaceConflictMarkerResponse, Assembly-CSharp
+    - Name: removalCost
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: min
+      Entry: 3
+      Data: 1
+    - Name: max
       Entry: 3
       Data: 1
     - Name: 

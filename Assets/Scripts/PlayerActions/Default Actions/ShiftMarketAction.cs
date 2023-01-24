@@ -1,19 +1,28 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using UnityEngine; 
 
 namespace ImperialStruggle
 {
     public class ShiftMarketAction : PlayerAction, RegionalPurchase<Market>
     {
+        public ShiftType shiftType { get; private set; }
         public Market Space { get; private set; }
         public ActionPoint ActionCost => Space.flagCost.GetAPCost(Player, Space);
         HashSet<Market> eligibleMarkets;
 
         public ShiftMarketAction()
         {
-            Name = "Shift Market";
+            if (Space.Flag == Game.Neutral)
+            {
+                shiftType = ShiftType.Flag; 
+                Name = "Flag Market";
+            }
+            else if(Space.Flag == Player.Opponent.Faction)
+            {
+                shiftType = ShiftType.Unflag;
+                Name = "Unflag Market"; 
+            }
             ActionRound.ActionRoundStartEvent += SetEligibleSpaces;                
         }
 

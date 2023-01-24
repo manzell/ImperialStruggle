@@ -64,98 +64,10 @@ MonoBehaviour:
       Data: System.ValueTuple`2[[ImperialStruggle.PlayerAction, Assembly-CSharp],[ImperialStruggle.PlayerAction,
         Assembly-CSharp]], mscorlib
     - Name: Item1
-      Entry: 7
-      Data: 3|ImperialStruggle.QueueAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
-    - Name: commands
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[ImperialStruggle.Command, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 5|ImperialStruggle.AdjustDebtCommand, Assembly-CSharp
-    - Name: faction
       Entry: 6
-      Data: 
-    - Name: amount
-      Entry: 3
-      Data: -2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: conditions
-      Entry: 7
-      Data: 6|System.Collections.Generic.List`1[[ImperialStruggle.Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
       Data: 
     - Name: Item2
-      Entry: 7
-      Data: 7|ImperialStruggle.QueueAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
-    - Name: commands
-      Entry: 7
-      Data: 8|System.Collections.Generic.List`1[[ImperialStruggle.Command, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 9|ImperialStruggle.AdjustDebtCommand, Assembly-CSharp
-    - Name: faction
       Entry: 6
-      Data: 
-    - Name: amount
-      Entry: 3
-      Data: -1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: conditions
-      Entry: 7
-      Data: 10|System.Collections.Generic.List`1[[ImperialStruggle.Conditional, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
       Data: 
     - Name: 
       Entry: 8
@@ -171,11 +83,8 @@ MonoBehaviour:
       Data: 
     - Name: bonusCondition
       Entry: 7
-      Data: 11|ImperialStruggle.KeywordCondition, Assembly-CSharp
-    - Name: <ConditionalType>k__BackingField
-      Entry: 3
-      Data: 0
-    - Name: <ConditionalText>k__BackingField
+      Data: 3|ImperialStruggle.KeywordCondition, Assembly-CSharp
+    - Name: <Name>k__BackingField
       Entry: 6
       Data: 
     - Name: keyword

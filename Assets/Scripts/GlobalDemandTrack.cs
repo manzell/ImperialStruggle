@@ -8,11 +8,9 @@ namespace ImperialStruggle
 {
     public class GlobalDemandTrack : SerializedScriptableObject
     {
-        public Dictionary<GlobalDemandKey, ActionPoints> GlobalDemandAwards;
-        public HashSet<Resource> Resources => new(GlobalDemandAwards.Select(award => award.Key.Resource));
+        public Dictionary<GlobalDemandKey, GlobalDemandValue> GlobalDemandAwards;
     }
-
-    public struct GlobalDemandKey
+        public struct GlobalDemandKey
     {
         public Phase.Era Era;
         public Resource Resource;
@@ -22,5 +20,10 @@ namespace ImperialStruggle
             Era = era;
             Resource = resource; 
         }
+    }
+
+    public struct GlobalDemandValue
+    {
+        public int VP, TP, debt; 
     }
 }

@@ -25,7 +25,7 @@ namespace ImperialStruggle
                 List<Faction> winningFactions = new List<Faction>();
 
                 foreach (Player player in Player.Players)
-                    if (mapScore[player.Faction] == maxGameScore && winningMargin >= awardTile.RequiredMargin) // Need to move the margin logic out to the ScoreMapAction?
+                    if (mapScore[player.Faction] == maxGameScore && winningMargin >= awardTile.Margin) // Need to move the margin logic out to the ScoreMapAction?
                         winningFactions.Add(player.Faction);
 
                 if (winningFactions.Count == 1)

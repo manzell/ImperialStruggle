@@ -27,4 +27,19 @@ namespace ImperialStruggle
             }
         }
     }
+
+    public class ShiftSpaceResponse : SelectionReceiver<ISelectable>
+    {
+        enum ShiftType { Any, Flag, Unflag }
+        [SerializeField] ShiftType type; 
+
+        public override void OnSelect(Selection<ISelectable> selection)
+        {
+            foreach (FlaggableSpace space in selection)
+            {
+                if (type == ShiftType.Any || (type == ShiftType.Flag && space.Flag == Game.Neutral) || (type == ShiftType.Unflag && space.Flag != Game.Neutral))
+                    Commands.Push(new ShiftSpaceCommand(space, selection.player.Faction));
+            }
+        }
+    }
 }

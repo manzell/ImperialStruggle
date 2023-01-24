@@ -30,7 +30,7 @@ namespace ImperialStruggle
                 InvestmentTile tile = selection.First() as InvestmentTile;
                 Debug.Log($"{tile.Name} Selected by {selection.player.Faction}");
 
-                Commands.Append(new SelectInvestmentTileCommand(actionRound.player, tile));
+                Commands.Push(new SelectInvestmentTileCommand(actionRound.player, tile));
 
                 foreach (PlayerAction action in tile.actions)
                 {

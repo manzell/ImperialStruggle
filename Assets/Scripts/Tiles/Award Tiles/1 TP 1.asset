@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b97cc78e0bacb5409f8e527f0d96411, type: 3}
-  m_Name: Balaeric Isles
+  m_Script: {fileID: 11500000, guid: 02648db47b6988c4a9f3e5334699aeda, type: 3}
+  m_Name: 1 TP 1
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -21,10 +21,6 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  <prefab>k__BackingField: {fileID: 3723316590634920282, guid: 828063da327e9a64c85ed719b0433ce8, type: 3}
-  <Map>k__BackingField: {fileID: 11400000, guid: d539b3597d25b5940a836fda6d471339, type: 2}
-  <Region>k__BackingField: {fileID: 0}
-  <startingFlag>k__BackingField: {fileID: 11400000, guid: fa035a9950db4ba458654758b49c2e78, type: 2}
-  <availableEra>k__BackingField: 0
-  <adjacentSpaces>k__BackingField: []
-  <PrestigeSpace>k__BackingField: 1
+  VP: 0
+  TP: 1
+  Margin: 0

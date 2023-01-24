@@ -22,6 +22,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 5f342005289eb544cbe0155577b22196, type: 2}
     - {fileID: 11400000, guid: ea26333ea8cde804189442c8ea3e3804, type: 2}
     - {fileID: 11400000, guid: 3e897564f3facda4a96c9e1c738b4434, type: 2}
+    - {fileID: 11400000, guid: 5f4c1c9ae935c444f85af57e0a507200, type: 2}
+    - {fileID: 11400000, guid: 64038aadb4c1f9147bf8f7c49d032239, type: 2}
     - {fileID: 11400000, guid: 34b34415192546040af253ee289328c4, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
@@ -71,14 +73,30 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: Item1
       Entry: 7
-      Data: 3|ImperialStruggle.AustroSpanish_BR_Base, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
-    - Name: spanishSpaces
+      Data: 3|ImperialStruggle.SelectionAction, Assembly-CSharp
+    - Name: prompt
+      Entry: 1
+      Data: 'Farnese clashes with France: Place 1 Conflict marker in Spain.'
+    - Name: source
       Entry: 7
-      Data: 4|System.Collections.Generic.HashSet`1[[ImperialStruggle.PoliticalData,
-        Assembly-CSharp]], System.Core
+      Data: 4|ImperialStruggle.SpacesCalc, Assembly-CSharp
+    - Name: SpaceFilters
+      Entry: 7
+      Data: 5|System.Collections.Generic.List`1[[ImperialStruggle.Conditional`1[[ImperialStruggle.Space,
+        Assembly-CSharp]], Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 6|ImperialStruggle.TargetSpaceCondition, Assembly-CSharp
+    - Name: <Name>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: eligibleSpaces
+      Entry: 7
+      Data: 7|System.Collections.Generic.HashSet`1[[ImperialStruggle.SpaceData, Assembly-CSharp]],
+        System.Core
     - Name: 
       Entry: 12
       Data: 4
@@ -103,12 +121,36 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: response
+      Entry: 7
+      Data: 8|ImperialStruggle.PlaceConflictMarkerResponse, Assembly-CSharp
+    - Name: removalCost
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: min
+      Entry: 3
+      Data: 1
+    - Name: max
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: Item2
       Entry: 7
-      Data: 5|ImperialStruggle.AustroSpanish_BR_Bonus, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
+      Data: 9|ImperialStruggle.AustroSpanish_BR_Bonus, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -130,35 +172,39 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: Item1
       Entry: 7
-      Data: 6|ImperialStruggle.ShiftSpaceAdvantageAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
-    - Name: eligibleSpaces
-      Entry: 6
-      Data: 
-    - Name: shiftType
-      Entry: 3
-      Data: 2
-    - Name: <ActionCost>k__BackingField
+      Data: 10|ImperialStruggle.SelectionAction, Assembly-CSharp
+    - Name: prompt
+      Entry: 1
+      Data: 'Charles VI invests in the Netherlands: Unflag a space in the Dutch Republic.'
+    - Name: source
       Entry: 7
-      Data: 7|ImperialStruggle.ActionPoint, Assembly-CSharp
-    - Name: <tier>k__BackingField
-      Entry: 3
-      Data: 0
-    - Name: <type>k__BackingField
-      Entry: 3
-      Data: 0
-    - Name: <baseValue>k__BackingField
-      Entry: 3
-      Data: 0
-    - Name: <conditionals>k__BackingField
+      Data: 11|ImperialStruggle.SpacesCalc, Assembly-CSharp
+    - Name: SpaceFilters
       Entry: 7
-      Data: 8|System.Collections.Generic.List`1[[ImperialStruggle.Conditional, Assembly-CSharp]],
-        mscorlib
+      Data: 12|System.Collections.Generic.List`1[[ImperialStruggle.Conditional`1[[ImperialStruggle.Space,
+        Assembly-CSharp]], Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 13|ImperialStruggle.TargetSpaceCondition, Assembly-CSharp
+    - Name: <Name>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: eligibleSpaces
+      Entry: 7
+      Data: 14|System.Collections.Generic.HashSet`1[[ImperialStruggle.SpaceData,
+        Assembly-CSharp]], System.Core
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 10
+      Data: 6
+    - Name: 
+      Entry: 10
+      Data: 7
     - Name: 
       Entry: 13
       Data: 
@@ -169,17 +215,35 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: response
+      Entry: 7
+      Data: 15|ImperialStruggle.ShiftSpaceResponse, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: min
+      Entry: 3
+      Data: 0
+    - Name: max
+      Entry: 3
+      Data: 1
+    - Name: 
       Entry: 8
       Data: 
     - Name: Item2
       Entry: 7
-      Data: 9|ImperialStruggle.AustroSpanish_FR_Bonus, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
+      Data: 16|ImperialStruggle.AustroSpanish_FR_Bonus, Assembly-CSharp
     - Name: india
       Entry: 10
-      Data: 6
+      Data: 8
     - Name: 
       Entry: 8
       Data: 
@@ -197,11 +261,8 @@ MonoBehaviour:
       Data: 
     - Name: bonusCondition
       Entry: 7
-      Data: 10|ImperialStruggle.KeywordCondition, Assembly-CSharp
-    - Name: <ConditionalType>k__BackingField
-      Entry: 3
-      Data: 0
-    - Name: <ConditionalText>k__BackingField
+      Data: 17|ImperialStruggle.KeywordCondition, Assembly-CSharp
+    - Name: <Name>k__BackingField
       Entry: 6
       Data: 
     - Name: keyword

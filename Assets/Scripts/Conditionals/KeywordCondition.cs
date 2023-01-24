@@ -4,10 +4,10 @@ using UnityEngine;
 
 namespace ImperialStruggle
 {
-    public class KeywordCondition : Conditional<Player>
+    public class KeywordCondition : Conditional<PlayerAction>
     {
         [SerializeField] MinistryCard.Keyword keyword;
 
-        protected override bool Test(Player player) => player.Keywords.Contains(keyword);
+        protected override bool Test(PlayerAction action) => action.Player.Keywords.Contains(keyword);
     }
 }

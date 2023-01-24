@@ -7,7 +7,6 @@ namespace ImperialStruggle
 {
     public class AwardTile : SerializedScriptableObject
     {
-        public ActionPoints ActionPoints;
-        public readonly int RequiredMargin;
+        public int VP, TP, Margin;
     }
 }

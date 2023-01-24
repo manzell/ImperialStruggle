@@ -41,23 +41,36 @@ MonoBehaviour:
       Data: 
     - Name: playerActions
       Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[ImperialStruggle.IPlayerAction,
-        Assembly-CSharp]], mscorlib
+      Data: 1|System.Collections.Generic.List`1[[ImperialStruggle.PlayerAction, Assembly-CSharp]],
+        mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 2|ImperialStruggle.PlaceConflictMarkerAction, Assembly-CSharp
-    - Name: <Passive>k__BackingField
-      Entry: 5
-      Data: false
-    - Name: eligibleSpaces
+      Data: 2|ImperialStruggle.SelectionAction, Assembly-CSharp
+    - Name: prompt
+      Entry: 1
+      Data: 'Place 1 Conflcit Marker in North America '
+    - Name: source
       Entry: 7
-      Data: 3|ImperialStruggle.SpaceCalculation, Assembly-CSharp
-    - Name: eligibleMaps
+      Data: 3|ImperialStruggle.SpacesCalc, Assembly-CSharp
+    - Name: SpaceFilters
       Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[ImperialStruggle.Map, Assembly-CSharp]],
+      Data: 4|System.Collections.Generic.List`1[[ImperialStruggle.Conditional`1[[ImperialStruggle.Space,
+        Assembly-CSharp]], Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 5|ImperialStruggle.MapFilter, Assembly-CSharp
+    - Name: <Name>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: maps
+      Entry: 7
+      Data: 6|System.Collections.Generic.List`1[[ImperialStruggle.Map, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
@@ -71,13 +84,31 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: eligibleRegions
-      Entry: 6
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
       Data: 
     - Name: 
       Entry: 8
       Data: 
-    - Name: ConflictMarkerRemovalCost
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: response
+      Entry: 7
+      Data: 7|ImperialStruggle.PlaceConflictMarkerResponse, Assembly-CSharp
+    - Name: removalCost
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: min
+      Entry: 3
+      Data: 0
+    - Name: max
       Entry: 3
       Data: 1
     - Name: 

@@ -4,10 +4,10 @@ using UnityEngine;
 
 namespace ImperialStruggle
 {
+    public enum ShiftType { Any, Unflag, Flag }
     // Returns True if the Space can be Shiftted
-    public class ShiftSpaceCondition : Conditional<Space>
+    public class ShiftableSpace : Conditional<Space>
     {
-        public enum ShiftType { Any, Unflag, Flag }
         [SerializeField] ShiftType shiftType;
         [SerializeField] Faction faction; 
 
@@ -28,6 +28,21 @@ namespace ImperialStruggle
             }
 
             return retval;
+        }
+    }
+
+    public class ShiftTypeCondition : Conditional<IAction>
+    {
+        [SerializeField] ShiftType shiftType;
+
+        protected override bool Test(IAction context)
+        {
+            if (context is ShiftMarketAction shiftMarket)
+                return shiftMarket.shiftType == ShiftType.Unflag;
+            if (context is ShiftPoliticalSpaceAction shiftPolitical)
+                return shiftPolitical.shiftType == ShiftType.Unflag;
+            else
+                return false;
         }
     }
 }

@@ -4,15 +4,15 @@ using UnityEngine;
 
 namespace ImperialStruggle
 {
-    public class AvailableDebtCondition : Conditional<Faction>
+    public class AvailableDebtCondition : Conditional<PlayerAction>
     {
         enum ConditionType { Exactly, MoreThan, FewerThan, NotMoreThan, NotLessThan }
         [SerializeField] ConditionType conditionType;
         [SerializeField] int margin = 1;
 
-        protected override bool Test(Faction faction)
+        protected override bool Test(PlayerAction action)
         {
-            int availableDebt = RecordsTrack.availableDebt[faction];
+            int availableDebt = RecordsTrack.availableDebt[action.Player.Faction];
 
             switch (conditionType)
             {
